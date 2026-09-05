@@ -10,3 +10,8 @@
 .linklist li.rightside {
     display: none;
 }
+
+/* Ocultar "Marcar todos los foros como leídos" */
+a[accesskey="m"] {
+    display: none;
+}
