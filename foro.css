@@ -16,3 +16,1125 @@ ul.linklist > li:has(a[href*="mark=forums"]) {
 .rlogininfo {
     display: none !important;
 }
+
+/* TABLILLA ADMINISTRACIÓN */
+
+.dr-pelo {
+    --dg-blue: #1677C8;
+    --dg-blue-dark: #0b3d68;
+    --dg-cyan: #22c1c3;
+    --dg-gold: #f2b705;
+    --dg-bg: #080f18;
+    --dg-panel: #0d1722;
+    --dg-panel2: #111f2d;
+    --dg-line: rgba(34,193,195,.22);
+    --dg-text: #dce8f2;
+    --dg-muted: #7f95a8;
+
+    width: 720px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+background:
+        linear-gradient(
+            90deg,
+            rgba(8,15,24,.98) 0%,
+            rgba(8,15,24,.87) 48%,
+            rgba(8,15,24,.55) 100%
+        );
+
+    border: 1px solid var(--dg-line);
+    color: var(--dg-text);
+
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    line-height: 1.8;
+
+    text-align: left;
+    box-shadow:
+        0 0 35px rgba(0,0,0,.45),
+        inset 0 0 45px rgba(22,119,200,.04);
+}
+
+
+/* =========================================================
+   DECORACIÓN SUPERIOR
+   ========================================================= */
+
+.dr-pelo:before {
+    content: "";
+    display: block;
+
+    padding: 7px 18px;
+
+    background: #07111b;
+    border-bottom: 1px solid var(--dg-line);
+
+    color: var(--dg-cyan);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* pequeños indicadores */
+
+.dr-pelo .dr-dots {
+    position: absolute;
+    top: 5px;
+    right: 18px;
+
+    display: flex;
+    gap: 5px;
+}
+
+.dr-pelo .dr-dots i {
+    width: 5px;
+    height: 5px;
+
+    display: block;
+
+    background: var(--dg-cyan);
+    border-radius: 50%;
+
+    opacity: .65;
+}
+
+.dr-pelo .dr-dots i:nth-child(2) {
+    opacity: .35;
+}
+
+.dr-pelo .dr-dots i:nth-child(3) {
+    opacity: .15;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.dr-pelo .dr-cabeza {
+    position: relative;
+    min-height: 174px;
+    padding: 35px 40px 30px;
+    background: linear-gradient(
+            90deg,
+            rgba(8,15,24,.98) 0%,
+            rgba(8,15,24,.87) 48%,
+            rgba(8,15,24,.55) 100%
+        );
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--dg-line);
+}
+
+
+/* línea tecnológica */
+
+.dr-pelo .dr-cabeza:after {
+    content: "";
+    position: absolute;
+
+    left: 40px;
+    bottom: 0;
+
+    width: 160px;
+    height: 2px;
+
+    background: var(--dg-cyan);
+
+    box-shadow: 0 0 12px rgba(34,193,195,.5);
+}
+
+
+/* etiqueta */
+
+.dr-pelo .dr-label {
+    display: inline-block;
+
+    padding: 3px 9px;
+    margin-bottom: 10px;
+
+    border: 1px solid var(--dg-blue);
+
+    color: var(--dg-cyan);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* título */
+
+.dr-pelo .dr-title {
+    margin: 0;
+
+    color: #fff;
+
+    font-family: 'Player Sans', 'Arial Narrow', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* subtítulo */
+
+.dr-pelo .dr-subtitle {
+    margin-top: 9px;
+
+    color: var(--dg-muted);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dr-pelo .dr-subtitle b {
+    color: var(--dg-gold);
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.dr-pelo .dr-intro {
+    margin: 22px 25px 10px;
+    padding: 17px 20px;
+
+    background: rgba(17,31,45,.7);
+
+    border-left: 2px solid var(--dg-blue);
+    border-right: 1px solid var(--dg-line);
+
+    color: #aebdca;
+
+    font-size: 11px;
+}
+
+.dr-pelo .dr-intro strong {
+    color: #fff;
+}
+
+/* =========================================================
+   SECCIÓN
+   ========================================================= */
+
+.dr-pelo .dr-section {
+    margin: 25px;
+}
+
+.dr-section-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 13px;
+
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: var(--dg-cyan);
+
+    text-transform: uppercase;
+}
+
+.dr-section-title:before {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+
+    border: 1px solid var(--dg-cyan);
+
+    transform: rotate(45deg);
+
+    opacity: .6;
+}
+
+.dr-section-title span {
+    margin-left: -21px;
+    position: relative;
+    left: 5px;
+}
+
+/* ==========================================================
+   TEXT BLOCKS
+   ========================================================== */
+
+.dr-block {
+    margin-top: 20px;
+
+    padding: 17px;
+
+    background: rgba(13,21,30,.85);
+
+    border: 1px solid #213746;
+}
+
+.dr-block p {
+    margin: 0 0 12px;
+}
+
+.dr-block p:last-child {
+    margin-bottom: 0;
+}
+
+.dr-block b {
+    color: var(--dg-cyan);
+}
+
+.dr-highlight {
+    color: var(--dg-orange);
+}
+
+/* ==========================================================
+   TIMELINE
+   ========================================================== */
+
+.dr-timeline {
+    margin-top: 20px;
+
+    border-left: 1px solid #315163;
+
+    padding-left: 18px;
+}
+
+.dr-event {
+    position: relative;
+
+    margin-bottom: 18px;
+}
+
+.dr-event:last-child {
+    margin-bottom: 0;
+}
+
+.dr-event:before {
+    content: "";
+
+    position: absolute;
+
+    left: -23px;
+    top: 5px;
+
+    width: 7px;
+    height: 7px;
+
+    background: var(--dg-cyan);
+
+    box-shadow: 0 0 10px rgba(40,215,232,.5);
+}
+
+.dr-event small {
+    font-family: monospace;
+    font-size: 7px;
+
+    color: var(--dg-orange);
+}
+
+.dr-event b {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #fff;
+    font-size: 11px;
+}
+
+.dr-event span {
+    color: #879aa8;
+    font-size: 10px;
+}
+
+.dr-pelo .dr-aviso {
+    margin: 25px;
+
+    padding: 18px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22,119,200,.16),
+            rgba(34,193,195,.04)
+        );
+
+    border: 1px solid rgba(34,193,195,.25);
+}
+
+/* =========================================================
+   AVISO DESTACADA
+   ========================================================= */
+
+.dr-pelo .dr-aviso-title {
+    margin-bottom: 7px;
+
+    color: var(--dg-cyan);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dr-pelo .dr-aviso p {
+    margin: 0;
+
+    color: #b8c7d4;
+
+    font-size: 10px;
+}
+
+/* =========================================================
+   BLOQUES ADMINISTRATIVOS 2
+   ========================================================= */
+
+.dr-pelo .dr-lista {
+    position: relative;
+
+    margin-bottom: 8px;
+    padding: 15px 18px 15px 52px;
+
+    background: var(--dg-panel);
+
+    border: 1px solid rgba(255,255,255,.05);
+
+    transition: .25s ease;
+}
+
+.dr-pelo .dr-lista:hover {
+    background: var(--dg-panel2);
+
+    border-color: var(--dg-line);
+
+    transform: translateX(3px);
+}
+
+
+/* icono */
+
+.dr-pelo .dr-lista .dr-icon {
+    position: absolute;
+
+    left: 17px;
+    top: 17px;
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--dg-blue);
+
+    color: var(--dg-cyan);
+
+    font-size: 10px;
+
+    transform: rotate(45deg);
+}
+
+.dr-pelo .dr-lista .dr-icon i {
+    transform: rotate(-45deg);
+}
+
+
+/* nombre */
+
+.dr-pelo .dr-lista h3 {
+    margin: 0 0 2px;
+
+    color: #fff;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.dr-pelo .dg-lista h3 span {
+    color: var(--dg-gold);
+}
+
+
+/* descripción */
+
+.dr-pelo .dr-lista p {
+    margin: 0;
+
+    color: var(--dg-muted);
+
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DATOS / ESTADO DEL FORO
+   ========================================================= */
+
+.dr-data {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 10px;
+    border: 1px solid rgba(255,255,255,.05);
+}
+
+.dr-data div {
+    padding: 13px;
+    text-align: center;
+    background: #0a141e;
+    border-right: 1px solid rgba(255,255,255,.05);
+}
+
+.dr-data div:last-child {
+    border-right: 0;
+}
+
+.dr-data b {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+}
+
+.dr-data span {
+    color: var(--dr-muted);
+    font-size: 7px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   RELATIONSHIPS
+   ========================================================== */
+
+.dr-relations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.dr-relation {
+    min-height: 70px;
+
+    padding: 10px;
+
+    background: #0d1720;
+
+    border: 1px solid #233b4a;
+
+    position: relative;
+}
+
+.dr-relation:before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 25px;
+    height: 2px;
+
+    background: var(--dg-cyan);
+}
+
+.dr-relation small {
+    display: block;
+
+    font-family: monospace;
+    font-size: 7px;
+
+    color: var(--dg-muted);
+}
+
+.dr-relation b {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #eaf7fb;
+    font-size: 10px;
+}
+
+/* TABLILLA DIGIMON */
+
+.digimon-status {
+    --bg: #07090e;
+    --panel: #0d1218;
+    --panel-light: #151d25;
+    --line: #26313a;
+    --line-light: #35424b;
+    --text: #d5dce0;
+    --muted: #69767e;
+    --blue: #61a9c9;
+    --cyan: #55c5cf;
+    --orange: #f3a31b;
+    width: 680px;
+    max-width: 95%;
+    margin: 25px auto;
+    padding: 18px;
+    box-sizing: border-box;
+    background:
+
+        radial-gradient(
+            circle at 20% 0%,
+            rgba(50,85,105,.12),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #080b10,
+            #05070b
+        );
+    border: 1px solid #222c34;
+    color: var(--text);
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    overflow: hidden;
+
+}
+
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+
+.digimon-content {
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+/* ==========================================================
+   CABECERA
+========================================================== */
+
+.digimon-top {
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #111a23,
+            #080d13
+        );
+
+
+    border-bottom:
+        1px solid var(--line);
+
+}
+
+
+
+/* ==========================================================
+   RETRATO
+========================================================== */
+
+.digimon-portrait {
+
+    width: 82px;
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.portrait-ring {
+
+    width: 62px;
+
+    height: 62px;
+
+    border-radius: 50%;
+
+
+    border:
+        2px solid var(--blue);
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    background:
+        #0b141c;
+
+
+    box-shadow:
+
+        0 0 12px
+        rgba(97,169,201,.25);
+
+
+    overflow: hidden;
+
+}
+
+
+.portrait-ring img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+
+/* ==========================================================
+   NOMBRE
+========================================================== */
+
+.digimon-title {
+
+    flex: 1;
+
+}
+
+
+.digimon-name {
+
+    color: #eef3f5;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-description {
+
+    margin-top: 7px;
+
+    color: var(--orange);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-description i {
+
+    color: #59676f;
+
+    font-style: normal;
+
+    margin:
+        0 5px;
+
+}
+
+
+
+/* ==========================================================
+   NIVEL
+========================================================== */
+
+.digimon-level {
+
+    width: 70px;
+
+    padding-right: 5px;
+
+    text-align: right;
+
+}
+
+
+.digimon-level small {
+
+    display: block;
+
+    color: #7b878e;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-level strong {
+
+    display: block;
+
+    color: var(--orange);
+
+    font-size: 30px;
+
+    line-height: 27px;
+
+}
+
+
+.digimom-level em {
+
+    color: #68757d;
+
+    font-size: 9px;
+
+    font-style: normal;
+
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.main-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    padding:
+        13px 0;
+
+    border-bottom:
+        1px solid var(--line);
+
+}
+
+
+
+/* ==========================================================
+   HP / SP / EXP
+========================================================== */
+
+.big-stat {
+
+    margin-bottom: 8px;
+
+}
+
+
+.stat-line {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.stat-label {
+
+    width: 35px;
+
+    color: #8b989f;
+
+    font-size: 10px;
+
+}
+
+
+.stat-numbers {
+
+    color: #d1dade;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+}
+
+
+.stat-numbers i {
+
+    color: #56646c;
+
+    font-style: normal;
+
+}
+
+
+
+/* ==========================================================
+   BARRAS
+========================================================== */
+
+.progress {
+
+    height: 5px;
+
+    margin-top: 4px;
+
+    padding: 1px;
+
+    box-sizing: border-box;
+
+    background: #131a21;
+
+    border:
+        1px solid #303b43;
+
+}
+
+.progress b {
+
+    display: block;
+
+    height: 100%;
+
+    background: var(--orange);
+
+}
+
+
+.progress.sp b {
+
+    background: var(--blue);
+
+}
+
+
+
+/* ==========================================================
+   STATS DE COMBATE
+========================================================== */
+
+.combat-stat {
+
+    height: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    font-family: monospace;
+
+}
+
+
+.combat-stat span {
+
+    width: 42px;
+
+    color: #89969c;
+
+    font-size: 10px;
+
+}
+
+
+.combat-stat strong {
+
+    width: 48px;
+
+    color: #d6dfe2;
+
+    font-size: 11px;
+
+    text-align: right;
+
+}
+
+
+.combat-stat i {
+
+    margin-left: 7px;
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-style: normal;
+
+}
+
+/* ==========================================================
+   HABILIDADES
+========================================================== */
+
+.ability-section {
+
+    margin-top: 8px;
+
+    border-bottom:
+        1px solid var(--line);
+
+}
+
+
+.ability-title {
+
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 7px;
+
+    box-sizing: border-box;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #182129,
+            #0d1319
+        );
+
+
+    color: #bdc9ce;
+
+    font-size: 9px;
+
+}
+
+.ability {
+
+    height: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        25px 1fr 30px;
+
+    align-items: center;
+
+    padding:
+        0 8px;
+
+    box-sizing: border-box;
+
+}
+
+
+.ability:hover {
+
+    background: #101920;
+
+}
+
+
+.ability-icon {
+
+    color: var(--cyan);
+
+    font-size: 8px;
+
+}
+
+
+.ability strong {
+
+    color: #c6d0d4;
+
+    font-size: 9px;
+
+    font-weight: normal;
+
+}
+
+.ability.empty {
+
+    opacity: .42;
+
+}
+
+
+
+/* ==========================================================
+   EQUIPMENT
+========================================================== */
+
+.equipment {
+
+    margin-top: 8px;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:600px) {
+
+    .digimon-status {
+
+        width: 100%;
+
+        padding: 10px;
+
+    }
+
+
+    .digi-top {
+
+        height: auto;
+
+        min-height: 76px;
+
+    }
+
+
+    .digi-name {
+
+        font-size: 17px;
+
+    }
+
+
+    .digi-description {
+
+        font-size: 7px;
+
+    }
+
+
+    .main-stats {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+ 
+
+}
