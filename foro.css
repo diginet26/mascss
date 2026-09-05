@@ -12,3 +12,8 @@ ul.linklist > li:has(a[href="/search?search_id=unanswered"]) {
 ul.linklist > li.rightside {
     display: none !important;
 }
+/* El bloque de enlaces bajo el anuncio no debe reservar espacio */
+ul.linklist {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
