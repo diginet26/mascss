@@ -3,10 +3,6 @@
     display: none;
 }
 /* Ocultar enlaces de actividad que no queremos mostrar */
-.linklist li:first-child {
-    display: none;
-}
-
 .linklist li.rightside {
     display: none;
 }
