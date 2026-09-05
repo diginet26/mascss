@@ -1,1 +1,4 @@
-/*aqui iran codigos extra*/
+/*eliminamos las horas de conexion y fecha al inicio del foro*/
+.rlogininfo {
+    display: none;
+}
