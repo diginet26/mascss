@@ -1,13 +1,19 @@
-/*eliminamos las horas de conexion y fecha al inicio del foro*/
+/* Eliminamos las horas de conexión y fecha al inicio del foro */
 .rlogininfo {
-    display: none;
+    display: none !important;
 }
-/* Ocultar enlaces de actividad que no queremos mostrar */
-.linklist li.rightside {
-    display: none;
+
+/* Ocultar "Ver mensajes desde la última visita" */
+a[href="/search?search_id=newposts"] {
+    display: none !important;
+}
+
+/* Ocultar "Ver mensajes sin respuesta" */
+a[href="/search?search_id=unanswered"] {
+    display: none !important;
 }
 
 /* Ocultar "Marcar todos los foros como leídos" */
 a[accesskey="m"] {
-    display: none;
+    display: none !important;
 }
