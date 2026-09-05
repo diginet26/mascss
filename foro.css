@@ -12,3 +12,7 @@ ul.linklist > li:has(a[href*="search_id=unanswered"]) {
 ul.linklist > li:has(a[href*="mark=forums"]) {
     display: none !important;
 }
+/* Ocultar fecha, hora y última conexión */
+.rlogininfo {
+    display: none !important;
+}
