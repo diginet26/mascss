@@ -1,19 +1,14 @@
-/* Eliminamos las horas de conexión y fecha al inicio del foro */
-.rlogininfo {
+/* Ocultar "Ver mensajes desde la última visita" */
+ul.linklist > li:has(a[href="/search?search_id=newposts"]) {
     display: none !important;
 }
 
-/* Ocultar completamente "Ver mensajes desde la última visita" */
-li:has(a[href="/search?search_id=newposts"]) {
+/* Ocultar "Ver mensajes sin respuesta" */
+ul.linklist > li:has(a[href="/search?search_id=unanswered"]) {
     display: none !important;
 }
 
-/* Ocultar completamente "Ver mensajes sin respuesta" */
-li:has(a[href="/search?search_id=unanswered"]) {
-    display: none !important;
-}
-
-/* Ocultar completamente "Marcar todos los foros como leídos" */
-li:has(a[accesskey="m"]) {
+/* Ocultar "Marcar todos los foros como leídos" */
+ul.linklist > li.rightside {
     display: none !important;
 }
