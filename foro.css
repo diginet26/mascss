@@ -3,17 +3,17 @@
     display: none !important;
 }
 
-/* Ocultar "Ver mensajes desde la última visita" */
-a[href="/search?search_id=newposts"] {
+/* Ocultar completamente "Ver mensajes desde la última visita" */
+li:has(a[href="/search?search_id=newposts"]) {
     display: none !important;
 }
 
-/* Ocultar "Ver mensajes sin respuesta" */
-a[href="/search?search_id=unanswered"] {
+/* Ocultar completamente "Ver mensajes sin respuesta" */
+li:has(a[href="/search?search_id=unanswered"]) {
     display: none !important;
 }
 
-/* Ocultar "Marcar todos los foros como leídos" */
-a[accesskey="m"] {
+/* Ocultar completamente "Marcar todos los foros como leídos" */
+li:has(a[accesskey="m"]) {
     display: none !important;
 }
