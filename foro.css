@@ -1,19 +1,14 @@
 /* Ocultar "Ver mensajes desde la última visita" */
-ul.linklist > li:has(a[href="/search?search_id=newposts"]) {
+ul.linklist > li:has(a[href*="search_id=newposts"]) {
     display: none !important;
 }
 
 /* Ocultar "Ver mensajes sin respuesta" */
-ul.linklist > li:has(a[href="/search?search_id=unanswered"]) {
+ul.linklist > li:has(a[href*="search_id=unanswered"]) {
     display: none !important;
 }
 
 /* Ocultar "Marcar todos los foros como leídos" */
-ul.linklist > li.rightside {
+ul.linklist > li:has(a[href*="mark=forums"]) {
     display: none !important;
-}
-/* El bloque de enlaces bajo el anuncio no debe reservar espacio */
-ul.linklist {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
 }
