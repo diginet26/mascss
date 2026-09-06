@@ -1287,6 +1287,20 @@ body.dark-mode {
     --bckg2: #1f1f1f;
     --bckg3: #1c1c1c;
     --bckg4: #191919;
-    --border1: 1px solid #000;
+    --border1: 1px solid #000;  
 }
 
+
+/**//**//**/
+#theme-toggler {
+    background: red !important;
+    color: white !important;
+    border: 2px solid white !important;
+    z-index: 99999 !important;
+}
+
+#theme-toggler::before {
+    content: "☀" !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 25px !important;
+}
