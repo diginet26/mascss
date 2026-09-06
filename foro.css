@@ -1289,3 +1289,1128 @@ body.dark-mode {
     --bckg4: #191919;
     --border1: 1px solid #000;  
 }
+
+/* =========================================================
+   DIGIMON PROFILE — DISEÑO COMPLETO
+   ========================================================= */
+
+#dg-profile {
+    --profile-group-color: var(--accent1);
+    --profile-highlight: var(--accent3);
+    --profile-glow: color-mix(
+        in srgb,
+        var(--profile-group-color) 35%,
+        transparent
+    );
+
+    width: min(1250px, calc(100% - 40px));
+    margin: 35px auto 60px;
+
+    color: var(--theme-text);
+    text-align: left;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+#dg-profile .dg-profile-header {
+    --profile-header-image: none;
+
+    position: relative;
+    overflow: hidden;
+
+    min-height: 125px;
+
+    margin-bottom: 18px;
+    padding: 26px 32px;
+
+    background:
+        linear-gradient(
+            110deg,
+            var(--theme-panel-deep) 0%,
+            var(--theme-panel) 55%,
+            var(--theme-panel-alt) 100%
+        );
+
+    border: 1px solid var(--theme-border);
+    border-left: 4px solid var(--profile-group-color);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .20);
+}
+
+
+/* =========================================================
+   IMAGEN PERSONALIZADA DE CABECERA
+   ========================================================= */
+
+#dg-profile .dg-profile-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 48%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            var(--theme-panel) 0%,
+            transparent 35%
+        ),
+        var(--profile-header-image);
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: .65;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LÍNEAS DIAGONALES
+   ========================================================= */
+
+#dg-profile .dg-profile-header::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 9px,
+            var(--profile-highlight) 9px,
+            var(--profile-highlight) 10px
+        );
+
+    opacity: .10;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENIDO DE LA CABECERA
+   ========================================================= */
+
+#dg-profile .dg-profile-header-main {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 73px;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+#dg-profile .dg-profile-kicker {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--profile-highlight);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+#dg-profile .dg-profile-title h1 {
+    margin: 0;
+
+    color: var(--theme-text);
+
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   INDICADOR DE CONEXIÓN
+   ========================================================= */
+
+#dg-profile .dg-profile-status {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    background: var(--theme-panel-deep);
+
+    border: 1px solid var(--theme-border);
+
+    color: var(--theme-text-muted);
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+}
+
+
+#dg-profile .dg-profile-status-dot{background:#e34a4a!important;box-shadow:0 0 8px #e34a4a!important}
+#dg-profile .dg-profile-status-dot.is-online{background:#35d06f!important;box-shadow:0 0 8px #35d06f!important}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    #dg-profile .dg-profile-header {
+        min-height: 110px;
+
+        padding: 22px;
+    }
+
+    #dg-profile .dg-profile-header-main {
+        min-height: 66px;
+    }
+
+    #dg-profile .dg-profile-title h1 {
+        font-size: 23px;
+    }
+
+    #dg-profile .dg-profile-status {
+        padding: 6px 8px;
+
+        font-size: 6px;
+    }
+
+}
+
+/* =========================================================
+   ESTRUCTURA PRINCIPAL
+   ========================================================= */
+
+#dg-profile .dg-profile-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        285px;
+
+    gap: 18px;
+
+    align-items: start;
+}
+
+
+#dg-profile .dg-profile-main {
+    min-width: 0;
+}
+
+
+#dg-profile .dg-profile-sidebar {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+#dg-profile .dg-profile-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--theme-panel);
+
+    border: 1px solid var(--theme-border);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .12);
+}
+
+
+/* =========================================================
+   IDENTIDAD / AVATAR
+   ========================================================= */
+
+#dg-profile .dg-profile-identity {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 185px;
+
+    margin-bottom: 18px;
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--theme-panel),
+            var(--theme-panel-alt)
+        );
+
+    border-left: 4px solid var(--profile-group-color);
+}
+
+
+#dg-profile .dg-profile-identity::after {
+    content: "USER DATA";
+
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    color: var(--theme-text-dark);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* avatar */
+
+#dg-profile .dg-profile-avatar {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 145px;
+    height: 145px;
+
+    flex: 0 0 145px;
+
+    overflow: hidden;
+
+    background: var(--theme-panel-deep);
+
+    border: 1px solid var(--theme-border);
+
+    box-shadow:
+        0 0 0 5px var(--theme-panel-deep),
+        0 0 0 6px var(--profile-group-color),
+        0 12px 25px rgba(0, 0, 0, .25);
+}
+
+
+#dg-profile .dg-profile-avatar::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 1px solid var(--profile-highlight);
+
+    opacity: .25;
+
+    pointer-events: none;
+}
+
+
+#dg-profile .dg-profile-avatar img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* información */
+
+#dg-profile .dg-profile-identity-info {
+    min-width: 0;
+
+    padding-left: 28px;
+}
+
+
+#dg-profile .dg-profile-name {
+    margin-bottom: 7px;
+
+    color: var(--theme-text);
+
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+
+#dg-profile .dg-profile-group {
+    margin-bottom: 20px;
+
+    color: var(--profile-group-color);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+#dg-profile .dg-profile-actions {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    background: var(--profile-group-color);
+
+    color: #fff;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition:
+        filter .2s ease,
+        transform .2s ease;
+}
+
+
+#dg-profile .dg-profile-actions:hover {
+    filter: brightness(1.15);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PESTAÑAS
+   ========================================================= */
+
+#dg-profile-tabs {
+    position: relative;
+
+    margin-bottom: 18px;
+
+    background: var(--theme-panel);
+
+    border: 1px solid var(--theme-border);
+}
+
+
+#dg-profile-tabs::before {
+    content: "NAVIGATION";
+
+    position: absolute;
+
+    left: 15px;
+    top: -6px;
+
+    padding: 0 6px;
+
+    background: var(--theme-panel);
+
+    color: var(--theme-text-dark);
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transform: translateY(-50%);
+}
+
+
+#dg-profile-tabs #tabs {
+    margin: 0;
+    padding: 0;
+}
+
+
+#dg-profile-tabs #tabs ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+#dg-profile-tabs #tabs li {
+    margin: 0;
+    padding: 0;
+
+    border-right: 1px solid var(--theme-border);
+}
+
+
+#dg-profile-tabs #tabs li:last-child {
+    border-right: 0;
+}
+
+
+#dg-profile-tabs #tabs a {
+    position: relative;
+
+    display: block;
+
+    padding: 15px 17px;
+
+    color: var(--theme-text-muted);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+    line-height: 1;
+
+    text-transform: uppercase;
+
+    transition:
+        color .2s ease,
+        background .2s ease;
+}
+
+
+#dg-profile-tabs #tabs a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+
+    height: 2px;
+
+    background: var(--profile-group-color);
+
+    transition:
+        left .2s ease,
+        right .2s ease;
+}
+
+
+#dg-profile-tabs #tabs a:hover {
+    background: var(--theme-panel-alt);
+
+    color: var(--profile-highlight);
+
+    text-decoration: none;
+}
+
+
+#dg-profile-tabs #tabs a:hover::after {
+    left: 15%;
+    right: 15%;
+}
+
+
+#dg-profile-tabs #tabs li.activetab a,
+#dg-profile-tabs #tabs li.current a {
+    background:
+        linear-gradient(
+            90deg,
+            var(--profile-glow),
+            transparent
+        );
+
+    color: var(--theme-text);
+}
+
+
+#dg-profile-tabs #tabs li.activetab a::after,
+#dg-profile-tabs #tabs li.current a::after {
+    left: 0;
+    right: 0;
+
+    background: var(--profile-group-color);
+
+    box-shadow:
+        0 0 8px var(--profile-group-color);
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+#dg-profile-content {
+    min-width: 0;
+}
+
+
+#dg-profile-content #profile-advanced-details {
+    margin: 0;
+    padding: 0;
+
+    background: var(--theme-panel);
+
+    border: 1px solid var(--theme-border);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .12);
+}
+
+
+#dg-profile .dg-profile-content-header {
+    position: relative;
+
+    margin: 0;
+    padding: 24px 26px;
+
+    background: var(--theme-panel-deep);
+
+    border-bottom: 1px solid var(--theme-border);
+}
+
+
+#dg-profile .dg-profile-content-header::after {
+    content: "";
+
+    position: absolute;
+
+    left: 26px;
+    bottom: -1px;
+
+    width: 70px;
+    height: 2px;
+
+    background: var(--profile-group-color);
+
+    box-shadow:
+        0 0 8px var(--profile-group-color);
+}
+
+
+#dg-profile .dg-profile-content-header .dg-profile-kicker {
+    margin-bottom: 7px;
+}
+
+
+#dg-profile .dg-profile-content-header h2 {
+    margin: 0;
+
+    color: var(--theme-text);
+
+    font-size: 19px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   CONTENIDO INTERNO
+   ========================================================= */
+
+#dg-profile .dg-profile-tab-content {
+    padding: 25px;
+}
+
+
+#dg-profile .dg-profile-fields {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+#dg-profile .dg-profile-field {
+    min-width: 0;
+
+    margin: 0;
+    padding: 15px 16px;
+
+    background: var(--theme-panel-alt);
+
+    border: 1px solid var(--theme-border);
+
+    transition:
+        border-color .2s ease,
+        background .2s ease;
+}
+
+
+#dg-profile .dg-profile-field:hover {
+    background: var(--theme-panel);
+
+    border-color: var(--profile-group-color);
+}
+
+
+#dg-profile .dg-profile-field dt {
+    margin: 0 0 7px;
+
+    color: var(--theme-text-muted);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    line-height: 1.3;
+
+    text-transform: uppercase;
+}
+
+
+#dg-profile .dg-profile-field dd {
+    margin: 0;
+
+    color: var(--theme-text);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ESTADÍSTICAS
+   ========================================================= */
+
+#dg-profile .dg-profile-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+#dg-profile .dg-profile-stat {
+    position: relative;
+
+    padding: 22px 15px;
+
+    background: var(--theme-panel-alt);
+
+    border: 1px solid var(--theme-border);
+
+    text-align: center;
+}
+
+
+#dg-profile .dg-profile-stat::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: var(--profile-group-color);
+}
+
+
+#dg-profile .dg-profile-stat strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--profile-highlight);
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+#dg-profile .dg-profile-stat span {
+    color: var(--theme-text-muted);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+#dg-profile .dg-profile-sidebar .dg-profile-card {
+    background: var(--theme-panel);
+}
+
+
+#dg-profile .dg-profile-card-title {
+    display: flex;
+    align-items: center;
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    background: var(--theme-panel-deep);
+
+    border-bottom: 1px solid var(--theme-border);
+
+    color: var(--profile-highlight);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+#dg-profile .dg-profile-card-title::before {
+    content: "◆";
+
+    margin-right: 8px;
+
+    color: var(--profile-group-color);
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   DATOS DE USUARIO
+   ========================================================= */
+
+#dg-profile .dg-profile-userdata {
+    padding: 8px 15px;
+}
+
+
+#dg-profile .dg-profile-data-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid var(--theme-border);
+}
+
+
+#dg-profile .dg-profile-data-row:last-child {
+    border-bottom: 0;
+}
+
+
+#dg-profile .dg-profile-data-row span {
+    color: var(--theme-text-muted);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+
+#dg-profile .dg-profile-data-row strong {
+    max-width: 55%;
+
+    color: var(--theme-text);
+
+    font-size: 9px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   CONTACTO / AMIGOS
+   ========================================================= */
+
+#dg-profile .dg-profile-contact-list,
+#dg-profile .dg-profile-friends-content {
+    padding: 15px;
+
+    color: var(--theme-text);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+#dg-profile .dg-profile-contact-list a,
+#dg-profile .dg-profile-friends-content a {
+    color: var(--profile-group-color);
+}
+
+
+#dg-profile .dg-profile-contact-list a:hover,
+#dg-profile .dg-profile-friends-content a:hover {
+    color: var(--profile-highlight);
+}
+
+
+/* =========================================================
+   RPG
+   ========================================================= */
+
+#dg-profile .dg-profile-rpg {
+    min-width: 0;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   ENLACES GENERALES DEL PERFIL
+   ========================================================= */
+
+#dg-profile a {
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+
+#dg-profile a:hover {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   OCULTAR ELEMENTOS VISUALES NATIVOS QUE SOBRAN
+   ========================================================= */
+
+#dg-profile .panel .corners-top,
+#dg-profile .panel .corners-bottom {
+    display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    #dg-profile {
+        width: calc(100% - 30px);
+    }
+
+
+    #dg-profile .dg-profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    #dg-profile .dg-profile-sidebar {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        align-items: start;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MÓVIL
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    #dg-profile {
+        width: calc(100% - 20px);
+
+        margin-top: 20px;
+    }
+
+
+    #dg-profile .dg-profile-header {
+        padding: 25px 22px;
+    }
+
+
+    #dg-profile .dg-profile-header-main {
+        display: block;
+    }
+
+
+    #dg-profile .dg-profile-status {
+        display: inline-flex;
+
+        margin-top: 15px;
+    }
+
+
+    #dg-profile .dg-profile-title h1 {
+        font-size: 28px;
+    }
+
+
+    #dg-profile .dg-profile-identity {
+        display: block;
+
+        padding: 25px;
+
+        text-align: center;
+    }
+
+
+    #dg-profile .dg-profile-avatar {
+        width: 130px;
+        height: 130px;
+
+        margin: 0 auto 10px;
+
+        box-shadow:
+            0 0 0 5px var(--theme-panel-deep),
+            0 0 0 6px var(--profile-group-color),
+            0 12px 25px rgba(0, 0, 0, .25);
+    }
+
+
+    #dg-profile .dg-profile-identity-info {
+        padding: 20px 0 0;
+    }
+
+
+    #dg-profile .dg-profile-identity::after {
+        display: none;
+    }
+
+
+    #dg-profile-tabs #tabs ul {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    #dg-profile-tabs #tabs li {
+        border-bottom: 1px solid var(--theme-border);
+    }
+
+
+    #dg-profile-tabs #tabs li:nth-child(even) {
+        border-right: 0;
+    }
+
+
+    #dg-profile-tabs #tabs a {
+        padding: 13px 8px;
+
+        text-align: center;
+    }
+
+
+    #dg-profile .dg-profile-content-header {
+        padding: 20px;
+    }
+
+
+    #dg-profile .dg-profile-tab-content {
+        padding: 18px;
+    }
+
+
+    #dg-profile .dg-profile-fields {
+        grid-template-columns: 1fr;
+    }
+
+
+    #dg-profile .dg-profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    #dg-profile .dg-profile-sidebar {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    #dg-profile {
+        width: calc(100% - 12px);
+
+        margin-top: 12px;
+    }
+
+
+    #dg-profile .dg-profile-header {
+        padding: 22px 18px;
+    }
+
+
+    #dg-profile .dg-profile-title h1 {
+        font-size: 24px;
+    }
+
+
+    #dg-profile .dg-profile-name {
+        font-size: 21px;
+    }
+
+
+    #dg-profile .dg-profile-avatar {
+        width: 115px;
+        height: 115px;
+    }
+
+
+    #dg-profile-tabs #tabs a {
+        font-size: 7px;
+        letter-spacing: .8px;
+    }
+
+}
