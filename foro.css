@@ -2724,7 +2724,12 @@ button#theme-toggler2:before {
     overflow: hidden;
 }
 
-
+#dg-profile .dg-profile-cover-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /* ---------------------------------------------------------
    BOTONES DE NAVEGACIÓN
    --------------------------------------------------------- */
