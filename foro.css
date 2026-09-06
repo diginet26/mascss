@@ -1293,7 +1293,7 @@ body.dark-mode {
 
 /**//**//**/
 #theme-toggler::before {
-    content: "\f185" !important;
-    font-family: FontAwesome !important;
-    font-size: 25px !important;
+    content: "\f185";
+    font-family: FontAwesome;
+    font-size: 25px;
 }
