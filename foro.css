@@ -2886,3 +2886,93 @@ button#theme-toggler2:before {
     }
 
 }
+
+/* =========================================================
+   PERFIL — USER DATA
+   ========================================================= */
+
+#dg-profile .dg-profile-userdata {
+    display: flex;
+    flex-direction: column;
+}
+
+#dg-profile .dg-profile-data-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 34px;
+    padding: 8px 0;
+
+    border-bottom: 1px solid var(--theme-border);
+}
+
+#dg-profile .dg-profile-data-row:last-child {
+    border-bottom: 0;
+}
+
+#dg-profile .dg-profile-data-row span {
+    color: var(--theme-text-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#dg-profile .dg-profile-data-row strong {
+    color: var(--profile-highlight);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HP
+   ========================================================= */
+
+#dg-profile .dg-profile-hp {
+    margin-top: 18px;
+    padding-top: 15px;
+
+    border-top: 1px solid var(--theme-border);
+}
+
+#dg-profile .dg-profile-hp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+#dg-profile .dg-profile-hp-header span {
+    color: var(--theme-text-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+#dg-profile .dg-profile-hp-header strong {
+    color: var(--profile-highlight);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+#dg-profile .dg-profile-hp-bar {
+    width: 100%;
+    height: 8px;
+
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--theme-border);
+    overflow: hidden;
+}
+
+#dg-profile .dg-profile-hp-fill {
+    width: 100%;
+    height: 100%;
+
+    background: var(--profile-group-color);
+
+    box-shadow:
+        0 0 10px var(--profile-glow);
+}
