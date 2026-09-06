@@ -2717,11 +2717,18 @@ button#theme-toggler2:before {
 }
 
 
+/* =========================================================
+   PESTAÑAS — MOCHILA / LOGROS / DIGIMON
+   ========================================================= */
+
 #dg-profile .dg-profile-content-tabs {
 
-    display: flex;
+    display: grid !important;
 
-    align-items: stretch;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    width: 100%;
 
     gap: 2px;
 
@@ -2731,9 +2738,13 @@ button#theme-toggler2:before {
 
 #dg-profile .dg-profile-content-tab {
 
-    flex: 1;
+    display: block !important;
+
+    width: 100%;
 
     min-height: 40px;
+
+    margin: 0;
 
     padding: 10px 15px;
 
@@ -2750,6 +2761,10 @@ button#theme-toggler2:before {
 
     letter-spacing: 2px;
 
+    line-height: 1.2;
+
+    text-align: center;
+
     cursor: pointer;
 
     transition:
@@ -2757,7 +2772,6 @@ button#theme-toggler2:before {
         border-color .2s ease,
         color .2s ease;
 }
-
 
 #dg-profile .dg-profile-content-tab:hover {
 
