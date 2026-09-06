@@ -1259,7 +1259,7 @@ button#theme-toggler {
 }
 
 button#theme-toggler:before {
-    font: 15px 'Font Awesome 5 Free';
+    font: 15px 'FontAwesome';
     color: white;
 }
 
