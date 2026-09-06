@@ -1289,11 +1289,3 @@ body.dark-mode {
     --bckg4: #191919;
     --border1: 1px solid #000;  
 }
-
-
-/**//**//**/
-#theme-toggler::before {
-    content: "\f185";
-    font-family: FontAwesome;
-    font-size: 25px;
-}
