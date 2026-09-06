@@ -2892,17 +2892,6 @@ button#theme-toggler2:before {
         grid-template-columns: 1fr;
 
     }
-
-
-    #dg-profile .dg-profile-content-tabs {
-
-        flex-direction: column;
-
-        gap: 4px;
-
-    }
-
-
     #dg-profile .dg-profile-tab-content {
 
         padding: 20px;
