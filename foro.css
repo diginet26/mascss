@@ -98,7 +98,7 @@ background:
     background: #07111b;
     border-bottom: 1px solid var(--dg-line);
 
-    color: var(--dg-cyan);
+    color: var(--theme-accent2-overlay);
 
     font-size: 8px;
     font-weight: 700;
@@ -124,7 +124,7 @@ background:
 
     display: block;
 
-    background: var(--dg-cyan);
+    background: var(--theme-accent2-overlay);
     border-radius: 50%;
 
     opacity: .65;
@@ -171,7 +171,7 @@ background:
     width: 160px;
     height: 2px;
 
-    background: var(--dg-cyan);
+    background: var(--theme-accent2-overlay);
 
     box-shadow: 0 0 12px rgba(34,193,195,.5);
 }
@@ -187,7 +187,7 @@ background:
 
     border: 1px solid var(--dg-blue);
 
-    color: var(--dg-cyan);
+    color: var(--theme-accent2-overlay);
 
     font-size: 8px;
     font-weight: 700;
@@ -270,8 +270,7 @@ background:
     font-size: 25px;
     letter-spacing: 2px;
 
-    color: var(--dg-cyan);
-
+    color: var(--theme-accent2-overlay);
     text-transform: uppercase;
 }
 
@@ -281,7 +280,7 @@ background:
     width: 18px;
     height: 18px;
 
-    border: 1px solid var(--dg-cyan);
+    border: 1px solid var(--theme-accent2-overlay);
 
     transform: rotate(45deg);
 
@@ -317,7 +316,7 @@ background:
 }
 
 .dr-block b {
-    color: var(--dg-cyan);
+    color: var(--theme-accent2-overlay);
 }
 
 .dr-highlight {
@@ -357,7 +356,7 @@ background:
     width: 7px;
     height: 7px;
 
-    background: var(--dg-cyan);
+    background: var(--theme-accent2-overlay);
 
     box-shadow: 0 0 10px rgba(40,215,232,.5);
 }
@@ -403,7 +402,7 @@ background:
 .dr-pelo .dr-aviso-title {
     margin-bottom: 7px;
 
-    color: var(--dg-cyan);
+    color: var(--theme-accent2-overlay);
 
     font-size: 9px;
     font-weight: 700;
@@ -462,7 +461,7 @@ background:
 
     border: 1px solid var(--dg-blue);
 
-    color: var(--dg-cyan);
+    color: var(--theme-accent2-overlay);
 
     font-size: 10px;
 
@@ -574,7 +573,7 @@ background:
     width: 25px;
     height: 2px;
 
-    background: var(--dg-cyan);
+    background: var(--theme-accent2-overlay);
 }
 
 .dr-relation small {
