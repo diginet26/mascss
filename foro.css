@@ -3153,8 +3153,7 @@ button#theme-toggler2:before {
     border:
         2px solid var(--theme-accent1-overlay);
 
-    transform:
-        rotate(45deg);
+    transform: translateY(12px) rotate(45deg)
 
     box-shadow:
         0 0 8px rgba(25,220,255,.5),
