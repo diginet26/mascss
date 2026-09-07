@@ -3194,21 +3194,29 @@ button#theme-toggler2:before {
 
 .digimon-digital-line {
 
-    width: 1px;
+position: relative;
 
-    height: 34px;
+    width: 34px;
 
-    flex:
-        0 0 1px;
+    height: 1px;
+
+    flex: 0 0 34px;
+
+    margin: 0 8px;
 
     background:
         linear-gradient(
+            90deg,
             transparent,
+            var(--theme-accent1-overlay),
+            var(--digimon-cyan),
             var(--theme-accent1-overlay),
             transparent
         );
 
     opacity: .8;
+
+    box-shadow: 0 0 6px rgba(30, 210, 255, .35);
 }
 
 
