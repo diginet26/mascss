@@ -2360,7 +2360,7 @@ button#theme-toggler2:before {
 
     color: var(--profile-highlight);
 
-    font-size: 8px;
+    font-size: 18px;
     font-weight: 700;
 
     letter-spacing: 2px;
@@ -2901,19 +2901,15 @@ button#theme-toggler2:before {
     align-items: center;
     justify-content: space-between;
 
-    min-height: 34px;
+    min-height: 38px;
     padding: 8px 0;
 
     border-bottom: 1px solid var(--theme-border);
 }
 
-#dg-profile .dg-profile-data-row:last-child {
-    border-bottom: 0;
-}
-
 #dg-profile .dg-profile-data-row span {
     color: var(--theme-text-muted);
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2921,7 +2917,7 @@ button#theme-toggler2:before {
 
 #dg-profile .dg-profile-data-row strong {
     color: var(--profile-highlight);
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -2947,23 +2943,31 @@ button#theme-toggler2:before {
 
 #dg-profile .dg-profile-hp-header span {
     color: var(--theme-text-muted);
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
 
 #dg-profile .dg-profile-hp-header strong {
     color: var(--profile-highlight);
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
 }
 
+
+/* BARRA DE HP */
+
 #dg-profile .dg-profile-hp-bar {
-    width: 100%;
-    height: 8px;
+    width: calc(100% - 20px);
+    height: 10px;
+
+    margin: 0 10px;
 
     background: var(--theme-panel-deep);
     border: 1px solid var(--theme-border);
+
+    border-radius: 999px;
+
     overflow: hidden;
 }
 
@@ -2972,6 +2976,8 @@ button#theme-toggler2:before {
     height: 100%;
 
     background: var(--profile-group-color);
+
+    border-radius: 999px;
 
     box-shadow:
         0 0 10px var(--profile-glow);
