@@ -1248,7 +1248,7 @@ background:
 
 /* BOTÓN CAMBIO DE TEMA - NECROMANCER */
 
-button#theme-toggler {
+/*button#theme-toggler {
     position: fixed;
     top: 60px;
     left: 10px;
@@ -1270,7 +1270,7 @@ button#theme-toggler:before {
 .light-mode button#theme-toggler:before {
     content: "\f186";
     color: var(--accent1);
-}
+}*/
 
 /* VARIABLES DEL TEMA */
 
@@ -3733,4 +3733,58 @@ button#theme-toggler2:before {
         max-width:
             calc(100% - 150px);
     }
+}
+
+/* =========================================================
+   THEME TOGGLERS — DIGIMON NAVBAR
+   ========================================================= */
+
+button#theme-toggler,
+button#theme-toggler2 {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 30px;
+    height: 28px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid var(--theme-accent2-overlay);
+
+    background: var(--theme-panel-deep);
+
+    color: var(--digimon-white);
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* Evitamos los iconos antiguos de Necromancer */
+
+button#theme-toggler::before,
+button#theme-toggler2::before {
+    content: none !important;
+}
+
+
+/* Hover */
+
+button#theme-toggler:hover,
+button#theme-toggler2:hover {
+    background: var(--digimon-blue);
+
+    color: var(--digimon-yellow);
+
+    border-color: var(--digimon-cyan);
+
+    box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
