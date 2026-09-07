@@ -364,18 +364,16 @@ background:
 
 .dr-event small {
     font-family: "Oxanium", sans-serif;;
-    font-size: 7px;
+    font-size: 10px;
 
-    color: var(--dg-orange);
+    color: var(--theme-accent2-overlay);
 }
 
 .dr-event b {
     display: block;
-
     margin-top: 2px;
-
     color: #fff;
-    font-size: 11px;
+    font-size: 15px;
 }
 
 .dr-event span {
