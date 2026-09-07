@@ -3194,15 +3194,16 @@ button#theme-toggler2:before {
 
 .digimon-digital-line {
 
-position: relative;
+    position: relative;
 
-    width: 34px;
-
+    width: auto;
     height: 1px;
 
-    flex: 0 0 34px;
+    flex: 1;
 
-    margin: 0 8px;
+    min-width: 30px;
+
+    margin: 0 12px;
 
     background:
         linear-gradient(
@@ -3216,7 +3217,8 @@ position: relative;
 
     opacity: .8;
 
-    box-shadow: 0 0 6px rgba(30, 210, 255, .35);
+    box-shadow:
+        0 0 6px rgba(30, 210, 255, .35);
 }
 
 
