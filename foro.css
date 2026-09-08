@@ -3039,6 +3039,9 @@ button#theme-toggler2:before {
     margin: -10px 0 14px;
     background: var(--theme-bg);
     border: 1px solid var(--theme-accent2-overlay);
+    border-right: none;
+    border-left: none;
+    border-top: none;
     box-shadow:
         0 0 0 1px rgba(0,0,0,.25),
         0 0 25px rgba(0,174,255,.18),
