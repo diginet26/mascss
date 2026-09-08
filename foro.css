@@ -98,7 +98,7 @@ background:
     background: #07111b;
     border-bottom: 1px solid var(--dg-line);
 
-    color: var(--theme-accent2-overlay);
+    color: var(--emblema2);
 
     font-size: 8px;
     font-weight: 700;
@@ -124,7 +124,7 @@ background:
 
     display: block;
 
-    background: var(--theme-accent2-overlay);
+    background: var(--emblema2);
     border-radius: 50%;
 
     opacity: .65;
@@ -171,7 +171,7 @@ background:
     width: 160px;
     height: 2px;
 
-    background: var(--theme-accent2-overlay);
+    background: var(--emblema2);
 
     box-shadow: 0 0 12px rgba(34,193,195,.5);
 }
@@ -187,7 +187,7 @@ background:
 
     border: 1px solid var(--dg-blue);
 
-    color: var(--theme-accent2-overlay);
+    color: var(--emblema2);
 
     font-size: 8px;
     font-weight: 700;
@@ -270,7 +270,7 @@ background:
     font-size: 25px;
     letter-spacing: 2px;
 
-    color: var(--theme-accent2-overlay);
+    color: var(--emblema2);
     text-transform: uppercase;
 }
 
@@ -280,7 +280,7 @@ background:
     width: 18px;
     height: 18px;
 
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
 
     transform: rotate(45deg);
 
@@ -316,7 +316,7 @@ background:
 }
 
 .dr-block b {
-    color: var(--theme-accent2-overlay);
+    color: var(--emblema2);
 }
 
 .dr-highlight {
@@ -356,7 +356,7 @@ background:
     width: 7px;
     height: 7px;
 
-    background: var(--theme-accent2-overlay);
+    background: var(--emblema2);
 
     box-shadow: 0 0 10px rgba(40,215,232,.5);
 }
@@ -365,7 +365,7 @@ background:
     font-family: "Oxanium", sans-serif;;
     font-size: 10px;
 
-    color: var(--theme-accent2-overlay);
+    color: var(--emblema2);
 }
 
 .dr-event b {
@@ -402,7 +402,7 @@ background:
 .dr-tadmin .dr-aviso-title {
     margin-bottom: 7px;
 
-    color: var(--theme-accent2-overlay);
+    color: var(--emblema2);
 
     font-size: 9px;
     font-weight: 700;
@@ -461,7 +461,7 @@ background:
 
     border: 1px solid var(--dg-blue);
 
-    color: var(--theme-accent2-overlay);
+    color: var(--emblema2);
 
     font-size: 10px;
 
@@ -573,7 +573,7 @@ background:
     width: 25px;
     height: 2px;
 
-    background: var(--theme-accent2-overlay);
+    background: var(--emblema2);
 }
 
 .dr-relation small {
@@ -599,13 +599,13 @@ background:
 /* ========================================================== BLOQUES DE LETRAS ========================================================== */ 
 
 .dr-tadmin .dr-section2 { border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
-.dr-tadmin .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--theme-accent2-overlay); }
+.dr-tadmin .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--emblema2); }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
 .dr-tadmin .dr-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), transparent ); border-bottom:1px solid #183246; } 
 .dr-tadmin .dr-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; }
-.dr-tadmin .dr-section2-title .letters span { color:var(--theme-accent2-overlay); } 
+.dr-tadmin .dr-section2-title .letters span { color:var(--emblema2); } 
 .dr-tadmin .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
 
 /* ========================================================== REGISTROS ========================================================== */ 
@@ -618,7 +618,7 @@ background:
 /* ========================================================== NOMBRE ========================================================== */ 
 
 .dr-tadmin .dr-name { font-family:'Roboto Mono',monospace; font-size:10px; font-weight:700; color:#e3edf2; text-transform: uppercase; }
-.dr-tadmin .dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--theme-accent2-overlay); }
+.dr-tadmin .dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--emblema2); }
 
 /* ========================================================== DATOS ========================================================== */ 
 
@@ -3038,7 +3038,7 @@ button#theme-toggler2:before {
     width: 100%;
     margin: -10px 0 14px;
     background: var(--theme-bg);
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
     border-right: none;
     border-left: none;
     border-top: none;
@@ -3097,7 +3097,7 @@ button#theme-toggler2:before {
 .digimon-navbar-sub {
     min-height: 36px;
     padding: 4px 14px;
-    border-top: 1px solid var(--theme-accent2-overlay);
+    border-top: 1px solid var(--emblema2);
     background: rgba(5,19,38,.82);
     justify-content: space-between;
 }
@@ -3129,8 +3129,8 @@ button#theme-toggler2:before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--theme-accent2-overlay);
-    border: 2px solid var(--theme-accent1-overlay);
+    background: var(--emblema2);
+    border: 2px solid var(--emblema1);
     transform: translateY(12px) rotate(45deg);
     box-shadow: 0 0 8px rgba(25,220,255,.5), inset 0 0 8px rgba(0,0,0,.7);
     overflow: hidden;
@@ -3166,9 +3166,9 @@ button#theme-toggler2:before {
         linear-gradient(
             90deg,
             transparent,
-            var(--theme-accent1-overlay),
+            var(--emblema1),
             var(--digimon-cyan),
-            var(--theme-accent1-overlay),
+            var(--emblema1),
             transparent
         );
 
@@ -3201,7 +3201,7 @@ button#theme-toggler2:before {
     gap: 7px;
     color: var(--digimon-white);
     text-decoration: none;
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
     background: rgba(6,21,43,.65);
     font-size: 9px;
     font-weight: 700;
@@ -3240,7 +3240,7 @@ button#theme-toggler2:before {
     padding: 0 12px;
     box-sizing: border-box;
     background: var(--theme-panel-deep);
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
     color: var(--theme-text);
     font-size: 11px;
     outline: none;
@@ -3260,7 +3260,7 @@ button#theme-toggler2:before {
 .digimon-sub-button, #digimon-scroll-toggle {border-radius: 50px;}
 
 .digimon-icon-button, .digimon-sub-button {
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
     background: var(--theme-panel-deep);
     color: var(--digimon-white);
     cursor: pointer;
@@ -3313,7 +3313,7 @@ button#theme-toggler2:before {
     min-width: 130px;
     padding: 6px;
     background: var(--theme-panel);
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
     box-shadow: 0 10px 25px rgba(0,0,0,.4);
     display: none;
     z-index: 10001;
@@ -3437,7 +3437,7 @@ button#theme-toggler, button#theme-toggler2 {
     height: 28px;
     margin: 0;
     padding: 0;
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
     background: var(--theme-panel-deep);
     color: var(--digimon-white);
     cursor: pointer;
@@ -3485,7 +3485,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     padding: 0;
     margin: 0;
 
-    border: 1px solid var(--theme-accent2-overlay);
+    border: 1px solid var(--emblema2);
     border-radius: 50px;
 
     background: var(--theme-panel-deep);
@@ -3620,7 +3620,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     z-index: 100000 !important;
 
     background: var(--theme-panel) !important;
-    border: 1px solid var(--theme-accent2-overlay) !important;
+    border: 1px solid var(--emblema2) !important;
     box-shadow: 0 10px 30px rgba(0,0,0,.5) !important;
     border-radius: 8px !important;
 }
@@ -3659,11 +3659,7 @@ body.valor-mode {
     --linkc3: #765CDE;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --banner-image: url('https://imgur.com/J1RKosW.jpg');
@@ -3685,11 +3681,7 @@ body.amistad-mode {
     --linkc3: #BF2C5F;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --banner-image: url('https://imgur.com/7Nx0qSe.jpg');
@@ -3711,11 +3703,7 @@ body.amor-mode {
     --linkc3: #05AE70;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
    
@@ -3737,11 +3725,7 @@ body.conocimiento-mode {
     --linkc3: #926A40;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --banner-image: url('https://imgur.com/0q3TFB6.jpg');
@@ -3763,11 +3747,7 @@ body.purity-mode {
     --linkc3: #12917A;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --banner-image: url('https://imgur.com/slTuym7.jpg');
@@ -3788,11 +3768,7 @@ body.sincerity-mode {
     --linkc3: #666680;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --banner-image: url('https://imgur.com/slTuym7.jpg');
@@ -3802,23 +3778,19 @@ body.sincerity-mode {
 
 /*---------------------------------------------------------
 ESPERANZA
----------------------------------------------------------
+---------------------------------------------------------*/
 
 body.hope-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #ECC702;
+    --emblema2: #0227EC;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #EC9702;
+    --linkc2: #5702EC;
+    --linkc3: #02A0EC;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --background-image: url(URL);
@@ -3831,25 +3803,21 @@ body.hope-mode {
 }
 
 
----------------------------------------------------------
+/*---------------------------------------------------------
 LUZ
----------------------------------------------------------
+---------------------------------------------------------*/
 
 body.light-variant-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #F5AEDE;
+    --emblema2: #AEF5C5;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #F5AEAE;
+    --linkc2: #C5AEF5;
+    --linkc3: #AEF5EE;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --background-image: url(URL);
@@ -3862,25 +3830,21 @@ body.light-variant-mode {
 }
 
 
----------------------------------------------------------
+/*---------------------------------------------------------
 BONDAD
----------------------------------------------------------
+---------------------------------------------------------*/
 
 body.kindness-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #C974C0;
+    --emblema2: #74C97D;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #C97491;
+    --linkc2: #7486C9;
+    --linkc3: #9EC974;
 
     --accent1: var(--emblema1);
-    --accent1-overlay: var(--emblema2);
-
     --accent2: var(--linkc1);
-    --accent2-overlay: var(--linkc2);
-
     --accent3: var(--linkc3);
 
     --background-image: url(URL);
