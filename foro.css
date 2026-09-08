@@ -47,7 +47,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {
 
 /* TABLILLA ADMINISTRACIÓN */
 
-.dr-pelo {
+.dr-tadmin {
     --dg-blue: #1677C8;
     --dg-blue-dark: #0b3d68;
     --dg-cyan: #22c1c3;
@@ -89,7 +89,7 @@ background:
    DECORACIÓN SUPERIOR
    ========================================================= */
 
-.dr-pelo:before {
+.dr-tadmin:before {
     content: "";
     display: block;
 
@@ -109,7 +109,7 @@ background:
 
 /* pequeños indicadores */
 
-.dr-pelo .dr-dots {
+.dr-tadmin .dr-dots {
     position: absolute;
     top: 5px;
     right: 18px;
@@ -118,7 +118,7 @@ background:
     gap: 5px;
 }
 
-.dr-pelo .dr-dots i {
+.dr-tadmin .dr-dots i {
     width: 5px;
     height: 5px;
 
@@ -130,11 +130,11 @@ background:
     opacity: .65;
 }
 
-.dr-pelo .dr-dots i:nth-child(2) {
+.dr-tadmin .dr-dots i:nth-child(2) {
     opacity: .35;
 }
 
-.dr-pelo .dr-dots i:nth-child(3) {
+.dr-tadmin .dr-dots i:nth-child(3) {
     opacity: .15;
 }
 
@@ -143,7 +143,7 @@ background:
    HEADER
    ========================================================= */
 
-.dr-pelo .dr-cabeza {
+.dr-tadmin .dr-cabeza {
     position: relative;
     min-height: 174px;
     padding: 35px 40px 30px;
@@ -161,7 +161,7 @@ background:
 
 /* línea tecnológica */
 
-.dr-pelo .dr-cabeza:after {
+.dr-tadmin .dr-cabeza:after {
     content: "";
     position: absolute;
 
@@ -179,7 +179,7 @@ background:
 
 /* etiqueta */
 
-.dr-pelo .dr-label {
+.dr-tadmin .dr-label {
     display: inline-block;
 
     padding: 3px 9px;
@@ -198,7 +198,7 @@ background:
 
 /* título */
 
-.dr-pelo .dr-title {
+.dr-tadmin .dr-title {
     margin: 0;
 
     color: #fff;
@@ -215,7 +215,7 @@ background:
 
 /* subtítulo */
 
-.dr-pelo .dr-subtitle {
+.dr-tadmin .dr-subtitle {
     margin-top: 9px;
 
     color: var(--dg-muted);
@@ -225,7 +225,7 @@ background:
     text-transform: uppercase;
 }
 
-.dr-pelo .dr-subtitle b {
+.dr-tadmin .dr-subtitle b {
     color: var(--dg-gold);
 }
 
@@ -233,7 +233,7 @@ background:
    INTRO
    ========================================================= */
 
-.dr-pelo .dr-intro {
+.dr-tadmin .dr-intro {
     margin: 22px 25px 10px;
     padding: 17px 20px;
 
@@ -247,7 +247,7 @@ background:
     font-size: 11px;
 }
 
-.dr-pelo .dr-intro strong {
+.dr-tadmin .dr-intro strong {
     color: #fff;
 }
 
@@ -255,7 +255,7 @@ background:
    SECCIÓN
    ========================================================= */
 
-.dr-pelo .dr-section {
+.dr-tadmin .dr-section {
     margin: 25px;
 }
 
@@ -380,7 +380,7 @@ background:
     font-size: 13px;
 }
 
-.dr-pelo .dr-aviso {
+.dr-tadmin .dr-aviso {
     margin: 25px;
 
     padding: 18px 20px;
@@ -399,7 +399,7 @@ background:
    AVISO DESTACADA
    ========================================================= */
 
-.dr-pelo .dr-aviso-title {
+.dr-tadmin .dr-aviso-title {
     margin-bottom: 7px;
 
     color: var(--theme-accent2-overlay);
@@ -410,7 +410,7 @@ background:
     text-transform: uppercase;
 }
 
-.dr-pelo .dr-aviso p {
+.dr-tadmin .dr-aviso p {
     margin: 0;
 
     color: #b8c7d4;
@@ -422,7 +422,7 @@ background:
    BLOQUES ADMINISTRATIVOS 2
    ========================================================= */
 
-.dr-pelo .dr-lista {
+.dr-tadmin .dr-lista {
     position: relative;
 
     margin-bottom: 8px;
@@ -435,7 +435,7 @@ background:
     transition: .25s ease;
 }
 
-.dr-pelo .dr-lista:hover {
+.dr-tadmin .dr-lista:hover {
     background: var(--dg-panel2);
 
     border-color: var(--dg-line);
@@ -446,7 +446,7 @@ background:
 
 /* icono */
 
-.dr-pelo .dr-lista .dr-icon {
+.dr-tadmin .dr-lista .dr-icon {
     position: absolute;
 
     left: 17px;
@@ -468,14 +468,14 @@ background:
     transform: rotate(45deg);
 }
 
-.dr-pelo .dr-lista .dr-icon i {
+.dr-tadmin .dr-lista .dr-icon i {
     transform: rotate(-45deg);
 }
 
 
 /* nombre */
 
-.dr-pelo .dr-lista h3 {
+.dr-tadmin .dr-lista h3 {
     margin: 0 0 2px;
 
     color: #fff;
@@ -485,14 +485,14 @@ background:
     text-transform: uppercase;
 }
 
-.dr-pelo .dg-lista h3 span {
+.dr-tadmin .dg-lista h3 span {
     color: var(--dg-gold);
 }
 
 
 /* descripción */
 
-.dr-pelo .dr-lista p {
+.dr-tadmin .dr-lista p {
     margin: 0;
 
     color: var(--dg-muted);
@@ -598,34 +598,34 @@ background:
 
 /* ========================================================== BLOQUES DE LETRAS ========================================================== */ 
 
-.dr-pelo .dr-section2 { border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
-.dr-pelo .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--theme-accent2-overlay); }
+.dr-tadmin .dr-section2 { border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
+.dr-tadmin .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--theme-accent2-overlay); }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
-.dr-pelo .dr-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), transparent ); border-bottom:1px solid #183246; } 
-.dr-pelo .dr-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; }
-.dr-pelo .dr-section2-title .letters span { color:var(--theme-accent2-overlay); } 
-.dr-pelo .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
+.dr-tadmin .dr-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), transparent ); border-bottom:1px solid #183246; } 
+.dr-tadmin .dr-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; }
+.dr-tadmin .dr-section2-title .letters span { color:var(--theme-accent2-overlay); } 
+.dr-tadmin .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
 
 /* ========================================================== REGISTROS ========================================================== */ 
 
-.dr-pelo .dr-registro { min-height:30px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1.5fr 35px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
-.dr-pelo .dr-registro2 { min-height:30px; padding:8px 14px; display:grid; grid-template-columns:5.4fr 1fr 0px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
-.dr-pelo .dr-registro:last-child { border-bottom:0; } 
-.dr-pelo .dr-registro:hover { background:rgba(40,215,232,.035); }
+.dr-tadmin .dr-registro { min-height:30px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1.5fr 35px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
+.dr-tadmin .dr-registro2 { min-height:30px; padding:8px 14px; display:grid; grid-template-columns:5.4fr 1fr 0px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
+.dr-tadmin .dr-registro:last-child { border-bottom:0; } 
+.dr-tadmin .dr-registro:hover { background:rgba(40,215,232,.035); }
 
 /* ========================================================== NOMBRE ========================================================== */ 
 
-.dr-pelo .dr-name { font-family:'Roboto Mono',monospace; font-size:10px; font-weight:700; color:#e3edf2; text-transform: uppercase; }
-.dr-pelo .dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--theme-accent2-overlay); }
+.dr-tadmin .dr-name { font-family:'Roboto Mono',monospace; font-size:10px; font-weight:700; color:#e3edf2; text-transform: uppercase; }
+.dr-tadmin .dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--theme-accent2-overlay); }
 
 /* ========================================================== DATOS ========================================================== */ 
 
-.dr-pelo .dr-datos { font-size:9px; color:#718695; text-transform:uppercase; } 
-.dr-pelo .dr-datos { color:#a9bac4; font-weight:700; }
-.dr-pelo .dr-registronumero { width:27px; height:27px; display:flex; align-items:center; justify-content:center; border:1px solid #24475d; color:var(--blue); font-size:10px; background:#081018; clip-path:polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% ); } 
-.dr-pelo .dr-registronumero i { font-style:normal; }
+.dr-tadmin .dr-datos { font-size:9px; color:#718695; text-transform:uppercase; } 
+.dr-tadmin .dr-datos { color:#a9bac4; font-weight:700; }
+.dr-tadmin .dr-registronumero { width:27px; height:27px; display:flex; align-items:center; justify-content:center; border:1px solid #24475d; color:var(--blue); font-size:10px; background:#081018; clip-path:polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% ); } 
+.dr-tadmin .dr-registronumero i { font-style:normal; }
 
 /* TABLILLA DIGIMON */
 
