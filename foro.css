@@ -603,15 +603,15 @@ background:
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
-.dg-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), transparent ); border-bottom:1px solid #183246; } 
-.dg-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; } .dg-.dg-section-title2 .letters span { color:var(--cyan); } 
-.dg-registry .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
+.dr-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), transparent ); border-bottom:1px solid #183246; } 
+.dr-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; } .dg-.dg-section-title2 .letters span { color:var(--cyan); } 
+.dr-registry .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
 
 /* ========================================================== REGISTROS ========================================================== */ 
 
 .dr-registro { min-height:42px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1fr 1fr 35px; align-items:center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
 .dr-registro:last-child { border-bottom:0; } 
-.dg-registro:hover { background:rgba(40,215,232,.035); }
+.dr-registro:hover { background:rgba(40,215,232,.035); }
 
 /* ========================================================== NOMBRE ========================================================== */ 
 
@@ -3278,7 +3278,7 @@ button#theme-toggler2:before {
     letter-spacing: 1px;
     white-space: nowrap;
     transition: .2s;
-    border-radius: 50px;
+    border-radius: 7px;
 }
 
 
