@@ -3082,7 +3082,7 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 
 .digimon-navbar-main, .digimon-navbar-sub {
-    position: relative;
+    position: fixed;
     z-index: 1;
     display: flex;
     align-items: center;
