@@ -3026,7 +3026,6 @@ button#theme-toggler2:before {
     --digimon-border: rgba(48, 205, 255, .55);
 }
 
-
 /* ---------------------------------------------------------
    BARRA PRINCIPAL
    --------------------------------------------------------- */
@@ -3034,59 +3033,41 @@ button#theme-toggler2:before {
 #digimon-navbar {
     position: relative;
     z-index: 9999;
-
     width: 100%;
-    margin: 0 0 14px;
-
+    margin: -10px 0 14px;
     background: var(--theme-bg);
-
     border: 1px solid var(--theme-accent2-overlay);
-
     box-shadow:
         0 0 0 1px rgba(0,0,0,.25),
         0 0 25px rgba(0,174,255,.18),
         inset 0 0 25px rgba(0,0,0,.35);
-
     overflow: visible;
 }
-
 
 /* ---------------------------------------------------------
    CIRCUITOS DIGITALES
    --------------------------------------------------------- */
 
 #digimon-navbar::before {
-
     content: "";
-
     position: absolute;
-
     inset: 0;
-
     pointer-events: none;
-
     opacity: .16;
-
     background-image:
-
         linear-gradient(
             90deg,
             transparent 48%,
             rgba(80,220,255,.8) 49%,
             transparent 50%
         ),
-
         linear-gradient(
             180deg,
             transparent 48%,
             rgba(80,220,255,.6) 49%,
             transparent 50%
         );
-
-    background-size:
-        32px 32px,
-        32px 32px;
-
+    background-size: 32px 32px, 32px 32px;
     z-index: 0;
 }
 
