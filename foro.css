@@ -3639,3 +3639,330 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     text-align: center !important;
     color: var(--theme-accent1) !important;
 }
+
+/* =========================================================
+   VARIANTES VISUALES
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   VALOR
+   --------------------------------------------------------- */
+
+body.valor-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   AMISTAD
+   --------------------------------------------------------- */
+
+body.amistad-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   AMOR
+   --------------------------------------------------------- */
+
+body.amor-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   CONOCIMIENTO
+   --------------------------------------------------------- */
+
+body.conocimiento-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   PUREZA
+   --------------------------------------------------------- */
+
+body.purity-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   SINCERIDAD
+   --------------------------------------------------------- */
+
+body.sincerity-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   ESPERANZA
+   --------------------------------------------------------- */
+
+body.hope-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   LUZ
+   --------------------------------------------------------- */
+
+body.light-variant-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
+
+
+/* ---------------------------------------------------------
+   BONDAD
+   --------------------------------------------------------- */
+
+body.kindness-mode {
+
+    /* EMBLEMA */
+    --emblema1: #XXXXXX;
+    --emblema2: #XXXXXX;
+
+    /* ENLACES */
+    --linkc1: #XXXXXX;
+    --linkc2: #XXXXXX;
+    --linkc3: #XXXXXX;
+
+    /* ACENTOS DEL FORO */
+    --accent1: var(--emblema1);
+    --accent1-overlay: var(--emblema2);
+
+    --accent2: var(--linkc1);
+    --accent2-overlay: var(--linkc2);
+
+    --accent3: var(--linkc3);
+
+
+    /* IMÁGENES */
+    --background-image: url(URL);
+    --banner-image: url(URL);
+    --mural-image: url(URL);
+    --categories-bg-image: url(URL);
+    --stats-image: url(URL);
+    --topics-avatar-bg-image: url(URL);
+    --titles-bg-image: url(URL);
+}
