@@ -3266,114 +3266,62 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 
 #digimon-search {
-
     display: flex;
-
     align-items: center;
-
-    width:
-        min(250px, 24vw);
-
-    margin-left:
-        auto;
+    width: min(250px, 24vw);
+    margin-left: auto;
 }
 
 
 #digimon-search-input {
-
     width: 100%;
-
     height: 36px;
-
-    padding:
-        0 12px;
-
+    padding: 0 12px;
     box-sizing: border-box;
-
-    background:
-        var(--theme-panel-deep);
-
-    border:
-        1px solid var(--theme-accent2-overlay);
-
-    color:
-        var(--theme-text);
-
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--theme-accent2-overlay);
+    color: var(--theme-text);
     font-size: 11px;
-
     outline: none;
 }
 
 
 #digimon-search-input:focus {
-
-    border-color:
-        var(--digimon-cyan);
-
-    box-shadow:
-        0 0 10px rgba(30,210,255,.25);
+    border-color: var(--digimon-cyan);
+    box-shadow: 0 0 10px rgba(30,210,255,.25);
 }
 
-
-#digimon-search-input::placeholder {
-
-    color:
-        var(--theme-text-muted);
-}
+#digimon-search-input::placeholder {color:var(--theme-text-muted);}
 
 
 /* ---------------------------------------------------------
    BOTONES DE ICONOS
    --------------------------------------------------------- */
 
-.digimon-icon-button,
-.digimon-sub-button {
-
-    border:
-        1px solid var(--theme-accent2-overlay);
-
-    background:
-        var(--theme-panel-deep);
-
-    color:
-        var(--digimon-white);
-
-    cursor:
-        pointer;
-
+.digimon-icon-button, .digimon-sub-button {
+    border: 1px solid var(--theme-accent2-overlay);
+    background: var(--theme-panel-deep);
+    color: var(--digimon-white);
+    cursor: pointer;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    transition:
-        .2s;
+    transition: .2s;
 }
 
 
 .digimon-icon-button {
-
     width: 36px;
     height: 36px;
-
     font-size: 15px;
 }
 
 
-.digimon-icon-button:hover,
-.digimon-sub-button:hover {
-
-    background:
-        var(--digimon-blue);
-
-    color:
-        var(--digimon-yellow);
-
-    border-color:
-        var(--digimon-cyan);
-
-    box-shadow:
-        0 0 10px rgba(30,210,255,.35);
+.digimon-icon-button:hover, .digimon-sub-button:hover {
+    background: var(--digimon-blue);
+    color: var(--digimon-yellow);
+    border-color: var(--digimon-cyan);
+    box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
 
 
@@ -3382,204 +3330,103 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 
 .digimon-sub-controls {
-
     display: flex;
-
     align-items: center;
-
     gap: 6px;
-
-    margin-left:
-        auto;
+    margin-left: auto;
 }
-
 
 .digimon-sub-button {
-
     width: 30px;
     height: 28px;
-
     font-size: 13px;
 }
-
 
 /* ---------------------------------------------------------
    MENÚS DESPLEGABLES
    --------------------------------------------------------- */
 
-.digimon-dropdown-wrap {
-
-    position: relative;
-}
-
+.digimon-dropdown-wrap {position: relative;}
 
 .digimon-dropdown {
-
     position: absolute;
-
     right: 0;
-
-    top:
-        calc(100% + 6px);
-
+    top: calc(100% + 6px);
     min-width: 130px;
-
     padding: 6px;
-
-    background:
-        var(--theme-panel);
-
-    border:
-        1px solid var(--theme-accent2-overlay);
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.4);
-
-    display:
-        none;
-
-    z-index:
-        10001;
+    background: var(--theme-panel);
+    border: 1px solid var(--theme-accent2-overlay);
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    display: none;
+    z-index: 10001;
 }
 
-
-.digimon-dropdown-open
-.digimon-dropdown {
-
+.digimon-dropdown-open .digimon-dropdown {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 5px;
 }
 
-
 .digimon-dropdown button {
-
-    border:
-        1px solid var(--theme-border);
-
-    background:
-        var(--theme-panel-deep);
-
-    color:
-        var(--theme-text);
-
+    border: 1px solid var(--theme-border);
+    background: var(--theme-panel-deep);
+    color: var(--theme-text);
     min-height: 28px;
-
-    padding:
-        4px 8px;
-
-    cursor:
-        pointer;
+    padding: 4px 8px;
+    cursor:pointer;
 }
-
 
 .digimon-dropdown button:hover {
-
-    border-color:
-        var(--digimon-cyan);
-
-    color:
-        var(--digimon-yellow);
-
-    background:
-        var(--digimon-blue);
+    border-color: var(--digimon-cyan);
+    color: var(--digimon-yellow);
+    background: var(--digimon-blue);
 }
 
-
-.digimon-theme-dropdown,
-.digimon-size-dropdown {
-
-    flex-direction:
-        column;
-}
-
+.digimon-theme-dropdown, .digimon-size-dropdown {flex-direction: column;}
 
 .digimon-variant-dropdown {
-
-    width:
-        126px;
-
-    min-width:
-        126px;
+    width: 126px;
+    min-width: 126px;
 }
-
 
 .digimon-variant-dropdown button {
-
     width: 26px;
     height: 26px;
-
     padding: 0;
-
     font-size: 15px;
 }
-
 
 /* ---------------------------------------------------------
    MIGAS DE PAN
    --------------------------------------------------------- */
 
 .digimon-breadcrumb-slot {
-
     min-width: 0;
-
     overflow: hidden;
 }
 
-
 .digimon-breadcrumb-slot .path {
-
-    margin:
-        0 !important;
-
-    padding:
-        0 !important;
-
-    font-size:
-        10px;
-
-    white-space:
-        nowrap;
-
-    text-overflow:
-        ellipsis;
-
-    overflow:
-        hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
 }
-
 
 /* ---------------------------------------------------------
    SWITCHEROO
    --------------------------------------------------------- */
 
 #switcheroo {
-
-    display:
-        none !important;
-
-    position:
-        absolute !important;
-
-    left:
-        14px !important;
-
-    top:
-        76px !important;
-
-    z-index:
-        10000 !important;
+    display: none !important;
+    position: absolute !important;
+    left: 14px !important;
+    top: 76px !important;
+    z-index: 10000 !important;
 }
 
-
-#switcheroo.digimon-switch-open {
-
-    display:
-        block !important;
-}
-
+#switcheroo.digimon-switch-open {display: block !important;}
 
 /* ---------------------------------------------------------
    TABLET
