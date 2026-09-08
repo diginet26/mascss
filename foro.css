@@ -3247,6 +3247,7 @@ button#theme-toggler2:before {
     letter-spacing: 1px;
     white-space: nowrap;
     transition: .2s;
+    border-radius: 50px;
 }
 
 
@@ -3637,30 +3638,17 @@ button#theme-toggler2:before {
     }
 
 
-    .digimon-navbar-account {
-
-        flex-basis:
-            48px;
+    .digimon-navbar-account {flex-basis: 48px;
     }
 
 
-    .digimon-main-menu {
-
-        gap:
-            3px;
-    }
+    .digimon-main-menu {gap:3px;}
 
 
     .digimon-main-button {
-
-        width:
-            34px;
-
-        height:
-            34px;
-
-        padding:
-            0;
+        width:34px;
+        height: 34px;
+        padding: 0;
     }
 
 
@@ -3703,52 +3691,34 @@ button#theme-toggler2:before {
    THEME TOGGLERS — DIGIMON NAVBAR
    ========================================================= */
 
-button#theme-toggler,
-button#theme-toggler2 {
+button#theme-toggler, button#theme-toggler2 {
     position: relative;
-
     top: auto;
     left: auto;
-
     width: 30px;
     height: 28px;
-
     margin: 0;
     padding: 0;
-
     border: 1px solid var(--theme-accent2-overlay);
-
     background: var(--theme-panel-deep);
-
     color: var(--digimon-white);
-
     cursor: pointer;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     box-sizing: border-box;
+    border-radius: 50px;
 }
-
 
 /* Evitamos los iconos antiguos de Necromancer */
 
-button#theme-toggler::before,
-button#theme-toggler2::before {
-    content: none !important;
-}
-
+button#theme-toggler::before, button#theme-toggler2::before {content: none !important;}
 
 /* Hover */
 
-button#theme-toggler:hover,
-button#theme-toggler2:hover {
+button#theme-toggler:hover, button#theme-toggler2:hover {
     background: var(--digimon-blue);
-
     color: var(--digimon-yellow);
-
     border-color: var(--digimon-cyan);
-
     box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
