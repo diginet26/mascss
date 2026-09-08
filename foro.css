@@ -3499,3 +3499,133 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     border-color: var(--digimon-cyan);
     box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
+
+/* =========================================================
+   NOTIFICACIONES FOROACTIVO
+   ========================================================= */
+
+#digimon-notifications-slot {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+}
+
+/* Botón nativo de Foroactivo */
+#digimon-notifications-slot #fa_notifications {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid var(--theme-accent2-overlay);
+    border-radius: 50px;
+
+    background: var(--theme-panel-deep);
+    color: var(--theme-text);
+
+    font-size: 0;
+    text-decoration: none;
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Campana */
+#digimon-notifications-slot #fa_notifications::before {
+    content: "\f0f3";
+
+    font-family: FontAwesome;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Hover */
+#digimon-notifications-slot #fa_notifications:hover {
+    background: var(--digimon-blue);
+    color: var(--digimon-yellow);
+    border-color: var(--digimon-cyan);
+
+    box-shadow: 0 0 10px rgba(30, 210, 255, .35);
+}
+
+/* Contador de no leídas */
+#digimon-notifications-slot #notif_unread {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 16px;
+    height: 16px;
+
+    padding: 0 4px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e34a4a;
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+
+    box-sizing: border-box;
+}
+
+/* Cuando Foroactivo mete contenido en el contador */
+#digimon-notifications-slot #notif_unread:not(:empty) {
+    display: flex;
+}
+
+/* Lista desplegable de notificaciones */
+#digimon-notifications-slot #notif_list {
+    position: absolute !important;
+
+    top: 42px !important;
+    right: 0 !important;
+    left: auto !important;
+
+    width: 330px;
+
+    z-index: 100000;
+
+    background: var(--theme-panel);
+    border: 1px solid var(--theme-border);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.45),
+        0 0 20px rgba(0,174,255,.12);
+}
+
+/* Contenido de la lista */
+#digimon-notifications-slot #notif_list li {
+    background: var(--theme-panel);
+    color: var(--theme-text);
+}
+
+/* Enlace inferior "Ver todas" */
+#digimon-notifications-slot #notif_list .see_all a {
+    color: var(--theme-accent1);
+}
+
+#digimon-notifications-slot #notif_list .see_all a:hover {
+    color: var(--theme-accent3);
+}
+
+/* Ventana de notificación en tiempo real */
+#digimon-notifications-slot #live_notif {
+    z-index: 100001 !important;
+}
