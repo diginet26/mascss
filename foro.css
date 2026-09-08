@@ -3793,13 +3793,8 @@ body.hope-mode {
     --accent2: var(--linkc1);
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://i.pinimg.com/736x/2c/6a/d4/2c6ad4735cde92e92a3a694da6a9c58b.jpg');
+
 }
 
 
@@ -3820,13 +3815,8 @@ body.light-variant-mode {
     --accent2: var(--linkc1);
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://figuretopia.com/wp-content/uploads/2025/11/7-25.webp');
+
 }
 
 
@@ -3847,13 +3837,8 @@ body.kindness-mode {
     --accent2: var(--linkc1);
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://i.pinimg.com/originals/cb/45/47/cb45474d3f142c487bd72dbfeb03f798.jpg');
+
 }
 
 */
