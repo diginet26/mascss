@@ -3077,41 +3077,24 @@ button#theme-toggler2:before {
    ESTRUCTURA DE LAS DOS BARRAS
    --------------------------------------------------------- */
 
-.digimon-navbar-main,
-.digimon-navbar-sub {
-
+.digimon-navbar-main, .digimon-navbar-sub {
     position: relative;
-
     z-index: 1;
-
     display: flex;
-
     align-items: center;
 }
 
-
 .digimon-navbar-main {
-
     min-height: 70px;
-
-    padding: 8px 14px;
-
+    padding: 0px 14px;
     gap: 12px;
 }
 
-
 .digimon-navbar-sub {
-
     min-height: 36px;
-
     padding: 4px 14px;
-
-    border-top:
-        1px solid var(--theme-accent2-overlay);
-
-    background:
-        rgba(5,19,38,.82);
-
+    border-top: 1px solid var(--theme-accent2-overlay);
+    background: rgba(5,19,38,.82);
     justify-content: space-between;
 }
 
