@@ -598,14 +598,14 @@ background:
 
 /* ========================================================== BLOQUES DE LETRAS ========================================================== */ 
 
-.dr-pelo .dr-section2 { margin:0 25px 18px; border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
-.dr-pelo .dr-section2:before { content:""; position:absolute; top:0; left:0; width:45px; height:2px; background:var(--theme-accent2-overlay; }
+.dr-pelo .dr-section2 { margin:0 25px 18px; border:1px solid #183246; background:rgba(9,17,24,.8); position:relative;) } 
+.dr-pelo .dr-section2:before { content:""; position:absolute; top:0; left:0; width:45px; height:2px; background:var(--theme-accent2-overlay;) }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
 .dr-pelo .dr-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), transparent ); border-bottom:1px solid #183246; } 
-.dr-pelo .dr-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; } .dg-.dg-section-title2 .letters span { color:var(--theme-accent2-overlay; } 
-.dr-pelo .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
+.dr-pelo .dr-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; } .dg-.dg-section-title2 .letters span { color:var(--theme-accent2-overlay;) } 
+.dr-pelo .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px;) }
 
 /* ========================================================== REGISTROS ========================================================== */ 
 
@@ -615,8 +615,8 @@ background:
 
 /* ========================================================== NOMBRE ========================================================== */ 
 
-.dr-pelo .dr-name { font-family:'Roboto Mono',monospace; font-size:10px; font-weight:700; color:#e3edf2; text-transform:uppercase; }
-.dr-pelo .dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--theme-accent2-overlay; }
+.dr-pelo .dr-name { font-family:'Roboto Mono',monospace; font-size:10px; font-weight:700; color:#e3edf2; text-transform: uppercase; }
+.dr-pelo .dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--theme-accent2-overlay;) }
 
 /* ========================================================== DATOS ========================================================== */ 
 
