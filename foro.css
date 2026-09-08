@@ -599,7 +599,7 @@ background:
 /* ========================================================== BLOQUES DE LETRAS ========================================================== */ 
 
 .dr-pelo .dr-section2 { margin:0 25px 18px; border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
-.dr-pelo .dr-section2:before { content:""; position:absolute; top:0; left:0; width:45px; height:2px; background:var(--cyan); }
+.dr-pelo .dr-section2:before { content:""; position:absolute; top:0; left:0; width:45px; height:2px; background:var(--theme-accent2-overlay; }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
