@@ -3640,7 +3640,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     color: var(--theme-accent1) !important;
 }
 
-/*
+
 =========================================================
 VARIANTES VISUALES
 =========================================================
@@ -3651,12 +3651,12 @@ VALOR
 
 body.valor-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #DE5D1A;
+    --emblema2: #1A80DE;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #DE8A1A;
+    --linkc2: #1AA6DE;
+    --linkc3: #765CDE;
 
     --accent1: var(--emblema1);
     --accent1-overlay: var(--emblema2);
@@ -3682,12 +3682,12 @@ AMISTAD
 
 body.amistad-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #2C7CBF;
+    --emblema2: #BF6F2C;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #2CA7BF;
+    --linkc2: #8A2CBF;
+    --linkc3: #BF2C5F;
 
     --accent1: var(--emblema1);
     --accent1-overlay: var(--emblema2);
@@ -3713,12 +3713,12 @@ AMOR
 
 body.amor-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #AE050D;
+    --emblema2: #05AEA6;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #AE3F05;
+    --linkc2: #7005AE;
+    --linkc3: #05AE70;
 
     --accent1: var(--emblema1);
     --accent1-overlay: var(--emblema2);
@@ -3744,12 +3744,12 @@ CONOCIMIENTO
 
 body.conocimiento-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #7A4092;
+    --emblema2: #589240;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #92406A;
+    --linkc2: #409292;
+    --linkc3: #926A40;
 
     --accent1: var(--emblema1);
     --accent1-overlay: var(--emblema2);
@@ -3768,7 +3768,7 @@ body.conocimiento-mode {
     --titles-bg-image: url(URL);
 }
 
-
+/*
 ---------------------------------------------------------
 PUREZA
 ---------------------------------------------------------
