@@ -598,8 +598,8 @@ background:
 
 /* ========================================================== BLOQUES DE LETRAS ========================================================== */ 
 
-.dr-pelo .dr-section2 { margin:0 25px 18px; border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
-.dr-pelo .dr-section2:before { content:""; position:absolute; top:0; left:0; width:45px; height:2px; background:var(--theme-accent2-overlay); }
+.dr-pelo .dr-section2 { border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
+.dr-pelo .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--theme-accent2-overlay); }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
@@ -610,7 +610,8 @@ background:
 
 /* ========================================================== REGISTROS ========================================================== */ 
 
-.dr-pelo .dr-registro { min-height:42px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1fr 1fr 35px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
+.dr-pelo .dr-registro { min-height:30px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1.5fr 35px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
+.dr-pelo .dr-registro2 { min-height:30px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1fr 1fr 35px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
 .dr-pelo .dr-registro:last-child { border-bottom:0; } 
 .dr-pelo .dr-registro:hover { background:rgba(40,215,232,.035); }
 
