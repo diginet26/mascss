@@ -3223,84 +3223,42 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 
 .digimon-main-menu {
-
     display: flex;
-
     align-items: center;
-
     gap: 5px;
-
-    flex: 1;
-
-    justify-content: center;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    margin-left: auto;
 }
 
-
 .digimon-main-button {
-
     min-height: 38px;
-
-    padding:
-        0 13px;
-
+    padding: 0 13px;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 7px;
-
-    color:
-        var(--digimon-white);
-
+    color: var(--digimon-white);
     text-decoration: none;
-
-    border:
-        1px solid var(--theme-accent2-overlay);
-
-    background:
-        rgba(6,21,43,.65);
-
+    border: 1px solid var(--theme-accent2-overlay);
+    background: rgba(6,21,43,.65);
     font-size: 9px;
-
     font-weight: 700;
-
     letter-spacing: 1px;
-
     white-space: nowrap;
-
     transition: .2s;
 }
 
 
-.digimon-main-button i {
-
-    font-size: 14px;
-}
-
+.digimon-main-button i {font-size: 14px;}
 
 .digimon-main-button:hover {
-
-    background:
-        linear-gradient(
-            145deg,
-            #16b9f1,
-            #0873d1
-        );
-
-    border-color:
-        var(--digimon-cyan);
-
-    color:
-        var(--digimon-yellow);
-
-    box-shadow:
-        0 0 10px rgba(30,210,255,.45);
-
-    transform:
-        translateY(-1px);
+    background: linear-gradient(145deg, #16b9f1, #0873d1);
+    border-color: var(--digimon-cyan);
+    color: var(--digimon-yellow);
+    box-shadow: 0 0 10px rgba(30,210,255,.45);
+    transform:translateY(-1px);
 }
-
 
 /* ---------------------------------------------------------
    BUSCADOR
