@@ -611,7 +611,7 @@ background:
 /* ========================================================== REGISTROS ========================================================== */ 
 
 .dr-pelo .dr-registro { min-height:30px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1.5fr 35px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
-.dr-pelo .dr-registro2 { min-height:30px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1fr 1fr 35px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
+.dr-pelo .dr-registro2 { min-height:30px; padding:8px 14px; display:grid; grid-template-columns:5.4fr 1fr 0px; align-items: center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
 .dr-pelo .dr-registro:last-child { border-bottom:0; } 
 .dr-pelo .dr-registro:hover { background:rgba(40,215,232,.035); }
 
