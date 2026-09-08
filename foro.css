@@ -3087,13 +3087,13 @@ button#theme-toggler2:before {
     display: flex;
     align-items: center;
 }
-
+.digimon-navbar-main {z-index: 2;}
+.digimon-navbar-sub {z-index: 1;}
 .digimon-navbar-main {
     min-height: 70px;
     padding: 0px 14px;
     gap: 12px;
 }
-
 .digimon-navbar-sub {
     min-height: 36px;
     padding: 4px 14px;
@@ -3419,7 +3419,7 @@ button#theme-toggler2:before {
     display: none !important;
     position: absolute !important;
     left: 14px !important;
-    top: 76px !important;
+    top: 58px !important;
     z-index: 10000 !important;
 }
 
