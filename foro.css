@@ -3629,3 +3629,52 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #digimon-notifications-slot #live_notif {
     z-index: 100001 !important;
 }
+
+/* =========================================================
+   NOTIFICACIONES — BOTÓN PERSONALIZADO
+   ========================================================= */
+
+#fa_toolbar {
+    display: block !important;
+}
+
+#fa_notifications {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+#fa_right #notif_list {
+    position: fixed !important;
+    top: 105px !important;
+    right: 318px !important;
+
+    width: 330px !important;
+    max-height: 450px !important;
+    overflow-y: auto !important;
+
+    z-index: 100000 !important;
+
+    background: var(--theme-panel) !important;
+    border: 1px solid var(--theme-accent2-overlay) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5) !important;
+    border-radius: 8px !important;
+}
+
+#fa_right:not(.notification) #notif_list {
+    display: none !important;
+}
+
+#fa_right.notification #notif_list {
+    display: block !important;
+}
+
+#notif_list .see_all a {
+    display: block !important;
+    padding: 12px !important;
+    text-align: center !important;
+    color: var(--theme-accent1) !important;
+}
