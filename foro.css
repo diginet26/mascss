@@ -3285,7 +3285,6 @@ button#theme-toggler2:before {
     outline: none;
 }
 
-
 #digimon-search-input:focus {
     border-color: var(--digimon-cyan);
     box-shadow: 0 0 10px rgba(30,210,255,.25);
@@ -3293,10 +3292,11 @@ button#theme-toggler2:before {
 
 #digimon-search-input::placeholder {color:var(--theme-text-muted);}
 
-
 /* ---------------------------------------------------------
    BOTONES DE ICONOS
    --------------------------------------------------------- */
+
+.digimon-sub-button, #digimon-scroll-toggle {border-radius: 50px;}
 
 .digimon-icon-button, .digimon-sub-button {
     border: 1px solid var(--theme-accent2-overlay);
@@ -3309,13 +3309,11 @@ button#theme-toggler2:before {
     transition: .2s;
 }
 
-
 .digimon-icon-button {
     width: 36px;
     height: 36px;
     font-size: 15px;
 }
-
 
 .digimon-icon-button:hover, .digimon-sub-button:hover {
     background: var(--digimon-blue);
@@ -3323,7 +3321,6 @@ button#theme-toggler2:before {
     border-color: var(--digimon-cyan);
     box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
-
 
 /* ---------------------------------------------------------
    CONTROLES DE LA SEGUNDA BARRA
@@ -3433,38 +3430,14 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 
 @media (max-width: 900px) {
-
     .digimon-main-button {
-
-        padding:
-            0 8px;
-
-        font-size:
-            8px;
+        padding: 0 8px;
+        font-size:8px;
     }
-
-
-    .digimon-main-button span {
-
-        display:
-            none;
-    }
-
-
-    #digimon-search {
-
-        width:
-            170px;
-    }
-
-
-    .digimon-navbar-main {
-
-        gap:
-            7px;
-    }
+    .digimon-main-button span {display: none;}
+    #digimon-search {width: 170px;}
+    .digimon-navbar-main {gap: 7px;}
 }
-
 
 /* ---------------------------------------------------------
    MÓVIL
@@ -3473,65 +3446,22 @@ button#theme-toggler2:before {
 @media (max-width: 650px) {
 
     .digimon-navbar-main {
-
-        min-height:
-            58px;
-
-        padding:
-            5px 7px;
-
-        gap:
-            5px;
+      min-height: 58px;
+      padding: 5px 7px;
+      gap: 5px;
     }
-
-
-    .digimon-navbar-account {flex-basis: 48px;
-    }
-
-
+    .digimon-navbar-account {flex-basis: 48px;}
     .digimon-main-menu {gap:3px;}
-
-
     .digimon-main-button {
         width:34px;
         height: 34px;
         padding: 0;
     }
-
-
-    .digimon-main-button i {
-
-        font-size:
-            13px;
-    }
-
-
-    .digimon-digital-line {
-
-        display:
-            none;
-    }
-
-
-    #digimon-search {
-
-        width:
-            120px;
-    }
-
-
-    .digimon-navbar-sub {
-
-        padding:
-            4px 7px;
-    }
-
-
-    .digimon-breadcrumb-slot {
-
-        max-width:
-            calc(100% - 150px);
-    }
+    .digimon-main-button i {font-size:13px;}
+    .digimon-digital-line {display: none;}
+    #digimon-search {width: 120px;}
+    .digimon-navbar-sub {padding: 4px 7px;}
+    .digimon-breadcrumb-slot {max-width: calc(100% - 150px);}
 }
 
 /* =========================================================
