@@ -3666,13 +3666,8 @@ body.valor-mode {
 
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://imgur.com/J1RKosW.jpg');
+
 }
 
 
@@ -3697,13 +3692,8 @@ body.amistad-mode {
 
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://imgur.com/7Nx0qSe.jpg');
+
 }
 
 
@@ -3728,17 +3718,12 @@ body.amor-mode {
 
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+   
+    --banner-image: url('https://imgur.com/XeyS9Xm.jpg');
 }
 
 
-/*---------------------------------------------------------
+ /*---------------------------------------------------------
 CONOCIMIENTO
 ---------------------------------------------------------*/
 
@@ -3759,28 +3744,23 @@ body.conocimiento-mode {
 
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://imgur.com/0q3TFB6.jpg');
+
 }
 
 /*
 ---------------------------------------------------------
 PUREZA
----------------------------------------------------------
+--------------------------------------------------------- */
 
 body.purity-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #759112;
+    --emblema2: #2E1291;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #919112;
+    --linkc2: #551291;
+    --linkc3: #12917A;
 
     --accent1: var(--emblema1);
     --accent1-overlay: var(--emblema2);
@@ -3790,28 +3770,22 @@ body.purity-mode {
 
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://imgur.com/slTuym7.jpg');
 }
 
 
----------------------------------------------------------
+/*---------------------------------------------------------
 SINCERIDAD
----------------------------------------------------------
+---------------------------------------------------------*/
 
 body.sincerity-mode {
 
-    --emblema1: #XXXXXX;
-    --emblema2: #XXXXXX;
+    --emblema1: #666666;
+    --emblema2: #999999;
 
-    --linkc1: #XXXXXX;
-    --linkc2: #XXXXXX;
-    --linkc3: #XXXXXX;
+    --linkc1: #666666;
+    --linkc2: #806666;
+    --linkc3: #666680;
 
     --accent1: var(--emblema1);
     --accent1-overlay: var(--emblema2);
@@ -3821,17 +3795,12 @@ body.sincerity-mode {
 
     --accent3: var(--linkc3);
 
-    --background-image: url(URL);
-    --banner-image: url(URL);
-    --mural-image: url(URL);
-    --categories-bg-image: url(URL);
-    --stats-image: url(URL);
-    --topics-avatar-bg-image: url(URL);
-    --titles-bg-image: url(URL);
+    --banner-image: url('https://imgur.com/slTuym7.jpg');
+
 }
 
 
----------------------------------------------------------
+/*---------------------------------------------------------
 ESPERANZA
 ---------------------------------------------------------
 
