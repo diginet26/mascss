@@ -594,6 +594,37 @@ background:
     font-size: 10px;
 }
 
+/* TABLA REGISTROS */
+
+/* ========================================================== BLOQUES DE LETRAS ========================================================== */ 
+
+.dr-section2 { margin:0 25px 18px; border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
+.dr-section2:before { content:""; position:absolute; top:0; left:0; width:45px; height:2px; background:var(--cyan); }
+
+/* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
+
+.dg-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), transparent ); border-bottom:1px solid #183246; } 
+.dg-section2-title .letters { font-family:'Rajdhani',Arial,sans-serif; font-size:17px; font-weight:700; color:var(--white); letter-spacing:2px; } .dg-.dg-section-title2 .letters span { color:var(--cyan); } 
+.dg-registry .dg-section-title .number { font-family:'Roboto Mono',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
+
+/* ========================================================== REGISTROS ========================================================== */ 
+
+.dr-registro { min-height:42px; padding:8px 14px; display:grid; grid-template-columns: 1.4fr 1fr 1fr 35px; align-items:center; gap:12px; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
+.dr-registro:last-child { border-bottom:0; } 
+.dg-registro:hover { background:rgba(40,215,232,.035); }
+
+/* ========================================================== NOMBRE ========================================================== */ 
+
+.dr-name { font-family:'Roboto Mono',monospace; font-size:10px; font-weight:700; color:#e3edf2; text-transform:uppercase; }
+.dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--cyan); }
+
+/* ========================================================== DATOS ========================================================== */ 
+
+.dr-datosr { font-size:9px; color:#718695; text-transform:uppercase; } 
+.dr-datosr { color:#a9bac4; font-weight:700; }
+.dr-registronumero { width:27px; height:27px; display:flex; align-items:center; justify-content:center; border:1px solid #24475d; color:var(--blue); font-size:10px; background:#081018; clip-path:polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% ); } 
+.dr-registronumero i { font-style:normal; }
+
 /* TABLILLA DIGIMON */
 
 .digimon-status {
