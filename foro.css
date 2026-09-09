@@ -3261,13 +3261,14 @@ button#theme-toggler2:before {
 
 .digimon-icon-button, .digimon-sub-button {
     border: 1px solid var(--emblema2);
-    background: var(--emblema2);
+    /*background: var(--emblema2);*/
     color: var(--digimon-white);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: .2s;
+    border-radius: 7px;
 }
 
 .digimon-icon-button {
