@@ -3573,10 +3573,10 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* Lista desplegable de notificaciones */
 #digimon-notifications-slot {position: relative;}
 
-#digimon-notifications-slot #notif_list, #fa_right #notif_list {
-    position: absolute !important;
-    top: 42px !important;
-    right: 0 !important;
+#fa_right #notif_list {
+    position: fixed !important;
+    top: 66px !important;
+    right: 14px !important;
     left: auto !important;
     width: 330px !important;
     max-width: calc(100vw - 20px) !important;
