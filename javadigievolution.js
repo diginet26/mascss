@@ -52,7 +52,7 @@
 
                 atributo: "Datos",
 
-                imagen: "<img src="https://raw.githubusercontent.com/BSoD38/time-stranger-tree/refs/heads/main/data/icons/patamon.png">",
+                imagen: "https://raw.githubusercontent.com/BSoD38/time-stranger-tree/refs/heads/main/data/icons/patamon.png",
 
                 datos: [
                     "angemon",
@@ -90,7 +90,8 @@
 
                 atributo: "Vacuna",
 
-                imagen: "",
+                imagen: "https://raw.githubusercontent.com/BSoD38/time-stranger-tree/refs/heads/main/data/icons/angemon.png",
+
 
                 datos: [
                     "magnaangemon",
