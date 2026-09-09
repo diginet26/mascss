@@ -3430,10 +3430,6 @@ button#theme-toggler2:before {
    SWITCHEROO
    --------------------------------------------------------- */
 
-/* ---------------------------------------------------------
-   SWITCHEROO
-   --------------------------------------------------------- */
-
 #switcheroo {
     display: none !important;
     position: absolute !important;
@@ -3457,6 +3453,80 @@ button#theme-toggler2:before {
 
 #switcheroo.digimon-switch-open {
     display: block !important;
+}
+
+/* ---------------------------------------------------------
+   SWITCHEROO — CUENTAS
+   --------------------------------------------------------- */
+
+#switcheroo .switcheroo__squircles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 4px;
+    list-style: none;
+}
+
+#switcheroo .switcheroo__squircle {
+    position: relative;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--emblema2);
+
+    clip-path: polygon(
+        50% 0%,
+        100% 50%,
+        50% 100%,
+        0% 50%
+    );
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        filter .2s ease;
+}
+
+#switcheroo .switcheroo__avatar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#switcheroo .switcheroo__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Cuenta al pasar el ratón */
+#switcheroo .switcheroo__squircle:hover {
+    background: var(--emblema2);
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 6px var(--emblema2));
+}
+
+/* Cuenta actualmente activa */
+#switcheroo .switcheroo__squircle.active {
+    background: var(--emblema2);
+    filter: drop-shadow(0 0 8px var(--emblema2));
+    cursor: default;
 }
 
 /* ---------------------------------------------------------
