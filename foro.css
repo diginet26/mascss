@@ -3523,6 +3523,47 @@ button#theme-toggler2:before {
 }
 
 /* ---------------------------------------------------------
+   SWITCHEROO — BOTÓN AÑADIR CUENTA
+   --------------------------------------------------------- */
+
+#switcheroo .switcheroo__squircle--button {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--emblema2);
+    color: var(--emblema2);
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+    clip-path: polygon(
+        50% 0%,
+        100% 50%,
+        50% 100%,
+        0% 50%
+    );
+    cursor: pointer;
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        filter .2s ease;
+}
+
+/* Hover del botón + */
+#switcheroo .switcheroo__squircle--button:hover {
+    background: var(--emblema2);
+    color: var(--theme-panel-deep);
+    transform: scale(1.08);
+    filter:
+        drop-shadow(0 0 6px var(--emblema2));
+}
+
+/* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
 
