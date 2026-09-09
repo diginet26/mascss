@@ -3175,13 +3175,15 @@ button#theme-toggler2:before {
 
 #digimon-user-avatar {
     position: absolute;
-    top: 8px;
-    left: 50%;
+    /*top: 8px;
+    left: 50%;*/
     transform: translateX(-50%);
     top: -62px;
     left: 70px;
     /*width: 60px;
     height: 60px;*/
+    width: 200px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3428,15 +3430,34 @@ button#theme-toggler2:before {
    SWITCHEROO
    --------------------------------------------------------- */
 
+/* ---------------------------------------------------------
+   SWITCHEROO
+   --------------------------------------------------------- */
+
 #switcheroo {
     display: none !important;
     position: absolute !important;
     left: 14px !important;
     top: 58px !important;
     z-index: 10000 !important;
+    padding: 10px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 22, 40, .98),
+            rgba(4, 12, 25, .98)
+        );
+    border: 1px solid var(--emblema2);
+    box-shadow:
+        0 0 12px rgba(30, 210, 255, .25),
+        0 10px 30px rgba(0, 0, 0, .6),
+        inset 0 0 15px rgba(0, 0, 0, .45);
+    box-sizing: border-box;
 }
 
-#switcheroo.digimon-switch-open {display: block !important;}
+#switcheroo.digimon-switch-open {
+    display: block !important;
+}
 
 /* ---------------------------------------------------------
    TABLET
