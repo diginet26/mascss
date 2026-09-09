@@ -3239,7 +3239,7 @@ button#theme-toggler2:before {
     height: 36px;
     padding: 0 12px;
     box-sizing: border-box;
-    background: var(--theme-panel-deep);
+    background: var(--emblema2);
     border: 1px solid var(--emblema2);
     color: var(--theme-text);
     font-size: 11px;
@@ -3261,7 +3261,7 @@ button#theme-toggler2:before {
 
 .digimon-icon-button, .digimon-sub-button {
     border: 1px solid var(--emblema2);
-    background: var(--theme-panel-deep);
+    background: var(--emblema2);
     color: var(--digimon-white);
     cursor: pointer;
     display: flex;
@@ -3438,7 +3438,7 @@ button#theme-toggler, button#theme-toggler2 {
     margin: 0;
     padding: 0;
     border: 1px solid var(--emblema2);
-    background: var(--theme-panel-deep);
+    background: var(--emblema2);
     color: var(--digimon-white);
     cursor: pointer;
     display: flex;
