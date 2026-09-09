@@ -3440,7 +3440,7 @@ button#theme-toggler, button#theme-toggler2 {
     margin: 0;
     padding: 0;
     border: 1px solid var(--emblema2);
-    background: var(--emblema2);
+    background: tansparent;/*var(--emblema2)*/
     color: var(--digimon-white);
     cursor: pointer;
     display: flex;
