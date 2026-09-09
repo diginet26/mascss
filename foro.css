@@ -3801,7 +3801,12 @@ body.valor-mode {
     --accent3: var(--linkc3);
 
 }
-
+button[title="Valor"] {
+    background-image: url('https://imgur.com/yi2VSVk.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* ---------------------------------------------------------
 AMISTAD
 ---------------------------------------------------------*/
