@@ -3107,7 +3107,7 @@ button#theme-toggler2:before {
    AVATAR - NAVBAR - SWITCHEROO
    --------------------------------------------------------- */
 
-/*.digimon-navbar-account {
+.digimon-navbar-account {
     flex: 0 0 62px;
     display: flex;
     justify-content: center;
@@ -3129,7 +3129,7 @@ button#theme-toggler2:before {
     margin: -25px 0px 0px 110px;
     float: left !important;
     position: absolute;*/
- /*   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .digimon-avatar-frame {
@@ -3142,7 +3142,7 @@ button#theme-toggler2:before {
     background: var(--emblema2);
     border: 2px solid var(--emblema1);
     /*transform: translateY(12px) rotate(45deg);*/
- /*   box-shadow: 0 0 8px rgba(25,220,255,.5), inset 0 0 8px rgba(0,0,0,.7);
+    box-shadow: 0 0 8px rgba(25,220,255,.5), inset 0 0 8px rgba(0,0,0,.7);
     overflow: hidden;
 }
 
@@ -3154,35 +3154,35 @@ button#theme-toggler2:before {
     transform: rotate(-270deg);
 }
 /* Avatar generado por _userdata.avatar */
-/*.digimon-avatar-frame img {
+.digimon-avatar-frame img {
     width: calc(100% - 6px);
     height: calc(100% - 6px);
     object-fit: cover;
     display: block;
     transform: rotate(-270deg);
-}*/
-.digimon-navbar-account {
+}
+/*.digimon-navbar-account {
    /* position: relative;
     width: 62px;
     height: 70px;
     flex: 0 0 62px;*/
-      position: absolute !important;
+     /* position: absolute !important;*/
     /* width: 62px; */
     /* height: 70px; */
     /* flex: 0 0 62px; */
-    margin: 85px 0px 0px 15px;
-}
+    /*margin: 85px 0px 0px 15px;
+}*/
 
-#digimon-user-avatar {
+/*#digimon-user-avatar {
     position: absolute;
     /*top: 8px;
     left: 50%;*/
-    transform: translateX(-50%);
+  /*  transform: translateX(-50%);
     top: -62px;
     left: 70px;
     /*width: 60px;
     height: 60px;*/
-    width: 200px;
+   /* width: 200px;
     height: 200px;
     display: flex;
     align-items: center;
@@ -3214,7 +3214,7 @@ button#theme-toggler2:before {
         50% 100%,
         0% 50%
     );
-}
+}*/
 
 /* ---------------------------------------------------------
    SEPARADOR DIGITAL
