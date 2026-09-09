@@ -3318,6 +3318,7 @@ button#theme-toggler2:before {
     width: 36px;
     height: 36px;
     font-size: 15px;
+    background: transparent !important;
 }
 
 .digimon-icon-button:hover, .digimon-sub-button:hover {
