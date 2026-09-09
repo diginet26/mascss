@@ -3108,14 +3108,14 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 
 .digimon-navbar-account {
-    flex: 0 0 clamp(62px, 7vw, 92px);
+    flex: 0 0 62px;
     display: flex;
     justify-content: center;
 }
 
 #digimon-user-avatar {
-    width: clamp(54px, 7vw, 92px);
-    height: clamp(54px, 7vw, 92px);
+    width: 54px;
+    height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3123,22 +3123,26 @@ button#theme-toggler2:before {
 }
 
 .digimon-avatar-frame {
-    width: clamp(46px, 7vw, 92px);
-    height: clamp(46px, 7vw, 92px);
-    padding: clamp(2px, .35vw, 4px);
+    width: 46px;
+    height: 46px;
+    padding: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--emblema2);
     border: 2px solid var(--emblema1);
-    transform: translateY(clamp(0px, 0.5vw, 6px)) rotate(45deg);
-    /*transform: translateY(clamp(10px, 1.5vw, 16px)) rotate(45deg);*/
-    box-shadow:
-        0 0 8px rgba(25,220,255,.5),
-        inset 0 0 8px rgba(0,0,0,.7);
+    transform: translateY(12px) rotate(45deg);
+    box-shadow: 0 0 8px rgba(25,220,255,.5), inset 0 0 8px rgba(0,0,0,.7);
     overflow: hidden;
 }
 
+.digimon-avatar-frame img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    display: block;
+    transform: rotate(-270deg);
+}
 /* Avatar generado por _userdata.avatar */
 .digimon-avatar-frame img {
     width: calc(100% - 6px);
