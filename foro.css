@@ -3662,8 +3662,6 @@ body.valor-mode {
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
 
-    --banner-image: url('https://imgur.com/J1RKosW.jpg');
-
 }
 
 
@@ -3683,8 +3681,6 @@ body.amistad-mode {
     --accent1: var(--linkc1);
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
-
-    --banner-image: url('https://imgur.com/7Nx0qSe.jpg');
 
 }
 
@@ -3706,9 +3702,7 @@ body.amor-mode {
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
 
-   
-    --banner-image: url('https://imgur.com/XeyS9Xm.jpg');
-}
+   }
 
 
  /*---------------------------------------------------------
@@ -3727,8 +3721,6 @@ body.conocimiento-mode {
     --accent1: var(--linkc1);
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
-
-    --banner-image: url('https://imgur.com/0q3TFB6.jpg');
 
 }
 
@@ -3749,8 +3741,6 @@ body.purity-mode {
     --accent1: var(--linkc1);
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
-
-    --banner-image: url('https://imgur.com/slTuym7.jpg');
 }
 
 
@@ -3770,8 +3760,6 @@ body.sincerity-mode {
     --accent1: var(--linkc1);
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
-
-    --banner-image: url('https://imgur.com/slTuym7.jpg');
 
 }
 
@@ -3793,8 +3781,6 @@ body.hope-mode {
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
 
-    --banner-image: url('https://i.pinimg.com/736x/2c/6a/d4/2c6ad4735cde92e92a3a694da6a9c58b.jpg');
-
 }
 
 
@@ -3815,8 +3801,6 @@ body.light-variant-mode {
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
 
-    --banner-image: url('https://figuretopia.com/wp-content/uploads/2025/11/7-25.webp');
-
 }
 
 
@@ -3836,8 +3820,6 @@ body.kindness-mode {
     --accent1: var(--linkc1);
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
-
-    --banner-image: url('https://i.pinimg.com/originals/cb/45/47/cb45474d3f142c487bd72dbfeb03f798.jpg');
 
 }
 
