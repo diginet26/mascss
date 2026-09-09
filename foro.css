@@ -3651,8 +3651,8 @@ VALOR
 
 body.valor-mode {
 
-    --emblema1: #DE5D1A;
-    --emblema2: #1A80DE;
+    --emblema1: #1A80DE;
+    --emblema2: #f16f29;
 
     --linkc1: #DE8A1A;
     --linkc2: #1AA6DE;
@@ -3673,8 +3673,8 @@ AMISTAD
 
 body.amistad-mode {
 
-    --emblema1: #2C7CBF;
-    --emblema2: #BF6F2C;
+    --emblema1: #BF6F2C;
+    --emblema2: #75b6e2;
 
     --linkc1: #2CA7BF;
     --linkc2: #8A2CBF;
@@ -3695,8 +3695,8 @@ AMOR
 
 body.amor-mode {
 
-    --emblema1: #AE050D;
-    --emblema2: #05AEA6;
+    --emblema1: #05AEA6;
+    --emblema2: #d1485d;
 
     --linkc1: #AE3F05;
     --linkc2: #7005AE;
@@ -3717,8 +3717,8 @@ CONOCIMIENTO
 
 body.conocimiento-mode {
 
-    --emblema1: #7A4092;
-    --emblema2: #589240;
+    --emblema1: #589240;
+    --emblema2: #ae71d1;
 
     --linkc1: #92406A;
     --linkc2: #409292;
@@ -3739,8 +3739,8 @@ PUREZA
 
 body.purity-mode {
 
-    --emblema1: #759112;
-    --emblema2: #2E1291;
+    --emblema1: #2E1291;
+    --emblema2: #7ce16f;
 
     --linkc1: #919112;
     --linkc2: #551291;
@@ -3760,8 +3760,8 @@ SINCERIDAD
 
 body.sincerity-mode {
 
-    --emblema1: #666666;
-    --emblema2: #999999;
+    --emblema1: #999999;
+    --emblema2: #a5a4b7;
 
     --linkc1: #666666;
     --linkc2: #806666;
@@ -3782,8 +3782,8 @@ ESPERANZA
 
 body.hope-mode {
 
-    --emblema1: #ECC702;
-    --emblema2: #0227EC;
+    --emblema1: #0227EC;
+    --emblema2: #e5d979;
 
     --linkc1: #EC9702;
     --linkc2: #5702EC;
@@ -3804,8 +3804,8 @@ LUZ
 
 body.light-variant-mode {
 
-    --emblema1: #F5AEDE;
-    --emblema2: #AEF5C5;
+    --emblema1: #AEF5C5;
+    --emblema2: #edb6cf;
 
     --linkc1: #F5AEAE;
     --linkc2: #C5AEF5;
@@ -3826,8 +3826,8 @@ BONDAD
 
 body.kindness-mode {
 
-    --emblema1: #C974C0;
-    --emblema2: #74C97D;
+    --emblema1: #74C97D;
+    --emblema2: #e400d5;
 
     --linkc1: #C97491;
     --linkc2: #7486C9;
