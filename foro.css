@@ -3470,8 +3470,8 @@ button#theme-toggler2:before {
 
 #switcheroo .switcheroo__squircle {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 54px;
+    height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3479,7 +3479,17 @@ button#theme-toggler2:before {
     margin: 0;
     background: var(--theme-panel-deep);
     border: 1px solid var(--emblema2);
+    clip-path: polygon(
+        50% 0%,
+        100% 50%,
+        50% 100%,
+        0% 50%
+    );
     cursor: pointer;
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        filter .2s ease;
 }
 
 #switcheroo .switcheroo__avatar {
