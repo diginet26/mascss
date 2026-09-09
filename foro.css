@@ -3133,8 +3133,8 @@ button#theme-toggler2:before {
 }
 
 .digimon-avatar-frame {
-    width: 46px;
-    height: 46px;
+    width: 200px;
+    height: 200px;
     padding: 3px;
     display: flex;
     align-items: center;
