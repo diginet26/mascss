@@ -3552,23 +3552,22 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 }
 
 /* Lista desplegable de notificaciones */
-#digimon-notifications-slot #notif_list {
-    position: absolute !important;
+#digimon-notifications-slot {position: relative;}
 
+#digimon-notifications-slot #notif_list, #fa_right #notif_list {
+    position: absolute !important;
     top: 42px !important;
     right: 0 !important;
     left: auto !important;
-
-    width: 330px;
-
-    z-index: 100000;
-
-    background: var(--theme-panel);
-    border: 1px solid var(--theme-border);
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.45),
-        0 0 20px rgba(0,174,255,.12);
+    width: 330px !important;
+    max-width: calc(100vw - 20px) !important;
+    max-height: 450px !important;
+    overflow-y: auto !important;
+    z-index: 100000 !important;
+    background: var(--theme-panel) !important;
+    border: 1px solid var(--emblema2) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5) !important;
+    border-radius: 8px !important;
 }
 
 /* Contenido de la lista */
@@ -3578,26 +3577,18 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 }
 
 /* Enlace inferior "Ver todas" */
-#digimon-notifications-slot #notif_list .see_all a {
-    color: var(--theme-accent1);
-}
+#digimon-notifications-slot #notif_list .see_all a {color: var(--theme-accent1);}
 
-#digimon-notifications-slot #notif_list .see_all a:hover {
-    color: var(--theme-accent3);
-}
+#digimon-notifications-slot #notif_list .see_all a:hover {color: var(--theme-accent3);}
 
 /* Ventana de notificación en tiempo real */
-#digimon-notifications-slot #live_notif {
-    z-index: 100001 !important;
-}
+#digimon-notifications-slot #live_notif {z-index: 100001 !important;}
 
 /* =========================================================
    NOTIFICACIONES — BOTÓN PERSONALIZADO
    ========================================================= */
 
-#fa_toolbar {
-    display: block !important;
-}
+#fa_toolbar {display: block !important;}
 
 #fa_notifications {
     position: absolute !important;
@@ -3606,23 +3597,6 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     overflow: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
-}
-
-#fa_right #notif_list {
-    position: fixed !important;
-    top: 105px !important;
-    right: 0 !important;
-    left: auto !important;
-    width: 330px !important;
-    max-width: calc(100vw - 20px) !important;
-    max-height: 750px !important;
-    min-height: 450px !important;
-    overflow-y: auto !important;
-    z-index: 100000 !important;
-    background: var(--theme-panel) !important;
-    border: 1px solid var(--emblema2) !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,.5) !important;
-    border-radius: 8px !important;
 }
 
 #fa_right:not(.notification) #notif_list {display: none !important;}
@@ -3659,7 +3633,6 @@ body.valor-mode {
     --accent3: var(--linkc3);
 
 }
-
 
 /* ---------------------------------------------------------
 AMISTAD
@@ -3700,7 +3673,6 @@ body.amor-mode {
 
    }
 
-
  /*---------------------------------------------------------
 CONOCIMIENTO
 ---------------------------------------------------------*/
@@ -3720,8 +3692,7 @@ body.conocimiento-mode {
 
 }
 
-/*
----------------------------------------------------------
+/*---------------------------------------------------------
 PUREZA
 --------------------------------------------------------- */
 
@@ -3738,7 +3709,6 @@ body.purity-mode {
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
 }
-
 
 /*---------------------------------------------------------
 SINCERIDAD
@@ -3759,7 +3729,6 @@ body.sincerity-mode {
 
 }
 
-
 /*---------------------------------------------------------
 ESPERANZA
 ---------------------------------------------------------*/
@@ -3779,7 +3748,6 @@ body.hope-mode {
 
 }
 
-
 /*---------------------------------------------------------
 LUZ
 ---------------------------------------------------------*/
@@ -3798,7 +3766,6 @@ body.light-variant-mode {
     --accent3: var(--linkc3);
 
 }
-
 
 /*---------------------------------------------------------
 BONDAD
