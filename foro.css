@@ -3320,7 +3320,7 @@ button#theme-toggler2:before {
 }
 
 .digimon-dropdown-open .digimon-dropdown {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 5px;
 }
