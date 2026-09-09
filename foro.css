@@ -3222,8 +3222,7 @@ button#theme-toggler2:before {
     height: 1px;
     flex: 1;
     min-width: 30px;
-  /*0 12px 0 12px*/
-    margin: 60px 12px 0 12px;
+    margin: 0 12px 0 12px;
     background: linear-gradient(90deg, transparent, var(--emblema1), var(--digimon-cyan), var(--emblema1),transparent);
     opacity: .8;
     box-shadow: 0 0 6px rgba(30, 210, 255, .35);}
