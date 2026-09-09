@@ -3037,7 +3037,7 @@ button#theme-toggler2:before {
     z-index: 9999;
     width: 100%;
     margin: -10px 0 14px;
-    background: var(--theme-bg);
+    background: var(--body-background);
     border: 1px solid var(--emblema2);
     border-right: none;
     border-left: none;
