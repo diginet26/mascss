@@ -3826,7 +3826,12 @@ body.amistad-mode {
 
 }
 
-
+button[title="Amistad"] {
+    background-image: url('https://imgur.com/a/sjY90gs#hWGlqgF.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* ---------------------------------------------------------
 AMOR
 --------------------------------------------------------- */
@@ -3845,7 +3850,12 @@ body.amor-mode {
     --accent3: var(--linkc3);
 
    }
-
+button[title="Amor"] {
+    background-image: url('https://imgur.com/a/sjY90gs#oxZUHTR.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
  /*---------------------------------------------------------
 CONOCIMIENTO
 ---------------------------------------------------------*/
@@ -3864,7 +3874,12 @@ body.conocimiento-mode {
     --accent3: var(--linkc3);
 
 }
-
+button[title="Conocimiento"] {
+    background-image: url('https://imgur.com/a/sjY90gs#lV6PHWQ.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*---------------------------------------------------------
 PUREZA
 --------------------------------------------------------- */
@@ -3882,7 +3897,12 @@ body.purity-mode {
     --accent2: var(--linkc2);
     --accent3: var(--linkc3);
 }
-
+button[title="Pureza"] {
+    background-image: url('https://imgur.com/a/sjY90gs#n0RWw0X.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*---------------------------------------------------------
 SINCERIDAD
 ---------------------------------------------------------*/
@@ -3901,7 +3921,12 @@ body.sincerity-mode {
     --accent3: var(--linkc3);
 
 }
-
+button[title="Sinceridad"] {
+    background-image: url('https://imgur.com/a/sjY90gs#b19orbC.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*---------------------------------------------------------
 ESPERANZA
 ---------------------------------------------------------*/
@@ -3920,7 +3945,12 @@ body.hope-mode {
     --accent3: var(--linkc3);
 
 }
-
+button[title="Esperanza"] {
+    background-image: url('https://imgur.com/a/sjY90gs#Vcn9Ke9.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*---------------------------------------------------------
 LUZ
 ---------------------------------------------------------*/
@@ -3939,7 +3969,12 @@ body.light-variant-mode {
     --accent3: var(--linkc3);
 
 }
-
+button[title="Luz"] {
+    background-image: url('https://imgur.com/a/sjY90gs#BhdjsBY.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*---------------------------------------------------------
 BONDAD
 ---------------------------------------------------------*/
@@ -3958,7 +3993,12 @@ body.kindness-mode {
     --accent3: var(--linkc3);
 
 }
-
+button[title="Bondad"] {
+    background-image: url('https://imgur.com/a/sjY90gs#VMF9CGT.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* =========================================================
    TOOLTIPS DE LA NAVBAR
    ========================================================= */
