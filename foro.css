@@ -3575,7 +3575,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 
 #fa_right #notif_list {
     position: fixed !important;
-    top: 66px !important;
+    top: 96px !important;
     right: 14px !important;
     left: auto !important;
     width: 330px !important;
