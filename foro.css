@@ -5045,14 +5045,14 @@ blockquote {
 
     background: #0B1118;
 
-    border: 1px solid #1677C8;
-    border-left: 4px solid #35D8FF;
+    border: 1px solid var(--emblema1);
+    border-left: 4px solid var(--emblema2);
 
     border-radius: 4px;
 
     color: #D9E7F2;
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Oxanium", monospace;
     font-size: 12px;
     line-height: 1.65;
 
@@ -5086,13 +5086,13 @@ blockquote:before {
     padding-left: 14px;
     padding-right: 50px;
 
-    background: #111A24;
+    background: var(--body-background);
 
-    border-bottom: 1px solid rgba(53,216,255,.25);
+    border-bottom: 1px solid var(--emblema1);
 
-    color: #35D8FF;
+    color: var(--emblema2);
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Oxanium", monospace;
     font-size: 9px;
     font-weight: 700;
 
