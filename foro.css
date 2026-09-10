@@ -3385,6 +3385,7 @@ button#theme-toggler2:before {
 .digimon-breadcrumb-slot {
     min-width: 0;
     overflow: hidden;
+    margin-left: 60px;
 }
 
 .digimon-breadcrumb-slot .path {
