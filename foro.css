@@ -4538,6 +4538,307 @@ button[title="Bondad"] {
         box-shadow .15s ease;
   }
 
+/* ---------------------------------------------------------
+   QUICK LINKS — HOVER
+   --------------------------------------------------------- */
+
+#rift-quick-links a:hover {
+    transform:translateY(-2px);
+    border-color:var(--rift-a2);
+    box-shadow:0 0 10px rgba(255,255,255,.08),
+               0 0 8px var(--rift-a2);
+}
+
+
+/* ---------------------------------------------------------
+   INFORMACIÓN
+   --------------------------------------------------------- */
+
+#rift-info-row {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+    margin-top:12px;
+}
+
+.rift-info-box {
+    height:110px;
+    min-width:0;
+    display:flex;
+    gap:12px;
+    padding:10px;
+    box-sizing:border-box;
+
+    background:linear-gradient(
+        145deg,
+        var(--rift-panel-alt),
+        var(--rift-deep)
+    );
+
+    border:1px solid var(--rift-border);
+    overflow:hidden;
+}
+
+.rift-info-box img {
+    width:90px;
+    height:90px;
+    flex:0 0 90px;
+    object-fit:cover;
+    display:block;
+}
+
+.rift-info-box > div {
+    min-width:0;
+    height:100%;
+    overflow-y:auto;
+
+    font-size:11px;
+    line-height:1.5;
+    color:var(--rift-muted);
+
+    padding-right:6px;
+    box-sizing:border-box;
+}
+
+
+/* ---------------------------------------------------------
+   STAFF
+   --------------------------------------------------------- */
+
+#rift-staff-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+#rift-staff-grid a {
+    min-width:0;
+    aspect-ratio:1/1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    border:1px solid var(--rift-border);
+    background:var(--rift-deep);
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    transition:
+        transform .15s ease,
+        border-color .15s ease,
+        box-shadow .15s ease;
+}
+
+#rift-staff-grid img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+#rift-staff-grid a:hover {
+    transform:scale(1.05);
+    border-color:var(--rift-a2);
+    box-shadow:0 0 10px var(--rift-a2);
+}
+
+
+/* ---------------------------------------------------------
+   DISCORD / TUMBLR
+   --------------------------------------------------------- */
+
+#rift-social-links {
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    margin-top:14px;
+}
+
+#rift-social-links a {
+    width:100%;
+    aspect-ratio:1/1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-sizing:border-box;
+
+    text-decoration:none;
+    color:var(--rift-text);
+
+    background:linear-gradient(
+        145deg,
+        var(--rift-panel-alt),
+        var(--rift-deep)
+    );
+
+    border:1px solid var(--rift-border);
+
+    font-family:'Oxanium',sans-serif;
+    font-size:12px;
+    font-weight:bold;
+
+    transition:
+        transform .15s ease,
+        border-color .15s ease,
+        box-shadow .15s ease;
+}
+
+#rift-social-links a:hover {
+    transform:translateX(2px);
+    border-color:var(--rift-a3);
+    box-shadow:0 0 8px var(--rift-a3);
+}
+
+
+/* ---------------------------------------------------------
+   ÚLTIMOS TEMAS
+   --------------------------------------------------------- */
+
+#rift-recent-content {
+    height:500px;
+    overflow-y:auto;
+
+    font-size:12px;
+    line-height:1.5;
+
+    color:var(--rift-muted);
+}
+
+/* En caso de que el contenido de Foroactivo
+   genere elementos de lista */
+
+#rift-recent-content a {
+    color:var(--rift-text);
+    text-decoration:none;
+}
+
+#rift-recent-content a:hover {
+    color:var(--rift-a2);
+}
+
+#rift-recent-content ul,
+#rift-recent-content ol {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+#rift-recent-content li {
+    padding:8px 0;
+    border-bottom:1px solid var(--rift-border);
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width:900px) {
+
+    #rift-board-body {
+        grid-template-columns:minmax(0,1fr) 190px;
+        grid-template-areas:
+            "current recent"
+            "staff recent";
+    }
+
+    #rift-recent {
+        min-height:0;
+    }
+
+    #rift-recent-content {
+        height:500px;
+    }
+
+}
+
+@media (max-width:650px) {
+
+    #rift-board {
+        margin:20px auto;
+    }
+
+    #rift-board-body {
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "current"
+            "staff"
+            "recent";
+    }
+
+    #rift-current,
+    #rift-staff,
+    #rift-recent {
+        width:100%;
+    }
+
+    #rift-current-content {
+        height:320px;
+    }
+
+    #rift-quick-links {
+        grid-template-columns:repeat(7,minmax(0,1fr));
+        gap:4px;
+    }
+
+    #rift-quick-links a {
+        font-size:14px;
+    }
+
+    #rift-info-row {
+        grid-template-columns:1fr;
+    }
+
+    #rift-staff-grid {
+        grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+
+    #rift-social-links {
+        flex-direction:row;
+    }
+
+    #rift-social-links a {
+        aspect-ratio:1/1;
+    }
+
+    #rift-recent {
+        min-height:0;
+    }
+
+    #rift-recent-content {
+        height:300px;
+    }
+
+}
+
+@media (max-width:420px) {
+
+    #rift-quick-links {
+        grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+
+    #rift-staff-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .rift-info-box {
+        height:100px;
+    }
+
+    .rift-info-box img {
+        width:75px;
+        height:75px;
+        flex-basis:75px;
+    }
+
+}
 
 /* =========================================================
    DIGIVICE SPOILER — FORO DIGIMON
