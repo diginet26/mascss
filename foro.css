@@ -4843,11 +4843,13 @@ button[title="Bondad"] {
 
 }
 /* PRUEBA — permitir que el tablón sobresalga de su contenedor */
-#main-content,
-#content,
-#wrap,
-#page-body {
-    overflow: visible !important;
+#rift-board {
+    z-index: 99999 !important;
+}
+
+#rift-board-body,
+#rift-board-top {
+    z-index: 99999 !important;
 }
 /* =========================================================
    DIGIMON SPOILER — DIGIVICE DATA
