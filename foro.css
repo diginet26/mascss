@@ -3503,12 +3503,12 @@ button#theme-toggler2:before {
 
     border: 2px solid var(--emblema2);
 
-    clip-path: polygon(
+    /*clip-path: polygon(
         50% 0%,
         100% 50%,
         50% 100%,
         0% 50%
-    );
+    );*/
 
     cursor: pointer;
 
