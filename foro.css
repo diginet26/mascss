@@ -4537,3 +4537,120 @@ button[title="Bondad"] {
         border-color .15s ease,
         box-shadow .15s ease;
   }
+
+
+/* =========================================================
+   DIGIVICE SPOILER — FORO DIGIMON
+   Compatible con Foroactivo
+   ========================================================= */
+
+.spoiler {
+    position: relative;
+    margin: 15px auto;
+    background: #0B1118;
+    border: 1px solid #1677C8;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px rgba(53,216,255,.08),
+        0 0 15px rgba(22,119,200,.12);
+}
+
+/* Línea superior digital */
+.spoiler:before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #1677C8,
+        #35D8FF,
+        #1677C8
+    );
+}
+
+/* Botón del spoiler */
+.spoiler-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 14px;
+
+    background: #111A24;
+    color: #35D8FF;
+
+    border: 0 !important;
+
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+/* Icono */
+.spoiler-button:before {
+    content: "◈";
+    margin-right: 9px;
+    color: #35D8FF;
+    text-shadow: 0 0 7px rgba(53,216,255,.6);
+}
+
+/* Hover */
+.spoiler-button:hover {
+    background: #162533;
+    color: #FFFFFF;
+}
+
+/* Contenido */
+.spoiler-content {
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            rgba(53,216,255,.025) 1px,
+            transparent 1px
+        ),
+        #0B1118;
+
+    background-size: 100% 4px;
+
+    color: #D9E7F2;
+
+    border-top: 1px solid rgba(53,216,255,.25);
+
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Pequeña marca de sistema */
+.spoiler-content:before {
+    content: "// DIGIVICE_DATA";
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #1677C8;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* Selección de texto */
+.spoiler ::selection {
+    background: #1677C8;
+    color: #FFFFFF;
+}
