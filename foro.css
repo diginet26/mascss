@@ -5043,14 +5043,14 @@ blockquote {
     margin: 18px 0;
     padding: 42px 18px 18px 18px;
 
-    background: #0B1118;
+    background: var(--body-background);
 
     border: 1px solid var(--emblema1);
     border-left: 4px solid var(--emblema2);
 
     border-radius: 4px;
 
-    color: #D9E7F2;
+    color: var(--colortextodl);
 
     font-family: "Oxanium", monospace;
     font-size: 12px;
