@@ -3359,9 +3359,9 @@ button#theme-toggler2:before {
 }
 
 .digimon-dropdown button:hover {
-    border-color: var(--digimon-cyan);
-    color: var(--digimon-yellow);
-    background: var(--digimon-blue);
+    border-color: var(--emblema2);
+    color: var(--linkc3);
+    background: var(--emblema1);
 }
 
 .digimon-theme-dropdown, .digimon-size-dropdown {flex-direction: column;}
