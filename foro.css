@@ -5182,10 +5182,10 @@ blockquote cite {
 }
 
 /* =========================================================
-   DIGIMON SPOILER
+   DIGIMON CODE
    ========================================================= */
 
-dl.codebox.spoiler {
+dl.codebox:not(.spoiler) {
     position: relative;
 
     margin: 18px 0;
@@ -5213,52 +5213,47 @@ dl.codebox.spoiler {
 
 
 /* =========================================================
-   CABECERA DEL SPOILER
+   CABECERA
    ========================================================= */
 
-dl.codebox.spoiler .spoiler_title {
+dl.codebox:not(.spoiler) dt {
     position: relative;
-
-    display: flex;
-    align-items: center;
 
     width: 100%;
     height: 36px;
 
     box-sizing: border-box;
 
+    display: flex;
+    align-items: center;
+
     padding: 0 45px 0 14px;
+
+    margin: 0;
 
     background: #111A24;
 
-    border: 0;
     border-bottom: 1px solid rgba(53,216,255,.25);
 
     color: #35D8FF;
 
     font-family: "IBM Plex Mono", monospace;
 
-    font-size: 9px;
+    font-size: 0;
     font-weight: 700;
 
     letter-spacing: 1.5px;
 
     text-transform: uppercase;
-
-    cursor: pointer;
 }
 
 
 /* =========================================================
-   CAMBIAR "SPOILER:" POR "DIGITAL TRANSMISSION"
+   TÍTULO
    ========================================================= */
 
-dl.codebox.spoiler .spoiler_title {
-    font-size: 0;
-}
-
-dl.codebox.spoiler .spoiler_title:before {
-    content: "DIGITAL TRANSMISSION";
+dl.codebox:not(.spoiler) dt:before {
+    content: "DIGITAL CODE";
 
     font-size: 9px;
     letter-spacing: 1.5px;
@@ -5266,10 +5261,10 @@ dl.codebox.spoiler .spoiler_title:before {
 
 
 /* =========================================================
-   ICONO DIGIVICE
+   ICONO
    ========================================================= */
 
-dl.codebox.spoiler .spoiler_title:after {
+dl.codebox:not(.spoiler) dt:after {
     content: "◈";
 
     position: absolute;
@@ -5295,32 +5290,39 @@ dl.codebox.spoiler .spoiler_title:after {
    CONTENIDO
    ========================================================= */
 
-dl.codebox.spoiler dd {
+dl.codebox:not(.spoiler) dd {
     margin: 0;
-    padding: 0;
-}
-
-dl.codebox.spoiler .spoiler_content {
-    box-sizing: border-box;
-
     padding: 18px;
 
     background: #0B1118;
 
-    color: #D9E7F2;
-
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    line-height: 1.65;
+    border: 0;
 }
 
 
 /* =========================================================
-   ESTADO OCULTO
+   CÓDIGO
    ========================================================= */
 
-dl.codebox.spoiler .spoiler_content[hidden] {
-    display: none;
+dl.codebox:not(.spoiler) code {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+    color: #D9E7F2;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    white-space: pre-wrap;
 }
 
 /* =========================================================
