@@ -3402,9 +3402,9 @@ button#theme-toggler2:before {
 
 #switcheroo {
     display: none !important;
-    position: absolute !important;
-    left: 0px !important;
-    top: 105px !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 106px !important;
     z-index: 10000 !important;
     padding: 10px;
     background:
@@ -3480,7 +3480,6 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    CUENTA / BOTÓN +
    --------------------------------------------------------- */
-
 #switcheroo .switcheroo__squircle,
 #switcheroo .switcheroo__squircle--button {
     position: relative;
@@ -3502,13 +3501,7 @@ button#theme-toggler2:before {
     background: var(--theme-panel-deep);
 
     border: 2px solid var(--emblema2);
-
-    /*clip-path: polygon(
-        50% 0%,
-        100% 50%,
-        50% 100%,
-        0% 50%
-    );*/
+    border-radius: 8px;
 
     cursor: pointer;
 
@@ -3518,6 +3511,12 @@ button#theme-toggler2:before {
         filter .2s ease;
 }
 
+    /*clip-path: polygon(
+        50% 0%,
+        100% 50%,
+        50% 100%,
+        0% 50%
+    );*/
 
 /* ---------------------------------------------------------
    AVATAR DE LA CUENTA
