@@ -5161,11 +5161,11 @@ blockquote cite {
     padding-left: 14px;
     padding-right: 50px;
 
-    background: #111A24;
+    background: var(--body-background);
 
     border-bottom: 1px solid rgba(53,216,255,.25);
 
-    color: #35D8FF;
+    color: var(--colortextodl);
 
     font-family: "IBM Plex Mono", monospace;
 
