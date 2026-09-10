@@ -1343,7 +1343,7 @@ button#theme-toggler2:before {
 
 .light-mode button#theme-toggler2:before {
     content: "\f186";
-    color: var(--accent1);
+    color: var(--emblema1);
 }
 
 
