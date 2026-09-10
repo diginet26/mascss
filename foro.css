@@ -3386,6 +3386,7 @@ button#theme-toggler2:before {
     min-width: 0;
     overflow: hidden;
     margin-left: 60px;
+    font-family: 'Jersey 15';
 }
 
 .digimon-breadcrumb-slot .path {
