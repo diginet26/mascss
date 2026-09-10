@@ -4964,7 +4964,7 @@ button[title="Bondad"] {
 
 
 /* =========================================================
-   QUOTE — DIGIMON DATA TRANSMISSION
+   DIGIMON QUOTE
    ========================================================= */
 
 blockquote {
@@ -4972,13 +4972,7 @@ blockquote {
     margin: 18px 0;
     padding: 42px 18px 18px 18px;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(22,119,200,.08),
-            transparent 35%
-        ),
-        #0B1118;
+    background: #0B1118;
 
     border: 1px solid #1677C8;
     border-left: 4px solid #35D8FF;
@@ -4999,77 +4993,83 @@ blockquote {
 }
 
 
-/* CABECERA DEL QUOTE */
+/* =========================================================
+   CABECERA
+   ========================================================= */
 
 blockquote:before {
-    content: "DIGITAL TRANSMISSION";
+    content: "";
 
     position: absolute;
     top: 0;
     left: 0;
 
     width: 100%;
-    box-sizing: border-box;
+    height: 36px;
 
-    padding: 9px 14px;
+    box-sizing: border-box;
 
     background: #111A24;
 
     border-bottom: 1px solid rgba(53,216,255,.25);
-
-    color: #35D8FF;
-
-    font-size: 9px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    text-shadow:
-        0 0 6px rgba(53,216,255,.5);
 }
 
 
-/* MARCA DIGITAL DEL QUOTE */
+/* =========================================================
+   ICONO DIGIVICE
+   ========================================================= */
 
 blockquote:after {
     content: "◈";
 
     position: absolute;
-    top: 8px;
+    top: 9px;
     right: 13px;
 
     color: #35D8FF;
 
-    font-size: 14px;
+    font-size: 13px;
 
     text-shadow:
         0 0 8px rgba(53,216,255,.7);
 }
 
 
-/* TEXTO DEL QUOTE */
+/* =========================================================
+   AUTOR DEL QUOTE
+   ========================================================= */
 
-blockquote strong,
-blockquote b {
+blockquote strong:first-child {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 14px;
+    padding-right: 50px;
+
+    box-sizing: border-box;
+
     color: #35D8FF;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
 }
-
-
-/* ENLACES DENTRO DEL QUOTE */
-
-blockquote a {
-    color: #35D8FF;
-    text-decoration: none;
-}
-
-blockquote a:hover {
-    color: #FFFFFF;
-    text-shadow:
-        0 0 7px rgba(53,216,255,.7);
-}
-
-
 
 /* =========================================================
    CODE — DIGIMON SYSTEM DATA
