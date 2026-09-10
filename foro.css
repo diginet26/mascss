@@ -5175,16 +5175,15 @@ dl.codebox:not(.spoiler) {
     margin: 18px 0;
     padding: 0;
 
-    background: #0B1118;
+    background: var(--body-background);
 
-    border: 1px solid #1677C8;
-    border-left: 4px solid #35D8FF;
-
+    border: 1px solid var(--emblema1);
+    border-left: 4px solid var(--emblema2);
     border-radius: 4px;
 
-    color: #D9E7F2;
+    color: var(--colortextod1);
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Oxanium", monospace;
     font-size: 12px;
     line-height: 1.65;
 
@@ -5215,13 +5214,13 @@ dl.codebox:not(.spoiler) dt {
 
     margin: 0;
 
-    background: #111A24;
+    background: var(--body-background);
 
-    border-bottom: 1px solid rgba(53,216,255,.25);
+    border-bottom: 1px solid var(--emblema1);
 
-    color: #35D8FF;
+    color: var(--colortextod1);
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Oxanium", monospace;
 
     font-size: 0;
     font-weight: 700;
@@ -5237,7 +5236,7 @@ dl.codebox:not(.spoiler) dt {
    ========================================================= */
 
 dl.codebox:not(.spoiler) dt:before {
-    content: "DIGITAL CODE";
+    content: "CODE";
 
     font-size: 9px;
 
@@ -5262,7 +5261,7 @@ dl.codebox:not(.spoiler) dt:after {
     display: flex;
     align-items: center;
 
-    color: #35D8FF;
+    color: var(--emblema2);
 
     font-size: 13px;
 
@@ -5287,14 +5286,14 @@ dl.codebox:not(.spoiler) .digicode-copy {
 
     padding: 0 8px;
 
-    border: 1px solid rgba(53,216,255,.45);
+    border: 1px solid var(--emblema1);
     border-radius: 2px;
 
-    background: rgba(11,17,24,.85);
+    background: var(--body-background);
 
-    color: #35D8FF;
+    color: var(--colortextod1);
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Oxanium", monospace;
 
     font-size: 8px;
     font-weight: 700;
@@ -5313,20 +5312,20 @@ dl.codebox:not(.spoiler) .digicode-copy {
 }
 
 dl.codebox:not(.spoiler) .digicode-copy:hover {
-    background: rgba(22,119,200,.25);
+    background: var(--body-background);
 
-    border-color: #35D8FF;
+    border-color: var(--emblema1);
 
-    color: #FFFFFF;
+    color: var(--colortextod1);
 
     box-shadow:
         0 0 8px rgba(53,216,255,.25);
 }
 
 dl.codebox:not(.spoiler) .digicode-copy.copied {
-    color: #35D8FF;
+    color: var(--colortextod1);
 
-    border-color: #35D8FF;
+    border-color: var(--emblema1);
 
     box-shadow:
         0 0 8px rgba(53,216,255,.35);
@@ -5341,7 +5340,7 @@ dl.codebox:not(.spoiler) dd {
     margin: 0;
     padding: 18px;
 
-    background: #0B1118;
+    background: #var(--body-background);
 
     border: 0;
 }
@@ -5361,9 +5360,9 @@ dl.codebox:not(.spoiler) code {
 
     border: 0;
 
-    color: #D9E7F2;
+    color: var(--colortextod1);
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Oxanium", monospace;
 
     font-size: 12px;
 
