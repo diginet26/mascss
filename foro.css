@@ -4066,8 +4066,8 @@ button[title="Bondad"] {
 
     width: 100vw;
     max-width: none;
-    margin: 35px 0;
-
+    /*margin: 35px 0;*/
+    margin: 0 auto 35px;
     color: var(--rift-text);
 
     font-family: 'Oxanium', sans-serif;
@@ -4079,7 +4079,25 @@ button[title="Bondad"] {
     box-sizing: border-box;
 }
 
+/* =========================================================
+   CABECERA DIGITAL RIFT
+   ========================================================= */
 
+#rift-board::before {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 400px;
+
+    background-image: var(--banner-image);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    z-index: 1;
+}
 /* ---------------------------------------------------------
    CABECERA
    --------------------------------------------------------- */
