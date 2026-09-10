@@ -3424,6 +3424,42 @@ button#theme-toggler2:before {
 #switcheroo.digimon-switch-open {
     display: block !important;
 }
+/* ---------------------------------------------------------
+   SWITCHEROO — TOOLTIP
+   --------------------------------------------------------- */
+
+#switcheroo .switcheroo__popper {
+    position: absolute !important;
+
+    left: 155% !important;
+    top: 50% !important;
+
+    width: max-content !important;
+
+    padding: 6px 10px !important;
+
+    background: var(--theme-panel-deep) !important;
+    border: 1px solid var(--emblema2) !important;
+
+    color: var(--theme-text) !important;
+
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+
+    opacity: 0 !important;
+    pointer-events: none !important;
+
+    transform: translateY(-50%) !important;
+
+    z-index: 100001 !important;
+}
+
+#switcheroo .switcheroo__squircle:hover .switcheroo__popper {
+    opacity: 1 !important;
+}
+
+#switcheroo .switcheroo__popper-text {display: block !important;}
 
 /* =========================================================
    SWITCHEROO — CUENTAS
