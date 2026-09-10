@@ -78,7 +78,7 @@ background:
     font-size: 12px;
     line-height: 1.8;
 
-    text-align: left;
+    text-align: justify;
     box-shadow:
         0 0 35px rgba(0,0,0,.45),
         inset 0 0 45px rgba(22,119,200,.04);
