@@ -3098,7 +3098,7 @@ button#theme-toggler2:before {
     min-height: 36px;
     padding: 4px 14px;
     border-top: 1px solid var(--emblema2);
-    background: var(--linkc1);
+    background: var(--linkc3);
     justify-content: space-between;
 }
 
