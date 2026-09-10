@@ -3425,114 +3425,131 @@ button#theme-toggler2:before {
     display: block !important;
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    SWITCHEROO — CUENTAS
-   --------------------------------------------------------- */
+   ========================================================= */
 
 #switcheroo .switcheroo__squircles {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+
     margin: 0;
-    padding: 4px;
+    padding: 10px;
+
     list-style: none;
 }
 
-#switcheroo .switcheroo__squircle {
+
+/* ---------------------------------------------------------
+   CUENTA / BOTÓN +
+   --------------------------------------------------------- */
+
+#switcheroo .switcheroo__squircle,
+#switcheroo .switcheroo__squircle--button {
     position: relative;
-    width: 54px;
-    height: 54px;
+
+    width: 70px;
+    height: 70px;
+
+    flex: 0 0 70px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 0;
     margin: 0;
+
+    box-sizing: border-box;
+
     background: var(--theme-panel-deep);
-    border: 1px solid var(--emblema2);
+
+    border: 2px solid var(--emblema2);
+
     clip-path: polygon(
         50% 0%,
         100% 50%,
         50% 100%,
         0% 50%
     );
+
     cursor: pointer;
+
     transition:
         transform .2s ease,
         background .2s ease,
         filter .2s ease;
 }
 
+
+/* ---------------------------------------------------------
+   AVATAR DE LA CUENTA
+   --------------------------------------------------------- */
+
 #switcheroo .switcheroo__avatar {
     width: 100%;
     height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
 }
 
 #switcheroo .switcheroo__avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
     display: block;
+
+    object-fit: cover;
 }
 
-/* Cuenta al pasar el ratón */
-#switcheroo .switcheroo__squircle:hover {
-    background: var(--emblema2);
-    transform: scale(1.08);
-    filter: drop-shadow(0 0 6px var(--emblema2));
-}
-
-/* Cuenta actualmente activa */
-#switcheroo .switcheroo__squircle.active {
-    background: var(--emblema2);
-    filter: drop-shadow(0 0 8px var(--emblema2));
-    cursor: default;
-}
 
 /* ---------------------------------------------------------
-   SWITCHEROO — BOTÓN AÑADIR CUENTA
+   CUENTA ACTIVA
+   --------------------------------------------------------- */
+
+#switcheroo .switcheroo__squircle.active {
+    background: var(--emblema2);
+
+    filter:
+        drop-shadow(0 0 7px var(--emblema2));
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+#switcheroo .switcheroo__squircle:hover,
+#switcheroo .switcheroo__squircle--button:hover {
+    transform: scale(1.08);
+
+    background: var(--emblema2);
+
+    filter:
+        drop-shadow(0 0 8px var(--emblema2));
+}
+
+
+/* ---------------------------------------------------------
+   BOTÓN +
    --------------------------------------------------------- */
 
 #switcheroo .switcheroo__squircle--button {
-    width: 54px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    background: var(--theme-panel-deep);
-    border: 1px solid var(--emblema2);
     color: var(--emblema2);
-    font-size: 32px;
+
+    font-size: 38px;
     font-weight: 300;
     line-height: 1;
-    clip-path: polygon(
-        50% 0%,
-        100% 50%,
-        50% 100%,
-        0% 50%
-    );
-    cursor: pointer;
-    transition:
-        transform .2s ease,
-        background .2s ease,
-        color .2s ease,
-        filter .2s ease;
 }
 
-/* Hover del botón + */
 #switcheroo .switcheroo__squircle--button:hover {
-    background: var(--emblema2);
     color: var(--theme-panel-deep);
-    transform: scale(1.08);
-    filter:
-        drop-shadow(0 0 6px var(--emblema2));
 }
-
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
