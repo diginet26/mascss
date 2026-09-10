@@ -4842,7 +4842,13 @@ button[title="Bondad"] {
     }
 
 }
-
+/* PRUEBA — permitir que el tablón sobresalga de su contenedor */
+#main-content,
+#content,
+#wrap,
+#page-body {
+    overflow: visible !important;
+}
 /* =========================================================
    DIGIMON SPOILER — DIGIVICE DATA
    ========================================================= */
