@@ -5245,7 +5245,7 @@ dl.codebox:not(.spoiler) dt {
     display: flex;
     align-items: center;
 
-    padding: 0 45px 0 14px;
+    padding: 0 90px 0 14px;
 
     margin: 0;
 
@@ -5274,6 +5274,7 @@ dl.codebox:not(.spoiler) dt:before {
     content: "DIGITAL CODE";
 
     font-size: 9px;
+
     letter-spacing: 1.5px;
 }
 
@@ -5301,6 +5302,68 @@ dl.codebox:not(.spoiler) dt:after {
 
     text-shadow:
         0 0 8px rgba(53,216,255,.7);
+}
+
+
+/* =========================================================
+   BOTÓN COPIAR
+   ========================================================= */
+
+dl.codebox:not(.spoiler) .digicode-copy {
+    position: absolute;
+
+    top: 7px;
+    right: 38px;
+
+    z-index: 5;
+
+    height: 22px;
+
+    padding: 0 8px;
+
+    border: 1px solid rgba(53,216,255,.45);
+    border-radius: 2px;
+
+    background: rgba(11,17,24,.85);
+
+    color: #35D8FF;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        box-shadow .2s ease;
+}
+
+dl.codebox:not(.spoiler) .digicode-copy:hover {
+    background: rgba(22,119,200,.25);
+
+    border-color: #35D8FF;
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 0 8px rgba(53,216,255,.25);
+}
+
+dl.codebox:not(.spoiler) .digicode-copy.copied {
+    color: #35D8FF;
+
+    border-color: #35D8FF;
+
+    box-shadow:
+        0 0 8px rgba(53,216,255,.35);
 }
 
 
@@ -5341,6 +5404,8 @@ dl.codebox:not(.spoiler) code {
     line-height: 1.65;
 
     white-space: pre-wrap;
+
+    overflow-x: auto;
 }
 
 /* =========================================================
