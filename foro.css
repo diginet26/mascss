@@ -4048,3 +4048,410 @@ button[title="Bondad"] {
   box-shadow: 0 0 8px rgba(0, 0, 0, .5), 0 0 10px var(--emblema2);
  text-align: center;
 }
+
+/* =========================================================
+   TABLÓN DIGITAL RIFT
+   ========================================================= */
+
+#rift-board {
+    position: relative;
+    width: 100%;
+    margin: 25px auto;
+    box-sizing: border-box;
+    color: var(--theme-text);
+}
+
+
+/* ---------------------------------------------------------
+   BARRA SUPERIOR
+   --------------------------------------------------------- */
+
+#rift-board-top {
+    height: 28px;
+    position: relative;
+    box-sizing: border-box;
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--theme-border);
+}
+
+.rift-board-dots {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    display: flex;
+    gap: 7px;
+    transform: translateY(-50%);
+}
+
+.rift-board-dots span {
+    width: 9px;
+    height: 9px;
+    display: block;
+    border-radius: 50%;
+}
+
+.rift-board-dots span:nth-child(1) {
+    background: var(--LINKC1);
+}
+
+.rift-board-dots span:nth-child(2) {
+    background: var(--LINKC2);
+}
+
+.rift-board-dots span:nth-child(3) {
+    background: var(--LINKC3);
+}
+
+
+/* ---------------------------------------------------------
+   CUERPO
+   --------------------------------------------------------- */
+
+#rift-board-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 150px minmax(250px, 0.8fr);
+    gap: 14px;
+    padding: 14px;
+    box-sizing: border-box;
+    background: var(--theme-panel);
+    border: 1px solid var(--theme-border);
+    border-top: 0;
+}
+
+
+/* ---------------------------------------------------------
+   COLUMNA IZQUIERDA + STAFF
+   --------------------------------------------------------- */
+
+#rift-board-main {
+    min-width: 0;
+    display: contents;
+}
+
+
+/* ---------------------------------------------------------
+   CAJAS
+   --------------------------------------------------------- */
+
+#rift-current,
+#rift-staff,
+#rift-recent {
+    min-width: 0;
+    background: var(--theme-panel-alt);
+    border: 1px solid var(--theme-border);
+    box-sizing: border-box;
+}
+
+#rift-current {
+    grid-column: 1;
+}
+
+#rift-staff {
+    grid-column: 2;
+}
+
+#rift-recent {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULOS
+   --------------------------------------------------------- */
+
+.rift-box-title {
+    min-height: 30px;
+    padding: 7px 12px;
+    box-sizing: border-box;
+
+    font-family: "Oxanium", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: var(--theme-text);
+    background: linear-gradient(
+        90deg,
+        var(--accent1),
+        transparent
+    );
+
+    border-bottom: 1px solid var(--theme-border);
+}
+
+
+/* ---------------------------------------------------------
+   SITUACIÓN ACTUAL
+   --------------------------------------------------------- */
+
+#rift-current-content {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+#rift-current-text {
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#rift-current-text p {
+    margin: 0 0 10px;
+}
+
+
+/* ---------------------------------------------------------
+   PERSONAJE
+   --------------------------------------------------------- */
+
+#rift-character {
+    float: right;
+    width: 150px;
+    margin: -20px -5px 5px 15px;
+    position: relative;
+    z-index: 5;
+
+    shape-outside: url("https://placehold.co/220x320");
+    shape-margin: 10px;
+}
+
+#rift-character img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ---------------------------------------------------------
+   LINKS RÁPIDOS
+   --------------------------------------------------------- */
+
+#rift-quick-links {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+#rift-quick-links a,
+#rift-social-links a {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    box-sizing: border-box;
+
+    color: var(--theme-text);
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        var(--theme-panel-deep),
+        var(--theme-panel-alt)
+    );
+
+    border: 1px solid var(--theme-border);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+#rift-quick-links a:hover,
+#rift-social-links a:hover {
+    transform: translateY(-2px);
+    border-color: var(--LINKC1);
+}
+
+
+/* ---------------------------------------------------------
+   BLOQUES DE INFORMACIÓN
+   --------------------------------------------------------- */
+
+#rift-info-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 40px;
+    gap: 10px;
+    padding: 0 12px 12px;
+    box-sizing: border-box;
+}
+
+.rift-info-box {
+    min-width: 0;
+    height: 90px;
+
+    display: flex;
+    gap: 8px;
+
+    padding: 8px;
+    box-sizing: border-box;
+
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--theme-border);
+}
+
+.rift-info-box img {
+    width: 65px;
+    height: 65px;
+    flex: 0 0 65px;
+    object-fit: cover;
+}
+
+.rift-info-box > div {
+    min-width: 0;
+    overflow-y: auto;
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------
+   DISCORD / TUMBLR
+   --------------------------------------------------------- */
+
+#rift-social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+#rift-social-links a {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* ---------------------------------------------------------
+   STAFF
+   --------------------------------------------------------- */
+
+#rift-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+#rift-staff-grid a {
+    display: flex;
+    justify-content: center;
+}
+
+#rift-staff-grid img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 2px solid var(--theme-border);
+}
+
+
+/* ---------------------------------------------------------
+   ÚLTIMOS TEMAS
+   --------------------------------------------------------- */
+
+#rift-recent-content {
+    height: calc(100% - 30px);
+    min-height: 360px;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+#rift-recent-content > * {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    #rift-board-body {
+        grid-template-columns: minmax(0, 1fr) 120px;
+    }
+
+    #rift-recent {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+    }
+
+    #rift-current {
+        grid-column: 1;
+    }
+
+    #rift-staff {
+        grid-column: 1;
+    }
+
+    #rift-info-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #rift-social-links {
+        grid-column: 1 / span 2;
+        flex-direction: row;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    #rift-board-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #rift-current,
+    #rift-staff,
+    #rift-recent {
+        width: 100%;
+    }
+
+    #rift-recent {
+        order: 3;
+    }
+
+    #rift-staff {
+        order: 2;
+    }
+
+    #rift-current {
+        order: 1;
+    }
+
+    #rift-info-row {
+        grid-template-columns: 1fr;
+    }
+
+    #rift-social-links {
+        grid-column: auto;
+        flex-direction: row;
+    }
+
+}
