@@ -3242,10 +3242,10 @@ button#theme-toggler2:before {
     align-items: center;
     justify-content: center;
     gap: 7px;
-    color: var(--digimon-white);
+    color: var(--colortextodl);
     text-decoration: none;
     border: 1px solid var(--emblema2);
-    background: rgba(6,21,43,.65);
+    background: var(--body-background);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -3259,7 +3259,7 @@ button#theme-toggler2:before {
 
 .digimon-main-button:hover {
     background: linear-gradient(145deg, #16b9f1, #0873d1);
-    border-color: var(--digimon-cyan);
+    border-color: var(--emblema1);
     color: var(--digimon-yellow);
     box-shadow: 0 0 10px rgba(30,210,255,.45);
     transform:translateY(-1px);
