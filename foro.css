@@ -4425,6 +4425,26 @@ button[title="Bondad"] {
 }
 
 /* =========================================================
+   CABECERA DIGITAL RIFT DEL TABLÓN
+   ========================================================= */
+
+#rift-board::before {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 400px;
+
+    background-image: var(--banner-image);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
    DIGIMON SPOILER
    ========================================================= */
 
