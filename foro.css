@@ -492,6 +492,31 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 .dr-rule-list li { position: relative; margin-bottom: 7px; padding-left: 18px; color: #879aa8; font-size: 10px; line-height: 1.7; } .dr-rule-list li:last-child { margin-bottom: 0; } .dr-rule-list li:before { content: ">"; position: absolute; left: 0; color: var(--dg-cyan); font-family: "Roboto Mono", monospace; font-weight: 700; }
 /* ========================================================= LISTADO OFICIAL ========================================================= */ 
 .dr-tadmin .dr-lista2 { position: relative; margin-bottom: 8px; padding: 15px 18px 15px 52px; background: var(--dg-panel); border: 1px solid rgba(255,255,255,.05); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista2:hover { background: var(--dg-panel2); border-color: var(--dg-line); transform: translateX(3px); }
+.dr-tadmin .dr-lista2 .dr-icon2 {
+    position: absolute;
+
+    left: 17px;
+    top: 17px;
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--dg-blue);
+
+    color: var(--dg-cyan);
+
+    font-size: 10px;
+
+    transform: rotate(45deg);
+}
+
+.dr-tadmin .dr-lista2 .dr-icon2 i {
+    transform: rotate(-45deg);
+}
 
 /* TABLILLA DIGIMON */
 
