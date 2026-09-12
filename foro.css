@@ -3640,7 +3640,7 @@ button[title="Bondad"] {
    TOOLTIPS DE LA NAVBAR
    ========================================================= */
 #s-m-t-tooltip {
-  z-index: 100000 !important;
+  z-index: 10000000 !important;
   background: var(--theme-panel);
   color: var(--text-color);
   border: 1px solid var(--emblema2);
