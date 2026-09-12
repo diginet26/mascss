@@ -4336,8 +4336,7 @@ button[title="Bondad"] {
     color:var(--rift-muted);
 }
 
-/* En caso de que el contenido de Foroactivo
-   genere elementos de lista */
+/* En caso de que el contenido de Foroactivo genere elementos de lista */
 
 #rift-recent-content a {
     color:var(--rift-text);
@@ -4386,83 +4385,36 @@ button[title="Bondad"] {
 
 @media (max-width:650px) {
 
-    #rift-board {
-        margin:20px auto;
-    }
-
+    #rift-board {margin:20px auto;}
     #rift-board-body {
         grid-template-columns:1fr;
-        grid-template-areas:
-            "current"
-            "staff"
-            "recent";
+        grid-template-areas: "current" "staff" "recent";
     }
-
-    #rift-current,
-    #rift-staff,
-    #rift-recent {
-        width:100%;
-    }
-
-    #rift-current-content {
-        height:320px;
-    }
-
+    #rift-current, #rift-staff, #rift-recent {width:100%;}
+    #rift-current-content {height:320px;}
     #rift-quick-links {
         grid-template-columns:repeat(7,minmax(0,1fr));
         gap:4px;
     }
-
-    #rift-quick-links a {
-        font-size:14px;
-    }
-
-    #rift-info-row {
-        grid-template-columns:1fr;
-    }
-
-    #rift-staff-grid {
-        grid-template-columns:repeat(4,minmax(0,1fr));
-    }
-
-    #rift-social-links {
-        flex-direction:row;
-    }
-
-    #rift-social-links a {
-        aspect-ratio:1/1;
-    }
-
-    #rift-recent {
-        min-height:0;
-    }
-
-    #rift-recent-content {
-        height:300px;
-    }
-
+    #rift-quick-links a {font-size:14px;}
+    #rift-info-row {grid-template-columns:1fr;}
+    #rift-staff-grid {grid-template-columns:repeat(4,minmax(0,1fr));}
+    #rift-social-links {flex-direction:row;}
+    #rift-social-links a {aspect-ratio:1/1;}
+    #rift-recent {min-height:0;}
+    #rift-recent-content {height:300px;}
 }
 
 @media (max-width:420px) {
 
-    #rift-quick-links {
-        grid-template-columns:repeat(4,minmax(0,1fr));
-    }
-
-    #rift-staff-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
-    }
-
-    .rift-info-box {
-        height:100px;
-    }
-
+    #rift-quick-links {grid-template-columns:repeat(4,minmax(0,1fr));}
+    #rift-staff-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+    .rift-info-box {height:100px;}
     .rift-info-box img {
         width:75px;
         height:75px;
         flex-basis:75px;
     }
-
 }
 /* PRUEBA — permitir que el tablón sobresalga de su contenedor */
 #rift-board {z-index: 99999 !important;}
@@ -4548,6 +4500,12 @@ button[title="Bondad"] {
     animation: gradient 3s ease infinite;
     filter: contrast(1.2) blur(0.8px);
 }
+
+/* ---------------------------------------------------------
+   EVITAR SCROLL HORIZONTAL DEL TABLÓN
+   --------------------------------------------------------- */
+
+#rift-board {max-width: 100%;}
 
 /* =========================================================
    DIGIMON SPOILER
