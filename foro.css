@@ -27,23 +27,16 @@
 
 
 /* Ocultar "Ver mensajes desde la última visita" */
-ul.linklist > li:has(a[href*="search_id=newposts"]) {
-    display: none !important;
-}
+ul.linklist > li:has(a[href*="search_id=newposts"]) {display: none !important;}
 
 /* Ocultar "Ver mensajes sin respuesta" */
-ul.linklist > li:has(a[href*="search_id=unanswered"]) {
-    display: none !important;
-}
+ul.linklist > li:has(a[href*="search_id=unanswered"]) {display: none !important;}
 
 /* Ocultar "Marcar todos los foros como leídos" */
-ul.linklist > li:has(a[href*="mark=forums"]) {
-    display: none !important;
-}
+ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
+
 /* Ocultar fecha, hora y última conexión */
-.rlogininfo {
-    display: none !important;
-}
+.rlogininfo {display: none !important;}
 
 /* TABLILLA ADMINISTRACIÓN */
 
@@ -63,27 +56,14 @@ ul.linklist > li:has(a[href*="mark=forums"]) {
     margin: 30px auto;
     position: relative;
     overflow: hidden;
-background:
-        linear-gradient(
-            90deg,
-           var(--bodyf-background) 0%,
-           var(--body-background) 48%,
-           var(--emblema1) 250%
-        );
-
+    background:linear-gradient(90deg, var(--bodyf-background) 0%, var(--body-background) 48%, var(--emblema1) 250%        );
     border: 1px solid var(--dg-line);
     color: var(--colortextodl);
-
     font-family: "Oxanium",sans-serif;
     font-size: 12px;
     line-height: 1.8;
-
     text-align: justify;
-    box-shadow:
-        0 0 35px rgba(0,0,0,.45),
-        inset 0 0 45px rgba(22,119,200,.04);
-}
-
+    box-shadow: 0 0 35px rgba(0,0,0,.45), inset 0 0 45px rgba(22,119,200,.04);}
 
 /* =========================================================
    DECORACIÓN SUPERIOR
@@ -92,20 +72,15 @@ background:
 .dr-tadmin:before {
     content: "";
     display: block;
-
     padding: 7px 18px;
-
     background: #07111b;
     border-bottom: 1px solid var(--dg-line);
-
     color: var(--emblema2);
-
     font-size: 8px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-
 
 /* pequeños indicadores */
 
@@ -113,7 +88,6 @@ background:
     position: absolute;
     top: 5px;
     right: 18px;
-
     display: flex;
     gap: 5px;
 }
@@ -121,23 +95,15 @@ background:
 .dr-tadmin .dr-dots i {
     width: 5px;
     height: 5px;
-
     display: block;
-
     background: var(--emblema2);
     border-radius: 50%;
-
     opacity: .65;
 }
 
-.dr-tadmin .dr-dots i:nth-child(2) {
-    opacity: .35;
-}
+.dr-tadmin .dr-dots i:nth-child(2) {opacity: .35;}
 
-.dr-tadmin .dr-dots i:nth-child(3) {
-    opacity: .15;
-}
-
+.dr-tadmin .dr-dots i:nth-child(3) {opacity: .15;}
 
 /* =========================================================
    HEADER
@@ -147,87 +113,63 @@ background:
     position: relative;
     min-height: 174px;
     padding: 35px 40px 30px;
-    background: linear-gradient(
-            90deg,
-            rgba(8,15,24,.98) 0%,
-            rgba(8,15,24,.87) 48%,
-            rgba(8,15,24,.55) 100%
-        );
+    background: linear-gradient(90deg, rgba(8,15,24,.98) 0%, rgba(8,15,24,.87) 48%, rgba(8,15,24,.55) 100%        );
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid var(--emblema1);
 }
-
 
 /* línea tecnológica */
 
 .dr-tadmin .dr-cabeza:after {
     content: "";
     position: absolute;
-
     left: 40px;
     bottom: 0;
-
     width: 160px;
     height: 2px;
-
     background: var(--emblema2);
-
     box-shadow: 0 0 12px rgba(34,193,195,.5);
 }
-
 
 /* etiqueta */
 
 .dr-tadmin .dr-label {
     display: inline-block;
-
     padding: 3px 9px;
     margin-bottom: 10px;
-
     border: 1px solid var(--emblema2);
-
     color: var(--emblema2);
-
     font-size: 8px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-
 /* título */
 
 .dr-tadmin .dr-title {
     margin: 0;
-
     color: #fff;
-
     font-family: 'Player Sans', 'Arial Narrow', sans-serif;
     font-size: 38px;
     font-weight: 900;
     line-height: 1;
-
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-
 
 /* subtítulo */
 
 .dr-tadmin .dr-subtitle {
     margin-top: 9px;
-
     color: var(--dg-muted);
-
     font-size: 9px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.dr-tadmin .dr-subtitle b {
-    color: var(--emblema2);
-}
+.dr-tadmin .dr-subtitle b {color: var(--emblema2);}
 
 /* =========================================================
    INTRO
@@ -242,43 +184,32 @@ background:
     font-size: 11px;
 }
 
-.dr-tadmin .dr-intro strong {
-    color: #fff;
-}
+.dr-tadmin .dr-intro strong {color: #fff;}
 
 /* =========================================================
    SECCIÓN
    ========================================================= */
 
-.dr-tadmin .dr-section {
-    margin: 25px;
-}
+.dr-tadmin .dr-section {margin: 25px;}
 
 .dr-section-title {
     display: flex;
     align-items: center;
     gap: 9px;
-
     margin-bottom: 13px;
-
     font-family: "Jersey 15";
     font-size: 25px;
     letter-spacing: 2px;
-
     color: var(--emblema2);
     text-transform: uppercase;
 }
 
 .dr-section-title:before {
     content: "";
-
     width: 18px;
     height: 18px;
-
     border: 1px solid var(--emblema2);
-
     transform: rotate(45deg);
-
     opacity: .6;
 }
 
@@ -294,29 +225,18 @@ background:
 
 .dr-block {
     margin-top: 20px;
-
     padding: 17px;
-
     background: rgba(13,21,30,.85);
-
     border: 1px solid #213746;
 }
 
-.dr-block p {
-    margin: 0 0 12px;
-}
+.dr-block p {margin: 0 0 12px;}
 
-.dr-block p:last-child {
-    margin-bottom: 0;
-}
+.dr-block p:last-child {margin-bottom: 0;}
 
-.dr-block b {
-    color: var(--emblema2);
-}
+.dr-block b {color: var(--emblema2);}
 
-.dr-highlight {
-    color: var(--dg-orange);
-}
+.dr-highlight {color: var(--dg-orange);}
 
 /* ==========================================================
    TIMELINE
@@ -324,42 +244,31 @@ background:
 
 .dr-timeline {
     margin-top: 20px;
-
     border-left: 1px solid #315163;
-
     padding-left: 18px;
 }
 
 .dr-event {
     position: relative;
-
     margin-bottom: 18px;
 }
 
-.dr-event:last-child {
-    margin-bottom: 0;
-}
+.dr-event:last-child {margin-bottom: 0;}
 
 .dr-event:before {
     content: "";
-
     position: absolute;
-
     left: -23px;
     top: 5px;
-
     width: 7px;
     height: 7px;
-
     background: var(--emblema2);
-
     box-shadow: 0 0 10px rgba(40,215,232,.5);
 }
 
 .dr-event small {
     font-family: "Oxanium", sans-serif;;
     font-size: 10px;
-
     color: var(--emblema2);
 }
 
@@ -377,16 +286,8 @@ background:
 
 .dr-tadmin .dr-aviso {
     margin: 25px;
-
     padding: 18px 20px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(22,119,200,.16),
-            rgba(34,193,195,.04)
-        );
-
+    background:linear-gradient(90deg, rgba(22,119,200,.16), rgba(34,193,195,.04));
     border: 1px solid rgba(34,193,195,.25);
 }
 
@@ -396,9 +297,7 @@ background:
 
 .dr-tadmin .dr-aviso-title {
     margin-bottom: 7px;
-
     color: var(--emblema2);
-
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -407,9 +306,7 @@ background:
 
 .dr-tadmin .dr-aviso p {
     margin: 0;
-
     color: #b8c7d4;
-
     font-size: 10px;
 }
 
@@ -432,7 +329,6 @@ background:
     transform: translateX(3px);
 }
 
-
 /* icono */
 
 .dr-tadmin .dr-lista .dr-icon {
@@ -450,10 +346,7 @@ background:
     transform: rotate(45deg);
 }
 
-.dr-tadmin .dr-lista .dr-icon i {
-    transform: rotate(-45deg);
-}
-
+.dr-tadmin .dr-lista .dr-icon i {transform: rotate(-45deg);}
 
 /* nombre */
 
@@ -466,10 +359,7 @@ background:
     margin-left: 5px;
 }
 
-.dr-tadmin .dg-lista h3 span {
-    color: var(--emblema1);
-}
-
+.dr-tadmin .dg-lista h3 span {color: var(--emblema1);}
 
 /* descripción */
 
@@ -479,7 +369,6 @@ background:
     font-size: 13px;
     line-height: 1.7;
 }
-
 
 /* =========================================================
    DATOS / ESTADO DEL FORO
@@ -499,9 +388,7 @@ background:
     border-right: 1px solid rgba(255,255,255,.05);
 }
 
-.dr-data div:last-child {
-    border-right: 0;
-}
+.dr-data div:last-child {border-right: 0;}
 
 .dr-data b {
     display: block;
@@ -523,52 +410,38 @@ background:
 .dr-relations {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: 8px;
-
     margin-top: 15px;
 }
 
 .dr-relation {
     min-height: 70px;
-
     padding: 10px;
-
     background: #0d1720;
-
     border: 1px solid #233b4a;
-
     position: relative;
 }
 
 .dr-relation:before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 25px;
     height: 2px;
-
     background: var(--emblema2);
 }
 
 .dr-relation small {
     display: block;
-
     font-family: "Oxanium", sans-serif;
     font-size: 7px;
-
     color: var(--dg-muted);
 }
 
 .dr-relation b {
     display: block;
-
     margin-top: 4px;
-
     color: #eaf7fb;
     font-size: 10px;
 }
@@ -624,28 +497,13 @@ background:
     margin: 25px auto;
     padding: 18px;
     box-sizing: border-box;
-    background:
-
-        radial-gradient(
-            circle at 20% 0%,
-            rgba(50,85,105,.12),
-            transparent 45%
-        ),
-        linear-gradient(
-            135deg,
-            #080b10,
-            #05070b
-        );
+    background: radial-gradient(circle at 20% 0%, rgba(50,85,105,.12), transparent 45%),
+        linear-gradient(135deg, #080b10, #05070b);
     border: 1px solid #222c34;
     color: var(--text);
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
-
 }
-
 
 /* ==========================================================
    CONTENIDO
@@ -654,7 +512,6 @@ background:
 .digimon-content {
     width: 100%;
     box-sizing: border-box;
-
 }
 
 /* ==========================================================
@@ -662,195 +519,98 @@ background:
 ========================================================== */
 
 .digimon-top {
-
     height: 76px;
-
     display: flex;
-
     align-items: center;
-
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #111a23,
-            #080d13
-        );
-
-
-    border-bottom:
-        1px solid var(--line);
-
+    background: linear-gradient(135deg, #111a23, #080d13);
+    border-bottom: 1px solid var(--line);
 }
-
-
 
 /* ==========================================================
    RETRATO
 ========================================================== */
 
 .digimon-portrait {
-
     width: 82px;
-
     height: 76px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
 }
-
 
 .portrait-ring {
-
     width: 62px;
-
     height: 62px;
-
     border-radius: 50%;
-
-
-    border:
-        2px solid var(--blue);
-
-
+    border: 2px solid var(--blue);
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-
-    background:
-        #0b141c;
-
-
-    box-shadow:
-
-        0 0 12px
-        rgba(97,169,201,.25);
-
-
+    background: #0b141c;
+    box-shadow: 0 0 12px rgba(97,169,201,.25);
     overflow: hidden;
-
 }
-
 
 .portrait-ring img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: contain;
-
 }
-
-
 
 /* ==========================================================
    NOMBRE
 ========================================================== */
 
-.digimon-title {
-
-    flex: 1;
-
-}
-
+.digimon-title {flex: 1;}
 
 .digimon-name {
-
     color: #eef3f5;
-
     font-size: 22px;
-
     font-weight: bold;
-
     letter-spacing: 1px;
-
 }
-
 
 .digimon-description {
-
     margin-top: 7px;
-
     color: var(--orange);
-
     font-size: 9px;
-
     letter-spacing: 1px;
-
 }
-
 
 .digimon-description i {
-
     color: #59676f;
-
     font-style: normal;
-
-    margin:
-        0 5px;
-
+    margin: 0 5px;
 }
-
-
 
 /* ==========================================================
    NIVEL
 ========================================================== */
 
 .digimon-level {
-
     width: 70px;
-
     padding-right: 5px;
-
     text-align: right;
-
 }
-
 
 .digimon-level small {
-
     display: block;
-
     color: #7b878e;
-
     font-size: 8px;
-
     letter-spacing: 1px;
-
 }
-
 
 .digimon-level strong {
-
     display: block;
-
     color: var(--orange);
-
     font-size: 30px;
-
     line-height: 27px;
-
 }
 
-
 .digimom-level em {
-
     color: #68757d;
-
     font-size: 9px;
-
     font-style: normal;
-
 }
 
 /* ==========================================================
@@ -858,165 +618,90 @@ background:
 ========================================================== */
 
 .main-stats {
-
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    padding:
-        13px 0;
-
-    border-bottom:
-        1px solid var(--line);
-
+    grid-template-columns: 1fr 1fr;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
 }
-
-
 
 /* ==========================================================
    HP / SP / EXP
 ========================================================== */
 
-.big-stat {
-
-    margin-bottom: 8px;
-
-}
-
+.big-stat {margin-bottom: 8px;}
 
 .stat-line {
-
     display: flex;
-
     align-items: center;
-
 }
-
 
 .stat-label {
-
     width: 35px;
-
     color: #8b989f;
-
     font-size: 10px;
-
 }
-
 
 .stat-numbers {
-
     color: #d1dade;
-
     font-family: "Oxanium", sans-serif;
-
     font-size: 11px;
-
 }
-
 
 .stat-numbers i {
-
     color: #56646c;
-
     font-style: normal;
-
 }
-
-
 
 /* ==========================================================
    BARRAS
 ========================================================== */
 
 .progress {
-
     height: 5px;
-
     margin-top: 4px;
-
     padding: 1px;
-
     box-sizing: border-box;
-
     background: #131a21;
-
-    border:
-        1px solid #303b43;
-
+    border: 1px solid #303b43;
 }
 
 .progress b {
-
     display: block;
-
     height: 100%;
-
     background: var(--orange);
-
 }
 
-
-.progress.sp b {
-
-    background: var(--blue);
-
-}
-
-
+.progress.sp b {background: var(--blue);}
 
 /* ==========================================================
    STATS DE COMBATE
 ========================================================== */
 
 .combat-stat {
-
     height: 19px;
-
     display: flex;
-
     align-items: center;
-
     font-family: "Oxanium", sans-serif;
-
 }
-
 
 .combat-stat span {
-
     width: 42px;
-
     color: #89969c;
-
     font-size: 10px;
-
 }
-
 
 .combat-stat strong {
-
     width: 48px;
-
     color: #d6dfe2;
-
     font-size: 11px;
-
     text-align: right;
-
 }
 
-
 .combat-stat i {
-
     margin-left: 7px;
-
     color: var(--blue);
-
     font-size: 9px;
-
     font-style: normal;
-
 }
 
 /* ==========================================================
@@ -1024,168 +709,77 @@ background:
 ========================================================== */
 
 .ability-section {
-
     margin-top: 8px;
-
-    border-bottom:
-        1px solid var(--line);
-
+    border-bottom: 1px solid var(--line);
 }
 
-
 .ability-title {
-
     height: 21px;
-
     display: flex;
-
     align-items: center;
-
     padding: 0 7px;
-
     box-sizing: border-box;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #182129,
-            #0d1319
-        );
-
-
+    background: linear-gradient(90deg, #182129, #0d1319);
     color: #bdc9ce;
-
     font-size: 9px;
-
 }
 
 .ability {
-
     height: 20px;
-
     display: grid;
-
-    grid-template-columns:
-        25px 1fr 30px;
-
+    grid-template-columns: 25px 1fr 30px;
     align-items: center;
-
-    padding:
-        0 8px;
-
+    padding: 0 8px;
     box-sizing: border-box;
-
 }
 
-
-.ability:hover {
-
-    background: #101920;
-
-}
-
+.ability:hover {background: #101920;}
 
 .ability-icon {
-
     color: var(--cyan);
-
     font-size: 8px;
-
 }
-
 
 .ability strong {
-
     color: #c6d0d4;
-
     font-size: 9px;
-
     font-weight: normal;
-
 }
 
-.ability.empty {
-
-    opacity: .42;
-
-}
-
-
+.ability.empty {opacity: .42;}
 
 /* ==========================================================
    EQUIPMENT
 ========================================================== */
 
-.equipment {
-
-    margin-top: 8px;
-
-}
-
-
+.equipment {margin-top: 8px;}
 
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
 
 @media (max-width:600px) {
-
     .digimon-status {
-
         width: 100%;
-
         padding: 10px;
-
     }
-
 
     .digi-top {
-
         height: auto;
-
         min-height: 76px;
-
     }
 
-
-    .digi-name {
-
-        font-size: 17px;
-
-    }
-
-
-    .digi-description {
-
-        font-size: 7px;
-
-    }
-
-
+    .digi-name {font-size: 17px;}
+    .digi-description {font-size: 7px;}
     .main-stats {
-
         grid-template-columns: 1fr;
-
         gap: 10px;
-
     }
-
-
- 
-
 }
 
-
-
-
-/* PAGINA DE MIEMBROS */
-
 /* =========================================================
-   DIGIMON MEMBERLIST
+   DIGIMON MEMBERLIST // PAGINA DE MIEMBROS
    ========================================================= */
-
-
 #dg-memberlist,#dg-member-tools,#dg-member-pagination,.dg-no-user{--dg-blue:#1677c8;--dg-blue-light:#38bdf8;--dg-dark:#111820;--dg-dark-2:#18232d;--dg-panel:#f4f7f9;--dg-border:#d6e1e8;--dg-text:#26323a;--dg-muted:#71808a}
 #dg-member-tools{position:relative;width:calc(100% - 30px);min-height:62px;margin:15px auto 10px;padding:10px 15px;box-sizing:border-box;display:flex;align-items:center;gap:12px;background:linear-gradient(90deg,rgba(22,119,200,.08) 1px,transparent 1px),linear-gradient(rgba(22,119,200,.08) 1px,transparent 1px),#f4f7f9;background-size:20px 20px;border:1px solid #d6e1e8;font-family:"Oxanium", sans-serif;overflow:hidden}
 #dg-member-tools:before{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:#1677c8}
@@ -1255,32 +849,6 @@ background:
 @media screen and (max-width:850px){#dg-member-tools{flex-wrap:wrap;height:auto}.dg-submit{margin-left:0}}
 @media screen and (max-width:600px){#dg-memberlist{grid-template-columns:1fr}.dg-tamer-body{flex-direction:column}.dg-avatar-frame{width:100%;flex-basis:auto}.dg-tamer-info{padding-left:0;padding-top:15px}.dg-data-row strong{max-width:250px}.dg-tamer-footer{height:auto;padding:10px 15px;gap:10px;flex-wrap:wrap}#dg-member-pagination{flex-direction:column;gap:10px;align-items:flex-start}}
 
-/* BOTÓN CAMBIO DE TEMA - NECROMANCER */
-
-/*button#theme-toggler {
-    position: fixed;
-    top: 60px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    border: var(--border1);
-    background: var(--bckg1);
-}
-
-button#theme-toggler:before {
-    font: 15px 'FontAwesome';
-    color: white;
-}
-
-.dark-mode button#theme-toggler:before {
-    content: "\f185";
-}
-
-.light-mode button#theme-toggler:before {
-    content: "\f186";
-    color: var(--accent1);
-}*/
-
 /* VARIABLES DEL TEMA */
 
 body.light-mode {
@@ -1308,7 +876,6 @@ button#theme-toggler2 {
     width: 50px;
     height: 50px;
     border: var(--emblema2);
-    /*background: var(--emblema2);*/
 }
 
 button#theme-toggler2:before {
@@ -1316,15 +883,11 @@ button#theme-toggler2:before {
     color: white;
 }
 
-.dark-mode button#theme-toggler2:before {
-    content: "\f185";
-}
-
+.dark-mode button#theme-toggler2:before {content: "\f185";}
 .light-mode button#theme-toggler2:before {
     content: "\f186";
     color: var(--emblema1);
 }
-
 
 /* =========================================================
    DIGIMON PROFILE — DISEÑO COMPLETO
@@ -1333,76 +896,45 @@ button#theme-toggler2:before {
 #dg-profile {
     --profile-group-color: var(--accent1);
     --profile-highlight: var(--accent3);
-    --profile-glow: color-mix(
-        in srgb,
-        var(--profile-group-color) 35%,
-        transparent
-    );
-
+    --profile-glow: color-mix(in srgb, var(--profile-group-color) 35%, transparent);
     width: min(1250px, calc(100% - 40px));
     margin: 35px auto 60px;
-
     color: var(--theme-text);
     text-align: left;
 }
-
 
 /* =========================================================
    PERFIL — CABECERA
    ========================================================= */
 
 #dg-profile .dg-profile-header {
-
     --profile-header-image: none;
-
     position: relative;
-
     display: grid;
-
     grid-template-columns: 150px 1fr 150px;
     grid-template-rows: auto 1fr;
-
     align-items: center;
-
     min-height: 180px;
-
     margin-bottom: 18px;
     padding: 25px 32px;
-
-    background:
-        linear-gradient(
-            110deg,
-            var(--theme-panel-deep) 0%,
-            var(--theme-panel) 55%,
-            var(--theme-panel-alt) 100%
-        );
-
+    background: linear-gradient(110deg, var(--theme-panel-deep) 0%, var(--theme-panel) 55%, var(--theme-panel-alt) 100%);
     border: 1px solid var(--theme-border);
     border-left: 4px solid var(--profile-group-color);
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, .20);
-
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .20);
     overflow: hidden;
 }
-
 
 /* ---------------------------------------------------------
    FONDO DE LA CABECERA
    --------------------------------------------------------- */
 
 #dg-profile .dg-profile-header::before {
-
     content: "";
-
     position: absolute;
-
     top: 0;
     right: 0;
     bottom: 0;
-
     width: 48%;
-
     background-image:
         linear-gradient(
             90deg,
