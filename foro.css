@@ -3650,25 +3650,6 @@ button[title="Bondad"] {
     box-sizing: border-box;
 }
 
-/* =========================================================
-   CABECERA DIGITAL RIFT
-   ========================================================= */
-
-/*#rift-board::before {
-    content: "";
-    display: block;
-
-    width: 100%;
-    height: 400px;
-
-    background-image: var(--banner-image);
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-
-    position: relative;
-    z-index: 1;
-}*/
 /* ---------------------------------------------------------
    CABECERA
    --------------------------------------------------------- */
@@ -4435,23 +4416,6 @@ button[title="Bondad"] {
 #rift-board {z-index: 99999 !important;}
 
 #rift-board-body, #rift-board-top {z-index: 99999 !important;}
-
-/* =========================================================
-   CABECERA DIGITAL RIFT DEL TABLÓN
-   ========================================================= */
-
-#rift-board::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 400px;
-    background-image: var(--banner-image);
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-}
 
 /* =========================================================
    HEADER DIGITAL RIFT
