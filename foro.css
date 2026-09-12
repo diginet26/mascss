@@ -2617,7 +2617,7 @@ button#theme-toggler2:before {
 
 #digimon-navbar {
     position: fixed;
-    z-index: 9999;
+    z-index: 9999999;
     width: 100%;
     margin: -10px 0 14px;
     background: var(--body-background);
