@@ -3701,7 +3701,16 @@ button[title="Bondad"] {
 
     box-sizing: border-box;
 }
+/* =========================================================
+   ESTRUCTURA VISUAL DEL TABLÓN
+   ========================================================= */
 
+#rift-board {
+    background:linear-gradient(145deg, var(--rift-panel), var(--rift-deep));
+    border: 1px solid var(--rift-border);
+    box-sizing: border-box;
+    padding: 12px;
+}
 /* ---------------------------------------------------------
    CABECERA
    --------------------------------------------------------- */
@@ -3991,12 +4000,38 @@ button[title="Bondad"] {
     height: 240px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(0,0,0,.12), rgba(255,255,255,.015));
-    border: 1px solid var(--rift-border);
+    /*background: linear-gradient(135deg, rgba(0,0,0,.12), rgba(255,255,255,.015));
+    border: 1px solid var(--rift-border);*/
     padding: 14px;
     box-sizing: border-box;
+      background:
+        linear-gradient(
+            145deg,
+            var(--rift-panel-alt),
+            var(--rift-deep)
+        );
+
+    border: 1px solid var(--rift-border);
+
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,.12),
+        0 4px 12px rgba(0,0,0,.18);
 }
 
+#rift-current-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+
+    border-top: 2px solid var(--rift-a2);
+    border-right: 2px solid var(--rift-a2);
+
+    opacity: .8;
+    pointer-events: none;
+}
 /* ---------------------------------------------------------
    PERSONAJE
    --------------------------------------------------------- */
@@ -4049,13 +4084,26 @@ button[title="Bondad"] {
    --------------------------------------------------------- */
 
 #rift-quick-links {
-    display:grid;
-    grid-template-columns:repeat(10, 60px);
-    justify-content:space-between;
-    gap:7px;
-    margin-top:12px;
-}
+display: grid;
+    grid-template-columns: repeat(10, 60px);
+    justify-content: space-between;
+    gap: 7px;
 
+    margin-top: 12px;
+
+    padding: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--rift-panel-alt),
+            var(--rift-deep)
+        );
+
+    border: 1px solid var(--rift-border);
+
+    box-sizing: border-box;
+}
 #rift-quick-links a {
     aspect-ratio: 1 / 1;
     min-width: 0;
@@ -4096,10 +4144,10 @@ button[title="Bondad"] {
    --------------------------------------------------------- */
 
 #rift-info-row {
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
-    margin-top:12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .rift-info-box {
@@ -4141,15 +4189,38 @@ button[title="Bondad"] {
     box-sizing:border-box;
 }
 
+#rift-info-row .rift-info-box {
+    background:
+        linear-gradient(
+            145deg,
+            var(--rift-panel-alt),
+            var(--rift-deep)
+        );
 
+    border: 1px solid var(--rift-border);
+
+    box-sizing: border-box;
+
+    box-shadow:
+        inset 0 0 15px rgba(0,0,0,.10);
+}
 /* ---------------------------------------------------------
    STAFF
    --------------------------------------------------------- */
 
 #rift-staff-grid {
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
+    background:
+        linear-gradient(
+            145deg,
+            var(--rift-panel-alt),
+            var(--rift-deep)
+        );
+
+    border: 1px solid var(--rift-border);
+
+    padding: 12px;
+
+    box-sizing: border-box;
 }
 
 #rift-staff-grid a {
@@ -4194,10 +4265,20 @@ button[title="Bondad"] {
    --------------------------------------------------------- */
 
 #rift-social-links {
-    display:flex;
-    flex-direction:column;
-    gap:7px;
-    margin-top:14px;
+    margin-top: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--rift-panel-alt),
+            var(--rift-deep)
+        );
+
+    border: 1px solid var(--rift-border);
+
+    padding: 10px;
+
+    box-sizing: border-box;
 }
 
 #rift-social-links a {
@@ -4275,7 +4356,15 @@ button[title="Bondad"] {
     border-bottom:1px solid var(--rift-border);
 }
 
-
+#rift-current,
+#rift-staff,
+#rift-recent {
+    background: transparent;
+    border: 0;
+    overflow: visible;
+    position: relative;
+    box-sizing: border-box;
+}
 /* ---------------------------------------------------------
    RESPONSIVE
    --------------------------------------------------------- */
