@@ -479,6 +479,28 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 .dr-tadmin .dr-registronumero { width:27px; height:27px; display:flex; align-items:center; justify-content:center; border:1px solid #24475d; color:var(--blue); font-size:10px; background:#081018; clip-path:polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% ); } 
 .dr-tadmin .dr-registronumero i { font-style:normal; }
 
+
+/* ========================================================= DIGIMON — TABLILLA REGLA ========================================================= */
+
+/* ========================================================= ÍNDICE ========================================================= */ 
+.dr-rule-index { display: grid; grid-template-columns: repeat(3, 1fr); margin: 20px 25px 0; border: 1px solid #183246; background: rgba(9,17,24,.85); } .dr-rule-index a { min-height: 52px; display: flex; align-items: center; justify-content: center; padding: 8px; box-sizing: border-box; border-right: 1px solid #183246; border-bottom: 1px solid #183246; color: var(--dg-muted); font-family: "Roboto Mono", monospace; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: .2s ease; } .dr-rule-index a:nth-child(3n) { border-right: 0; } .dr-rule-index a:nth-child(n+4) { border-bottom: 0; } .dr-rule-index a:hover { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.05) ); box-shadow: inset 0 -2px 0 var(--dg-cyan); } .dr-rule-index a span { color: var(--dg-cyan); margin-right: 6px; }
+
+/* ========================================================= BLOQUE DE NORMA ========================================================= */ 
+.dr-rule { margin-bottom: 8px; padding: 17px; background: rgba(13,21,30,.85); border: 1px solid #213746; transition: .25s ease; box-sizing: border-box; } .dr-rule:hover { background: rgba(17,31,45,.95); border-color: rgba(34,193,195,.25); } 
+/* CABECERA DE NORMA */ 
+.dr-rule-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+/* NÚMERO */ 
+.dr-rule-number { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--dg-blue); color: #fff; font-family: "Roboto Mono", monospace; font-size: 9px; font-weight: 700; clip-path: polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% ); box-shadow: 0 0 10px rgba(22,119,200,.25); } 
+/* TÍTULO */ 
+.dr-rule-title { margin: 0; color: #fff; font-family: "Jersey 15", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: 1px; text-transform: uppercase; } 
+/* TEXTO */ 
+.dr-rule-text { margin: 0; color: #9fb0bd; font-size: 10px; line-height: 1.8; } .dr-rule-text strong { color: var(--dg-cyan); } 
+/* ========================================================= LISTADOS ========================================================= */ 
+.dr-rule-list { margin: 13px 0 0; padding: 0; list-style: none; } 
+.dr-rule-list li { position: relative; margin-bottom: 7px; padding-left: 18px; color: #879aa8; font-size: 10px; line-height: 1.7; } .dr-rule-list li:last-child { margin-bottom: 0; } .dr-rule-list li:before { content: ">"; position: absolute; left: 0; color: var(--dg-cyan); font-family: "Roboto Mono", monospace; font-weight: 700; }
+/* ========================================================= LISTADO OFICIAL ========================================================= */ 
+.dr-tadmin .dr-lista { position: relative; margin-bottom: 8px; padding: 15px 18px 15px 52px; background: var(--dg-panel); border: 1px solid rgba(255,255,255,.05); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista:hover { background: var(--dg-panel2); border-color: var(--dg-line); transform: translateX(3px); }
+
 /* TABLILLA DIGIMON */
 
 .digimon-status {
