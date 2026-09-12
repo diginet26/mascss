@@ -518,6 +518,39 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     transform: rotate(-45deg);
 }
 
+
+/* NOMBRE */
+
+.dr-tadmin .dr-lista2 h3 {
+    margin: 0 0 2px;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-lista2 h3 span {
+    color: var(--dg-gold);
+}
+
+
+/* DESCRIPCIÓN */
+
+.dr-tadmin .dr-lista2 p {
+    margin: 0;
+
+    color: var(--dg-muted);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
 /* TABLILLA DIGIMON */
 
 .digimon-status {
