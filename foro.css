@@ -3988,176 +3988,91 @@ button[title="Bondad"] {
    --------------------------------------------------------- */
 
 #rift-current-content {
-
-    height: 320px;
-
+    height: 240px;
     position: relative;
-
     overflow: hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,0,0,.12),
-            rgba(255,255,255,.015)
-        );
-
+    background: linear-gradient(135deg, rgba(0,0,0,.12), rgba(255,255,255,.015));
     border: 1px solid var(--rift-border);
-
     padding: 14px;
-
     box-sizing: border-box;
 }
-
 
 /* ---------------------------------------------------------
    PERSONAJE
    --------------------------------------------------------- */
 
 #rift-character {
-
-    width: 220px;
-    height: 320px;
-
+    width:180px;
+    height:260px;
     float: left;
-
-    margin:
-
-        -14px
-
-        20px
-
-        0
-
-        -14px;
-
+    margin: -14px 20px 0 -14px;
     position: relative;
-
     z-index: 2;
-
     display: flex;
-
     align-items: flex-end;
-
     justify-content: center;
 }
 
-
 #rift-character img {
-
-    width: 220px;
-    height: 320px;
-
+    width: 180px;
+    height: 260px;
     object-fit: contain;
-
     display: block;
 }
-
 
 /* ---------------------------------------------------------
    TEXTO
    --------------------------------------------------------- */
 
 #rift-current-text {
-
     height: 100%;
-
     overflow-y: auto;
-
     font-size: 13px;
-
     line-height: 1.65;
-
     color: var(--rift-muted);
-
     padding-right: 10px;
-
     box-sizing: border-box;
 }
 
-
-#rift-current-text p {
-
-    margin:
-
-        0
-
-        0
-
-        12px
-
-        0;
-}
-
+#rift-current-text p {margin:0 0 12px 0;}
 
 /* ---------------------------------------------------------
    SCROLLS
    --------------------------------------------------------- */
 
-#rift-board ::-webkit-scrollbar {
-
-    width: 5px;
-}
-
-
-#rift-board ::-webkit-scrollbar-track {
-
-    background: var(--rift-deep);
-}
-
-
-#rift-board ::-webkit-scrollbar-thumb {
-
-    background: var(--rift-a2);
-}
-
+#rift-board ::-webkit-scrollbar {width: 5px;}
+#rift-board ::-webkit-scrollbar-track {background: var(--rift-deep);}
+#rift-board ::-webkit-scrollbar-thumb {background: var(--rift-a2);}
 
 /* ---------------------------------------------------------
    ENLACES RÁPIDOS
    --------------------------------------------------------- */
 
 #rift-quick-links {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(7, minmax(0, 1fr));
-
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 7px;
-
     margin-top: 12px;
 }
 
-
 #rift-quick-links a {
-
     aspect-ratio: 1 / 1;
-
     min-width: 0;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     text-decoration: none;
-
     color: var(--rift-text);
-
     background:
         linear-gradient(
             145deg,
             var(--rift-panel-alt),
             var(--rift-deep)
         );
-
     border: 1px solid var(--rift-border);
-
     font-size: 17px;
-
     position: relative;
-
-    transition:
+   transition:
         transform .15s ease,
         border-color .15s ease,
         box-shadow .15s ease;
