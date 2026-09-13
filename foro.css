@@ -4768,12 +4768,12 @@ dl.codebox.spoiler {
     position: relative;
     margin: 18px 0;
     padding: 0;
-    background: #0B1118;
-    border: 1px solid #1677C8;
-    border-left: 4px solid #35D8FF;
+    background: var(--body-background);
+    border: 1px solid var(--emblema1);
+    border-left: 4px solid var(--emblema2);
     border-radius: 4px;
-    color: #D9E7F2;
-    font-family: "IBM Plex Mono", monospace;
+    color: var(--colortextod1);
+    font-family: "Oxanium", monospace;
     font-size: 12px;
     line-height: 1.65;
     box-shadow: 0 0 12px rgba(22,119,200,.10), inset 0 0 20px rgba(22,119,200,.025);
@@ -4792,11 +4792,11 @@ dl.codebox.spoiler .spoiler_title {
     height: 36px;
     box-sizing: border-box;
     padding: 0 45px 0 14px;
-    background: #111A24;
+    background: var(--body-background);
     border: 0;
-    border-bottom: 1px solid rgba(53,216,255,.25);
-    color: #35D8FF;
-    font-family: "IBM Plex Mono", monospace;
+    border-bottom: 1px solid var(--emblema1);
+    color: var(--colortextod1);
+    font-family: "Oxanium", monospace;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -4833,7 +4833,7 @@ dl.codebox.spoiler .spoiler_title:after {
     display: flex;
     align-items: center;
 
-    color: #35D8FF;
+    color: var(--emblema2);
 
     font-size: 13px;
 
@@ -4856,11 +4856,11 @@ dl.codebox.spoiler .spoiler_content {
 
     padding: 18px;
 
-    background: #0B1118;
+    background: var(--body-background);
 
-    color: #D9E7F2;
+    color: var(--colortextod1);
 
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Oxanium", monospace;
     font-size: 12px;
     line-height: 1.65;
 }
@@ -4959,7 +4959,7 @@ blockquote:after {
     top: 9px;
     right: 13px;
 
-    color: var(--emblema1);
+    color: var(--emblema2);
 
     font-size: 13px;
 
