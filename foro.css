@@ -4367,14 +4367,90 @@ display: grid;
 
 
 /* ---------------------------------------------------------
-   TÍTULO + FECHA
+   CABECERA DE LA NOTICIA
    --------------------------------------------------------- */
 
 .rift-news-title {
     position: relative;
-    z-index: 2;
 
-    margin-bottom: 7px;
+    min-height: 32px;
+
+    margin-bottom: 10px;
+    padding: 4px 0 7px 38px;
+
+    border-bottom: 1px solid var(--rift-border);
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   ICONO
+   --------------------------------------------------------- */
+
+.rift-news-icon {
+    position: absolute;
+
+    top: -12px;
+    left: -14px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rift-a1),
+            var(--rift-a2)
+        );
+
+    color: var(--rift-deep);
+
+    font-size: 14px;
+
+    border: 1px solid var(--rift-border);
+
+    box-shadow:
+        0 0 8px var(--rift-a2);
+
+    z-index: 3;
+}
+
+
+/* pequeño corte diagonal */
+
+.rift-news-icon::after {
+    content: "";
+
+    position: absolute;
+
+    right: -5px;
+    bottom: -5px;
+
+    width: 9px;
+    height: 9px;
+
+    background: var(--rift-deep);
+
+    border-left: 1px solid var(--rift-a2);
+    border-top: 1px solid var(--rift-a2);
+
+    transform: rotate(45deg);
+}
+
+
+/* ---------------------------------------------------------
+   NOMBRE DE LA NOTICIA
+   --------------------------------------------------------- */
+
+.rift-news-name {
+    display: inline-block;
+
+    max-width: calc(100% - 65px);
 
     font-family: 'Oxanium', sans-serif;
     font-size: 12px;
@@ -4383,21 +4459,41 @@ display: grid;
     color: var(--rift-text);
 
     text-transform: uppercase;
-    letter-spacing: .5px;
-}
+    letter-spacing: .6px;
 
-.rift-news-title span {
-    margin-left: 7px;
-
-    font-size: 9px;
-    font-weight: normal;
-
-    color: var(--rift-muted);
-
-    letter-spacing: 0;
+    line-height: 20px;
 }
 
 
+/* ---------------------------------------------------------
+   FECHA
+   --------------------------------------------------------- */
+
+.rift-news-date {
+    position: absolute;
+
+    top: 2px;
+    right: 0;
+
+    padding: 3px 6px;
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+
+    color: var(--rift-a2);
+
+    letter-spacing: 1px;
+
+    border-left: 1px solid var(--rift-a2);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--rift-panel)
+        );
+}
 /* ---------------------------------------------------------
    TEXTO
    --------------------------------------------------------- */
