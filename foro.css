@@ -5266,11 +5266,3 @@ blockquote blockquote {
         padding: 12px;
         font-size: 10px;
     }
-
-}
-#rift-recent-content {
-    background: red !important;
-}
-#rift-recent-content .marquee {
-    background: blue !important;
-}
