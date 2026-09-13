@@ -5367,3 +5367,9 @@ blockquote blockquote {
     }
 
 }
+#rift-recent-content {
+    background: red !important;
+}
+#rift-recent-content .marquee {
+    background: blue !important;
+}
