@@ -568,6 +568,375 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     margin-bottom: 0;
 }
 
+```css
+/* ==========================================================
+   DIGITAL RIFT — MAPA DE ZONAS
+   ========================================================== */
+
+.dr-map {
+    --map-blue:#1677C8;
+    --map-cyan:#22c1c3;
+    --map-bg:#080f18;
+    --map-panel:#0d1722;
+    --map-panel2:#111f2d;
+    --map-line:rgba(34,193,195,.22);
+    --map-text:#dce8f2;
+    --map-muted:#7f95a8;
+
+    margin:25px;
+    color:var(--map-text);
+    font-family:"Oxanium",sans-serif;
+    font-size:11px;
+    line-height:1.7;
+}
+
+
+/* CABECERA */
+
+.dr-map-head {
+    padding:18px 20px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22,119,200,.14),
+            transparent
+        );
+    border:1px solid #183246;
+    border-bottom:1px solid var(--map-line);
+}
+
+.dr-map-label {
+    display:inline-block;
+    margin-bottom:6px;
+    padding:3px 8px;
+
+    border:1px solid var(--map-blue);
+
+    color:var(--emblema2);
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.dr-map-title {
+    color:#fff;
+    font-family:"Jersey 15",Arial,sans-serif;
+    font-size:27px;
+    letter-spacing:2px;
+    line-height:1;
+}
+
+.dr-map-subtitle {
+    margin-top:7px;
+    color:var(--map-muted);
+    font-size:8px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+
+/* INTRODUCCIÓN */
+
+.dr-map-intro {
+    margin-top:10px;
+    padding:13px 15px;
+
+    background:rgba(13,21,30,.85);
+    border-left:2px solid var(--map-blue);
+    border-right:1px solid var(--map-line);
+
+    color:#aebdca;
+    font-size:10px;
+}
+
+.dr-map-intro b {
+    color:var(--emblema2);
+}
+
+
+/* SISTEMA */
+
+.dr-map-system {
+    position:relative;
+    margin-top:15px;
+}
+
+.dr-map-system > input {
+    display:none;
+}
+
+
+/* PANEL */
+
+.dr-map-content {
+    position:relative;
+    min-height:330px;
+
+    background:#091119;
+    border:1px solid #183246;
+}
+
+
+/* ZONAS */
+
+.dr-map-zone {
+    display:none;
+    padding:18px;
+}
+
+#dr-zone-01:checked ~ .dr-map-content .dr-map-zone:nth-child(1),
+#dr-zone-02:checked ~ .dr-map-content .dr-map-zone:nth-child(2),
+#dr-zone-03:checked ~ .dr-map-content .dr-map-zone:nth-child(3),
+#dr-zone-04:checked ~ .dr-map-content .dr-map-zone:nth-child(4),
+#dr-zone-05:checked ~ .dr-map-content .dr-map-zone:nth-child(5),
+#dr-zone-06:checked ~ .dr-map-content .dr-map-zone:nth-child(6) {
+    display:block;
+}
+
+
+/* CABECERA DE ZONA */
+
+.dr-map-zone-head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding-bottom:10px;
+    margin-bottom:14px;
+
+    border-bottom:1px solid #183246;
+}
+
+.dr-map-zone-head span {
+    color:var(--emblema2);
+    font-family:"Roboto Mono",monospace;
+    font-size:8px;
+    letter-spacing:1px;
+}
+
+.dr-map-zone-head b {
+    color:#fff;
+    font-family:"Jersey 15",Arial,sans-serif;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+
+/* CUERPO */
+
+.dr-map-zone-body {
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:15px;
+}
+
+
+/* IMAGEN */
+
+.dr-map-image {
+    min-height:170px;
+    background:#071018;
+    border:1px solid #24475d;
+    overflow:hidden;
+}
+
+.dr-map-image img {
+    width:100%;
+    height:100%;
+    min-height:170px;
+
+    display:block;
+    object-fit:cover;
+
+    opacity:.82;
+    transition:.3s;
+}
+
+.dr-map-image:hover img {
+    opacity:1;
+}
+
+
+/* INFORMACIÓN */
+
+.dr-map-info {
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+
+/* DATOS */
+
+.dr-map-data {
+    padding:8px 10px;
+
+    background:#0d1722;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.dr-map-data span {
+    display:block;
+
+    color:var(--map-muted);
+    font-family:"Roboto Mono",monospace;
+    font-size:7px;
+    letter-spacing:1px;
+}
+
+.dr-map-data b {
+    display:block;
+    margin-top:2px;
+
+    color:#eaf7fb;
+    font-size:9px;
+    text-transform:uppercase;
+}
+
+
+/* DESCRIPCIÓN */
+
+.dr-map-description {
+    flex:1;
+
+    padding:11px;
+
+    background:rgba(17,31,45,.55);
+    border-left:1px solid var(--map-blue);
+
+    color:#9fb1bf;
+    font-size:10px;
+}
+
+
+/* ZONA DE ROL */
+
+.dr-map-role {
+    margin-top:14px;
+    padding:10px 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22,119,200,.12),
+            transparent
+        );
+
+    border:1px solid rgba(34,193,195,.18);
+}
+
+.dr-map-role span {
+    display:block;
+
+    color:var(--emblema2);
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.dr-map-role b {
+    color:#b8c7d4;
+    font-size:9px;
+}
+
+
+/* ==========================================================
+   SELECTORES
+   ========================================================== */
+
+.dr-map-tabs {
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+
+    margin-top:8px;
+    gap:5px;
+}
+
+.dr-map-tabs label {
+    position:relative;
+
+    padding:9px 5px;
+
+    background:#0b151e;
+    border:1px solid #183246;
+
+    cursor:pointer;
+    text-align:center;
+
+    transition:.2s;
+}
+
+.dr-map-tabs label:hover {
+    background:#111f2d;
+    border-color:var(--map-cyan);
+}
+
+.dr-map-tabs small {
+    display:block;
+
+    color:#526b7a;
+
+    font-family:"Roboto Mono",monospace;
+    font-size:7px;
+}
+
+.dr-map-tabs b {
+    display:block;
+
+    margin-top:2px;
+
+    color:#a9bac4;
+    font-size:8px;
+    letter-spacing:.5px;
+}
+
+
+/* ESTADO ACTIVO */
+
+#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"],
+#dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"],
+#dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"],
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"],
+#dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"],
+#dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {
+    background:rgba(22,119,200,.15);
+    border-color:var(--emblema2);
+}
+
+#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"] b,
+#dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"] b,
+#dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"] b,
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b,
+#dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b,
+#dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {
+    color:var(--emblema2);
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:600px) {
+
+    .dr-map {
+        margin:15px 10px;
+    }
+
+    .dr-map-zone-body {
+        grid-template-columns:1fr;
+    }
+
+    .dr-map-image {
+        min-height:150px;
+    }
+
+    .dr-map-tabs {
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+```
 
 
 /* TABLILLA DIGIMON */
