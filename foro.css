@@ -887,7 +887,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 #dg-memberlist{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:15px;padding:5px 15px 15px;box-sizing:border-box}
 .dg-tamer{--dg-group:#1677c8;position:relative;min-height:315px;background:#f4f7f9;border:1px solid #d6e1e8;overflow:hidden;font-family:"Oxanium", sans-serif;box-sizing:border-box;transition:transform .2s,box-shadow .2s}
 .dg-tamer:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(17,24,32,.12)}
-.dg-tamer-header{position:relative;height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 15px;box-sizing:border-box;background:#111820;color:white;border-bottom:3px solid var(--dg-group)}
+.dg-tamer-header{position:relative;height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 15px;box-sizing:border-box;background: var(--body-background); color:var(--colortextod1);border-bottom:3px solid var(--dg-group)}
 .dg-tamer-code{font-size:9px;letter-spacing:1px;opacity:.8}
 .dg-tamer-code strong{color:#38bdf8}
 .dg-status{font-size:8px;letter-spacing:1px;color:#8fa1ad}
