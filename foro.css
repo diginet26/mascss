@@ -5997,3 +5997,6 @@ blockquote blockquote {
         0 100%
     );
 }
+.rift-news-prototype .rift-news-text {
+    z-index:10;
+}
