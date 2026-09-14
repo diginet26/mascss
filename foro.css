@@ -5951,17 +5951,17 @@ blockquote blockquote {
    --------------------------------------------------------- */
 
 .rift-news-prototype:hover .piece-top {
-    transform: translateY(-14px);
+    transform: translateY(-5px);
 }
 
 .rift-news-prototype:hover .piece-right {
-    transform: translateX(14px);
+    transform: translateX(5px);
 }
 
 .rift-news-prototype:hover .piece-bottom {
-    transform: translateY(14px);
+    transform: translateY(5px);
 }
 
 .rift-news-prototype:hover .piece-left {
-    transform: translateX(-14px);
+    transform: translateX(-5px);
 }
