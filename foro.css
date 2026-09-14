@@ -568,7 +568,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     margin-bottom: 0;
 }
 
-```css
+
 /* ==========================================================
    DIGITAL RIFT — MAPA DE ZONAS
    ========================================================== */
@@ -936,8 +936,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     }
 
 }
-```
-
 
 /* TABLILLA DIGIMON */
 
