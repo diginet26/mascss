@@ -4768,10 +4768,6 @@ button[title="Bondad"] {
 }
 
 /* =========================================================
-   NOTICIAS — TARJETA POLIGONAL
-   ========================================================= */
-
-/* =========================================================
    TARJETA POLIGONAL DE LA NOTICIA
    ========================================================= */
 
@@ -4872,25 +4868,6 @@ button[title="Bondad"] {
 
     opacity: .35;
 }
-
-
-/* ---------------------------------------------------------
-   CABECERA DE LA NOTICIA
-   --------------------------------------------------------- */
-
-.rift-news-title {
-    position: relative;
-
-    min-height: 32px;
-
-    margin-bottom: 10px;
-    padding: 4px 0 7px 38px;
-
-    border-bottom: 1px solid var(--rift-border);
-
-    box-sizing: border-box;
-}
-
 
 /* ---------------------------------------------------------
    ICONO
