@@ -4568,7 +4568,7 @@ button[title="Bondad"] {
     text-decoration:none;
     border:1px solid var(--rift-border);
     background:var(--rift-deep);
-    border-radius:50%;
+    /*border-radius:50%;*/
     overflow:hidden;
     transition:
         transform .15s ease,
