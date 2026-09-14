@@ -3922,6 +3922,15 @@ button[title="Bondad"] {
     color: var(--rift-a3);
 }
 
+#rift-recent-content .rift-recent-item {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+#rift-recent-content .rift-recent-item > a {
+    font-size: 12px;
+    font-weight: 700;
+}
 /* ---------------------------------------------------------
    SITUACIÓN ACTUAL — CONTENIDO
    --------------------------------------------------------- */
