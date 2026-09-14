@@ -25,7 +25,6 @@
   font-style: normal;
 }
 
-
 /* Ocultar "Ver mensajes desde la última visita" */
 ul.linklist > li:has(a[href*="search_id=newposts"]) {display: none !important;}
 
@@ -5823,7 +5822,7 @@ blockquote blockquote {
 
     z-index: 5;
 
-    background: #15191d;
+    background: transparent;
 
     border: 1px solid var(--rift-a1);
 
@@ -5855,7 +5854,8 @@ blockquote blockquote {
     box-sizing: border-box;
 
     transition:
-        transform .45s cubic-bezier(.2,.8,.2,1);
+      clip-path .45s cubic-bezier(.2,.8,.2,1),
+      transform .45s cubic-bezier(.2,.8,.2,1);
 }
 
 
@@ -5951,17 +5951,49 @@ blockquote blockquote {
    --------------------------------------------------------- */
 
 .rift-news-prototype:hover .piece-top {
-    transform: translateY(-5px);
+    clip-path:polygon(
+        0 0,
+        100% 0,
+        100% 38%,
+        58% 38%,
+        50% 32%,
+        42% 38%,
+        0 38%
+    );
 }
 
 .rift-news-prototype:hover .piece-right {
-    transform: translateX(5px);
+    clip-path:polygon(
+        62% 0,
+        100% 0,
+        100% 100%,
+        62% 100%,
+        62% 58%,
+        68% 50%,
+        62% 42%
+    );
 }
 
 .rift-news-prototype:hover .piece-bottom {
-    transform: translateY(5px);
+    clip-path:polygon(
+        0 62%,
+        42% 62%,
+        50% 68%,
+        58% 62%,
+        100% 62%,
+        100% 100%,
+        0 100%
+    );
 }
 
 .rift-news-prototype:hover .piece-left {
-    transform: translateX(-5px);
+    clip-path:polygon(
+        0 0,
+        38% 0,
+        38% 42%,
+        32% 50%,
+        38% 58%,
+        38% 100%,
+        0 100%
+    );
 }
