@@ -5350,8 +5350,3 @@ blockquote blockquote {
 #rift-recent-content .rift-recent-item > a:hover {
     color: var(--rift-a3);
 }
-
-/* PRUEBA CSS */
-#rift-recent-content .rift-recent-item {
-    background: red !important;
-}
