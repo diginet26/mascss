@@ -4292,7 +4292,7 @@ display: grid;
     gap: 10px;
     position: relative;
 }
-
+.marquee {height: 460px !important;}
 
 /* ---------------------------------------------------------
    ZONA VISIBLE
