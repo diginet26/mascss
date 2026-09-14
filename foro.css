@@ -3969,6 +3969,12 @@ button[title="Bondad"] {
         inset 0 0 15px rgba(0, 0, 0, 0.20),
         0 0 10px rgba(77, 184, 255, 0.12);
 }
+
+/* =========================================================
+   ÚLTIMOS TEMAS — PAUSA AL PASAR EL CURSOR
+   ========================================================= */
+
+#rift-recent-content .marquee:hover .js-marquee-wrapper {animation-play-state: paused !important;}
 /* ---------------------------------------------------------
    SITUACIÓN ACTUAL — CONTENIDO
    --------------------------------------------------------- */
