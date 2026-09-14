@@ -4771,7 +4771,11 @@ button[title="Bondad"] {
    NOTICIAS — TARJETA POLIGONAL
    ========================================================= */
 
-.rift-news-item > a {
+/* =========================================================
+   TARJETA POLIGONAL DE LA NOTICIA
+   ========================================================= */
+
+.rift-news-title {
     position: absolute;
     right: 0;
     top: 50%;
@@ -4783,7 +4787,6 @@ button[title="Bondad"] {
     padding: 14px 18px;
     box-sizing: border-box;
     color: var(--rift-text);
-    text-decoration: none;
     background:
         linear-gradient(
             135deg,
@@ -4798,7 +4801,9 @@ button[title="Bondad"] {
         0% 100%,
         0% 18%
     );
-    box-shadow: inset 0 0 18px rgba(77, 184, 255, 0.08), 0 0 12px rgba(77, 184, 255, 0.08);
+    box-shadow:
+        inset 0 0 18px rgba(77, 184, 255, 0.08),
+        0 0 12px rgba(77, 184, 255, 0.08);
     transform: translateY(-50%);
     transition:
         transform 0.25s ease,
@@ -4807,22 +4812,23 @@ button[title="Bondad"] {
         box-shadow 0.25s ease;
 }
 
-.rift-news-item > a:hover {
+
+/* HOVER */
+
+.rift-news-item:hover .rift-news-title {
     background:
         linear-gradient(
             135deg,
             rgba(77, 184, 255, 0.24),
             rgba(167, 139, 250, 0.20)
         );
-
     border-color: var(--rift-a1);
-
     box-shadow:
         inset 0 0 20px rgba(77, 184, 255, 0.12),
         0 0 14px rgba(77, 184, 255, 0.15);
-
     transform: translateY(-50%) translateX(-4px);
 }
+
 /* Línea tecnológica superior */
 
 .rift-news-item::before {
