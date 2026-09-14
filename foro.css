@@ -5780,3 +5780,188 @@ blockquote blockquote {
 #rift-recent-content .rift-recent-item > a:hover {
     color: var(--rift-a3);
 }
+
+/* =========================================================
+   PROTOTIPO V2 - PLACA FRAGMENTADA
+   ========================================================= */
+
+.rift-news-prototype {
+    position: relative;
+    overflow: visible;
+}
+
+
+/* ---------------------------------------------------------
+   TEXTO DE LA NOTICIA
+   --------------------------------------------------------- */
+
+.rift-news-prototype .rift-news-text {
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    z-index: 1;
+
+    color: var(--rift-muted);
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------
+   PLACA
+   --------------------------------------------------------- */
+
+.rift-news-plate {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    background: #15191d;
+
+    border: 1px solid var(--rift-a1);
+
+    box-sizing: border-box;
+
+    overflow: visible;
+
+    box-shadow:
+        0 0 12px rgba(77,184,255,.12),
+        inset 0 0 18px rgba(77,184,255,.06);
+}
+
+
+/* ---------------------------------------------------------
+   FRAGMENTOS
+   --------------------------------------------------------- */
+
+.rift-news-plate-piece {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #15191d;
+
+    box-sizing: border-box;
+
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* ---------------------------------------------------------
+   CORTES
+   --------------------------------------------------------- */
+
+.rift-news-plate .piece-top {
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 50%,
+        0 50%
+    );
+}
+
+.rift-news-plate .piece-right {
+    clip-path: polygon(
+        100% 0,
+        100% 100%,
+        50% 50%
+    );
+}
+
+.rift-news-plate .piece-bottom {
+    clip-path: polygon(
+        0 100%,
+        100% 100%,
+        50% 50%,
+        0 50%
+    );
+}
+
+.rift-news-plate .piece-left {
+    clip-path: polygon(
+        0 0,
+        50% 50%,
+        0 100%
+    );
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULO
+   --------------------------------------------------------- */
+
+.rift-news-plate .plate-title {
+    max-width: 70%;
+
+    text-align: center;
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    line-height: 1.25;
+
+    color: var(--rift-text);
+
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+
+/* ---------------------------------------------------------
+   FECHA
+   --------------------------------------------------------- */
+
+.rift-news-plate-date {
+    position: absolute;
+
+    top: 7px;
+    right: 8px;
+
+    z-index: 20;
+
+    padding: 2px 5px;
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+
+    color: var(--rift-a2);
+
+    letter-spacing: 1px;
+
+    border-left: 1px solid var(--rift-a2);
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+.rift-news-prototype:hover .piece-top {
+    transform: translateY(-14px);
+}
+
+.rift-news-prototype:hover .piece-right {
+    transform: translateX(14px);
+}
+
+.rift-news-prototype:hover .piece-bottom {
+    transform: translateY(14px);
+}
+
+.rift-news-prototype:hover .piece-left {
+    transform: translateX(-14px);
+}
