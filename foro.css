@@ -4067,13 +4067,13 @@ button[title="Bondad"] {
     gap: 8px;
     margin-top: 14px;
     padding: 10px 12px;
-    background:
+    /*background:
         linear-gradient(
             90deg,
             rgba(77, 184, 255, 0.04),
             rgba(167, 139, 250, 0.06),
             rgba(77, 184, 255, 0.04)
-        );
+        );*/
     /*border-top: 1px solid rgba(77, 184, 255, 0.15);
     border-bottom: 1px solid rgba(167, 139, 250, 0.15);*/
     box-shadow:
