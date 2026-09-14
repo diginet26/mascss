@@ -5956,25 +5956,24 @@ blockquote blockquote {
 
 /* HOVER: SEPARACIÓN */
 
-.rift-news-prototype .rift-news-piece-1 {
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        50% 50%,
-        0 50%
-    );
+.rift-news-prototype:hover .rift-news-piece-1 {
+    transform: translate(-14px, -12px);
+    opacity: 0;
 }
 
 .rift-news-prototype:hover .rift-news-piece-2 {
-    transform: translate(12px,-10px);
+    transform: translate(14px, -12px);
+    opacity: 0;
 }
 
 .rift-news-prototype:hover .rift-news-piece-3 {
-    transform: translate(12px,10px);
+    transform: translate(14px, 12px);
+    opacity: 0;
 }
 
 .rift-news-prototype:hover .rift-news-piece-4 {
-    transform: translate(-12px,10px);
+    transform: translate(-14px, 12px);
+    opacity: 0;
 }
 
 /* BRILLO */
