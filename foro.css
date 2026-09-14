@@ -564,10 +564,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     margin-top: 15px;
 }
 
-.dr-system-list .dr-lista {
-    margin-bottom: 0;
-}
-
+.dr-system-list .dr-lista {margin-bottom: 0;}
 
 /* ==========================================================
    DIGITAL RIFT — MAPA DE ZONAS
@@ -583,13 +580,11 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     --map-text:#dce8f2;
     --map-muted:#7f95a8;
 
-    margin:25px;
     color:var(--map-text);
     font-family:"Oxanium",sans-serif;
     font-size:11px;
     line-height:1.7;
 }
-
 
 /* CABECERA */
 
@@ -4742,7 +4737,7 @@ button[title="Bondad"] {
 .rift-news-item {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 115px;
     flex: 0 0 calc(50% - 5px);
     max-width: 250px;
     box-sizing: border-box;
@@ -4774,13 +4769,13 @@ button[title="Bondad"] {
 .rift-news-title {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 12px;
     width: 72%;
-    min-height: 75px;
+    min-height: 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 14px 18px;
+    padding: 10px 14px 10px 18px;
     box-sizing: border-box;
     color: var(--rift-text);
     background:
@@ -4791,23 +4786,20 @@ button[title="Bondad"] {
         );
     border: 1px solid rgba(77, 184, 255, 0.30);
     clip-path: polygon(
-        12% 0%,
+        10% 0%,
         100% 0%,
         100% 100%,
         0% 100%,
-        0% 18%
+        0% 22%
     );
-    box-shadow:
-        inset 0 0 18px rgba(77, 184, 255, 0.08),
-        0 0 12px rgba(77, 184, 255, 0.08);
-    transform: translateY(-50%);
+    box-shadow: inset 0 0 15px rgba(77, 184, 255, 0.08), 0 0 10px rgba(77, 184, 255, 0.08);
+    z-index: 2;
     transition:
         transform 0.25s ease,
         background 0.25s ease,
         border-color 0.25s ease,
         box-shadow 0.25s ease;
 }
-
 
 /* HOVER */
 
@@ -4819,24 +4811,19 @@ button[title="Bondad"] {
             rgba(167, 139, 250, 0.20)
         );
     border-color: var(--rift-a1);
-    box-shadow:
-        inset 0 0 20px rgba(77, 184, 255, 0.12),
-        0 0 14px rgba(77, 184, 255, 0.15);
-    transform: translateY(-50%) translateX(-4px);
+    box-shadow: inset 0 0 18px rgba(77, 184, 255, 0.12), 0 0 12px rgba(77, 184, 255, 0.15);
+    transform: translateX(-3px);
 }
 
 /* Línea tecnológica superior */
 
 .rift-news-item::before {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: 45px;
     height: 2px;
-
     background:
         linear-gradient(
             90deg,
@@ -4848,24 +4835,17 @@ button[title="Bondad"] {
         0 0 8px var(--rift-a2);
 }
 
-
 /* Detalle geométrico inferior */
 
 .rift-news-item::after {
     content: "";
-
     position: absolute;
-
     right: -12px;
     bottom: -12px;
-
     width: 35px;
     height: 35px;
-
     border: 1px solid var(--rift-a3);
-
     transform: rotate(45deg);
-
     opacity: .35;
 }
 
@@ -4875,58 +4855,40 @@ button[title="Bondad"] {
 
 .rift-news-icon {
     position: absolute;
-
     top: -12px;
     left: -14px;
-
     width: 32px;
     height: 32px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background:
         linear-gradient(
             135deg,
             var(--rift-a1),
             var(--rift-a2)
         );
-
     color: var(--rift-deep);
-
     font-size: 14px;
-
     border: 1px solid var(--rift-border);
-
-    box-shadow:
-        0 0 8px var(--rift-a2);
-
+    box-shadow: 0 0 8px var(--rift-a2);
     z-index: 3;
 }
-
 
 /* pequeño corte diagonal */
 
 .rift-news-icon::after {
     content: "";
-
     position: absolute;
-
     right: -5px;
     bottom: -5px;
-
     width: 9px;
     height: 9px;
-
     background: var(--rift-deep);
-
     border-left: 1px solid var(--rift-a2);
     border-top: 1px solid var(--rift-a2);
-
     transform: rotate(45deg);
 }
-
 
 /* ---------------------------------------------------------
    NOMBRE DE LA NOTICIA
@@ -4934,21 +4896,15 @@ button[title="Bondad"] {
 
 .rift-news-name {
     display: inline-block;
-
     max-width: calc(100% - 65px);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 12px;
     font-weight: bold;
-
     color: var(--rift-text);
-
     text-transform: uppercase;
     letter-spacing: .6px;
-
     line-height: 20px;
 }
-
 
 /* ---------------------------------------------------------
    FECHA
@@ -4956,22 +4912,15 @@ button[title="Bondad"] {
 
 .rift-news-date {
     position: absolute;
-
     top: 2px;
     right: 0;
-
     padding: 3px 6px;
-
     font-family: 'Oxanium', sans-serif;
     font-size: 8px;
     font-weight: bold;
-
     color: var(--rift-a2);
-
     letter-spacing: 1px;
-
     border-left: 1px solid var(--rift-a2);
-
     background:
         linear-gradient(
             90deg,
@@ -4986,13 +4935,10 @@ button[title="Bondad"] {
 .rift-news-text {
     position: relative;
     z-index: 2;
-
     font-size: 11px;
     line-height: 1.5;
-
     color: var(--rift-muted);
 }
-
 
 /* ---------------------------------------------------------
    EFECTO HOVER
