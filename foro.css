@@ -4062,7 +4062,7 @@ button[title="Bondad"] {
 
 #rift-quick-links {
 display: grid;
-    grid-template-columns: repeat(10, 60px);
+    grid-template-columns: repeat(15, 60px);
     justify-content: space-between;
     gap: 7px;
 
