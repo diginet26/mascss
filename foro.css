@@ -3907,6 +3907,21 @@ button[title="Bondad"] {
     box-shadow: 0 0 7px var(--rift-a2);
 }
 
+#rift-recent-content .rift-recent-item > a {
+    display: inline-block;
+    color: var(--rift-text);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+#rift-recent-content .rift-recent-item > a:hover {
+    color: var(--rift-a3);
+}
+
 /* ---------------------------------------------------------
    SITUACIÓN ACTUAL — CONTENIDO
    --------------------------------------------------------- */
@@ -3915,8 +3930,6 @@ button[title="Bondad"] {
     height: 240px;
     position: relative;
     overflow: hidden;
-    /*background: linear-gradient(135deg, rgba(0,0,0,.12), rgba(255,255,255,.015));
-    border: 1px solid var(--rift-border);*/
     padding: 14px;
     box-sizing: border-box;
       background:
