@@ -5794,34 +5794,23 @@ blockquote blockquote {
 
 .rift-news-prototype .rift-news-title {
     position: absolute;
-
-    top: 0;
-    right: 0;
-
-    width: 115px;
-    height: 115px;
-
+    inset: 0;
+    width: auto;
+    height: auto;
     padding: 0;
-
+    padding: 0;
     transform: none;
-
     background: #15191d;
     border: 1px solid var(--rift-a1);
-
     box-sizing: border-box;
-
     overflow: visible;
-
     z-index: 5;
-
     box-shadow:
         0 0 10px rgba(77,184,255,.12),
         inset 0 0 15px rgba(77,184,255,.06);
-
     transition:
         box-shadow .35s ease;
 }
-
 
 /* TEXTO DE LA NOTICIA */
 
@@ -5967,8 +5956,13 @@ blockquote blockquote {
 
 /* HOVER: SEPARACIÓN */
 
-.rift-news-prototype:hover .rift-news-piece-1 {
-    transform: translate(-12px,-10px);
+.rift-news-prototype .rift-news-piece-1 {
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 50%,
+        0 50%
+    );
 }
 
 .rift-news-prototype:hover .rift-news-piece-2 {
