@@ -496,20 +496,15 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 
     left: 17px;
     top: 17px;
-
     width: 23px;
     height: 23px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 1px solid var(--dg-blue);
-
-    color: var(--dg-cyan);
-
-    font-size: 10px;
-
+    border: 1px solid var(--emblema1);
+    color: var(--emblema1);
+    font-family: "Jersey 15";
+    font-size: 15px;
     transform: rotate(45deg);
 }
 
@@ -521,14 +516,11 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* NOMBRE */
 
 .dr-tadmin .dr-lista2 h3 {
-    margin: 0 0 2px;
-
-    color: #fff;
-
-    font-size: 11px;
-
+    margin: 0 5 2px;
+    color: var(--colortextod1);
+    font-size: 17px;
+    font-family: "Jersey 15";
     letter-spacing: 1px;
-
     text-transform: uppercase;
 }
 
@@ -541,11 +533,8 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 
 .dr-tadmin .dr-lista2 p {
     margin: 0;
-
-    color: var(--dg-muted);
-
-    font-size: 10px;
-
+    color: var(--colortextod1);
+    font-size: 12px;
     line-height: 1.7;
 }
 
