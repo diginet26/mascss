@@ -25,6 +25,27 @@
   font-style: normal;
 }
 
+/* NEGRITA */
+b {
+    color: var(--emblema2);
+}
+
+/* CURSIVA */
+i {
+    color: var(--emblema1);
+}
+
+/* SUBRAYADO */
+u {
+    color: var(--emblema1);
+}
+
+/* TACHADO */
+strike,
+s {
+    color: var(--emblema1);
+}
+
 /* Ocultar "Ver mensajes desde la última visita" */
 ul.linklist > li:has(a[href*="search_id=newposts"]) {display: none !important;}
 
