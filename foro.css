@@ -515,7 +515,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* NOMBRE */
 
 .dr-tadmin .dr-lista2 h3 {
-    margin: 1 2 2px;
+    margin: 1px 2px 2px;
     color: var(--colortextod1);
     font-size: 17px;
     font-family: "Jersey 15";
