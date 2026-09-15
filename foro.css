@@ -501,8 +501,8 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--emblema1);
-    color: var(--emblema1);
+    border: 1px solid var(--linkc3);
+    color: var(--emblema2);
     font-family: "Jersey 15";
     font-size: 15px;
     transform: rotate(45deg);
