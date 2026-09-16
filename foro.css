@@ -7842,3 +7842,1061 @@ background:
     color: var(--accent2);
 
 }
+
+/* =========================================================
+   DIGIMON NETWORK
+   STATISTICS SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+#digimon-statistics {
+
+    --stats-border:
+        color-mix(
+            in srgb,
+            var(--text-color) 12%,
+            transparent
+        );
+
+    --stats-muted:
+        color-mix(
+            in srgb,
+            var(--text-color) 55%,
+            transparent
+        );
+
+    --stats-panel:
+        linear-gradient(
+            135deg,
+            var(--post-background),
+            var(--body-background)
+        );
+
+    --stats-gradient:
+        linear-gradient(
+            120deg,
+            var(--accent1),
+            var(--accent2)
+        );
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 35px auto 0;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 16px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--body-background),
+            var(--post-background)
+        );
+
+    overflow: hidden;
+
+    font-family: "Poppins", sans-serif;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, .18);
+
+}
+
+
+#digimon-statistics *,
+#digimon-statistics *::before,
+#digimon-statistics *::after {
+
+    box-sizing: border-box;
+
+}
+
+
+#digimon-statistics h2,
+#digimon-statistics h3,
+#digimon-statistics p {
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.digimon-stats-header {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.digimon-stats-kicker {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent1);
+
+    font: 700 9px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 2px;
+
+}
+
+
+.digimon-stats-heading h2 {
+
+    color: var(--text-color);
+
+    font: 700 34px/1.1 "Oxanium", sans-serif;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+.digimon-stats-heading p {
+
+    margin-top: 7px;
+
+    color: var(--stats-muted);
+
+    font: 8px/1.4 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-stats-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px 14px;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 6px;
+
+    color: var(--stats-muted);
+
+    font: 700 8px/1 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+}
+
+
+.digimon-stats-status span {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent2);
+
+    box-shadow: 0 0 12px var(--accent2);
+
+}
+
+
+/* =========================================================
+   SEPARADOR
+   ========================================================= */
+
+.digimon-stats-line {
+
+    width: 100%;
+
+    height: 2px;
+
+    margin: 22px 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--accent1),
+            var(--accent2),
+            transparent
+        );
+
+    opacity: .8;
+
+}
+
+
+/* =========================================================
+   BLOQUE PRINCIPAL
+   ========================================================= */
+
+.digimon-stats-main {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.35fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================================================
+   PANEL DE BIENVENIDA
+   ========================================================= */
+
+.digimon-stats-welcome {
+
+    position: relative;
+
+    min-height: 280px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 12px;
+
+    background: var(--stats-panel);
+
+}
+
+
+.digimon-stats-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+
+.digimon-stats-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            transparent 15%,
+            var(--body-background) 100%
+        );
+
+}
+
+
+.digimon-stats-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--emblema1),
+            transparent 55%,
+            var(--emblema2)
+        );
+
+    mix-blend-mode: color;
+
+    opacity: .45;
+
+}
+
+
+.digimon-stats-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    opacity: .65;
+
+    transition: transform .6s ease;
+
+}
+
+
+.digimon-stats-welcome:hover
+.digimon-stats-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+.digimon-stats-welcome-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 25px;
+
+}
+
+
+.digimon-stats-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent1);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+.digimon-stats-welcome-content h3 {
+
+    color: var(--text-color);
+
+    font: 700 24px/1.1 "Oxanium", sans-serif;
+
+    letter-spacing: .5px;
+
+}
+
+
+.digimon-stats-welcome-content p {
+
+    max-width: 400px;
+
+    margin-top: 12px;
+
+    color: var(--stats-muted);
+
+    font: 11px/1.7 "Poppins", sans-serif;
+
+}
+
+
+.digimon-stats-mini-line {
+
+    width: 80px;
+
+    height: 3px;
+
+    margin: 20px 0 12px;
+
+    background: var(--stats-gradient);
+
+}
+
+
+.digimon-stats-version {
+
+    color: var(--stats-muted);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   PANEL DE USUARIOS EN LÍNEA
+   ========================================================= */
+
+.digimon-stats-online {
+
+    min-width: 0;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: var(--stats-panel);
+
+}
+
+
+/* Barra superior */
+
+.digimon-window-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid var(--stats-border);
+
+    background: var(--post-background);
+
+    color: var(--stats-muted);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-window-header > span:nth-child(2) {
+
+    flex: 1;
+
+}
+
+
+.digimon-window-header > i {
+
+    color: var(--accent1);
+
+}
+
+
+.digimon-window-dots {
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.digimon-window-dots i {
+
+    width: 8px;
+    height: 8px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: var(--accent1);
+
+}
+
+
+.digimon-window-dots i:nth-child(2) {
+
+    background: var(--accent2);
+
+}
+
+
+.digimon-window-dots i:nth-child(3) {
+
+    background: var(--accent3);
+
+}
+
+
+/* Contenido */
+
+.digimon-online-content {
+
+    padding: 22px;
+
+}
+
+
+.digimon-online-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--stats-border);
+
+}
+
+
+.digimon-online-title > i {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--stats-gradient);
+
+    color: var(--post-background);
+
+    font-size: 20px;
+
+}
+
+
+.digimon-online-title span {
+
+    display: block;
+
+    color: var(--stats-muted);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-online-title strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--text-color);
+
+    font: 700 34px/1 "Oxanium", sans-serif;
+
+}
+
+
+/* Datos registrados / invitados */
+
+.digimon-online-data {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+
+.digimon-online-data > div {
+
+    padding: 14px;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 8px;
+
+    background: var(--body-background);
+
+}
+
+
+.digimon-data-name {
+
+    display: block;
+
+    color: var(--stats-muted);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-online-data strong {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--accent1);
+
+    font: 700 22px/1 "Oxanium", sans-serif;
+
+}
+
+
+/* Lista de usuarios */
+
+.digimon-online-list {
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--stats-border);
+
+}
+
+
+.digimon-user-list {
+
+    min-height: 45px;
+
+    color: var(--text-color);
+
+    font: 10px/1.8 "Poppins", sans-serif;
+
+}
+
+
+.digimon-user-list a {
+
+    color: var(--accent1);
+
+}
+
+
+.digimon-user-list a:hover {
+
+    color: var(--accent2);
+
+}
+
+
+/* =========================================================
+   CONTADORES
+   ========================================================= */
+
+.digimon-stats-counters {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+
+.digimon-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 10px;
+
+    background: var(--stats-panel);
+
+    transition: transform .3s ease, border-color .3s ease;
+
+}
+
+
+.digimon-counter:hover {
+
+    transform: translateY(-3px);
+
+    border-color: var(--accent1);
+
+}
+
+
+.digimon-counter-icon {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--body-background);
+
+    color: var(--accent1);
+
+    font-size: 18px;
+
+}
+
+
+.digimon-counter-data {
+
+    min-width: 0;
+
+}
+
+
+.digimon-counter-data span {
+
+    display: block;
+
+    color: var(--stats-muted);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-counter-data strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--text-color);
+
+    font: 700 27px/1 "Oxanium", sans-serif;
+
+}
+
+
+.digimon-counter-data small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--stats-muted);
+
+    font: 8px/1.2 "Roboto Mono", monospace;
+
+}
+
+
+/* =========================================================
+   USUARIO MÁS RECIENTE Y RÉCORD
+   ========================================================= */
+
+.digimon-stats-bottom {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+}
+
+
+.digimon-newest-user,
+.digimon-record-users {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 10px;
+
+    background: var(--stats-panel);
+
+}
+
+
+.digimon-bottom-icon {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--stats-gradient);
+
+    color: var(--post-background);
+
+    font-size: 19px;
+
+}
+
+
+.digimon-newest-user h3,
+.digimon-record-users h3 {
+
+    margin-top: 5px;
+
+    color: var(--text-color);
+
+    font: 700 18px/1.2 "Oxanium", sans-serif;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+.digimon-newest-user p,
+.digimon-record-users p {
+
+    margin-top: 8px;
+
+    color: var(--stats-muted);
+
+    font: 9px/1.5 "Roboto Mono", monospace;
+
+}
+
+
+.digimon-record-users small {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--accent2);
+
+    font: 8px/1.4 "Roboto Mono", monospace;
+
+}
+
+
+/* =========================================================
+   GRUPOS
+   ========================================================= */
+
+.digimon-groups {
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    border: 1px solid var(--stats-border);
+
+    border-radius: 10px;
+
+    background: var(--stats-panel);
+
+}
+
+
+.digimon-groups-header {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--stats-border);
+
+}
+
+
+.digimon-groups-header h3 {
+
+    color: var(--text-color);
+
+    font: 700 18px/1.2 "Oxanium", sans-serif;
+
+}
+
+
+.digimon-groups-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px 25px;
+
+    padding-top: 20px;
+
+    color: var(--text-color);
+
+    font: 10px/1.5 "Poppins", sans-serif;
+
+}
+
+
+.digimon-groups-list a {
+
+    color: var(--accent1);
+
+    transition: color .3s ease;
+
+}
+
+
+.digimon-groups-list a:hover {
+
+    color: var(--accent2);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    #digimon-statistics {
+
+        padding: 20px;
+
+    }
+
+
+    .digimon-stats-main {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .digimon-stats-counters {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #digimon-statistics {
+
+        padding: 15px;
+
+        border-radius: 10px;
+
+    }
+
+
+    .digimon-stats-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .digimon-stats-status {
+
+        align-self: flex-start;
+
+    }
+
+
+    .digimon-stats-heading h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .digimon-stats-bottom {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .digimon-online-data {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .digimon-newest-user,
+    .digimon-record-users {
+
+        padding: 16px;
+
+    }
+
+
+    .digimon-groups-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+}
