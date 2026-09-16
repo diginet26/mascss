@@ -5806,7 +5806,11 @@ blockquote blockquote {
 .rift-news-prototype .rift-news-text {
     position: absolute !important;
 
-    inset: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 115px !important;
 
     z-index: 1 !important;
 
@@ -5814,11 +5818,10 @@ blockquote blockquote {
     align-items: center !important;
     justify-content: center !important;
 
-    box-sizing: border-box;
-
-    padding: 10px 24px !important;
+    box-sizing: border-box !important;
 
     margin: 0 !important;
+    padding: 10px 24px !important;
 
     color: var(--rift-text);
 
@@ -5841,7 +5844,6 @@ blockquote blockquote {
     text-shadow:
         0 0 5px rgba(77,184,255,.25);
 }
-
 /* ---------------------------------------------------------
    PLACA DE COBERTURA
    --------------------------------------------------------- */
