@@ -5964,3 +5964,1407 @@ background:
 .rift-news-prototype:hover .rift-news-plate {
     transform: translateX(100%);
 }
+
+/* =========================================================
+   DIGIMON NETWORK
+   INDEX BOX — MAIN DESIGN
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES LOCALES
+   Conservan el sistema de degradados actual
+   ========================================================= */
+
+.digimon-index {
+
+    --digimon-radius: 15px;
+    --digimon-radius-small: 9px;
+
+    --digimon-bg:
+        linear-gradient(
+            135deg,
+            var(--body-background),
+            var(--post-background)
+        );
+
+    --digimon-panel:
+        linear-gradient(
+            135deg,
+            var(--post-background),
+            var(--body-background)
+        );
+
+    --digimon-gradient:
+        linear-gradient(
+            120deg,
+            var(--accent1),
+            var(--accent2)
+        );
+
+    --digimon-gradient-reverse:
+        linear-gradient(
+            120deg,
+            var(--accent2),
+            var(--accent1)
+        );
+
+    --digimon-border:
+        color-mix(
+            in srgb,
+            var(--text-color) 12%,
+            transparent
+        );
+
+    --digimon-muted:
+        color-mix(
+            in srgb,
+            var(--text-color) 55%,
+            transparent
+        );
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 25px 0 45px;
+
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+/* =========================================================
+   RESET INTERNO
+   ========================================================= */
+
+.digimon-index *,
+.digimon-index *::before,
+.digimon-index *::after {
+
+    box-sizing: border-box;
+
+}
+
+.digimon-index a {
+
+    text-decoration: none;
+
+}
+
+.digimon-index h2,
+.digimon-index h3,
+.digimon-index h4,
+.digimon-index p {
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   ENLACES SUPERIORES
+   ========================================================= */
+
+.digimon-index-tools {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+    padding: 12px 18px;
+
+    border: 1px solid var(--digimon-border);
+
+    border-radius: var(--digimon-radius-small);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--post-background),
+            transparent
+        );
+
+    font: 700 9px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+
+.digimon-tools-left {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.digimon-tools-left a,
+.digimon-mark-read {
+
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 12px;
+
+    border: 1px solid var(--digimon-border);
+
+    border-radius: 6px;
+
+    color: var(--text-color);
+
+    background: var(--body-background);
+
+    transition: 0.3s ease;
+
+}
+
+
+.digimon-tools-left a i,
+.digimon-mark-read i {
+
+    color: var(--accent1);
+
+}
+
+
+.digimon-tools-left a:hover,
+.digimon-mark-read:hover {
+
+    color: var(--post-background);
+
+    background: var(--digimon-gradient);
+
+    border-color: transparent;
+
+    transform: translateY(-2px);
+
+}
+
+
+.digimon-tools-left a:hover i,
+.digimon-mark-read:hover i {
+
+    color: inherit;
+
+}
+
+
+/* =========================================================
+   CATEGORÍAS
+   ========================================================= */
+
+.digimon-category {
+
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 0 35px;
+
+    padding: 0;
+
+    border: 1px solid var(--digimon-border);
+
+    border-radius: var(--digimon-radius);
+
+    background: var(--digimon-bg);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, .15),
+        0 15px 45px rgba(0, 0, 0, .12);
+
+}
+
+
+/* =========================================================
+   CABECERA DE CATEGORÍA
+   ========================================================= */
+
+.digimon-category-header {
+
+    min-height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 25px;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            var(--post-background),
+            transparent 65%
+        );
+
+}
+
+
+/* Línea de brillo superior */
+
+.digimon-category-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: var(--digimon-gradient);
+
+}
+
+
+/* Icono */
+
+.digimon-category-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: var(--digimon-gradient);
+
+    color: var(--post-background);
+
+    font-size: 20px;
+
+    box-shadow:
+        0 0 20px
+        color-mix(
+            in srgb,
+            var(--accent1) 25%,
+            transparent
+        );
+
+}
+
+
+/* Títulos */
+
+.digimon-category-title {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.digimon-category-label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--digimon-muted);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.digimon-category-title h2 {
+
+    font: 700 27px/1.1 "Oxanium", sans-serif;
+
+    color: var(--text-color);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* Estado */
+
+.digimon-category-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 12px;
+
+    border: 1px solid var(--digimon-border);
+
+    border-radius: 6px;
+
+    color: var(--digimon-muted);
+
+    font: 700 8px/1 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+}
+
+
+.digimon-category-status span {
+
+    width: 7px;
+    height: 7px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: var(--accent2);
+
+    box-shadow:
+        0 0 10px var(--accent2);
+
+}
+
+
+/* Separador */
+
+.digimon-category-line {
+
+    width: calc(100% - 50px);
+
+    height: 1px;
+
+    margin: 0 auto;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--accent1),
+            var(--accent2),
+            transparent
+        );
+
+    opacity: .65;
+
+}
+
+
+/* =========================================================
+   GRID DE FOROS
+   ========================================================= */
+
+.digimon-forums-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    padding: 25px;
+
+}
+
+
+/* =========================================================
+   TARJETA DEL FORO
+   ========================================================= */
+
+.digimon-forum-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid var(--digimon-border);
+
+    border-radius: var(--digimon-radius);
+
+    background: var(--digimon-panel);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.digimon-forum-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: var(--digimon-gradient);
+
+    opacity: .8;
+
+}
+
+
+.digimon-forum-card:nth-child(even)::before {
+
+    background: var(--digimon-gradient-reverse);
+
+}
+
+
+.digimon-forum-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--accent1);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .25),
+        0 0 20px
+        color-mix(
+            in srgb,
+            var(--accent1) 10%,
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   CONTENIDO DE LA TARJETA
+   ========================================================= */
+
+.digimon-forum-content {
+
+    position: relative;
+
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =========================================================
+   NOMBRE DEL FORO
+   ========================================================= */
+
+.digimon-forum-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 17px 18px;
+
+    border-bottom: 1px solid var(--digimon-border);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--post-background),
+            transparent
+        );
+
+}
+
+
+.digimon-forum-number {
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: var(--body-background);
+
+    border: 1px solid var(--digimon-border);
+
+    color: var(--accent1);
+
+    font-size: 14px;
+
+}
+
+
+.digimon-forum-name {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+/* Se utiliza el h3/h4 generado por Foroactivo */
+
+.digimon-forum-name h1,
+.digimon-forum-name h2,
+.digimon-forum-name h3,
+.digimon-forum-name h4,
+.digimon-forum-name h5,
+.digimon-forum-name h6 {
+
+    margin: 0;
+
+}
+
+
+.digimon-forum-name a.forumtitle {
+
+    display: block;
+
+    overflow: hidden;
+
+    color: var(--text-color);
+
+    font: 700 18px/1.2 "Oxanium", sans-serif;
+
+    letter-spacing: .5px;
+
+    text-overflow: ellipsis;
+
+    text-transform: uppercase;
+
+    transition: color .3s ease;
+
+}
+
+
+.digimon-forum-name a.forumtitle:hover {
+
+    color: var(--accent1);
+
+}
+
+
+/* Indicador */
+
+.digimon-forum-signal {
+
+    width: 10px;
+    height: 10px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.digimon-forum-signal span {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--accent2);
+
+    box-shadow: 0 0 9px var(--accent2);
+
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN DEL FORO
+   ========================================================= */
+
+.digimon-forum-description {
+
+    position: relative;
+
+    flex: 1;
+
+    min-height: 170px;
+
+    overflow: hidden;
+
+}
+
+
+/* Ocultamos el contenedor antiguo si no tiene contenido */
+
+.digimon-forum-description:empty {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   ESTRUCTURA SINGLE FORUM
+   ========================================================= */
+
+.digimon-forum-description .rsingleforum,
+.digimon-forum-description .rdoubleforum {
+
+    position: relative;
+
+    min-height: 170px;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    background: var(--body-background);
+
+}
+
+
+/* Imagen del foro */
+
+.digimon-forum-description .rforimg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: .55;
+
+    filter: saturate(.9);
+
+    transition:
+        transform .6s ease,
+        opacity .6s ease;
+
+}
+
+
+/* Oscurecimiento de imagen */
+
+.digimon-forum-description .rforimg::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            transparent 5%,
+            var(--body-background) 100%
+        );
+
+}
+
+
+/* Degradado de color sobre la imagen */
+
+.digimon-forum-description .rforimg::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            color-mix(
+                in srgb,
+                var(--emblema1) 60%,
+                transparent
+            ),
+            transparent 65%,
+            color-mix(
+                in srgb,
+                var(--emblema2) 40%,
+                transparent
+            )
+        );
+
+    mix-blend-mode: color;
+
+}
+
+
+.digimon-forum-card:hover .rforimg {
+
+    transform: scale(1.06);
+
+    opacity: .75;
+
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN TEXTUAL
+   ========================================================= */
+
+.digimon-forum-description .rfordesc {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 75px 20px 20px;
+
+    color: var(--text-color);
+
+    font: 11px/1.7 "Poppins", sans-serif;
+
+    text-align: justify;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            transparent,
+            var(--body-background) 60%
+        );
+
+}
+
+
+/* =========================================================
+   ENLACES DEL FORO
+   ========================================================= */
+
+.digimon-forum-description .rforlinks {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    padding: 0 20px 18px;
+
+    background: var(--body-background);
+
+}
+
+
+.digimon-forum-description .rforlinks a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 27px;
+
+    padding: 6px 10px;
+
+    border: 1px solid var(--digimon-border);
+
+    border-radius: 5px;
+
+    color: var(--text-color);
+
+    background: var(--post-background);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+
+}
+
+
+.digimon-forum-description .rforlinks a:hover {
+
+    color: var(--post-background);
+
+    border-color: transparent;
+
+    background: var(--digimon-gradient);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Alternancia de color */
+
+.digimon-forum-description .rforlinks a:nth-child(even):hover {
+
+    background: var(--digimon-gradient-reverse);
+
+}
+
+
+/* =========================================================
+   INFORMACIÓN INFERIOR DE LA TARJETA
+   ========================================================= */
+
+.digimon-forum-bottom {
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 1px;
+
+    min-height: 65px;
+
+    border-top: 1px solid var(--digimon-border);
+
+    background: var(--digimon-border);
+
+}
+
+
+/* Estadísticas */
+
+.digimon-forum-stat {
+
+    width: 72px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    background: var(--post-background);
+
+}
+
+
+.digimon-stat-icon {
+
+    color: var(--accent1);
+
+    font-size: 11px;
+
+}
+
+
+.digimon-forum-stat strong {
+
+    color: var(--text-color);
+
+    font: 700 13px/1 "Oxanium", sans-serif;
+
+}
+
+
+.digimon-forum-stat small {
+
+    color: var(--digimon-muted);
+
+    font: 700 7px/1 "Roboto Mono", monospace;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Último post */
+
+.digimon-forum-lastpost {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: var(--post-background);
+
+}
+
+
+.digimon-lastpost-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.digimon-lastpost-label {
+
+    color: var(--digimon-muted);
+
+    font: 700 7px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+}
+
+
+.digimon-lastpost-info > a {
+
+    display: block;
+
+    overflow: hidden;
+
+    color: var(--text-color);
+
+    font: 700 10px/1.3 "Poppins", sans-serif;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.digimon-lastpost-info > a:hover {
+
+    color: var(--accent1);
+
+}
+
+
+.digimon-lastpost-user {
+
+    color: var(--digimon-muted);
+
+    font: 8px/1.4 "Roboto Mono", monospace;
+
+}
+
+
+/* Avatar del último post */
+
+.digimon-forum-lastpost .lastpost-avatar {
+
+    flex-shrink: 0;
+
+}
+
+
+.digimon-forum-lastpost .lastpost-avatar img {
+
+    width: 38px;
+    height: 38px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--accent1);
+
+}
+
+
+/* =========================================================
+   OCULTAR ELEMENTOS ANTIGUOS DE FORABG
+   ========================================================= */
+
+.digimon-index .forabg {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+}
+
+
+.digimon-index .forabg > .inner {
+
+    padding: 0;
+
+}
+
+
+.digimon-index .forabg > .inner > .corners-top,
+.digimon-index .forabg > .inner > .corners-bottom {
+
+    display: none;
+
+}
+
+
+.digimon-index .forabg > .inner > ul.topiclist {
+
+    display: none;
+
+}
+
+
+.digimon-index ul.topiclist.forums {
+
+    display: none;
+
+}
+
+
+/* Evita que el diseño antiguo interfiera */
+
+.digimon-index .row {
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   PIE DE INDEX
+   ========================================================= */
+
+.digimon-index-footer {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    border: 1px solid var(--digimon-border);
+
+    border-radius: var(--digimon-radius-small);
+
+    background: var(--digimon-bg);
+
+}
+
+
+.digimon-footer-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.digimon-footer-links a,
+.digimon-delete-cookies {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--digimon-muted);
+
+    font: 700 8px/1.3 "Roboto Mono", monospace;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+
+}
+
+
+.digimon-footer-links a i,
+.digimon-delete-cookies i {
+
+    color: var(--accent1);
+
+}
+
+
+.digimon-footer-links a:hover,
+.digimon-delete-cookies:hover {
+
+    color: var(--accent1);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .digimon-forums-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .digimon-index {
+
+        padding: 15px 0 30px;
+
+    }
+
+
+    .digimon-index-tools {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .digimon-tools-left {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .digimon-mark-read {
+
+        justify-content: center;
+
+    }
+
+
+    .digimon-category-header {
+
+        padding: 17px;
+
+    }
+
+
+    .digimon-category-title h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .digimon-category-status {
+
+        display: none;
+
+    }
+
+
+    .digimon-forums-grid {
+
+        padding: 15px;
+
+        gap: 15px;
+
+    }
+
+
+    .digimon-forum-name a.forumtitle {
+
+        font-size: 15px;
+
+    }
+
+
+    .digimon-forum-bottom {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .digimon-forum-stat {
+
+        width: 50%;
+
+        min-height: 50px;
+
+    }
+
+
+    .digimon-forum-lastpost {
+
+        width: 100%;
+
+        flex-basis: 100%;
+
+    }
+
+
+    .digimon-index-footer {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .digimon-footer-links {
+
+        justify-content: center;
+
+    }
+
+
+    .digimon-delete-cookies {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .digimon-category-icon {
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+
+    }
+
+
+    .digimon-category-title h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .digimon-category-label {
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .digimon-forum-heading {
+
+        padding: 13px;
+
+    }
+
+
+    .digimon-forum-description .rfordesc {
+
+        padding: 65px 15px 15px;
+
+        font-size: 10px;
+
+    }
+
+
+    .digimon-forum-description .rforlinks {
+
+        padding: 0 15px 15px;
+
+    }
+
+}
