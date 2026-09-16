@@ -4821,6 +4821,29 @@ button[title="Bondad"] {
 }
 
 /* ---------------------------------------------------------
+   STAFF — POSICIÓN ALTERNADA
+   --------------------------------------------------------- */
+
+#rift-staff-grid > a:nth-child(odd) {
+    transform: translateX(-12px);
+}
+
+#rift-staff-grid > a:nth-child(even) {
+    transform: translateX(12px);
+}
+
+
+/* Hover */
+
+#rift-staff-grid > a:nth-child(odd):hover {
+    transform: translateX(-12px) scale(1.04);
+}
+
+#rift-staff-grid > a:nth-child(even):hover {
+    transform: translateX(12px) scale(1.04);
+}
+
+/* ---------------------------------------------------------
    DISCORD / TUMBLR
    --------------------------------------------------------- */
 
