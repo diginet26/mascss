@@ -4563,10 +4563,6 @@ button[title="Bondad"] {
 }
 
 /* ---------------------------------------------------------
-   STAFF — FICHAS DIGITALES
-   --------------------------------------------------------- */
-
-/* ---------------------------------------------------------
    STAFF — CRISTALES DE DATOS
    --------------------------------------------------------- */
 
@@ -4709,6 +4705,63 @@ button[title="Bondad"] {
 
 #rift-staff-grid > a:hover::before {
     transform: translateX(120%);
+}
+
+/* ---------------------------------------------------------
+   STAFF — IDENTIFICACIÓN DIGITAL
+   --------------------------------------------------------- */
+
+#rift-staff-grid > a {
+    overflow: hidden;
+}
+
+/* Pequeños indicadores en las esquinas */
+
+#rift-staff-grid > a {
+    --staff-mark: var(--rift-a1);
+}
+
+#rift-staff-grid > a:nth-child(even) {
+    --staff-mark: var(--rift-a2);
+}
+
+
+/* Indicador de estado */
+
+#rift-staff-grid > a::after {
+    content: "";
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    right: 7px;
+    bottom: 7px;
+
+    background: var(--staff-mark);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 6px var(--staff-mark),
+        0 0 12px var(--staff-mark);
+
+    z-index: 4;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* Estado activo */
+
+#rift-staff-grid > a:hover::after {
+    transform: scale(1.5);
+
+    box-shadow:
+        0 0 7px var(--staff-mark),
+        0 0 16px var(--staff-mark);
 }
 
 /* ---------------------------------------------------------
