@@ -5835,19 +5835,26 @@ blockquote blockquote {
     align-items: center;
     justify-content: center;
 
-    background: #15191d;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(77,184,255,.07) 0%,
+            transparent 25%,
+            transparent 75%,
+            rgba(167,139,250,.06) 100%
+        ),
+        #15191d;
 
     border: 1px solid var(--rift-a1);
 
     box-sizing: border-box;
 
     box-shadow:
-        0 0 12px rgba(77,184,255,.12),
-        inset 0 0 18px rgba(77,184,255,.06);
+        inset 0 0 18px rgba(77,184,255,.08),
+        0 0 10px rgba(77,184,255,.10);
 
     transition: transform .5s cubic-bezier(.2,.8,.2,1);
 }
-
 
 /* ---------------------------------------------------------
    TÍTULO
