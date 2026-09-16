@@ -6009,3 +6009,7 @@ blockquote blockquote {
 .rift-news-prototype .rift-news-text {
     z-index:10;
 }
+
+.rift-news-prototype .rift-news-plate {
+    background:red !important;
+}
