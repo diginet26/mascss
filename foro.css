@@ -4780,41 +4780,44 @@ button[title="Bondad"] {
 
 /* Indicador de estado */
 
+/* ---------------------------------------------------------
+   STAFF — MARCADOR DE IDENTIFICACIÓN
+   --------------------------------------------------------- */
+
 #rift-staff-grid > a::after {
     content: "";
 
     position: absolute;
 
-    width: 6px;
-    height: 6px;
+    right: 6px;
+    bottom: 6px;
 
-    right: 7px;
-    bottom: 7px;
+    width: 14px;
+    height: 14px;
 
-    background: var(--staff-mark);
+    border-right: 2px solid var(--staff-mark);
+    border-bottom: 2px solid var(--staff-mark);
 
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 6px var(--staff-mark),
-        0 0 12px var(--staff-mark);
+    opacity: .65;
 
     z-index: 4;
 
     transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+        width .3s ease,
+        height .3s ease,
+        opacity .3s ease,
+        filter .3s ease;
 }
 
 
-/* Estado activo */
-
 #rift-staff-grid > a:hover::after {
-    transform: scale(1.5);
+    width: 20px;
+    height: 20px;
 
-    box-shadow:
-        0 0 7px var(--staff-mark),
-        0 0 16px var(--staff-mark);
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 5px var(--staff-mark));
 }
 
 /* ---------------------------------------------------------
