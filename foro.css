@@ -5857,6 +5857,49 @@ blockquote blockquote {
 }
 
 /* ---------------------------------------------------------
+   DETALLES TECNOLÓGICOS
+   --------------------------------------------------------- */
+
+.rift-news-prototype .rift-news-plate::before {
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    left: 10px;
+
+    width: 38%;
+    height: 1px;
+
+    background: var(--rift-a1);
+
+    opacity: .7;
+
+    box-shadow:
+        0 0 6px var(--rift-a1);
+}
+
+
+.rift-news-prototype .rift-news-plate::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 8px;
+    right: 10px;
+
+    width: 28%;
+    height: 1px;
+
+    background: var(--rift-a2);
+
+    opacity: .65;
+
+    box-shadow:
+        0 0 6px var(--rift-a2);
+}
+
+/* ---------------------------------------------------------
    TÍTULO
    --------------------------------------------------------- */
 
