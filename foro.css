@@ -4553,17 +4553,12 @@ button[title="Bondad"] {
    --------------------------------------------------------- */
 
 #rift-staff-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    background:
-        linear-gradient(
-            145deg,
-            var(--rift-panel-alt),
-            var(--rift-deep)
-        );
-    border: 1px solid var(--rift-border);
-    padding: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
     box-sizing: border-box;
 }
 
@@ -4576,7 +4571,6 @@ button[title="Bondad"] {
     text-decoration:none;
     border:1px solid var(--rift-border);
     background:var(--rift-deep);
-    /*border-radius:50%;*/
     overflow:hidden;
     transition:
         transform .15s ease,
