@@ -4435,6 +4435,7 @@ button[title="Bondad"] {
     align-items: center;
     justify-content: flex-start;
     gap: 50px;
+    flex-wrap: wrap;
     margin-top: 14px;
     padding: 10px 0;
     box-sizing: border-box;
