@@ -5800,25 +5800,45 @@ blockquote blockquote {
 
 
 /* ---------------------------------------------------------
-   TEXTO DE LA NOTICIA
+   INTERIOR - TEXTO DE LA NOTICIA
    --------------------------------------------------------- */
 
 .rift-news-prototype .rift-news-text {
     position: absolute;
 
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    inset: 0;
 
     z-index: 1;
 
-    color: var(--rift-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px 28px;
+
+    box-sizing: border-box;
+
+    color: var(--rift-text);
 
     font-family: 'Oxanium', sans-serif;
-    font-size: 10px;
-    line-height: 1.4;
-}
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
 
+    text-align: center;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(77,184,255,.035) 0px,
+            rgba(77,184,255,.035) 1px,
+            transparent 1px,
+            transparent 9px
+        );
+
+    text-shadow:
+        0 0 5px rgba(77,184,255,.18);
+}
 
 /* ---------------------------------------------------------
    PLACA DE COBERTURA
