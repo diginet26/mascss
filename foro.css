@@ -5806,34 +5806,26 @@ blockquote blockquote {
 .rift-news-prototype .rift-news-text {
     position: absolute !important;
 
-    top: 50% !important;
-    left: 18px !important;
-    right: 18px !important;
-
-    width: auto !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
+    inset: 0 !important;
 
     z-index: 1 !important;
 
-    margin: 0 !important;
-    padding: 18px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
     box-sizing: border-box;
 
-    transform: translateY(-50%) !important;
+    padding: 10px 24px !important;
 
-    overflow: visible !important;
-
-    display: block !important;
+    margin: 0 !important;
 
     color: var(--rift-text);
 
     font-family: 'Oxanium', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.45;
 
     text-align: center;
 
@@ -5849,6 +5841,7 @@ blockquote blockquote {
     text-shadow:
         0 0 5px rgba(77,184,255,.25);
 }
+
 /* ---------------------------------------------------------
    PLACA DE COBERTURA
    --------------------------------------------------------- */
