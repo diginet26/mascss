@@ -5806,44 +5806,32 @@ blockquote blockquote {
 .rift-news-prototype .rift-news-text {
     position: absolute !important;
 
-    top: 0 !important;
-    left: 0 !important;
+    top: 50% !important;
+    left: 18px !important;
+    right: 18px !important;
 
-    width: 100% !important;
-    height: 115px !important;
-
-    z-index: 1 !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    box-sizing: border-box !important;
+    z-index: 2 !important;
 
     margin: 0 !important;
-    padding: 10px 24px !important;
+    padding: 0 !important;
+
+    transform: translateY(-50%) !important;
 
     color: var(--rift-text);
 
     font-family: 'Oxanium', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    line-height: 1.45;
+    line-height: 1.4;
 
     text-align: center;
 
-    background:
-        repeating-linear-gradient(
-            -45deg,
-            rgba(77,184,255,.10) 0px,
-            rgba(77,184,255,.10) 1px,
-            transparent 1px,
-            transparent 8px
-        );
+    background: none !important;
 
     text-shadow:
         0 0 5px rgba(77,184,255,.25);
 }
+
 /* ---------------------------------------------------------
    PLACA DE COBERTURA
    --------------------------------------------------------- */
@@ -5859,15 +5847,15 @@ blockquote blockquote {
     align-items: center;
     justify-content: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(77,184,255,.07) 0%,
-            transparent 25%,
-            transparent 75%,
-            rgba(167,139,250,.06) 100%
-        ),
-        #15191d;
+background:
+    repeating-linear-gradient(
+        -45deg,
+        rgba(77,184,255,.055) 0px,
+        rgba(77,184,255,.055) 1px,
+        transparent 1px,
+        transparent 9px
+    ),
+    #15191d;
 
     border: 1px solid var(--rift-a1);
 
