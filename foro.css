@@ -4566,15 +4566,18 @@ button[title="Bondad"] {
    STAFF — FICHAS DIGITALES
    --------------------------------------------------------- */
 
+/* ---------------------------------------------------------
+   STAFF — CRISTALES DE DATOS
+   --------------------------------------------------------- */
+
 #rift-staff-grid > a {
     width: 100px;
     height: 100px;
 
     position: relative;
-
     display: block;
 
-    padding: 4px;
+    padding: 5px;
 
     box-sizing: border-box;
 
@@ -4582,22 +4585,32 @@ button[title="Bondad"] {
 
     background:
         linear-gradient(
-            145deg,
-            rgba(77,184,255,.12),
-            rgba(0,0,0,.45)
+            135deg,
+            rgba(255,255,255,.06),
+            rgba(0,0,0,.30)
         );
 
-    border: 1px solid var(--rift-border);
+    border: 1px solid rgba(255,255,255,.12);
+
+    clip-path: polygon(
+        10px 0%,
+        calc(100% - 10px) 0%,
+        100% 10px,
+        100% calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        10px 100%,
+        0% calc(100% - 10px),
+        0% 10px
+    );
 
     box-shadow:
-        inset 0 0 12px rgba(0,0,0,.45),
-        0 0 0 1px rgba(77,184,255,.04);
+        inset 0 0 18px rgba(0,0,0,.35);
 
     transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease,
-        background .25s ease;
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
 }
 
 
@@ -4613,65 +4626,55 @@ button[title="Bondad"] {
 
     object-fit: cover;
 
-    border: 1px solid rgba(255,255,255,.08);
-
     box-sizing: border-box;
 
     filter:
         saturate(.85)
         brightness(.88);
 
+    clip-path: polygon(
+        7px 0%,
+        calc(100% - 7px) 0%,
+        100% 7px,
+        100% calc(100% - 7px),
+        calc(100% - 7px) 100%,
+        7px 100%,
+        0% calc(100% - 7px),
+        0% 7px
+    );
+
     transition:
-        filter .25s ease,
-        transform .25s ease;
+        filter .3s ease,
+        transform .3s ease;
 }
 
 
 /* ---------------------------------------------------------
-   LÍNEA DIGITAL SUPERIOR
+   CRISTAL / REFLEJO
    --------------------------------------------------------- */
 
 #rift-staff-grid > a::before {
     content: "";
 
     position: absolute;
+    inset: 5px;
 
-    top: -1px;
-    left: 8px;
+    background:
+        linear-gradient(
+            120deg,
+            transparent 35%,
+            rgba(255,255,255,.10) 50%,
+            transparent 65%
+        );
 
-    width: 35px;
-    height: 2px;
+    transform: translateX(-120%);
 
-    background: var(--rift-a1);
+    pointer-events: none;
 
-    box-shadow:
-        0 0 8px var(--rift-a1);
+    z-index: 2;
 
-    z-index: 3;
-}
-
-
-/* ---------------------------------------------------------
-   LÍNEA DIGITAL INFERIOR
-   --------------------------------------------------------- */
-
-#rift-staff-grid > a::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: -1px;
-    right: 8px;
-
-    width: 28px;
-    height: 2px;
-
-    background: var(--rift-a2);
-
-    box-shadow:
-        0 0 8px var(--rift-a2);
-
-    z-index: 3;
+    transition:
+        transform .6s ease;
 }
 
 
@@ -4680,29 +4683,32 @@ button[title="Bondad"] {
    --------------------------------------------------------- */
 
 #rift-staff-grid > a:hover {
-    transform: translateY(-4px);
+    transform: scale(1.04);
 
-    border-color: var(--rift-a1);
+    border-color: var(--rift-a2);
 
     background:
         linear-gradient(
-            145deg,
-            rgba(77,184,255,.20),
-            rgba(0,0,0,.35)
+            135deg,
+            rgba(167,139,250,.12),
+            rgba(0,0,0,.30)
         );
 
     box-shadow:
-        inset 0 0 16px rgba(0,0,0,.45),
-        0 0 14px rgba(77,184,255,.20);
+        inset 0 0 20px rgba(0,0,0,.40),
+        0 0 18px rgba(167,139,250,.20);
 }
-
 
 #rift-staff-grid > a:hover img {
     filter:
-        saturate(1.05)
+        saturate(1.1)
         brightness(1.05);
 
-    transform: scale(.96);
+    transform: scale(1.02);
+}
+
+#rift-staff-grid > a:hover::before {
+    transform: translateX(120%);
 }
 
 /* ---------------------------------------------------------
