@@ -7368,3 +7368,37 @@ background:
     }
 
 }
+/* =========================================================
+   ETIQUETAS DIGITALES DE LAS DESCRIPCIONES
+   ========================================================= */
+
+.digimon-description-label {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 8px;
+
+    border-left: 3px solid var(--accent1);
+
+    color: var(--accent1);
+
+    font: 700 8px/1.2 "Roboto Mono", monospace;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+.rdoubleforum .digimon-description-label {
+
+    border-left-color: var(--accent2);
+
+    color: var(--accent2);
+
+}
