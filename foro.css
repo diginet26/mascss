@@ -5947,43 +5947,92 @@ blockquote blockquote {
 @media (max-width: 500px) {.dice {width: calc(100% - 30px);}}
 
 /* =========================================================
-   DIGITAL RIFT — SCEDITOR TOOLBAR
+   DIGITAL RIFT — SCEDITOR
    ========================================================= */
 
-.sceditor-toolbar {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 7px 9px;
-
-    background:
-        linear-gradient(90deg, rgba(22,119,200,.08), transparent 30%),
-        linear-gradient(180deg, #111A24, #0B1118);
-
-    border: 1px solid #1677C8;
-    border-bottom: 2px solid #35D8FF;
-
+.sceditor-container {
+    border: 1px solid #1677C8 !important;
+    background: #0B1118 !important;
     box-shadow:
-        inset 0 0 18px rgba(22,119,200,.12),
-        0 0 12px rgba(53,216,255,.08);
-
-    position: relative;
+        0 0 0 1px rgba(53,216,255,.08),
+        0 0 20px rgba(22,119,200,.12),
+        inset 0 0 30px rgba(22,119,200,.05) !important;
 }
 
 
-/* Línea digital superior */
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.sceditor-toolbar {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    padding: 6px 7px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22,119,200,.12),
+            rgba(11,17,24,.98) 35%,
+            rgba(11,17,24,.98) 65%,
+            rgba(53,216,255,.06)
+        ) !important;
+
+    border: 0 !important;
+    border-bottom: 1px solid #1677C8 !important;
+
+    box-shadow:
+        inset 0 -1px 0 rgba(53,216,255,.35),
+        inset 0 0 20px rgba(22,119,200,.08) !important;
+}
+
+
+/* Línea de energía */
+
 .sceditor-toolbar:before {
     content: "";
+
     position: absolute;
-    top: -1px;
-    left: 15px;
-    right: 15px;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
     height: 1px;
 
     background: #35D8FF;
-    box-shadow: 0 0 8px rgba(53,216,255,.8);
 
-    opacity: .7;
+    box-shadow:
+        0 0 8px rgba(53,216,255,.8);
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   GRUPOS
+   ========================================================= */
+
+.sceditor-group {
+    display: flex !important;
+    align-items: center;
+
+    gap: 3px;
+
+    padding-right: 6px !important;
+    margin-right: 4px !important;
+
+    border-right: 1px solid rgba(53,216,255,.18) !important;
+}
+
+
+.sceditor-group:last-child {
+    border-right: 0 !important;
 }
 
 
@@ -5992,26 +6041,47 @@ blockquote blockquote {
    ========================================================= */
 
 .sceditor-toolbar .sceditor-button {
-    width: 28px;
-    height: 28px;
+    position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 30px !important;
+    height: 30px !important;
 
-    background: #0B1118;
-    border: 1px solid rgba(22,119,200,.55);
+    margin: 0 !important;
 
-    border-radius: 2px;
+    background: #0B1118 !important;
+
+    border: 1px solid rgba(22,119,200,.65) !important;
+
+    border-radius: 2px !important;
 
     box-shadow:
         inset 0 0 8px rgba(22,119,200,.08);
 
     transition:
-        background .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease,
-        transform .2s ease;
+        background .15s ease,
+        border-color .15s ease,
+        box-shadow .15s ease,
+        transform .15s ease;
+}
+
+
+/* Esquina tecnológica */
+
+.sceditor-toolbar .sceditor-button:before {
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+    left: -1px;
+
+    width: 5px;
+    height: 5px;
+
+    border-top: 1px solid #35D8FF;
+    border-left: 1px solid #35D8FF;
+
+    opacity: .8;
 }
 
 
@@ -6020,14 +6090,30 @@ blockquote blockquote {
    ========================================================= */
 
 .sceditor-toolbar .sceditor-button:hover {
-    background: rgba(22,119,200,.22);
-    border-color: #35D8FF;
+    background: #102A3E !important;
+
+    border-color: #35D8FF !important;
 
     box-shadow:
-        inset 0 0 10px rgba(53,216,255,.15),
-        0 0 8px rgba(53,216,255,.25);
+        inset 0 0 12px rgba(53,216,255,.12),
+        0 0 8px rgba(53,216,255,.18) !important;
 
     transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACTIVO
+   ========================================================= */
+
+.sceditor-toolbar .sceditor-button.active {
+    background: #1677C8 !important;
+
+    border-color: #35D8FF !important;
+
+    box-shadow:
+        inset 0 0 12px rgba(53,216,255,.25),
+        0 0 10px rgba(53,216,255,.25) !important;
 }
 
 
@@ -6036,15 +6122,21 @@ blockquote blockquote {
    ========================================================= */
 
 .sceditor-toolbar .sceditor-button div {
-    opacity: .85;
+    opacity: .9;
+
     filter:
         brightness(0)
         invert(1);
+
+    transition:
+        filter .15s ease,
+        opacity .15s ease;
 }
 
 
 .sceditor-toolbar .sceditor-button:hover div {
     opacity: 1;
+
     filter:
         brightness(0)
         invert(1)
@@ -6053,55 +6145,89 @@ blockquote blockquote {
 
 
 /* =========================================================
-   BOTÓN ACTIVO
+   BOTONES ESPECIALES
    ========================================================= */
 
-.sceditor-toolbar .sceditor-button.active,
-.sceditor-toolbar .sceditor-button.active:hover {
-    background: #1677C8;
-    border-color: #35D8FF;
+.sceditor-button-mention div,
+.sceditor-button-avatarswap div {
+    filter:
+        brightness(0)
+        invert(1)
+        drop-shadow(0 0 2px #35D8FF) !important;
+}
+
+
+/* =========================================================
+   DROPDOWNS
+   ========================================================= */
+
+.sceditor-dropdown {
+    background: #0B1118 !important;
+
+    border: 1px solid #1677C8 !important;
 
     box-shadow:
-        inset 0 0 10px rgba(53,216,255,.3),
-        0 0 10px rgba(53,216,255,.3);
+        0 0 15px rgba(22,119,200,.25),
+        inset 0 0 15px rgba(22,119,200,.08) !important;
+
+    color: #DDF8FF !important;
+}
+
+
+.sceditor-dropdown label {
+    color: #DDF8FF !important;
 }
 
 
 /* =========================================================
-   SEPARADORES
+   INPUTS DE LOS DROPDOWNS
    ========================================================= */
 
-.sceditor-toolbar .sceditor-group {
-    display: flex;
-    align-items: center;
-    gap: 3px;
+.sceditor-dropdown input,
+.sceditor-dropdown select,
+.sceditor-dropdown textarea {
+    background: #111A24 !important;
 
-    margin-right: 6px;
-    padding-right: 7px;
+    border: 1px solid #1677C8 !important;
 
-    border-right: 1px solid rgba(53,216,255,.25);
-}
-
-
-.sceditor-toolbar .sceditor-group:last-child {
-    border-right: 0;
+    color: #DDF8FF !important;
 }
 
 
 /* =========================================================
-   SELECTORES / FUENTE / TAMAÑO
+   EDITOR
    ========================================================= */
 
-.sceditor-toolbar .sceditor-button,
-.sceditor-toolbar .sceditor-dropdown {
-    color: #DDF8FF;
+.sceditor-container iframe,
+.sceditor-container textarea {
+    background: #0B1118 !important;
+
+    color: #E7FAFF !important;
+
+    font-family: "IBM Plex Mono", monospace !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.7 !important;
 }
 
 
 /* =========================================================
-   TOOLTIP
+   SCROLLBAR
    ========================================================= */
 
-.sceditor-button:hover:after {
-    color: #DDF8FF;
+.sceditor-container ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sceditor-container ::-webkit-scrollbar-track {
+    background: #0B1118;
+}
+
+.sceditor-container ::-webkit-scrollbar-thumb {
+    background: #1677C8;
+}
+
+.sceditor-container ::-webkit-scrollbar-thumb:hover {
+    background: #35D8FF;
 }
