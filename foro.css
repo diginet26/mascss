@@ -2352,7 +2352,7 @@ button#theme-toggler2:before {
     flex: 1;
     min-width: 30px;
     margin: 0 12px 0 12px;
-    background: linear-gradient(90deg, transparent, var(--emblema1), var(--digimon-cyan), var(--emblema1),transparent);
+    background: linear-gradient(90deg, transparent, var(--linkc3), var(--linkc1), var(--linkc3),transparent);
     opacity: .8;
     box-shadow: 0 0 6px rgba(30, 210, 255, .35);}
 
@@ -4372,7 +4372,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     font: 500 120px/100% "Bungee", sans-serif;
     letter-spacing: -7px;
     color: transparent;
-    background: linear-gradient(45deg, transparent, var(--accent1), var(--accent2), transparent);
+    background: linear-gradient(45deg, transparent, var(--accent1), var(--emblema2), transparent);
     background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
