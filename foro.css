@@ -5487,9 +5487,9 @@ blockquote blockquote {
     padding: 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--body-background),var(--emblema2));
-    border: 1px solid var(--dice-line);
-    color: var(--dice-text);
+    background: linear-gradient(135deg, var(--body-background),var(--body-background));
+    border: 1px solid var(--body-background);
+    color: var(--colortextod1);
     font-family: "Oxanium", sans-serif;
     font-size: 11px;
     line-height: 1.7;
