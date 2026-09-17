@@ -2064,10 +2064,8 @@ button#theme-toggler2:before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     min-height: 38px;
     padding: 8px 0;
-
     border-bottom: 1px solid var(--theme-border);
 }
 
@@ -2085,7 +2083,6 @@ button#theme-toggler2:before {
     font-weight: 700;
 }
 
-
 /* =========================================================
    HP
    ========================================================= */
@@ -2093,7 +2090,6 @@ button#theme-toggler2:before {
 #dg-profile .dg-profile-hp {
     margin-top: 18px;
     padding-top: 15px;
-
     border-top: 1px solid var(--theme-border);
 }
 
@@ -2102,7 +2098,6 @@ button#theme-toggler2:before {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     margin-bottom: 10px;
 }
 
@@ -2119,39 +2114,28 @@ button#theme-toggler2:before {
     font-weight: 700;
 }
 
-
 /* BARRA DE HP */
-
 #dg-profile .dg-profile-hp-bar {
     width: calc(100% - 20px);
     height: 10px;
-
     margin: 0 10px 18px;
-
     background: var(--theme-panel-deep);
     border: 1px solid var(--theme-border);
-
     border-radius: 999px;
-
     overflow: hidden;
 }
 
 #dg-profile .dg-profile-hp-fill {
     width: 100%;
     height: 100%;
-
     background: var(--profile-group-color);
-
     border-radius: 999px;
-
-    box-shadow:
-        0 0 10px var(--profile-glow);
+    box-shadow: 0 0 10px var(--profile-glow);
 }
 
 /* =========================================================
    DIGIMON NAVBAR — FASE 1
    ========================================================= */
-
 :root {
     --digimon-blue-dark: #06152b;
     --digimon-blue: #0878d1;
@@ -2165,7 +2149,6 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    BARRA PRINCIPAL
    --------------------------------------------------------- */
-
 #digimon-navbar {
     position: fixed;
     z-index: 9999999;
@@ -2176,17 +2159,13 @@ button#theme-toggler2:before {
     border-right: none;
     border-left: none;
     border-top: none;
-    box-shadow:
-        0 0 0 1px rgba(0,0,0,.25),
-        0 0 25px rgba(0,174,255,.18),
-        inset 0 0 25px rgba(0,0,0,.35);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.25), 0 0 25px rgba(0,174,255,.18), inset 0 0 25px rgba(0,0,0,.35);
     overflow: visible;
 }
 
 /* ---------------------------------------------------------
    CIRCUITOS DIGITALES
    --------------------------------------------------------- */
-
 #digimon-navbar::before {
     content: "";
     position: absolute;
@@ -2194,27 +2173,15 @@ button#theme-toggler2:before {
     pointer-events: none;
     opacity: .16;
     background-image:
-        linear-gradient(
-            90deg,
-            transparent 48%,
-            var(--emblema1) 49%,
-            transparent 50%
-        ),
-        linear-gradient(
-            180deg,
-            transparent 48%,
-            var(--emblema2) 49%,
-            transparent 50%
-        );
+        linear-gradient(90deg, transparent 48%, var(--emblema1) 49%, transparent 50%),
+        linear-gradient(180deg, transparent 48%, var(--emblema2) 49%, transparent 50%);
     background-size: 32px 32px, 32px 32px;
     z-index: 0;
 }
 
-
 /* ---------------------------------------------------------
    ESTRUCTURA DE LAS DOS BARRAS
    --------------------------------------------------------- */
-
 .digimon-navbar-main, .digimon-navbar-sub {
     position: relative;
     z-index: 1;
@@ -2236,15 +2203,9 @@ button#theme-toggler2:before {
     justify-content: space-between;
 }
 
-
-/* ---------------------------------------------------------
-   AVATAR - NAVBAR - SWITCHEROO
-   --------------------------------------------------------- */
-
 /* ---------------------------------------------------------
    AVATAR
    --------------------------------------------------------- */
-
 .digimon-navbar-account {
     flex: 0 0 62px;
     display: flex;
@@ -2265,16 +2226,13 @@ button#theme-toggler2:before {
 .digimon-avatar-frame {
     width: 60px;
     height: 60px;
-    /*padding: 3px;*/
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--emblema2);
     border: 2px solid var(--emblema1);
     transform: translateY(12px) rotate(45deg);
-    box-shadow:
-        0 0 8px rgba(25,220,255,.5),
-        inset 0 0 8px rgba(0,0,0,.7);
+    box-shadow: 0 0 8px rgba(25,220,255,.5), inset 0 0 8px rgba(0,0,0,.7);
     overflow: hidden;
 }
 
@@ -2284,62 +2242,7 @@ button#theme-toggler2:before {
     height: 55px;
     object-fit: cover;
     display: block;
-    /*transform: rotate(-270deg);*/
 }
-/*.digimon-navbar-account {
-   /* position: relative;
-    width: 62px;
-    height: 70px;
-    flex: 0 0 62px;*/
-     /* position: absolute !important;*/
-    /* width: 62px; */
-    /* height: 70px; */
-    /* flex: 0 0 62px; */
-    /*margin: 85px 0px 0px 15px;
-}*/
-
-/*#digimon-user-avatar {
-    position: absolute;
-    /*top: 8px;
-    left: 50%;*/
-  /*  transform: translateX(-50%);
-    top: -62px;
-    left: 70px;
-    /*width: 60px;
-    height: 60px;*/
-   /* width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.digimon-avatar-frame {
-    width: 200px;
-    height: 200px;
-    padding: 4px;
-    background: var(--emblema2);
-    clip-path: polygon(
-        50% 0%,
-        100% 50%,
-        50% 100%,
-        0% 50%
-    );
-    overflow: hidden;
-}
-
-.digimon-avatar-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    clip-path: polygon(
-        50% 0%,
-        100% 50%,
-        50% 100%,
-        0% 50%
-    );
-}*/
 
 /* ---------------------------------------------------------
    SEPARADOR DIGITAL
@@ -2354,7 +2257,8 @@ button#theme-toggler2:before {
     margin: 0 12px 0 12px;
     background: linear-gradient(90deg, transparent, var(--linkc3), var(--linkc1), var(--linkc3),transparent);
     opacity: .8;
-    box-shadow: 0 0 6px rgba(30, 210, 255, .35);}
+    box-shadow: 0 0 6px rgba(30, 210, 255, .35);
+}
 
 /* ---------------------------------------------------------
    MENÚ PRINCIPAL
@@ -2465,7 +2369,6 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    CONTROLES DE LA SEGUNDA BARRA
    --------------------------------------------------------- */
-
 .digimon-sub-controls {
     display: flex;
     align-items: center;
@@ -2482,7 +2385,6 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    MENÚS DESPLEGABLES
    --------------------------------------------------------- */
-
 .digimon-dropdown-wrap {position: relative;}
 
 .digimon-dropdown {
@@ -2522,7 +2424,7 @@ button#theme-toggler2:before {
 .digimon-theme-dropdown, .digimon-size-dropdown {flex-direction: column;}
 
 .digimon-variant-dropdown {
-    width: 126px;
+    width: 150px;
     min-width: 126px;
 }
 
@@ -2536,7 +2438,6 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    MIGAS DE PAN
    --------------------------------------------------------- */
-
 .digimon-breadcrumb-slot {
     min-width: 0;
     overflow: hidden;
@@ -2556,7 +2457,6 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    SWITCHEROO
    --------------------------------------------------------- */
-
 #switcheroo {
     display: none !important;
     position: fixed !important;
@@ -2564,184 +2464,117 @@ button#theme-toggler2:before {
     top: 106px !important;
     z-index: 10000 !important;
     padding: 10px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(8, 22, 40, .98),
-            rgba(4, 12, 25, .98)
-        );
+    background: linear-gradient(145deg, rgba(8, 22, 40, .98), rgba(4, 12, 25, .98));
     border: 1px solid var(--emblema2);
-    box-shadow:
-        0 0 12px rgba(30, 210, 255, .25),
-        0 10px 30px rgba(0, 0, 0, .6),
-        inset 0 0 15px rgba(0, 0, 0, .45);
+    box-shadow:0 0 12px rgba(30, 210, 255, .25), 0 10px 30px rgba(0, 0, 0, .6), inset 0 0 15px rgba(0, 0, 0, .45);
     box-sizing: border-box;
 }
 
-#switcheroo.digimon-switch-open {
-    display: block !important;
-}
+#switcheroo.digimon-switch-open {display: block !important;}
 /* ---------------------------------------------------------
    SWITCHEROO — TOOLTIP
    --------------------------------------------------------- */
-
 #switcheroo .switcheroo__popper {
     position: absolute !important;
-
     left: 155% !important;
     top: 50% !important;
-
     width: max-content !important;
-
     padding: 6px 10px !important;
-
     background: var(--theme-panel-deep) !important;
     border: 1px solid var(--emblema2) !important;
-
     color: var(--theme-text) !important;
-
     font-size: 11px !important;
     line-height: 1.2 !important;
     white-space: nowrap !important;
-
     opacity: 0 !important;
     pointer-events: none !important;
-
     transform: translateY(-50%) !important;
-
     z-index: 100001 !important;
 }
 
-#switcheroo .switcheroo__squircle:hover .switcheroo__popper {
-    opacity: 1 !important;
-}
-
+#switcheroo .switcheroo__squircle:hover .switcheroo__popper {opacity: 1 !important;}
 #switcheroo .switcheroo__popper-text {display: block !important;}
 
 /* =========================================================
    SWITCHEROO — CUENTAS
    ========================================================= */
-
 #switcheroo .switcheroo__squircles {
     display: flex;
     flex-direction: column;
     gap: 12px;
-
     margin: 0;
     padding: 10px;
-
     list-style: none;
 }
-
 
 /* ---------------------------------------------------------
    CUENTA / BOTÓN +
    --------------------------------------------------------- */
-#switcheroo .switcheroo__squircle,
-#switcheroo .switcheroo__squircle--button {
+#switcheroo .switcheroo__squircle, #switcheroo .switcheroo__squircle--button {
     position: relative;
-
     width: 70px;
     height: 70px;
-
     flex: 0 0 70px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 0;
     margin: 0;
-
     box-sizing: border-box;
-
     background: var(--theme-panel-deep);
-
     border: 2px solid var(--emblema2);
     border-radius: 8px;
-
     cursor: pointer;
-
-    transition:
-        transform .2s ease,
-        background .2s ease,
-        filter .2s ease;
+    transition: transform .2s ease, background .2s ease, filter .2s ease;
 }
-
-    /*clip-path: polygon(
-        50% 0%,
-        100% 50%,
-        50% 100%,
-        0% 50%
-    );*/
 
 /* ---------------------------------------------------------
    AVATAR DE LA CUENTA
    --------------------------------------------------------- */
-
 #switcheroo .switcheroo__avatar {
     width: 100%;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
 }
 
 #switcheroo .switcheroo__avatar img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
 }
-
 
 /* ---------------------------------------------------------
    CUENTA ACTIVA
    --------------------------------------------------------- */
-
 #switcheroo .switcheroo__squircle.active {
     background: var(--emblema2);
-
-    filter:
-        drop-shadow(0 0 7px var(--emblema2));
+    filter:drop-shadow(0 0 7px var(--emblema2));
 }
-
 
 /* ---------------------------------------------------------
    HOVER
    --------------------------------------------------------- */
-
-#switcheroo .switcheroo__squircle:hover,
-#switcheroo .switcheroo__squircle--button:hover {
+#switcheroo .switcheroo__squircle:hover, #switcheroo .switcheroo__squircle--button:hover {
     transform: scale(1.08);
-
     background: var(--emblema2);
-
-    filter:
-        drop-shadow(0 0 8px var(--emblema2));
+    filter:drop-shadow(0 0 8px var(--emblema2));
 }
-
 
 /* ---------------------------------------------------------
    BOTÓN +
    --------------------------------------------------------- */
-
 #switcheroo .switcheroo__squircle--button {
     color: var(--emblema2);
-
     font-size: 38px;
     font-weight: 300;
     line-height: 1;
 }
 
-#switcheroo .switcheroo__squircle--button:hover {
-    color: var(--theme-panel-deep);
-}
+#switcheroo .switcheroo__squircle--button:hover {color: var(--theme-panel-deep);}
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
@@ -2759,9 +2592,7 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    MÓVIL
    --------------------------------------------------------- */
-
 @media (max-width: 650px) {
-
     .digimon-navbar-main {
       min-height: 58px;
       padding: 5px 7px;
@@ -2784,7 +2615,6 @@ button#theme-toggler2:before {
 /* =========================================================
    THEME TOGGLERS — DIGIMON NAVBAR
    ========================================================= */
-
 button#theme-toggler, button#theme-toggler2 {
     position: relative;
     top: auto;
@@ -2809,18 +2639,16 @@ button#theme-toggler, button#theme-toggler2 {
 button#theme-toggler::before, button#theme-toggler2::before {content: none !important;}
 
 /* Hover */
-
 button#theme-toggler:hover, button#theme-toggler2:hover {
-    background: var(--digimon-blue);
+    background: var(--emblema1);
     color: var(--digimon-yellow);
-    border-color: var(--digimon-cyan);
+    border-color: var(--emblema2);
     box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
 
 /* =========================================================
    NOTIFICACIONES FOROACTIVO
    ========================================================= */
-
 #digimon-notifications-slot {
     position: relative;
     width: 34px;
