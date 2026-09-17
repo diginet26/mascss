@@ -2268,7 +2268,7 @@ button#theme-toggler2:before {
     align-items: center;
     justify-content: center;
     gap: 7px;
-    color: var(--colortextodl);
+    color: var(--colortextodl) !important;
     text-decoration: none;
     border: 1px solid var(--emblema2);
     background: var(--body-background);
