@@ -2650,7 +2650,7 @@ button[title="Destino"] {
 
 .digimon-dropdown button {
     border: 1px solid var(--theme-border);
-    background: var(--theme-panel-deep);
+    /*background: var(--theme-panel-deep);*/
     color: var(--theme-text);
     min-height: 28px;
     padding: 4px 8px;
