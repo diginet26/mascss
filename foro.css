@@ -3040,8 +3040,8 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     --rift-a1: var(--accent1);
     --rift-a2: var(--accent2);
     --rift-a3: var(--accent3);
-  /*  width: 100vw;
-    max-width: none;*/
+  / width: 100vw;
+    max-width: none;
     margin: 0;
     color: var(--rift-text);
     font-family: 'Oxanium', sans-serif;
