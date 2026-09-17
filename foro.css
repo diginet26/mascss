@@ -2675,6 +2675,7 @@ button[title="Destino"] {
     height: 26px;
     padding: 0;
     font-size: 15px;
+    background-color: transparent;
 }
 
 /* ---------------------------------------------------------
