@@ -3649,33 +3649,17 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 
 /*RESPONSIVE*/
 @media (max-width: 700px) {.rift-news-item {flex-basis: 100%;}}
-
 @media (max-width:900px) {
-
     #rift-board-body {
         grid-template-columns:minmax(0,1fr) 190px;
-        grid-template-areas:
-            "current recent"
-            "staff recent";
+        grid-template-areas: "current recent" "staff recent";
     }
-
-    #rift-recent {
-        min-height:0;
-    }
-
-    #rift-recent-content {
-        height:500px;
-    }
-
+    #rift-recent {min-height:0;}
+    #rift-recent-content {height:500px;}
 }
-
 @media (max-width:650px) {
-
     #rift-board {margin:20px auto;}
-    #rift-board-body {
-        grid-template-columns:1fr;
-        grid-template-areas: "current" "staff" "recent";
-    }
+    #rift-board-body {grid-template-columns:1fr; grid-template-areas: "current" "staff" "recent";}
     #rift-current, #rift-staff, #rift-recent {width:100%;}
     #rift-current-content {height:320px;}
     #rift-quick-links {
@@ -3690,9 +3674,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     #rift-recent {min-height:0;}
     #rift-recent-content {height:300px;}
 }
-
 @media (max-width:420px) {
-
     #rift-quick-links {grid-template-columns:repeat(4,minmax(0,1fr));}
     #rift-staff-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
     .rift-info-box {height:100px;}
@@ -3704,13 +3686,11 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 }
 /* PRUEBA — permitir que el tablón sobresalga de su contenedor */
 #rift-board {z-index: 99999 !important;}
-
 #rift-board-body, #rift-board-top {z-index: 99999 !important;}
 
 /* =========================================================
    HEADER DIGITAL RIFT
    ========================================================= */
-
 #rift-header {
     width: calc(100% + 24px);
     height: 520px;
@@ -3741,7 +3721,6 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* COLOR AL PASAR EL RATÓN */
 #rift-header:hover .rift-header-bg {filter: grayscale(0.3);}
 
-
 /* DEGRADADO 1 */
 #rift-header .rift-header-overlay-a1 {
     position: absolute;
@@ -3750,7 +3729,6 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     mix-blend-mode: color;
     pointer-events: none;
 }
-
 
 /* DEGRADADO 2 */
 #rift-header .rift-header-overlay-a2 {
@@ -3789,18 +3767,11 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     filter: contrast(1.2) blur(0.8px);
 }
 
-/* ---------------------------------------------------------
-   EVITAR SCROLL HORIZONTAL DEL TABLÓN
-   --------------------------------------------------------- */
-
-#rift-board {max-width: 100%;}
-
-
+#rift-board {max-width: 100%;}/*EVITAR SCROLL HORIZONTAL DEL TABLÓN*/
 
 /* =========================================================
    DIGIMON SPOILER
    ========================================================= */
-
 dl.codebox.spoiler {
     position: relative;
     margin: 18px 0;
@@ -3844,45 +3815,29 @@ dl.codebox.spoiler .spoiler_title {
 /* =========================================================
    CAMBIAR "SPOILER:" POR "DIGITAL TRANSMISSION"
    ========================================================= */
-
 dl.codebox.spoiler .spoiler_title {font-size: 0;}
-
 dl.codebox.spoiler .spoiler_title:before {
     content: "DIGITAL TRANSMISSION";
     font-size: 9px;
     letter-spacing: 1.5px;
 }
 
-/* =========================================================
-   ICONO DIGIVICE
-   ========================================================= */
-
 dl.codebox.spoiler .spoiler_title:after {
     content: "◈";
-
     position: absolute;
-
     top: 0;
     right: 13px;
-
     height: 36px;
-
     display: flex;
     align-items: center;
-
     color: var(--emblema2);
-
     font-size: 13px;
-
-    text-shadow:
-        0 0 8px rgba(53,216,255,.7);
+    text-shadow: 0 0 8px rgba(53,216,255,.7);
 }
-
 
 /* =========================================================
    CONTENIDO
    ========================================================= */
-
 dl.codebox.spoiler dd {
     margin: 0;
     padding: 0;
@@ -3890,416 +3845,251 @@ dl.codebox.spoiler dd {
 
 dl.codebox.spoiler .spoiler_content {
     box-sizing: border-box;
-
     padding: 18px;
-
     background: var(--body-background);
-
     color: var(--colortextod1);
-
     font-family: "Oxanium", monospace;
     font-size: 12px;
     line-height: 1.65;
 }
 
-
-/* =========================================================
-   ESTADO OCULTO
-   ========================================================= */
-
-dl.codebox.spoiler .spoiler_content[hidden] {
-    display: none;
-}
-
-/* =========================================================
-   DIGIMON FORUM
-   QUOTE + CODE
-   ESTILO DIGIVICE / DIGITAL WORLD
-   ========================================================= */
+dl.codebox.spoiler .spoiler_content[hidden] {display: none;}/*ESTADO OCULTO*/
 
 /* =========================================================
    DIGIMON QUOTE
    ========================================================= */
-
 blockquote {
     position: relative;
     margin: 18px 0;
     padding: 42px 18px 18px 18px;
-
     background: var(--body-background);
-
     border: 1px solid var(--emblema1);
     border-left: 4px solid var(--emblema2);
-
     border-radius: 4px;
-
     color: var(--colortextodl);
-
     font-family: "Oxanium", monospace;
     font-size: 12px;
     line-height: 1.65;
-
-    box-shadow:
-        0 0 12px rgba(22,119,200,.10),
-        inset 0 0 20px rgba(22,119,200,.025);
-
+    box-shadow: 0 0 12px rgba(22,119,200,.10), inset 0 0 20px rgba(22,119,200,.025);
     overflow: hidden;
 }
-
 
 /* =========================================================
    CABECERA DE LA CAJA
    ========================================================= */
-
 blockquote:before {
     content: "DIGITAL TRANSMISSION";
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 36px;
-
     box-sizing: border-box;
-
     display: flex;
     align-items: center;
-
     padding-left: 14px;
     padding-right: 50px;
-
     background: var(--body-background);
-
     border-bottom: 1px solid var(--emblema1);
-
     color: var(--colortextodl);
-
     font-family: "Oxanium", monospace;
     font-size: 9px;
     font-weight: 700;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    ICONO DIGIVICE
    ========================================================= */
-
 blockquote:after {
     content: "◈";
-
     position: absolute;
     top: 9px;
     right: 13px;
-
     color: var(--emblema2);
-
     font-size: 13px;
-
-    text-shadow:
-        0 0 8px rgba(53,216,255,.7);
-
+    text-shadow: 0 0 8px rgba(53,216,255,.7);
     z-index: 3;
 }
-
 
 /* =========================================================
    QUOTE CON AUTOR
    ========================================================= */
-
-/*
-   Foroactivo genera:
-
-   <cite>PEDRO escribió:</cite>
-
-   Convertimos el cite en la cabecera
-   y ocultamos la cabecera genérica.
-*/
-
-blockquote:has(cite):before {
-    content: "";
-}
-
+blockquote:has(cite):before {content: "";}
 
 blockquote cite {
     position: absolute;
-
     top: 0;
     left: 0;
-
     z-index: 2;
-
     width: 100%;
     height: 36px;
-
     box-sizing: border-box;
-
     display: flex;
     align-items: center;
-
     padding-left: 14px;
     padding-right: 50px;
-
     background: var(--body-background);
-
     border-bottom: 1px solid var(--emblema1);
-
     color: var(--colortextodl);
-
     font-family: "Oxanium", monospace;
-
     font-size: 9px;
     font-weight: 700;
-
     font-style: normal;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
-
     white-space: nowrap;
 }
 
 /* =========================================================
    DIGIMON CODE
    ========================================================= */
-
 dl.codebox:not(.spoiler) {
     position: relative;
-
     margin: 18px 0;
     padding: 0;
-
     background: var(--body-background);
-
     border: 1px solid var(--emblema1);
     border-left: 4px solid var(--emblema2);
     border-radius: 4px;
-
     color: var(--colortextod1);
-
     font-family: "Oxanium", monospace;
     font-size: 12px;
     line-height: 1.65;
-
-    box-shadow:
-        0 0 12px rgba(22,119,200,.10),
-        inset 0 0 20px rgba(22,119,200,.025);
-
+    box-shadow: 0 0 12px rgba(22,119,200,.10), inset 0 0 20px rgba(22,119,200,.025);
     overflow: hidden;
 }
-
 
 /* =========================================================
    CABECERA
    ========================================================= */
-
 dl.codebox:not(.spoiler) dt {
     position: relative;
-
     width: 100%;
     height: 36px;
-
     box-sizing: border-box;
-
     display: flex;
     align-items: center;
-
     padding: 0 90px 0 14px;
-
     margin: 0;
-
     background: var(--body-background);
-
     border-bottom: 1px solid var(--emblema1);
-
     color: var(--colortextod1);
-
     font-family: "Oxanium", monospace;
-
     font-size: 0;
     font-weight: 700;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    TÍTULO
    ========================================================= */
-
 dl.codebox:not(.spoiler) dt:before {
     content: "CODE";
-
     font-size: 9px;
-
     letter-spacing: 1.5px;
 }
-
 
 /* =========================================================
    ICONO
    ========================================================= */
-
 dl.codebox:not(.spoiler) dt:after {
     content: "◈";
-
     position: absolute;
-
     top: 0;
     right: 13px;
-
     height: 36px;
-
     display: flex;
     align-items: center;
-
     color: var(--emblema2);
-
     font-size: 13px;
-
-    text-shadow:
-        0 0 8px rgba(53,216,255,.7);
+    text-shadow: 0 0 8px rgba(53,216,255,.7);
 }
-
 
 /* =========================================================
    BOTÓN COPIAR
    ========================================================= */
-
 dl.codebox:not(.spoiler) .digicode-copy {
     position: absolute;
-
     top: 7px;
     right: 38px;
-
     z-index: 5;
-
     height: 22px;
-
     padding: 0 8px;
-
     border: 1px solid var(--emblema1);
     border-radius: 2px;
-
     background: var(--body-background);
-
     color: var(--colortextod1);
-
     font-family: "Oxanium", monospace;
-
     font-size: 8px;
     font-weight: 700;
-
     letter-spacing: 1px;
-
     text-transform: uppercase;
-
     cursor: pointer;
-
-    transition:
-        background .2s ease,
-        border-color .2s ease,
-        color .2s ease,
-        box-shadow .2s ease;
+    transition: background .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
 dl.codebox:not(.spoiler) .digicode-copy:hover {
     background: var(--body-background);
-
     border-color: var(--emblema1);
-
     color: var(--colortextod1);
-
-    box-shadow:
-        0 0 8px rgba(53,216,255,.25);
+    box-shadow: 0 0 8px rgba(53,216,255,.25);
 }
 
 dl.codebox:not(.spoiler) .digicode-copy.copied {
     color: var(--colortextod1);
-
     border-color: var(--emblema1);
-
-    box-shadow:
-        0 0 8px rgba(53,216,255,.35);
+    box-shadow: 0 0 8px rgba(53,216,255,.35);
 }
-
 
 /* =========================================================
    CONTENIDO
    ========================================================= */
-
 dl.codebox:not(.spoiler) dd {
     margin: 0;
     padding: 18px;
-
     background: #var(--body-background);
-
     border: 0;
 }
-
 
 /* =========================================================
    CÓDIGO
    ========================================================= */
-
 dl.codebox:not(.spoiler) code {
     display: block;
-
     margin: 0;
     padding: 0;
-
     background: transparent;
-
     border: 0;
-
     color: var(--colortextod1);
-
     font-family: "Oxanium", monospace;
-
     font-size: 12px;
-
     line-height: 1.65;
-
     white-space: pre-wrap;
-
     overflow-x: auto;
 }
 
 /* =========================================================
    QUOTE ANIDADO
    ========================================================= */
-
 blockquote blockquote {
     margin: 12px 0;
-
     border-left: 2px solid #1677C8;
-
     background: #080E14;
-
     box-shadow: none;
 }
-
 
 /* =========================================================
    MOBILE
    ========================================================= */
-
 @media (max-width: 600px) {
-
     blockquote {
         padding: 42px 12px 14px 12px;
         font-size: 11px;
     }
-
-    .codebox code,
-    .codebox pre {
+    .codebox code, .codebox pre {
         padding: 12px;
         font-size: 10px;
     }
@@ -4307,24 +4097,11 @@ blockquote blockquote {
 /* =========================================================
    ÚLTIMOS TEMAS — DIGITAL RIFT
    ========================================================= */
-
 #rift-recent {
     background:
-    radial-gradient(
-        circle at 15% 15%,
-        rgba(77, 184, 255, 0.14),
-        transparent 35%
-    ),
-    radial-gradient(
-        circle at 85% 80%,
-        rgba(167, 139, 250, 0.12),
-        transparent 40%
-    ),
-    linear-gradient(
-        145deg,
-        rgba(12, 12, 12, 0.96),
-        rgba(29, 29, 29, 0.92)
-    );
+    radial-gradient(circle at 15% 15%, rgba(77, 184, 255, 0.14), transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(167, 139, 250, 0.12), transparent 40%),
+    linear-gradient(145deg, rgba(12, 12, 12, 0.96), rgba(29, 29, 29, 0.92));
     border: 1px solid rgba(77, 184, 255, 0.20);
     box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.35), 0 0 18px rgba(0, 0, 0, 0.20);
     box-sizing: border-box;
@@ -4333,18 +4110,11 @@ blockquote blockquote {
 /* =========================================================
    ÚLTIMOS TEMAS — TARJETAS DIGITAL RIFT
    ========================================================= */
-
 #rift-recent-content .rift-recent-item {
     display: block;
     margin: 0 0px 7px;
     padding: 10px 12px !important;
-
-    background:
-      linear-gradient(
-          135deg,
-          rgba(77, 184, 255, 0.07),
-          rgba(167, 139, 250, 0.04)
-      );
+    background: linear-gradient(135deg, rgba(77, 184, 255, 0.07), rgba(167, 139, 250, 0.04));
     border: 1px solid rgba(77, 184, 255, 0.20);
     border-radius: 6px;
     box-sizing: border-box;
@@ -4353,25 +4123,13 @@ blockquote blockquote {
     font-size: 12px;
     line-height: 1.5;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.20);
-    transition:
-        border-color 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 #rift-recent-content .rift-recent-item:hover {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(77, 184, 255, 0.14),
-            rgba(167, 139, 250, 0.09)
-        ) !important;
-
+    background: linear-gradient(135deg, rgba(77, 184, 255, 0.14), rgba(167, 139, 250, 0.09)) !important;
     border-color: var(--rift-a1);
-
-    box-shadow:
-        inset 0 0 15px rgba(0, 0, 0, 0.20),
-        0 0 10px rgba(77, 184, 255, 0.15);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.20), 0 0 10px rgba(77, 184, 255, 0.15);
 }
 
 #rift-recent-content .rift-recent-item > a {
@@ -4381,19 +4139,15 @@ blockquote blockquote {
     text-decoration: none;
 }
 
-#rift-recent-content .rift-recent-item > a:hover {
-    color: var(--rift-a3);
-}
+#rift-recent-content .rift-recent-item > a:hover {color: var(--rift-a3);}
 
 /* =========================================================
    PROTOTIPO - PLACA DE COBERTURA
    ========================================================= */
-
 .rift-news-prototype {
     position: relative;
     overflow: hidden;
 }
-
 
 /* ---------------------------------------------------------
    INTERIOR - TEXTO DE LA NOTICIA
@@ -4401,31 +4155,21 @@ blockquote blockquote {
 
 .rift-news-prototype .rift-news-text {
     position: absolute !important;
-
     top: 50% !important;
     left: 18px !important;
     right: 18px !important;
-
     z-index: 2 !important;
-
     margin: 0 !important;
     padding: 0 !important;
-
     transform: translateY(-50%) !important;
-
     color: var(--rift-text);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 1.4;
-
     text-align: center;
-
     background: none !important;
-
-    text-shadow:
-        0 0 5px rgba(77,184,255,.25);
+    text-shadow: 0 0 5px rgba(77,184,255,.25);
 }
 
 /* ---------------------------------------------------------
@@ -4434,698 +4178,295 @@ blockquote blockquote {
 
 .rift-news-prototype .rift-news-plate {
     position: absolute;
-
     inset: 0;
-
     z-index: 5;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-background:
-    repeating-linear-gradient(
-        -45deg,
-        rgba(77,184,255,.055) 0px,
-        rgba(77,184,255,.055) 1px,
-        transparent 1px,
-        transparent 9px
-    ),
-    #15191d;
-
+    background: repeating-linear-gradient(-45deg, rgba(77,184,255,.055) 0px, rgba(77,184,255,.055) 1px, transparent 1px, transparent 9px), #15191d;
     border: 1px solid var(--rift-a1);
-
     box-sizing: border-box;
-
-    box-shadow:
-        inset 0 0 18px rgba(77,184,255,.08),
-        0 0 10px rgba(77,184,255,.10);
-
+    box-shadow: inset 0 0 18px rgba(77,184,255,.08), 0 0 10px rgba(77,184,255,.10);
     transition: transform .5s cubic-bezier(.2,.8,.2,1);
 }
 
 /* ---------------------------------------------------------
    DETALLES TECNOLÓGICOS
    --------------------------------------------------------- */
-
 .rift-news-prototype .rift-news-plate::before {
     content: "";
-
     position: absolute;
-
     top: 8px;
     left: 10px;
-
     width: 38%;
     height: 1px;
-
     background: var(--rift-a1);
-
     opacity: .7;
-
-    box-shadow:
-        0 0 6px var(--rift-a1);
+    box-shadow: 0 0 6px var(--rift-a1);
 }
-
 
 .rift-news-prototype .rift-news-plate::after {
     content: "";
-
     position: absolute;
-
     bottom: 8px;
     right: 10px;
-
     width: 28%;
     height: 1px;
-
     background: var(--rift-a2);
-
     opacity: .65;
-
-    box-shadow:
-        0 0 6px var(--rift-a2);
+    box-shadow: 0 0 6px var(--rift-a2);
 }
 
 /* ---------------------------------------------------------
    TÍTULO
    --------------------------------------------------------- */
-
 .rift-news-prototype .plate-title {
     max-width: 70%;
-
     text-align: center;
-
     font-family: 'Oxanium', sans-serif;
     font-size: 13px;
     font-weight: bold;
-
     line-height: 1.25;
-
     color: var(--rift-text);
-
     text-transform: uppercase;
     letter-spacing: .6px;
 }
 
-
 /* ---------------------------------------------------------
    FECHA
    --------------------------------------------------------- */
-
 .rift-news-prototype .rift-news-plate-date {
     position: absolute;
-
     top: 7px;
     right: 8px;
-
     padding: 2px 5px;
-
     font-family: 'Oxanium', sans-serif;
     font-size: 8px;
     font-weight: bold;
-
     color: var(--rift-a2);
-
     letter-spacing: 1px;
-
     border-left: 1px solid var(--rift-a2);
 }
 
-
-/* ---------------------------------------------------------
-   HOVER
-   --------------------------------------------------------- */
-
-.rift-news-prototype:hover .rift-news-plate {
-    transform: translateX(100%);
-}
+.rift-news-prototype:hover .rift-news-plate {transform: translateX(100%);}
 
 /* =========================================================
-   DIGIMON NETWORK
-   INDEX BOX — MAIN DESIGN
+   DIGIMON NETWORK   INDEX BOX — MAIN DESIGN
+   VARIABLES LOCALES   Conservan el sistema de degradados actual
    ========================================================= */
-
-
-/* =========================================================
-   VARIABLES LOCALES
-   Conservan el sistema de degradados actual
-   ========================================================= */
-
 .digimon-index {
-
     --digimon-radius: 15px;
     --digimon-radius-small: 9px;
-
-    --digimon-bg:
-        linear-gradient(
-            135deg,
-            var(--body-background),
-            var(--post-background)
-        );
-
-    --digimon-panel:
-        linear-gradient(
-            135deg,
-            var(--post-background),
-            var(--body-background)
-        );
-
-    --digimon-gradient:
-        linear-gradient(
-            120deg,
-            var(--emblema1),
-            var(--emblema2)
-        );
-
-    --digimon-gradient-reverse:
-        linear-gradient(
-            120deg,
-            var(--emblema2),
-            var(--emblema1)
-        );
-
-    --digimon-border:
-        color-mix(
-            in srgb,
-            var(--colortextod1) 12%,
-            transparent
-        );
-
-    --digimon-muted:
-        color-mix(
-            in srgb,
-            var(--colortextod1) 55%,
-            transparent
-        );
-
+    --digimon-bg: linear-gradient(135deg, var(--body-background), var(--post-background));
+    --digimon-panel: linear-gradient(135deg, var(--post-background), var(--body-background));
+    --digimon-gradient: linear-gradient(120deg, var(--emblema1), var(--emblema2));
+    --digimon-gradient-reverse: linear-gradient(120deg, var(--emblema2), var(--emblema1));
+    --digimon-border: color-mix(in srgb,var(--colortextod1) 12%, transparent);
+    --digimon-muted: color-mix(in srgb, var(--colortextod1) 55%, transparent);
     width: 100%;
     max-width: 1400px;
-
     margin: 0 auto;
     padding: 25px 0 45px;
-
     box-sizing: border-box;
-
     font-family: "Oxanium", sans-serif;
-
 }
-
 
 /* =========================================================
    RESET INTERNO
    ========================================================= */
-
-.digimon-index *,
-.digimon-index *::before,
-.digimon-index *::after {
-
-    box-sizing: border-box;
-
-}
-
-.digimon-index a {
-
-    text-decoration: none;
-
-}
-
-.digimon-index h2,
-.digimon-index h3,
-.digimon-index h4,
-.digimon-index p {
-
-    margin: 0;
-
-}
-
+.digimon-index *, .digimon-index *::before, .digimon-index *::after {box-sizing: border-box;}
+.digimon-index a {text-decoration: none;}
+.digimon-index h2, .digimon-index h3, .digimon-index h4, .digimon-index p {margin: 0;}
 
 /* =========================================================
    ENLACES SUPERIORES
    ========================================================= */
-
 .digimon-index-tools {
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
     margin-bottom: 25px;
     padding: 12px 18px;
-
     border: 1px solid var(--digimon-border);
-
     border-radius: var(--digimon-radius-small);
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--post-background),
-            transparent
-        );
-
+    background: linear-gradient(90deg, var(--post-background), transparent);
     font: 700 9px/1.2 "Roboto Mono", monospace;
-
     letter-spacing: 1px;
     text-transform: uppercase;
-
 }
-
 
 .digimon-tools-left {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 10px;
-
 }
 
-
-.digimon-tools-left a,
-.digimon-mark-read {
-
+.digimon-tools-left a, .digimon-mark-read {
     display: inline-flex;
-
     align-items: center;
     gap: 8px;
-
     padding: 9px 12px;
-
     border: 1px solid var(--digimon-border);
-
     border-radius: 6px;
-
     color: var(--text-color);
-
     background: var(--body-background);
-
     transition: 0.3s ease;
-
 }
 
+.digimon-tools-left a i, .digimon-mark-read i {color: var(--accent1);}
 
-.digimon-tools-left a i,
-.digimon-mark-read i {
-
-    color: var(--accent1);
-
-}
-
-
-.digimon-tools-left a:hover,
-.digimon-mark-read:hover {
-
+.digimon-tools-left a:hover, .digimon-mark-read:hover {
     color: var(--post-background);
-
     background: var(--digimon-gradient);
-
     border-color: transparent;
-
     transform: translateY(-2px);
-
 }
 
-
-.digimon-tools-left a:hover i,
-.digimon-mark-read:hover i {
-
-    color: inherit;
-
-}
-
+.digimon-tools-left a:hover i, .digimon-mark-read:hover i {color: inherit;}
 
 /* =========================================================
    CATEGORÍAS
    ========================================================= */
-
 .digimon-category {
-
     position: relative;
-
     width: 100%;
-
     margin: 0 0 35px;
-
     padding: 0;
-
     border: 1px solid var(--digimon-border);
-
     border-radius: var(--digimon-radius);
-
     background: var(--digimon-bg);
-
     overflow: hidden;
-
-    box-shadow:
-        0 0 0 1px rgba(0, 0, 0, .15),
-        0 15px 45px rgba(0, 0, 0, .12);
-
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 15px 45px rgba(0, 0, 0, .12);
 }
-
 
 /* =========================================================
    CABECERA DE CATEGORÍA
    ========================================================= */
-
 .digimon-category-header {
-
     min-height: 85px;
-
     display: flex;
-
     align-items: center;
-
     gap: 18px;
-
     padding: 20px 25px;
-
     position: relative;
-
-    background:
-
-        linear-gradient(
-            100deg,
-            var(--post-background),
-            transparent 65%
-        );
-
+    background: linear-gradient(100deg, var(--post-background), transparent 65%);
 }
 
-
 /* Línea de brillo superior */
-
 .digimon-category-header::before {
-
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
     right: 0;
-
     height: 3px;
-
     background: var(--digimon-gradient);
-
 }
-
 
 /* Icono */
-
 .digimon-category-icon {
-
     width: 48px;
     height: 48px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
-
     border-radius: 12px;
-
     background: var(--digimon-gradient);
-
     color: var(--post-background);
-
     font-size: 20px;
-
-    box-shadow:
-        0 0 20px
-        color-mix(
-            in srgb,
-            var(--accent1) 25%,
-            transparent
-        );
-
+    box-shadow: 0 0 20px color-mix(in srgb, var(--accent1) 25%, transparent);
 }
-
 
 /* Títulos */
-
 .digimon-category-title {
-
     flex: 1;
-
     min-width: 0;
-
 }
-
 
 .digimon-category-label {
-
     display: block;
-
     margin-bottom: 5px;
-
     color: var(--digimon-muted);
-
     font: 700 8px/1.2 "Roboto Mono", monospace;
-
     letter-spacing: 2px;
-
     text-transform: uppercase;
-
 }
-
 
 .digimon-category-title h2 {
-
     font: 700 27px/1.1 "Oxanium", sans-serif;
-
     color: var(--text-color);
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
-
 }
-
 
 /* Estado */
-
 .digimon-category-status {
-
     display: flex;
-
     align-items: center;
-
     gap: 8px;
-
     padding: 8px 12px;
-
     border: 1px solid var(--digimon-border);
-
     border-radius: 6px;
-
     color: var(--digimon-muted);
-
     font: 700 8px/1 "Roboto Mono", monospace;
-
     letter-spacing: 1px;
-
     white-space: nowrap;
-
 }
-
 
 .digimon-category-status span {
-
     width: 7px;
     height: 7px;
-
     display: block;
-
     border-radius: 50%;
-
     background: var(--accent2);
-
-    box-shadow:
-        0 0 10px var(--accent2);
-
+    box-shadow: 0 0 10px var(--accent2);
 }
-
 
 /* Separador */
-
 .digimon-category-line {
-
     width: calc(100% - 50px);
-
     height: 1px;
-
     margin: 0 auto;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            var(--accent1),
-            var(--accent2),
-            transparent
-        );
-
+    background: linear-gradient(90deg, var(--accent1), var(--accent2), transparent);
     opacity: .65;
-
 }
 
-
 /* =========================================================
-   DIGIMON NETWORK
-   SISTEMA DE FOROS: ÚNICOS, DOBLES Y TRIPLES
+   DIGIMON NETWORK   SISTEMA DE FOROS: ÚNICOS, DOBLES Y TRIPLES
    ========================================================= */
-
 .digimon-forums-grid {
-
     display: grid;
-
     grid-template-columns: repeat(6, minmax(0, 1fr));
-
     gap: 22px;
-
     padding: 25px;
-
     align-items: stretch;
-
 }
 
-
-/* ---------------------------------------------------------
-   TAMAÑO PREDETERMINADO: FOROS DOBLES
-   --------------------------------------------------------- */
-
-.digimon-forums-grid > .digimon-forum-card {
-
-    grid-column: span 3;
-
-    min-width: 0;
-
-}
-
-
-/* ---------------------------------------------------------
-   FORO ÚNICO — OCUPA TODO EL ANCHO
-   --------------------------------------------------------- */
-
-.digimon-forums-grid
-> .digimon-forum-card:has(.rsingleforum) {
-
-    grid-column: span 6;
-
-}
-
-
-/* ---------------------------------------------------------
-   FORO DOBLE — DOS COLUMNAS
-   --------------------------------------------------------- */
-
-.digimon-forums-grid
-> .digimon-forum-card:has(.rdoubleforum) {
-
-    grid-column: span 3;
-
-}
-
-
-/* ---------------------------------------------------------
-   FORO TRIPLE — TRES COLUMNAS
-   --------------------------------------------------------- */
-
-.digimon-forums-grid
-> .digimon-forum-card:has(.rtripleforum) {
-
-    grid-column: span 2;
-
-}
-
-
-/* ---------------------------------------------------------
-   FORO DE IMAGEN — ANCHO COMPLETO
-   --------------------------------------------------------- */
-
-.digimon-forums-grid
-> .digimon-forum-card:has(.rimageforum) {
-
-    grid-column: span 6;
-
-}
-
-
-/* =========================================================
-   FORO ÚNICO — FORMATO HORIZONTAL
-   ========================================================= */
-
-.digimon-forum-card:has(.rsingleforum)
-.digimon-forum-content {
-
-    min-height: 280px;
-
-}
-
-
-.digimon-forum-card:has(.rsingleforum)
-.digimon-forum-description {
-
-    min-height: 210px;
-
-}
-
+.digimon-forums-grid > .digimon-forum-card {grid-column: span 3; min-width: 0;}/*TAMAÑO PREDETERMINADO: FOROS DOBLES*/
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) {grid-column: span 6;}/*FORO ÚNICO — OCUPA TODO EL ANCHO*/
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) {grid-column: span 3;}/*FORO DOBLE — DOS COLUMNAS*/
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {grid-column: span 2;}/*FORO TRIPLE — TRES COLUMNAS*/
+.digimon-forums-grid > .digimon-forum-card:has(.rimageforum) {grid-column: span 6;}/*FORO DE IMAGEN — ANCHO COMPLETO*/
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content {min-height: 280px;}/*FORO ÚNICO — FORMATO HORIZONTAL*/
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description {min-height: 210px;}
 
 /* Imagen horizontal */
-
-.digimon-forum-card:has(.rsingleforum)
-.rforimg {
-
+.digimon-forum-card:has(.rsingleforum) .rforimg {
     width: 55%;
-
-    -webkit-mask-image:
-        linear-gradient(
-            90deg,
-            black 50%,
-            transparent 100%
-        );
-
-    mask-image:
-        linear-gradient(
-            90deg,
-            black 50%,
-            transparent 100%
-        );
-
+    -webkit-mask-image: linear-gradient(90deg,black 50%,transparent 100%);
+    mask-image: linear-gradient(90deg, black 50%, transparent 100%);
 }
-
 
 /* Texto hacia el lado derecho */
-
-.digimon-forum-card:has(.rsingleforum)
-.rfordesc {
-
+.digimon-forum-card:has(.rsingleforum) .rfordesc {
     width: 52%;
-
     margin-left: 48%;
-
     padding: 45px 30px 20px;
-
 }
 
-
-/* Enlaces */
-
-.digimon-forum-card:has(.rsingleforum)
-.rforlinks {
-
-    padding-left: 48%;
-
-}
-
+.digimon-forum-card:has(.rsingleforum) .rforlinks {padding-left: 48%;}/* Enlaces */
 
 /* =========================================================
    FOROS DOBLES
