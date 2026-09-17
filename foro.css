@@ -2197,13 +2197,13 @@ button#theme-toggler2:before {
         linear-gradient(
             90deg,
             transparent 48%,
-            rgba(80,220,255,.8) 49%,
+            var(--emblema1) 49%,
             transparent 50%
         ),
         linear-gradient(
             180deg,
             transparent 48%,
-            rgba(80,220,255,.6) 49%,
+            var(--emblema2) 49%,
             transparent 50%
         );
     background-size: 32px 32px, 32px 32px;
