@@ -1,5 +1,4 @@
 /* FUENTES */
-
 .jersey-15-regular {
   font-family: "Jersey 15", sans-serif;
   font-weight: 400;
@@ -25,26 +24,10 @@
   font-style: normal;
 }
 
-/* NEGRITA */
-b {
-    color: var(--emblema2);
-}
-
-/* CURSIVA */
-i {
-    color: var(--emblema1);
-}
-
-/* SUBRAYADO */
-u {
-    color: var(--emblema1);
-}
-
-/* TACHADO */
-strike,
-s {
-    color: var(--emblema1);
-}
+b {color: var(--emblema2);}/* NEGRITA */
+i {color: var(--emblema1);} /* CURSIVA */
+u {color: var(--emblema1);}/* SUBRAYADO */
+strike, s {color: var(--emblema1);}/* TACHADO */
 
 /* Ocultar "Ver mensajes desde la última visita" */
 ul.linklist > li:has(a[href*="search_id=newposts"]) {display: none !important;}
@@ -122,13 +105,11 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 .dr-tadmin .dr-dots i:nth-child(2) {opacity: .35;}
-
 .dr-tadmin .dr-dots i:nth-child(3) {opacity: .15;}
 
 /* =========================================================
    HEADER
    ========================================================= */
-
 .dr-tadmin .dr-cabeza {
     position: relative;
     min-height: 174px;
@@ -140,7 +121,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 /* línea tecnológica */
-
 .dr-tadmin .dr-cabeza:after {
     content: "";
     position: absolute;
@@ -153,7 +133,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 /* etiqueta */
-
 .dr-tadmin .dr-label {
     display: inline-block;
     padding: 3px 9px;
@@ -167,7 +146,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 /* título */
-
 .dr-tadmin .dr-title {
     margin: 0;
     color: #fff;
@@ -180,7 +158,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 /* subtítulo */
-
 .dr-tadmin .dr-subtitle {
     margin-top: 9px;
     color: var(--dg-muted);
@@ -188,13 +165,11 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-
 .dr-tadmin .dr-subtitle b {color: var(--emblema2);}
 
 /* =========================================================
    INTRO
    ========================================================= */
-
 .dr-tadmin .dr-intro {
     margin: 22px 25px 10px;
     padding: 17px 20px;
@@ -209,7 +184,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* =========================================================
    SECCIÓN
    ========================================================= */
-
 .dr-tadmin .dr-section {margin: 25px;}
 
 .dr-section-title {
@@ -242,7 +216,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    TEXT BLOCKS
    ========================================================== */
-
 .dr-block {
     margin-top: 20px;
     padding: 17px;
@@ -251,17 +224,13 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 .dr-block p {margin: 0 0 12px;}
-
 .dr-block p:last-child {margin-bottom: 0;}
-
 .dr-block b {color: var(--emblema2);}
-
 .dr-highlight {color: var(--dg-orange);}
 
 /* ==========================================================
    TIMELINE
    ========================================================== */
-
 .dr-timeline {
     margin-top: 20px;
     border-left: 1px solid #315163;
@@ -314,7 +283,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* =========================================================
    AVISO DESTACADA
    ========================================================= */
-
 .dr-tadmin .dr-aviso-title {
     margin-bottom: 7px;
     color: var(--emblema2);
@@ -333,7 +301,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* =========================================================
    BLOQUES ADMINISTRATIVOS 2
    ========================================================= */
-
 .dr-tadmin .dr-lista {
     position: relative;
     margin-bottom: 8px;
@@ -350,7 +317,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 /* icono */
-
 .dr-tadmin .dr-lista .dr-icon {
     position: absolute;
     left: 17px;
@@ -369,7 +335,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 .dr-tadmin .dr-lista .dr-icon i {transform: rotate(-45deg);}
 
 /* nombre */
-
 .dr-tadmin .dr-lista h3 {
     margin: 0 0 2px;
     color: var(--colortextodl);
@@ -382,7 +347,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 .dr-tadmin .dg-lista h3 span {color: var(--emblema1);}
 
 /* descripción */
-
 .dr-tadmin .dr-lista p {
     margin: 0;
     color: var(--colortextodl);
@@ -393,7 +357,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* =========================================================
    DATOS / ESTADO DEL FORO
    ========================================================= */
-
 .dr-data {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -426,7 +389,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    RELATIONSHIPS
    ========================================================== */
-
 .dr-relations {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -466,9 +428,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     font-size: 10px;
 }
 
-/* TABLA REGISTROS */
-
-/* ========================================================== BLOQUES DE LETRAS ========================================================== */ 
+/* ==================TABLA REGISTROS================= BLOQUES DE LETRAS ================================ */ 
 
 .dr-tadmin .dr-section2 { border:1px solid #183246; background:rgba(9,17,24,.8); position:relative; } 
 .dr-tadmin .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--emblema2); }
@@ -528,13 +488,9 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     transform: rotate(45deg);
 }
 
-.dr-tadmin .dr-lista2 .dr-icon2 i {
-    transform: rotate(-45deg);
-}
-
+.dr-tadmin .dr-lista2 .dr-icon2 i {transform: rotate(-45deg);}
 
 /* NOMBRE */
-
 .dr-tadmin .dr-lista2 h3 {
     margin: 2px 5px 2px;
     color: var(--colortextod1);
@@ -544,13 +500,9 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     text-transform: uppercase;
 }
 
-.dr-tadmin .dr-lista2 h3 span {
-    color: var(--dg-gold);
-}
-
+.dr-tadmin .dr-lista2 h3 span {color: var(--dg-gold);}
 
 /* DESCRIPCIÓN */
-
 .dr-tadmin .dr-lista2 p {
     margin: 0;
     color: var(--colortextod1);
@@ -561,14 +513,10 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* =========================================================
    SISTEMAS
    ========================================================= */
-
 .dr-system-list {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 8px;
-
     margin-top: 15px;
 }
 
@@ -577,7 +525,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    DIGITAL RIFT — MAPA DE ZONAS
    ========================================================== */
-
 .dr-map {
     --map-blue:#1677C8;
     --map-cyan:#22c1c3;
@@ -587,7 +534,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     --map-line:rgba(34,193,195,.22);
     --map-text:#dce8f2;
     --map-muted:#7f95a8;
-
     color:var(--map-text);
     font-family:"Oxanium",sans-serif;
     font-size:11px;
@@ -595,15 +541,9 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 }
 
 /* CABECERA */
-
 .dr-map-head {
     padding:18px 20px;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(22,119,200,.14),
-            transparent
-        );
+    background: linear-gradient(90deg, rgba(22,119,200,.14), transparent);
     border:1px solid #183246;
     border-bottom:1px solid var(--map-line);
 }
@@ -612,9 +552,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     display:inline-block;
     margin-bottom:6px;
     padding:3px 8px;
-
     border:1px solid var(--map-blue);
-
     color:var(--emblema2);
     font-size:7px;
     font-weight:700;
@@ -638,76 +576,51 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     text-transform:uppercase;
 }
 
-
 /* INTRODUCCIÓN */
-
 .dr-map-intro {
     margin-top:10px;
     padding:13px 15px;
-
     background:rgba(13,21,30,.85);
     border-left:2px solid var(--map-blue);
     border-right:1px solid var(--map-line);
-
     color:#aebdca;
     font-size:10px;
 }
 
-.dr-map-intro b {
-    color:var(--emblema2);
-}
-
+.dr-map-intro b {color:var(--emblema2);}
 
 /* SISTEMA */
-
 .dr-map-system {
     position:relative;
     margin-top:15px;
 }
 
-.dr-map-system > input {
-    display:none;
-}
-
+.dr-map-system > input {display:none;}
 
 /* PANEL */
-
 .dr-map-content {
     position:relative;
     min-height:330px;
-
     background:#091119;
     border:1px solid #183246;
 }
 
-
 /* ZONAS */
-
 .dr-map-zone {
     display:none;
     padding:18px;
 }
 
-#dr-zone-01:checked ~ .dr-map-content .dr-map-zone:nth-child(1),
-#dr-zone-02:checked ~ .dr-map-content .dr-map-zone:nth-child(2),
-#dr-zone-03:checked ~ .dr-map-content .dr-map-zone:nth-child(3),
-#dr-zone-04:checked ~ .dr-map-content .dr-map-zone:nth-child(4),
-#dr-zone-05:checked ~ .dr-map-content .dr-map-zone:nth-child(5),
-#dr-zone-06:checked ~ .dr-map-content .dr-map-zone:nth-child(6) {
-    display:block;
-}
-
+#dr-zone-01:checked ~ .dr-map-content .dr-map-zone:nth-child(1), #dr-zone-02:checked ~ .dr-map-content .dr-map-zone:nth-child(2), #dr-zone-03:checked ~ .dr-map-content .dr-map-zone:nth-child(3),
+#dr-zone-04:checked ~ .dr-map-content .dr-map-zone:nth-child(4), #dr-zone-05:checked ~ .dr-map-content .dr-map-zone:nth-child(5), #dr-zone-06:checked ~ .dr-map-content .dr-map-zone:nth-child(6) {display:block;}
 
 /* CABECERA DE ZONA */
-
 .dr-map-zone-head {
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     padding-bottom:10px;
     margin-bottom:14px;
-
     border-bottom:1px solid #183246;
 }
 
@@ -725,18 +638,14 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     letter-spacing:1px;
 }
 
-
 /* CUERPO */
-
 .dr-map-zone-body {
     display:grid;
     grid-template-columns:180px 1fr;
     gap:15px;
 }
 
-
 /* IMAGEN */
-
 .dr-map-image {
     min-height:170px;
     background:#071018;
@@ -748,40 +657,30 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     width:100%;
     height:100%;
     min-height:170px;
-
     display:block;
     object-fit:cover;
-
     opacity:.82;
     transition:.3s;
 }
 
-.dr-map-image:hover img {
-    opacity:1;
-}
-
+.dr-map-image:hover img {opacity:1;}
 
 /* INFORMACIÓN */
-
 .dr-map-info {
     display:flex;
     flex-direction:column;
     gap:8px;
 }
 
-
 /* DATOS */
-
 .dr-map-data {
     padding:8px 10px;
-
     background:#0d1722;
     border:1px solid rgba(255,255,255,.05);
 }
 
 .dr-map-data span {
     display:block;
-
     color:var(--map-muted);
     font-family:"Roboto Mono",monospace;
     font-size:7px;
@@ -791,47 +690,32 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 .dr-map-data b {
     display:block;
     margin-top:2px;
-
     color:#eaf7fb;
     font-size:9px;
     text-transform:uppercase;
 }
 
-
 /* DESCRIPCIÓN */
-
 .dr-map-description {
     flex:1;
-
     padding:11px;
-
     background:rgba(17,31,45,.55);
     border-left:1px solid var(--map-blue);
-
     color:#9fb1bf;
     font-size:10px;
 }
-
 
 /* ZONA DE ROL */
 
 .dr-map-role {
     margin-top:14px;
     padding:10px 12px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(22,119,200,.12),
-            transparent
-        );
-
+    background: linear-gradient(90deg, rgba(22,119,200,.12), transparent);
     border:1px solid rgba(34,193,195,.18);
 }
 
 .dr-map-role span {
     display:block;
-
     color:var(--emblema2);
     font-size:7px;
     font-weight:700;
@@ -844,30 +728,23 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     font-size:9px;
 }
 
-
 /* ==========================================================
    SELECTORES
    ========================================================== */
-
 .dr-map-tabs {
     display:grid;
     grid-template-columns:repeat(6,1fr);
-
     margin-top:8px;
     gap:5px;
 }
 
 .dr-map-tabs label {
     position:relative;
-
     padding:9px 5px;
-
     background:#0b151e;
     border:1px solid #183246;
-
     cursor:pointer;
     text-align:center;
-
     transition:.2s;
 }
 
@@ -878,70 +755,48 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 
 .dr-map-tabs small {
     display:block;
-
     color:#526b7a;
-
     font-family:"Roboto Mono",monospace;
     font-size:7px;
 }
 
 .dr-map-tabs b {
     display:block;
-
     margin-top:2px;
-
     color:#a9bac4;
     font-size:8px;
     letter-spacing:.5px;
 }
 
-
 /* ESTADO ACTIVO */
-
-#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"],
-#dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"],
-#dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"],
-#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"],
-#dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"],
-#dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {
+#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"], #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"], #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"],
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"], #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"], #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {
     background:rgba(22,119,200,.15);
     border-color:var(--emblema2);
 }
 
-#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"] b,
-#dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"] b,
-#dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"] b,
-#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b,
-#dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b,
-#dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {
+#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"] b, #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"] b, #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"] b,
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b, #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b, #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {
     color:var(--emblema2);
 }
 
-
 /* RESPONSIVE */
-
 @media(max-width:600px) {
-
     .dr-map {
         margin:15px 10px;
     }
-
     .dr-map-zone-body {
         grid-template-columns:1fr;
     }
-
     .dr-map-image {
         min-height:150px;
     }
-
     .dr-map-tabs {
         grid-template-columns:repeat(3,1fr);
     }
-
 }
 
 /* TABLILLA DIGIMON */
-
 .digimon-status {
     --bg: #07090e;
     --panel: #0d1218;
@@ -958,8 +813,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
     margin: 25px auto;
     padding: 18px;
     box-sizing: border-box;
-    background: radial-gradient(circle at 20% 0%, rgba(50,85,105,.12), transparent 45%),
-        linear-gradient(135deg, #080b10, #05070b);
+    background: radial-gradient(circle at 20% 0%, rgba(50,85,105,.12), transparent 45%), linear-gradient(135deg, #080b10, #05070b);
     border: 1px solid #222c34;
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
@@ -969,7 +823,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    CONTENIDO
 ========================================================== */
-
 .digimon-content {
     width: 100%;
     box-sizing: border-box;
@@ -978,7 +831,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    CABECERA
 ========================================================== */
-
 .digimon-top {
     height: 76px;
     display: flex;
@@ -990,7 +842,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    RETRATO
 ========================================================== */
-
 .digimon-portrait {
     width: 82px;
     height: 76px;
@@ -1021,9 +872,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    NOMBRE
 ========================================================== */
-
 .digimon-title {flex: 1;}
-
 .digimon-name {
     color: #eef3f5;
     font-size: 22px;
@@ -1047,7 +896,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    NIVEL
 ========================================================== */
-
 .digimon-level {
     width: 70px;
     padding-right: 5px;
@@ -1077,7 +925,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}
 /* ==========================================================
    STATS
 ========================================================== */
-
 .main-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
