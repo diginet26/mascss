@@ -2922,7 +2922,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* ---------------------------------------------------------
    DECORACIÓN ESQUINAS
    --------------------------------------------------------- */
-#rift-current::before, #rift-staff::before, #rift-recent::before {
+/*#rift-current::before, #rift-staff::before, #rift-recent::before {
     content: "";
     position: absolute;
     top: 0;
@@ -2942,7 +2942,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     height: 2px;
     background: var(--rift-a3);
     box-shadow: 0 0 8px var(--rift-a3);
-}
+}*/
 
 /* ---------------------------------------------------------
    TÍTULOS
