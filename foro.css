@@ -2284,8 +2284,8 @@ button#theme-toggler2:before {
 .digimon-main-button i {font-size: 14px;}
 
 .digimon-main-button:hover {
-    background: linear-gradient(145deg, #16b9f1, #0873d1);
-    border-color: var(--emblema1);
+    background: var(--emblema1);
+    border-color: var(--linkc1);
     color: var(--digimon-yellow);
     box-shadow: 0 0 10px rgba(30,210,255,.45);
     transform:translateY(-1px);
@@ -2348,9 +2348,9 @@ button#theme-toggler2:before {
 }
 
 .digimon-icon-button:hover, .digimon-sub-button:hover {
-    background: var(--digimon-blue);
+    background: var(--emblema1);
     color: var(--digimon-yellow);
-    border-color: var(--digimon-cyan);
+    border-color: var(--linkc1);
     box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
 
