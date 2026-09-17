@@ -5945,3 +5945,163 @@ blockquote blockquote {
    RESPONSIVE
    ========================================================= */
 @media (max-width: 500px) {.dice {width: calc(100% - 30px);}}
+
+/* =========================================================
+   DIGITAL RIFT — SCEDITOR TOOLBAR
+   ========================================================= */
+
+.sceditor-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 9px;
+
+    background:
+        linear-gradient(90deg, rgba(22,119,200,.08), transparent 30%),
+        linear-gradient(180deg, #111A24, #0B1118);
+
+    border: 1px solid #1677C8;
+    border-bottom: 2px solid #35D8FF;
+
+    box-shadow:
+        inset 0 0 18px rgba(22,119,200,.12),
+        0 0 12px rgba(53,216,255,.08);
+
+    position: relative;
+}
+
+
+/* Línea digital superior */
+.sceditor-toolbar:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+
+    background: #35D8FF;
+    box-shadow: 0 0 8px rgba(53,216,255,.8);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.sceditor-toolbar .sceditor-button {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0B1118;
+    border: 1px solid rgba(22,119,200,.55);
+
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 0 8px rgba(22,119,200,.08);
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.sceditor-toolbar .sceditor-button:hover {
+    background: rgba(22,119,200,.22);
+    border-color: #35D8FF;
+
+    box-shadow:
+        inset 0 0 10px rgba(53,216,255,.15),
+        0 0 8px rgba(53,216,255,.25);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
+
+.sceditor-toolbar .sceditor-button div {
+    opacity: .85;
+    filter:
+        brightness(0)
+        invert(1);
+}
+
+
+.sceditor-toolbar .sceditor-button:hover div {
+    opacity: 1;
+    filter:
+        brightness(0)
+        invert(1)
+        drop-shadow(0 0 3px #35D8FF);
+}
+
+
+/* =========================================================
+   BOTÓN ACTIVO
+   ========================================================= */
+
+.sceditor-toolbar .sceditor-button.active,
+.sceditor-toolbar .sceditor-button.active:hover {
+    background: #1677C8;
+    border-color: #35D8FF;
+
+    box-shadow:
+        inset 0 0 10px rgba(53,216,255,.3),
+        0 0 10px rgba(53,216,255,.3);
+}
+
+
+/* =========================================================
+   SEPARADORES
+   ========================================================= */
+
+.sceditor-toolbar .sceditor-group {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    margin-right: 6px;
+    padding-right: 7px;
+
+    border-right: 1px solid rgba(53,216,255,.25);
+}
+
+
+.sceditor-toolbar .sceditor-group:last-child {
+    border-right: 0;
+}
+
+
+/* =========================================================
+   SELECTORES / FUENTE / TAMAÑO
+   ========================================================= */
+
+.sceditor-toolbar .sceditor-button,
+.sceditor-toolbar .sceditor-dropdown {
+    color: #DDF8FF;
+}
+
+
+/* =========================================================
+   TOOLTIP
+   ========================================================= */
+
+.sceditor-button:hover:after {
+    color: #DDF8FF;
+}
