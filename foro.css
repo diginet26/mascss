@@ -5185,28 +5185,28 @@ background:
     --digimon-gradient:
         linear-gradient(
             120deg,
-            var(--accent1),
-            var(--accent2)
+            var(--emblema1),
+            var(--emblema2)
         );
 
     --digimon-gradient-reverse:
         linear-gradient(
             120deg,
-            var(--accent2),
-            var(--accent1)
+            var(--emblema2),
+            var(--emblema1)
         );
 
     --digimon-border:
         color-mix(
             in srgb,
-            var(--text-color) 12%,
+            var(--colortextod1) 12%,
             transparent
         );
 
     --digimon-muted:
         color-mix(
             in srgb,
-            var(--text-color) 55%,
+            var(--colortextod1) 55%,
             transparent
         );
 
@@ -5218,7 +5218,7 @@ background:
 
     box-sizing: border-box;
 
-    font-family: "Poppins", sans-serif;
+    font-family: "Oxanium", sans-serif;
 
 }
 
