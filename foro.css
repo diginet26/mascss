@@ -5488,7 +5488,7 @@ blockquote blockquote {
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, var(--body-background),var(--body-background));
-    border: 1px solid var(--body-background);
+    border: 1px solid var(--linkc3);
     color: var(--colortextod1);
     font-family: "Oxanium", sans-serif;
     font-size: 11px;
@@ -5532,8 +5532,8 @@ blockquote blockquote {
     padding: 22px 25px 17px;
     position: relative;
     color: var(--colortextod1);
-    font-family: "Oxanium", sans-serif;
-    font-size: 27px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 30px;
     font-weight: 900;
     letter-spacing: 3px;
     line-height: 1;
