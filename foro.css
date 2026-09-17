@@ -5505,7 +5505,7 @@ blockquote blockquote {
     padding: 7px 15px;
     background: #07111b;
     border-bottom: 1px solid var(--dice-line);
-    color: var(--dice-cyan-light);
+    color: var(--linkc3);
     font-family: "Roboto Mono", monospace;
     font-size: 7px;
     font-weight: 700;
@@ -5519,7 +5519,7 @@ blockquote blockquote {
     position: absolute;
     top: 6px;
     right: 15px;
-    color: var(--dice-cyan);
+    color: var(--emblema2);
     font-family: monospace;
     font-size: 7px;
     letter-spacing: 3px;
@@ -5582,7 +5582,7 @@ blockquote blockquote {
     top: -9px;
     left: 15px;
     padding: 3px 9px;
-    background: var(--dice-blue);
+    background: var(--emblema2);
     color: #fff;
     font-family: "Roboto Mono", monospace;
     font-size: 7px;
@@ -5629,7 +5629,7 @@ blockquote blockquote {
     top: 0;
     width: 2px;
     height: 100%;
-    background: var(--dice-blue);
+    background: var(--emblema2);
 }
 
 /* hover */
@@ -5649,7 +5649,7 @@ blockquote blockquote {
     box-sizing: border-box;
     margin-bottom: 6px;
     padding-bottom: 6px;
-    color: var(--dice-cyan-light) !important;
+    color: var(--linck3) !important;
     font-family: "Oxanium", sans-serif;
     font-size: 13px;
     font-weight: 700;
@@ -5662,7 +5662,7 @@ blockquote blockquote {
 .roll-result > strong:before {
     content: "\f135";
     margin-right: 8px;
-    color: var(--dice-blue);
+    color: var(--emblema2);
     font-family: "Font Awesome 6 Pro";
     font-size: 9px;
 }
