@@ -2150,7 +2150,261 @@ button#theme-toggler2:before {
     box-shadow: 0 0 0 1px rgba(0,0,0,.25), 0 0 25px rgba(0,174,255,.18), inset 0 0 25px rgba(0,0,0,.35);
     overflow: visible;
 }
+/*VARIANTES VISUALES*/
+/*
+=========================================================
+VARIANTES VISUALES
+=========================================================
 
+---------------------------------------------------------
+VALOR
+---------------------------------------------------------*/
+
+body.valor-mode {
+
+    --emblema1: #298BF1; /*complementario*/
+    --emblema2: #f16f29; /*base*/
+
+    --linkc1: #29F16F; /*triada1*/
+    --linkc2: #6F29F1; /*triada2*/
+    --linkc3: #d8a839; /*armonia*/
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+button[title="Valor"] {
+    background-image: url('https://imgur.com/yi2VSVk.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ---------------------------------------------------------
+AMISTAD
+---------------------------------------------------------*/
+
+body.amistad-mode {
+
+    --emblema1: #E2A175;
+    --emblema2: #75b6e2;
+
+    --linkc1: #E275B6;
+    --linkc2: #B6E275;
+    --linkc3: #75E2D3;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+
+button[title="Amistad"] {
+    background-image: url('https://2img.net/i.imgur.com/hWGlqgF.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ---------------------------------------------------------
+AMOR
+--------------------------------------------------------- */
+
+body.amor-mode {
+
+    --emblema1: #48D1BC;
+    --emblema2: #d1485d;
+
+    --linkc1: #5DD148;
+    --linkc2: #485DD1;
+    --linkc3: #cd89b5;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+   }
+button[title="Amor"] {
+    background-image: url('https://2img.net/i.imgur.com/oxZUHTR.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ /*---------------------------------------------------------
+CONOCIMIENTO
+---------------------------------------------------------*/
+
+body.conocimiento-mode {
+
+    --emblema1: #589240;
+    --emblema2: #ae71d1;
+
+    --linkc1: #92406A;
+    --linkc2: #409292;
+    --linkc3: #926A40;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+button[title="Conocimiento"] {
+    background-image: url('https://2img.net/i.imgur.com/lV6PHWQ.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*---------------------------------------------------------
+PUREZA
+--------------------------------------------------------- */
+
+body.purity-mode {
+
+    --emblema1: #D274E1;
+    --emblema2: #7ce16f;
+
+    --linkc1: #6F7CE1;
+    --linkc2: #E16F7C;
+    --linkc3: #4b9e80;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+}
+button[title="Pureza"] {
+    background-image: url('https://2img.net/i.imgur.com/n0RWw0X.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*---------------------------------------------------------
+SINCERIDAD
+---------------------------------------------------------*/
+
+body.sincerity-mode {
+
+    --emblema1: #B6B7A4;
+    --emblema2: #a5a4b7;
+
+    --linkc1: #B7A5A4;
+    --linkc2: #A4B7A5;
+    --linkc3: #6e797f;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+button[title="Sinceridad"] {
+    background-image: url('https://2img.net/i.imgur.com/b19orbC.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*---------------------------------------------------------
+ESPERANZA
+---------------------------------------------------------*/
+
+body.hope-mode {
+
+    --emblema1: #7985E5;
+    --emblema2: #e5d979;
+
+    --linkc1: #79E5D9;
+    --linkc2: #D979E5;
+    --linkc3: #88b128;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+button[title="Esperanza"] {
+    background-image: url('https://2img.net/i.imgur.com/Vcn9Ke9.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*---------------------------------------------------------
+LUZ
+---------------------------------------------------------*/
+
+body.light-variant-mode {
+
+    --emblema1: #B6EDCB;
+    --emblema2: #edb6cf;
+
+    --linkc1: #CFEDB6;
+    --linkc2: #B6CFED;
+    --linkc3: #a17678;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+button[title="Luz"] {
+    background-image: url('https://2img.net/i.imgur.com/BhdjsBY.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*---------------------------------------------------------
+BONDAD
+---------------------------------------------------------*/
+
+body.kindness-mode {
+
+    --emblema1: #00E40F;
+    --emblema2: #e400d5;
+
+    --linkc1: #00D5E4;
+    --linkc2: #D5E400;
+    --linkc3: #8e1c61;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+button[title="Bondad"] {
+    background-image: url('https://2img.net/i.imgur.com/VMF9CGT.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*---------------------------------------------------------
+DESTINO
+---------------------------------------------------------*/
+
+body.fate-mode {
+
+    --emblema1: #45759B;
+    --emblema2: #9B6B45;
+
+    --linkc1: #459B6B;
+    --linkc2: #6B459B;
+    --linkc3: #9B4545;
+
+    --accent1: var(--linkc1);
+    --accent2: var(--linkc2);
+    --accent3: var(--linkc3);
+
+}
+button[title="Destino"] {
+    background-image: url('https://imgur.com/Mjmg7kc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* ---------------------------------------------------------
    CIRCUITOS DIGITALES
    --------------------------------------------------------- */
