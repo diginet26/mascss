@@ -5562,7 +5562,7 @@ blockquote blockquote {
     padding: 24px 15px 15px;
     position: relative;
     background: var(--bodyf-background);
-    border: 1px solid var(--linkc3;
+    border: 1px solid var(--linkc3);
     box-shadow: inset 0 0 20px rgba(22,119,200,.025);
     transition: .2s ease;
 }
