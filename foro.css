@@ -4511,8 +4511,8 @@ blockquote blockquote {
 .digimon-index {
     --digimon-radius: 15px;
     --digimon-radius-small: 9px;
-    --digimon-bg: linear-gradient(135deg, var(--colorfondo1), var(--colorfondo2));
-    --digimon-panel: linear-gradient(135deg, var(--colorfondo1), var(--colorfondo2));
+    --digimon-bg: linear-gradient(135deg,var(--colorfondo), var(--colorfondo2));
+    --digimon-panel: linear-gradient(135deg,var(--colorfondo), var(--colorfondo2));
     --digimon-gradient: linear-gradient(120deg, var(--emblema1), var(--emblema2));
     --digimon-gradient-reverse: linear-gradient(120deg, var(--emblema2), var(--emblema1));
     --digimon-border: color-mix(in srgb,var(--colortextod1) 12%, transparent);
