@@ -2142,7 +2142,7 @@ button#theme-toggler2:before {
     z-index: 9999999;
     width: 100%;
     margin: -10px 0 14px;
-    background: var(--colorfondo2);
+    background: var(--colorfondo);
     border: 1px solid var(--emblema2);
     border-right: none;
     border-left: none;
