@@ -49,7 +49,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
     margin: 30px auto;
     position: relative;
     overflow: hidden;
-    background:linear-gradient(90deg, var(--bodyf-background) 0%, var(--body-background) 48%, var(--emblema1) 250%        );
+    background:linear-gradient(90deg, var(--bodyf-background) 0%, var(--colorfondo2) 48%, var(--emblema1) 250%        );
     border: 1px solid var(--dg-line);
     color: var(--colortextodl);
     font-family: "Oxanium",sans-serif;
@@ -1089,7 +1089,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 #dg-memberlist{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:15px;padding:5px 15px 15px;box-sizing:border-box}
 .dg-tamer{--dg-group:#1677c8;position:relative;min-height:315px;background:#f4f7f9;border:1px solid #d6e1e8;overflow:hidden;font-family:"Oxanium", sans-serif;box-sizing:border-box;transition:transform .2s,box-shadow .2s}
 .dg-tamer:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(17,24,32,.12)}
-.dg-tamer-header{position:relative;height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 15px;box-sizing:border-box;background: var(--body-background); color:var(--colortextod1);border-bottom:3px solid var(--dg-group)}
+.dg-tamer-header{position:relative;height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 15px;box-sizing:border-box;background: var(--colorfondo2); color:var(--colortextod1);border-bottom:3px solid var(--dg-group)}
 .dg-tamer-code{font-size:9px;letter-spacing:1px;opacity:.8}
 .dg-tamer-code strong{color:#38bdf8}
 .dg-status{font-size:8px;letter-spacing:1px;color:#8fa1ad}
@@ -1184,7 +1184,7 @@ button#theme-toggler2:before {
    DIGIMON PROFILE — DISEÑO COMPLETO
    ========================================================= */
 #dg-profile {
-    --profile-group-color: var(--accent1);
+    --profile-group-color: var(--linkc1);
     --profile-highlight: var(--accent3);
     --profile-glow: color-mix(in srgb, var(--profile-group-color) 35%, transparent);
     width: min(1250px, calc(100% - 40px));
@@ -2142,7 +2142,7 @@ button#theme-toggler2:before {
     z-index: 9999999;
     width: 100%;
     margin: -10px 0 14px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border: 1px solid var(--emblema2);
     border-right: none;
     border-left: none;
@@ -2169,8 +2169,8 @@ body.valor-mode {
     --linkc2: #6F29F1; /*triada2*/
     --linkc3: #d8a839; /*armonia*/
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2194,8 +2194,8 @@ body.amistad-mode {
     --linkc2: #B6E275;
     --linkc3: #75E2D3;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2220,8 +2220,8 @@ body.amor-mode {
     --linkc2: #485DD1;
     --linkc3: #cd89b5;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
    }
@@ -2245,8 +2245,8 @@ body.conocimiento-mode {
     --linkc2: #409292;
     --linkc3: #926A40;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2270,8 +2270,8 @@ body.purity-mode {
     --linkc2: #E16F7C;
     --linkc3: #4b9e80;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 }
 button[title="Pureza"] {
@@ -2294,8 +2294,8 @@ body.sincerity-mode {
     --linkc2: #A4B7A5;
     --linkc3: #6e797f;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2319,8 +2319,8 @@ body.hope-mode {
     --linkc2: #D979E5;
     --linkc3: #88b128;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2344,8 +2344,8 @@ body.light-variant-mode {
     --linkc2: #B6CFED;
     --linkc3: #a17678;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2369,8 +2369,8 @@ body.kindness-mode {
     --linkc2: #D5E400;
     --linkc3: #8e1c61;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2394,8 +2394,8 @@ body.fate-mode {
     --linkc2: #6B459B;
     --linkc3: #9B4545;
 
-    --accent1: var(--linkc1);
-    --accent2: var(--linkc2);
+    --linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);
     --accent3: var(--linkc3);
 
 }
@@ -2525,7 +2525,7 @@ button[title="Destino"] {
     color: var(--colortextodl) !important;
     text-decoration: none;
     border: 1px solid var(--emblema2);
-    background: var(--body-background);
+    background: var(--colorfondo2);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -2982,7 +2982,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     color: var(--theme-text);
 }
 /* Enlace inferior "Ver todas" */
-#digimon-notifications-slot #notif_list .see_all a {color: var(--theme-accent1);}
+#digimon-notifications-slot #notif_list .see_all a {color: var(--theme-linkc1);}
 #digimon-notifications-slot #notif_list .see_all a:hover {color: var(--theme-accent3);}
 /* Ventana de notificación en tiempo real */
 #digimon-notifications-slot #live_notif {z-index: 100001 !important;}
@@ -3007,7 +3007,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     display: block !important;
     padding: 12px !important;
     text-align: center !important;
-    color: var(--theme-accent1) !important;
+    color: var(--theme-linkc1) !important;
 }
 
 /* =========================================================
@@ -3037,8 +3037,8 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     --rift-deep: var(--theme-panel-deep);
     --rift-text: var(--theme-text);
     --rift-muted: var(--theme-text-muted);
-    --rift-a1: var(--accent1);
-    --rift-a2: var(--accent2);
+    --rift-a1: var(--linkc1);
+    --rift-a2: var(--linkc2);
     --rift-a3: var(--accent3);
   / width: 100vw;
     max-width: none;
@@ -4013,7 +4013,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     font: 500 120px/100% "Bungee", sans-serif;
     letter-spacing: -7px;
     color: transparent;
-    background: linear-gradient(45deg, transparent, var(--accent1), var(--emblema2), transparent);
+    background: linear-gradient(45deg, transparent, var(--linkc1), var(--emblema2), transparent);
     background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -4030,7 +4030,7 @@ dl.codebox.spoiler {
     position: relative;
     margin: 18px 0;
     padding: 0;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border: 1px solid var(--emblema1);
     border-left: 4px solid var(--emblema2);
     border-radius: 4px;
@@ -4054,7 +4054,7 @@ dl.codebox.spoiler .spoiler_title {
     height: 36px;
     box-sizing: border-box;
     padding: 0 45px 0 14px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border: 0;
     border-bottom: 1px solid var(--emblema1);
     color: var(--colortextod1);
@@ -4100,7 +4100,7 @@ dl.codebox.spoiler dd {
 dl.codebox.spoiler .spoiler_content {
     box-sizing: border-box;
     padding: 18px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
     font-size: 12px;
@@ -4116,7 +4116,7 @@ blockquote {
     position: relative;
     margin: 18px 0;
     padding: 42px 18px 18px 18px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border: 1px solid var(--emblema1);
     border-left: 4px solid var(--emblema2);
     border-radius: 4px;
@@ -4143,7 +4143,7 @@ blockquote:before {
     align-items: center;
     padding-left: 14px;
     padding-right: 50px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border-bottom: 1px solid var(--emblema1);
     color: var(--colortextodl);
     font-family: "Oxanium", monospace;
@@ -4184,7 +4184,7 @@ blockquote cite {
     align-items: center;
     padding-left: 14px;
     padding-right: 50px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border-bottom: 1px solid var(--emblema1);
     color: var(--colortextodl);
     font-family: "Oxanium", monospace;
@@ -4203,7 +4203,7 @@ dl.codebox:not(.spoiler) {
     position: relative;
     margin: 18px 0;
     padding: 0;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border: 1px solid var(--emblema1);
     border-left: 4px solid var(--emblema2);
     border-radius: 4px;
@@ -4227,7 +4227,7 @@ dl.codebox:not(.spoiler) dt {
     align-items: center;
     padding: 0 90px 0 14px;
     margin: 0;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border-bottom: 1px solid var(--emblema1);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
@@ -4274,7 +4274,7 @@ dl.codebox:not(.spoiler) .digicode-copy {
     padding: 0 8px;
     border: 1px solid var(--emblema1);
     border-radius: 2px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
     font-size: 8px;
@@ -4286,7 +4286,7 @@ dl.codebox:not(.spoiler) .digicode-copy {
 }
 
 dl.codebox:not(.spoiler) .digicode-copy:hover {
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border-color: var(--emblema1);
     color: var(--colortextod1);
     box-shadow: 0 0 8px rgba(53,216,255,.25);
@@ -4304,7 +4304,7 @@ dl.codebox:not(.spoiler) .digicode-copy.copied {
 dl.codebox:not(.spoiler) dd {
     margin: 0;
     padding: 18px;
-    background: #var(--body-background);
+    background: #var(--colorfondo2);
     border: 0;
 }
 
@@ -4511,8 +4511,8 @@ blockquote blockquote {
 .digimon-index {
     --digimon-radius: 15px;
     --digimon-radius-small: 9px;
-    --digimon-bg: linear-gradient(135deg, var(--body-background), var(--post-background));
-    --digimon-panel: linear-gradient(135deg, var(--post-background), var(--body-background));
+    --digimon-bg: linear-gradient(135deg, var(--colorfondo2), var(--colorfondo2));
+    --digimon-panel: linear-gradient(135deg, var(--colorfondo2), var(--colorfondo2));
     --digimon-gradient: linear-gradient(120deg, var(--emblema1), var(--emblema2));
     --digimon-gradient-reverse: linear-gradient(120deg, var(--emblema2), var(--emblema1));
     --digimon-border: color-mix(in srgb,var(--colortextod1) 12%, transparent);
@@ -4544,7 +4544,7 @@ blockquote blockquote {
     padding: 12px 18px;
     border: 1px solid var(--digimon-border);
     border-radius: var(--digimon-radius-small);
-    background: linear-gradient(90deg, var(--post-background), transparent);
+    background: linear-gradient(90deg, var(--colorfondo2), transparent);
     font: 700 9px/1.2 "Oxanium", monospace;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -4564,14 +4564,14 @@ blockquote blockquote {
     border: 1px solid var(--digimon-border);
     border-radius: 6px;
     color: var(--text-color);
-    background: var(--body-background);
+    background: var(--colorfondo2);
     transition: 0.3s ease;
 }
 
-.digimon-tools-left a i, .digimon-mark-read i {color: var(--accent1);}
+.digimon-tools-left a i, .digimon-mark-read i {color: var(--linkc1);}
 
 .digimon-tools-left a:hover, .digimon-mark-read:hover {
-    color: var(--post-background);
+    color: var(--colorfondo2);
     background: var(--digimon-gradient);
     border-color: transparent;
     transform: translateY(-2px);
@@ -4604,7 +4604,7 @@ blockquote blockquote {
     gap: 18px;
     padding: 20px 25px;
     position: relative;
-    background: linear-gradient(100deg, var(--post-background), transparent 65%);
+    background: linear-gradient(100deg, var(--colorfondo2), transparent 65%);
 }
 
 /* Línea de brillo superior */
@@ -4628,9 +4628,9 @@ blockquote blockquote {
     flex-shrink: 0;
     border-radius: 12px;
     background: var(--digimon-gradient);
-    color: var(--post-background);
+    color: var(--colorfondo2);
     font-size: 20px;
-    box-shadow: 0 0 20px color-mix(in srgb, var(--accent1) 25%, transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--linkc1) 25%, transparent);
 }
 
 /* Títulos */
@@ -4674,8 +4674,8 @@ blockquote blockquote {
     height: 7px;
     display: block;
     border-radius: 50%;
-    background: var(--accent2);
-    box-shadow: 0 0 10px var(--accent2);
+    background: var(--linkc2);
+    box-shadow: 0 0 10px var(--linkc2);
 }
 
 /* Separador */
@@ -4683,7 +4683,7 @@ blockquote blockquote {
     width: calc(100% - 50px);
     height: 1px;
     margin: 0 auto;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2), transparent);
+    background: linear-gradient(90deg, var(--linkc1), var(--linkc2), transparent);
     opacity: .65;
 }
 
@@ -4749,7 +4749,7 @@ blockquote blockquote {
 
 .digimon-forum-card:has(.rimageforum) .digimon-forum-content {
     min-height: 300px;
-    background: linear-gradient(90deg, var(--post-background), transparent);
+    background: linear-gradient(90deg, var(--colorfondo2), transparent);
     border: 1px solid var(--digimon-border);
     border-radius: 15px;
     overflow: hidden;
@@ -4773,7 +4773,7 @@ blockquote blockquote {
     mix-blend-mode: color;
 }
 
-.digimon-forum-card:has(.rimageforum) .rforimg::after {background: linear-gradient(90deg, var(--post-background), transparent 65%);}
+.digimon-forum-card:has(.rimageforum) .rforimg::after {background: linear-gradient(90deg, var(--colorfondo2), transparent 65%);}
 
 .digimon-forum-card:has(.rimageforum) .rfordesc {
     width: 48%;
@@ -4845,8 +4845,8 @@ blockquote blockquote {
 .digimon-forum-card:nth-child(even)::before {background: var(--digimon-gradient-reverse);}
 .digimon-forum-card:hover {
     transform: translateY(-5px);
-    border-color: var(--accent1);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .25), 0 0 20px color-mix(in srgb, var(--accent1) 10%, transparent);
+    border-color: var(--linkc1);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25), 0 0 20px color-mix(in srgb, var(--linkc1) 10%, transparent);
 }
 
 /* =========================================================
@@ -4868,7 +4868,7 @@ blockquote blockquote {
     gap: 12px;
     padding: 17px 18px;
     border-bottom: 1px solid var(--digimon-border);
-    background: linear-gradient(90deg, var(--post-background),transparent);
+    background: linear-gradient(90deg, var(--colorfondo2),transparent);
 }
 
 .digimon-forum-number {
@@ -4879,9 +4879,9 @@ blockquote blockquote {
     justify-content: center;
     flex-shrink: 0;
     border-radius: 8px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border: 1px solid var(--digimon-border);
-    color: var(--accent1);
+    color: var(--emblema2);
     font-size: 14px;
 }
 
@@ -4903,7 +4903,7 @@ blockquote blockquote {
     transition: color .3s ease;
 }
 
-.digimon-forum-name a.forumtitle:hover {color: var(--accent1);}
+.digimon-forum-name a.forumtitle:hover {color: var(--linkc1);}
 
 /* Indicador */
 .digimon-forum-signal {
@@ -4919,8 +4919,8 @@ blockquote blockquote {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--accent2);
-    box-shadow: 0 0 9px var(--accent2);
+    background: var(--linkc2);
+    box-shadow: 0 0 9px var(--linkc2);
 }
 
 /* =========================================================
@@ -4946,7 +4946,7 @@ blockquote blockquote {
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
-    background: var(--body-background);
+    background: var(--colorfondo2);
 }
 
 /* Imagen del foro */
@@ -4968,7 +4968,7 @@ blockquote blockquote {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 5%, var(--body-background) 100%);
+    background: linear-gradient(180deg, transparent 5%, var(--colorfondo2) 100%);
 }
 
 /* Degradado de color sobre la imagen */
@@ -4996,7 +4996,7 @@ blockquote blockquote {
     color: var(--text-color);
     font: 11px/1.7 "Poppins", sans-serif;
     text-align: justify;
-    background: linear-gradient(180deg, transparent, var(--body-background) 60%);
+    background: linear-gradient(180deg, transparent, var(--colorfondo2) 60%);
 }
 
 /* =========================================================
@@ -5009,7 +5009,7 @@ blockquote blockquote {
     flex-wrap: wrap;
     gap: 7px;
     padding: 0 20px 18px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
 }
 
 .digimon-forum-description .rforlinks a {
@@ -5021,7 +5021,7 @@ blockquote blockquote {
     border: 1px solid var(--digimon-border);
     border-radius: 5px;
     color: var(--text-color);
-    background: var(--post-background);
+    background: var(--colorfondo2);
     font: 700 8px/1.2 "Oxanium", monospace;
     letter-spacing: .5px;
     text-transform: uppercase;
@@ -5029,7 +5029,7 @@ blockquote blockquote {
 }
 
 .digimon-forum-description .rforlinks a:hover {
-    color: var(--post-background);
+    color: var(--colorfondo2);
     border-color: transparent;
     background: var(--digimon-gradient);
     transform: translateY(-2px);
@@ -5058,11 +5058,11 @@ blockquote blockquote {
     align-items: center;
     justify-content: center;
     gap: 3px;
-    background: var(--post-background);
+    background: var(--colorfondo2);
 }
 
 .digimon-stat-icon {
-    color: var(--accent1);
+    color: var(--emblema2);
     font-size: 11px;
 }
 
@@ -5086,7 +5086,7 @@ blockquote blockquote {
     align-items: center;
     gap: 12px;
     padding: 12px 15px;
-    background: var(--post-background);
+    background: var(--colorfondo2);
 }
 
 .digimon-lastpost-info {
@@ -5111,7 +5111,7 @@ blockquote blockquote {
     white-space: nowrap;
 }
 
-.digimon-lastpost-info > a:hover {color: var(--accent1);}
+.digimon-lastpost-info > a:hover {color: var(--linkc1);}
 
 .digimon-lastpost-user {
     color: var(--digimon-muted);
@@ -5127,7 +5127,7 @@ blockquote blockquote {
     display: block;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid var(--accent1);
+    border: 2px solid var(--linkc1);
 }
 
 /* =========================================================
@@ -5186,8 +5186,8 @@ blockquote blockquote {
     transition: .3s ease;
 }
 
-.digimon-footer-links a i, .digimon-delete-cookies i {color: var(--accent1);}
-.digimon-footer-links a:hover, .digimon-delete-cookies:hover {color: var(--accent1);}
+.digimon-footer-links a i, .digimon-delete-cookies i {color: var(--linkc1);}
+.digimon-footer-links a:hover, .digimon-delete-cookies:hover {color: var(--linkc1);}
 
 /* =========================================================
    RESPONSIVE
@@ -5225,16 +5225,16 @@ blockquote blockquote {
     display: inline-block;
     margin-bottom: 10px;
     padding: 5px 8px;
-    border-left: 3px solid var(--accent1);
-    color: var(--accent1);
+    border-left: 3px solid var(--linkc1);
+    color: var(--linkc1);
     font: 700 8px/1.2 "Oxanium", monospace;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .rdoubleforum .digimon-description-label {
-    border-left-color: var(--accent2);
-    color: var(--accent2);
+    border-left-color: var(--linkc2);
+    color: var(--linkc2);
 }
 
 /* =========================================================
@@ -5243,8 +5243,8 @@ blockquote blockquote {
 #digimon-statistics {
     --stats-border: color-mix(in srgb, var(--text-color) 12%, transparent);
     --stats-muted: color-mix(in srgb, var(--text-color) 55%, transparent);
-    --stats-panel: linear-gradient(135deg, var(--post-background), var(--body-background));
-    --stats-gradient: linear-gradient(120deg, var(--accent1), var(--accent2));
+    --stats-panel: linear-gradient(135deg, var(--colorfondo2), var(--colorfondo2));
+    --stats-gradient: linear-gradient(120deg, var(--linkc1), var(--linkc2));
     width: 100%;
     max-width: 1400px;
     margin: 35px auto 0;
@@ -5252,7 +5252,7 @@ blockquote blockquote {
     box-sizing: border-box;
     border: 1px solid var(--stats-border);
     border-radius: 16px;
-    background: linear-gradient(135deg, var(--body-background),var(--post-background));
+    background: linear-gradient(135deg, var(--colorfondo2),var(--colorfondo2));
     overflow: hidden;
     font-family: "Poppins", sans-serif;
     box-shadow: 0 15px 50px rgba(0, 0, 0, .18);
@@ -5274,7 +5274,7 @@ blockquote blockquote {
 .digimon-stats-kicker {
     display: block;
     margin-bottom: 8px;
-    color: var(--accent1);
+    color: var(--linkc1);
     font: 700 9px/1.2 "Oxanium", monospace;
     letter-spacing: 2px;
 }
@@ -5310,8 +5310,8 @@ blockquote blockquote {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--accent2);
-    box-shadow: 0 0 12px var(--accent2);
+    background: var(--linkc2);
+    box-shadow: 0 0 12px var(--linkc2);
 }
 
 /* =========================================================
@@ -5321,7 +5321,7 @@ blockquote blockquote {
     width: 100%;
     height: 2px;
     margin: 22px 0;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2), transparent);
+    background: linear-gradient(90deg, var(--linkc1), var(--linkc2), transparent);
     opacity: .8;
 }
 
@@ -5359,7 +5359,7 @@ blockquote blockquote {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 15%, var(--body-background) 100%);
+    background: linear-gradient(180deg, transparent 15%, var(--colorfondo2) 100%);
 }
 
 .digimon-stats-image::before {
@@ -5392,7 +5392,7 @@ blockquote blockquote {
 .digimon-stats-label {
     display: block;
     margin-bottom: 8px;
-    color: var(--accent1);
+    color: var(--linkc1);
     font: 700 8px/1.2 "Oxanium", monospace;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -5442,14 +5442,14 @@ blockquote blockquote {
     gap: 12px;
     padding: 13px 16px;
     border-bottom: 1px solid var(--stats-border);
-    background: var(--post-background);
+    background: var(--colorfondo2);
     color: var(--stats-muted);
     font: 700 8px/1.2 "Oxanium", monospace;
     letter-spacing: 1px;
 }
 
 .digimon-window-header > span:nth-child(2) {flex: 1;}
-.digimon-window-header > i {color: var(--accent1);}
+.digimon-window-header > i {color: var(--linkc1);}
 .digimon-window-dots {
     display: flex;
     gap: 5px;
@@ -5460,9 +5460,9 @@ blockquote blockquote {
     height: 8px;
     display: block;
     border-radius: 50%;
-    background: var(--accent1);
+    background: var(--linkc1);
 }
-.digimon-window-dots i:nth-child(2) {background: var(--accent2);}
+.digimon-window-dots i:nth-child(2) {background: var(--linkc2);}
 .digimon-window-dots i:nth-child(3) {background: var(--accent3);}
 
 /* Contenido */
@@ -5484,7 +5484,7 @@ blockquote blockquote {
     justify-content: center;
     border-radius: 12px;
     background: var(--stats-gradient);
-    color: var(--post-background);
+    color: var(--colorfondo2);
     font-size: 20px;
 }
 
@@ -5514,7 +5514,7 @@ blockquote blockquote {
     padding: 14px;
     border: 1px solid var(--stats-border);
     border-radius: 8px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
 }
 
 .digimon-data-name {
@@ -5527,7 +5527,7 @@ blockquote blockquote {
 .digimon-online-data strong {
     display: block;
     margin-top: 8px;
-    color: var(--accent1);
+    color: var(--linkc1);
     font: 700 22px/1 "Oxanium", sans-serif;
 }
 
@@ -5543,8 +5543,8 @@ blockquote blockquote {
     color: var(--text-color);
     font: 10px/1.8 "Poppins", sans-serif;
 }
-.digimon-user-list a {color: var(--accent1);}
-.digimon-user-list a:hover {color: var(--accent2);}
+.digimon-user-list a {color: var(--linkc1);}
+.digimon-user-list a:hover {color: var(--linkc2);}
 
 /* =========================================================
    CONTADORES
@@ -5569,7 +5569,7 @@ blockquote blockquote {
 
 .digimon-counter:hover {
     transform: translateY(-3px);
-    border-color: var(--accent1);
+    border-color: var(--linkc1);
 }
 
 .digimon-counter-icon {
@@ -5580,8 +5580,8 @@ blockquote blockquote {
     justify-content: center;
     flex-shrink: 0;
     border-radius: 10px;
-    background: var(--body-background);
-    color: var(--accent1);
+    background: var(--colorfondo2);
+    color: var(--linkc1);
     font-size: 18px;
 }
 .digimon-counter-data {min-width: 0;}
@@ -5636,7 +5636,7 @@ blockquote blockquote {
     flex-shrink: 0;
     border-radius: 50%;
     background: var(--stats-gradient);
-    color: var(--post-background);
+    color: var(--colorfondo2);
     font-size: 19px;
 }
 
@@ -5656,7 +5656,7 @@ blockquote blockquote {
 .digimon-record-users small {
     display: block;
     margin-top: 8px;
-    color: var(--accent2);
+    color: var(--linkc2);
     font: 8px/1.4 "Oxanium", monospace;
 }
 
@@ -5696,11 +5696,11 @@ blockquote blockquote {
 }
 
 .digimon-groups-list a {
-    color: var(--accent1);
+    color: var(--linkc1);
     transition: color .3s ease;
 }
 
-.digimon-groups-list a:hover {color: var(--accent2);}
+.digimon-groups-list a:hover {color: var(--linkc2);}
 
 /* =========================================================
    RESPONSIVE
@@ -5741,7 +5741,7 @@ blockquote blockquote {
     padding: 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--body-background),var(--body-background));
+    background: linear-gradient(135deg, var(--colorfondo2),var(--colorfondo2));
     border: 1px solid var(--linkc3);
     color: var(--colortextod1);
     font-family: "Oxanium", sans-serif;
@@ -5757,7 +5757,7 @@ blockquote blockquote {
     content: "DIGITAL RIFT";
     display: block;
     padding: 7px 15px;
-    background: var(--body-background);
+    background: var(--colorfondo2);
     border-bottom: 1px solid var(--dice-line);
     color: var(--linkc3);
     font-family: "Jersey 15", monospace;
@@ -5864,8 +5864,8 @@ blockquote blockquote {
     width: 100%;
     padding: 9px 11px;
     box-sizing: border-box;
-    background: var(--body-background);
-    border: 1px solid var(--body-background);
+    background: var(--colorfondo2);
+    border: 1px solid var(--colorfondo2);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
     font-size: 9px;
