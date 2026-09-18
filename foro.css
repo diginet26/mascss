@@ -5015,7 +5015,7 @@ blockquote blockquote {
     flex-wrap: wrap;
     gap: 7px;
     padding: 0 20px 18px;
-    background: var(--colorfondo4);
+    /*background: var(--colorfondo4);*/
 }
 
 .digimon-forum-description .rforlinks a {
@@ -5027,7 +5027,7 @@ blockquote blockquote {
     border: 1px solid var(--digimon-border);
     border-radius: 5px;
     color: var(--text-color);
-    background: var(--colorfondo4);
+    background: var(--linkc3);
     font: 700 8px/1.2 "Oxanium", monospace;
     letter-spacing: .5px;
     text-transform: uppercase;
