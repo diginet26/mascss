@@ -332,7 +332,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
     margin-left: 5px;
 }
 
-.dr-tadmin .dg-lista h3 span {color: var(--emblema1);}
+.dr-tadmin .dr-lista h3 span {color: var(--emblema1);}
 
 /* descripción */
 .dr-tadmin .dr-lista p {
@@ -424,9 +424,9 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
 .dr-tadmin .dr-section2-title { min-height:43px; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, var(--linkc3), transparent ); border-bottom:1px solid var(--emblema1); } 
-.dr-tadmin .dr-section2-title .letters { font-family:'Jersey 15',Arial,sans-serif; font-size:25px; font-weight:700; color:var(--white); letter-spacing:2px; }
+.dr-tadmin .dr-section2-title .letters { font-family:'Jersey 15',Arial,sans-serif; font-size:25px; font-weight:700; color:var(--colortextod2); letter-spacing:2px; }
 .dr-tadmin .dr-section2-title .letters span { color:var(--emblema2); } 
-.dr-tadmin .dg-section-title .number { font-family:'Oxanium',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
+.dr-tadmin .dr-section-title .number { font-family:'Oxanium',monospace; font-size:8px; color:#526b7a; letter-spacing:1px; }
 
 /* ========================================================== REGISTROS ========================================================== */ 
 
