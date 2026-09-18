@@ -49,7 +49,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
     margin: 30px auto;
     position: relative;
     overflow: hidden;
-    background:linear-gradient(90deg, var(--bodyf-background) 0%, var(--colorfondo2) 48%, var(--emblema1) 250%        );
+    background:linear-gradient(90deg, var(--colorfondo1) 0%, var(--colorfondo2) 48%, var(--emblema1) 250%        );
     border: 1px solid var(--dg-line);
     color: var(--colortextodl);
     font-family: "Oxanium",sans-serif;
@@ -418,7 +418,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 
 /* ==================TABLA REGISTROS================= BLOQUES DE LETRAS ================================ */ 
 
-.dr-tadmin .dr-section2 { border:1px solid var(--emblema1); var(--bodyf-background); position:relative; } 
+.dr-tadmin .dr-section2 { border:1px solid var(--emblema1); var(--colorfondo1); position:relative; } 
 .dr-tadmin .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--emblema2); }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
@@ -5821,7 +5821,7 @@ blockquote blockquote {
     margin: 20px 20px 0;
     padding: 24px 15px 15px;
     position: relative;
-    background: var(--bodyf-background);
+    background: var(--colorfondo1);
     border: 1px solid var(--linkc3);
     box-shadow: inset 0 0 20px rgba(22,119,200,.025);
     transition: .2s ease;
