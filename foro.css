@@ -3176,7 +3176,9 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     padding: 16px;
     min-height: 560px;
 }
-
+#rift-board {
+    z-index: 1;
+}
 /* ---------------------------------------------------------
    DECORACIÓN ESQUINAS
    --------------------------------------------------------- */
