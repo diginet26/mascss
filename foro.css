@@ -2169,8 +2169,8 @@ body.valor-mode {
     --linkc2: #6F29F1; /*triada2*/
     --linkc3: #d8a839; /*armonia*/
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
@@ -2194,8 +2194,8 @@ body.amistad-mode {
     --linkc2: #B6E275;
     --linkc3: #75E2D3;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
@@ -2220,8 +2220,8 @@ body.amor-mode {
     --linkc2: #485DD1;
     --linkc3: #cd89b5;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
    }
@@ -2245,8 +2245,8 @@ body.conocimiento-mode {
     --linkc2: #409292;
     --linkc3: #926A40;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
@@ -2270,8 +2270,8 @@ body.purity-mode {
     --linkc2: #E16F7C;
     --linkc3: #4b9e80;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 }
 button[title="Pureza"] {
@@ -2294,8 +2294,8 @@ body.sincerity-mode {
     --linkc2: #A4B7A5;
     --linkc3: #6e797f;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
@@ -2319,8 +2319,8 @@ body.hope-mode {
     --linkc2: #D979E5;
     --linkc3: #88b128;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
@@ -2344,8 +2344,8 @@ body.light-variant-mode {
     --linkc2: #B6CFED;
     --linkc3: #a17678;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
@@ -2369,8 +2369,8 @@ body.kindness-mode {
     --linkc2: #D5E400;
     --linkc3: #8e1c61;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
@@ -2394,8 +2394,8 @@ body.fate-mode {
     --linkc2: #6B459B;
     --linkc3: #9B4545;
 
-    --linkc1: var(--linkc1);
-    --linkc2: var(--linkc2);
+    /*--linkc1: var(--linkc1);
+    --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
 
 }
