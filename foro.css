@@ -757,10 +757,10 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 }
 
 /* =========================================================
-   IMAGEN ESTÁTICA ENTRE TÍTULO E INTRODUCCIÓN
+   IMAGEN ESTÁTICA 
    ========================================================= */
 
-.dr-map-head::after {
+.dr-map-image2 {
     content: "";
     display: block;
 
