@@ -4740,7 +4740,12 @@ blockquote blockquote {
 .digimon-forum-card:has(.rtripleforum) .rfordesc {padding: 55px 15px 15px; font-size: 10px;}
 .digimon-forum-card:has(.rtripleforum) .rforlinks {padding: 0 15px 15px;}
 .digimon-forum-card:has(.rtripleforum) .rforlinks a {font-size: 7px; padding: 5px 7px;}
-
+.digimon-forum-card:has(.rtripleforum) h3.hierarchy {
+    width: auto;
+    float: none;
+    text-align: left;
+    margin: 0;
+}
 /* =========================================================
    FORO DE IMAGEN TRANSPARENTE
    ========================================================= */
