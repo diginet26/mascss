@@ -2921,10 +2921,163 @@ button[title="Destino"] {
     cursor: pointer !important;
 }
 
+/* =========================================================
+   SWITCHEROO — ACABADO VISUAL
+   ========================================================= */
+
+#switcheroo {
+    z-index: 100000 !important;
+
+    padding: 12px !important;
+
+    background: linear-gradient(
+        145deg,
+        var(--theme-panel-deep),
+        var(--theme-panel)
+    ) !important;
+
+    border: 1px solid var(--emblema2) !important;
+    border-left: 0 !important;
+
+    border-radius: 0 14px 14px 0 !important;
+
+    box-shadow:
+        0 0 12px var(--emblema2),
+        0 8px 25px rgba(0, 0, 0, .65),
+        inset 0 0 18px rgba(0, 0, 0, .35) !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* CONTENEDOR DE LAS CUENTAS */
+
+#switcheroo .switcheroo__squircles {
+    gap: 14px !important;
+    padding: 4px !important;
+}
+
+
+/* AVATARES / CUENTAS */
+
+#switcheroo .switcheroo__squircle,
+#switcheroo .switcheroo__squircle--button {
+    width: 72px !important;
+    height: 72px !important;
+
+    border: 2px solid var(--emblema2) !important;
+    border-radius: 10px !important;
+
+    background: var(--theme-panel-deep) !important;
+
+    box-shadow:
+        0 0 5px var(--emblema2),
+        inset 0 0 10px rgba(0, 0, 0, .4) !important;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-radius .2s ease,
+        background .2s ease !important;
+}
+
+
+/* AVATAR */
+
+#switcheroo .switcheroo__avatar,
+#switcheroo .switcheroo__avatar img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#switcheroo .switcheroo__avatar img {
+    object-fit: cover !important;
+    border-radius: 7px !important;
+}
+
+
+/* CUENTA ACTIVA */
+
+#switcheroo .switcheroo__squircle.active {
+    border-color: var(--emblema2) !important;
+
+    background: var(--emblema2) !important;
+
+    box-shadow:
+        0 0 12px var(--emblema2),
+        inset 0 0 12px rgba(0, 0, 0, .35) !important;
+}
+
+
+/* HOVER */
+
+#switcheroo .switcheroo__squircle:hover,
+#switcheroo .switcheroo__squircle--button:hover {
+    transform: translateX(4px) scale(1.04) !important;
+
+    background: var(--emblema2) !important;
+
+    box-shadow:
+        0 0 14px var(--emblema2),
+        inset 0 0 10px rgba(0, 0, 0, .3) !important;
+}
+
+
+/* BOTÓN + */
+
+#switcheroo .switcheroo__squircle--button {
+    color: var(--emblema2) !important;
+    font-size: 38px !important;
+    font-weight: 300 !important;
+}
+
+#switcheroo .switcheroo__squircle--button:hover {
+    color: var(--theme-panel-deep) !important;
+}
+
+/* =========================================================
+   BOTÓN X — ELIMINAR CUENTA
+   ========================================================= */
+#switcheroo .switcheroo__delete {
+    display: grid !important;
+    place-items: center !important;
+    position: absolute !important;
+    width: 20px !important;
+    height: 20px !important;
+    top: -7px !important;
+    right: -7px !important;
+    border: 1px solid var(--emblema2) !important;
+    border-radius: 50% !important;
+    background: var(--theme-panel-deep) !important;
+    color: var(--emblema2) !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    opacity: 0 !important;
+    transform: scale(.7) !important;
+    box-shadow: 0 0 7px var(--emblema2) !important;
+    cursor: pointer !important;
+    transition:opacity .15s ease,transform .15s ease, background .15s ease, color .15s ease !important;
+    z-index: 20 !important;
+}
+
+/* X visible al pasar por encima de una cuenta */
+#switcheroo .switcheroo__squircle:hover .switcheroo__delete {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+/* Hover de la X */
+#switcheroo .switcheroo__delete:hover {
+    background: var(--emblema2) !important;
+    color: var(--theme-panel-deep) !important;
+    transform: scale(1.12) !important;
+    box-shadow: 0 0 10px var(--emblema2) !important;
+}
+
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
-
 @media (max-width: 900px) {
     .digimon-main-button {
         padding: 0 8px;
