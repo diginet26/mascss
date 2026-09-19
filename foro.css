@@ -6372,3 +6372,14 @@ blockquote blockquote {
 .sceditor-container ::-webkit-scrollbar-thumb:hover {
     background: #35D8FF;
 }
+
+/*boton de admin panel*/
+#page-footer p.copyright a[href*="/admin/"] {
+    font-size: 0 !important;
+}
+
+#page-footer p.copyright a[href*="/admin/"]::before {
+    content: "⚙";
+    font-size: 20px;
+    color: #fff;
+}
