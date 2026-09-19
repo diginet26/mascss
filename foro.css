@@ -3147,11 +3147,11 @@ button[title="Destino"] {
     padding-top: 32px !important;
 }
 
-#switcheroo .switcheroo__popper-text {
+#switcheroo .switcheroo__squircle--button .switcheroo__popper-text {
     font-size: 0 !important;
 }
 
-#switcheroo .switcheroo__popper-text::after {
+#switcheroo .switcheroo__squircle--button .switcheroo__popper-text::after {
     content: "Añadir cuenta";
     font-size: 11px !important;
 }
