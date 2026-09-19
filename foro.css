@@ -4045,12 +4045,15 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 
 .rift-header-title span {
     display: block;
-    font-size: 9px;
+    font-size: 25px;
     font-weight: normal;
+    text-decoration: none;
     color: #fff;
-    text-align: center;
+    text-align: right;
     line-height: 1;
     margin-top: 4px;
+    font-family: 'Jersey 15';
+    letter-spacing: 1px;
 }
 
 #rift-board {max-width: 100%;}/*EVITAR SCROLL HORIZONTAL DEL TABLÓN*/
