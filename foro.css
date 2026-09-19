@@ -5029,7 +5029,7 @@ blockquote blockquote {
     color: var(--text-color);
     font: 11px/1.7 "Poppins", sans-serif;
     text-align: justify;
-    background: linear-gradient(180deg, transparent, var(--colorfondo4) 60%);
+    background: linear-gradient(87deg, transparent, var(--colorfondo) 70%)
 }
 
 /* =========================================================
