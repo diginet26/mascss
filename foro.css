@@ -3075,6 +3075,84 @@ button[title="Destino"] {
     box-shadow: 0 0 10px var(--emblema2) !important;
 }
 
+/* =========================================================
+   SWITCHEROO — IDENTIDAD DEL PANEL
+   ========================================================= */
+
+#switcheroo {
+    position: fixed !important;
+    overflow: visible !important;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            color-mix(in srgb, var(--emblema2) 14%, transparent),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            var(--theme-panel-deep),
+            var(--theme-panel)
+        ) !important;
+
+    border-top: 2px solid var(--emblema2) !important;
+}
+
+
+/* CABECERA */
+
+#switcheroo::before {
+    content: "RIFT // CUENTAS";
+
+    position: absolute;
+    top: 8px;
+    left: 12px;
+
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    line-height: 1;
+
+    color: var(--emblema2);
+
+    text-shadow:
+        0 0 5px var(--emblema2);
+
+    opacity: .9;
+}
+
+
+/* LÍNEA DECORATIVA DE LA CABECERA */
+
+#switcheroo::after {
+    content: "";
+
+    position: absolute;
+    top: 24px;
+    left: 12px;
+    right: 12px;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        var(--emblema2),
+        transparent
+    );
+
+    box-shadow:
+        0 0 5px var(--emblema2);
+
+    opacity: .7;
+}
+
+
+/* BAJAMOS LIGERAMENTE LAS CUENTAS PARA DEJAR ESPACIO A LA CABECERA */
+
+#switcheroo .switcheroo__squircles {
+    padding-top: 32px !important;
+}
+
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
