@@ -3153,6 +3153,14 @@ button[title="Destino"] {
     padding-top: 32px !important;
 }
 
+#switcheroo .switcheroo__popper-text {
+    font-size: 0 !important;
+}
+
+#switcheroo .switcheroo__popper-text::after {
+    content: "Asociar personaje";
+    font-size: 11px !important;
+}
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
