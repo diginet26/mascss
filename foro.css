@@ -4043,7 +4043,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     filter: contrast(1.2) blur(0.8px);
 }
 
-.rift-title span {
+.rift-header-title span {
     display: block;
     font-size: 9px;
     font-weight: normal;
