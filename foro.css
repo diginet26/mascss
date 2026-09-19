@@ -763,12 +763,8 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 .dr-map-image2 {
     content: "";
     display: block;
-
     width: 100%;
     height: 220px;
-
-    margin-top: 16px;
-
     background-image: url("https://imgur.com/57bOqxx.jpg");
     background-size: cover;
     background-position: center;
