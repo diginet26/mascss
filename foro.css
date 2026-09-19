@@ -4043,6 +4043,16 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     filter: contrast(1.2) blur(0.8px);
 }
 
+.rift-title span {
+    display: block;
+    font-size: 9px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    margin-top: 4px;
+}
+
 #rift-board {max-width: 100%;}/*EVITAR SCROLL HORIZONTAL DEL TABLÓN*/
 
 /* =========================================================
