@@ -756,6 +756,28 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
     letter-spacing:.5px;
 }
 
+/* =========================================================
+   IMAGEN ESTÁTICA ENTRE TÍTULO E INTRODUCCIÓN
+   ========================================================= */
+
+.dr-map-head::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    margin-top: 16px;
+
+    background-image: url("URL-DE-LA-IMAGEN");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #203746;
+    box-sizing: border-box;
+}
+
 /* ESTADO ACTIVO */
 #dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"], #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"], #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"],
 #dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"], #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"], #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {
