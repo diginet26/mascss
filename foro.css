@@ -4943,7 +4943,7 @@ blockquote blockquote {
 /* =========================================================
    ESTRUCTURA SINGLE FORUM
    ========================================================= */
-.digimon-forum-description .rsingleforum, .digimon-forum-description .rdoubleforum {
+.digimon-forum-description .rsingleforum, .digimon-forum-description .rdoubleforum, .digimon-forum-description .rtripleforum {
     position: relative;
     min-height: 170px;
     width: 100%;
