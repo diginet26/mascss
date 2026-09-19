@@ -4764,7 +4764,7 @@ blockquote blockquote {
 .digimon-forum-card:has(.rimageforum) .rforimg {
     width: 100%;
     height: 100%;
-    background-size: revert-rule;
+    background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
 /*    filter: none;
