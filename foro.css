@@ -3102,22 +3102,16 @@ button[title="Destino"] {
 /* CABECERA */
 
 #switcheroo::before {
-    content: "RIFT // CUENTAS";
-
+    content: "{ADD+USER}";
     position: absolute;
     top: 8px;
     left: 12px;
-
     font-family: 'Jersey 15', sans-serif;
     font-size: 10px;
     letter-spacing: 1.5px;
     line-height: 1;
-
     color: var(--emblema2);
-
-    text-shadow:
-        0 0 5px var(--emblema2);
-
+    text-shadow: 0 0 5px var(--emblema2);
     opacity: .9;
 }
 
@@ -3158,7 +3152,7 @@ button[title="Destino"] {
 }
 
 #switcheroo .switcheroo__popper-text::after {
-    content: "Asociar personaje";
+    content: "Añadir cuenta";
     font-size: 11px !important;
 }
 /* ---------------------------------------------------------
