@@ -5137,6 +5137,7 @@ blockquote blockquote {
     flex-wrap: wrap;
     gap: 7px;
     padding: 0 20px 18px;
+  margin-top: 15px;
     /*background: var(--colorfondo4);*/
 }
 
