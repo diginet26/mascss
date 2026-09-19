@@ -4741,10 +4741,10 @@ blockquote blockquote {
 .digimon-forum-card:has(.rtripleforum) .rforlinks {padding: 0 15px 15px;}
 .digimon-forum-card:has(.rtripleforum) .rforlinks a {font-size: 7px; padding: 5px 7px;}
 .digimon-forum-card:has(.rtripleforum) h3.hierarchy {
-    width: auto;
-    float: none;
-    text-align: left;
-    margin: 0;
+    width: auto !important;
+    float: none !important;
+    text-align: left !important;
+    margin: 0 !important;
 }
 /* =========================================================
    FORO DE IMAGEN TRANSPARENTE
