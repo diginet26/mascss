@@ -4900,7 +4900,8 @@ blockquote blockquote {
     gap: 12px;
     padding: 17px 18px;
     border-bottom: 1px solid var(--digimon-border);
-    background: linear-gradient(90deg, var(--colorfondo4),transparent);
+    /*background: linear-gradient(90deg, var(--colorfondo4),transparent);*/
+    background-color: var(--colorfondo4);
 }
 
 .digimon-forum-number {
