@@ -2833,6 +2833,94 @@ button[title="Destino"] {
 }
 
 #switcheroo .switcheroo__squircle--button:hover {color: var(--theme-panel-deep);}
+
+/* =========================================================
+   SWITCHEROO - MODAL DE LOGIN
+   ========================================================= */
+
+.monomer-overlay {
+    position: fixed !important;
+    z-index: 99999 !important;
+    inset: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    transition: opacity .2s ease !important;
+}
+
+.monomer-modal {
+    position: fixed !important;
+    z-index: 100000 !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: min(420px, 94vw) !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    opacity: 0 !important;
+    background: var(--theme-panel-deep) !important;
+    border: 1px solid var(--emblema2) !important;
+    color: var(--theme-text) !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .7) !important;
+    border-radius: 8px !important;
+    transition: opacity .2s ease !important;
+}
+
+.monomer-modal.monomer-open,
+.monomer-overlay.monomer-open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.switcheroo__form {
+    padding: 20px !important;
+    background: transparent !important;
+}
+
+.switcheroo__form-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    margin-bottom: 14px !important;
+}
+
+.switcheroo__form-label {
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+.switcheroo__form-input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 8px !important;
+    background: var(--theme-panel) !important;
+    border: 1px solid var(--emblema2) !important;
+    color: var(--theme-text) !important;
+}
+
+.switcheroo__form-button {
+    padding: 8px 14px !important;
+    background: var(--emblema2) !important;
+    color: var(--theme-panel-deep) !important;
+    border: 0 !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+}
+
+.monomer-close {
+    position: absolute !important;
+    top: -8px !important;
+    right: -8px !important;
+    width: 24px !important;
+    height: 24px !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background: var(--emblema2) !important;
+    color: var(--theme-panel-deep) !important;
+    cursor: pointer !important;
+}
+
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
@@ -4755,7 +4843,7 @@ blockquote blockquote {
     padding: 45px 30px 20px;
 }
 
-.digimon-forum-card:has(.rsingleforum) .rforlinks {padding-left: 48%;}/* Enlaces */
+/*.digimon-forum-card:has(.rsingleforum) .rforlinks {padding-left: 48%;}*//* Enlaces */
 
 /*FOROS DOBLES*/
 .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content {min-height: 320px;}
