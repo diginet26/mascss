@@ -5197,7 +5197,6 @@ blockquote blockquote {
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-@media screen and (max-width: 1000px) {.digimon-forums-grid {grid-template-columns: 1fr;}}
 @media screen and (max-width: 700px) {.digimon-index {padding: 15px 0 30px;}
     .digimon-index-tools {flex-direction: column; align-items: stretch;}
     .digimon-tools-left {display: grid; grid-template-columns: repeat(2, 1fr);}
