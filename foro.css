@@ -4735,7 +4735,7 @@ blockquote blockquote {
 /*FOROS TRIPLES*/
 .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {min-height: 285px;}
 .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {min-height: 190px;}
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-name a.forumtitle {font-size: 14px;}
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-name a.forumtitle {font-size: 18px; line-height: 1.2; white-space: normal;}
 .digimon-forum-card:has(.rtripleforum) .digimon-forum-heading {padding: 13px;}
 .digimon-forum-card:has(.rtripleforum) .rfordesc {padding: 55px 15px 15px; font-size: 10px;}
 .digimon-forum-card:has(.rtripleforum) .rforlinks {padding: 0 15px 15px;}
