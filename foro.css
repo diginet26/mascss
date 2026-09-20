@@ -7595,55 +7595,14 @@ blockquote blockquote {
    RLINKFORUM — FOROS BASADOS EN ENLACES
    ========================================================= */
 
-/* Contenedor principal: liberamos la altura propia del formato */
+/* =========================================================
+   RLINKFORUM — AJUSTE DE ALTURA
+   ========================================================= */
+
 .digimon-forum-card:has(.rlinkforum) .digimon-forum-content {
-    min-height: 0;
+    min-height: 320px !important;
 }
 
-/* La zona de descripción deja de reservar espacio */
 .digimon-forum-card:has(.rlinkforum) .digimon-forum-description {
-    min-height: 0;
-}
-
-/* Estructura interna del rlinkforum */
-.digimon-forum-card:has(.rlinkforum) .rlinkforum {
-    min-height: 190px;
-}
-
-/* Imagen */
-.digimon-forum-card:has(.rlinkforum) .rlinkforum .rforimg {
-    opacity: .45;
-}
-
-/* Zona de enlaces */
-.digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {
-    padding: 25px 20px 18px;
-    margin: 0;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--colorfondo) 85%
-    );
-}
-
-/* Enlaces como contenido principal */
-.digimon-forum-card:has(.rlinkforum) .rlinkforum .rforlinks {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 7px;
-    margin: 0;
-    padding: 0;
-}
-
-/* Botones */
-.digimon-forum-card:has(.rlinkforum) .rlinkforum .rforlinks a {
-    min-height: 25px;
-    padding: 5px 9px;
-    font-size: 8px;
-}
-
-/* Hover */
-.digimon-forum-card:has(.rlinkforum) .rlinkforum .rforlinks a:hover {
-    transform: translateY(-2px);
+    min-height: 230px !important;
 }
