@@ -3420,6 +3420,17 @@ button[title="Destino"] {
     border-radius: 0 !important;
 }
 
+/* =========================================================
+   SWITCHEROO — BLOQUEAR + CUANDO EL POPUP ESTÁ ABIERTO
+   ========================================================= */
+
+body:has(.monomer-modal.monomer-open)
+#switcheroo .switcheroo__squircle--button {
+    pointer-events: none !important;
+    opacity: .55;
+    cursor: default !important;
+}
+
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
