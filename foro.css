@@ -7606,3 +7606,12 @@ blockquote blockquote {
 .digimon-forum-card:has(.rlinkforum) .digimon-forum-description {
     min-height: 230px !important;
 }
+
+/* =========================================================
+   RLINKFORUM — EVITAR ESTIRAMIENTO DE LA TARJETA
+   ========================================================= */
+
+.digimon-forum-card:has(.rlinkforum) {
+    align-self: start;
+    height: auto !important;
+}
