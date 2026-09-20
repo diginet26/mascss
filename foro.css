@@ -7229,7 +7229,7 @@ blockquote blockquote {
         0 0 15px var(--emblema2),
         0 15px 45px rgba(0, 0, 0, .8),
         inset 0 0 25px rgba(0, 0, 0, .35) !important;
-
+    transition: opacity .2s ease !important;
     overflow: visible !important;
 }
 
@@ -7267,7 +7267,7 @@ blockquote blockquote {
 
 /* SUBTÍTULO */
 
-.monomer-modal::after {
+/*.monomer-modal::after {
     content: "ACCESO DE CUENTA";
 
     display: block;
@@ -7285,7 +7285,7 @@ blockquote blockquote {
     text-align: center;
 
     opacity: .75;
-}
+}*/
 
 
 /* ---------------------------------------------------------
@@ -7462,7 +7462,8 @@ blockquote blockquote {
 
     top: -10px !important;
     right: -10px !important;
-
+    z-index: 100 !important;
+    pointer-events: auto !important;
     display: grid !important;
 
     place-items: center !important;
@@ -7515,7 +7516,7 @@ blockquote blockquote {
    ANIMACIÓN DE APERTURA
    --------------------------------------------------------- */
 
-.monomer-modal.monomer-open {
+/*.monomer-modal.monomer-open {
     animation: digitalRiftPopup .25s ease-out !important;
 }
 
@@ -7537,7 +7538,7 @@ blockquote blockquote {
             translate(-50%, -50%)
             scale(1);
     }
-}
+}*/
 
 
 /* ---------------------------------------------------------
@@ -7562,4 +7563,30 @@ blockquote blockquote {
         padding: 22px 20px 24px !important;
     }
 
+}
+
+/* SUBTÍTULO — colocado dentro del contenido,
+   justo antes del formulario */
+
+.monomer-modal__content::before {
+    content: "ACCESO DE CUENTA";
+
+    display: block;
+
+    margin-top: 5px;
+    margin-bottom: 18px;
+
+    color: #fff;
+
+    font-family: 'Jersey 15', sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    text-align: center;
+
+    opacity: .75;
 }
