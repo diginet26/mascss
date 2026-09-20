@@ -3413,6 +3413,13 @@ button[title="Destino"] {
     color: var(--theme-text) !important;
 }
 
+/* SWITCHEROO — FORMULARIO */
+.monomer-modal .switcheroo__form {
+    background: transparent !important;
+    padding: 10px 0 0 !important;
+    border-radius: 0 !important;
+}
+
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
