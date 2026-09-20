@@ -2744,13 +2744,27 @@ button[title="Destino"] {
 /* =========================================================
    SWITCHEROO — CUENTAS
    ========================================================= */
-#switcheroo .switcheroo__squircles {
+/*#switcheroo .switcheroo__squircles {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin: 0;
     padding: 10px;
     list-style: none;
+}*/
+
+/* =========================================================
+   SWITCHEROO — CONTENEDOR DE CUENTAS
+   ========================================================= */
+
+#switcheroo .switcheroo__squircles {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 4px !important;
+    padding-top: 32px !important;
+    box-sizing: border-box !important;
 }
 
 /* ---------------------------------------------------------
@@ -2940,10 +2954,10 @@ button[title="Destino"] {
 
 /* CONTENEDOR DE LAS CUENTAS */
 
-#switcheroo .switcheroo__squircles {
+/*#switcheroo .switcheroo__squircles {
     gap: 14px !important;
     padding: 4px !important;
-}
+}*/
 
 
 /* AVATARES / CUENTAS */
@@ -3171,9 +3185,9 @@ button[title="Destino"] {
 
 /* BAJAMOS LIGERAMENTE LAS CUENTAS PARA DEJAR ESPACIO A LA CABECERA */
 
-#switcheroo .switcheroo__squircles {
+/*#switcheroo .switcheroo__squircles {
     padding-top: 32px !important;
-}
+}*/
 
 #switcheroo .switcheroo__squircle--button .switcheroo__popper-text {
     font-size: 0 !important;
