@@ -7654,3 +7654,18 @@ blockquote blockquote {
 .forabg .rtripleforum .rfordesc {
     margin-bottom: 0 !important;
 }
+/* =========================================================
+   ELIMINAR ALTURA RESERVADA DE LA DESCRIPCIÓN
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+}
+.digimon-forum-card:has(.rsingleforum) .rsingleforum,
+.digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
+.digimon-forum-card:has(.rtripleforum) .rtripleforum {
+    min-height: 0 !important;
+}
