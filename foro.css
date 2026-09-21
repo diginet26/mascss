@@ -7645,3 +7645,12 @@ blockquote blockquote {
 .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
     min-height: 0 !important;
 }
+/* =========================================================
+   ELIMINAR ESPACIO ENTRE R.FORDESC Y ESTADÍSTICAS
+   ========================================================= */
+
+.forabg .rsingleforum .rfordesc,
+.forabg .rdoubleforum .rfordesc,
+.forabg .rtripleforum .rfordesc {
+    margin-bottom: 0 !important;
+}
