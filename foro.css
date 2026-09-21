@@ -7669,3 +7669,20 @@ blockquote blockquote {
 .digimon-forum-card:has(.rtripleforum) .rtripleforum {
     min-height: 0 !important;
 }
+/* =========================================================
+   FORUM DESC → BOTTOM · SIN ESPACIO
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.digimon-forum-card:has(.rsingleforum) .rsingleforum,
+.digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
+.digimon-forum-card:has(.rtripleforum) .rtripleforum {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
