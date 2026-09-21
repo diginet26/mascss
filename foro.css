@@ -7686,3 +7686,12 @@ blockquote blockquote {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
+/* =========================================================
+   ELIMINAR ALTURA MÍNIMA INTERNA DEL BLOQUE DEL FORO
+   ========================================================= */
+
+.digimon-forum-description .rsingleforum,
+.digimon-forum-description .rdoubleforum,
+.digimon-forum-description .rtripleforum {
+    min-height: 0 !important;
+}
