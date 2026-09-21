@@ -7627,3 +7627,12 @@ blockquote blockquote {
 .digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {
     flex: 1;
 }
+/* =========================================================
+   RLINKFORUM — ANULAR ESTRUCTURA ORIGINAL
+   ========================================================= */
+
+.forabg .rlinkforum .rfordesc {
+    width: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
