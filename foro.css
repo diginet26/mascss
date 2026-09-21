@@ -7615,3 +7615,15 @@ blockquote blockquote {
     align-self: start;
     height: auto !important;
 }
+/* =========================================================
+   RLINKFORUM — ALTURA
+   ========================================================= */
+
+.digimon-forum-card:has(.rlinkforum) .rlinkforum {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {
+    flex: 1;
+}
