@@ -7636,3 +7636,12 @@ blockquote blockquote {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
+/* =========================================================
+   AJUSTE DE ESPACIO ENTRE DESCRIPCIÓN Y ESTADÍSTICAS
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-content,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
+    min-height: 0 !important;
+}
