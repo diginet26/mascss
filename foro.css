@@ -7624,3 +7624,14 @@ blockquote blockquote {
     padding: 0 !important;
     width: 100% !important;
 }
+/* =========================================================
+   FOROS — ELIMINAR HUECO VISUAL INTERNO
+   ========================================================= */
+
+/* Foros normales: rellenar toda la altura disponible */
+.digimon-forum-description > .rsingleforum,
+.digimon-forum-description > .rdoubleforum:not(.rlinkforum),
+.digimon-forum-description > .rtripleforum {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+}
