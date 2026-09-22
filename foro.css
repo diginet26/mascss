@@ -5815,8 +5815,7 @@ blockquote blockquote {
     flex-wrap: wrap;
     gap: 7px;
     padding: 0 20px 18px;
-  margin-top: 15px;
-    /*background: var(--colorfondo4);*/
+    margin-top: 15px;
 }
 
 .digimon-forum-description .rforlinks a {
@@ -5829,7 +5828,7 @@ blockquote blockquote {
     border-radius: 5px;
     color: var(--text-color);
     background: var(--linkc3);
-    font: 700 8px/1.2 "Oxanium", monospace;
+    font: 700 10px/1.2 "Oxanium", monospace;
     letter-spacing: .5px;
     text-transform: uppercase;
     transition: .3s ease;
