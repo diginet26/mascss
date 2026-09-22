@@ -7616,3 +7616,14 @@ blockquote blockquote {
    ========================================================= */
 .digimon-forum-content > br {display: none !important;}
 .digimon-forum-description br {display: none !important;}
+
+/* =========================================================
+   IGUALAR ALTURA DE LAS TARJETAS DE FOROS
+   ========================================================= */
+
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum),
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum),
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {
+    align-self: stretch !important;
+    height: 100% !important;
+}
