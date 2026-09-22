@@ -7667,3 +7667,13 @@ blockquote blockquote {
     flex: 1 1 auto !important;
     min-height: 0 !important;
 }
+
+/* =========================================================
+   IGUALAR EL CONTENIDO INTERNO DE LOS FOROS
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .rsingleforum,
+.digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
+.digimon-forum-card:has(.rtripleforum) .rtripleforum {
+    height: 100% !important;
+}
