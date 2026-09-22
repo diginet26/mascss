@@ -7699,3 +7699,15 @@ blockquote blockquote {
 .digimon-forum-description + br {
     display: none !important;
 }
+/* =========================================================
+   RLINKFORUM — ELIMINAR ESPACIO ENTRE CONTENIDO Y ESTADÍSTICAS
+   ========================================================= */
+
+.digimon-forum-card:has(.rlinkforum) .digimon-forum-description {
+    min-height: 170px !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rlinkforum {
+    min-height: 170px !important;
+    height: auto !important;
+}
