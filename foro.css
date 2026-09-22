@@ -7675,5 +7675,6 @@ blockquote blockquote {
 .digimon-forum-card:has(.rsingleforum) .rsingleforum,
 .digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
 .digimon-forum-card:has(.rtripleforum) .rtripleforum {
-    height: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
 }
