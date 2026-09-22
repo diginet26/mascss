@@ -7577,10 +7577,7 @@ blockquote blockquote {
     margin-bottom: 0 !important;
 }
 
-.digimon-forum-card:has(.rlinkforum) {
-    align-self: start;
-    height: auto !important;
-}
+.digimon-forum-card:has(.rlinkforum) {align-self: stretch !important;}
 
 .digimon-forum-card:has(.rlinkforum) .rlinkforum {
     min-height: 170px !important;
