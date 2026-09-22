@@ -7627,3 +7627,15 @@ blockquote blockquote {
     align-self: stretch !important;
     height: 100% !important;
 }
+/* =========================================================
+   IGUALAR CONTENIDO INTERNO DE LAS TARJETAS
+   ========================================================= */
+
+.digimon-forum-card {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.digimon-forum-card .digimon-forum-content {
+    flex: 1 1 auto !important;
+}
