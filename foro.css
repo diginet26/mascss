@@ -7569,12 +7569,29 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   FOROS — IGUALAR ÁREA DE CONTENIDO
+   FOROS — ESTRUCTURA Y ALTURA UNIFICADAS
    ========================================================= */
 
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum),
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum),
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-content,
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content,
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
     flex: 1 1 auto !important;
-    min-height: 0 !important;
+}
+
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    flex: 1 1 auto !important;
+}
+
+/* Salto <br> que Foroactivo inserta entre contenido y estadísticas */
+.digimon-forum-description + br {
+    display: none !important;
 }
