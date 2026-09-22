@@ -7569,48 +7569,130 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   FOROS — ESTRUCTURA Y ALTURA UNIFICADAS
+   DIGITAL RIFT — AJUSTE DEFINITIVO DE TARJETAS
    ========================================================= */
 
-.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum),
-.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum),
-.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {
+/* Tarjeta */
+.digimon-forum-card {
     display: flex !important;
     flex-direction: column !important;
 }
 
-.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-content,
-.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content,
-.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
+/* El contenido ocupa el espacio disponible */
+.digimon-forum-card .digimon-forum-content {
     flex: 1 1 auto !important;
 }
 
-.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
-.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
-.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
-    flex: 1 1 auto !important;
+/* =========================================================
+   RLINKFORUM — FOROS BASADOS EN ENLACES
+   ========================================================= */
+
+.forabg .rlinkforum .rfordesc {
+    width: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
-/* Salto <br> que Foroactivo inserta entre contenido y estadísticas */
-.digimon-forum-description + br {
+.digimon-forum-card:has(.rlinkforum) {
+    align-self: stretch !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rlinkforum {
+    min-height: 170px !important;
+    height: auto !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {
+    flex: 1;
+}
+
+/* =========================================================
+   SINGLE / DOUBLE / TRIPLE
+   ELIMINAR ALTURA Y ESPACIO RESERVADO
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-content,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
+    min-height: 0 !important;
+}
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.digimon-forum-description .rsingleforum,
+.digimon-forum-description .rdoubleforum,
+.digimon-forum-description .rtripleforum {
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* =========================================================
+   FOROACTIVO — ELIMINAR SALTOS AUTOMÁTICOS
+   ========================================================= */
+
+.digimon-forum-content > br,
+.digimon-forum-description br {
     display: none !important;
 }
 
 /* =========================================================
-   RLINKFORUM — FORO BASADO SOLO EN ENLACES
+   IGUALAR LA ZONA VISUAL
    ========================================================= */
 
-.digimon-forums-grid > .digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum {
-    display: flex !important;
-    flex-direction: column !important;
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
     flex: 1 1 auto !important;
     min-height: 0 !important;
 }
 
-.digimon-forums-grid > .digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rfordesc {
+/* =========================================================
+   CONTENIDO INTERNO
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .rsingleforum,
+.digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
+.digimon-forum-card:has(.rtripleforum) .rtripleforum {
+    min-height: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+/* =========================================================
+   ESTADÍSTICAS
+   ========================================================= */
+
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-bottom {
+    flex-shrink: 0 !important;
+}
+
+/* =========================================================
+   RDOUBLE NORMAL
+   ========================================================= */
+
+.digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .rdoubleforum {
+    min-height: 230px !important;
+}
+
+/* =========================================================
+   RLINKFORUM — ALTURA FINAL
+   ========================================================= */
+
+.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rfordesc {
     width: 100% !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
     padding: 20px !important;
     flex: 1 1 auto !important;
     display: flex !important;
@@ -7619,56 +7701,8 @@ blockquote blockquote {
     box-sizing: border-box !important;
 }
 
-.digimon-forums-grid > .digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rforlinks {
+.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rforlinks {
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    width: 100% !important;
-}
-/* =========================================================
-   FOROS — ELIMINAR HUECO VISUAL INTERNO
-   ========================================================= */
-
-/* Foros normales: rellenar toda la altura disponible */
-.digimon-forum-description > .rsingleforum,
-.digimon-forum-description > .rdoubleforum:not(.rlinkforum),
-.digimon-forum-description > .rtripleforum {
-    flex: 1 1 auto !important;
-    min-height: 0 !important;
-}
-/* =========================================================
-   FOROS — RELLENAR LA ZONA VISUAL SIN AFECTAR RLINKFORUM
-   ========================================================= */
-
-.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
-.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .digimon-forum-description,
-.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
-    display: flex !important;
-    flex-direction: column !important;
-    flex: 1 1 auto !important;
-    min-height: 0 !important;
-}
-
-.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-description > .rsingleforum,
-.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .digimon-forum-description > .rdoubleforum,
-.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-description > .rtripleforum {
-    flex: 1 1 auto !important;
-    min-height: 0 !important;
-}
-/* =========================================================
-   FOROS — IGUALAR CONTENEDOR VISUAL CON SU DESCRIPCIÓN
-   ========================================================= */
-
-/* SINGLE */
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-description > .rsingleforum {
-    min-height: 210px !important;
-}
-
-/* DOUBLE NORMAL */
-.digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .digimon-forum-description > .rdoubleforum {
-    min-height: 230px !important;
-}
-
-/* TRIPLE */
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-description > .rtripleforum {
-    min-height: 190px !important;
 }
