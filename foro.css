@@ -7740,3 +7740,6 @@ blockquote blockquote {
     -webkit-mask-image: none !important;
     mask-image: none !important;
 }
+.digimon-forum-description .rdoubleforum .rfordesc {
+    padding-top: 0 !important;
+}
