@@ -7740,3 +7740,7 @@ blockquote blockquote {
 .digimon-forum-description .rdoubleforum .rfordesc {
     flex: 1 1 auto !important;
 }
+.digimon-lastpost-user strong {
+    display: block !important;
+    margin-top: 2px !important;
+}
