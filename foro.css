@@ -7688,3 +7688,10 @@ blockquote blockquote {
 .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
     flex: 1 1 auto !important;
 }
+/* =========================================================
+   RDOUBLE — MANTENER LAS ESTADÍSTICAS EN SU SITIO
+   ========================================================= */
+
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-bottom {
+    flex-shrink: 0 !important;
+}
