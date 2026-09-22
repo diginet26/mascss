@@ -7718,3 +7718,11 @@ blockquote blockquote {
 .digimon-forum-description .rlinkforum ~ br {
     display: none !important;
 }
+/* =========================================================
+   ELIMINAR SALTOS AUTOMÁTICOS DE FOROACTIVO
+   SOLO EN FOROS RLINK
+   ========================================================= */
+
+.digimon-forum-description:has(.rlinkforum) br {
+    display: none !important;
+}
