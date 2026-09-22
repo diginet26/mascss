@@ -7676,7 +7676,8 @@ blockquote blockquote {
 .digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
 .digimon-forum-card:has(.rtripleforum) .rtripleforum {
     min-height: 0 !important;
-    height: auto !important;
+    height: 100% !important;
+    flex: 1 1 auto !important;
 }
 /* =========================================================
    HACER CRECER LA ZONA VISUAL DEL FORO
