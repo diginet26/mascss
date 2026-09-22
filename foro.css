@@ -7706,3 +7706,25 @@ blockquote blockquote {
     margin: 0 !important;
     padding: 0 !important;
 }
+/* =========================================================
+   AJUSTE FINAL — TIENDA + NORMAS & SISTEMAS
+   ========================================================= */
+
+/* La zona de descripción se convierte en el contenedor
+   que permite que el foro visual rellene todo su espacio */
+.digimon-forum-description:has(.rdoubleforum) {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* TIENDA — el doble normal rellena toda la zona visual */
+.digimon-forum-description > .rdoubleforum:not(.rlinkforum) {
+    flex: 1 1 auto !important;
+    min-height: 230px !important;
+}
+
+/* NORMAS & SISTEMAS — el rlink rellena toda la zona visual */
+.digimon-forum-description > .rdoubleforum.rlinkforum {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+}
