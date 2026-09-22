@@ -7744,3 +7744,10 @@ blockquote blockquote {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
+/* =========================================================
+   PRUEBA — ELIMINAR BR AUTOMÁTICOS DE FOROACTIVO
+   ========================================================= */
+
+.digimon-forum-description br {
+    display: none !important;
+}
