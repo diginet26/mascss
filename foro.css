@@ -7728,3 +7728,11 @@ blockquote blockquote {
     flex: 1 1 auto !important;
     min-height: 0 !important;
 }
+.digimon-forum-description .rdoubleforum .rforimg::after {
+    background: linear-gradient(
+        180deg,
+        var(--colorfondo4) 0%,
+        transparent 55%,
+        var(--colorfondo4) 100%
+    ) !important;
+}
