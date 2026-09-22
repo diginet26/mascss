@@ -7578,8 +7578,8 @@ blockquote blockquote {
 }
 
 .digimon-forum-card:has(.rlinkforum) {
-    align-self: start;
-    height: auto !important;
+    align-self: stretch !important;
+    height: 100% !important;
 }
 
 .digimon-forum-card:has(.rlinkforum) .rlinkforum {
