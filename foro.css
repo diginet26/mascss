@@ -7593,168 +7593,35 @@ blockquote blockquote {
 /* =========================================================
    RLINKFORUM — FOROS BASADOS EN ENLACES
    ========================================================= */
-
-/* =========================================================
-   RLINKFORUM — AJUSTE DE ALTURA
-   ========================================================= */
-
-.digimon-forum-card:has(.rlinkforum) .digimon-forum-content {
-    min-height: 320px !important;
-}
-
-.digimon-forum-card:has(.rlinkforum) .digimon-forum-description {
-    min-height: 230px !important;
-}
-
-/* =========================================================
-   RLINKFORUM — EVITAR ESTIRAMIENTO DE LA TARJETA
-   ========================================================= */
-
-.digimon-forum-card:has(.rlinkforum) {
-    align-self: start;
-    height: auto !important;
-}
-/* =========================================================
-   RLINKFORUM — ALTURA
-   ========================================================= */
-
-.digimon-forum-card:has(.rlinkforum) .rlinkforum {
-    min-height: 100% !important;
-    height: 100%;
-}
-
-.digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {
-    flex: 1;
-}
-/* =========================================================
-   RLINKFORUM — ANULAR ESTRUCTURA ORIGINAL
-   ========================================================= */
-
+/* Anula los márgenes heredados de las estructuras originales */
 .forabg .rlinkforum .rfordesc {
     width: auto !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
-/* =========================================================
-   AJUSTE DE ESPACIO ENTRE DESCRIPCIÓN Y ESTADÍSTICAS
-   ========================================================= */
 
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-content,
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-content,
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
-    min-height: 0 !important;
-}
 /* =========================================================
-   ELIMINAR ESPACIO ENTRE R.FORDESC Y ESTADÍSTICAS
+   RSINGLE / RDOUBLE / RTRIPLE
+   ELIMINAR ESPACIO RESERVADO ENTRE CONTENIDO Y ESTADÍSTICAS
    ========================================================= */
-
-.forabg .rsingleforum .rfordesc,
-.forabg .rdoubleforum .rfordesc,
-.forabg .rtripleforum .rfordesc {
-    margin-bottom: 0 !important;
-}
-/* =========================================================
-   ELIMINAR ALTURA RESERVADA DE LA DESCRIPCIÓN
-   ========================================================= */
-
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content, .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {min-height: 0 !important;}
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-description, .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
     flex: 0 0 auto !important;
     min-height: 0 !important;
-}
-.digimon-forum-card:has(.rsingleforum) .rsingleforum,
-.digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
-.digimon-forum-card:has(.rtripleforum) .rtripleforum {
-    min-height: 0 !important;
-}
-/* =========================================================
-   FORUM DESC → BOTTOM · SIN ESPACIO
-   ========================================================= */
-
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
-
-.digimon-forum-card:has(.rsingleforum) .rsingleforum,
-.digimon-forum-card:has(.rdoubleforum) .rdoubleforum,
-.digimon-forum-card:has(.rtripleforum) .rtripleforum {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-/* =========================================================
-   ELIMINAR ALTURA MÍNIMA INTERNA DEL BLOQUE DEL FORO
-   ========================================================= */
 
 .digimon-forum-description .rsingleforum,
 .digimon-forum-description .rdoubleforum,
 .digimon-forum-description .rtripleforum {
     min-height: 0 !important;
-}
-/* El <br> que Foroactivo coloca entre descripción y estadísticas */
-.digimon-forum-description + br {
-    display: none !important;
-}
-/* =========================================================
-   RLINKFORUM — ELIMINAR ESPACIO ENTRE CONTENIDO Y ESTADÍSTICAS
-   ========================================================= */
-
-.digimon-forum-card:has(.rlinkforum) .digimon-forum-description {
-    min-height: 170px !important;
-}
-
-.digimon-forum-card:has(.rlinkforum) .rlinkforum {
-    min-height: 170px !important;
-    height: auto !important;
-}
-/* =========================================================
-   RLINKFORUM — ELIMINAR SALTOS AUTOMÁTICOS DE FOROACTIVO
-   ========================================================= */
-
-.digimon-forum-description .rlinkforum ~ br {
-    display: none !important;
-}
-/* =========================================================
-   ELIMINAR SALTOS AUTOMÁTICOS DE FOROACTIVO
-   SOLO EN FOROS RLINK
-   ========================================================= */
-
-.digimon-forum-description:has(.rlinkforum) br {
-    display: none !important;
-}
-
-/* =========================================================
-   AJUSTE FINAL — PEGAR DESCRIPCIÓN A ESTADÍSTICAS
-   ========================================================= */
-
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-content,
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-content,
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
-    min-height: 0 !important;
-}
-
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
-    min-height: 0 !important;
-    flex: 0 0 auto !important;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
-/* =========================================================
-   PRUEBA — ELIMINAR BR AUTOMÁTICOS DE FOROACTIVO
-   ========================================================= */
 
-.digimon-forum-description br {
-    display: none !important;
-}
 /* =========================================================
-   ELIMINAR BR QUE FOROACTIVO COLOCA ENTRE CONTENIDO Y STATS
+   FOROACTIVO — ELIMINAR EL <br> AUTOMÁTICO
+   ENTRE CONTENIDO Y ESTADÍSTICAS
    ========================================================= */
-
-.digimon-forum-content > br {
-    display: none !important;
-}
+.digimon-forum-content > br {display: none !important;}
