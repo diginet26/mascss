@@ -7635,3 +7635,22 @@ blockquote blockquote {
     flex: 1 1 auto !important;
     min-height: 0 !important;
 }
+/* =========================================================
+   FOROS — RELLENAR LA ZONA VISUAL SIN AFECTAR RLINKFORUM
+   ========================================================= */
+
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .digimon-forum-description,
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+}
+
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) .digimon-forum-description > .rsingleforum,
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .digimon-forum-description > .rdoubleforum,
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) .digimon-forum-description > .rtripleforum {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+}
