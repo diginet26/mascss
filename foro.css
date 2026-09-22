@@ -7743,3 +7743,6 @@ blockquote blockquote {
 .digimon-forum-description .rdoubleforum .rfordesc {
     padding-top: 120 !important;
 }
+.digimon-forum-description .rdoubleforum .rfordesc {
+    flex: 1 1 auto !important;
+}
