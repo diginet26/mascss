@@ -7711,3 +7711,10 @@ blockquote blockquote {
     min-height: 170px !important;
     height: auto !important;
 }
+/* =========================================================
+   RLINKFORUM — ELIMINAR SALTOS AUTOMÁTICOS DE FOROACTIVO
+   ========================================================= */
+
+.digimon-forum-description .rlinkforum ~ br {
+    display: none !important;
+}
