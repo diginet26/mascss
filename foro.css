@@ -4137,9 +4137,9 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #rift-quick-links {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 50px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
     margin-top: 14px;
     padding: 10px 0;
     box-sizing: border-box;
@@ -4147,23 +4147,70 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 
 #rift-quick-links > a {
     position: relative;
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 68px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 0 0 56px;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 7px 4px;
     color: var(--rift-muted);
     font-size: 22px;
+    line-height: 1;
     text-decoration: none;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.20));
+    text-align: center;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(0, 0, 0, 0.20)
+    );
     border: 1px solid rgba(77, 184, 255, 0.15);
     border-radius: 6px;
     box-sizing: border-box;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 0 10px rgba(0, 0, 0, 0.20);
-    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 10px rgba(0, 0, 0, 0.20);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        color 0.2s ease;
 }
 
+/* ICONO */
+#rift-quick-links > a > i,
+#rift-quick-links > a > svg {
+    display: block;
+    margin: 0 0 6px;
+    font-size: 21px;
+    line-height: 1;
+}
+
+/* TEXTO */
+#rift-quick-links > a > span {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--rift-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+}
+
+/* Si el icono es texto en lugar de <i> */
+#rift-quick-links > a > br + span {
+    margin-top: 0;
+}
+
+/* LÍNEA LUMINOSA INFERIOR */
 #rift-quick-links > a::after {
     content: "";
     position: absolute;
@@ -4176,13 +4223,21 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     opacity: 0.45;
 }
 
-/* ---------------------------------------------------------
-   QUICK LINKS — HOVER
-   --------------------------------------------------------- */
-#rift-quick-links a:hover {
-    transform:translateY(-2px);
-    border-color:var(--rift-a2);
-    box-shadow: 0 0 10px rgba(255,255,255,.08), 0 0 8px var(--rift-a2);
+/* HOVER */
+#rift-quick-links > a:hover {
+    transform: translateY(-2px);
+    border-color: var(--rift-a2);
+    box-shadow:
+        0 0 10px rgba(255,255,255,.08),
+        0 0 8px var(--rift-a2);
+}
+
+#rift-quick-links > a:hover > span {
+    color: var(--rift-text);
+}
+
+#rift-quick-links > a:hover > i {
+    color: var(--rift-a2);
 }
 
 /* ---------------------------------------------------------
