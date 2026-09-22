@@ -7751,3 +7751,10 @@ blockquote blockquote {
 .digimon-forum-description br {
     display: none !important;
 }
+/* =========================================================
+   ELIMINAR BR QUE FOROACTIVO COLOCA ENTRE CONTENIDO Y STATS
+   ========================================================= */
+
+.digimon-forum-content > br {
+    display: none !important;
+}
