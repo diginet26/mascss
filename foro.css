@@ -7678,3 +7678,12 @@ blockquote blockquote {
     min-height: 0 !important;
     height: auto !important;
 }
+/* =========================================================
+   HACER CRECER LA ZONA VISUAL DEL FORO
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    flex: 1 1 auto !important;
+}
