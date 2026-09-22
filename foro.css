@@ -7695,3 +7695,7 @@ blockquote blockquote {
 .digimon-forum-description .rtripleforum {
     min-height: 0 !important;
 }
+/* El <br> que Foroactivo coloca entre descripción y estadísticas */
+.digimon-forum-description + br {
+    display: none !important;
+}
