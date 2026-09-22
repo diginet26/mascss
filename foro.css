@@ -7595,3 +7595,32 @@ blockquote blockquote {
 .digimon-forum-description + br {
     display: none !important;
 }
+
+/* =========================================================
+   RLINKFORUM — FORO BASADO SOLO EN ENLACES
+   ========================================================= */
+
+.digimon-forums-grid > .digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+}
+
+.digimon-forums-grid > .digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rfordesc {
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 20px !important;
+    flex: 1 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+.digimon-forums-grid > .digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rforlinks {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
