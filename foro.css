@@ -7578,8 +7578,8 @@ blockquote blockquote {
 }
 
 .digimon-forum-card:has(.rlinkforum) {
-    align-self: stretch !important;
-    height: 100% !important;
+    align-self: start;
+    height: auto !important;
 }
 
 .digimon-forum-card:has(.rlinkforum) .rlinkforum {
@@ -7589,6 +7589,12 @@ blockquote blockquote {
 
 .digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {flex: 1;}
 
+.digimon-forum-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.digimon-forum-card .digimon-forum-content {flex: 1 1 auto;}
 /*===RSINGLE / RDOUBLE / RTRIPLE   ELIMINAR ALTURA Y ESPACIO RESERVADO=== */
 .digimon-forum-card:has(.rsingleforum) .digimon-forum-content, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content, .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
     min-height: 0 !important;
