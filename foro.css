@@ -7543,68 +7543,57 @@ blockquote blockquote {
 /* ---------------------------------------------------------
    MÓVIL
    --------------------------------------------------------- */
-
 @media (max-width: 600px) {
-
     .monomer-modal {
         width: calc(100vw - 30px) !important;
-
         max-width: none !important;
-
         border-radius: 12px !important;
     }
-
-    .monomer-modal::before {
-        font-size: 24px !important;
-    }
-
-    .monomer-modal .switcheroo__form {
-        padding: 22px 20px 24px !important;
-    }
-
+    .monomer-modal::before {font-size: 24px !important;}
+    .monomer-modal .switcheroo__form {padding: 22px 20px 24px !important;}
 }
 
-/* SUBTÍTULO — colocado dentro del contenido,
-   justo antes del formulario */
-
+/* SUBTÍTULO — colocado dentro del contenido, justo antes del formulario */
 .monomer-modal__content::before {
     content: "ACCESO DE CUENTA";
-
     display: block;
-
     margin-top: 5px;
     margin-bottom: 18px;
-
     color: #fff;
-
     font-family: 'Jersey 15', sans-serif;
-
     font-size: 12px;
-
     letter-spacing: 2px;
-
     line-height: 1;
-
     text-align: center;
-
     opacity: .75;
 }
 
 /* =========================================================
    RLINKFORUM — FOROS BASADOS EN ENLACES
    ========================================================= */
-/* Anula los márgenes heredados de las estructuras originales */
 .forabg .rlinkforum .rfordesc {
     width: auto !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 
-/* =========================================================
-   RSINGLE / RDOUBLE / RTRIPLE
-   ELIMINAR ESPACIO RESERVADO ENTRE CONTENIDO Y ESTADÍSTICAS
-   ========================================================= */
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-content, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content, .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {min-height: 0 !important;}
+.digimon-forum-card:has(.rlinkforum) {
+    align-self: start;
+    height: auto !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rlinkforum {
+    min-height: 170px !important;
+    height: auto !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {flex: 1;}
+
+/*===RSINGLE / RDOUBLE / RTRIPLE   ELIMINAR ALTURA Y ESPACIO RESERVADO=== */
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content, .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
+    min-height: 0 !important;
+}
+
 .digimon-forum-card:has(.rsingleforum) .digimon-forum-description, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-description, .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
     flex: 0 0 auto !important;
     min-height: 0 !important;
@@ -7612,16 +7601,15 @@ blockquote blockquote {
     padding-bottom: 0 !important;
 }
 
-.digimon-forum-description .rsingleforum,
-.digimon-forum-description .rdoubleforum,
-.digimon-forum-description .rtripleforum {
+.digimon-forum-description .rsingleforum, .digimon-forum-description .rdoubleforum, .digimon-forum-description .rtripleforum {
     min-height: 0 !important;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
 
+
 /* =========================================================
-   FOROACTIVO — ELIMINAR EL <br> AUTOMÁTICO
-   ENTRE CONTENIDO Y ESTADÍSTICAS
+   FOROACTIVO — ELIMINAR SALTOS AUTOMÁTICOS
    ========================================================= */
 .digimon-forum-content > br {display: none !important;}
+.digimon-forum-description br {display: none !important;}
