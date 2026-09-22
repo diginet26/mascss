@@ -7654,3 +7654,21 @@ blockquote blockquote {
     flex: 1 1 auto !important;
     min-height: 0 !important;
 }
+/* =========================================================
+   FOROS — IGUALAR CONTENEDOR VISUAL CON SU DESCRIPCIÓN
+   ========================================================= */
+
+/* SINGLE */
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description > .rsingleforum {
+    min-height: 210px !important;
+}
+
+/* DOUBLE NORMAL */
+.digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .digimon-forum-description > .rdoubleforum {
+    min-height: 230px !important;
+}
+
+/* TRIPLE */
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description > .rtripleforum {
+    min-height: 190px !important;
+}
