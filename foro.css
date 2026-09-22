@@ -7726,3 +7726,22 @@ blockquote blockquote {
 .digimon-forum-description:has(.rlinkforum) br {
     display: none !important;
 }
+
+/* =========================================================
+   AJUSTE FINAL — PEGAR DESCRIPCIÓN A ESTADÍSTICAS
+   ========================================================= */
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-content,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
+    min-height: 0 !important;
+}
+
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description,
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
