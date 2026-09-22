@@ -7639,3 +7639,21 @@ blockquote blockquote {
 .digimon-forum-card .digimon-forum-content {
     flex: 1 1 auto !important;
 }
+/* =========================================================
+   IGUALAR ALTURA DE TARJETAS DEL GRID
+   ========================================================= */
+
+.digimon-forums-grid {
+    align-items: stretch !important;
+}
+
+.digimon-forums-grid > .digimon-forum-card {
+    align-self: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+.digimon-forums-grid > .digimon-forum-card .digimon-forum-content {
+    height: auto !important;
+    min-height: 0 !important;
+}
