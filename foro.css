@@ -7736,13 +7736,7 @@ blockquote blockquote {
         var(--colorfondo4) 100%
     ) !important;
 }
-.digimon-forum-description .rdoubleforum .rforimg {
-    -webkit-mask-image: none !important;
-    mask-image: none !important;
-}
-.digimon-forum-description .rdoubleforum .rfordesc {
-    padding-top: 120 !important;
-}
+
 .digimon-forum-description .rdoubleforum .rfordesc {
     flex: 1 1 auto !important;
 }
