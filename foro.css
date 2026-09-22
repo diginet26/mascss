@@ -5774,7 +5774,7 @@ blockquote blockquote {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 5%, var(--colorfondo4) 100%);
+    background: linear-gradient(180deg, var(--colorfondo4) 0%, var(--colorfondo4) 15%, transparent 55%, var(--colorfondo4) 100%);
 }
 
 /* Degradado de color sobre la imagen */
