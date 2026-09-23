@@ -8613,3 +8613,18 @@ blockquote blockquote {
     width: 1.429rem;
     height: 1.429rem;
 }
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — ÚLTIMOS TEMAS
+   ========================================================= */
+
+#rift-recent {
+    padding: 1.143rem;
+    min-height: 40rem;
+}
+
+#rift-recent-content {
+    height: 30rem;
+    font-size: 0.857rem;
+    line-height: 1.5;
+    overflow-y: auto;
+}
