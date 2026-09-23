@@ -8178,11 +8178,10 @@ blockquote blockquote {
 /* =========================================================
    RASYMFORUM — PRUEBA POSICIÓN CULUMON
    ========================================================= */
-
 .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
     top: -25%;
-    left: 55%;
-    width: 120%;
+    left: 62%;
+    width: 105%;
     height: 100%;
 
     background-size: contain;
