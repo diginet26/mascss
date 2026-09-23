@@ -8617,14 +8617,26 @@ blockquote blockquote {
    ACCESIBILIDAD — TABLÓN — ÚLTIMOS TEMAS
    ========================================================= */
 
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — ÚLTIMOS TEMAS
+   ========================================================= */
+
 #rift-recent {
     padding: 1.143rem;
     min-height: 40rem;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 #rift-recent-content {
-    height: 30rem;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+
+    overflow-y: auto;
+
     font-size: 0.857rem;
     line-height: 1.5;
-    overflow-y: auto;
 }
