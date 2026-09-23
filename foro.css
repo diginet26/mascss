@@ -8459,3 +8459,30 @@ blockquote blockquote {
 #rift-recent-content {
     font-size: 0.857rem;
 }
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — ENLACES RÁPIDOS
+   ========================================================= */
+
+#rift-quick-links {
+    gap: 0.714rem;
+    margin-top: 1rem;
+    padding: 0.714rem 0;
+}
+
+#rift-quick-links > a {
+    width: 5.143rem;
+    height: 4.857rem;
+    padding: 0.5rem 0.286rem;
+    font-size: 1.571rem;
+}
+
+#rift-quick-links > a > i,
+#rift-quick-links > a > svg {
+    margin-bottom: 0.429rem;
+    font-size: 1.5rem;
+}
+
+#rift-quick-links > a > span {
+    font-size: 0.571rem;
+    letter-spacing: 0.043rem;
+}
