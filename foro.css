@@ -8448,3 +8448,14 @@ blockquote blockquote {
 #rift-board a {
     line-height: 1.5;
 }
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — TIPOGRAFÍA
+   ========================================================= */
+
+#rift-current-text {
+    font-size: 0.929rem;
+}
+
+#rift-recent-content {
+    font-size: 0.857rem;
+}
