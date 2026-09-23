@@ -8191,3 +8191,100 @@ blockquote blockquote {
     z-index: 20;
     pointer-events: none;
 }
+/* =========================================================
+   RASYMFORUM — COMPOSICIÓN CON IMAGEN SUPERPUESTA
+   ========================================================= */
+
+/* La tarjeta izquierda puede dejar salir la imagen */
+.digimon-forum-card:has(.rasymforum) {
+    position: relative;
+    overflow: visible !important;
+    z-index: 5;
+}
+
+/* El contenido interno también */
+.digimon-forum-card:has(.rasymforum) .rasymforum {
+    position: relative;
+    overflow: visible !important;
+}
+
+/* ---------------------------------------------------------
+   CULUMON — IMAGEN DECORATIVA
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+    position: absolute;
+
+    top: -54%;
+    left: 75%;
+
+    width: 90%;
+    height: 100%;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    z-index: 20;
+    pointer-events: none;
+
+    opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   EL CONTENIDO DE LA TARJETA IZQUIERDA
+   SE ADAPTA AL ESPACIO DE LA IMAGEN
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum) .rfordesc {
+    position: relative;
+    z-index: 6;
+
+    padding-top: 255px;
+}
+
+
+/* Los enlaces permanecen por encima de la imagen */
+.digimon-forum-card:has(.rasymforum) .rforlinks {
+    position: relative;
+    z-index: 7;
+}
+
+
+/* ---------------------------------------------------------
+   LOS DOS FOROS DERECHOS
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum)
++ .digimon-forum-card,
+.digimon-forum-card:has(.rasymforum)
++ .digimon-forum-card
++ .digimon-forum-card {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ---------------------------------------------------------
+   SUS CONTENIDOS NO SE ALTERAN:
+   SOLO DEJAMOS QUE CULUMON PUEDA PASAR POR ENCIMA
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum)
++ .digimon-forum-card .digimon-forum-content,
+.digimon-forum-card:has(.rasymforum)
++ .digimon-forum-card
++ .digimon-forum-card .digimon-forum-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ---------------------------------------------------------
+   LA TARJETA IZQUIERDA NO SE DESPLAZA AL HACER HOVER
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum):hover {
+    transform: none;
+}
