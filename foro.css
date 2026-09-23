@@ -1,4 +1,4 @@
-#wrap {width: 100% !important;}
+#wrap {width: 100% !important; padding: 0 !important;}
 /* FUENTES */
 .jersey-15-regular {
   font-family: "Jersey 15", sans-serif;
