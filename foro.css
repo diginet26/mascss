@@ -8094,31 +8094,20 @@ blockquote blockquote {
 .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
     position: absolute;
 
-    /* Posición inicial de prueba */
-    top: 4%;
-    left: 52%;
+    top: -3%;
+    left: 55%;
 
-    width: 90%;
-    height: 110%;
+    width: 145%;
+    height: 115%;
 
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
 
-    /* La imagen queda por encima de los foros */
     z-index: 20;
-
-    /* No debe interferir con los enlaces */
     pointer-events: none;
 
-    /* Suavizamos ligeramente la entrada */
     opacity: 1;
-
-    transform: translateX(0);
-
-    transition:
-        transform .5s ease,
-        opacity .5s ease;
 }
 
 /* ---------------------------------------------------------
