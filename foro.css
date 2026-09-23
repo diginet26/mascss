@@ -8619,11 +8619,15 @@ blockquote blockquote {
 
 #rift-recent {
     padding: 1.143rem;
-    min-height: 32rem;
+    min-height: 0;
+    height: auto;
+    box-sizing: border-box;
 }
 
 #rift-recent-content {
-    height: auto;
+    height: 100%;
+    overflow: hidden;
+
     font-size: 0.857rem;
     line-height: 1.5;
 }
