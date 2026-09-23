@@ -8372,3 +8372,19 @@ blockquote blockquote {
     z-index: 5 !important;
     pointer-events: none !important;
 }
+/* =========================================================
+   DIGITAL RIFT — IMAGEN DE AMBIENTACIÓN
+   ========================================================= */
+
+.digimon-forum-card:has(.rasymforum) .rasymforum {
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+}
+.digimon-forum-card:has(.rasymforum) {
+    overflow: visible;
+}
+
+.digimon-forum-card:has(.rasymforum) .rasymforum {
+    width: 100% !important;
+}
