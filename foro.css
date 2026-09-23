@@ -8168,3 +8168,10 @@ blockquote blockquote {
     }
 
 }
+/* =========================================================
+   RASYMFORUM — LIBERAR IMAGEN SUPERPUESTA
+   ========================================================= */
+
+.digimon-forum-card:has(.rasymforum) .digimon-forum-description {
+    overflow: visible !important;
+}
