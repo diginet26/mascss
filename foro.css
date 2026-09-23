@@ -4551,7 +4551,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     gap: 10px;
     position: relative;
 }
-#rift-news .marquee {height: 460px !important;}
+.marquee {height: 460px !important;}
 
 /* ---------------------------------------------------------
    ZONA VISIBLE
@@ -8631,4 +8631,16 @@ blockquote blockquote {
 
     font-size: 0.857rem;
     line-height: 1.5;
+}
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — ÚLTIMOS TEMAS
+   ========================================================= */
+
+#rift-recent-content .marquee {
+    height: 30rem !important;
+}
+
+#rift-recent-content {
+    height: 30rem !important;
+    overflow: hidden !important;
 }
