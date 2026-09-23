@@ -4551,7 +4551,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     gap: 10px;
     position: relative;
 }
-.marquee {height: 460px !important;}
+#rift-news .marquee {height: 460px !important;}
 
 /* ---------------------------------------------------------
    ZONA VISIBLE
