@@ -8389,3 +8389,62 @@ blockquote blockquote {
 .digimon-forum-card:has(.rasymforum) .rasymforum {
     width: 100% !important;
 }
+/* ==========================================================
+   DIGITAL RIFT — ESCALA DE ACCESIBILIDAD DEL TABLÓN
+   PRUEBA CONTROLADA
+   ========================================================== */
+
+#rift-board {
+    font-size: 1rem;
+}
+
+/* CUERPO PRINCIPAL */
+
+#rift-board-body {
+    gap: 0.857rem;
+    margin-top: 0.857rem;
+}
+
+/* PANELES */
+
+#rift-current,
+#rift-staff,
+#rift-recent {
+    padding: 1.143rem;
+}
+
+/* ÚLTIMOS TEMAS */
+
+#rift-recent {
+    min-height: 40rem;
+}
+
+#rift-recent-content {
+    height: 30rem;
+    font-size: 0.857rem;
+}
+
+/* CÍRCULOS */
+
+.rift-board-dots {
+    gap: 0.429rem;
+}
+
+.rift-board-dots span {
+    width: 0.643rem;
+    height: 0.643rem;
+}
+
+/* ==========================================================
+   TEXTOS DEL TABLÓN
+   ========================================================== */
+
+#rift-board h1,
+#rift-board h2,
+#rift-board h3,
+#rift-board h4,
+#rift-board p,
+#rift-board span,
+#rift-board a {
+    line-height: 1.5;
+}
