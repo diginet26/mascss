@@ -8644,3 +8644,27 @@ blockquote blockquote {
     height: 30rem !important;
     overflow: hidden !important;
 }
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — NOTICIAS
+   ========================================================= */
+
+#rift-news {
+    padding: 1.143rem;
+}
+
+#rift-news-carousel {
+    gap: 0.714rem;
+}
+
+#rift-news-track {
+    gap: 3.214rem;
+}
+
+.rift-news-item {
+    height: 8.214rem;
+    max-width: 17.857rem;
+    padding: 1.286rem;
+
+    font-size: 0.786rem;
+    line-height: 1.5;
+}
