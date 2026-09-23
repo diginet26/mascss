@@ -8326,3 +8326,49 @@ blockquote blockquote {
     position: relative;
     z-index: 7;
 }
+/* =========================================================
+   RASYMFORUM — AJUSTE DE LA IMAGEN DE AMBIENTACIÓN
+   ========================================================= */
+
+.digimon-forum-card:has(.rasymforum) .rforimg {
+    top: 25%;
+    left: 18%;
+    width: 120%;
+    height: 48%;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    z-index: 5;
+}
+
+/* =========================================================
+   AMBIENTACIÓN — RECOLOCACIÓN DE LA IMAGEN
+   ========================================================= */
+
+.digimon-forum-card:has(.rasymforum) .rforimg {
+    position: absolute !important;
+
+    /* SUBIR / BAJAR LA IMAGEN */
+    top: -35px !important;
+
+    /* MOVERLA HORIZONTALMENTE */
+    left: 18% !important;
+
+    /* TAMAÑO */
+    width: 150% !important;
+    height: 100% !important;
+
+    background-size: contain !important;
+
+    /* Punto de anclaje de la imagen */
+    background-position: center top !important;
+
+    background-repeat: no-repeat !important;
+
+    opacity: 1 !important;
+
+    z-index: 5 !important;
+    pointer-events: none !important;
+}
