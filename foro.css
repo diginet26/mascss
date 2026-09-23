@@ -8175,3 +8175,20 @@ blockquote blockquote {
 .digimon-forum-card:has(.rasymforum) .digimon-forum-description {
     overflow: visible !important;
 }
+/* =========================================================
+   RASYMFORUM — PRUEBA POSICIÓN CULUMON
+   ========================================================= */
+
+.digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+    top: -25%;
+    left: 55%;
+    width: 120%;
+    height: 100%;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    z-index: 20;
+    pointer-events: none;
+}
