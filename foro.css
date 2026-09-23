@@ -8668,3 +8668,23 @@ blockquote blockquote {
     font-size: 0.786rem;
     line-height: 1.5;
 }
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — INFORMACIÓN
+   ========================================================= */
+
+#rift-info-row {
+    gap: 0.857rem;
+    margin-top: 0.857rem;
+}
+
+.rift-info-box {
+    height: 7.857rem;
+    gap: 0.857rem;
+    padding: 0.714rem;
+}
+
+.rift-info-box img {
+    width: 6.429rem;
+    height: 6.429rem;
+    flex: 0 0 6.429rem;
+}
