@@ -8688,3 +8688,11 @@ blockquote blockquote {
     height: 6.429rem;
     flex: 0 0 6.429rem;
 }
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — INFORMACIÓN — TEXTO
+   ========================================================= */
+
+.rift-info-box > div {
+    font-size: 0.786rem;
+    line-height: 1.5;
+}
