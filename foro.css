@@ -2679,7 +2679,26 @@ button[title="Destino"] {
     background: var(--emblema1);
 }
 
-.digimon-theme-dropdown, .digimon-size-dropdown {flex-direction: column;}
+.digimon-theme-dropdown {flex-direction: column;}
+
+.digimon-size-dropdown {
+    flex-direction: row;
+    min-width: auto;
+    width: max-content;
+    background: var(--theme-panel-deep);
+}
+
+.digimon-size-dropdown button {
+    background: var(--theme-panel);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+.digimon-size-dropdown button:hover {
+    background: var(--emblema1);
+    color: var(--linkc3);
+    border-color: var(--emblema2);
+}
 
 .digimon-variant-dropdown {
     width: 150px;
