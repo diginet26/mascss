@@ -2148,8 +2148,9 @@ button#theme-toggler2:before {
     --digimon-yellow: #ffd21c;
     --digimon-white: #f4fbff;
     --digimon-border: rgba(48, 205, 255, .55);
+    --dr-font-size: 14px;/*ACCESIBILIDAD — TAMAÑO BASE*/
 }
-
+html {font-size: var(--dr-font-size, 14px);}/*ACCESIBILIDAD — ESCALA BASE*/
 /* ---------------------------------------------------------
    BARRA PRINCIPAL
    --------------------------------------------------------- */
