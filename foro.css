@@ -8068,3 +8068,114 @@ blockquote blockquote {
     }
 
 }
+/* =========================================================
+   RASYMFORUM — IMAGEN DECORATIVA SUPERPUESTA
+   ========================================================= */
+
+/* Permitimos que la composición pueda dejar salir
+   la imagen fuera de la tarjeta izquierda */
+.digimon-forum-card:has(.rasymforum) {
+    overflow: visible !important;
+    position: relative;
+    z-index: 4;
+}
+
+/* El contenedor del foro también debe permitir
+   que la imagen sobresalga */
+.digimon-forum-card:has(.rasymforum) .rasymforum {
+    position: relative;
+    overflow: visible !important;
+}
+
+/* ---------------------------------------------------------
+   NUEVA IMAGEN SUPERPUESTA
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+    position: absolute;
+
+    /* Posición inicial de prueba */
+    top: 4%;
+    left: 52%;
+
+    width: 90%;
+    height: 110%;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    /* La imagen queda por encima de los foros */
+    z-index: 20;
+
+    /* No debe interferir con los enlaces */
+    pointer-events: none;
+
+    /* Suavizamos ligeramente la entrada */
+    opacity: 1;
+
+    transform: translateX(0);
+
+    transition:
+        transform .5s ease,
+        opacity .5s ease;
+}
+
+/* ---------------------------------------------------------
+   LOS CONTENIDOS DEL FORO QUEDAN DEBAJO DE LA IMAGEN
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum) .rfordesc {
+    position: relative;
+    z-index: 6;
+}
+
+.digimon-forum-card:has(.rasymforum) .rforlinks {
+    position: relative;
+    z-index: 7;
+}
+
+/* ---------------------------------------------------------
+   LOS FOROS DE LA DERECHA QUEDAN DEBAJO DE LA IMAGEN
+   --------------------------------------------------------- */
+
+.digimon-forum-card:has(.rasymforum)
++ .digimon-forum-card,
+
+.digimon-forum-card:has(.rasymforum)
++ .digimon-forum-card
++ .digimon-forum-card {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+        left: 45%;
+        width: 80%;
+        height: 100%;
+        opacity: .8;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .digimon-forum-card:has(.rasymforum) {
+        overflow: hidden !important;
+    }
+
+    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+        left: 20%;
+        top: 5%;
+        width: 80%;
+        height: 90%;
+        opacity: .35;
+    }
+
+}
