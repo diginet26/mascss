@@ -8505,3 +8505,31 @@ blockquote blockquote {
     font-size: 0.571rem;
     letter-spacing: 0.043rem;
 }
+/* =========================================================
+   ACCESIBILIDAD — TABLÓN — SITUACIÓN ACTUAL
+   ========================================================= */
+
+#rift-current-content {
+    height: 17.143rem;
+    padding: 1rem;
+}
+
+#rift-current-content::before {
+    width: 2rem;
+    height: 2rem;
+}
+
+#rift-character {
+    width: 12.857rem;
+    height: 18.571rem;
+    margin: -1rem 1.429rem 0 -1rem;
+}
+
+#rift-character img {
+    width: 12.857rem;
+    height: 18.571rem;
+}
+
+#rift-current-text p {
+    margin-bottom: 0.857rem;
+}
