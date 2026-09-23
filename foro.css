@@ -8288,3 +8288,41 @@ blockquote blockquote {
 .digimon-forum-card:has(.rasymforum):hover {
     transform: none;
 }
+/* =========================================================
+   RASYMFORUM — RECOLOCACIÓN DE LOS ELEMENTOS INFERIORES
+   ========================================================= */
+
+/* IMAGEN DE FONDO DEL FORO IZQUIERDO */
+.digimon-forum-card:has(.rasymforum) .rforimg {
+    top: 35%;
+    left: 25%;
+    width: 150%;
+    height: 65%;
+
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+    z-index: 5;
+}
+
+
+/* TEXTO — LO BAJAMOS A LA ZONA INFERIOR */
+.digimon-forum-card:has(.rasymforum) .rfordesc {
+    position: relative;
+    z-index: 6;
+
+    width: 100%;
+    margin: 0;
+
+    padding: 300px 20px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ENLACES */
+.digimon-forum-card:has(.rasymforum) .rforlinks {
+    position: relative;
+    z-index: 7;
+}
