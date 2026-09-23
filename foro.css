@@ -3847,7 +3847,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     --rift-a1: var(--linkc1);
     --rift-a2: var(--linkc2);
     --rift-a3: var(--accent3);
-  / width: 100vw;
+    width: 100vw;
     max-width: none;
     margin: 0;
     color: var(--rift-text);
@@ -3856,7 +3856,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(145deg, var(--rift-panel), var(--rift-deep));
-    border: 1px solid var(--rift-border);
+    /*border: 1px solid var(--rift-border);*/
     box-sizing: border-box;
 }
 /* ---------------------------------------------------------
