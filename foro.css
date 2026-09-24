@@ -3343,9 +3343,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     color: var(--theme-linkc1) !important;
 }
 
-/* =========================================================
-   TOOLTIPS DE LA NAVBAR
-   ========================================================= */
+/*TOOLTIPS DE LA NAVBAR*/
 #s-m-t-tooltip {
   z-index: 10000000 !important;
   background: var(--theme-panel);
@@ -3505,33 +3503,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     padding: 16px;
     min-height: 560px;
 }
-#rift-board {
-    z-index: 1;
-}
-/* ---------------------------------------------------------
-   DECORACIÓN ESQUINAS
-   --------------------------------------------------------- */
-/*#rift-current::before, #rift-staff::before, #rift-recent::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 55px;
-    height: 2px;
-    background: var(--rift-a1);
-    box-shadow: 0 0 8px var(--rift-a1);
-}
-
-#rift-current::after, #rift-staff::after, #rift-recent::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 55px;
-    height: 2px;
-    background: var(--rift-a3);
-    box-shadow: 0 0 8px var(--rift-a3);
-}*/
+#rift-board {z-index: 1;}
 
 /* ---------------------------------------------------------
    TÍTULOS
@@ -3708,28 +3680,16 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     line-height: 1;
     text-decoration: none;
     text-align: center;
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.04),
-        rgba(0, 0, 0, 0.20)
-    );
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.20));
     border: 1px solid rgba(77, 184, 255, 0.15);
     border-radius: 6px;
     box-sizing: border-box;
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.04),
-        inset 0 0 10px rgba(0, 0, 0, 0.20);
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease,
-        color 0.2s ease;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 0 10px rgba(0, 0, 0, 0.20);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
 /* ICONO */
-#rift-quick-links > a > i,
-#rift-quick-links > a > svg {
+#rift-quick-links > a > i, #rift-quick-links > a > svg {
     display: block;
     margin: 0 0 6px;
     font-size: 21px;
@@ -3753,9 +3713,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 }
 
 /* Si el icono es texto en lugar de <i> */
-#rift-quick-links > a > br + span {
-    margin-top: 0;
-}
+#rift-quick-links > a > br + span {margin-top: 0;}
 
 /* LÍNEA LUMINOSA INFERIOR */
 #rift-quick-links > a::after {
@@ -3774,18 +3732,11 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #rift-quick-links > a:hover {
     transform: translateY(-2px);
     border-color: var(--rift-a2);
-    box-shadow:
-        0 0 10px rgba(255,255,255,.08),
-        0 0 8px var(--rift-a2);
+    box-shadow: 0 0 10px rgba(255,255,255,.08), 0 0 8px var(--rift-a2);
 }
 
-#rift-quick-links > a:hover > span {
-    color: var(--rift-text);
-}
-
-#rift-quick-links > a:hover > i {
-    color: var(--rift-a2);
-}
+#rift-quick-links > a:hover > span {color: var(--rift-text);}
+#rift-quick-links > a:hover > i {color: var(--rift-a2);}
 
 /* ---------------------------------------------------------
    INFORMACIÓN
@@ -3837,7 +3788,6 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* ---------------------------------------------------------
    STAFF
    --------------------------------------------------------- */
-
 #rift-staff-grid {
     width: 100%;
     display: flex;
@@ -3848,9 +3798,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     box-sizing: border-box;
 }
 
-/* ---------------------------------------------------------
-   STAFF — CRISTALES DE DATOS
-   --------------------------------------------------------- */
+/*STAFF — CRISTALES DE DATOS*/
 #rift-staff-grid > a {
     width: 100px;
     height: 100px;
@@ -3866,9 +3814,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
 }
 
-/* ---------------------------------------------------------
-   IMAGEN
-   --------------------------------------------------------- */
+/*IMAGEN*/
 #rift-staff-grid > a img {
     width: 100%;
     height: 100%;
@@ -3880,9 +3826,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     transition:filter .3s ease, transform .3s ease;
 }
 
-/* ---------------------------------------------------------
-   CRISTAL / REFLEJO
-   --------------------------------------------------------- */
+/*CRISTAL / REFLEJO*/
 #rift-staff-grid > a::before {
     content: "";
     position: absolute;
@@ -4756,9 +4700,9 @@ blockquote blockquote {
    ========================================================= */
 #rift-recent {
     background:
-    radial-gradient(circle at 15% 15%, rgba(77, 184, 255, 0.14), transparent 35%),
-    radial-gradient(circle at 85% 80%, rgba(167, 139, 250, 0.12), transparent 40%),
-    linear-gradient(145deg, rgba(12, 12, 12, 0.96), rgba(29, 29, 29, 0.92));
+      radial-gradient(circle at 15% 15%, rgba(77, 184, 255, 0.14), transparent 35%),
+      radial-gradient(circle at 85% 80%, rgba(167, 139, 250, 0.12), transparent 40%),
+      linear-gradient(145deg, rgba(12, 12, 12, 0.96), rgba(29, 29, 29, 0.92));
     border: 1px solid rgba(77, 184, 255, 0.20);
     box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.35), 0 0 18px rgba(0, 0, 0, 0.20);
     box-sizing: border-box;
@@ -4809,7 +4753,6 @@ blockquote blockquote {
 /* ---------------------------------------------------------
    INTERIOR - TEXTO DE LA NOTICIA
    --------------------------------------------------------- */
-
 .rift-news-prototype .rift-news-text {
     position: absolute !important;
     top: 50% !important;
@@ -4832,7 +4775,6 @@ blockquote blockquote {
 /* ---------------------------------------------------------
    PLACA DE COBERTURA
    --------------------------------------------------------- */
-
 .rift-news-prototype .rift-news-plate {
     position: absolute;
     inset: 0;
@@ -4874,9 +4816,7 @@ blockquote blockquote {
     box-shadow: 0 0 6px var(--rift-a2);
 }
 
-/* ---------------------------------------------------------
-   TÍTULO
-   --------------------------------------------------------- */
+/*TÍTULO*/
 .rift-news-prototype .plate-title {
     max-width: 70%;
     text-align: center;
@@ -4889,9 +4829,7 @@ blockquote blockquote {
     letter-spacing: .6px;
 }
 
-/* ---------------------------------------------------------
-   FECHA
-   --------------------------------------------------------- */
+/*FECHA*/
 .rift-news-prototype .rift-news-plate-date {
     position: absolute;
     top: 7px;
@@ -4982,9 +4920,7 @@ blockquote blockquote {
 
 .digimon-tools-left a:hover i, .digimon-mark-read:hover i {color: inherit;}
 
-/* =========================================================
-   CATEGORÍAS
-   ========================================================= */
+/*CATEGORÍAS*/
 .digimon-category {
     position: relative;
     width: 100%;
@@ -4997,9 +4933,7 @@ blockquote blockquote {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 15px 45px rgba(0, 0, 0, .12);
 }
 
-/* =========================================================
-   CABECERA DE CATEGORÍA
-   ========================================================= */
+/*CABECERA DE CATEGORÍA*/
 .digimon-category-header {
     min-height: 85px;
     display: flex;
@@ -5275,7 +5209,6 @@ blockquote blockquote {
     gap: 12px;
     padding: 17px 18px;
     border-bottom: 1px solid var(--digimon-border);
-    /*background: linear-gradient(90deg, var(--colorfondo4),transparent);*/
     background: var(--colorfondo4);
 }
 
@@ -5445,7 +5378,6 @@ blockquote blockquote {
 
 /* Alternancia de color */
 .digimon-forum-description .rforlinks a:nth-child(even):hover {background: var(--digimon-gradient-reverse);}
-
 /* =========================================================
    INFORMACIÓN INFERIOR DE LA TARJETA
    ========================================================= */
@@ -5550,7 +5482,6 @@ blockquote blockquote {
 }
 
 .digimon-index .forabg > .inner {padding: 0;}
-
 .digimon-index .forabg > .inner > .corners-top, .digimon-index .forabg > .inner > .corners-bottom {display: none;}
 .digimon-index .forabg > .inner > ul.topiclist {display: none;}
 .digimon-index ul.topiclist.forums {display: none;}
@@ -6360,391 +6291,204 @@ blockquote blockquote {
 .sceditor-container {
     border: 1px solid #1677C8 !important;
     background: #0B1118 !important;
-    box-shadow:
-        0 0 0 1px rgba(53,216,255,.08),
-        0 0 20px rgba(22,119,200,.12),
-        inset 0 0 30px rgba(22,119,200,.05) !important;
+    box-shadow: 0 0 0 1px rgba(53,216,255,.08), 0 0 20px rgba(22,119,200,.12), inset 0 0 30px rgba(22,119,200,.05) !important;
 }
-
 
 /* =========================================================
    TOOLBAR
    ========================================================= */
-
 .sceditor-toolbar {
     position: relative;
-
     display: flex !important;
     align-items: center;
-
     /* PERMITE VARIAS FILAS */
     flex-wrap: wrap !important;
-
     gap: 4px;
-
     padding: 7px !important;
-
     width: auto !important;
     height: auto !important;
     min-height: 44px;
-
     overflow: visible !important;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(22,119,200,.12),
-            rgba(11,17,24,.98) 35%,
-            rgba(11,17,24,.98) 65%,
-            rgba(53,216,255,.06)
-        ) !important;
-
+    background: linear-gradient(90deg, rgba(22,119,200,.12), rgba(11,17,24,.98) 35%, rgba(11,17,24,.98) 65%, rgba(53,216,255,.06)) !important;
     border: 0 !important;
     border-bottom: 1px solid #1677C8 !important;
-
-    box-shadow:
-        inset 0 -1px 0 rgba(53,216,255,.35),
-        inset 0 0 20px rgba(22,119,200,.08) !important;
+    box-shadow: inset 0 -1px 0 rgba(53,216,255,.35), inset 0 0 20px rgba(22,119,200,.08) !important;
 }
-
 
 /* =========================================================
    LÍNEA DE ENERGÍA
    ========================================================= */
-
 .sceditor-toolbar:before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 1px;
-
     background: #35D8FF;
-
-    box-shadow:
-        0 0 8px rgba(53,216,255,.8);
-
+    box-shadow: 0 0 8px rgba(53,216,255,.8);
     opacity: .65;
-
     pointer-events: none;
 }
-
 
 /* =========================================================
    GRUPOS
    ========================================================= */
-
 .sceditor-group {
     display: flex !important;
     align-items: center;
     flex-shrink: 0;
-
     gap: 3px;
-
     padding-right: 6px !important;
     margin-right: 4px !important;
-
     border-right: 1px solid rgba(53,216,255,.18) !important;
 }
 
-
-.sceditor-group:last-child {
-    border-right: 0 !important;
-}
-
+.sceditor-group:last-child {border-right: 0 !important;}
 
 /* =========================================================
    BOTONES
    ========================================================= */
-
 .sceditor-toolbar .sceditor-button {
     position: relative;
-
     flex: 0 0 30px;
-
     width: 30px !important;
     min-width: 30px !important;
     max-width: 30px !important;
-
     height: 30px !important;
     min-height: 30px !important;
     max-height: 30px !important;
-
     margin: 0 !important;
-
     background: #0B1118 !important;
-
     border: 1px solid rgba(22,119,200,.65) !important;
-
     border-radius: 2px !important;
-
-    box-shadow:
-        inset 0 0 8px rgba(22,119,200,.08);
-
-    transition:
-        background .15s ease,
-        border-color .15s ease,
-        box-shadow .15s ease,
-        transform .15s ease;
+    box-shadow: inset 0 0 8px rgba(22,119,200,.08);
+    transition: background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
 }
-
 
 /* =========================================================
    ESQUINA TECNOLÓGICA
    ========================================================= */
-
 .sceditor-toolbar .sceditor-button:before {
     content: "";
-
     position: absolute;
-
     top: -1px;
     left: -1px;
-
     width: 5px;
     height: 5px;
-
     border-top: 1px solid #35D8FF;
     border-left: 1px solid #35D8FF;
-
     opacity: .8;
 }
-
 
 /* =========================================================
    HOVER
    ========================================================= */
-
 .sceditor-toolbar .sceditor-button:hover {
     background: #102A3E !important;
-
     border-color: #35D8FF !important;
-
-    box-shadow:
-        inset 0 0 12px rgba(53,216,255,.12),
-        0 0 8px rgba(53,216,255,.18) !important;
-
+    box-shadow: inset 0 0 12px rgba(53,216,255,.12), 0 0 8px rgba(53,216,255,.18) !important;
     transform: translateY(-1px);
 }
-
 
 /* =========================================================
    ACTIVO
    ========================================================= */
-
 .sceditor-toolbar .sceditor-button.active {
     background: #1677C8 !important;
-
     border-color: #35D8FF !important;
-
-    box-shadow:
-        inset 0 0 12px rgba(53,216,255,.25),
-        0 0 10px rgba(53,216,255,.25) !important;
+    box-shadow: inset 0 0 12px rgba(53,216,255,.25), 0 0 10px rgba(53,216,255,.25) !important;
 }
 /* =========================================================
    BOTONES
    ========================================================= */
-
 .sceditor-toolbar .sceditor-button {
     position: relative;
-
     width: 30px !important;
     height: 30px !important;
-
     margin: 0 !important;
-
     background: #0B1118 !important;
-
     border: 1px solid rgba(22,119,200,.65) !important;
-
     border-radius: 2px !important;
-
-    box-shadow:
-        inset 0 0 8px rgba(22,119,200,.08);
-
-    transition:
-        background .15s ease,
-        border-color .15s ease,
-        box-shadow .15s ease,
-        transform .15s ease;
+    box-shadow: inset 0 0 8px rgba(22,119,200,.08);
+    transition: background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
 }
 
-
 /* Esquina tecnológica */
-
 .sceditor-toolbar .sceditor-button:before {
     content: "";
-
     position: absolute;
-
     top: -1px;
     left: -1px;
-
     width: 5px;
     height: 5px;
-
     border-top: 1px solid #35D8FF;
     border-left: 1px solid #35D8FF;
-
     opacity: .8;
 }
 
-
-/* =========================================================
-   HOVER
-   ========================================================= */
-
+/*HOVER*/
 .sceditor-toolbar .sceditor-button:hover {
     background: #102A3E !important;
-
     border-color: #35D8FF !important;
-
-    box-shadow:
-        inset 0 0 12px rgba(53,216,255,.12),
-        0 0 8px rgba(53,216,255,.18) !important;
-
+    box-shadow: inset 0 0 12px rgba(53,216,255,.12), 0 0 8px rgba(53,216,255,.18) !important;
     transform: translateY(-1px);
 }
 
-
-/* =========================================================
-   ACTIVO
-   ========================================================= */
-
+/*ACTIVO*/
 .sceditor-toolbar .sceditor-button.active {
     background: #1677C8 !important;
-
     border-color: #35D8FF !important;
-
-    box-shadow:
-        inset 0 0 12px rgba(53,216,255,.25),
-        0 0 10px rgba(53,216,255,.25) !important;
+    box-shadow: inset 0 0 12px rgba(53,216,255,.25), 0 0 10px rgba(53,216,255,.25) !important;
 }
 
-
-/* =========================================================
-   ICONOS
-   ========================================================= */
-
+/*ICONOS*/
 .sceditor-toolbar .sceditor-button div {
     opacity: .9;
-
-    filter:
-        brightness(0)
-        invert(1);
-
-    transition:
-        filter .15s ease,
-        opacity .15s ease;
+    filter: brightness(0) invert(1);
+    transition:filter .15s ease, opacity .15s ease;
 }
-
 
 .sceditor-toolbar .sceditor-button:hover div {
     opacity: 1;
-
-    filter:
-        brightness(0)
-        invert(1)
-        drop-shadow(0 0 3px #35D8FF);
+    filter: brightness(0) invert(1) drop-shadow(0 0 3px #35D8FF);
 }
 
+/*BOTONES ESPECIALES*/
+.sceditor-button-mention div, .sceditor-button-avatarswap div {filter: brightness(0) invert(1) drop-shadow(0 0 2px #35D8FF) !important;}
 
-/* =========================================================
-   BOTONES ESPECIALES
-   ========================================================= */
-
-.sceditor-button-mention div,
-.sceditor-button-avatarswap div {
-    filter:
-        brightness(0)
-        invert(1)
-        drop-shadow(0 0 2px #35D8FF) !important;
-}
-
-
-/* =========================================================
-   DROPDOWNS
-   ========================================================= */
-
+/*DROPDOWNS*/
 .sceditor-dropdown {
     background: #0B1118 !important;
-
     border: 1px solid #1677C8 !important;
-
-    box-shadow:
-        0 0 15px rgba(22,119,200,.25),
-        inset 0 0 15px rgba(22,119,200,.08) !important;
-
+    box-shadow: 0 0 15px rgba(22,119,200,.25), inset 0 0 15px rgba(22,119,200,.08) !important;
     color: #DDF8FF !important;
 }
 
+.sceditor-dropdown label {color: #DDF8FF !important;}
 
-.sceditor-dropdown label {
-    color: #DDF8FF !important;
-}
-
-
-/* =========================================================
-   INPUTS DE LOS DROPDOWNS
-   ========================================================= */
-
-.sceditor-dropdown input,
-.sceditor-dropdown select,
-.sceditor-dropdown textarea {
+/*INPUTS DE LOS DROPDOWNS*/
+.sceditor-dropdown input, .sceditor-dropdown select, .sceditor-dropdown textarea {
     background: #111A24 !important;
-
     border: 1px solid #1677C8 !important;
-
     color: #DDF8FF !important;
 }
 
-
-/* =========================================================
-   EDITOR
-   ========================================================= */
-
-.sceditor-container iframe,
-.sceditor-container textarea {
+/*EDITOR*/
+.sceditor-container iframe,.sceditor-container textarea {
     background: #0B1118 !important;
-
     color: #E7FAFF !important;
-
     font-family: "IBM Plex Mono", monospace !important;
-
     font-size: 14px !important;
-
     line-height: 1.7 !important;
 }
 
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
-.sceditor-container ::-webkit-scrollbar {
-    width: 6px;
-}
-
-.sceditor-container ::-webkit-scrollbar-track {
-    background: #0B1118;
-}
-
-.sceditor-container ::-webkit-scrollbar-thumb {
-    background: #1677C8;
-}
-
-.sceditor-container ::-webkit-scrollbar-thumb:hover {
-    background: #35D8FF;
-}
-
-/*boton de admin panel*/
-#page-footer p.copyright a[href*="/admin/"] {
-    font-size: 0 !important;
-}
+/*SCROLLBAR*/
+.sceditor-container ::-webkit-scrollbar {width: 6px;}
+.sceditor-container ::-webkit-scrollbar-track {background: #0B1118;}
+.sceditor-container ::-webkit-scrollbar-thumb {background: #1677C8;}
+.sceditor-container ::-webkit-scrollbar-thumb:hover {background: #35D8FF;}
+#page-footer p.copyright a[href*="/admin/"] {font-size: 0 !important;}/*boton de admin panel*/
 
 #page-footer p.copyright a[href*="/admin/"]::before {
     content: "⚙";
