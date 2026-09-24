@@ -335,7 +335,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 
 .dr-tadmin .dr-lista h3 span {color: var(--emblema1);}
 
-/* descripción */
 .dr-tadmin .dr-lista p {
     margin: 0;
     color: var(--colortextodl);
@@ -693,7 +692,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 }
 
 /* ZONA DE ROL */
-
 .dr-map-role {
     margin-top:14px;
     padding:10px 12px;
@@ -758,7 +756,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* =========================================================
    IMAGEN ESTÁTICA 
    ========================================================= */
-
 .dr-map-image2 {
     content: "";
     display: block;
@@ -768,22 +765,16 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     border: 1px solid var(--emblema2);
     box-sizing: border-box;
 }
 
 /* ESTADO ACTIVO */
 #dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"], #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"], #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"],
-#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"], #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"], #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {
-    background:rgba(22,119,200,.15);
-    border-color:var(--emblema2);
-}
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"], #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"], #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {background:rgba(22,119,200,.15); border-color:var(--emblema2);}
 
 #dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"] b, #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"] b, #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"] b,
-#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b, #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b, #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {
-    color:var(--emblema2);
-}
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b, #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b, #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {color:var(--emblema2);}
 
 /* RESPONSIVE */
 @media(max-width:600px) {
@@ -940,7 +931,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* ==========================================================
    HP / SP / EXP
 ========================================================== */
-
 .big-stat {margin-bottom: 8px;}
 
 .stat-line {
@@ -968,7 +958,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* ==========================================================
    BARRAS
 ========================================================== */
-
 .progress {
     height: 5px;
     margin-top: 4px;
@@ -989,7 +978,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* ==========================================================
    STATS DE COMBATE
 ========================================================== */
-
 .combat-stat {
     height: 19px;
     display: flex;
@@ -1063,13 +1051,11 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* ==========================================================
    EQUIPMENT
 ========================================================== */
-
 .equipment {margin-top: 8px;}
 
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
-
 @media (max-width:600px) {
     .digimon-status {
         width: 100%;
@@ -1176,7 +1162,6 @@ body.dark-mode {
 }
 
 /* BOTÓN CAMBIO DE EMBLEMA - NECROMANCER */
-
 button#theme-toggler2 {
     position: fixed;
     top: 120px;
@@ -1425,7 +1410,6 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    ESTADOS
    --------------------------------------------------------- */
-
 #dg-profile .dg-profile-status-dot {
     background:#e34a4a!important;
     box-shadow:0 0 8px #e34a4a!important;
@@ -2091,7 +2075,6 @@ button#theme-toggler2:before {
 /* =========================================================
    HP
    ========================================================= */
-
 #dg-profile .dg-profile-hp {
     margin-top: 18px;
     padding-top: 15px;
@@ -2169,28 +2152,16 @@ html {font-size: var(--dr-font-size, 14px);}/*ACCESIBILIDAD — ESCALA BASE*/
     overflow: visible;
 }
 /*VARIANTES VISUALES*/
-/*
-=========================================================
-VARIANTES VISUALES
-=========================================================
-
----------------------------------------------------------
-VALOR
----------------------------------------------------------*/
-
+/*VALOR*/
 body.valor-mode {
-
     --emblema1: #298BF1; /*complementario*/
     --emblema2: #f16f29; /*base*/
-
     --linkc1: #29F16F; /*triada1*/
     --linkc2: #6F29F1; /*triada2*/
     --linkc3: #d8a839; /*armonia*/
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 button[title="Valor"] {
     background-image: url('https://imgur.com/yi2VSVk.png');
@@ -2199,23 +2170,17 @@ button[title="Valor"] {
     background-position: center;
 }
 
-/* ---------------------------------------------------------
-AMISTAD
----------------------------------------------------------*/
+/*AMISTAD*/
 
 body.amistad-mode {
-
     --emblema1: #E2A175;
     --emblema2: #75b6e2;
-
     --linkc1: #E275B6;
     --linkc2: #B6E275;
     --linkc3: #75E2D3;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 
 button[title="Amistad"] {
@@ -2225,23 +2190,16 @@ button[title="Amistad"] {
     background-position: center;
 }
 
-/* ---------------------------------------------------------
-AMOR
---------------------------------------------------------- */
-
+/*AMOR*/
 body.amor-mode {
-
     --emblema1: #48D1BC;
     --emblema2: #d1485d;
-
     --linkc1: #5DD148;
     --linkc2: #485DD1;
     --linkc3: #cd89b5;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
    }
 button[title="Amor"] {
     background-image: url('https://2img.net/i.imgur.com/oxZUHTR.png');
@@ -2250,23 +2208,16 @@ button[title="Amor"] {
     background-position: center;
 }
 
- /*---------------------------------------------------------
-CONOCIMIENTO
----------------------------------------------------------*/
-
+/*CONOCIMIENTO*/
 body.conocimiento-mode {
-
     --emblema1: #589240;
     --emblema2: #ae71d1;
-
     --linkc1: #92406A;
     --linkc2: #409292;
     --linkc3: #926A40;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 button[title="Conocimiento"] {
     background-image: url('https://2img.net/i.imgur.com/lV6PHWQ.png');
@@ -2275,19 +2226,13 @@ button[title="Conocimiento"] {
     background-position: center;
 }
 
-/*---------------------------------------------------------
-PUREZA
---------------------------------------------------------- */
-
+/*PUREZA*/
 body.purity-mode {
-
     --emblema1: #D274E1;
     --emblema2: #7ce16f;
-
     --linkc1: #6F7CE1;
     --linkc2: #E16F7C;
     --linkc3: #4b9e80;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
@@ -2299,23 +2244,16 @@ button[title="Pureza"] {
     background-position: center;
 }
 
-/*---------------------------------------------------------
-SINCERIDAD
----------------------------------------------------------*/
-
+/*SINCERIDAD*/
 body.sincerity-mode {
-
     --emblema1: #B6B7A4;
     --emblema2: #a5a4b7;
-
     --linkc1: #B7A5A4;
     --linkc2: #A4B7A5;
     --linkc3: #6e797f;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 button[title="Sinceridad"] {
     background-image: url('https://2img.net/i.imgur.com/b19orbC.png');
@@ -2324,23 +2262,16 @@ button[title="Sinceridad"] {
     background-position: center;
 }
 
-/*---------------------------------------------------------
-ESPERANZA
----------------------------------------------------------*/
-
+/*ESPERANZA*/
 body.hope-mode {
-
     --emblema1: #7985E5;
     --emblema2: #e5d979;
-
     --linkc1: #79E5D9;
     --linkc2: #D979E5;
     --linkc3: #88b128;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 button[title="Esperanza"] {
     background-image: url('https://2img.net/i.imgur.com/Vcn9Ke9.png');
@@ -2349,23 +2280,16 @@ button[title="Esperanza"] {
     background-position: center;
 }
 
-/*---------------------------------------------------------
-LUZ
----------------------------------------------------------*/
-
+/*LUZ*/
 body.light-variant-mode {
-
     --emblema1: #B6EDCB;
     --emblema2: #edb6cf;
-
     --linkc1: #CFEDB6;
     --linkc2: #B6CFED;
     --linkc3: #a17678;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 button[title="Luz"] {
     background-image: url('https://2img.net/i.imgur.com/BhdjsBY.png');
@@ -2374,23 +2298,16 @@ button[title="Luz"] {
     background-position: center;
 }
 
-/*---------------------------------------------------------
-BONDAD
----------------------------------------------------------*/
-
+/*BONDAD*/
 body.kindness-mode {
-
     --emblema1: #00E40F;
     --emblema2: #e400d5;
-
     --linkc1: #00D5E4;
     --linkc2: #D5E400;
     --linkc3: #8e1c61;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 button[title="Bondad"] {
     background-image: url('https://2img.net/i.imgur.com/VMF9CGT.png');
@@ -2399,23 +2316,16 @@ button[title="Bondad"] {
     background-position: center;
 }
 
-/*---------------------------------------------------------
-DESTINO
----------------------------------------------------------*/
-
+/*DESTINO*/
 body.fate-mode {
-
     --emblema1: #45759B;
     --emblema2: #9B6B45;
-
     --linkc1: #459B6B;
     --linkc2: #6B459B;
     --linkc3: #9B4545;
-
     /*--linkc1: var(--linkc1);
     --linkc2: var(--linkc2);*/
     --accent3: var(--linkc3);
-
 }
 button[title="Destino"] {
     background-image: url('https://imgur.com/Mjmg7kc.png');
@@ -2423,18 +2333,14 @@ button[title="Destino"] {
     background-repeat: no-repeat;
     background-position: center;
 }
-/* ---------------------------------------------------------
-   CIRCUITOS DIGITALES
-   --------------------------------------------------------- */
+/*CIRCUITOS DIGITALES*/
 #digimon-navbar::before {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
     opacity: .16;
-    background-image:
-        linear-gradient(90deg, transparent 48%, var(--emblema1) 49%, transparent 50%),
-        linear-gradient(180deg, transparent 48%, var(--emblema2) 49%, transparent 50%);
+    background-image: linear-gradient(90deg, transparent 48%, var(--emblema1) 49%, transparent 50%), linear-gradient(180deg, transparent 48%, var(--emblema2) 49%, transparent 50%);
     background-size: 32px 32px, 32px 32px;
     z-index: 0;
 }
@@ -2504,10 +2410,7 @@ button[title="Destino"] {
     display: block;
 }
 
-/* ---------------------------------------------------------
-   SEPARADOR DIGITAL
-   --------------------------------------------------------- */
-
+/*SEPARADOR DIGITAL*/
 .digimon-digital-line {
     position: relative;
     width: auto;
@@ -2523,7 +2426,6 @@ button[title="Destino"] {
 /* ---------------------------------------------------------
    MENÚ PRINCIPAL
    --------------------------------------------------------- */
-
 .digimon-main-menu {
     display: flex;
     align-items: center;
@@ -2565,14 +2467,12 @@ button[title="Destino"] {
 /* ---------------------------------------------------------
    BUSCADOR
    --------------------------------------------------------- */
-
 #digimon-search {
     display: flex;
     align-items: center;
     width: min(250px, 24vw);
     margin-left: auto;
 }
-
 
 #digimon-search-input {
     width: 100%;
@@ -2596,7 +2496,6 @@ button[title="Destino"] {
 /* ---------------------------------------------------------
    BOTONES DE ICONOS
    --------------------------------------------------------- */
-
 .digimon-sub-button, #digimon-scroll-toggle {border-radius: 50px;}
 
 .digimon-icon-button, .digimon-sub-button {
@@ -2736,7 +2635,6 @@ button[title="Destino"] {
 /* ---------------------------------------------------------
    SWITCHEROO
    --------------------------------------------------------- */
-
 #switcheroo.digimon-switch-open {display: block !important;}
 /* ---------------------------------------------------------
    SWITCHEROO — TOOLTIP
@@ -2763,18 +2661,6 @@ button[title="Destino"] {
 #switcheroo .switcheroo__popper-text {display: block !important;}
 
 /* =========================================================
-   SWITCHEROO — CUENTAS
-   ========================================================= */
-/*#switcheroo .switcheroo__squircles {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-}*/
-
-/* =========================================================
    SWITCHEROO — CONTENEDOR DE CUENTAS
    ========================================================= */
 
@@ -2787,47 +2673,6 @@ button[title="Destino"] {
     padding-top: 32px !important;
     box-sizing: border-box !important;
 }
-
-/* ---------------------------------------------------------
-   CUENTA / BOTÓN +
-   --------------------------------------------------------- */
-/*#switcheroo .switcheroo__squircle, #switcheroo .switcheroo__squircle--button {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    flex: 0 0 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background: var(--theme-panel-deep);
-    border: 2px solid var(--emblema2);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform .2s ease, background .2s ease, filter .2s ease;
-}*/
-
-/* ---------------------------------------------------------
-   AVATAR DE LA CUENTA
-   --------------------------------------------------------- */
-/*#switcheroo .switcheroo__avatar {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-#switcheroo .switcheroo__avatar img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}*/
-
 /* ---------------------------------------------------------
    CUENTA ACTIVA
    --------------------------------------------------------- */
@@ -2862,68 +2707,36 @@ button[title="Destino"] {
    ========================================================= */
 
 /* FONDO DEL POPUP */
-
 .monomer-overlay {
     z-index: 99998 !important;
-
-    background:
-        radial-gradient(
-            circle at center,
-            color-mix(in srgb, var(--emblema2) 8%, transparent),
-            rgba(0, 0, 0, .82)
-        ) !important;
-
+    background: radial-gradient(circle at center, color-mix(in srgb, var(--emblema2) 8%, transparent), rgba(0, 0, 0, .82)) !important;
     backdrop-filter: blur(4px) !important;
 }
 
 .monomer-modal {
     position: fixed !important;
     z-index: 99999 !important;
-
     top: 50% !important;
     left: 50% !important;
-
     width: 420px !important;
     max-width: calc(100vw - 40px) !important;
-
     padding: 0 !important;
-
     transform: translate(-50%, -50%) !important;
-
     border: 1px solid var(--emblema2) !important;
     border-radius: 14px !important;
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            color-mix(in srgb, var(--emblema2) 18%, transparent),
-            transparent 55%
-        ),
-        linear-gradient(
-            145deg,
-            var(--theme-panel-deep),
-            var(--theme-panel)
-        ) !important;
-
+    background: radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--emblema2) 18%, transparent), transparent 55%), linear-gradient(145deg, var(--theme-panel-deep), var(--theme-panel)) !important;
     color: #fff !important;
-
-    box-shadow:
-        0 0 15px var(--emblema2),
-        0 15px 45px rgba(0, 0, 0, .75),
-        inset 0 0 25px rgba(0, 0, 0, .35) !important;
+    box-shadow: 0 0 15px var(--emblema2), 0 15px 45px rgba(0, 0, 0, .75), inset 0 0 25px rgba(0, 0, 0, .35) !important;
 }
 
-.monomer-modal.monomer-open,
-.monomer-overlay.monomer-open {
+.monomer-modal.monomer-open, .monomer-overlay.monomer-open {
     opacity: 1 !important;
     pointer-events: auto !important;
 }
 
 .monomer-modal .switcheroo__form {
     padding: 28px !important;
-
     background: transparent !important;
-
     border-radius: 14px !important;
 }
 
@@ -2942,59 +2755,34 @@ button[title="Destino"] {
 
 .monomer-modal .switcheroo__form-input {
     box-sizing: border-box !important;
-
     width: 100% !important;
-
     padding: 10px 12px !important;
-
     border: 1px solid var(--emblema2) !important;
     border-bottom: 2px solid var(--emblema2) !important;
-
     border-radius: 7px !important;
-
     background: var(--theme-panel-deep) !important;
-
     color: #fff !important;
-
     outline: none !important;
-
-    box-shadow:
-        inset 0 0 8px rgba(0, 0, 0, .35) !important;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, .35) !important;
 }
 
-.monomer-modal .switcheroo__form-input:focus {
-    box-shadow:
-        0 0 8px var(--emblema2),
-        inset 0 0 8px rgba(0, 0, 0, .35) !important;
-}
+.monomer-modal .switcheroo__form-input:focus {box-shadow: 0 0 8px var(--emblema2), inset 0 0 8px rgba(0, 0, 0, .35) !important;}
 
 .monomer-modal .switcheroo__form-button {
     padding: 9px 18px !important;
-
     border: 1px solid var(--emblema2) !important;
     border-radius: 7px !important;
-
     background: var(--emblema2) !important;
-
     color: var(--theme-panel-deep) !important;
-
     font-family: 'Jersey 15', sans-serif !important;
     font-size: 15px !important;
-
     cursor: pointer !important;
-
-    transition:
-        transform .15s ease,
-        box-shadow .15s ease,
-        filter .15s ease !important;
+    transition: transform .15s ease, box-shadow .15s ease, filter .15s ease !important;
 }
 
 .monomer-modal .switcheroo__form-button:hover {
     transform: translateY(-1px) !important;
-
-    box-shadow:
-        0 0 12px var(--emblema2) !important;
-
+    box-shadow: 0 0 12px var(--emblema2) !important;
     filter: brightness(1.15) !important;
 }
 
@@ -3012,136 +2800,43 @@ button[title="Destino"] {
 }
 
 /* =========================================================
-   SWITCHEROO — ACABADO VISUAL
-   ========================================================= */
-
-/*#switcheroo {
-    z-index: 100000 !important;
-
-    padding: 12px !important;
-
-    background: linear-gradient(
-        145deg,
-        var(--theme-panel-deep),
-        var(--theme-panel)
-    ) !important;
-
-    border: 1px solid var(--emblema2) !important;
-    border-left: 0 !important;
-
-    border-radius: 0 14px 14px 0 !important;
-
-    box-shadow:
-        0 0 12px var(--emblema2),
-        0 8px 25px rgba(0, 0, 0, .65),
-        inset 0 0 18px rgba(0, 0, 0, .35) !important;
-
-    box-sizing: border-box !important;
-}*/
-
-
-/* CONTENEDOR DE LAS CUENTAS */
-
-/*#switcheroo .switcheroo__squircles {
-    gap: 14px !important;
-    padding: 4px !important;
-}*/
-
-
-/* AVATARES / CUENTAS */
-
-/*#switcheroo .switcheroo__squircle,
-#switcheroo .switcheroo__squircle--button {
-    width: 72px !important;
-    height: 72px !important;
-
-    border: 2px solid var(--emblema2) !important;
-    border-radius: 10px !important;
-
-    background: var(--theme-panel-deep) !important;
-
-    box-shadow:
-        0 0 5px var(--emblema2),
-        inset 0 0 10px rgba(0, 0, 0, .4) !important;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-radius .2s ease,
-        background .2s ease !important;
-}*/
-
-/* =========================================================
    SWITCHEROO — CUENTAS Y BOTÓN +
    ========================================================= */
-
 #switcheroo .switcheroo__squircle, #switcheroo .switcheroo__squircle--button {
     position: relative !important;
-
     width: 72px !important;
     height: 72px !important;
     flex: 0 0 72px !important;
-
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-
     padding: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
-
     background: var(--theme-panel-deep) !important;
-
     border: 2px solid var(--emblema2) !important;
     border-radius: 10px !important;
-
-    box-shadow:
-        0 0 5px var(--emblema2),
-        inset 0 0 10px rgba(0, 0, 0, .4) !important;
-
+    box-shadow: 0 0 5px var(--emblema2), inset 0 0 10px rgba(0, 0, 0, .4) !important;
     cursor: pointer !important;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-radius .2s ease,
-        background .2s ease !important;
+    transition: transform .2s ease, box-shadow .2s ease, border-radius .2s ease, background .2s ease !important;
 }
-
-/* AVATAR */
-
-/*#switcheroo .switcheroo__avatar,
-#switcheroo .switcheroo__avatar img {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-#switcheroo .switcheroo__avatar img {
-    object-fit: cover !important;
-    border-radius: 7px !important;
-}*/
 
 /* =========================================================
    SWITCHEROO — AVATAR
    ========================================================= */
-
 #switcheroo .switcheroo__avatar {
     width: 100% !important;
     height: 100% !important;
-
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-
     overflow: hidden !important;
 }
 
 #switcheroo .switcheroo__avatar img {
     width: 100% !important;
     height: 100% !important;
-
     display: block !important;
-
     object-fit: cover !important;
     border-radius: 7px !important;
 }
@@ -3150,31 +2845,18 @@ button[title="Destino"] {
 
 #switcheroo .switcheroo__squircle.active {
     border-color: var(--emblema2) !important;
-
     background: var(--emblema2) !important;
-
-    box-shadow:
-        0 0 12px var(--emblema2),
-        inset 0 0 12px rgba(0, 0, 0, .35) !important;
+    box-shadow: 0 0 12px var(--emblema2), inset 0 0 12px rgba(0, 0, 0, .35) !important;
 }
-
 
 /* HOVER */
-
-#switcheroo .switcheroo__squircle:hover,
-#switcheroo .switcheroo__squircle--button:hover {
+#switcheroo .switcheroo__squircle:hover, #switcheroo .switcheroo__squircle--button:hover {
     transform: translateX(4px) scale(1.04) !important;
-
     background: var(--emblema2) !important;
-
-    box-shadow:
-        0 0 14px var(--emblema2),
-        inset 0 0 10px rgba(0, 0, 0, .3) !important;
+    box-shadow: 0 0 14px var(--emblema2), inset 0 0 10px rgba(0, 0, 0, .3) !important;
 }
 
-
 /* BOTÓN + */
-
 #switcheroo .switcheroo__squircle--button {
     color: var(--emblema2) !important;
     font-size: 38px !important;
@@ -3226,78 +2908,34 @@ button[title="Destino"] {
 }
 
 /* =========================================================
-   SWITCHEROO — IDENTIDAD DEL PANEL
-   ========================================================= */
-
-/*#switcheroo {
-    position: fixed !important;
-    overflow: visible !important;
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            color-mix(in srgb, var(--emblema2) 14%, transparent),
-            transparent 55%
-        ),
-        linear-gradient(
-            145deg,
-            var(--theme-panel-deep),
-            var(--theme-panel)
-        ) !important;
-
-    border-top: 2px solid var(--emblema2) !important;
-}*/
-
-/* =========================================================
    SWITCHEROO — CONTENEDOR PRINCIPAL
    ========================================================= */
-
 #switcheroo {
     display: none !important;
     position: fixed !important;
     left: 0 !important;
     top: 106px !important;
     z-index: 100000 !important;
-
     padding: 12px !important;
     box-sizing: border-box !important;
     overflow: visible !important;
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            color-mix(in srgb, var(--emblema2) 14%, transparent),
-            transparent 55%
-        ),
-        linear-gradient(
-            145deg,
-            var(--theme-panel-deep),
-            var(--theme-panel)
-        ) !important;
-
+    background: radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--emblema2) 14%, transparent), transparent 55%), linear-gradient(145deg, var(--theme-panel-deep), var(--theme-panel)) !important;
     border: 1px solid var(--emblema2) !important;
     border-left: 0 !important;
     border-top: 2px solid var(--emblema2) !important;
     border-radius: 0 14px 14px 0 !important;
-
-    box-shadow:
-        0 0 12px var(--emblema2),
-        0 8px 25px rgba(0, 0, 0, .65),
-        inset 0 0 18px rgba(0, 0, 0, .35) !important;
+    box-shadow: 0 0 12px var(--emblema2), 0 8px 25px rgba(0, 0, 0, .65), inset 0 0 18px rgba(0, 0, 0, .35) !important;
 }
 
-#switcheroo.digimon-switch-open {
-    display: block !important;
-}
+#switcheroo.digimon-switch-open {display: block !important;}
 /* CABECERA */
-
 #switcheroo::before {
     content: "{ADD+USER}";
     position: absolute;
     top: 8px;
     left: 12px;
     font-family: 'Jersey 15', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: 1.5px;
     line-height: 1;
     color: var(--emblema2);
@@ -3305,42 +2943,21 @@ button[title="Destino"] {
     opacity: .9;
 }
 
-
 /* LÍNEA DECORATIVA DE LA CABECERA */
-
 #switcheroo::after {
     content: "";
-
     position: absolute;
     top: 24px;
     left: 12px;
     right: 12px;
-
     height: 1px;
-
-    background: linear-gradient(
-        90deg,
-        var(--emblema2),
-        transparent
-    );
-
-    box-shadow:
-        0 0 5px var(--emblema2);
-
+    background: linear-gradient(90deg, var(--emblema2), transparent);
+    box-shadow: 0 0 5px var(--emblema2);
     opacity: .7;
 }
 
-
 /* BAJAMOS LIGERAMENTE LAS CUENTAS PARA DEJAR ESPACIO A LA CABECERA */
-
-/*#switcheroo .switcheroo__squircles {
-    padding-top: 32px !important;
-}*/
-
-#switcheroo .switcheroo__squircle--button .switcheroo__popper-text {
-    font-size: 0 !important;
-}
-
+#switcheroo .switcheroo__squircle--button .switcheroo__popper-text {font-size: 0 !important;}
 #switcheroo .switcheroo__squircle--button .switcheroo__popper-text::after {
     content: "Añadir cuenta";
     font-size: 11px !important;
@@ -3364,29 +2981,11 @@ button[title="Destino"] {
     max-width: calc(100vw - 30px) !important;
     padding: 28px 30px 30px !important;
     box-sizing: border-box !important;
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            color-mix(in srgb, var(--emblema2) 12%, transparent),
-            transparent 55%
-        ),
-        linear-gradient(
-            145deg,
-            var(--theme-panel-deep),
-            var(--theme-panel)
-        ) !important;
-
+    background:radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--emblema2) 12%, transparent), transparent 55%), linear-gradient(145deg, var(--theme-panel-deep), var(--theme-panel)) !important;
     border: 1px solid var(--emblema2) !important;
     border-top: 2px solid var(--emblema2) !important;
-
     border-radius: 8px !important;
-
-    box-shadow:
-        0 0 12px color-mix(in srgb, var(--emblema2) 30%, transparent),
-        0 15px 45px rgba(0, 0, 0, .8),
-        inset 0 0 25px rgba(0, 0, 0, .35) !important;
-
+    box-shadow: 0 0 12px color-mix(in srgb, var(--emblema2) 30%, transparent), 0 15px 45px rgba(0, 0, 0, .8), inset 0 0 25px rgba(0, 0, 0, .35) !important;
     color: var(--theme-text) !important;
     overflow: visible !important;
 }
@@ -3395,17 +2994,13 @@ button[title="Destino"] {
 #switcheroo .monomer-modal::before {
     content: "RIFT // ACCESO";
     display: block;
-
     margin-bottom: 20px;
-
     font-family: 'Jersey 15', sans-serif !important;
     font-size: 16px !important;
     letter-spacing: 2px !important;
     line-height: 1 !important;
-
     color: var(--emblema2) !important;
     text-shadow: 0 0 7px var(--emblema2);
-
     text-align: left;
 }
 
@@ -3413,71 +3008,45 @@ button[title="Destino"] {
 #switcheroo .monomer-modal::after {
     content: "";
     display: block;
-
     position: absolute;
     top: 53px;
     left: 30px;
     right: 30px;
-
     height: 1px;
-
-    background: linear-gradient(
-        90deg,
-        var(--emblema2),
-        transparent
-    );
-
+    background: linear-gradient(90deg, var(--emblema2), transparent);
     box-shadow: 0 0 5px var(--emblema2);
     opacity: .7;
 }
 
-
 /* Botón X */
 #switcheroo .monomer-close {
     position: absolute !important;
-
     top: -10px !important;
     right: -10px !important;
-
     width: 21px !important;
     height: 21px !important;
-
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-
     padding: 0 !important;
     margin: 0 !important;
-
     background: var(--emblema2) !important;
     border: 1px solid var(--emblema2) !important;
     border-radius: 50% !important;
-
     color: var(--theme-panel-deep) !important;
-
     font-size: 14px !important;
     font-weight: bold !important;
     line-height: 1 !important;
-
     cursor: pointer !important;
-
-    box-shadow:
-        0 0 7px color-mix(in srgb, var(--emblema2) 60%, transparent) !important;
-
-    transition:
-        transform .15s ease,
-        box-shadow .15s ease !important;
-
+    box-shadow: 0 0 7px color-mix(in srgb, var(--emblema2) 60%, transparent) !important;
+    transition: transform .15s ease, box-shadow .15s ease !important;
     z-index: 10 !important;
 }
 
 #switcheroo .monomer-close:hover {
     transform: scale(1.15) !important;
-
-    box-shadow:
-        0 0 12px var(--emblema2) !important;
+    box-shadow: 0 0 12px var(--emblema2) !important;
 }
-
 
 /* Formulario */
 #switcheroo .switcheroo__form {
@@ -3485,121 +3054,78 @@ button[title="Destino"] {
     padding: 0 !important;
 }
 
-
 /* Filas */
 #switcheroo .switcheroo__form-row {
     margin: 0 0 14px !important;
     padding: 0 !important;
 }
 
-
 /* Etiquetas */
 #switcheroo .switcheroo__form-label {
     display: block !important;
-
     margin: 0 0 6px !important;
-
     font-family: 'Jersey 15', sans-serif !important;
     font-size: 12px !important;
     letter-spacing: .8px !important;
-
     color: var(--theme-text) !important;
-
     text-transform: uppercase;
 }
-
 
 /* Campos */
 #switcheroo .switcheroo__form-input {
     width: 100% !important;
     height: 38px !important;
-
     box-sizing: border-box !important;
-
     padding: 8px 10px !important;
-
     background: rgba(0, 0, 0, .35) !important;
-
     border: 1px solid var(--emblema2) !important;
     border-radius: 3px !important;
-
     color: var(--theme-text) !important;
-
     font-family: inherit !important;
     font-size: 13px !important;
-
     outline: none !important;
-
-    box-shadow:
-        inset 0 0 8px rgba(0, 0, 0, .35) !important;
-
-    transition:
-        background .15s ease,
-        box-shadow .15s ease !important;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, .35) !important;
+    transition: background .15s ease, box-shadow .15s ease !important;
 }
-
 
 /* Campo seleccionado */
 #switcheroo .switcheroo__form-input:focus {
     background: rgba(0, 0, 0, .5) !important;
-
-    box-shadow:
-        0 0 7px color-mix(in srgb, var(--emblema2) 35%, transparent),
-        inset 0 0 8px rgba(0, 0, 0, .4) !important;
+    box-shadow: 0 0 7px color-mix(in srgb, var(--emblema2) 35%, transparent), inset 0 0 8px rgba(0, 0, 0, .4) !important;
 }
-
 
 /* Botón CONEXIÓN */
 #switcheroo .switcheroo__form-button {
     width: 100% !important;
     height: 38px !important;
-
     margin-top: 3px !important;
-
     border: 1px solid var(--emblema2) !important;
     border-radius: 3px !important;
-
     background: var(--emblema2) !important;
-
     color: var(--theme-panel-deep) !important;
-
     font-family: 'Jersey 15', sans-serif !important;
     font-size: 14px !important;
     letter-spacing: .5px !important;
-
     cursor: pointer !important;
-
-    box-shadow:
-        0 0 7px color-mix(in srgb, var(--emblema2) 30%, transparent) !important;
-
-    transition:
-        transform .15s ease,
-        filter .15s ease,
-        box-shadow .15s ease !important;
+    box-shadow: 0 0 7px color-mix(in srgb, var(--emblema2) 30%, transparent) !important;
+    transition: transform .15s ease, filter .15s ease, box-shadow .15s ease !important;
 }
-
 
 /* Hover botón */
 #switcheroo .switcheroo__form-button:hover {
     transform: translateY(-1px) !important;
-
     filter: brightness(1.12);
-
-    box-shadow:
-        0 0 12px color-mix(in srgb, var(--emblema2) 60%, transparent) !important;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--emblema2) 60%, transparent) !important;
 }
 
 /* =========================================================
    SWITCHEROO — PRUEBA POP-UP
    ========================================================= */
-
 .monomer-modal {
     background: var(--theme-panel-deep) !important;
     border: 2px solid var(--emblema2) !important;
     border-radius: 8px !important;
-    box-shadow:
-        0 0 15px color-mix(in srgb, var(--emblema2) 35%, transparent),
-        0 15px 45px rgba(0, 0, 0, .8) !important;
+    box-shadow: 0 0 15px color-mix(in srgb, var(--emblema2) 35%, transparent), 0 15px 45px rgba(0, 0, 0, .8) !important;
     color: var(--theme-text) !important;
 }
 
