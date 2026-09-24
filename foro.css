@@ -5787,8 +5787,8 @@ blockquote blockquote {
     letter-spacing: 1px;
 }
 
-.digimon-window-header > span:nth-child(2) {flex: 1;}
-.digimon-window-header > i {color: var(--linkc1);}
+.digimon-window-header > span:nth-child(2) {flex: 1; font-size: 1.2rem;}
+.digimon-window-header > i {color: var(--linkc1); font-size: 1.2rem;}
 .digimon-window-dots {
     display: flex;
     gap: 5px;
@@ -9024,7 +9024,7 @@ blockquote blockquote {
 
     color: var(--text-color);
 
-    font: 700 2.286rem/1 "Oxanium", sans-serif;
+    font: 700 0.9rem/1 "Oxanium", sans-serif;
 
     letter-spacing: 0.036rem;
 }
