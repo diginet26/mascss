@@ -3639,6 +3639,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     color: var(--rift-muted);
     padding-right: 10px;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 #rift-current-text p {margin:0 0 12px 0;}
@@ -8833,7 +8834,6 @@ blockquote blockquote {
         );
 }
 
-
 .rift-info-card:hover img {
     transform: scale(1.06);
 
@@ -8842,258 +8842,117 @@ blockquote blockquote {
         saturate(1.05);
 }
 
-
 /* =========================================================
    EVENTOS ESPECIALES
    ========================================================= */
-
 .rift-info-featured {
     position: relative;
-
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     padding: 1rem;
-
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            rgba(255,255,255,.035),
-            transparent 48%
-        ),
-        linear-gradient(
-            145deg,
-            var(--rift-panel-alt),
-            var(--rift-deep)
-        );
-
-    clip-path: polygon(
-        1rem 0,
-        100% 0,
-        100% calc(100% - 1rem),
-        calc(100% - 1rem) 100%,
-        0 100%,
-        0 1rem
-    );
+    background: radial-gradient(circle at 50% 40%, rgba(255,255,255,.035), transparent 48%), linear-gradient(145deg, var(--rift-panel-alt), var(--rift-deep));
+    clip-path: polygon(1rem 0, 100% 0, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 0 100%, 0 1rem);
 }
-
 
 /* =========================================================
    ELIMINAR DECORACIÓN ANTERIOR
    ========================================================= */
-
-.rift-info-featured::before,
-.rift-info-featured::after {
+.rift-info-featured::before, .rift-info-featured::after {
     content: "";
     position: absolute;
-
     pointer-events: none;
-
     border: 0;
 }
-
 
 /* =========================================================
    PÍXELES FLOTANTES
    ========================================================= */
-
 .rift-info-featured::before {
     top: 1.429rem;
     left: 1.714rem;
-
     width: 0.571rem;
     height: 0.571rem;
-
     background: var(--rift-a1);
-
-    box-shadow:
-        0.857rem 1.143rem 0 var(--rift-a2),
-        3.714rem -0.429rem 0 var(--rift-a2),
-        5.429rem 2.429rem 0 var(--rift-a1);
-
+    box-shadow: 0.857rem 1.143rem 0 var(--rift-a2), 3.714rem -0.429rem 0 var(--rift-a2), 5.429rem 2.429rem 0 var(--rift-a1);
     opacity: .85;
-
-    animation:
-        rift-info-pixels-a 4s ease-in-out infinite;
+    animation: rift-info-pixels-a 4s ease-in-out infinite;
 }
-
 
 .rift-info-featured::after {
     right: 1.714rem;
     bottom: 1.429rem;
-
     width: 0.429rem;
     height: 0.429rem;
-
     background: var(--rift-a2);
-
-    box-shadow:
-        -1rem -0.857rem 0 var(--rift-a1),
-        -2.286rem 0.571rem 0 var(--rift-a2),
-        -3.429rem -1.429rem 0 var(--rift-a1);
-
+    box-shadow: -1rem -0.857rem 0 var(--rift-a1), -2.286rem 0.571rem 0 var(--rift-a2), -3.429rem -1.429rem 0 var(--rift-a1);
     opacity: .75;
-
-    animation:
-        rift-info-pixels-b 4.5s ease-in-out infinite;
+    animation: rift-info-pixels-b 4.5s ease-in-out infinite;
 }
-
 
 /* =========================================================
    ANIMACIÓN PÍXELES
    ========================================================= */
-
-@keyframes rift-info-pixels-a {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-        opacity: .65;
-    }
-
-    50% {
-        transform: translate(0.429rem, -0.286rem);
-        opacity: 1;
-    }
-}
-
-
-@keyframes rift-info-pixels-b {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-        opacity: .55;
-    }
-
-    50% {
-        transform: translate(-0.286rem, 0.429rem);
-        opacity: .95;
-    }
-}
-
-
+@keyframes rift-info-pixels-a {0%, 100% {transform: translate(0, 0); opacity: .65;} 50% {transform: translate(0.429rem, -0.286rem);opacity: 1;}}
+@keyframes rift-info-pixels-b {0%, 100% {transform: translate(0, 0); opacity: .55;} 50% {transform: translate(-0.286rem, 0.429rem); opacity: .95;}}
 /* =========================================================
    ICONO EVENTOS
    ========================================================= */
-
 .rift-info-featured-icon {
     position: relative;
     z-index: 2;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     width: 4.5rem;
     height: 4.5rem;
-
     margin-bottom: 0.286rem;
-
     color: var(--rift-a1);
-
     font-size: 3.429rem;
     line-height: 1;
-
-    filter:
-        drop-shadow(
-            0 0 0.571rem
-            var(--rift-a1)
-        );
-
-    transition:
-        transform .35s ease,
-        color .35s ease,
-        filter .35s ease;
+    filter: drop-shadow(0 0 0.571rem var(--rift-a1));
+    transition: transform .35s ease, color .35s ease, filter .35s ease;
 }
-
 
 /* =========================================================
    EVENTOS — TÍTULO
    ========================================================= */
-
 .rift-info-featured > strong {
     position: relative;
     z-index: 2;
-
     display: block;
-
     color: var(--rift-text);
-
     font-family: 'Oxanium', sans-serif;
-
     font-size: 0.929rem;
     font-weight: 800;
-
     line-height: 1.1;
-
     letter-spacing: 0.1rem;
-
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    EVENTOS — SUBTÍTULO
    ========================================================= */
-
 .rift-info-featured > span {
     position: relative;
     z-index: 2;
-
     display: block;
-
     margin-top: 0.286rem;
-
     color: var(--rift-a2);
-
     font-family: 'Oxanium', sans-serif;
-
     font-size: 0.571rem;
     font-weight: 700;
-
     line-height: 1.2;
-
     letter-spacing: 0.143rem;
-
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    HOVER — EVENTOS
    ========================================================= */
-
-.rift-info-featured:hover {
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            color-mix(
-                in srgb,
-                var(--rift-a1) 12%,
-                transparent
-            ),
-            transparent 55%
-        ),
-        linear-gradient(
-            145deg,
-            var(--rift-panel-alt),
-            var(--rift-deep)
-        );
-}
-
-
+.rift-info-featured:hover {background:radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--rift-a1) 12%, transparent), transparent 55%), linear-gradient(145deg, var(--rift-panel-alt), var(--rift-deep));}
 .rift-info-featured:hover .rift-info-featured-icon {
     transform: scale(1.08);
-
     color: var(--rift-a2);
-
-    filter:
-        drop-shadow(
-            0 0 0.857rem
-            var(--rift-a2)
-        );
+    filter: drop-shadow(0 0 0.857rem var(--rift-a2));
 }
