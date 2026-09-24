@@ -9148,3 +9148,368 @@ blockquote blockquote {
 .digimon-user-list a:hover {
     color: var(--linkc2);
 }
+
+/* =========================================================
+   DIGITAL RIFT — ESTADÍSTICAS
+   REDISEÑO GENERAL — V1
+   ========================================================= */
+
+#digimon-statistics {
+    --stats-gap: 1rem;
+}
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.digimon-stats-header {
+    align-items: flex-end;
+    gap: 1.429rem;
+}
+
+.digimon-stats-heading h2 {
+    font-size: 2.429rem;
+    letter-spacing: 0.071rem;
+}
+
+.digimon-stats-kicker {
+    margin-bottom: 0.429rem;
+    font-size: 0.643rem;
+    letter-spacing: 0.143rem;
+}
+
+.digimon-stats-heading p {
+    margin-top: 0.429rem;
+    font-size: 0.571rem;
+}
+
+.digimon-stats-status {
+    padding: 0.571rem 0.857rem;
+    border-radius: 0.429rem;
+}
+
+
+/* =========================================================
+   LÍNEA PRINCIPAL
+   ========================================================= */
+
+.digimon-stats-line {
+    height: 1px;
+    margin: 1.429rem 0;
+}
+
+
+/* =========================================================
+   BLOQUE PRINCIPAL
+   ========================================================= */
+
+.digimon-stats-main {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 1rem;
+}
+
+
+/* =========================================================
+   BIENVENIDA
+   ========================================================= */
+
+.digimon-stats-welcome {
+    min-height: 20rem;
+    border-radius: 0.714rem;
+}
+
+.digimon-stats-welcome-content {
+    padding: 1.429rem;
+}
+
+.digimon-stats-welcome-content h3 {
+    font-size: 1.714rem;
+}
+
+.digimon-stats-welcome-content p {
+    max-width: 28rem;
+    margin-top: 0.571rem;
+    font-size: 0.714rem;
+    line-height: 1.6;
+}
+
+.digimon-stats-mini-line {
+    width: 5.714rem;
+    height: 0.143rem;
+    margin: 1rem 0 0.571rem;
+}
+
+
+/* =========================================================
+   PANEL ACTIVE USERS
+   ========================================================= */
+
+.digimon-stats-online {
+    border-radius: 0.714rem;
+}
+
+
+/* CABECERA DE VENTANA */
+
+.digimon-window-header {
+    gap: 0.714rem;
+    padding: 0.714rem 1rem;
+    font-size: 0.571rem;
+}
+
+.digimon-window-dots {
+    gap: 0.286rem;
+}
+
+.digimon-window-dots i {
+    width: 0.429rem;
+    height: 0.429rem;
+}
+
+
+/* CONTENIDO */
+
+.digimon-online-content {
+    padding: 1.429rem;
+}
+
+
+/* =========================================================
+   USUARIOS ONLINE — BLOQUE PRINCIPAL
+   ========================================================= */
+
+.digimon-online-title {
+    grid-template-columns: 4rem 1fr;
+    gap: 1rem;
+    padding-bottom: 1.143rem;
+}
+
+.digimon-online-title > i {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.857rem;
+    font-size: 1.571rem;
+}
+
+.digimon-online-title span {
+    margin-bottom: 0.286rem;
+    font-size: 0.571rem;
+    letter-spacing: 0.143rem;
+}
+
+.digimon-online-title strong {
+    font-size: 1.714rem;
+}
+
+
+/* =========================================================
+   REGISTRADOS / INVITADOS
+   ========================================================= */
+
+.digimon-online-data {
+    gap: 0.714rem;
+    margin-top: 1rem;
+}
+
+.digimon-online-data > div {
+    min-height: 4.286rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.714rem;
+    padding: 0.857rem 1rem;
+    border-radius: 0.571rem;
+}
+
+.digimon-data-name {
+    font-size: 0.571rem;
+    letter-spacing: 0.071rem;
+}
+
+.digimon-online-data strong {
+    margin-top: 0;
+    font-size: 1.286rem;
+}
+
+
+/* =========================================================
+   CONEXIONES ACTUALES
+   ========================================================= */
+
+.digimon-online-list {
+    margin-top: 1rem;
+    padding-top: 0.857rem;
+}
+
+.digimon-stats-label {
+    margin-bottom: 0.429rem;
+    font-size: 0.571rem;
+    letter-spacing: 0.107rem;
+}
+
+.digimon-user-list {
+    min-height: 3rem;
+    font-size: 0.714rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTADORES GENERALES
+   ========================================================= */
+
+.digimon-stats-counters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.714rem;
+    margin-top: 1rem;
+}
+
+.digimon-counter {
+    min-height: 5.714rem;
+    gap: 0.857rem;
+    padding: 1rem;
+    border-radius: 0.571rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.digimon-counter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 1px;
+    background: var(--linkc1);
+    box-shadow: 0 0 0.429rem var(--linkc1);
+}
+
+.digimon-counter:nth-child(even)::before {
+    background: var(--linkc2);
+    box-shadow: 0 0 0.429rem var(--linkc2);
+}
+
+.digimon-counter-icon {
+    width: 2.857rem;
+    height: 2.857rem;
+    border-radius: 0.571rem;
+    font-size: 1rem;
+}
+
+.digimon-counter-data span {
+    font-size: 0.571rem;
+    letter-spacing: 0.071rem;
+}
+
+.digimon-counter-data strong {
+    font-size: 1.286rem;
+}
+
+.digimon-counter-data small {
+    font-size: 0.5rem;
+}
+
+
+/* =========================================================
+   ÚLTIMO USUARIO / RÉCORD
+   ========================================================= */
+
+.digimon-stats-bottom {
+    gap: 0.714rem;
+    margin-top: 0.714rem;
+}
+
+.digimon-newest-user,
+.digimon-record-users {
+    min-height: 5.429rem;
+    padding: 1rem;
+    border-radius: 0.571rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.digimon-newest-user::before,
+.digimon-record-users::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 1px;
+    background: var(--linkc1);
+}
+
+.digimon-record-users::before {
+    left: auto;
+    right: 0;
+    background: var(--linkc2);
+}
+
+.digimon-bottom-icon {
+    width: 2.857rem;
+    height: 2.857rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.digimon-newest-user h3,
+.digimon-record-users h3 {
+    font-size: 0.857rem;
+}
+
+.digimon-newest-user p,
+.digimon-record-users p {
+    font-size: 0.5rem;
+}
+
+
+/* =========================================================
+   GRUPOS
+   ========================================================= */
+
+.digimon-groups {
+    margin-top: 0.714rem;
+    border-radius: 0.571rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.digimon-groups-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--stats-border);
+}
+
+.digimon-groups-header h3 {
+    font-size: 0.929rem;
+}
+
+.digimon-groups-list {
+    min-height: 4.286rem;
+    padding: 1rem;
+}
+
+
+/* =========================================================
+   DETALLES DIGITALES
+   ========================================================= */
+
+.digimon-stats-online::after,
+.digimon-counter::after,
+.digimon-newest-user::after,
+.digimon-record-users::after,
+.digimon-groups::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    opacity: .35;
+}
+
+.digimon-stats-online::after {
+    right: 0.571rem;
+    bottom: 0.571rem;
+    width: 1.429rem;
+    height: 1.429rem;
+    border-right: 1px solid var(--linkc2);
+    border-bottom: 1px solid var(--linkc2);
+}
