@@ -9513,3 +9513,43 @@ blockquote blockquote {
     border-right: 1px solid var(--linkc2);
     border-bottom: 1px solid var(--linkc2);
 }
+/* =========================================================
+   ESTADÍSTICAS — DATOS SECUNDARIOS
+   ========================================================= */
+
+.digimon-online-data {
+    gap: 0.714rem;
+    margin-top: 1.429rem;
+}
+
+.digimon-online-data > div {
+    min-height: 5.714rem;
+    padding: 1rem 1.143rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* ETIQUETA */
+
+.digimon-data-name {
+    margin-bottom: 0.429rem;
+    font-size: 0.571rem;
+    letter-spacing: 0.071rem;
+}
+
+/* VALOR */
+
+.digimon-online-data strong {
+    margin-top: 0;
+    color: var(--text-color);
+    font: 700 1.143rem/1.25 "Oxanium", sans-serif;
+}
+
+/* EL RÉCORD NECESITA MENOS TAMAÑO */
+
+.digimon-online-data > div:nth-child(2) strong {
+    font-size: 0.929rem;
+    line-height: 1.35;
+}
