@@ -9553,3 +9553,166 @@ blockquote blockquote {
     font-size: 0.929rem;
     line-height: 1.35;
 }
+/* =========================================================
+   DIGITAL RIFT — ESTADÍSTICAS
+   REESTRUCTURACIÓN VISUAL
+   ========================================================= */
+
+
+/* =========================================================
+   BLOQUE PRINCIPAL
+   BIENVENIDA + ÚLTIMAS 24 HORAS
+   ========================================================= */
+
+.digimon-stats-main {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr) !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+}
+
+
+/* =========================================================
+   BIENVENIDA
+   ========================================================= */
+
+.digimon-stats-welcome {
+    min-width: 0 !important;
+    min-height: 400px !important;
+    height: 400px !important;
+}
+
+
+/* =========================================================
+   ÚLTIMAS 24 HORAS
+   ========================================================= */
+
+.digimon-stats-24h {
+    min-width: 0 !important;
+    height: 400px !important;
+    min-height: 400px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    border: 1px solid var(--stats-border) !important;
+    border-radius: 12px !important;
+    background: var(--stats-panel) !important;
+    overflow: hidden !important;
+}
+
+
+/* CABECERA */
+
+.digimon-stats-24h .digimon-window-header {
+    flex-shrink: 0 !important;
+}
+
+
+/* CONTENIDO */
+
+.digimon-stats-24h-content {
+    min-height: 0 !important;
+    flex: 1 1 auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    padding: 22px !important;
+}
+
+
+/* TÍTULO + DESCRIPCIÓN */
+
+.digimon-stats-24h-heading {
+    flex-shrink: 0 !important;
+    text-align: center !important;
+}
+
+
+/* LISTA DE USUARIOS */
+
+.digimon-stats-24h-list {
+    min-height: 0 !important;
+    flex: 1 1 auto !important;
+
+    margin-top: 20px !important;
+    padding: 15px !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    border-top: 1px solid var(--stats-border) !important;
+
+    color: var(--text-color) !important;
+}
+
+
+/* =========================================================
+   CONTADORES
+   ========================================================= */
+
+.digimon-stats-counters {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 15px !important;
+
+    margin-top: 20px !important;
+
+    align-items: stretch !important;
+}
+
+
+/* CADA CONTADOR ES INDEPENDIENTE */
+
+.digimon-stats-counters > .digimon-counter {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 150px !important;
+    height: 150px !important;
+
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* CONTENIDO DEL CONTADOR */
+
+.digimon-counter-data {
+    min-width: 0 !important;
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   INFORMACIÓN SECUNDARIA
+   ========================================================= */
+
+.digimon-stats-bottom {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 20px !important;
+
+    margin-top: 20px !important;
+}
+
+
+/* =========================================================
+   GRUPOS
+   ========================================================= */
+
+.digimon-groups {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
