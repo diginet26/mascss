@@ -9716,3 +9716,121 @@ blockquote blockquote {
     width: 100% !important;
     box-sizing: border-box !important;
 }
+/* =========================================================
+   DIGITAL RIFT — ESTADÍSTICAS
+   PÍXELES FLOTANTES
+   ========================================================= */
+
+#digimon-statistics {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   GRUPO DE PÍXELES — SUPERIOR
+   --------------------------------------------------------- */
+
+#digimon-statistics::before {
+    content: "";
+    position: absolute;
+
+    top: 2.5rem;
+    left: 3rem;
+
+    width: 0.429rem;
+    height: 0.429rem;
+
+    background: var(--linkc1);
+
+    box-shadow:
+        1rem 1.143rem 0 var(--linkc2),
+        3.571rem -0.429rem 0 var(--linkc2),
+        5.143rem 2rem 0 var(--linkc1),
+        8.571rem 0.571rem 0 var(--linkc2);
+
+    opacity: .7;
+
+    pointer-events: none;
+
+    animation:
+        digimon-stats-pixels-a
+        5s
+        ease-in-out
+        infinite;
+}
+
+
+/* ---------------------------------------------------------
+   GRUPO DE PÍXELES — INFERIOR
+   --------------------------------------------------------- */
+
+#digimon-statistics::after {
+    content: "";
+    position: absolute;
+
+    right: 3rem;
+    bottom: 3rem;
+
+    width: 0.357rem;
+    height: 0.357rem;
+
+    background: var(--linkc2);
+
+    box-shadow:
+        -1rem -0.857rem 0 var(--linkc1),
+        -2.286rem 0.571rem 0 var(--linkc2),
+        -3.714rem -1.429rem 0 var(--linkc1),
+        -5.429rem 0.286rem 0 var(--linkc2);
+
+    opacity: .6;
+
+    pointer-events: none;
+
+    animation:
+        digimon-stats-pixels-b
+        5.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* ---------------------------------------------------------
+   ANIMACIONES
+   --------------------------------------------------------- */
+
+@keyframes digimon-stats-pixels-a {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        opacity: .55;
+    }
+
+    50% {
+        transform: translate(
+            0.429rem,
+            -0.286rem
+        );
+        opacity: .95;
+    }
+
+}
+
+
+@keyframes digimon-stats-pixels-b {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        opacity: .45;
+    }
+
+    50% {
+        transform: translate(
+            -0.286rem,
+            0.429rem
+        );
+        opacity: .9;
+    }
+
+}
