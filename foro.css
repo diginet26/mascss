@@ -10997,11 +10997,9 @@ blockquote blockquote {
 
 }
 
-
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-
 @media screen and (max-width: 900px) {
 
     #digimon-statistics .digimon-stats-main {
@@ -11016,4 +11014,12 @@ blockquote blockquote {
         grid-template-columns: 1fr !important;
     }
 
+}
+/* =========================================================
+   IGUALAR ALTURA — BIENVENIDA / ACTIVE USERS
+   ========================================================= */
+#digimon-statistics .digimon-stats-right .digimon-stats-online {
+    height: 25rem !important;
+    min-height: 25rem !important;
+    box-sizing: border-box !important;
 }
