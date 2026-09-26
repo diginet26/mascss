@@ -11083,3 +11083,121 @@ blockquote blockquote {
 #digimon-statistics .digimon-stats-quick-links a:last-child {
     color: var(--linkc1);
 }
+/* =====================================================
+   QUICK LINKS — ESTADÍSTICAS
+   ===================================================== */
+
+#digimon-statistics .digimon-stats-quick-links {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+
+    display: grid;
+    grid-template-columns: repeat(4, 2.5rem);
+    grid-template-rows: repeat(2, 2.5rem);
+    gap: .45rem;
+
+    width: max-content;
+    z-index: 10;
+}
+
+#digimon-statistics .digimon-stats-quick-links a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--stats-border);
+    border-radius: .35rem;
+
+    background: rgba(255,255,255,.025);
+    color: var(--linkc1);
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+/* ICONO */
+#digimon-statistics .digimon-stats-quick-links a i {
+    margin: 0;
+    color: currentColor;
+    font-size: .9rem;
+}
+
+/* =====================================================
+   TOOLTIP
+   ===================================================== */
+
+#digimon-statistics .digimon-stats-quick-links a::after {
+    content: attr(aria-label);
+
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + .5rem);
+
+    padding: .45rem .65rem;
+
+    border: 1px solid var(--stats-border);
+    border-radius: .3rem;
+
+    background: var(--stats-panel);
+    color: var(--text-color);
+
+    font-family: 'Oxanium', monospace;
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(.25rem);
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease,
+        transform .2s ease;
+
+    z-index: 100;
+}
+
+/* Mostrar tooltip */
+#digimon-statistics .digimon-stats-quick-links a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* =====================================================
+   HOVER
+   ===================================================== */
+
+#digimon-statistics .digimon-stats-quick-links a:hover {
+    transform: translateY(-.1rem);
+
+    background: rgba(255,255,255,.06);
+    border-color: var(--linkc1);
+
+    box-shadow:
+        0 0 .8rem color-mix(
+            in srgb,
+            var(--linkc1) 25%,
+            transparent
+        );
+}
