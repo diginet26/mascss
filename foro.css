@@ -10634,3 +10634,19 @@ blockquote blockquote {
     text-transform: uppercase;
     color: var(--stats-muted);
 }
+/*LAST 24 HOURS — MIEMBROS REGISTRADOS   REDUCIR TAMAÑO DEL BLOQUE*/
+#digimon-statistics .digimon-24h-members-data {font-size: 0.85rem !important;}
+#digimon-statistics .digimon-24h-members-data > span {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.08em;
+}
+
+#digimon-statistics .digimon-24h-members-data > strong {
+    font-size: 1.35rem !important;
+    line-height: 1.1 !important;
+}
+
+#digimon-statistics .digimon-24h-members-data > small {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.06em;
+}
