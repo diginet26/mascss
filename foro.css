@@ -10507,10 +10507,7 @@ blockquote blockquote {
     box-sizing: border-box !important;
     align-items: center !important;
 }
-/* =========================================================
-   DIGIMON NETWORK — GROUPS HEADER
-   ========================================================= */
-
+/*GROUPS HEADER*/
 #digimon-statistics .digimon-groups-header {
     position: relative;
     display: flex;
@@ -10542,19 +10539,7 @@ blockquote blockquote {
     white-space: nowrap;
 }
 
-/* Línea de separación */
-#digimon-statistics .digimon-groups-header::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background:linear-gradient(90deg, var(--linkc1), var(--stats-border) 45%, var(--stats-border) 55%,var(--linkc2));
-    opacity: 0.45;
-}
-
-/* Pequeño indicador digital */
+/* Indicadores digitales */
 #digimon-statistics .digimon-groups-header::before {
     content: "";
     position: absolute;
