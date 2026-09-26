@@ -10749,3 +10749,46 @@ blockquote blockquote {
     line-height: inherit !important;
     font-weight: 700 !important;
 }
+/* =========================================================
+   LAST 24 HOURS — ICONO DE FONDO
+   ========================================================= */
+
+#digimon-statistics .digimon-24h-members {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Convertimos el icono en elemento decorativo de fondo */
+#digimon-statistics .digimon-24h-members-icon {
+    position: absolute !important;
+    left: 1.5rem !important;
+    bottom: -1rem !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    display: block !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    opacity: .08 !important;
+
+    z-index: 0 !important;
+}
+
+/* Icono grande */
+#digimon-statistics .digimon-24h-members-icon i {
+    font-size: 8rem !important;
+    line-height: 1 !important;
+    color: var(--linkc1) !important;
+    text-shadow: 0 0 2rem var(--linkc1) !important;
+}
+
+/* El texto queda por encima del icono */
+#digimon-statistics .digimon-24h-members-data {
+    position: relative !important;
+    z-index: 2 !important;
+}
