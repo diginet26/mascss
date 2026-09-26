@@ -10565,7 +10565,7 @@ blockquote blockquote {
     justify-content: center;
     gap: 1rem;
     flex-shrink: 0;
-    padding: 0.5rem 1rem 1.25rem;
+    /*padding: 0.5rem 1rem 1.25rem;*/
     text-align: center;
 }
 
