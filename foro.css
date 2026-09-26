@@ -10335,3 +10335,185 @@ blockquote blockquote {
 #digimon-statistics .digimon-stats-24h-list a {
     min-width: 7rem;
 }
+/* =========================================================
+   DIGITAL RIFT — LAST 24 HOURS
+   PANEL DE USUARIOS CONECTADOS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-24h-list {
+    display: block !important;
+
+    padding: 1.5rem !important;
+
+    text-align: center !important;
+
+    font-size: 0 !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+
+/* ---------------------------------------------------------
+   ENCABEZADO DEL LISTADO
+   Ocultamos visualmente el texto original y lo recreamos
+   mediante CSS para poder separarlo de los usuarios.
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-stats-24h-list::before {
+    content: "MIEMBROS CONECTADOS EN LAS ÚLTIMAS 24 HORAS";
+
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 1.25rem;
+
+    color: var(--linkc1);
+
+    font:
+        700 .65rem/1.4
+        "Oxanium",
+        monospace;
+
+    letter-spacing: .12em;
+
+    text-align: center;
+
+    opacity: .9;
+}
+
+
+/* ---------------------------------------------------------
+   USUARIOS
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-stats-24h-list a {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 6rem;
+    min-height: 2rem;
+
+    margin: .3rem;
+
+    padding: .35rem .75rem;
+
+    box-sizing: border-box;
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            currentColor 35%,
+            transparent
+        );
+
+    border-radius: .3rem;
+
+    background:
+        rgba(255,255,255,.025);
+
+    color: inherit;
+
+    font:
+        700 .65rem/1
+        "Oxanium",
+        monospace;
+
+    text-decoration: none;
+
+    vertical-align: middle;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* ---------------------------------------------------------
+   INDICADOR DEL USUARIO
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-stats-24h-list a::before {
+    content: "";
+
+    width: .35rem;
+    height: .35rem;
+
+    margin-right: .5rem;
+
+    flex-shrink: 0;
+
+    background: currentColor;
+
+    box-shadow:
+        0 0 .5rem currentColor;
+}
+
+
+/* ---------------------------------------------------------
+   NOMBRE
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-stats-24h-list a strong {
+    font-size: inherit;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-stats-24h-list a:hover {
+    transform: translateY(-.1rem);
+
+    background:
+        color-mix(
+            in srgb,
+            currentColor 8%,
+            transparent
+        );
+
+    border-color:
+        color-mix(
+            in srgb,
+            currentColor 65%,
+            transparent
+        );
+
+    box-shadow:
+        0 0 .8rem
+        color-mix(
+            in srgb,
+            currentColor 20%,
+            transparent
+        );
+}
+
+
+/* ---------------------------------------------------------
+   BARRA DE SCROLL
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar {
+    width: .3rem;
+}
+
+#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            180deg,
+            var(--linkc1),
+            var(--linkc2)
+        );
+
+    border-radius: 1rem;
+}
