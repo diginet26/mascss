@@ -10814,3 +10814,206 @@ blockquote blockquote {
     position: relative !important;
     z-index: 2 !important;
 }
+/* =========================================================
+   DIGITAL RIFT — ESTADÍSTICAS
+   NUEVA DISTRIBUCIÓN PRINCIPAL
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-main {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr) !important;
+
+    gap: 1rem !important;
+
+    align-items: stretch !important;
+}
+
+
+/* =========================================================
+   COLUMNA IZQUIERDA
+   BIENVENIDA + 24 HORAS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-left {
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 1rem !important;
+}
+
+
+/* =========================================================
+   COLUMNA DERECHA
+   ACTIVE USERS + 4 DATOS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-right {
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 1rem !important;
+}
+
+
+/* =========================================================
+   BIENVENIDA
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-left .digimon-stats-welcome {
+    width: 100% !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: 25rem !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   LAST 24 HOURS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-left .digimon-stats-24h {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: 25rem !important;
+    min-height: 25rem !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   ACTIVE USERS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-right .digimon-stats-online {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   CUATRO DATOS SECUNDARIOS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-secondary {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr)) !important;
+
+    gap: .75rem !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   LAS 4 CAJAS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-secondary > .digimon-counter,
+#digimon-statistics .digimon-stats-secondary > .digimon-newest-user,
+#digimon-statistics .digimon-stats-secondary > .digimon-record-users {
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    min-height: 6.5rem !important;
+    height: auto !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   CONTADORES
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-secondary > .digimon-counter {
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: .75rem !important;
+
+    padding: .75rem !important;
+}
+
+
+/* =========================================================
+   ÚLTIMO USUARIO + RÉCORD
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-secondary > .digimon-newest-user,
+#digimon-statistics .digimon-stats-secondary > .digimon-record-users {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: .75rem !important;
+
+    padding: .75rem !important;
+}
+
+
+/* =========================================================
+   TEXTO DE LAS 4 CAJAS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-secondary h3 {
+
+    margin: 0 !important;
+
+    font-size: .8rem !important;
+    line-height: 1.25 !important;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    #digimon-statistics .digimon-stats-main {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #digimon-statistics .digimon-stats-secondary {
+        grid-template-columns: 1fr !important;
+    }
+
+}
