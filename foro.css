@@ -10660,7 +10660,7 @@ blockquote blockquote {
     justify-content: center !important;
     gap: 1rem !important;
     width: 100% !important;
-    margin: 0 0 1.5rem !important;
+    margin: 0 0 0.3rem !important;
 }
 
 #digimon-statistics .digimon-24h-members-icon {
