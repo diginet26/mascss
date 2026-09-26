@@ -9842,3 +9842,180 @@ blockquote blockquote {
 #digimon-statistics .digimon-stats-status {
     display: none !important;
 }
+/* =========================================================
+   DIGITAL RIFT — GRUPOS DEL SISTEMA
+   NODOS DE LA RED DIGITAL
+   ========================================================= */
+
+#digimon-statistics .digimon-groups {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1.5rem 1.25rem 1.25rem;
+}
+
+
+/* CABECERA */
+
+#digimon-statistics .digimon-groups-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+#digimon-statistics .digimon-groups-header .digimon-stats-label {
+    margin: 0;
+}
+
+#digimon-statistics .digimon-groups-header h3 {
+    margin: 0;
+
+    font-size: 1.1rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+
+/* LÍNEA DE SEPARACIÓN */
+
+#digimon-statistics .digimon-groups-header::after {
+    content: "";
+
+    position: absolute;
+
+    left: 1.25rem;
+    right: 1.25rem;
+
+    top: 4.5rem;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--linkc1),
+            var(--stats-border),
+            var(--linkc2)
+        );
+
+    opacity: .35;
+}
+
+
+/* CONTENEDOR DE GRUPOS */
+
+#digimon-statistics .digimon-groups-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+
+    gap: .65rem;
+
+    width: 100%;
+
+    padding-top: .75rem;
+}
+
+
+/* CADA GRUPO */
+
+#digimon-statistics .digimon-groups-list a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 8rem;
+    min-height: 3rem;
+
+    padding: .65rem 1rem;
+
+    box-sizing: border-box;
+
+    border: 1px solid currentColor;
+    border-radius: .35rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.025),
+            rgba(255,255,255,.01)
+        );
+
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/* PEQUEÑO INDICADOR DE NODO */
+
+#digimon-statistics .digimon-groups-list a::before {
+    content: "";
+
+    width: .35rem;
+    height: .35rem;
+
+    margin-right: .6rem;
+
+    background: currentColor;
+
+    box-shadow:
+        0 0 .45rem currentColor;
+
+    flex-shrink: 0;
+}
+
+
+/* CONEXIÓN DECORATIVA */
+
+#digimon-statistics .digimon-groups-list a::after {
+    content: "";
+
+    position: absolute;
+
+    top: -.25rem;
+    right: -.25rem;
+
+    width: .35rem;
+    height: .35rem;
+
+    background: currentColor;
+
+    opacity: .7;
+}
+
+
+/* HOVER */
+
+#digimon-statistics .digimon-groups-list a:hover {
+    transform: translateY(-.15rem);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.02)
+        );
+
+    box-shadow:
+        0 0 .8rem color-mix(
+            in srgb,
+            currentColor 25%,
+            transparent
+        );
+}
