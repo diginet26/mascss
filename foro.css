@@ -10798,20 +10798,15 @@ blockquote blockquote {
 /* El icono real puede crecer fuera del contenedor */
 #digimon-statistics .digimon-24h-members-icon .fa-users {
     display: block !important;
-
     width: auto !important;
     height: auto !important;
-
-    margin: 0 !important;
+    margin: 2rem 0 0 1rem !important;
     padding: 0 !important;
-
-    font-size: 8rem !important;
+    font-size: 5rem !important;
     line-height: 1 !important;
-
     color: var(--linkc1) !important;
-
-    text-shadow:
-        0 0 2rem var(--linkc1) !important;
+    text-shadow: 0 0 2rem var(--linkc1) !important;
+    transform: rotate(-35deg);
 }
 
 /* Texto por encima del icono */
