@@ -11023,3 +11023,63 @@ blockquote blockquote {
     min-height: 25rem !important;
     box-sizing: border-box !important;
 }
+#digimon-statistics .digimon-stats-header {
+    position: relative;
+}
+
+#digimon-statistics .digimon-stats-quick-links {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: .45rem;
+    max-width: 30rem;
+    z-index: 5;
+}
+
+#digimon-statistics .digimon-stats-quick-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    min-height: 2rem;
+    padding: .4rem .65rem;
+    box-sizing: border-box;
+
+    border: 1px solid var(--stats-border);
+    border-radius: .3rem;
+
+    background: rgba(255,255,255,.025);
+    color: var(--text-color);
+
+    font-family: 'Oxanium', monospace;
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+#digimon-statistics .digimon-stats-quick-links a i {
+    color: var(--linkc1);
+    font-size: .7rem;
+}
+
+#digimon-statistics .digimon-stats-quick-links a:hover {
+    transform: translateY(-.1rem);
+    background: rgba(255,255,255,.06);
+    border-color: var(--linkc1);
+    box-shadow: 0 0 .8rem color-mix(in srgb,var(--linkc1) 20%,transparent);
+}
+
+#digimon-statistics .digimon-stats-quick-links a:last-child {
+    color: var(--linkc1);
+}
