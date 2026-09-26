@@ -10470,68 +10470,38 @@ blockquote blockquote {
         );
 }
 
-
 /* ---------------------------------------------------------
    BARRA DE SCROLL
    --------------------------------------------------------- */
-
-#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar {
-    width: .3rem;
-}
-
-#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-track {
-    background: transparent;
-}
+#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar {width: .3rem;}
+#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-track {background: transparent;}
 
 #digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-thumb {
-    background:
-        linear-gradient(
-            180deg,
-            var(--linkc1),
-            var(--linkc2)
-        );
-
+    background:linear-gradient(180deg, var(--linkc1), var(--linkc2));
     border-radius: 1rem;
 }
 /* =========================================================
-   DIGITAL RIFT — STAT COUNTERS
-   TERMINAL DATA STYLE
+   STAT COUNTERS   TERMINAL DATA STYLE
    ========================================================= */
-
 #digimon-statistics .digimon-stats-counters > .digimon-counter {
     position: relative;
     overflow: hidden;
 }
 
-
-/* ---------------------------------------------------------
-   LÍNEA DE DATOS SUPERIOR
-   --------------------------------------------------------- */
+/*LÍNEA DE DATOS SUPERIOR*/
 
 #digimon-statistics .digimon-stats-counters > .digimon-counter::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 8rem;
     height: .1rem;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--linkc1),
-            transparent
-        );
-
+    background:linear-gradient(90deg, var(--linkc1), transparent);
     opacity: .9;
 }
 
-/* ---------------------------------------------------------
-   PEQUEÑOS PÍXELES DECORATIVOS
-   --------------------------------------------------------- */
+/*PEQUEÑOS PÍXELES DECORATIVOS*/
 #digimon-statistics .digimon-stats-counters > .digimon-counter::after {
     content: "";
     position: absolute;
@@ -10550,9 +10520,7 @@ blockquote blockquote {
     z-index: 2;
 }
 
-/* ---------------------------------------------------------
-   DATOS
-   --------------------------------------------------------- */
+/*DATOS*/
 #digimon-statistics .digimon-counter-data {
     position: relative;
     z-index: 2;
@@ -10561,16 +10529,12 @@ blockquote blockquote {
 #digimon-statistics .digimon-counter-data > span {letter-spacing: .12em;}/*ETIQUETA*/
 
 /*VALOR PRINCIPAL*/
-
 #digimon-statistics .digimon-counter-data > strong {
     display: block;
-
     margin-top: .25rem;
-
     font-size: 1.5rem;
     line-height: 1.15;
 }
-
 
 /*DESCRIPCIÓN*/
 #digimon-statistics .digimon-counter-data > small {
@@ -10580,7 +10544,6 @@ blockquote blockquote {
     letter-spacing: .04em;
 }
 /*AJUSTE TIPOGRÁFICO DE CONTADORES*/
-
 #digimon-statistics .digimon-counter-data > span {
     font-size: .65rem !important;
     letter-spacing: .1em !important;
@@ -10631,27 +10594,24 @@ blockquote blockquote {
     align-self: center !important;
     flex-shrink: 0 !important;
 }
-#digimon-statistics .digimon-groups-list {
-    font-size: 0 !important;
-}
+#digimon-statistics .digimon-groups-list {font-size: 0 !important;}
 
-#digimon-statistics .digimon-groups-list a {
-    font-size: .75rem !important;
-}
+#digimon-statistics .digimon-groups-list a {font-size: .75rem !important;}
 #digimon-statistics .digimon-newest-user {
     justify-content: center !important;
     align-items: center !important;
 }
 
-#digimon-statistics .digimon-newest-user > div:last-child {
-    text-align: left !important;
-}
+#digimon-statistics .digimon-newest-user > div:last-child {text-align: left !important;}
 #digimon-statistics .digimon-record-users {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
 }
 
-#digimon-statistics .digimon-record-users > div:last-child {
-    text-align: left !important;
+#digimon-statistics .digimon-record-users > div:last-child {text-align: left !important;}
+#digimon-statistics .digimon-record-users {
+    height: 100% !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
 }
