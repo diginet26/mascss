@@ -10762,24 +10762,23 @@ blockquote blockquote {
 
 @keyframes digimon-connect-rotate {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
 /* =========================================================
-   MIEMBROS REGISTRADOS — ICONO DE FONDO
+   ICONO DE FONDO — MIEMBROS REGISTRADOS
    ========================================================= */
 
 #digimon-statistics .digimon-24h-members {
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
-/* Contenedor del icono: sin tamaño ni posición propios */
+/* El contenedor deja de tener tamaño propio */
 #digimon-statistics .digimon-24h-members-icon {
     position: absolute !important;
 
-    left: 2rem !important;
-    right: auto !important;
+    left: 1.5rem !important;
     top: 50% !important;
 
-    width: auto !important;
-    height: auto !important;
+    width: 0 !important;
+    height: 0 !important;
 
     margin: 0 !important;
     padding: 0 !important;
@@ -10791,12 +10790,12 @@ blockquote blockquote {
 
     z-index: 0 !important;
 
-    opacity: .10 !important;
-
     overflow: visible !important;
+
+    opacity: .08 !important;
 }
 
-/* ICONO REAL */
+/* El icono real puede crecer fuera del contenedor */
 #digimon-statistics .digimon-24h-members-icon .fa-users {
     display: block !important;
 
@@ -10815,7 +10814,7 @@ blockquote blockquote {
         0 0 2rem var(--linkc1) !important;
 }
 
-/* El texto siempre queda por encima */
+/* Texto por encima del icono */
 #digimon-statistics .digimon-24h-members-data {
     position: relative !important;
     z-index: 2 !important;
