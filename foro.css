@@ -10306,3 +10306,32 @@ blockquote blockquote {
 
     pointer-events: none;
 }
+/* =========================================================
+   DIGITAL RIFT — LAST 24 HOURS
+   SEPARACIÓN DEL LISTADO
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-24h-list {
+    justify-content: center;
+    align-content: flex-start;
+
+    padding-top: 1.5rem;
+}
+
+
+/* TEXTO QUE PRECEDE A LOS USUARIOS */
+
+#digimon-statistics .digimon-stats-24h-list > span {
+    width: 100%;
+
+    margin-bottom: .75rem;
+
+    text-align: center;
+}
+
+
+/* USUARIOS */
+
+#digimon-statistics .digimon-stats-24h-list a {
+    min-width: 7rem;
+}
