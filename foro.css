@@ -10551,3 +10551,7 @@ blockquote blockquote {
     box-shadow: -0.7rem 0 0 var(--linkc1), -1.4rem 0 0 color-mix(in srgb, var(--linkc2) 55%, transparent);
     z-index: 2;
 }
+/* Eliminar línea decorativa secundaria de la cabecera de grupos */
+#digimon-statistics .digimon-groups-header::after {
+    display: none !important;
+}
