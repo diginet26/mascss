@@ -9726,8 +9726,9 @@ blockquote blockquote {
     overflow: hidden;
 }
 
+
 /* ---------------------------------------------------------
-   GRUPO DE PÍXELES — SUPERIOR
+   PÍXELES SUPERIORES — DERECHA
    --------------------------------------------------------- */
 
 #digimon-statistics::before {
@@ -9735,7 +9736,7 @@ blockquote blockquote {
     position: absolute;
 
     top: 2.5rem;
-    left: 3rem;
+    right: 3rem;
 
     width: 0.429rem;
     height: 0.429rem;
@@ -9743,10 +9744,10 @@ blockquote blockquote {
     background: var(--linkc1);
 
     box-shadow:
-        1rem 1.143rem 0 var(--linkc2),
-        3.571rem -0.429rem 0 var(--linkc2),
-        5.143rem 2rem 0 var(--linkc1),
-        8.571rem 0.571rem 0 var(--linkc2);
+        -1rem 1.143rem 0 var(--linkc2),
+        -3.571rem -0.429rem 0 var(--linkc2),
+        -5.143rem 2rem 0 var(--linkc1),
+        -8.571rem 0.571rem 0 var(--linkc2);
 
     opacity: .7;
 
@@ -9761,14 +9762,14 @@ blockquote blockquote {
 
 
 /* ---------------------------------------------------------
-   GRUPO DE PÍXELES — INFERIOR
+   PÍXELES INFERIORES — IZQUIERDA
    --------------------------------------------------------- */
 
 #digimon-statistics::after {
     content: "";
     position: absolute;
 
-    right: 3rem;
+    left: 3rem;
     bottom: 3rem;
 
     width: 0.357rem;
@@ -9777,10 +9778,10 @@ blockquote blockquote {
     background: var(--linkc2);
 
     box-shadow:
-        -1rem -0.857rem 0 var(--linkc1),
-        -2.286rem 0.571rem 0 var(--linkc2),
-        -3.714rem -1.429rem 0 var(--linkc1),
-        -5.429rem 0.286rem 0 var(--linkc2);
+        1rem -0.857rem 0 var(--linkc1),
+        2.286rem 0.571rem 0 var(--linkc2),
+        3.714rem -1.429rem 0 var(--linkc1),
+        5.429rem 0.286rem 0 var(--linkc2);
 
     opacity: .6;
 
@@ -9795,7 +9796,7 @@ blockquote blockquote {
 
 
 /* ---------------------------------------------------------
-   ANIMACIONES
+   ANIMACIÓN — PÍXELES SUPERIORES
    --------------------------------------------------------- */
 
 @keyframes digimon-stats-pixels-a {
@@ -9808,7 +9809,7 @@ blockquote blockquote {
 
     50% {
         transform: translate(
-            0.429rem,
+            -0.429rem,
             -0.286rem
         );
         opacity: .95;
@@ -9816,6 +9817,10 @@ blockquote blockquote {
 
 }
 
+
+/* ---------------------------------------------------------
+   ANIMACIÓN — PÍXELES INFERIORES
+   --------------------------------------------------------- */
 
 @keyframes digimon-stats-pixels-b {
 
@@ -9827,10 +9832,13 @@ blockquote blockquote {
 
     50% {
         transform: translate(
-            -0.286rem,
+            0.286rem,
             0.429rem
         );
         opacity: .9;
     }
 
+}
+#digimon-statistics .digimon-stats-status {
+    display: none !important;
 }
