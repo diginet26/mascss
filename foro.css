@@ -10529,71 +10529,38 @@ blockquote blockquote {
     opacity: .9;
 }
 
-
 /* ---------------------------------------------------------
    PEQUEÑOS PÍXELES DECORATIVOS
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-counters > .digimon-counter::after {
     content: "";
-
     position: absolute;
-
     right: 1rem;
     bottom: 1rem;
-
     width: .3rem;
     height: .3rem;
-
     background: var(--linkc1);
-
-    box-shadow:
-        -.8rem .5rem 0 var(--linkc2),
-        .5rem -.7rem 0 color-mix(
-            in srgb,
-            var(--linkc1) 65%,
-            transparent
-        );
-
+    box-shadow: -.8rem .5rem 0 var(--linkc2), .5rem -.7rem 0 color-mix(in srgb, var(--linkc1) 65%, transparent);
     opacity: .7;
 }
 
-
-/* ---------------------------------------------------------
-   ICONOS
-   --------------------------------------------------------- */
-
-#digimon-statistics .digimon-stats-counters
-.digimon-counter-icon {
+/*ICONOS*/
+#digimon-statistics .digimon-stats-counters .digimon-counter-icon {
     position: relative;
-
     z-index: 2;
 }
-
 
 /* ---------------------------------------------------------
    DATOS
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-counter-data {
     position: relative;
-
     z-index: 2;
 }
 
+#digimon-statistics .digimon-counter-data > span {letter-spacing: .12em;}/*ETIQUETA*/
 
-/* ---------------------------------------------------------
-   ETIQUETA
-   --------------------------------------------------------- */
-
-#digimon-statistics .digimon-counter-data > span {
-    letter-spacing: .12em;
-}
-
-
-/* ---------------------------------------------------------
-   VALOR PRINCIPAL
-   --------------------------------------------------------- */
+/*VALOR PRINCIPAL*/
 
 #digimon-statistics .digimon-counter-data > strong {
     display: block;
@@ -10605,22 +10572,14 @@ blockquote blockquote {
 }
 
 
-/* ---------------------------------------------------------
-   DESCRIPCIÓN
-   --------------------------------------------------------- */
-
+/*DESCRIPCIÓN*/
 #digimon-statistics .digimon-counter-data > small {
     display: block;
-
     margin-top: .25rem;
-
     opacity: .55;
-
     letter-spacing: .04em;
 }
-/* =========================================================
-   DIGITAL RIFT — AJUSTE TIPOGRÁFICO DE CONTADORES
-   ========================================================= */
+/*AJUSTE TIPOGRÁFICO DE CONTADORES*/
 
 #digimon-statistics .digimon-counter-data > span {
     font-size: .65rem !important;
@@ -10662,4 +10621,13 @@ blockquote blockquote {
     border-radius: inherit !important;
     margin: 0 !important;
     padding: 0 !important;
+}
+#digimon-statistics .digimon-newest-user {
+    display: flex !important;
+    align-items: center !important;
+}
+
+#digimon-statistics .digimon-newest-avatar {
+    align-self: center !important;
+    flex-shrink: 0 !important;
 }
