@@ -8541,228 +8541,121 @@ blockquote blockquote {
 /* =========================================================
    TARJETAS
    ========================================================= */
-
 .rift-info-card {
     position: relative;
-
     width: 100%;
     height: 9.286rem;
-
     min-width: 0;
-
     overflow: hidden;
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     color: var(--rift-text);
     text-decoration: none;
-
     background: var(--rift-panel);
-
     isolation: isolate;
-
-    clip-path: polygon(
-        0 0,
-        calc(100% - 1rem) 0,
-        100% 1rem,
-        100% calc(100% - 1rem),
-        calc(100% - 1rem) 100%,
-        0 100%
-    );
-
-    transition:
-        transform .3s ease,
-        filter .3s ease;
+    clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 0 100%);
+    transition: transform .3s ease, filter .3s ease;
 }
-
 
 /* =========================================================
    LÍNEA SUPERIOR
    ========================================================= */
-
 .rift-info-card::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 62%;
     height: 0.143rem;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--rift-a1),
-            var(--rift-a2),
-            transparent
-        );
-
+    background: linear-gradient(90deg, var(--rift-a1), var(--rift-a2), transparent);
     z-index: 6;
-
     pointer-events: none;
 }
-
 
 /* =========================================================
    LÍNEA INFERIOR
    ========================================================= */
-
 .rift-info-card::after {
     content: "";
-
     position: absolute;
-
     right: 0;
     bottom: 0;
-
     width: 38%;
     height: 0.143rem;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--rift-a2)
-        );
-
+    background: linear-gradient(90deg, transparent, var(--rift-a2));
     z-index: 6;
-
     pointer-events: none;
 }
-
 
 /* =========================================================
    IMAGEN
    ========================================================= */
-
 .rift-info-image img {
     position: absolute;
-
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
     z-index: -3;
-
-    filter:
-        brightness(.62)
-        saturate(.75);
-
-    transition:
-        transform .55s ease,
-        filter .55s ease;
+    filter: brightness(.62) saturate(.75);
+    transition: transform .55s ease, filter .55s ease;
 }
-
 
 /* =========================================================
    VELO DE IMAGEN
    ========================================================= */
-
 .rift-info-image .rift-info-overlay {
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 0;
-
-    padding:
-        2.857rem
-        0.857rem
-        0.857rem;
-
+    padding: 2.857rem 0.857rem 0.857rem;
     box-sizing: border-box;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 0%,
-            rgba(3,7,12,.12) 15%,
-            rgba(3,7,12,.94) 100%
-        );
-
+    background: linear-gradient(180deg, transparent 0%, rgba(3,7,12,.12) 15%, rgba(3,7,12,.94) 100%);
     border: 0;
-
     z-index: 2;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.04);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
 }
 
-
-/* =========================================================
-   ELIMINAR ETIQUETA DIGITAL RIFT
-   ========================================================= */
-
-.rift-info-overlay::before {
-    content: none;
-}
-
-
+.rift-info-overlay::before {content: none;}/*ELIMINAR ETIQUETA DIGITAL RIFT*/
 /* =========================================================
    TÍTULO
    ========================================================= */
 
 .rift-info-overlay strong {
     display: block;
-
     margin: 0;
-
     color: #fff;
-
     font-family: 'Oxanium', sans-serif;
-
     font-size: 0.929rem;
     font-weight: 800;
-
     line-height: 1.1;
-
     letter-spacing: 0.043rem;
-
     text-transform: uppercase;
-
-    text-shadow:
-        0 2px 5px rgba(0,0,0,.8);
+    text-shadow: 0 2px 5px rgba(0,0,0,.8);
 }
-
 
 /* =========================================================
    SUBTÍTULO
    ========================================================= */
-
 .rift-info-overlay span {
     display: block;
-
     margin-top: 0.286rem;
-
     color: var(--rift-a2);
-
     font-family: 'Oxanium', sans-serif;
-
     font-size: 0.571rem;
     font-weight: 700;
-
     line-height: 1.2;
-
     letter-spacing: 0.071rem;
-
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    FORMAS ANGULARES
    ========================================================= */
-
 .rift-info-card:nth-child(1) {
     clip-path: polygon(
         0 0,
@@ -10613,4 +10506,63 @@ blockquote blockquote {
     height: 100% !important;
     box-sizing: border-box !important;
     align-items: center !important;
+}
+/* =========================================================
+   DIGIMON NETWORK — GROUPS HEADER
+   ========================================================= */
+
+#digimon-statistics .digimon-groups-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.5rem 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Etiqueta pequeña de sistema */
+#digimon-statistics .digimon-groups-header .digimon-stats-label {
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Título principal */
+#digimon-statistics .digimon-groups-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Línea de separación */
+#digimon-statistics .digimon-groups-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background:linear-gradient(90deg, var(--linkc1), var(--stats-border) 45%, var(--stats-border) 55%,var(--linkc2));
+    opacity: 0.45;
+}
+
+/* Pequeño indicador digital */
+#digimon-statistics .digimon-groups-header::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -0.18rem;
+    width: 0.35rem;
+    height: 0.35rem;
+    background: var(--linkc2);
+    box-shadow: -0.7rem 0 0 var(--linkc1), -1.4rem 0 0 color-mix(in srgb, var(--linkc2) 55%, transparent);
+    z-index: 2;
 }
