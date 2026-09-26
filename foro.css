@@ -10749,10 +10749,21 @@ blockquote blockquote {
     line-height: inherit !important;
     font-weight: 700 !important;
 }
+
+/* =========================================================
+   LAST 24 HOURS — ICONO CONNECTDEVELOP EN ROTACIÓN
+   ========================================================= */
+
+#digimon-statistics .digimon-window-header > .fa-connectdevelop {
+    display: inline-block !important;
+    animation: digimon-connect-rotate 8s linear infinite !important;
+    transform-origin: center center !important;
+}
+
+@keyframes digimon-connect-rotate {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
 /* =========================================================
    LAST 24 HOURS — ICONO DECORATIVO DE FONDO
    ========================================================= */
-
 #digimon-statistics .digimon-24h-members {
     position: relative !important;
     overflow: hidden !important;
