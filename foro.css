@@ -10343,7 +10343,7 @@ blockquote blockquote {
 #digimon-statistics .digimon-stats-24h-list {
     display: block !important;
 
-    padding: 1.5rem !important;
+    padding: 1rem 1.5rem !important;
 
     text-align: center !important;
 
@@ -10359,30 +10359,6 @@ blockquote blockquote {
    Ocultamos visualmente el texto original y lo recreamos
    mediante CSS para poder separarlo de los usuarios.
    --------------------------------------------------------- */
-
-#digimon-statistics .digimon-stats-24h-list::before {
-    content: "MIEMBROS CONECTADOS EN LAS ÚLTIMAS 24 HORAS";
-
-    display: block;
-
-    width: 100%;
-
-    margin-bottom: 1.25rem;
-
-    color: var(--linkc1);
-
-    font:
-        700 .65rem/1.4
-        "Oxanium",
-        monospace;
-
-    letter-spacing: .12em;
-
-    text-align: center;
-
-    opacity: .9;
-}
-
 
 /* ---------------------------------------------------------
    USUARIOS
