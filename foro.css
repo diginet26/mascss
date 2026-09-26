@@ -10646,3 +10646,12 @@ blockquote blockquote {
 #digimon-statistics .digimon-newest-user > div:last-child {
     text-align: left !important;
 }
+#digimon-statistics .digimon-record-users {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+#digimon-statistics .digimon-record-users > div:last-child {
+    text-align: left !important;
+}
