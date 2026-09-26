@@ -10596,9 +10596,9 @@ blockquote blockquote {
         );
 }
 
-#digimon-statistics .digimon-24h-members-icon i {
+/*#digimon-statistics .digimon-24h-members-icon i {
     font-size: 1rem;
-}
+}*/
 
 #digimon-statistics .digimon-24h-members-data {
     display: flex;
@@ -10770,11 +10770,13 @@ blockquote blockquote {
     overflow: hidden !important;
 }
 
-/* El icono real pasa a ser decoración de fondo */
+/* Contenedor del icono: sin tamaño ni posición propios */
 #digimon-statistics .digimon-24h-members-icon {
     position: absolute !important;
+
+    left: 2rem !important;
+    right: auto !important;
     top: 50% !important;
-    right: 2rem !important;
 
     width: auto !important;
     height: auto !important;
@@ -10789,14 +10791,22 @@ blockquote blockquote {
 
     z-index: 0 !important;
 
-    opacity: .055 !important;
+    opacity: .10 !important;
+
+    overflow: visible !important;
 }
 
-/* El FA-users */
+/* ICONO REAL */
 #digimon-statistics .digimon-24h-members-icon .fa-users {
     display: block !important;
 
-    font-size: 7rem !important;
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 8rem !important;
     line-height: 1 !important;
 
     color: var(--linkc1) !important;
@@ -10805,7 +10815,7 @@ blockquote blockquote {
         0 0 2rem var(--linkc1) !important;
 }
 
-/* El texto queda por encima */
+/* El texto siempre queda por encima */
 #digimon-statistics .digimon-24h-members-data {
     position: relative !important;
     z-index: 2 !important;
