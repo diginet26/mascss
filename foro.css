@@ -10762,7 +10762,7 @@ blockquote blockquote {
 
 @keyframes digimon-connect-rotate {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
 /* =========================================================
-   LAST 24 HOURS — ICONO USERS COMO FONDO
+   MIEMBROS REGISTRADOS — ICONO DE FONDO
    ========================================================= */
 
 #digimon-statistics .digimon-24h-members {
@@ -10770,34 +10770,42 @@ blockquote blockquote {
     overflow: hidden !important;
 }
 
-/* Ocultamos el icono HTML original */
+/* El icono real pasa a ser decoración de fondo */
 #digimon-statistics .digimon-24h-members-icon {
-    display: none !important;
-}
-
-/* Creamos el icono decorativo directamente */
-#digimon-statistics .digimon-24h-members::before {
-    content: "\f0c0";
-
     position: absolute !important;
-    left: 1.5rem !important;
-    bottom: -1.5rem !important;
+    top: 50% !important;
+    right: 2rem !important;
 
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
+    width: auto !important;
+    height: auto !important;
 
-    font-size: 8rem !important;
-    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
-    color: var(--linkc1) !important;
-    opacity: .07 !important;
+    border: 0 !important;
+    background: transparent !important;
+
+    transform: translateY(-50%) !important;
 
     z-index: 0 !important;
 
-    pointer-events: none !important;
+    opacity: .055 !important;
 }
 
-/* Texto por encima del icono */
+/* El FA-users */
+#digimon-statistics .digimon-24h-members-icon .fa-users {
+    display: block !important;
+
+    font-size: 7rem !important;
+    line-height: 1 !important;
+
+    color: var(--linkc1) !important;
+
+    text-shadow:
+        0 0 2rem var(--linkc1) !important;
+}
+
+/* El texto queda por encima */
 #digimon-statistics .digimon-24h-members-data {
     position: relative !important;
     z-index: 2 !important;
