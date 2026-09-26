@@ -10618,3 +10618,23 @@ blockquote blockquote {
 
     letter-spacing: .04em;
 }
+/* =========================================================
+   DIGITAL RIFT — AJUSTE TIPOGRÁFICO DE CONTADORES
+   ========================================================= */
+
+#digimon-statistics .digimon-counter-data > span {
+    font-size: .65rem !important;
+    letter-spacing: .1em !important;
+}
+
+#digimon-statistics .digimon-counter-data > strong {
+    font-size: 1.15rem !important;
+    line-height: 1.25 !important;
+    margin-top: .35rem !important;
+}
+
+#digimon-statistics .digimon-counter-data > small {
+    font-size: .5rem !important;
+    margin-top: .3rem !important;
+    letter-spacing: .04em !important;
+}
