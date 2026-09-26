@@ -10699,17 +10699,3 @@ blockquote blockquote {
     color: var(--text-color) !important;
     font: 700 1.25rem/1.2 "Oxanium", sans-serif !important;
 }
-
-/* Añadimos "Tenemos" y "miembros registrados"
-   sin modificar el HTML */
-#digimon-statistics .digimon-24h-members-data::before {
-    content: "Tenemos" !important;
-    color: var(--text-color) !important;
-    font: 700 1.25rem/1.2 "Oxanium", sans-serif !important;
-}
-
-#digimon-statistics .digimon-24h-members-data::after {
-    content: "miembros registrados" !important;
-    color: var(--text-color) !important;
-    font: 700 1.25rem/1.2 "Oxanium", sans-serif !important;
-}
