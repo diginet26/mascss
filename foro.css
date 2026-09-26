@@ -10729,3 +10729,23 @@ blockquote blockquote {
     white-space: nowrap !important;
     text-align: center !important;
 }
+/* =========================================================
+   ÚLTIMAS 24H — TEXTO DE MIEMBROS REGISTRADOS
+   ========================================================= */
+
+#digimon-statistics .digimon-24h-members-data {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+}
+
+#digimon-statistics .digimon-24h-members-data strong {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    font-weight: 700 !important;
+}
