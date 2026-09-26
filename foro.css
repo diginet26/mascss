@@ -10699,3 +10699,33 @@ blockquote blockquote {
     color: var(--text-color) !important;
     font: 700 1.25rem/1.2 "Oxanium", sans-serif !important;
 }
+/* =========================================================
+   LAST 24 HOURS — MIEMBROS REGISTRADOS EN UNA LÍNEA
+   ========================================================= */
+
+#digimon-statistics .digimon-24h-members {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+}
+
+#digimon-statistics .digimon-24h-members-data {
+    display: block !important;
+    min-width: 0 !important;
+    width: auto !important;
+}
+
+#digimon-statistics .digimon-24h-members-data > strong {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 0.85rem !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+    text-align: center !important;
+}
