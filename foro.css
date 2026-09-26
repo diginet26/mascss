@@ -10555,3 +10555,82 @@ blockquote blockquote {
 #digimon-statistics .digimon-groups-header::after {
     display: none !important;
 }
+/* =========================================================
+   DIGIMON NETWORK — 24H / REGISTERED MEMBERS
+   ========================================================= */
+
+#digimon-statistics .digimon-24h-members {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    padding: 0.5rem 1rem 1.25rem;
+    text-align: center;
+}
+
+#digimon-statistics .digimon-24h-members-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    border: 1px solid color-mix(
+        in srgb,
+        var(--linkc1) 35%,
+        transparent
+    );
+    border-radius: 50%;
+    background: color-mix(
+        in srgb,
+        var(--linkc1) 8%,
+        transparent
+    );
+    color: var(--linkc1);
+    box-shadow:
+        0 0 0.8rem color-mix(
+            in srgb,
+            var(--linkc1) 12%,
+            transparent
+        );
+}
+
+#digimon-statistics .digimon-24h-members-icon i {
+    font-size: 1rem;
+}
+
+#digimon-statistics .digimon-24h-members-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 7rem;
+}
+
+#digimon-statistics .digimon-24h-members-data span {
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--stats-muted);
+}
+
+#digimon-statistics .digimon-24h-members-data strong {
+    margin-top: 0.15rem;
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--text-color);
+}
+
+#digimon-statistics .digimon-24h-members-data small {
+    margin-top: 0.2rem;
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--stats-muted);
+}
