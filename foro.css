@@ -10609,7 +10609,6 @@ blockquote blockquote {
     align-items: center !important;
 }
 
-#digimon-statistics .digimon-record-users > div:last-child {text-align: left !important;}
 #digimon-statistics .digimon-record-users {
     height: 100% !important;
     box-sizing: border-box !important;
