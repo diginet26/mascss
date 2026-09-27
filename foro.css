@@ -11213,3 +11213,11 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
             transparent
         ) !important;
 }
+/* =========================================================
+   QUICK LINKS — AJUSTE VERTICAL
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-quick-links {
+    position: relative !important;
+    top: 3rem !important;
+}
