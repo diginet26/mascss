@@ -5928,12 +5928,12 @@ blockquote blockquote {
 }
 .digimon-counter-data {min-width: 0;}
 
-.digimon-counter-data span {
+/*.digimon-counter-data span {
     display: block;
     color: var(--stats-muted);
     font: 700 8px/1.2 "Oxanium", monospace;
     letter-spacing: 1px;
-}
+}*/
 
 .digimon-counter-data strong {
     display: block;
@@ -9292,31 +9292,22 @@ blockquote blockquote {
     font-size: 1rem;
 }
 
-.digimon-counter-data span {
+/*.digimon-counter-data span {
     font-size: 0.571rem;
     letter-spacing: 0.071rem;
-}
+}*/
 
-.digimon-counter-data strong {
-    font-size: 1.286rem;
-}
-
-.digimon-counter-data small {
-    font-size: 0.5rem;
-}
-
-
+.digimon-counter-data strong {font-size: 1.286rem;}
+.digimon-counter-data small {font-size: 0.5rem;}
 /* =========================================================
    ÚLTIMO USUARIO / RÉCORD
    ========================================================= */
-
 .digimon-stats-bottom {
     gap: 0.714rem;
     margin-top: 0.714rem;
 }
 
-.digimon-newest-user,
-.digimon-record-users {
+.digimon-newest-user, .digimon-record-users {
     min-height: 5.429rem;
     padding: 1rem;
     border-radius: 0.571rem;
@@ -9324,8 +9315,7 @@ blockquote blockquote {
     overflow: hidden;
 }
 
-.digimon-newest-user::before,
-.digimon-record-users::before {
+.digimon-newest-user::before, .digimon-record-users::before {
     content: "";
     position: absolute;
     top: 0;
@@ -9349,21 +9339,12 @@ blockquote blockquote {
     font-size: 1rem;
 }
 
-.digimon-newest-user h3,
-.digimon-record-users h3 {
-    font-size: 0.857rem;
-}
-
-.digimon-newest-user p,
-.digimon-record-users p {
-    font-size: 0.5rem;
-}
-
+.digimon-newest-user h3, .digimon-record-users h3 {font-size: 0.857rem;}
+.digimon-newest-user p, .digimon-record-users p {font-size: 0.5rem;}
 
 /* =========================================================
    GRUPOS
    ========================================================= */
-
 .digimon-groups {
     margin-top: 0.714rem;
     border-radius: 0.571rem;
@@ -9376,25 +9357,17 @@ blockquote blockquote {
     border-bottom: 1px solid var(--stats-border);
 }
 
-.digimon-groups-header h3 {
-    font-size: 0.929rem;
-}
-
+.digimon-groups-header h3 {font-size: 0.929rem;}
 .digimon-groups-list {
     min-height: 4.286rem;
     padding: 1rem;
 }
 
-
 /* =========================================================
    DETALLES DIGITALES
    ========================================================= */
 
-.digimon-stats-online::after,
-.digimon-counter::after,
-.digimon-newest-user::after,
-.digimon-record-users::after,
-.digimon-groups::after {
+.digimon-stats-online::after, .digimon-counter::after, .digimon-newest-user::after, .digimon-record-users::after, .digimon-groups::after {
     content: "";
     position: absolute;
     pointer-events: none;
@@ -9428,7 +9401,6 @@ blockquote blockquote {
 }
 
 /* ETIQUETA */
-
 .digimon-data-name {
     margin-bottom: 0.429rem;
     font-size: 0.571rem;
@@ -9436,7 +9408,6 @@ blockquote blockquote {
 }
 
 /* VALOR */
-
 .digimon-online-data strong {
     margin-top: 0;
     color: var(--text-color);
@@ -9444,22 +9415,14 @@ blockquote blockquote {
 }
 
 /* EL RÉCORD NECESITA MENOS TAMAÑO */
-
 .digimon-online-data > div:nth-child(2) strong {
     font-size: 0.929rem;
     line-height: 1.35;
 }
 /* =========================================================
-   DIGITAL RIFT — ESTADÍSTICAS
-   REESTRUCTURACIÓN VISUAL
+   DIGITAL RIFT — ESTADÍSTICAS REESTRUCTURACIÓN VISUAL
+   BLOQUE PRINCIPAL   BIENVENIDA + ÚLTIMAS 24 HORAS
    ========================================================= */
-
-
-/* =========================================================
-   BLOQUE PRINCIPAL
-   BIENVENIDA + ÚLTIMAS 24 HORAS
-   ========================================================= */
-
 .digimon-stats-main {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr) !important;
@@ -9467,82 +9430,51 @@ blockquote blockquote {
     align-items: stretch !important;
 }
 
-
-/* =========================================================
-   BIENVENIDA
-   ========================================================= */
-
 .digimon-stats-welcome {
     min-width: 0 !important;
     min-height: 400px !important;
     height: 400px !important;
 }
 
-
-/* =========================================================
-   ÚLTIMAS 24 HORAS
-   ========================================================= */
-
 .digimon-stats-24h {
     min-width: 0 !important;
     height: 400px !important;
     min-height: 400px !important;
-
     display: flex !important;
     flex-direction: column !important;
-
     border: 1px solid var(--stats-border) !important;
     border-radius: 12px !important;
     background: var(--stats-panel) !important;
     overflow: hidden !important;
 }
 
-
-/* CABECERA */
-
-.digimon-stats-24h .digimon-window-header {
-    flex-shrink: 0 !important;
-}
-
-
+.digimon-stats-24h .digimon-window-header {flex-shrink: 0 !important;}/* CABECERA */
 /* CONTENIDO */
-
 .digimon-stats-24h-content {
     min-height: 0 !important;
     flex: 1 1 auto !important;
-
     display: flex !important;
     flex-direction: column !important;
-
     padding: 22px !important;
 }
 
-
 /* TÍTULO + DESCRIPCIÓN */
-
 .digimon-stats-24h-heading {
     flex-shrink: 0 !important;
     text-align: center !important;
 }
 
-
 /* LISTA DE USUARIOS */
-
 .digimon-stats-24h-list {
     min-height: 0 !important;
     flex: 1 1 auto !important;
-
     margin-top: 20px !important;
     padding: 15px !important;
-
     overflow-y: auto !important;
     overflow-x: hidden !important;
-
     border-top: 1px solid var(--stats-border) !important;
-
     color: var(--text-color) !important;
 }
-
 
 /* =========================================================
    CONTADORES
