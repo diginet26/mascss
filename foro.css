@@ -11282,51 +11282,43 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 /* =========================================================
-   DIGITAL RIFT — ALTURA DEL BLOQUE SUPERIOR
-   BIENVENIDA = ACTIVE USERS
+   ACTIVE USERS — DETALLES DE CONEXIÓN
    ========================================================= */
 
-/* Altura común de las dos zonas superiores */
-#digimon-statistics .digimon-stats-welcome,
-#digimon-statistics .digimon-stats-online {
-    height: 28.57rem !important;
-    min-height: 28.57rem !important;
-    box-sizing: border-box !important;
+#digimon-statistics .digimon-online-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: .75rem;
 }
 
-/* LAST 24 HOURS NO FORMA PARTE DE ESA ALTURA */
-#digimon-statistics .digimon-stats-24h {
-    height: auto !important;
-    min-height: 0 !important;
+#digimon-statistics .digimon-online-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
-/* Las dos columnas permanecen independientes */
-#digimon-statistics .digimon-stats-left,
-#digimon-statistics .digimon-stats-right {
-    align-self: start !important;
-}
-/* =========================================================
-   ACTIVE USERS — INFORMACIÓN SECUNDARIA
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-online {
-    line-height: 1.2;
-}
-
-#digimon-statistics .digimon-stats-online .digimon-stats-online-info {
-    line-height: 1.15;
-}
-
-#digimon-statistics .digimon-stats-online .digimon-stats-online-info > * {
-    line-height: 1.15;
-}
-
-#digimon-statistics .digimon-stats-online .digimon-stats-online-info small {
-    display: block;
-    margin-top: .15rem;
-    font-size: .65rem;
-    line-height: 1.1;
-    letter-spacing: .1em;
+#digimon-statistics .digimon-online-detail .digimon-data-name {
+    display: inline-block;
+    margin: 0;
+    font-size: .62rem;
+    line-height: 1;
+    letter-spacing: .12em;
     text-transform: uppercase;
-    opacity: .55;
+    color: var(--stats-muted);
+    opacity: .65;
+}
+
+#digimon-statistics .digimon-online-detail strong {
+    display: inline-block;
+    margin: 0;
+    font-size: .7rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--text-color);
 }
