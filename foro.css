@@ -11251,3 +11251,24 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     min-height: 0 !important;
     box-sizing: border-box !important;
 }
+/* =========================================================
+   ACTIVE USERS — MISMA ALTURA QUE BIENVENIDA
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-main {
+    align-items: start !important;
+}
+
+/* La columna derecha no debe estirarse con toda la columna izquierda */
+#digimon-statistics .digimon-stats-right {
+    align-self: start !important;
+}
+
+/* ACTIVE USERS debe medir exactamente lo mismo que BIENVENIDA */
+#digimon-statistics .digimon-stats-online {
+    width: 100% !important;
+    height: 28.571rem !important;
+    min-height: 28.571rem !important;
+    max-height: 28.571rem !important;
+    box-sizing: border-box !important;
+}
