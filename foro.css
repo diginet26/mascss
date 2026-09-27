@@ -9624,7 +9624,7 @@ blockquote blockquote {
    PÍXELES SUPERIORES — DERECHA
    --------------------------------------------------------- */
 
-#digimon-statistics::before {
+/*#digimon-statistics::before {
     content: "";
     position: absolute;
 
@@ -9651,14 +9651,14 @@ blockquote blockquote {
         5s
         ease-in-out
         infinite;
-}
+}*/
 
 
 /* ---------------------------------------------------------
    PÍXELES INFERIORES — IZQUIERDA
    --------------------------------------------------------- */
 
-#digimon-statistics::after {
+/*#digimon-statistics::after {
     content: "";
     position: absolute;
 
@@ -9685,8 +9685,61 @@ blockquote blockquote {
         5.5s
         ease-in-out
         infinite;
+}*/
+/* =========================================================
+   DIGITAL NETWORK — PIXELS
+   Decoración trasladada a LAST 24 HOURS
+   ========================================================= */
+
+/* Quitamos los píxeles de la cabecera general */
+#digimon-statistics::before,
+#digimon-statistics::after {
+    display: none !important;
 }
 
+/* Nueva decoración */
+#digimon-statistics .digimon-stats-24h {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+#digimon-statistics .digimon-stats-24h::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    right: 2rem !important;
+    bottom: 2rem !important;
+
+    width: .4rem !important;
+    height: .4rem !important;
+
+    background: var(--linkc1) !important;
+
+    box-shadow:
+        -1rem .7rem 0 var(--linkc2),
+        -2rem -.5rem 0 var(--linkc1),
+        -3.2rem .8rem 0 var(--linkc2),
+        -4.5rem -.2rem 0 var(--linkc1) !important;
+
+    opacity: .65 !important;
+
+    pointer-events: none !important;
+
+    animation: digimon-24h-pixels 5s ease-in-out infinite !important;
+}
+
+@keyframes digimon-24h-pixels {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: .5;
+    }
+
+    50% {
+        transform: translate(-.3rem, -.25rem);
+        opacity: .9;
+    }
+}
 
 /* ---------------------------------------------------------
    ANIMACIÓN — PÍXELES SUPERIORES
