@@ -11340,3 +11340,147 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     text-transform: uppercase;
     opacity: .55;
 }
+/* =========================================================
+   DIGITAL RIFT — ACTIVE USERS
+   DATOS + EFECTO DE MONITOR
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   FONDO DIGITAL
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-online-content {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 2rem 2rem;
+}
+
+
+/* ---------------------------------------------------------
+   EFECTO DE ESCANEO
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-online-content::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(255,255,255,.025) 50%,
+            transparent 100%
+        );
+
+    background-size: 100% 8rem;
+
+    pointer-events: none;
+    opacity: .45;
+
+    animation:
+        digimon-online-scan
+        6s
+        linear
+        infinite;
+}
+
+
+@keyframes digimon-online-scan {
+
+    0% {
+        background-position: 0 -8rem;
+    }
+
+    100% {
+        background-position: 0 100%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   CONTENIDO POR ENCIMA DEL EFECTO
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-online-main,
+#digimon-statistics .digimon-online-details,
+#digimon-statistics .digimon-online-list {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ---------------------------------------------------------
+   USUARIOS REGISTRADOS / INVITADOS
+   --------------------------------------------------------- */
+
+#digimon-statistics .digimon-online-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+    margin-top: .75rem;
+}
+
+
+#digimon-statistics .digimon-online-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: .45rem;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1;
+}
+
+
+/* NOMBRE */
+
+#digimon-statistics .digimon-online-detail .digimon-data-name {
+    display: inline-block;
+
+    margin: 0;
+
+    color: var(--stats-muted);
+
+    font: 700 .62rem/1 "Oxanium", monospace;
+
+    letter-spacing: .12em;
+    text-transform: uppercase;
+
+    opacity: .65;
+}
+
+
+/* VALOR */
+
+#digimon-statistics .digimon-online-detail strong {
+    display: inline-block;
+
+    margin: 0;
+
+    color: var(--linkc1);
+
+    font: 700 .7rem/1 "Oxanium", sans-serif;
+
+    letter-spacing: .03em;
+}
