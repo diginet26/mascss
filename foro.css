@@ -11085,5 +11085,11 @@ html[style*="12px"] #digimon-statistics .digimon-stats-quick-links a i {
 html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     gap: .7rem !important;
 }
+/* =========================================================
+   OCULTAR LOS ENLACES ORIGINALES DE FORUMOTION
+   Los clones siguen funcionando en DIGIMON-STATS-QUICK-LINKS
+   ========================================================= */
 
-html[style*="
+.e1-gr > .e1-lk {
+    display: none !important;
+}
