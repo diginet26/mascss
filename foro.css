@@ -11305,3 +11305,28 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 #digimon-statistics .digimon-stats-right {
     align-self: start !important;
 }
+/* =========================================================
+   ACTIVE USERS — INFORMACIÓN SECUNDARIA
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-online {
+    line-height: 1.2;
+}
+
+#digimon-statistics .digimon-stats-online .digimon-stats-online-info {
+    line-height: 1.15;
+}
+
+#digimon-statistics .digimon-stats-online .digimon-stats-online-info > * {
+    line-height: 1.15;
+}
+
+#digimon-statistics .digimon-stats-online .digimon-stats-online-info small {
+    display: block;
+    margin-top: .15rem;
+    font-size: .65rem;
+    line-height: 1.1;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    opacity: .55;
+}
