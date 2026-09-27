@@ -516,12 +516,20 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* botón */ 
 .dr-tadmin .shop-filters label { flex: 1; min-height: 42px; padding: 7px 5px; display: flex; align-items: center; justify-content: center; gap: 6px; border-right: 1px solid rgba(34,193,195,.12); color: #60798b; font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: .8px; text-transform: uppercase; cursor: pointer; transition: .2s ease; }
 .dr-tadmin .shop-filters label:last-child { border-right: 0; } 
-.dr-tadmin .shop-filters label:hover { color: var(--shop-cyan); background: rgba(34,193,195,.04); } 
+.dr-tadmin .shop-filters label:hover { color: var(--emblema2); background: rgba(34,193,195,.04); } 
 /* iconos */ 
-.dr-tadmin .shop-filters label i { color: var(--shop-blue); font-size: 10px; transition: .2s ease; } 
+.dr-tadmin .shop-filters label i { color: var(--emblema1); font-size: 10px; transition: .2s ease; } 
 /* ========================================================== ESTADO ACTIVO DE CATEGORÍA ========================================================== */ 
 .dr-tadmin #shop-all:checked ~ .shop-filters label[for="shop-all"], 
-.dr-tadmin #shop-items:checked ~ .shop-filters label[for="shop-items"], .dr-shop #shop-digivices:checked ~ .shop-filters label[for="shop-digivices"], .dr-shop #shop-recovery:checked ~ .shop-filters label[for="shop-recovery"], .dr-shop #shop-special:checked ~ .shop-filters label[for="shop-special"] { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.08) ); box-shadow: inset 0 -2px 0 var(--shop-cyan); } .dr-shop #shop-all:checked ~ .shop-filters label[for="shop-all"] i, .dr-shop #shop-items:checked ~ .shop-filters label[for="shop-items"] i, .dr-shop #shop-digivices:checked ~ .shop-filters label[for="shop-digivices"] i, .dr-shop #shop-recovery:checked ~ .shop-filters label[for="shop-recovery"] i, .dr-shop #shop-special:checked ~ .shop-filters label[for="shop-special"] i { color: var(--shop-cyan); text-shadow: 0 0 8px rgba(34,193,195,.5); } 
+.dr-tadmin #shop-items:checked ~ .shop-filters label[for="shop-items"], 
+.dr-tadmin #shop-digivices:checked ~ .shop-filters label[for="shop-digivices"], 
+.dr-tadmin #shop-recovery:checked ~ .shop-filters label[for="shop-recovery"],
+.dr-tadmin #shop-special:checked ~ .shop-filters label[for="shop-special"] { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.08) ); box-shadow: inset 0 -2px 0 var(--emblema2); }
+.dr-tadmin #shop-all:checked ~ .shop-filters label[for="shop-all"] i, 
+.dr-tadmin #shop-items:checked ~ .shop-filters label[for="shop-items"] i,
+.dr-tadmin #shop-digivices:checked ~ .shop-filters label[for="shop-digivices"] i, 
+.dr-tadmin #shop-recovery:checked ~ .shop-filters label[for="shop-recovery"] i,
+.dr-tadmin #shop-special:checked ~ .shop-filters label[for="shop-special"] i { color: var(--emblema2); text-shadow: 0 0 8px rgba(34,193,195,.5); } 
 /* ========================================================== CONTENEDOR DE OBJETOS ========================================================== */ 
 .dr-tadmin .shop-items { margin: 18px 25px 25px; border: 1px solid #183246; background: rgba(9,17,24,.75); } 
 /* ========================================================== OBJETO ========================================================== */ 
@@ -529,28 +537,30 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 .dr-tadmin .shop-item:last-child { border-bottom: 0; } 
 .dr-tadmin .shop-item:hover { background: rgba(40,215,232,.035); } 
 /* ========================================================== ICONO ========================================================== */ 
-.dr-tadmin .shop-icon { width: 54px; height: 54px; display: flex; align-items: center; justify-content: center; position: relative; background: #081018; border: 1px solid #24475d; color: var(--shop-cyan); font-size: 21px; clip-path: polygon( 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25% ); transition: .25s ease; }
-.dr-tadmin .shop-item:hover .shop-icon { color: #fff; border-color: var(--shop-cyan); background: linear-gradient( 135deg, rgba(22,119,200,.25), rgba(34,193,195,.08) ); filter: drop-shadow(0 0 7px rgba(34,193,195,.25)); }
+.dr-tadmin .shop-icon { width: 54px; height: 54px; display: flex; align-items: center; justify-content: center; position: relative; background: #081018; border: 1px solid #24475d; color: var(--emblema2); font-size: 21px; clip-path: polygon( 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25% ); transition: .25s ease; }
+.dr-tadmin .shop-item:hover .shop-icon { color: #fff; border-color: var(--emblema2); background: linear-gradient( 135deg, rgba(22,119,200,.25), rgba(34,193,195,.08) ); filter: drop-shadow(0 0 7px rgba(34,193,195,.25)); }
 /* ========================================================== INFORMACIÓN DEL OBJETO ========================================================== */ 
 .dr-tadmin .shop-info { min-width: 0; }
-.dr-tadmin .shop-category { display: block; margin-bottom: 3px; color: var(--shop-cyan); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
+.dr-tadmin .shop-category { display: block; margin-bottom: 3px; color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
 .dr-tadmin .shop-name { margin: 0 0 4px; color: #fff; font-family: "Jersey 15", sans-serif; font-size: 23px; font-weight: 400; line-height: 1; letter-spacing: 1px; text-transform: uppercase; } 
 .dr-tadmin .shop-description { margin: 0; color: #8296a5; font-size: 9px; line-height: 1.65; } 
 /* ========================================================== PRECIO ========================================================== */ 
 .dr-tadmin .shop-price { min-width: 75px; padding: 9px 6px; text-align: center; background: #081018; border: 1px solid #213746; } 
-.dr-tadmin .shop-price b { display: block; color: var(--shop-gold); font-family: "Roboto Mono", monospace; font-size: 13px; } 
+.dr-tadmin .shop-price b { display: block; color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 13px; } 
 .dr-tadmin .shop-price span { display: block; margin-top: 2px; color: #526b7a; font-size: 6px; letter-spacing: 1px; text-transform: uppercase; } 
 /* ========================================================== FILTROS ========================================================== */ /* TODO */
 .dr-tadmin #shop-items:checked ~ .shop-items .shop-item:not(.items), 
-.dr-tadmin #shop-digivices:checked ~ .shop-items .shop-item:not(.digivices), .dr-shop #shop-recovery:checked ~ .shop-items .shop-item:not(.recovery), 
+.dr-tadmin #shop-digivices:checked ~ .shop-items .shop-item:not(.digivices), 
+.dr-tadmin #shop-recovery:checked ~ .shop-items .shop-item:not(.recovery), 
 .dr-tadmin #shop-special:checked ~ .shop-items .shop-item:not(.special) { display: none; } 
 /* ========================================================== PIE / INFORMACIÓN ========================================================== */
 .dr-tadmin .shop-footer { margin: 0 25px 25px; padding: 15px 18px; display: flex; align-items: center; justify-content: space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), rgba(34,193,195,.035) ); border: 1px solid rgba(34,193,195,.2); } 
 .dr-tadmin .shop-footer-text { color: #8195a4; font-size: 8px; line-height: 1.6; } 
-.dr-tadmin .shop-footer-text b { color: #fff; } .dr-shop .shop-footer-code { color: var(--shop-cyan); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+.dr-tadmin .shop-footer-text b { color: #fff; } 
+.dr-tadmin .shop-footer-code { color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
 /* ========================================================== DECORACIÓN ========================================================== */ 
 .dr-tadmin .shop-corner { position: absolute; right: 18px; top: 48px; width: 34px; height: 34px; border-top: 1px solid rgba(34,193,195,.3); border-right: 1px solid rgba(34,193,195,.3); opacity: .6; } 
-.dr-tadmin .shop-corner:after { content: ""; position: absolute; right: -1px; top: 14px; width: 8px; height: 1px; background: var(--shop-cyan); } 
+.dr-tadmin .shop-corner:after { content: ""; position: absolute; right: -1px; top: 14px; width: 8px; height: 1px; background: var(--emblema2); } 
 /* ========================================================== RESPONSIVE ========================================================== */
 @media (max-width: 760px) { .dr-shop { width: calc(100% - 30px); } .dr-tadmin.shop-header { padding: 30px 25px; } .dr-tadmin .shop-header:after { left: 25px; } .dr-tadmin .shop-filters, .dr-tadmin .shop-items, .dr-tadmin .shop-footer { margin-left: 15px; margin-right: 15px; } .dr-tadmin .shop-item { grid-template-columns: 50px 1fr; } .dr-tadmin .shop-icon { width: 46px; height: 46px; } .dr-tadmin .shop-price { grid-column: 2; justify-self: start; margin-top: 5px; } } 
 
@@ -11282,43 +11292,51 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 /* =========================================================
-   ACTIVE USERS — DETALLES DE CONEXIÓN
+   DIGITAL RIFT — ALTURA DEL BLOQUE SUPERIOR
+   BIENVENIDA = ACTIVE USERS
    ========================================================= */
 
-#digimon-statistics .digimon-online-details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-    margin-top: .75rem;
+/* Altura común de las dos zonas superiores */
+#digimon-statistics .digimon-stats-welcome,
+#digimon-statistics .digimon-stats-online {
+    height: 28.57rem !important;
+    min-height: 28.57rem !important;
+    box-sizing: border-box !important;
 }
 
-#digimon-statistics .digimon-online-detail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .45rem;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+/* LAST 24 HOURS NO FORMA PARTE DE ESA ALTURA */
+#digimon-statistics .digimon-stats-24h {
+    height: auto !important;
+    min-height: 0 !important;
 }
 
-#digimon-statistics .digimon-online-detail .digimon-data-name {
-    display: inline-block;
-    margin: 0;
-    font-size: .62rem;
-    line-height: 1;
-    letter-spacing: .12em;
+/* Las dos columnas permanecen independientes */
+#digimon-statistics .digimon-stats-left,
+#digimon-statistics .digimon-stats-right {
+    align-self: start !important;
+}
+/* =========================================================
+   ACTIVE USERS — INFORMACIÓN SECUNDARIA
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-online {
+    line-height: 1.2;
+}
+
+#digimon-statistics .digimon-stats-online .digimon-stats-online-info {
+    line-height: 1.15;
+}
+
+#digimon-statistics .digimon-stats-online .digimon-stats-online-info > * {
+    line-height: 1.15;
+}
+
+#digimon-statistics .digimon-stats-online .digimon-stats-online-info small {
+    display: block;
+    margin-top: .15rem;
+    font-size: .65rem;
+    line-height: 1.1;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    color: var(--stats-muted);
-    opacity: .65;
-}
-
-#digimon-statistics .digimon-online-detail strong {
-    display: inline-block;
-    margin: 0;
-    font-size: .7rem;
-    line-height: 1;
-    font-weight: 700;
-    color: var(--text-color);
+    opacity: .55;
 }
