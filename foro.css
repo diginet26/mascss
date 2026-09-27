@@ -501,7 +501,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* ocultar radios */ 
 .dr-tadmin input[type="radio"] { display: none; } 
 /* ========================================================== NAVEGACIÓN DE CATEGORÍAS ========================================================== */ 
-.dr-tadmin .tienda-filters { display: flex; gap: 0; margin: 20px 25px 0; border: 1px solid rgba(34,193,195,.18); background: #09131d; } 
+.dr-tadmin .tienda-filters { display: flex; gap: 0; margin: 20px 0px 0; border: 1px solid rgba(34,193,195,.18); background: #09131d; } 
 /* botón */ 
 .dr-tadmin .tienda-filters label { flex: 1; min-height: 42px; padding: 7px 5px; display: flex; align-items: center; justify-content: center; gap: 6px; border-right: 1px solid rgba(34,193,195,.12); color: #60798b; font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: .8px; text-transform: uppercase; cursor: pointer; transition: .2s ease; }
 .dr-tadmin .tienda-filters label:last-child { border-right: 0; } 
@@ -520,7 +520,7 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 .dr-tadmin #tienda-recovery:checked ~ .tienda-filters label[for="tienda-recovery"] i,
 .dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"] i { color: var(--emblema2); text-shadow: 0 0 8px rgba(34,193,195,.5); } 
 /* ========================================================== CONTENEDOR DE OBJETOS ========================================================== */ 
-.dr-tadmin .tienda-items { margin: 18px 25px 25px; border: 1px solid #183246; background: rgba(9,17,24,.75); } 
+.dr-tadmin .tienda-items { /*margin: 18px 25px 25px;*/ border: 1px solid #183246; background: rgba(9,17,24,.75); } 
 /* ========================================================== OBJETO ========================================================== */ 
 .dr-tadmin .tienda-item { min-height: 92px; padding: 13px; display: grid; grid-template-columns: 58px 1fr 90px; align-items: center; gap: 15px; position: relative; border-bottom: 1px solid rgba(24,50,70,.65); transition: .2s ease; } 
 .dr-tadmin .tienda-item:last-child { border-bottom: 0; } 
