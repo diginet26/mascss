@@ -11567,3 +11567,13 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
         transform: translateY(calc(100% + 30rem));
     }
 }
+/* =========================================================
+   LAST 24 HOURS — AJUSTE DE ALTURA Y SEPARACIÓN
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-24h {
+    height: 25rem !important;
+    min-height: 25rem !important;
+    margin-top: 1rem !important;
+    box-sizing: border-box !important;
+}
