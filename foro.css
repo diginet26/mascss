@@ -508,9 +508,9 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 /* título */ .dr-shop .shop-title { margin: 0; color: #fff; font-family: "Jersey 15", "Arial Narrow", sans-serif; font-size: 52px; font-weight: 400; line-height: .9; letter-spacing: 3px; text-transform: uppercase; } 
 /* subtítulo */ .dr-shop .shop-subtitle { margin-top: 13px; max-width: 490px; color: var(--shop-muted); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; } .dr-shop .shop-subtitle b { color: var(--shop-gold); } 
 /* ========================================================== FORMULARIO / FILTROS ========================================================== */ 
-.dr-shop form { margin: 0; } 
+.dr-tadmin form { margin: 0; } 
 /* ocultar radios */ 
-.dr-shop input[type="radio"] { display: none; } 
+.dr-tadmin input[type="radio"] { display: none; } 
 /* ========================================================== NAVEGACIÓN DE CATEGORÍAS ========================================================== */ 
 .dr-tadmin.shop-filters { display: flex; gap: 0; margin: 20px 25px 0; border: 1px solid rgba(34,193,195,.18); background: #09131d; } 
 /* botón */ 
