@@ -11030,124 +11030,120 @@ blockquote blockquote {
 /**/
 /* =========================================================
    ESTADÍSTICAS — QUICK LINKS
-   4 ICONOS ARRIBA + 4 ABAJO
+   4 ICONOS ARRIBA + 4 ICONOS ABAJO
    ========================================================= */
 
 #digimon-statistics .digimon-stats-header {
-    position: relative;
+    position: relative !important;
 }
 
-/* Contenedor de los 8 enlaces */
-#digimon-statistics .digimon-stats-header .digimon-quick-links {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
+/* Contenedor de los enlaces */
+#digimon-statistics .digimon-stats-header > div:last-child {
+    position: absolute !important;
+    top: 1.25rem !important;
+    right: 1.5rem !important;
 
-    width: 11rem;
+    width: 11rem !important;
 
-    display: grid;
-    grid-template-columns: repeat(4, 2.35rem);
-    grid-auto-rows: 2.35rem;
-    gap: .45rem;
+    display: grid !important;
+    grid-template-columns: repeat(4, 2.25rem) !important;
+    grid-auto-rows: 2.25rem !important;
 
-    justify-content: end;
-    align-items: center;
+    gap: .45rem !important;
 
-    z-index: 20;
+    justify-content: end !important;
+    align-items: center !important;
 }
 
 /* Cada botón */
-#digimon-statistics .digimon-stats-header .digimon-quick-links a {
-    position: relative;
+#digimon-statistics .digimon-stats-header > div:last-child a {
+    position: relative !important;
 
-    width: 2.35rem;
-    height: 2.35rem;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    min-width: 2.25rem !important;
+    min-height: 2.25rem !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
 
-    box-sizing: border-box;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    padding: 0;
-    margin: 0;
+    box-sizing: border-box !important;
 
-    border: 1px solid var(--stats-border);
-    border-radius: .35rem;
+    border: 1px solid var(--stats-border) !important;
+    border-radius: .3rem !important;
 
-    background: rgba(255,255,255,.025);
+    background: rgba(255,255,255,.025) !important;
 
-    color: var(--linkc1);
+    text-decoration: none !important;
 
-    text-decoration: none;
-
-    font-size: 0;
+    /* OCULTAMOS EL TEXTO */
+    font-size: 0 !important;
+    line-height: 0 !important;
 
     transition:
-        color .25s ease,
-        background .25s ease,
-        border-color .25s ease,
-        transform .25s ease,
-        box-shadow .25s ease;
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease !important;
 }
 
 /* Icono */
-#digimon-statistics .digimon-stats-header .digimon-quick-links a i {
-    display: block;
+#digimon-statistics .digimon-stats-header > div:last-child a i,
+#digimon-statistics .digimon-stats-header > div:last-child a .fa {
+    display: block !important;
 
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 
-    font-size: .85rem;
-    line-height: 1;
+    font-size: .85rem !important;
+    line-height: 1 !important;
 
-    color: currentColor;
+    color: var(--linkc1) !important;
 }
 
 /* Hover */
-#digimon-statistics .digimon-stats-header .digimon-quick-links a:hover {
-    color: var(--linkc2);
+#digimon-statistics .digimon-stats-header > div:last-child a:hover {
+    transform: translateY(-.1rem) !important;
 
-    background: rgba(255,255,255,.06);
+    border-color: var(--linkc1) !important;
 
-    border-color: currentColor;
-
-    transform: translateY(-.15rem);
+    background: rgba(255,255,255,.06) !important;
 
     box-shadow:
-        0 0 .8rem color-mix(
+        0 0 .7rem color-mix(
             in srgb,
-            currentColor 25%,
+            var(--linkc1) 25%,
             transparent
-        );
+        ) !important;
 }
 
 /* =========================================================
    TOOLTIP
    ========================================================= */
 
-#digimon-statistics .digimon-stats-header .digimon-quick-links a::after {
-    content: attr(data-tooltip);
+#digimon-statistics .digimon-stats-header > div:last-child a::after {
+    content: attr(title);
 
     position: absolute;
 
+    right: 0;
     top: calc(100% + .5rem);
-    left: 50%;
 
-    transform: translateX(-50%) translateY(-.25rem);
+    z-index: 1000;
 
     width: max-content;
-    max-width: 12rem;
+    max-width: 14rem;
 
-    padding: .4rem .6rem;
-
-    box-sizing: border-box;
+    padding: .45rem .65rem;
 
     border: 1px solid var(--stats-border);
-    border-radius: .3rem;
+    border-radius: .25rem;
 
     background: var(--stats-panel);
-
     color: var(--text-color);
 
     font-family: inherit;
@@ -11156,26 +11152,25 @@ blockquote blockquote {
     line-height: 1.2;
     letter-spacing: .04em;
 
+    white-space: nowrap;
     text-align: center;
-    white-space: normal;
 
     opacity: 0;
     visibility: hidden;
 
-    pointer-events: none;
+    transform: translateY(-.25rem);
 
-    z-index: 100;
+    pointer-events: none;
 
     transition:
         opacity .2s ease,
-        transform .2s ease,
-        visibility .2s ease;
+        visibility .2s ease,
+        transform .2s ease;
 }
 
 /* Mostrar tooltip */
-#digimon-statistics .digimon-stats-header .digimon-quick-links a:hover::after {
+#digimon-statistics .digimon-stats-header > div:last-child a:hover::after {
     opacity: 1;
     visibility: visible;
-
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
