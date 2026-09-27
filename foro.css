@@ -11223,52 +11223,26 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 /* =========================================================
-   ACTIVE USERS — IGUALAR ALTURA A BIENVENIDA
+   DIGITAL RIFT — ALTURA DEL BLOQUE SUPERIOR
+   BIENVENIDA = ACTIVE USERS
    ========================================================= */
 
-#digimon-statistics .digimon-stats-welcome {
+/* Altura común de las dos zonas superiores */
+#digimon-statistics .digimon-stats-welcome,
+#digimon-statistics .digimon-stats-online {
     height: 28.57rem !important;
     min-height: 28.57rem !important;
+    box-sizing: border-box !important;
 }
 
+/* LAST 24 HOURS NO FORMA PARTE DE ESA ALTURA */
 #digimon-statistics .digimon-stats-24h {
-    height: 28.57rem !important;
-    min-height: 28.57rem !important;
-}
-/* =========================================================
-   ACTIVE USERS — IGUALAR A LA ALTURA DE BIENVENIDA
-   ========================================================= */
-
-/* No forzamos la altura de Bienvenida */
-#digimon-statistics .digimon-stats-welcome {
     height: auto !important;
     min-height: 0 !important;
 }
 
-/* Active Users ocupa toda la altura de su columna */
-#digimon-statistics .digimon-stats-online {
-    height: 100% !important;
-    min-height: 0 !important;
-    box-sizing: border-box !important;
-}
-/* =========================================================
-   ACTIVE USERS — MISMA ALTURA QUE BIENVENIDA
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-main {
-    align-items: start !important;
-}
-
-/* La columna derecha no debe estirarse con toda la columna izquierda */
+/* Las dos columnas permanecen independientes */
+#digimon-statistics .digimon-stats-left,
 #digimon-statistics .digimon-stats-right {
     align-self: start !important;
-}
-
-/* ACTIVE USERS debe medir exactamente lo mismo que BIENVENIDA */
-#digimon-statistics .digimon-stats-online {
-    width: 100% !important;
-    height: 28.571rem !important;
-    min-height: 28.571rem !important;
-    max-height: 28.571rem !important;
-    box-sizing: border-box !important;
 }
