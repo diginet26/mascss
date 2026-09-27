@@ -11093,3 +11093,169 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .e1-gr > .e1-lk {
     display: none !important;
 }
+/* =========================================================
+   DIGIMON NETWORK // QUICK LINKS
+   4 ICONOS ARRIBA + 4 ICONOS ABAJO
+   ========================================================= */
+
+#digimon-statistics {
+    position: relative;
+}
+
+/* La cabecera se convierte en el área de referencia */
+#digimon-statistics .digimon-stats-header {
+    position: relative !important;
+}
+
+/* Caja de los 8 accesos */
+#digimon-statistics .digimon-stats-quick-links {
+    position: absolute !important;
+    top: 50% !important;
+    right: 1.5rem !important;
+    transform: translateY(-50%) !important;
+
+    width: 18rem !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+
+    gap: 0.4rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    z-index: 20 !important;
+}
+
+/* Cada botón */
+#digimon-statistics .digimon-stats-quick-links > a {
+    position: relative !important;
+
+    width: 100% !important;
+    height: 4rem !important;
+    min-width: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: 1px solid var(--stats-border) !important;
+    border-radius: 0.55rem !important;
+
+    background: rgba(255,255,255,.015) !important;
+
+    text-decoration: none !important;
+
+    font-size: 0 !important;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease !important;
+}
+
+/* Iconos */
+#digimon-statistics .digimon-stats-quick-links > a i {
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 1.35rem !important;
+    line-height: 1 !important;
+
+    color: var(--linkc1) !important;
+}
+
+/* Decoración de cada botón */
+#digimon-statistics .digimon-stats-quick-links > a::after {
+    content: "" !important;
+
+    position: absolute !important;
+    right: 0.45rem !important;
+    bottom: 0.35rem !important;
+
+    width: 0.3rem !important;
+    height: 0.3rem !important;
+
+    background: var(--linkc1) !important;
+
+    opacity: .55 !important;
+}
+
+/* Hover */
+#digimon-statistics .digimon-stats-quick-links > a:hover {
+    transform: translateY(-0.15rem) !important;
+
+    background: rgba(255,255,255,.04) !important;
+
+    border-color: var(--linkc1) !important;
+
+    box-shadow:
+        0 0 1rem color-mix(
+            in srgb,
+            var(--linkc1) 18%,
+            transparent
+        ) !important;
+}
+
+/* =========================================================
+   TOOLTIP
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-quick-links > a[title]::before {
+    content: attr(title) !important;
+
+    position: absolute !important;
+
+    left: 50% !important;
+    bottom: calc(100% + 0.5rem) !important;
+
+    transform: translateX(-50%) translateY(0.25rem) !important;
+
+    width: max-content !important;
+    max-width: 12rem !important;
+
+    padding: 0.45rem 0.7rem !important;
+
+    border: 1px solid var(--stats-border) !important;
+    border-radius: 0.3rem !important;
+
+    background: var(--stats-panel) !important;
+
+    color: var(--text-color) !important;
+
+    font-family: inherit !important;
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .04em !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+
+    white-space: normal !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    z-index: 50 !important;
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease !important;
+}
+
+#digimon-statistics .digimon-stats-quick-links > a[title]:hover::before {
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: translateX(-50%) translateY(0) !important;
+}
