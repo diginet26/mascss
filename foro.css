@@ -11512,10 +11512,3 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
         transform: translateY(calc(100% + 30rem));
     }
 }
-/* =========================================================
-   SEPARACIÓN ENTRE ACTIVE USERS Y LAS ESTADÍSTICAS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-counters {
-    margin-top: 1.25rem !important;
-}
