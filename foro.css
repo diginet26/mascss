@@ -11235,3 +11235,19 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     height: 28.57rem !important;
     min-height: 28.57rem !important;
 }
+/* =========================================================
+   ACTIVE USERS — IGUALAR A LA ALTURA DE BIENVENIDA
+   ========================================================= */
+
+/* No forzamos la altura de Bienvenida */
+#digimon-statistics .digimon-stats-welcome {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* Active Users ocupa toda la altura de su columna */
+#digimon-statistics .digimon-stats-online {
+    height: 100% !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+}
