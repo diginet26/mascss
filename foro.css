@@ -11512,3 +11512,25 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
         transform: translateY(calc(100% + 30rem));
     }
 }
+/* =========================================================
+   DIGITAL RIFT — COLUMNAS DE ESTADÍSTICAS
+   SEPARACIÓN VERTICAL
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-left,
+#digimon-statistics .digimon-stats-right {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+
+/* =========================================================
+   ALTURA DE LOS BLOQUES PRINCIPALES
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-welcome,
+#digimon-statistics .digimon-stats-24h {
+    height: 400px !important;
+    min-height: 400px !important;
+}
