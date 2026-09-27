@@ -10986,3 +10986,104 @@ blockquote blockquote {
 
     opacity: .55 !important;
 }
+/* =========================================================
+   DIGIMON STATS — QUICK LINKS
+   Posición + escalado por accesibilidad
+   ========================================================= */
+
+#digimon-statistics {
+    position: relative;
+}
+
+/* Bloque de los 8 accesos */
+#digimon-statistics .digimon-stats-quick-links {
+    position: absolute !important;
+    top: 3.5rem !important;
+    right: 2.5rem !important;
+
+    width: 14.5rem !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: .7rem !important;
+
+    z-index: 20 !important;
+}
+
+/* Cada botón */
+#digimon-statistics .digimon-stats-quick-links a {
+    width: 3.15rem !important;
+    height: 3.15rem !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: .55rem !important;
+
+    font-size: 0 !important;
+    line-height: 1 !important;
+}
+
+/* Iconos */
+#digimon-statistics .digimon-stats-quick-links a i,
+#digimon-statistics .digimon-stats-quick-links a .fa {
+    font-size: 1.25rem !important;
+    line-height: 1 !important;
+}
+
+/* =========================================================
+   DECORACIÓN DEL PIXEL
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-quick-links a::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: .3rem !important;
+    height: .3rem !important;
+
+    right: .35rem !important;
+    bottom: .35rem !important;
+
+    background: currentColor !important;
+
+    opacity: .45 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   ESCALADO CON LOS BOTONES DE ACCESIBILIDAD
+   ========================================================= */
+
+/* 12 px */
+html[style*="12px"] #digimon-statistics .digimon-stats-quick-links {
+    gap: .6rem !important;
+}
+
+html[style*="12px"] #digimon-statistics .digimon-stats-quick-links a {
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+html[style*="12px"] #digimon-statistics .digimon-stats-quick-links a i {
+    font-size: 1.15rem !important;
+}
+
+
+/* 14 px — tamaño normal */
+html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
+    gap: .7rem !important;
+}
+
+html[style*="
