@@ -497,72 +497,61 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 }
 
 /* ========================================================== DIGITAL RIFT — TABLILLA TIENDA ========================================================== */ 
-.dr-shop { --shop-blue: #1677C8; --shop-blue-dark: #0b3d68; --shop-cyan: #22c1c3; --shop-gold: #f2b705; --shop-bg: #080f18; --shop-panel: #0d1722; --shop-panel2: #111f2d; --shop-line: rgba(34,193,195,.22); --shop-text: #dce8f2; --shop-muted: #7f95a8; width: 720px; margin: 30px auto; position: relative; overflow: hidden; background: linear-gradient( 90deg, rgba(8,15,24,.99) 0%, rgba(8,15,24,.94) 55%, rgba(8,15,24,.82) 100% ); border: 1px solid var(--shop-line); color: var(--shop-text); font-family: "Oxanium", sans-serif; font-size: 12px; line-height: 1.7; text-align: left; box-shadow: 0 0 35px rgba(0,0,0,.45), inset 0 0 45px rgba(22,119,200,.04); } 
-/* ========================================================== BARRA SUPERIOR ========================================================== */ 
-.dr-shop .shop-top { height: 31px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; background: #07111b; border-bottom: 1px solid var(--shop-line); color: var(--shop-muted); font-family: "Roboto Mono", monospace; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; } .dr-shop .shop-top strong { color: var(--shop-cyan); } .dr-shop .shop-status { display: flex; align-items: center; gap: 7px; } .dr-shop .shop-status i { width: 5px; height: 5px; display: block; background: var(--shop-cyan); border-radius: 50%; box-shadow: 0 0 8px rgba(34,193,195,.7); } 
-/* ========================================================== CABECERA ========================================================== */
-.dr-shop .shop-header { position: relative; min-height: 175px; padding: 32px 40px 28px; background: linear-gradient( 90deg, rgba(8,15,24,.99) 0%, rgba(8,15,24,.88) 48%, rgba(8,15,24,.52) 100% ); border-bottom: 1px solid var(--shop-line); } 
-/* línea inferior */ 
-.dr-shop .shop-header:after { content: ""; position: absolute; left: 40px; bottom: 0; width: 180px; height: 2px; background: var(--shop-cyan); box-shadow: 0 0 12px rgba(34,193,195,.5); } 
-/* etiqueta */ .dr-shop .shop-label { display: inline-block; padding: 3px 9px; margin-bottom: 12px; border: 1px solid var(--shop-blue); color: var(--shop-cyan); font-size: 8px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; } 
-/* título */ .dr-shop .shop-title { margin: 0; color: #fff; font-family: "Jersey 15", "Arial Narrow", sans-serif; font-size: 52px; font-weight: 400; line-height: .9; letter-spacing: 3px; text-transform: uppercase; } 
-/* subtítulo */ .dr-shop .shop-subtitle { margin-top: 13px; max-width: 490px; color: var(--shop-muted); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; } .dr-shop .shop-subtitle b { color: var(--shop-gold); } 
-/* ========================================================== FORMULARIO / FILTROS ========================================================== */ 
 .dr-tadmin form { margin: 0; } 
 /* ocultar radios */ 
 .dr-tadmin input[type="radio"] { display: none; } 
 /* ========================================================== NAVEGACIÓN DE CATEGORÍAS ========================================================== */ 
-.dr-tadmin .shop-filters { display: flex; gap: 0; margin: 20px 25px 0; border: 1px solid rgba(34,193,195,.18); background: #09131d; } 
+.dr-tadmin .tienda-filters { display: flex; gap: 0; margin: 20px 25px 0; border: 1px solid rgba(34,193,195,.18); background: #09131d; } 
 /* botón */ 
-.dr-tadmin .shop-filters label { flex: 1; min-height: 42px; padding: 7px 5px; display: flex; align-items: center; justify-content: center; gap: 6px; border-right: 1px solid rgba(34,193,195,.12); color: #60798b; font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: .8px; text-transform: uppercase; cursor: pointer; transition: .2s ease; }
-.dr-tadmin .shop-filters label:last-child { border-right: 0; } 
-.dr-tadmin .shop-filters label:hover { color: var(--emblema2); background: rgba(34,193,195,.04); } 
+.dr-tadmin .tienda-filters label { flex: 1; min-height: 42px; padding: 7px 5px; display: flex; align-items: center; justify-content: center; gap: 6px; border-right: 1px solid rgba(34,193,195,.12); color: #60798b; font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: .8px; text-transform: uppercase; cursor: pointer; transition: .2s ease; }
+.dr-tadmin .tienda-filters label:last-child { border-right: 0; } 
+.dr-tadmin .tienda-filters label:hover { color: var(--emblema2); background: rgba(34,193,195,.04); } 
 /* iconos */ 
-.dr-tadmin .shop-filters label i { color: var(--emblema1); font-size: 10px; transition: .2s ease; } 
+.dr-tadmin .tienda-filters label i { color: var(--emblema1); font-size: 10px; transition: .2s ease; } 
 /* ========================================================== ESTADO ACTIVO DE CATEGORÍA ========================================================== */ 
-.dr-tadmin #shop-all:checked ~ .shop-filters label[for="shop-all"], 
-.dr-tadmin #shop-items:checked ~ .shop-filters label[for="shop-items"], 
-.dr-tadmin #shop-digivices:checked ~ .shop-filters label[for="shop-digivices"], 
-.dr-tadmin #shop-recovery:checked ~ .shop-filters label[for="shop-recovery"],
-.dr-tadmin #shop-special:checked ~ .shop-filters label[for="shop-special"] { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.08) ); box-shadow: inset 0 -2px 0 var(--emblema2); }
-.dr-tadmin #shop-all:checked ~ .shop-filters label[for="shop-all"] i, 
-.dr-tadmin #shop-items:checked ~ .shop-filters label[for="shop-items"] i,
-.dr-tadmin #shop-digivices:checked ~ .shop-filters label[for="shop-digivices"] i, 
-.dr-tadmin #shop-recovery:checked ~ .shop-filters label[for="shop-recovery"] i,
-.dr-tadmin #shop-special:checked ~ .shop-filters label[for="shop-special"] i { color: var(--emblema2); text-shadow: 0 0 8px rgba(34,193,195,.5); } 
+.dr-tadmin #tienda-all:checked ~ .tienda-filters label[for="tienda-all"], 
+.dr-tadmin #tienda-items:checked ~ .tienda-filters label[for="tienda-items"], 
+.dr-tadmin #tienda-digivices:checked ~ .tienda-filters label[for="tienda-digivices"], 
+.dr-tadmin #tienda-recovery:checked ~ .tienda-filters label[for="tienda-recovery"],
+.dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"] { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.08) ); box-shadow: inset 0 -2px 0 var(--emblema2); }
+.dr-tadmin #tienda-all:checked ~ .tienda-filters label[for="tienda-all"] i, 
+.dr-tadmin #tienda-items:checked ~ .tienda-filters label[for="tienda-items"] i,
+.dr-tadmin #tienda-digivices:checked ~ .tienda-filters label[for="tienda-digivices"] i, 
+.dr-tadmin #tienda-recovery:checked ~ .tienda-filters label[for="tienda-recovery"] i,
+.dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"] i { color: var(--emblema2); text-shadow: 0 0 8px rgba(34,193,195,.5); } 
 /* ========================================================== CONTENEDOR DE OBJETOS ========================================================== */ 
-.dr-tadmin .shop-items { margin: 18px 25px 25px; border: 1px solid #183246; background: rgba(9,17,24,.75); } 
+.dr-tadmin .tienda-items { margin: 18px 25px 25px; border: 1px solid #183246; background: rgba(9,17,24,.75); } 
 /* ========================================================== OBJETO ========================================================== */ 
-.dr-tadmin .shop-item { min-height: 92px; padding: 13px; display: grid; grid-template-columns: 58px 1fr 90px; align-items: center; gap: 15px; position: relative; border-bottom: 1px solid rgba(24,50,70,.65); transition: .2s ease; } 
-.dr-tadmin .shop-item:last-child { border-bottom: 0; } 
-.dr-tadmin .shop-item:hover { background: rgba(40,215,232,.035); } 
+.dr-tadmin .tienda-item { min-height: 92px; padding: 13px; display: grid; grid-template-columns: 58px 1fr 90px; align-items: center; gap: 15px; position: relative; border-bottom: 1px solid rgba(24,50,70,.65); transition: .2s ease; } 
+.dr-tadmin .tienda-item:last-child { border-bottom: 0; } 
+.dr-tadmin .tienda-item:hover { background: rgba(40,215,232,.035); } 
 /* ========================================================== ICONO ========================================================== */ 
-.dr-tadmin .shop-icon { width: 54px; height: 54px; display: flex; align-items: center; justify-content: center; position: relative; background: #081018; border: 1px solid #24475d; color: var(--emblema2); font-size: 21px; clip-path: polygon( 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25% ); transition: .25s ease; }
-.dr-tadmin .shop-item:hover .shop-icon { color: #fff; border-color: var(--emblema2); background: linear-gradient( 135deg, rgba(22,119,200,.25), rgba(34,193,195,.08) ); filter: drop-shadow(0 0 7px rgba(34,193,195,.25)); }
+.dr-tadmin .tienda-icon { width: 54px; height: 54px; display: flex; align-items: center; justify-content: center; position: relative; background: #081018; border: 1px solid #24475d; color: var(--emblema2); font-size: 21px; clip-path: polygon( 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25% ); transition: .25s ease; }
+.dr-tadmin .tienda-item:hover .tienda-icon { color: #fff; border-color: var(--emblema2); background: linear-gradient( 135deg, rgba(22,119,200,.25), rgba(34,193,195,.08) ); filter: drop-shadow(0 0 7px rgba(34,193,195,.25)); }
 /* ========================================================== INFORMACIÓN DEL OBJETO ========================================================== */ 
-.dr-tadmin .shop-info { min-width: 0; }
-.dr-tadmin .shop-category { display: block; margin-bottom: 3px; color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
-.dr-tadmin .shop-name { margin: 0 0 4px; color: #fff; font-family: "Jersey 15", sans-serif; font-size: 23px; font-weight: 400; line-height: 1; letter-spacing: 1px; text-transform: uppercase; } 
-.dr-tadmin .shop-description { margin: 0; color: #8296a5; font-size: 9px; line-height: 1.65; } 
+.dr-tadmin .tienda-info { min-width: 0; }
+.dr-tadmin .tienda-category { display: block; margin-bottom: 3px; color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
+.dr-tadmin .tienda-name { margin: 0 0 4px; color: #fff; font-family: "Jersey 15", sans-serif; font-size: 23px; font-weight: 400; line-height: 1; letter-spacing: 1px; text-transform: uppercase; } 
+.dr-tadmin .tienda-description { margin: 0; color: #8296a5; font-size: 9px; line-height: 1.65; } 
 /* ========================================================== PRECIO ========================================================== */ 
-.dr-tadmin .shop-price { min-width: 75px; padding: 9px 6px; text-align: center; background: #081018; border: 1px solid #213746; } 
-.dr-tadmin .shop-price b { display: block; color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 13px; } 
-.dr-tadmin .shop-price span { display: block; margin-top: 2px; color: #526b7a; font-size: 6px; letter-spacing: 1px; text-transform: uppercase; } 
+.dr-tadmin .tienda-price { min-width: 75px; padding: 9px 6px; text-align: center; background: #081018; border: 1px solid #213746; } 
+.dr-tadmin .tienda-price b { display: block; color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 13px; } 
+.dr-tadmin .tienda-price span { display: block; margin-top: 2px; color: #526b7a; font-size: 6px; letter-spacing: 1px; text-transform: uppercase; } 
 /* ========================================================== FILTROS ========================================================== */ /* TODO */
-.dr-tadmin #shop-items:checked ~ .shop-items .shop-item:not(.items), 
-.dr-tadmin #shop-digivices:checked ~ .shop-items .shop-item:not(.digivices), 
-.dr-tadmin #shop-recovery:checked ~ .shop-items .shop-item:not(.recovery), 
-.dr-tadmin #shop-special:checked ~ .shop-items .shop-item:not(.special) { display: none; } 
+.dr-tadmin #tienda-items:checked ~ .tienda-items .tienda-item:not(.items), 
+.dr-tadmin #tienda-digivices:checked ~ .tienda-items .tienda-item:not(.digivices), 
+.dr-tadmin #tienda-recovery:checked ~ .tienda-items .tienda-item:not(.recovery), 
+.dr-tadmin #tienda-special:checked ~ .tienda-items .tienda-item:not(.special) { display: none; } 
 /* ========================================================== PIE / INFORMACIÓN ========================================================== */
-.dr-tadmin .shop-footer { margin: 0 25px 25px; padding: 15px 18px; display: flex; align-items: center; justify-content: space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), rgba(34,193,195,.035) ); border: 1px solid rgba(34,193,195,.2); } 
-.dr-tadmin .shop-footer-text { color: #8195a4; font-size: 8px; line-height: 1.6; } 
-.dr-tadmin .shop-footer-text b { color: #fff; } 
-.dr-tadmin .shop-footer-code { color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+.dr-tadmin .tienda-footer { margin: 0 25px 25px; padding: 15px 18px; display: flex; align-items: center; justify-content: space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), rgba(34,193,195,.035) ); border: 1px solid rgba(34,193,195,.2); } 
+.dr-tadmin .tienda-footer-text { color: #8195a4; font-size: 8px; line-height: 1.6; } 
+.dr-tadmin .tienda-footer-text b { color: #fff; } 
+.dr-tadmin .tienda-footer-code { color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 7px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
 /* ========================================================== DECORACIÓN ========================================================== */ 
-.dr-tadmin .shop-corner { position: absolute; right: 18px; top: 48px; width: 34px; height: 34px; border-top: 1px solid rgba(34,193,195,.3); border-right: 1px solid rgba(34,193,195,.3); opacity: .6; } 
-.dr-tadmin .shop-corner:after { content: ""; position: absolute; right: -1px; top: 14px; width: 8px; height: 1px; background: var(--emblema2); } 
+.dr-tadmin .tienda-corner { position: absolute; right: 18px; top: 48px; width: 34px; height: 34px; border-top: 1px solid rgba(34,193,195,.3); border-right: 1px solid rgba(34,193,195,.3); opacity: .6; } 
+.dr-tadmin .tienda-corner:after { content: ""; position: absolute; right: -1px; top: 14px; width: 8px; height: 1px; background: var(--emblema2); } 
 /* ========================================================== RESPONSIVE ========================================================== */
-@media (max-width: 760px) { .dr-shop { width: calc(100% - 30px); } .dr-tadmin.shop-header { padding: 30px 25px; } .dr-tadmin .shop-header:after { left: 25px; } .dr-tadmin .shop-filters, .dr-tadmin .shop-items, .dr-tadmin .shop-footer { margin-left: 15px; margin-right: 15px; } .dr-tadmin .shop-item { grid-template-columns: 50px 1fr; } .dr-tadmin .shop-icon { width: 46px; height: 46px; } .dr-tadmin .shop-price { grid-column: 2; justify-self: start; margin-top: 5px; } } 
+@media (max-width: 760px) { .dr-tadmin .tienda-filters, .dr-tadmin .tienda-items, .dr-tadmin .tienda-footer { margin-left: 15px; margin-right: 15px; } .dr-tadmin .tienda-item { grid-template-columns: 50px 1fr; } .dr-tadmin .tienda-icon { width: 46px; height: 46px; } .dr-tadmin .tienda-price { grid-column: 2; justify-self: start; margin-top: 5px; } } 
 
 
 /* =========================================================
