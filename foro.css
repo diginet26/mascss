@@ -10814,287 +10814,77 @@ blockquote blockquote {
     position: relative !important;
     z-index: 2 !important;
 }
-/* =========================================================
-   DIGITAL RIFT — ESTADÍSTICAS
-   NUEVA DISTRIBUCIÓN PRINCIPAL
-   ========================================================= */
-
-
-/* =========================================================
-   CONTENEDOR PRINCIPAL
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-main {
-    display: grid !important;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr) !important;
-
-    gap: 1rem !important;
-
-    align-items: stretch !important;
-}
-
-
-/* =========================================================
-   COLUMNA IZQUIERDA
-   BIENVENIDA + 24 HORAS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-left {
-    min-width: 0 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-
-    gap: 1rem !important;
-}
-
-
-/* =========================================================
-   COLUMNA DERECHA
-   ACTIVE USERS + 4 DATOS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-right {
-    min-width: 0 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-
-    gap: 1rem !important;
-}
-
-
-/* =========================================================
-   BIENVENIDA
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-left .digimon-stats-welcome {
-    width: 100% !important;
-
-    min-width: 0 !important;
-    min-height: 0 !important;
-    height: 25rem !important;
-
-    box-sizing: border-box !important;
-}
-
-
-/* =========================================================
-   LAST 24 HOURS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-left .digimon-stats-24h {
-    width: 100% !important;
-
-    min-width: 0 !important;
-
-    height: 25rem !important;
-    min-height: 25rem !important;
-
-    box-sizing: border-box !important;
-}
-
-
-/* =========================================================
-   ACTIVE USERS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-right .digimon-stats-online {
-    width: 100% !important;
-
-    min-width: 0 !important;
-
-    box-sizing: border-box !important;
-}
-
-
-/* =========================================================
-   CUATRO DATOS SECUNDARIOS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-secondary {
-    width: 100% !important;
-
-    display: grid !important;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr)) !important;
-
-    gap: .75rem !important;
-
-    margin: 0 !important;
-}
-
-
-/* =========================================================
-   LAS 4 CAJAS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-secondary > .digimon-counter,
-#digimon-statistics .digimon-stats-secondary > .digimon-newest-user,
-#digimon-statistics .digimon-stats-secondary > .digimon-record-users {
-
-    width: 100% !important;
-
-    min-width: 0 !important;
-
-    min-height: 6.5rem !important;
-    height: auto !important;
-
-    margin: 0 !important;
-
-    box-sizing: border-box !important;
-}
-
-
-/* =========================================================
-   CONTADORES
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-secondary > .digimon-counter {
-
-    display: flex !important;
-
-    align-items: center !important;
-    justify-content: center !important;
-
-    gap: .75rem !important;
-
-    padding: .75rem !important;
-}
-
-
-/* =========================================================
-   ÚLTIMO USUARIO + RÉCORD
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-secondary > .digimon-newest-user,
-#digimon-statistics .digimon-stats-secondary > .digimon-record-users {
-
-    display: flex !important;
-
-    align-items: center !important;
-
-    gap: .75rem !important;
-
-    padding: .75rem !important;
-}
-
-
-/* =========================================================
-   TEXTO DE LAS 4 CAJAS
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-secondary h3 {
-
-    margin: 0 !important;
-
-    font-size: .8rem !important;
-    line-height: 1.25 !important;
-
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-@media screen and (max-width: 900px) {
-
-    #digimon-statistics .digimon-stats-main {
-        grid-template-columns: 1fr !important;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-
-    #digimon-statistics .digimon-stats-secondary {
-        grid-template-columns: 1fr !important;
-    }
-
-}
-/* =========================================================
-   IGUALAR ALTURA — BIENVENIDA / ACTIVE USERS
-   ========================================================= */
-#digimon-statistics .digimon-stats-right .digimon-stats-online {
-    height: 25rem !important;
-    min-height: 25rem !important;
-    box-sizing: border-box !important;
-}
-#digimon-statistics .digimon-stats-header {
-    position: relative;
-}
-
 /**/
 /* =========================================================
-   ESTADÍSTICAS — QUICK LINKS
-   4 ARRIBA + 4 ABAJO
+   QUICK LINKS — ESTADÍSTICAS
    ========================================================= */
 
-/* Ambos grupos pasan a formar parte de la zona de cabecera */
-
-#digimon-statistics .digimon-index-tools,
-#digimon-statistics .digimon-index-footer {
+.digimon-index-tools,
+.digimon-index-footer {
     position: absolute !important;
-    right: 1.5rem !important;
 
     display: grid !important;
-    grid-template-columns: repeat(4, 2.25rem) !important;
-    grid-template-rows: 2.25rem !important;
+    grid-template-columns: repeat(4, 2.4rem) !important;
+    grid-auto-rows: 2.4rem !important;
 
     gap: .45rem !important;
 
-    width: auto !important;
+    width: max-content !important;
+    height: auto !important;
+
     margin: 0 !important;
     padding: 0 !important;
 
     border: 0 !important;
-    background: none !important;
+    background: transparent !important;
 }
 
 
-/* FILA SUPERIOR */
+/* ---------------------------------------------------------
+   PRIMERA FILA
+   --------------------------------------------------------- */
 
-#digimon-statistics .digimon-index-tools {
+.digimon-index-tools {
     top: 1.5rem !important;
+    right: 1.5rem !important;
 }
 
 
-/* FILA INFERIOR */
+/* ---------------------------------------------------------
+   SEGUNDA FILA
+   --------------------------------------------------------- */
 
-#digimon-statistics .digimon-index-footer {
-    top: 4.2rem !important;
+.digimon-index-footer {
+    top: 4.35rem !important;
+    right: 1.5rem !important;
 }
 
 
-/* Los contenidos internos desaparecen como contenedores */
+/* Los contenedores internos no deben crear columnas propias */
 
-#digimon-statistics .digimon-tools-left,
-#digimon-statistics .digimon-footer-links {
+.digimon-tools-left,
+.digimon-footer-links {
     display: contents !important;
 }
 
 
-/* =========================================================
-   ICONOS
-   ========================================================= */
+/* ---------------------------------------------------------
+   TODOS LOS BOTONES
+   --------------------------------------------------------- */
 
-#digimon-statistics .digimon-index-tools a,
-#digimon-statistics .digimon-mark-read,
-#digimon-statistics .digimon-footer-links a,
-#digimon-statistics .digimon-delete-cookies {
+.digimon-index-tools a,
+.digimon-mark-read,
+.digimon-footer-links a,
+.digimon-delete-cookies {
 
-    position: relative !important;
+    width: 2.4rem !important;
+    height: 2.4rem !important;
 
-    width: 2.25rem !important;
-    height: 2.25rem !important;
-    min-width: 2.25rem !important;
-    min-height: 2.25rem !important;
+    min-width: 2.4rem !important;
+    min-height: 2.4rem !important;
 
-    margin: 0 !important;
     padding: 0 !important;
+    margin: 0 !important;
 
     display: flex !important;
     align-items: center !important;
@@ -11103,50 +10893,54 @@ blockquote blockquote {
     box-sizing: border-box !important;
 
     border: 1px solid var(--stats-border) !important;
-    border-radius: .3rem !important;
+    border-radius: .35rem !important;
 
     background: rgba(255,255,255,.025) !important;
 
     font-size: 0 !important;
-    line-height: 0 !important;
-
-    color: var(--text-color) !important;
+    line-height: 1 !important;
 
     text-decoration: none !important;
 
+    color: var(--text-color) !important;
+
     transition:
         transform .2s ease,
-        border-color .2s ease,
         background .2s ease,
+        border-color .2s ease,
         box-shadow .2s ease !important;
 }
 
 
-/* Iconos Font Awesome */
+/* ---------------------------------------------------------
+   ICONOS
+   --------------------------------------------------------- */
 
-#digimon-statistics .digimon-index-tools a i,
-#digimon-statistics .digimon-mark-read i,
-#digimon-statistics .digimon-footer-links a i,
-#digimon-statistics .digimon-delete-cookies i {
+.digimon-index-tools a i,
+.digimon-mark-read i,
+.digimon-footer-links a i,
+.digimon-delete-cookies i {
 
     display: block !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
-    font-size: .85rem !important;
+    font-size: .9rem !important;
     line-height: 1 !important;
 
     color: var(--linkc1) !important;
 }
 
 
-/* Hover */
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
 
-#digimon-statistics .digimon-index-tools a:hover,
-#digimon-statistics .digimon-mark-read:hover,
-#digimon-statistics .digimon-footer-links a:hover,
-#digimon-statistics .digimon-delete-cookies:hover {
+.digimon-index-tools a:hover,
+.digimon-mark-read:hover,
+.digimon-footer-links a:hover,
+.digimon-delete-cookies:hover {
 
     transform: translateY(-.1rem) !important;
 
