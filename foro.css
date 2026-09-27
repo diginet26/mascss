@@ -9098,7 +9098,7 @@ blockquote blockquote {
     margin-top: 0.714rem;
 }
 
-.digimon-newest-user {
+.digimon-newest-user, .digimon-record-users {
     display: flex;
     align-items: center;
     gap: 18px;
