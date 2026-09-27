@@ -11222,12 +11222,16 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     top: 0.5rem !important;
 }
 
-#digimon-statistics .digimon-stats-main {
-    align-items: stretch !important;
+/* =========================================================
+   ACTIVE USERS — IGUALAR ALTURA A BIENVENIDA
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-welcome {
+    height: 28.57rem !important;
+    min-height: 28.57rem !important;
 }
 
-#digimon-statistics .digimon-stats-welcome,
 #digimon-statistics .digimon-stats-24h {
-    height: auto !important;
-    min-height: 100% !important;
+    height: 28.57rem !important;
+    min-height: 28.57rem !important;
 }
