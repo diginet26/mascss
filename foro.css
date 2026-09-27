@@ -5908,16 +5908,6 @@ blockquote blockquote {
     margin-top: 20px;
 }
 
-.digimon-newest-user, .digimon-record-users {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 22px;
-    border: 1px solid var(--stats-border);
-    border-radius: 10px;
-    background: var(--stats-panel);
-}
-
 .digimon-bottom-icon {
     width: 50px;
     height: 50px;
@@ -6008,7 +5998,6 @@ blockquote blockquote {
     .digimon-stats-heading h2 {font-size: 28px;}
     .digimon-stats-bottom {grid-template-columns: 1fr;}
     .digimon-online-data {grid-template-columns: 1fr;}
-    .digimon-newest-user, .digimon-record-users {padding: 16px;}
     .digimon-groups-header {align-items: flex-start; flex-direction: column;}
 }
 
@@ -8803,18 +8792,12 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   DIGITAL RIFT — ESTADÍSTICAS
-   REDISEÑO — USUARIOS EN LÍNEA
+   ESTADÍSTICAS REDISEÑO — USUARIOS EN LÍNEA
    ========================================================= */
-
-.digimon-online-content {
-    padding: 1.429rem;
-}
-
+.digimon-online-content {padding: 1.429rem;}
 /* ---------------------------------------------------------
    CABECERA DE USUARIOS
    --------------------------------------------------------- */
-
 .digimon-online-title {
     display: grid;
     grid-template-columns: 4.286rem 1fr;
@@ -8827,36 +8810,22 @@ blockquote blockquote {
 .digimon-online-title > i {
     width: 4.286rem;
     height: 4.286rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 0.857rem;
-
     background: var(--stats-gradient);
     color: var(--colorfondo2);
-
     font-size: 1.714rem;
-
-    box-shadow:
-        0 0 1.143rem color-mix(
-            in srgb,
-            var(--linkc1) 20%,
-            transparent
-        );
+    box-shadow: 0 0 1.143rem color-mix(in srgb, var(--linkc1) 20%, transparent);
 }
 
 /* Texto USUARIOS EN LÍNEA */
 .digimon-online-title span {
     display: block;
-
     margin-bottom: 0.429rem;
-
     color: var(--stats-muted);
-
     font: 700 0.643rem/1.2 "Oxanium", monospace;
-
     letter-spacing: 0.143rem;
     text-transform: uppercase;
 }
@@ -8864,65 +8833,42 @@ blockquote blockquote {
 /* Número total */
 .digimon-online-title strong {
     display: block;
-
     margin: 0;
-
     color: var(--text-color);
-
     font: 700 0.9rem/1 "Oxanium", sans-serif;
-
     letter-spacing: 0.036rem;
 }
-
 
 /* ---------------------------------------------------------
    REGISTRADOS / INVITADOS
    --------------------------------------------------------- */
-
 .digimon-online-data {
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 0.857rem;
-
     margin-top: 0;
-
     padding-top: 1.143rem;
-
     border-top: 1px solid var(--stats-border);
 }
 
 .digimon-online-data > div {
     min-height: 5rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 1rem;
-
     padding: 0.857rem 1rem;
-
     border: 1px solid var(--stats-border);
     border-radius: 0.571rem;
-
     background: var(--colorfondo2);
-
-    transition:
-        border-color .25s ease,
-        background .25s ease,
-        transform .25s ease;
+    transition: border-color .25s ease, background .25s ease, transform .25s ease;
 }
 
 /* Nombre */
 .digimon-data-name {
     display: block;
-
     color: var(--stats-muted);
-
     font: 700 0.643rem/1.2 "Oxanium", monospace;
-
     letter-spacing: 0.107rem;
     text-transform: uppercase;
 }
@@ -8930,83 +8876,53 @@ blockquote blockquote {
 /* Número */
 .digimon-online-data strong {
     display: block;
-
     margin: 0;
-
     color: var(--linkc1);
-
     font: 700 1.571rem/1 "Oxanium", sans-serif;
 }
 
 /* Hover */
 .digimon-online-data > div:hover {
     border-color: var(--linkc1);
-
-    background:
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--linkc1) 5%, var(--colorfondo2)),
-            var(--colorfondo2)
-        );
-
+    background: linear-gradient(135deg, color-mix(in srgb, var(--linkc1) 5%, var(--colorfondo2)), var(--colorfondo2));
     transform: translateY(-0.143rem);
 }
-
 
 /* ---------------------------------------------------------
    CURRENT CONNECTIONS
    --------------------------------------------------------- */
-
 .digimon-online-list {
     margin-top: 1.143rem;
-
     padding-top: 1rem;
-
     border-top: 1px solid var(--stats-border);
 }
 
 .digimon-stats-label {
     display: block;
-
     margin-bottom: 0.571rem;
-
     color: var(--linkc1);
-
     font: 700 0.571rem/1.2 "Oxanium", monospace;
-
     letter-spacing: 0.107rem;
     text-transform: uppercase;
 }
 
 .digimon-user-list {
     min-height: 3.214rem;
-
     color: var(--text-color);
-
     font: 0.714rem/1.8 "Poppins", sans-serif;
 }
 
-.digimon-user-list a {
-    color: var(--linkc1);
-}
-
-.digimon-user-list a:hover {
-    color: var(--linkc2);
-}
+.digimon-user-list a {color: var(--linkc1);}
+.digimon-user-list a:hover {color: var(--linkc2);}
 
 /* =========================================================
-   DIGITAL RIFT — ESTADÍSTICAS
-   REDISEÑO GENERAL — V1
+   ESTADÍSTICAS REDISEÑO GENERAL — V1
    ========================================================= */
-
-#digimon-statistics {
-    --stats-gap: 1rem;
-}
+#digimon-statistics {--stats-gap: 1rem;}
 
 /* =========================================================
    CABECERA
    ========================================================= */
-
 .digimon-stats-header {
     align-items: flex-end;
     gap: 1.429rem;
@@ -9033,26 +8949,21 @@ blockquote blockquote {
     border-radius: 0.429rem;
 }
 
-
 /* =========================================================
    LÍNEA PRINCIPAL
    ========================================================= */
-
 .digimon-stats-line {
     height: 1px;
     margin: 1.429rem 0;
 }
 
-
 /* =========================================================
    BLOQUE PRINCIPAL
    ========================================================= */
-
 .digimon-stats-main {
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 1rem;
 }
-
 
 /* =========================================================
    BIENVENIDA
@@ -9187,10 +9098,15 @@ blockquote blockquote {
     margin-top: 0.714rem;
 }
 
-.digimon-newest-user, .digimon-record-users {
+.digimon-newest-user {
+    display: flex;
+    align-items: center;
+    gap: 18px;
     min-height: 5.429rem;
     padding: 1rem;
+    border: 1px solid var(--stats-border);
     border-radius: 0.571rem;
+    background: var(--stats-panel);
     position: relative;
     overflow: hidden;
 }
