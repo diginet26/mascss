@@ -11095,38 +11095,41 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 /* =========================================================
    DIGIMON NETWORK // QUICK LINKS
-   POSICIONAMIENTO FINAL
+   UNA SOLA FILA · PEGADA A LA LÍNEA INFERIOR
    ========================================================= */
 
 #digimon-statistics .digimon-stats-quick-links {
     position: absolute !important;
 
-    top: 50% !important;
     right: 1.5rem !important;
+    bottom: -0.05rem !important;
 
-    transform: translateY(-50%) !important;
-
-    width: 16rem !important;
+    width: auto !important;
 
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(8, 2.75rem) !important;
+    grid-template-rows: 2.75rem !important;
 
     gap: 0.35rem !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
+    transform: none !important;
+
     z-index: 20 !important;
 }
 
-/* BOTONES */
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
 
 #digimon-statistics .digimon-stats-quick-links > a {
     position: relative !important;
 
-    width: 100% !important;
-    height: 3rem !important;
+    width: 2.75rem !important;
+    height: 2.75rem !important;
     min-width: 0 !important;
 
     display: flex !important;
@@ -11141,10 +11144,9 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     border: 1px solid var(--stats-border) !important;
     border-radius: 0.5rem !important;
 
-    background: rgba(255,255,255,.015) !important;
+    background: var(--stats-panel) !important;
 
     font-size: 0 !important;
-
     text-decoration: none !important;
 
     transition:
@@ -11154,7 +11156,10 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
         box-shadow .2s ease !important;
 }
 
-/* ICONOS */
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
 
 #digimon-statistics .digimon-stats-quick-links > a i {
     display: block !important;
@@ -11162,21 +11167,24 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     margin: 0 !important;
     padding: 0 !important;
 
-    font-size: 1.15rem !important;
+    font-size: 1.1rem !important;
     line-height: 1 !important;
 
     color: var(--linkc1) !important;
 }
 
-/* PEQUEÑO PIXEL DEL BOTÓN */
+
+/* =========================================================
+   PEQUEÑO PIXEL
+   ========================================================= */
 
 #digimon-statistics .digimon-stats-quick-links > a::after {
     content: "" !important;
 
     position: absolute !important;
 
-    right: 0.3rem !important;
-    bottom: 0.25rem !important;
+    right: 0.25rem !important;
+    bottom: 0.2rem !important;
 
     width: 0.25rem !important;
     height: 0.25rem !important;
@@ -11186,10 +11194,13 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     opacity: .55 !important;
 }
 
-/* HOVER */
+
+/* =========================================================
+   HOVER
+   ========================================================= */
 
 #digimon-statistics .digimon-stats-quick-links > a:hover {
-    transform: translateY(-0.1rem) !important;
+    transform: translateY(-0.15rem) !important;
 
     background: rgba(255,255,255,.04) !important;
 
