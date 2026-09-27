@@ -10815,3 +10815,121 @@ blockquote blockquote {
     z-index: 2 !important;
 }
 /**/
+/* =========================================================
+   DIGIMON STATISTICS — QUICK LINKS
+   4 × 2 ICONOS
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-header {
+    position: relative !important;
+}
+
+/* Contenedor de los 8 enlaces */
+#digimon-statistics .digimon-stats-quick-links {
+    position: absolute !important;
+
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+
+    display: grid !important;
+
+    grid-template-columns: repeat(4, 2.75rem) !important;
+    grid-template-rows: repeat(2, 2.75rem) !important;
+
+    gap: .5rem !important;
+
+    width: max-content !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    z-index: 20 !important;
+}
+
+/* Cada botón */
+#digimon-statistics .digimon-stats-quick-links > a {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    border: 1px solid var(--stats-border) !important;
+    border-radius: .4rem !important;
+
+    background: rgba(255,255,255,.025) !important;
+
+    color: var(--linkc1) !important;
+
+    text-decoration: none !important;
+
+    font-size: 0 !important;
+
+    position: relative !important;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease !important;
+}
+
+/* Iconos Font Awesome */
+#digimon-statistics .digimon-stats-quick-links > a i {
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 1rem !important;
+    line-height: 1 !important;
+
+    color: currentColor !important;
+}
+
+/* Hover */
+#digimon-statistics .digimon-stats-quick-links > a:hover {
+    transform: translateY(-.1rem) !important;
+
+    background: rgba(255,255,255,.07) !important;
+
+    border-color: currentColor !important;
+
+    box-shadow:
+        0 0 .8rem color-mix(
+            in srgb,
+            currentColor 30%,
+            transparent
+        ) !important;
+}
+
+/* =========================================================
+   PEQUEÑO DETALLE DIGITAL
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-quick-links > a::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: .25rem !important;
+    height: .25rem !important;
+
+    right: .3rem !important;
+    bottom: .3rem !important;
+
+    background: currentColor !important;
+
+    opacity: .55 !important;
+}
