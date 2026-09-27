@@ -11221,13 +11221,13 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     position: relative !important;
     top: 1rem !important;
 }
-/* =========================================================
-   ESTADÍSTICAS — ALTURA WELCOME / ACTIVE USERS
-   ========================================================= */
+
+#digimon-statistics .digimon-stats-main {
+    align-items: stretch !important;
+}
 
 #digimon-statistics .digimon-stats-welcome,
 #digimon-statistics .digimon-stats-24h {
-    height: 25rem !important;
-    min-height: 25rem !important;
-    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 100% !important;
 }
