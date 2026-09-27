@@ -11030,33 +11030,62 @@ blockquote blockquote {
 /**/
 /* =========================================================
    ESTADÍSTICAS — QUICK LINKS
-   4 ICONOS ARRIBA + 4 ICONOS ABAJO
+   4 ARRIBA + 4 ABAJO
    ========================================================= */
 
-#digimon-statistics .digimon-stats-header {
-    position: relative !important;
-}
+/* Ambos grupos pasan a formar parte de la zona de cabecera */
 
-/* Contenedor de los enlaces */
-#digimon-statistics .digimon-stats-header > div:last-child {
+#digimon-statistics .digimon-index-tools,
+#digimon-statistics .digimon-index-footer {
     position: absolute !important;
-    top: 1.25rem !important;
     right: 1.5rem !important;
-
-    width: 11rem !important;
 
     display: grid !important;
     grid-template-columns: repeat(4, 2.25rem) !important;
-    grid-auto-rows: 2.25rem !important;
+    grid-template-rows: 2.25rem !important;
 
     gap: .45rem !important;
 
-    justify-content: end !important;
-    align-items: center !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    background: none !important;
 }
 
-/* Cada botón */
-#digimon-statistics .digimon-stats-header > div:last-child a {
+
+/* FILA SUPERIOR */
+
+#digimon-statistics .digimon-index-tools {
+    top: 1.5rem !important;
+}
+
+
+/* FILA INFERIOR */
+
+#digimon-statistics .digimon-index-footer {
+    top: 4.2rem !important;
+}
+
+
+/* Los contenidos internos desaparecen como contenedores */
+
+#digimon-statistics .digimon-tools-left,
+#digimon-statistics .digimon-footer-links {
+    display: contents !important;
+}
+
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
+
+#digimon-statistics .digimon-index-tools a,
+#digimon-statistics .digimon-mark-read,
+#digimon-statistics .digimon-footer-links a,
+#digimon-statistics .digimon-delete-cookies {
+
     position: relative !important;
 
     width: 2.25rem !important;
@@ -11078,11 +11107,12 @@ blockquote blockquote {
 
     background: rgba(255,255,255,.025) !important;
 
-    text-decoration: none !important;
-
-    /* OCULTAMOS EL TEXTO */
     font-size: 0 !important;
     line-height: 0 !important;
+
+    color: var(--text-color) !important;
+
+    text-decoration: none !important;
 
     transition:
         transform .2s ease,
@@ -11091,9 +11121,14 @@ blockquote blockquote {
         box-shadow .2s ease !important;
 }
 
-/* Icono */
-#digimon-statistics .digimon-stats-header > div:last-child a i,
-#digimon-statistics .digimon-stats-header > div:last-child a .fa {
+
+/* Iconos Font Awesome */
+
+#digimon-statistics .digimon-index-tools a i,
+#digimon-statistics .digimon-mark-read i,
+#digimon-statistics .digimon-footer-links a i,
+#digimon-statistics .digimon-delete-cookies i {
+
     display: block !important;
 
     margin: 0 !important;
@@ -11105,8 +11140,14 @@ blockquote blockquote {
     color: var(--linkc1) !important;
 }
 
+
 /* Hover */
-#digimon-statistics .digimon-stats-header > div:last-child a:hover {
+
+#digimon-statistics .digimon-index-tools a:hover,
+#digimon-statistics .digimon-mark-read:hover,
+#digimon-statistics .digimon-footer-links a:hover,
+#digimon-statistics .digimon-delete-cookies:hover {
+
     transform: translateY(-.1rem) !important;
 
     border-color: var(--linkc1) !important;
@@ -11114,63 +11155,10 @@ blockquote blockquote {
     background: rgba(255,255,255,.06) !important;
 
     box-shadow:
-        0 0 .7rem color-mix(
+        0 0 .7rem
+        color-mix(
             in srgb,
             var(--linkc1) 25%,
             transparent
         ) !important;
-}
-
-/* =========================================================
-   TOOLTIP
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-header > div:last-child a::after {
-    content: attr(title);
-
-    position: absolute;
-
-    right: 0;
-    top: calc(100% + .5rem);
-
-    z-index: 1000;
-
-    width: max-content;
-    max-width: 14rem;
-
-    padding: .45rem .65rem;
-
-    border: 1px solid var(--stats-border);
-    border-radius: .25rem;
-
-    background: var(--stats-panel);
-    color: var(--text-color);
-
-    font-family: inherit;
-    font-size: .65rem;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: .04em;
-
-    white-space: nowrap;
-    text-align: center;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transform: translateY(-.25rem);
-
-    pointer-events: none;
-
-    transition:
-        opacity .2s ease,
-        visibility .2s ease,
-        transform .2s ease;
-}
-
-/* Mostrar tooltip */
-#digimon-statistics .digimon-stats-header > div:last-child a:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
 }
