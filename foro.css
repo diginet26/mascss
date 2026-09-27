@@ -288,61 +288,6 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 }
 
 /* =========================================================
-   BLOQUES ADMINISTRATIVOS 2
-   ========================================================= */
-.dr-tadmin .dr-lista {
-    position: relative;
-    margin-bottom: 8px;
-    padding: 15px 18px 15px 52px;
-    background: var(--linkc2);
-    border: 1px solid rgba(255,255,255,.05);
-    transition: .25s ease;
-}
-
-.dr-tadmin .dr-lista:hover {
-    background: var(--dg-panel2);
-    border-color: var(--dg-line);
-    transform: translateX(3px);
-}
-
-/* icono */
-.dr-tadmin .dr-lista .dr-icon {
-    position: absolute;
-    left: 17px;
-    top: 17px;
-    width: 23px;
-    height: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--emblema2);
-    color: var(--emblema2);
-    font-size: 10px;
-    transform: rotate(45deg);
-}
-
-.dr-tadmin .dr-lista .dr-icon i {transform: rotate(-45deg);}
-
-/* nombre */
-.dr-tadmin .dr-lista h3 {
-    margin: 0 0 2px;
-    color: var(--colortextodl);
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-left: 5px;
-}
-
-.dr-tadmin .dr-lista h3 span {color: var(--emblema1);}
-
-.dr-tadmin .dr-lista p {
-    margin: 0;
-    color: var(--colortextodl);
-    font-size: 13px;
-    line-height: 1.7;
-}
-
-/* =========================================================
    DATOS / ESTADO DEL FORO
    ========================================================= */
 .dr-data {
@@ -457,8 +402,8 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 .dr-rule-list { margin: 13px 0 0; padding: 0; list-style: none; } 
 .dr-rule-list li { position: relative; padding-left: 18px; color: var(--colortextod1); font-size: 12px; line-height: 1.7; padding-right: 20px;} .dr-rule-list li:last-child { margin-bottom: 0; } .dr-rule-list li:before { content: ">"; position: absolute; left: -15px; top: -8px; font-size:22px; color: var(--emblema2); font-family: "Jersey 15", monospace; font-weight: 700; }
 /* ========================================================= LISTADO OFICIAL ========================================================= */ 
-.dr-tadmin .dr-lista2 { position: relative; margin-bottom: 8px; padding: 15px 18px 15px 52px; background: var(--dg-panel); border: 1px solid rgba(255,255,255,.05); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista2:hover { background: var(--dg-panel2); border-color: var(--dg-line); transform: translateX(3px); }
-.dr-tadmin .dr-lista2 .dr-icon2 {
+.dr-tadmin .dr-lista { position: relative; margin-bottom: 8px; padding: 15px 18px 15px 52px; background: var(--dg-panel); border: 1px solid rgba(255,255,255,.05); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista:hover { background: var(--dg-panel2); border-color: var(--dg-line); transform: translateX(3px); }
+.dr-tadmin .dr-lista .dr-icon {
     position: absolute;
     left: 17px;
     top: 17px;
@@ -474,10 +419,10 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
     transform: rotate(45deg);
 }
 
-.dr-tadmin .dr-lista2 .dr-icon2 i {transform: rotate(-45deg);}
+.dr-tadmin .dr-lista .dr-icon i {transform: rotate(-45deg);}
 
 /* NOMBRE */
-.dr-tadmin .dr-lista2 h3 {
+.dr-tadmin .dr-lista h3 {
     margin: 2px 5px 2px;
     color: var(--colortextod1);
     font-size: 17px;
@@ -486,10 +431,10 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
     text-transform: uppercase;
 }
 
-.dr-tadmin .dr-lista2 h3 span {color: var(--dg-gold);}
+.dr-tadmin .dr-lista h3 span {color: var(--dg-gold);}
 
 /* DESCRIPCIÓN */
-.dr-tadmin .dr-lista2 p {
+.dr-tadmin .dr-lista p {
     margin: 0;
     color: var(--colortextod1);
     font-size: 12px;
@@ -11566,14 +11511,4 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     100% {
         transform: translateY(calc(100% + 30rem));
     }
-}
-/* =========================================================
-   LAST 24 HOURS — AJUSTE DE ALTURA Y SEPARACIÓN
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-24h {
-    height: 25rem !important;
-    min-height: 25rem !important;
-    margin-top: 1rem !important;
-    box-sizing: border-box !important;
 }
