@@ -9341,6 +9341,7 @@ blockquote blockquote {
     min-width: 0;
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
 /* VALOR */
@@ -9372,12 +9373,6 @@ blockquote blockquote {
     align-items: center !important;
     justify-content: center !important;
     box-sizing: border-box !important;
-}
-
-/* CONTENIDO DEL CONTADOR */
-.digimon-counter-data {
-    min-width: 0 !important;
-    text-align: center !important;
 }
 
 /* =========================================================
@@ -10100,12 +10095,6 @@ blockquote blockquote {
 
 /*ICONOS*/
 #digimon-statistics .digimon-stats-counters .digimon-counter-icon {
-    position: relative;
-    z-index: 2;
-}
-
-/*DATOS*/
-#digimon-statistics .digimon-counter-data {
     position: relative;
     z-index: 2;
 }
