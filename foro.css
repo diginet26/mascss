@@ -5924,7 +5924,7 @@ blockquote blockquote {
 .digimon-newest-user p, .digimon-record-users p {
     margin-top: 8px;
     color: var(--stats-muted);
-    font: 9px/1.5 "Oxanium", monospace;
+    font: 0.5rem/1.5 "Oxanium", monospace;
 }
 
 .digimon-record-users small {
@@ -9135,7 +9135,7 @@ blockquote blockquote {
     overflow-wrap: anywhere;
 }
 
-.digimon-newest-user p, .digimon-record-users p {font-size: 0.5rem;}
+
 
 /* =========================================================
    GRUPOS
@@ -11360,7 +11360,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .foro-basic {
     display: grid;
-    grid-template-columns: 19.5em 1fr;
+    grid-template-columns: 21.1em 1fr;
     min-height: 40.833em;
 }
 
