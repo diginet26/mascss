@@ -11534,3 +11534,13 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     height: 400px !important;
     min-height: 400px !important;
 }
+/* =========================================================
+   DIGITAL RIFT — SEPARACIÓN ENTRE BLOQUES
+   ========================================================= */
+
+#digimon-statistics .digimon-stats-left,
+#digimon-statistics .digimon-stats-right {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
