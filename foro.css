@@ -11473,3 +11473,70 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
     letter-spacing: .03em;
 }
+/* =========================================================
+   ACTIVE USERS — FONDO COMPLETO
+   ========================================================= */
+
+#digimon-statistics .digimon-online {
+    position: relative;
+    overflow: hidden;
+}
+
+#digimon-statistics .digimon-online::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 2rem 2rem;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+#digimon-statistics .digimon-online::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(255,255,255,.025) 50%,
+        transparent 100%
+    );
+
+    background-size: 100% 8rem;
+
+    pointer-events: none;
+    opacity: .45;
+
+    animation: digimon-active-scan 6s linear infinite;
+
+    z-index: 1;
+}
+
+@keyframes digimon-active-scan {
+    0% {
+        background-position: 0 -8rem;
+    }
+
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+#digimon-statistics .digimon-online > * {
+    position: relative;
+    z-index: 2;
+}
