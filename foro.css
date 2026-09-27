@@ -5898,57 +5898,6 @@ blockquote blockquote {
     margin-top: 20px;
 }
 
-.digimon-counter {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 18px;
-    border: 1px solid var(--stats-border);
-    border-radius: 10px;
-    background: var(--stats-panel);
-    transition: transform .3s ease, border-color .3s ease;
-}
-
-.digimon-counter:hover {
-    transform: translateY(-3px);
-    border-color: var(--linkc1);
-}
-
-.digimon-counter-icon {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: var(--colorfondo2);
-    color: var(--linkc1);
-    font-size: 18px;
-}
-.digimon-counter-data {min-width: 0;}
-
-/*.digimon-counter-data span {
-    display: block;
-    color: var(--stats-muted);
-    font: 700 8px/1.2 "Oxanium", monospace;
-    letter-spacing: 1px;
-}*/
-
-.digimon-counter-data strong {
-    display: block;
-    margin-top: 5px;
-    color: var(--text-color);
-    font: 700 27px/1 "Oxanium", sans-serif;
-}
-
-.digimon-counter-data small {
-    display: block;
-    margin-top: 5px;
-    color: var(--stats-muted);
-    font: 8px/1.2 "Oxanium", monospace;
-}
-
 /* =========================================================
    USUARIO MÁS RECIENTE Y RÉCORD
    ========================================================= */
@@ -9108,19 +9057,13 @@ blockquote blockquote {
 /* =========================================================
    BIENVENIDA
    ========================================================= */
-
 .digimon-stats-welcome {
     min-height: 20rem;
     border-radius: 0.714rem;
 }
 
-.digimon-stats-welcome-content {
-    padding: 1.429rem;
-}
-
-.digimon-stats-welcome-content h3 {
-    font-size: 1.714rem;
-}
+.digimon-stats-welcome-content {padding: 1.429rem;}
+.digimon-stats-welcome-content h3 {font-size: 1.714rem;}
 
 .digimon-stats-welcome-content p {
     max-width: 28rem;
@@ -9135,45 +9078,27 @@ blockquote blockquote {
     margin: 1rem 0 0.571rem;
 }
 
-
-/* =========================================================
-   PANEL ACTIVE USERS
-   ========================================================= */
-
-.digimon-stats-online {
-    border-radius: 0.714rem;
-}
-
+.digimon-stats-online {border-radius: 0.714rem;}/*PANEL ACTIVE USERS*/
 
 /* CABECERA DE VENTANA */
-
 .digimon-window-header {
     gap: 0.714rem;
     padding: 0.714rem 1rem;
     font-size: 0.571rem;
 }
 
-.digimon-window-dots {
-    gap: 0.286rem;
-}
+.digimon-window-dots {gap: 0.286rem;}
 
 .digimon-window-dots i {
     width: 0.429rem;
     height: 0.429rem;
 }
 
-
-/* CONTENIDO */
-
-.digimon-online-content {
-    padding: 1.429rem;
-}
-
+.digimon-online-content {padding: 1.429rem;}/* CONTENIDO */
 
 /* =========================================================
    USUARIOS ONLINE — BLOQUE PRINCIPAL
    ========================================================= */
-
 .digimon-online-title {
     grid-template-columns: 4rem 1fr;
     gap: 1rem;
@@ -9193,10 +9118,7 @@ blockquote blockquote {
     letter-spacing: 0.143rem;
 }
 
-.digimon-online-title strong {
-    font-size: 1.714rem;
-}
-
+.digimon-online-title strong {font-size: 1.714rem;}
 
 /* =========================================================
    REGISTRADOS / INVITADOS
@@ -9227,7 +9149,6 @@ blockquote blockquote {
     font-size: 1.286rem;
 }
 
-
 /* =========================================================
    CONEXIONES ACTUALES
    ========================================================= */
@@ -9249,56 +9170,15 @@ blockquote blockquote {
     line-height: 1.7;
 }
 
-
 /* =========================================================
    CONTADORES GENERALES
    ========================================================= */
-
 .digimon-stats-counters {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.714rem;
     margin-top: 1rem;
 }
 
-.digimon-counter {
-    min-height: 5.714rem;
-    gap: 0.857rem;
-    padding: 1rem;
-    border-radius: 0.571rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.digimon-counter::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35%;
-    height: 1px;
-    background: var(--linkc1);
-    box-shadow: 0 0 0.429rem var(--linkc1);
-}
-
-.digimon-counter:nth-child(even)::before {
-    background: var(--linkc2);
-    box-shadow: 0 0 0.429rem var(--linkc2);
-}
-
-.digimon-counter-icon {
-    width: 2.857rem;
-    height: 2.857rem;
-    border-radius: 0.571rem;
-    font-size: 1rem;
-}
-
-/*.digimon-counter-data span {
-    font-size: 0.571rem;
-    letter-spacing: 0.071rem;
-}*/
-
-.digimon-counter-data strong {font-size: 1.286rem;}
-.digimon-counter-data small {font-size: 0.5rem;}
 /* =========================================================
    ÚLTIMO USUARIO / RÉCORD
    ========================================================= */
@@ -9482,64 +9362,124 @@ blockquote blockquote {
 
 .digimon-stats-counters {
     width: 100% !important;
-
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-
     gap: 15px !important;
-
     margin-top: 20px !important;
-
     align-items: stretch !important;
 }
 
+/* =========================================================
+   CONTADORES — TOTAL POSTS / TOTAL TOPICS
+   ========================================================= */
+.digimon-counter {
+    display: flex;
+    align-items: center;
+    min-height: 5.714rem;
+    gap: 0.857rem;
+    padding: 1rem;
+    border: 1px solid var(--stats-border);
+    border-radius: 0.571rem;
+    background: var(--stats-panel);
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.digimon-counter:hover {
+    transform: translateY(-3px);
+    border-color: var(--linkc1);
+}
+
+/* LÍNEA SUPERIOR */
+.digimon-counter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 1px;
+    background: var(--linkc1);
+    box-shadow: 0 0 0.429rem var(--linkc1);
+}
+
+.digimon-counter:nth-child(even)::before {
+    background: var(--linkc2);
+    box-shadow: 0 0 0.429rem var(--linkc2);
+}
+
+/* ICONO */
+.digimon-counter-icon {
+    width: 2.857rem;
+    height: 2.857rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 0.571rem;
+    background: var(--colorfondo2);
+    color: var(--linkc1);
+    font-size: 1rem;
+}
+
+/* DATOS */
+.digimon-counter-data {
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* VALOR */
+.digimon-counter-data strong {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--text-color);
+    font: 700 1.15rem/1.25 "Oxanium", sans-serif;
+}
+
+/* DESCRIPCIÓN */
+.digimon-counter-data small {
+    display: block;
+    margin-top: 0.3rem;
+    color: var(--stats-muted);
+    font: 0.5rem/1.2 "Oxanium", monospace;
+    opacity: .55;
+    letter-spacing: .04em;
+}
 
 /* CADA CONTADOR ES INDEPENDIENTE */
-
 .digimon-stats-counters > .digimon-counter {
     width: auto !important;
     min-width: 0 !important;
     min-height: 150px !important;
     height: 150px !important;
-
     margin: 0 !important;
-
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-
     box-sizing: border-box !important;
 }
 
-
 /* CONTENIDO DEL CONTADOR */
-
 .digimon-counter-data {
     min-width: 0 !important;
     text-align: center !important;
 }
 
-
 /* =========================================================
    INFORMACIÓN SECUNDARIA
    ========================================================= */
-
 .digimon-stats-bottom {
     width: 100% !important;
-
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-
     gap: 20px !important;
-
     margin-top: 20px !important;
 }
-
 
 /* =========================================================
    GRUPOS
    ========================================================= */
-
 .digimon-groups {
     width: 100% !important;
     box-sizing: border-box !important;
@@ -9554,83 +9494,13 @@ blockquote blockquote {
     overflow: hidden;
 }
 
-
-/* ---------------------------------------------------------
-   PÍXELES SUPERIORES — DERECHA
-   --------------------------------------------------------- */
-
-/*#digimon-statistics::before {
-    content: "";
-    position: absolute;
-
-    top: 2.5rem;
-    right: 3rem;
-
-    width: 0.429rem;
-    height: 0.429rem;
-
-    background: var(--linkc1);
-
-    box-shadow:
-        -1rem 1.143rem 0 var(--linkc2),
-        -3.571rem -0.429rem 0 var(--linkc2),
-        -5.143rem 2rem 0 var(--linkc1),
-        -8.571rem 0.571rem 0 var(--linkc2);
-
-    opacity: .7;
-
-    pointer-events: none;
-
-    animation:
-        digimon-stats-pixels-a
-        5s
-        ease-in-out
-        infinite;
-}*/
-
-
-/* ---------------------------------------------------------
-   PÍXELES INFERIORES — IZQUIERDA
-   --------------------------------------------------------- */
-
-/*#digimon-statistics::after {
-    content: "";
-    position: absolute;
-
-    left: 3rem;
-    bottom: 3rem;
-
-    width: 0.357rem;
-    height: 0.357rem;
-
-    background: var(--linkc2);
-
-    box-shadow:
-        1rem -0.857rem 0 var(--linkc1),
-        2.286rem 0.571rem 0 var(--linkc2),
-        3.714rem -1.429rem 0 var(--linkc1),
-        5.429rem 0.286rem 0 var(--linkc2);
-
-    opacity: .6;
-
-    pointer-events: none;
-
-    animation:
-        digimon-stats-pixels-b
-        5.5s
-        ease-in-out
-        infinite;
-}*/
 /* =========================================================
    DIGITAL NETWORK — PIXELS
    Decoración trasladada a LAST 24 HOURS
    ========================================================= */
 
 /* Quitamos los píxeles de la cabecera general */
-#digimon-statistics::before,
-#digimon-statistics::after {
-    display: none !important;
-}
+#digimon-statistics::before, #digimon-statistics::after {display: none !important;}
 
 /* Nueva decoración */
 #digimon-statistics .digimon-stats-24h {
@@ -9640,27 +9510,15 @@ blockquote blockquote {
 
 #digimon-statistics .digimon-stats-24h::after {
     content: "" !important;
-
     position: absolute !important;
-
     right: 2rem !important;
     bottom: 2rem !important;
-
     width: .4rem !important;
     height: .4rem !important;
-
     background: var(--linkc1) !important;
-
-    box-shadow:
-        -1rem .7rem 0 var(--linkc2),
-        -2rem -.5rem 0 var(--linkc1),
-        -3.2rem .8rem 0 var(--linkc2),
-        -4.5rem -.2rem 0 var(--linkc1) !important;
-
+    box-shadow: -1rem .7rem 0 var(--linkc2), -2rem -.5rem 0 var(--linkc1), -3.2rem .8rem 0 var(--linkc2), -4.5rem -.2rem 0 var(--linkc1) !important;
     opacity: .65 !important;
-
     pointer-events: none !important;
-
     animation: digimon-24h-pixels 5s ease-in-out infinite !important;
 }
 
@@ -9679,15 +9537,12 @@ blockquote blockquote {
 /* ---------------------------------------------------------
    ANIMACIÓN — PÍXELES SUPERIORES
    --------------------------------------------------------- */
-
 @keyframes digimon-stats-pixels-a {
-
     0%,
     100% {
         transform: translate(0, 0);
         opacity: .55;
     }
-
     50% {
         transform: translate(
             -0.429rem,
@@ -9695,16 +9550,12 @@ blockquote blockquote {
         );
         opacity: .95;
     }
-
 }
-
 
 /* ---------------------------------------------------------
    ANIMACIÓN — PÍXELES INFERIORES
    --------------------------------------------------------- */
-
 @keyframes digimon-stats-pixels-b {
-
     0%,
     100% {
         transform: translate(0, 0);
@@ -9718,74 +9569,47 @@ blockquote blockquote {
         );
         opacity: .9;
     }
-
 }
-#digimon-statistics .digimon-stats-status {
-    display: none !important;
-}
+#digimon-statistics .digimon-stats-status {display: none !important;}
 /* =========================================================
    DIGITAL RIFT — GRUPOS DEL SISTEMA
    NODOS DE LA RED DIGITAL
    ========================================================= */
-
 #digimon-statistics .digimon-groups {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-
     padding: 1.5rem 1.25rem 1.25rem;
 }
 
-
 /* CABECERA */
-
 #digimon-statistics .digimon-groups-header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-
     gap: 1rem;
     margin-bottom: 1.25rem;
 }
 
-#digimon-statistics .digimon-groups-header .digimon-stats-label {
-    margin: 0;
-}
-
+#digimon-statistics .digimon-groups-header .digimon-stats-label {margin: 0;}
 #digimon-statistics .digimon-groups-header h3 {
     margin: 0;
-
     font-size: 1.1rem;
     letter-spacing: .04em;
     text-transform: uppercase;
 }
 
-
 /* LÍNEA DE SEPARACIÓN */
-
 #digimon-statistics .digimon-groups-header::after {
     content: "";
-
     position: absolute;
-
     left: 1.25rem;
     right: 1.25rem;
-
     top: 4.5rem;
-
     height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--linkc1),
-            var(--stats-border),
-            var(--linkc2)
-        );
-
+    background: linear-gradient(90deg, var(--linkc1), var(--stats-border), var(--linkc2));
     opacity: .35;
 }
-
 
 /* CONTENEDOR DE GRUPOS */
 
