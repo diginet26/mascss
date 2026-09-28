@@ -11646,7 +11646,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    ========================================================= */
 
 .foro-digimon-story {
-    max-height: 18.75em;
     overflow-y: auto;
     padding-right: 1em;
     color: var(--foro-muted);
