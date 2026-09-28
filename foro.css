@@ -11170,67 +11170,83 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 /* =========================================================
-   FICHA DE PERSONAJE
+   DIGIMON — EXPEDIENTE DE PERSONAJE
    ========================================================= */
 
-.ficha {
+.digificha {
 
-    --bg: #151817;
-    --panel: #202523;
-    --panel2: #252b29;
-    --dark: #101211;
-    --border: rgba(255,255,255,.13);
-    --text: #e9eeeb;
-    --muted: #9fa9a4;
+    --df-bg: #101312;
+    --df-panel: #171b19;
+    --df-panel2: #202623;
+    --df-dark: #0b0e0d;
 
-    width: 63.333em;
-    margin: 0 auto;
+    --df-text: #e9eeeb;
+    --df-muted: #9fa9a4;
 
-    background: var(--bg);
-    color: var(--text);
+    --df-border: rgba(255,255,255,.12);
+
+    width: 900px;
+    max-width: 95%;
+
+    margin: 40px auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--df-bg);
+    color: var(--df-text);
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--df-border);
 
     box-shadow:
-        0 1.25em 3.333em rgba(0,0,0,.45);
-
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-
-.ficha *,
-.ficha *::before,
-.ficha *::after {
-
-    box-sizing: border-box;
+        0 20px 60px rgba(0,0,0,.5);
 
 }
 
 
-.ficha br {
+/* =========================================================
+   RESET
+   ========================================================= */
+
+.digificha *,
+.digificha *::before,
+.digificha *::after {
+
+    box-sizing: border-box;
+
+}
+
+
+.digificha input {
 
     display: none;
 
 }
 
 
-.ficha input {
+.digificha br {
 
     display: none;
 
 }
 
 
-.ficha h2,
-.ficha h3,
-.ficha p {
+.digificha h2,
+.digificha h3,
+.digificha p {
 
     margin: 0;
-    padding: 0;
+
+}
+
+
+.digificha img {
+
+    max-width: 100%;
 
 }
 
@@ -11239,32 +11255,26 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    CABECERA
    ========================================================= */
 
-.ficha-header {
+.df-head {
 
-    height: 12.917em;
+    height: 230px;
 
     position: relative;
 
     display: flex;
+
     align-items: flex-end;
+
+    padding: 40px;
 
     overflow: hidden;
 
-    padding: 2.083em 2.917em;
-
-    border-bottom: 1px solid var(--border);
-
-    background:
-        linear-gradient(
-            115deg,
-            var(--panel),
-            #111514
-        );
+    border-bottom: 1px solid var(--df-border);
 
 }
 
 
-.ficha-header > img {
+.df-head > img {
 
     position: absolute;
 
@@ -11275,12 +11285,10 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
     object-fit: cover;
 
-    opacity: .55;
-
 }
 
 
-.ficha-header::after {
+.df-head::after {
 
     content: "";
 
@@ -11291,78 +11299,82 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     background:
         linear-gradient(
             90deg,
-            rgba(16,18,17,.95) 0%,
-            rgba(16,18,17,.72) 45%,
-            rgba(16,18,17,.18) 100%
+            rgba(5,8,10,.98),
+            rgba(5,8,10,.70) 55%,
+            rgba(5,8,10,.25)
         );
 
 }
 
 
-.ficha-name {
+.df-name {
 
     position: relative;
 
     z-index: 2;
 
-    color: #fff;
+    font-size: 46px;
 
-    font-size: 2.583em;
+    line-height: .85;
+
     font-weight: 900;
-
-    line-height: .95;
 
     text-transform: uppercase;
 
-    letter-spacing: -.083em;
+    letter-spacing: -3px;
 
 }
 
 
-.ficha-name b {
+.df-name b {
 
-    display: inline;
+    color: var(--emblema2);
 
 }
 
 
-.ficha-name span {
+.df-name span {
 
     color: var(--emblema1);
 
+    margin-left: 12px;
+
 }
 
 
-.ficha-header > i {
+.df-head > i {
 
     position: absolute;
 
-    left: 2.917em;
-    bottom: 1.7em;
-
     z-index: 2;
 
-    color: var(--muted);
+    left: 42px;
 
-    font-size: .833em;
+    bottom: 22px;
 
-    letter-spacing: .042em;
+    color: var(--df-muted);
+
+    font-size: 11px;
+
+    font-weight: 600;
 
 }
 
 
 /* =========================================================
-   CONTENIDO
+   CUERPO
    ========================================================= */
 
-.ficha-body {
+.df-body {
 
     position: relative;
+
+    min-height: 560px;
 
 }
 
 
-.ficha-body > div {
+.df-page {
 
     display: none;
 
@@ -11373,20 +11385,20 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    PESTAÑAS
    ========================================================= */
 
-.ficha-bottom {
-
-    min-height: 4em;
+.df-tabs {
 
     display: flex;
 
-    background: var(--dark);
+    min-height: 65px;
 
-    border-top: 1px solid var(--border);
+    background: var(--df-dark);
+
+    border-top: 1px solid var(--df-border);
 
 }
 
 
-.ficha-bottom label {
+.df-tabs label {
 
     flex: 1;
 
@@ -11395,36 +11407,48 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     align-items: center;
     justify-content: center;
 
+    gap: 10px;
+
     cursor: pointer;
 
-    color: var(--muted);
+    color: var(--df-muted);
 
-    font-size: .75em;
+    font-size: 11px;
+
     font-weight: 800;
-
-    letter-spacing: .167em;
 
     text-transform: uppercase;
 
-    border-right: 1px solid var(--border);
+    letter-spacing: 2px;
 
-    transition: .25s ease;
+    border-right: 1px solid var(--df-border);
+
+    transition: .2s ease;
 
 }
 
 
-.ficha-bottom label:last-child {
+.df-tabs label:last-child {
 
     border-right: 0;
 
 }
 
 
-.ficha-bottom label:hover {
+.df-tabs label b {
 
     color: var(--emblema1);
 
-    background: var(--panel);
+    font-size: 9px;
+
+}
+
+
+.df-tabs label:hover {
+
+    color: white;
+
+    background: var(--df-panel);
 
 }
 
@@ -11433,34 +11457,43 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    ACTIVAR PESTAÑAS
    ========================================================= */
 
-#ficha1:checked ~ .ficha-body .ficha-basic {
+#df1:checked ~ .df-body .df-basic {
 
     display: grid;
 
 }
 
 
-#ficha2:checked ~ .ficha-body .ficha-history {
+#df2:checked ~ .df-body .df-history {
 
     display: block;
 
 }
 
 
-#ficha3:checked ~ .ficha-body .ficha-digimon {
+#df3:checked ~ .df-body .df-digimon {
 
     display: grid;
 
 }
 
 
-#ficha1:checked ~ .ficha-bottom label[for="ficha1"],
-#ficha2:checked ~ .ficha-bottom label[for="ficha2"],
-#ficha3:checked ~ .ficha-bottom label[for="ficha3"] {
+#df1:checked ~ .df-tabs label[for="df1"],
+#df2:checked ~ .df-tabs label[for="df2"],
+#df3:checked ~ .df-tabs label[for="df3"] {
 
-    color: #fff;
+    color: white;
 
     background: var(--emblema2);
+
+}
+
+
+#df1:checked ~ .df-tabs label[for="df1"] b,
+#df2:checked ~ .df-tabs label[for="df2"] b,
+#df3:checked ~ .df-tabs label[for="df3"] b {
+
+    color: white;
 
 }
 
@@ -11469,46 +11502,45 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    TÍTULOS
    ========================================================= */
 
-.ficha-info h2,
-.ficha-history > h2 {
+.df-content h2,
+.df-history > h2 {
 
     display: flex;
 
     align-items: center;
 
-    gap: .833em;
+    gap: 15px;
 
-    color: var(--text);
+    margin-bottom: 22px;
 
-    font-size: 1.5em;
+    color: var(--df-text);
+
+    font-size: 21px;
+
     font-weight: 900;
 
     text-transform: uppercase;
 
-    letter-spacing: -.083em;
-
-    margin-bottom: 1.5em;
+    letter-spacing: -1px;
 
 }
 
 
-.ficha-info h2::after,
-.ficha-history > h2::after {
+.df-content h2::after,
+.df-history > h2::after {
 
     content: "";
 
     flex: 1;
 
-    height: 1px;
+    height: 2px;
 
-    background: var(--emblema2);
-
-}
-
-
-.ficha-info h2:first-child {
-
-    margin-top: 0;
+    background:
+        linear-gradient(
+            90deg,
+            var(--emblema2),
+            transparent
+        );
 
 }
 
@@ -11517,112 +11549,176 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    BÁSICO
    ========================================================= */
 
-.ficha-basic {
+.df-basic {
 
-    grid-template-columns: 19.4em 1fr;
+    grid-template-columns: 290px 1fr;
 
-    min-height: 40.833em;
+    min-height: 560px;
 
 }
 
 
-.ficha-basic > img {
+.df-character {
+
+    position: relative;
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    background: var(--df-dark);
+
+    border-right: 1px solid var(--df-border);
+
+}
+
+
+.df-character img {
 
     width: 100%;
     height: 100%;
 
-    min-height: 40.833em;
+    min-height: 560px;
 
     display: block;
 
     object-fit: cover;
 
-    background: #111413;
+}
+
+
+.df-character::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(5,7,7,.9),
+            transparent 55%
+        );
+
+    pointer-events: none;
 
 }
 
 
-.ficha-info {
+.df-character span {
 
-    padding: 2.083em;
+    position: absolute;
 
-    background: var(--panel);
+    left: 22px;
+    bottom: 20px;
+
+    z-index: 2;
+
+    color: var(--emblema2);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
 
 }
 
 
-.ficha-text {
+.df-content {
 
-    color: var(--muted);
+    padding: 35px;
 
-    font-size: .917em;
+    background: var(--df-panel);
 
-    line-height: 1.65;
+}
+
+
+.df-text {
+
+    color: var(--df-muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
 
     text-align: justify;
 
 }
 
 
-.ficha-text b {
+.df-text b {
 
     color: var(--emblema1);
 
 }
 
 
-.ficha-data {
+.df-content > .df-text {
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================================
+   DATOS
+   ========================================================= */
+
+.df-data {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 1px;
 
-    margin-bottom: 1.5em;
+    margin-bottom: 35px;
 
-    background: var(--border);
+    background: var(--df-border);
 
-    border: 1px solid var(--border);
-
-}
-
-
-.ficha-data span {
-
-    min-height: 6em;
-
-    padding: 1.083em;
-
-    background: var(--panel2);
+    border: 1px solid var(--df-border);
 
 }
 
 
-.ficha-data b,
-.ficha-digimon-data b {
+.df-data span {
+
+    min-height: 65px;
+
+    padding: 14px;
+
+    background: var(--df-panel2);
+
+}
+
+
+.df-data b {
 
     display: block;
 
+    margin-bottom: 7px;
+
     color: var(--emblema2);
 
-    font-size: .583em;
+    font-size: 9px;
+
+    font-weight: 800;
 
     text-transform: uppercase;
 
-    letter-spacing: .125em;
-
-    margin-bottom: .583em;
+    letter-spacing: 1px;
 
 }
 
 
-.ficha-data i,
-.ficha-digimon-data i {
+.df-data i {
 
-    color: var(--text);
+    color: var(--df-text);
 
-    font-size: .917em;
+    font-size: 12px;
 
     font-style: normal;
 
@@ -11635,128 +11731,134 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    HISTORIA
    ========================================================= */
 
-.ficha-history {
+.df-history {
 
-    min-height: 45.833em;
+    padding: 35px;
 
-    padding: 2.083em;
+    min-height: 560px;
 
-    background: var(--panel);
+    background: var(--df-panel);
 
 }
 
 
-.ficha-history > .ficha-text {
+.df-history > .df-text {
 
-    max-height: 21.667em;
+    max-height: 250px;
 
     overflow-y: auto;
 
-    padding-right: 1em;
+    padding-right: 15px;
 
-    margin-bottom: 1.667em;
+    margin-bottom: 25px;
 
 }
 
 
-.ficha-text::-webkit-scrollbar {
+.df-text::-webkit-scrollbar {
 
     width: 3px;
 
 }
 
 
-.ficha-text::-webkit-scrollbar-thumb {
+.df-text::-webkit-scrollbar-thumb {
 
     background: var(--emblema2);
 
 }
 
 
-.ficha-boxes {
+/* =========================================================
+   BLOQUES
+   ========================================================= */
+
+.df-grid {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: .667em;
+    gap: 8px;
 
-    margin-bottom: .667em;
+    margin-bottom: 25px;
 
 }
 
 
-.ficha-boxes span {
+.df-grid span {
 
-    display: block;
+    min-height: 95px;
 
-    min-height: 7.5em;
+    padding: 17px;
 
-    padding: 1.083em;
+    background: var(--df-panel2);
 
-    background: var(--panel2);
-
-    border: 1px solid var(--border);
+    border: 1px solid var(--df-border);
 
     border-top: 2px solid var(--emblema2);
 
 }
 
 
-.ficha-boxes b {
+.df-grid b {
 
     display: block;
 
+    margin-bottom: 8px;
+
     color: var(--emblema1);
 
-    font-size: .75em;
+    font-size: 10px;
+
+    font-weight: 900;
 
     text-transform: uppercase;
 
-    letter-spacing: .083em;
-
-    margin-bottom: .583em;
+    letter-spacing: 1px;
 
 }
 
 
-.ficha-boxes i {
+.df-grid i {
 
     display: block;
 
-    color: var(--muted);
+    color: var(--df-muted);
 
-    font-size: .75em;
+    font-size: 11px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 
     font-style: normal;
 
-    text-align: justify;
-
 }
 
 
-.ficha-family {
+.df-note {
 
-    padding: 1em;
+    margin-bottom: 35px;
 
-    margin-bottom: 2em;
+    padding: 14px;
+
+    color: var(--df-muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
 
     border: 1px dashed var(--emblema2);
 
-    color: var(--muted);
-
-    font-size: .75em;
-
-    line-height: 1.45;
-
 }
 
 
-.ficha-family b {
+.df-note b {
 
     color: var(--emblema1);
+
+    text-transform: uppercase;
+
+    margin-right: 5px;
 
 }
 
@@ -11765,40 +11867,40 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    DIGIMON
    ========================================================= */
 
-.ficha-digimon {
+.df-digimon {
 
-    grid-template-columns: 18.333em 1fr;
+    grid-template-columns: 280px 1fr;
 
-    min-height: 46.667em;
-
-}
-
-
-.ficha-digimon-main {
-
-    padding: 1.25em;
-
-    background: #101312;
-
-    border-right: 1px solid var(--border);
+    min-height: 560px;
 
 }
 
 
-.ficha-digimon-main > img {
+.df-digi {
+
+    padding: 22px;
+
+    background: var(--df-dark);
+
+    border-right: 1px solid var(--df-border);
+
+}
+
+
+.df-digi > img {
 
     width: 100%;
-    height: 18.333em;
+    height: 240px;
 
     display: block;
 
     object-fit: contain;
 
     background:
-        linear-gradient(
-            145deg,
+        radial-gradient(
+            circle,
             var(--emblema2),
-            #111
+            #101312 70%
         );
 
     border: 1px solid var(--emblema2);
@@ -11806,208 +11908,226 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 
-.ficha-digimon-name {
-
-    margin-top: 1.25em;
-
-}
-
-
-.ficha-digimon-name b {
+.df-digi > b {
 
     display: block;
 
-    color: #fff;
+    margin-top: 20px;
 
-    font-size: 2em;
+    color: white;
+
+    font-size: 25px;
 
     font-weight: 900;
 
     text-transform: uppercase;
 
-    letter-spacing: -.083em;
+    letter-spacing: -1px;
 
 }
 
 
-.ficha-digimon-name span {
+.df-digi > i {
 
     display: block;
 
-    margin-top: .333em;
+    margin-top: 5px;
 
     color: var(--emblema1);
 
-    font-size: .667em;
+    font-size: 9px;
 
-    letter-spacing: .167em;
+    font-style: normal;
 
     text-transform: uppercase;
+
+    letter-spacing: 2px;
 
 }
 
 
-.ficha-digimon-data {
+.df-digi-data {
 
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: .417em;
+    gap: 5px;
 
-    margin-top: 1.5em;
-
-}
-
-
-.ficha-digimon-data span {
-
-    padding: .667em;
-
-    background: var(--panel);
-
-    border: 1px solid var(--border);
+    margin-top: 25px;
 
 }
 
 
-.ficha-digimon-data b {
+.df-digi-data span {
 
-    margin-bottom: .333em;
+    padding: 9px;
 
-}
+    background: var(--df-panel);
 
-
-.ficha-digimon-data i {
-
-    font-size: .75em;
+    border: 1px solid var(--df-border);
 
 }
 
 
-.ficha-digimon-info {
+.df-digi-data b {
 
-    padding: 2.083em;
+    display: block;
 
-    background: var(--panel);
+    margin-bottom: 4px;
 
-}
+    color: var(--emblema2);
 
-
-.ficha-digimon-info > h2 {
-
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 1.25em;
-
-    color: var(--text);
-
-    font-size: 1.583em;
-
-    font-weight: 900;
+    font-size: 8px;
 
     text-transform: uppercase;
 
 }
 
 
-.ficha-digimon-info > h2 span {
+.df-digi-data i {
 
-    color: var(--emblema1);
+    color: var(--df-text);
 
-    font-size: .667em;
-
-    font-weight: normal;
-
-    letter-spacing: .167em;
-
-}
-
-
-.ficha-stats {
-
-    display: grid;
-
-    grid-template-columns: repeat(5, 1fr);
-
-    gap: .333em;
-
-    margin-bottom: 1.667em;
-
-}
-
-
-.ficha-stats span {
-
-    padding: .833em .417em;
-
-    text-align: center;
-
-    background: var(--dark);
-
-    border-bottom: 2px solid var(--emblema2);
-
-}
-
-
-.ficha-stats b {
-
-    display: block;
-
-    color: var(--emblema1);
-
-    font-size: .667em;
-
-    margin-bottom: .417em;
-
-}
-
-
-.ficha-stats i {
-
-    color: #fff;
-
-    font-size: 1.417em;
-
-    font-weight: 900;
+    font-size: 10px;
 
     font-style: normal;
 
 }
 
 
-.ficha-digimon-info .ficha-text {
+/* =========================================================
+   DIGIMON — DERECHA
+   ========================================================= */
 
-    max-height: 30em;
+.df-digi-info {
 
-    overflow-y: auto;
+    padding: 35px;
 
-    padding-right: 1em;
+    background: var(--df-panel);
 
 }
 
 
-.ficha-text h3 {
+.df-digi-info > h2 {
 
-    color: var(--emblema1);
+    display: flex;
 
-    font-size: .833em;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    color: var(--df-text);
+
+    font-size: 23px;
+
+    font-weight: 900;
 
     text-transform: uppercase;
 
-    letter-spacing: .083em;
+}
 
-    margin-top: 1.417em;
 
-    margin-bottom: .417em;
+.df-digi-info > h2 i {
+
+    color: var(--emblema1);
+
+    font-size: 9px;
+
+    font-style: normal;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
 
 }
 
 
-.ficha-text h3:first-child {
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.df-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 5px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.df-stats span {
+
+    padding: 13px 5px;
+
+    text-align: center;
+
+    background: var(--df-dark);
+
+    border-bottom: 2px solid var(--emblema2);
+
+}
+
+
+.df-stats b {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--emblema1);
+
+    font-size: 9px;
+
+}
+
+
+.df-stats i {
+
+    color: white;
+
+    font-size: 20px;
+
+    font-style: normal;
+
+    font-weight: 900;
+
+}
+
+
+.df-digi-info .df-text {
+
+    max-height: 350px;
+
+    overflow-y: auto;
+
+    padding-right: 15px;
+
+}
+
+
+.df-digi-info h3 {
+
+    margin-top: 22px;
+    margin-bottom: 7px;
+
+    color: var(--emblema1);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+.df-digi-info h3:first-child {
 
     margin-top: 0;
 
@@ -12018,85 +12138,113 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
 
-    .ficha {
+    .digificha {
 
         width: 95%;
+
+    }
+
+
+    .df-basic,
+    .df-digimon {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .df-character {
+
+        min-height: 400px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--df-border);
+
+    }
+
+
+    .df-character img {
+
+        min-height: 400px;
+
+    }
+
+
+    .df-digi {
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--df-border);
 
     }
 
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
-    .ficha-basic,
-    .ficha-digimon {
+    .df-head {
+
+        height: 200px;
+
+        padding: 25px;
+
+    }
+
+
+    .df-name {
+
+        font-size: 32px;
+
+    }
+
+
+    .df-head > i {
+
+        left: 25px;
+
+    }
+
+
+    .df-content,
+    .df-history,
+    .df-digi-info {
+
+        padding: 25px;
+
+    }
+
+
+    .df-data,
+    .df-grid {
 
         grid-template-columns: 1fr;
 
     }
 
 
-    .ficha-basic > img {
-
-        min-height: 25em;
-        height: 25em;
-
-    }
-
-
-    .ficha-digimon-main {
-
-        border-right: 0;
-
-        border-bottom: 1px solid var(--border);
-
-    }
-
-
-    .ficha-digimon-main > img {
-
-        height: 15em;
-
-    }
-
-
-    .ficha-data,
-    .ficha-boxes {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .ficha-stats {
+    .df-stats {
 
         grid-template-columns: repeat(5, 1fr);
 
     }
 
 
-    .ficha-header {
+    .df-stats i {
 
-        height: 15em;
-
-        padding: 1.667em;
+        font-size: 15px;
 
     }
 
 
-    .ficha-header > i {
+    .df-tabs label {
 
-        left: 1.667em;
+        font-size: 9px;
 
-    }
-
-
-    .ficha-name {
-
-        font-size: 2em;
+        letter-spacing: 1px;
 
     }
 
