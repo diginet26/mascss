@@ -9061,6 +9061,7 @@ blockquote blockquote {
 .digimon-newest-user, .digimon-record-users {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 18px;
     min-height: 5.429rem;
     padding: 1rem;
@@ -9464,388 +9465,193 @@ blockquote blockquote {
 /* ---------------------------------------------------------
    FONDO DE MONITOR
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h-content {
     position: relative;
     overflow: hidden;
-
-    background:
-        linear-gradient(
-            rgba(255,255,255,.018) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.018) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        2rem 2rem;
-
+    background: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+    background-size: 2rem 2rem;
 }
-
 
 /* ---------------------------------------------------------
    LIGERO EFECTO DE ESCANEO
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h-content::before {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 0%,
-            rgba(255,255,255,.025) 50%,
-            transparent 100%
-        );
-
+    background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,.025) 50%, transparent 100%);
     background-size: 100% 8rem;
-
     pointer-events: none;
-
     opacity: .45;
-
-    animation:
-        digimon-stats-scan
-        6s
-        linear
-        infinite;
+    animation: digimon-stats-scan 6s linear infinite;
 }
-
-
-@keyframes digimon-stats-scan {
-
-    0% {
-        background-position: 0 -8rem;
-    }
-
-    100% {
-        background-position: 0 100%;
-    }
-
-}
-
+@keyframes digimon-stats-scan {0% {background-position: 0 -8rem;} 100% {background-position: 0 100%;}}
 
 /* ---------------------------------------------------------
    CONTENIDO POR ENCIMA DEL EFECTO
    --------------------------------------------------------- */
-
-#digimon-statistics .digimon-stats-24h-heading,
-#digimon-statistics .digimon-stats-24h-list {
+#digimon-statistics .digimon-stats-24h-heading, #digimon-statistics .digimon-stats-24h-list {
     position: relative;
     z-index: 2;
 }
 
-
 /* ---------------------------------------------------------
    CABECERA DEL MONITOR
    --------------------------------------------------------- */
-
-/*#digimon-statistics .digimon-stats-24h-heading {
-    padding-bottom: 1rem;
-}*/
-
-
 #digimon-statistics .digimon-stats-24h-heading .digimon-stats-label {
     margin-bottom: .5rem;
-
     font-size: .7rem;
     letter-spacing: .12em;
 }
 
-
 #digimon-statistics .digimon-stats-24h-heading p {
     margin: 0;
-
     color: var(--stats-muted);
-
     font-size: .7rem;
 }
-
 
 /* ---------------------------------------------------------
    ZONA DE USUARIOS
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h-list {
     display: flex;
-
     flex-wrap: wrap;
-
     align-content: flex-start;
     justify-content: center;
-
     gap: .5rem;
-
     min-height: 8rem;
-
     margin-top: 1rem;
-
     padding: 1.25rem;
-
     border-top: 1px solid var(--stats-border);
-
     border-bottom: 1px solid var(--stats-border);
-
     overflow-y: auto;
     overflow-x: hidden;
-
     box-sizing: border-box;
-
 }
-
 
 /* ---------------------------------------------------------
    TEXTO GENERAL GENERADO POR FORUMOTION
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h-list {
     color: var(--text-color);
-
     font-size: .7rem;
     line-height: 1.6;
 }
 
-
 /* ---------------------------------------------------------
    USUARIOS / ENLACES
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h-list a {
     display: inline-flex;
-
     align-items: center;
-
     min-height: 2rem;
-
     padding: .35rem .75rem;
-
     box-sizing: border-box;
-
-    border: 1px solid color-mix(
-        in srgb,
-        currentColor 35%,
-        transparent
-    );
-
+    border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
     border-radius: .25rem;
-
-    background:
-        rgba(255,255,255,.025);
-
+    background: rgba(255,255,255,.025);
     color: inherit;
-
     font-size: .68rem;
     font-weight: 700;
-
     text-decoration: none;
-
-    transition:
-        background .2s ease,
-        transform .2s ease,
-        box-shadow .2s ease;
+    transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-
 
 #digimon-statistics .digimon-stats-24h-list a::before {
     content: "";
-
     width: .35rem;
     height: .35rem;
-
     margin-right: .5rem;
-
     background: currentColor;
-
-    box-shadow:
-        0 0 .45rem currentColor;
-
+    box-shadow: 0 0 .45rem currentColor;
     flex-shrink: 0;
 }
 
-
 #digimon-statistics .digimon-stats-24h-list a:hover {
     transform: translateY(-.1rem);
-
-    background:
-        color-mix(
-            in srgb,
-            currentColor 8%,
-            transparent
-        );
-
-    box-shadow:
-        0 0 .7rem color-mix(
-            in srgb,
-            currentColor 20%,
-            transparent
-        );
+    background: color-mix(in srgb, currentColor 8%, transparent);
+    box-shadow: 0 0 .7rem color-mix(in srgb, currentColor 20%, transparent);
 }
-
 
 /* ---------------------------------------------------------
    BARRA DE DESPLAZAMIENTO
    --------------------------------------------------------- */
-
-#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar {
-    width: .3rem;
-}
-
-#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-track {
-    background: transparent;
-}
-
+#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar {width: .3rem;}
+#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-track {background: transparent;}
 #digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-thumb {
-    background:
-        linear-gradient(
-            180deg,
-            var(--linkc1),
-            var(--linkc2)
-        );
-
+    background: linear-gradient(180deg, var(--linkc1), var(--linkc2));
     border-radius: 1rem;
 }
-
 
 /* ---------------------------------------------------------
    INDICADOR INFERIOR
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h::after {
     content: "NETWORK ACTIVITY // LIVE DATA";
-
     position: absolute;
-
     right: 1rem;
     bottom: .6rem;
-
     color: var(--stats-muted);
-
-    font:
-        700 .5rem/1
-        "Oxanium",
-        monospace;
-
+    font: 700 .5rem/1 "Oxanium", monospace;
     letter-spacing: .12em;
-
     opacity: .45;
-
     pointer-events: none;
 }
 /* =========================================================
-   DIGITAL RIFT — LAST 24 HOURS
-   SEPARACIÓN DEL LISTADO
+   LAST 24 HOURS   SEPARACIÓN DEL LISTADO
    ========================================================= */
-
 #digimon-statistics .digimon-stats-24h-list {
     justify-content: center;
     align-content: flex-start;
-
     padding-top: 1.5rem;
 }
 
-
 /* TEXTO QUE PRECEDE A LOS USUARIOS */
-
 #digimon-statistics .digimon-stats-24h-list > span {
     width: 100%;
-
     margin-bottom: .75rem;
-
     text-align: center;
 }
 
-
 /* USUARIOS */
-
-#digimon-statistics .digimon-stats-24h-list a {
-    min-width: 7rem;
-}
+#digimon-statistics .digimon-stats-24h-list a {min-width: 7rem;}
 /* =========================================================
-   DIGITAL RIFT — LAST 24 HOURS
-   PANEL DE USUARIOS CONECTADOS
+   LAST 24 HOURS   PANEL DE USUARIOS CONECTADOS
    ========================================================= */
-
 #digimon-statistics .digimon-stats-24h-list {
     display: block !important;
-
     padding: 1rem 1.5rem !important;
-
     text-align: center !important;
-
     font-size: 0 !important;
-
     overflow-y: auto !important;
     overflow-x: hidden !important;
 }
 
-
-/* ---------------------------------------------------------
-   ENCABEZADO DEL LISTADO
-   Ocultamos visualmente el texto original y lo recreamos
-   mediante CSS para poder separarlo de los usuarios.
-   --------------------------------------------------------- */
-
 /* ---------------------------------------------------------
    USUARIOS
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h-list a {
     display: inline-flex !important;
-
     align-items: center;
     justify-content: center;
-
     min-width: 6rem;
     min-height: 2rem;
-
     margin: .3rem;
-
     padding: .35rem .75rem;
-
     box-sizing: border-box;
-
-    border: 1px solid
-        color-mix(
-            in srgb,
-            currentColor 35%,
-            transparent
-        );
-
+    border: 1px solid color-mix( in srgb, currentColor 35%, transparent);
     border-radius: .3rem;
-
-    background:
-        rgba(255,255,255,.025);
-
+    background: rgba(255,255,255,.025);
     color: inherit;
-
-    font:
-        700 .65rem/1
-        "Oxanium",
-        monospace;
-
+    font: 700 .65rem/1 "Oxanium", monospace;
     text-decoration: none;
-
     vertical-align: middle;
-
-    transition:
-        transform .2s ease,
-        background .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
-
 
 /* ---------------------------------------------------------
    INDICADOR DEL USUARIO
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-stats-24h-list a::before {
     content: "";
     width: .35rem;
@@ -9904,18 +9710,9 @@ blockquote blockquote {
     margin: 0 !important;
     padding: 0 !important;
 }
-#digimon-statistics .digimon-newest-user {
-    display: flex !important;
-    align-items: center !important;
-}
 
 #digimon-statistics .digimon-groups-list {font-size: 0 !important;}
 #digimon-statistics .digimon-groups-list a {font-size: .75rem !important;}
-#digimon-statistics .digimon-newest-user {
-    justify-content: center !important;
-    align-items: center !important;
-}
-
 #digimon-statistics .digimon-newest-user > div:last-child {text-align: left !important;}
 #digimon-statistics .digimon-record-users {
     display: flex !important;
