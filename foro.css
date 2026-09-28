@@ -11169,1083 +11169,654 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     gap: 1rem !important;
 }
 
-/* =========================================================
-   DIGIMON — EXPEDIENTE DE PERSONAJE
-   ========================================================= */
+/* ============================================================
+   DIGITAL RIFT — EXPEDIENTE
+   ============================================================ */
 
-.digificha {
+.dr-ficha {
+    --dr-cyan: var(--emblema2, #35d8ff);
+    --dr-blue: var(--emblema1, #1677c8);
 
-    --df-bg: #101312;
-    --df-panel: #171b19;
-    --df-panel2: #202623;
-    --df-dark: #0b0e0d;
+    --dr-bg: #070d14;
+    --dr-panel: #0c151f;
+    --dr-panel2: #101e2b;
 
-    --df-text: #e9eeeb;
-    --df-muted: #9fa9a4;
+    --dr-text: #edf8fb;
+    --dr-muted: #8195a4;
+    --dr-border: rgba(255,255,255,.10);
 
-    --df-border: rgba(255,255,255,.12);
-
-    width: 900px;
-    max-width: 95%;
-
-    margin: 40px auto;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background: var(--df-bg);
-    color: var(--df-text);
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-
-    border: 1px solid var(--df-border);
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.5);
-
-}
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
-.digificha *,
-.digificha *::before,
-.digificha *::after {
+    width: 720px;
+    max-width: 94%;
+    margin: 30px auto;
+    padding: 18px;
 
     box-sizing: border-box;
 
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22,119,200,.08),
+            transparent 35%,
+            rgba(53,216,255,.04)
+        ),
+        var(--dr-bg);
+
+    border: 1px solid var(--dr-border);
+
+    color: var(--dr-text);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+
+    position: relative;
+    overflow: hidden;
 }
 
 
-.digificha input {
+/* ============================================================
+   OCULTAR RADIO
+   ============================================================ */
 
+.dr-ficha > input[type="radio"] {
     display: none;
-
 }
 
 
-.digificha br {
+/* ============================================================
+   DECORACIÓN SUPERIOR
+   ============================================================ */
 
-    display: none;
+.dr-dots {
+    height: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 8px;
+}
 
+.dr-dots i {
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: var(--dr-cyan);
+    transform: rotate(45deg);
+    opacity: .7;
+}
+
+.dr-dots i:nth-child(2) {
+    opacity: .45;
+}
+
+.dr-dots i:nth-child(3) {
+    opacity: .2;
 }
 
 
-.digificha h2,
-.digificha h3,
-.digificha p {
-
-    margin: 0;
-
-}
-
-
-.digificha img {
-
-    max-width: 100%;
-
-}
-
-
-/* =========================================================
+/* ============================================================
    CABECERA
-   ========================================================= */
+   ============================================================ */
 
-.df-head {
-
-    height: 230px;
-
+.dr-head {
+    height: 174px;
     position: relative;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    padding: 40px;
-
     overflow: hidden;
 
-    border-bottom: 1px solid var(--df-border);
+    border-bottom: 2px solid var(--dr-cyan);
 
+    background: #09131d;
 }
 
-
-.df-head > img {
-
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-}
-
-
-.df-head::after {
-
+.dr-head:after {
     content: "";
-
     position: absolute;
-
     inset: 0;
 
     background:
         linear-gradient(
-            90deg,
-            rgba(5,8,10,.98),
-            rgba(5,8,10,.70) 55%,
-            rgba(5,8,10,.25)
-        );
-
-}
-
-
-.df-name {
-
-    position: relative;
-
-    z-index: 2;
-
-    font-size: 46px;
-
-    line-height: .85;
-
-    font-weight: 900;
-
-    text-transform: uppercase;
-
-    letter-spacing: -3px;
-
-}
-
-
-.df-name b {
-
-    color: var(--emblema2);
-
-}
-
-
-.df-name span {
-
-    color: var(--emblema1);
-
-    margin-left: 12px;
-
-}
-
-
-.df-head > i {
-
-    position: absolute;
-
-    z-index: 2;
-
-    left: 42px;
-
-    bottom: 22px;
-
-    color: var(--df-muted);
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-}
-
-
-/* =========================================================
-   CUERPO
-   ========================================================= */
-
-.df-body {
-
-    position: relative;
-
-    min-height: 560px;
-
-}
-
-
-.df-page {
-
-    display: none;
-
-}
-
-
-/* =========================================================
-   PESTAÑAS
-   ========================================================= */
-
-.df-tabs {
-
-    display: flex;
-
-    min-height: 65px;
-
-    background: var(--df-dark);
-
-    border-top: 1px solid var(--df-border);
-
-}
-
-
-.df-tabs label {
-
-    flex: 1;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    cursor: pointer;
-
-    color: var(--df-muted);
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    border-right: 1px solid var(--df-border);
-
-    transition: .2s ease;
-
-}
-
-
-.df-tabs label:last-child {
-
-    border-right: 0;
-
-}
-
-
-.df-tabs label b {
-
-    color: var(--emblema1);
-
-    font-size: 9px;
-
-}
-
-
-.df-tabs label:hover {
-
-    color: white;
-
-    background: var(--df-panel);
-
-}
-
-
-/* =========================================================
-   ACTIVAR PESTAÑAS
-   ========================================================= */
-
-#df1:checked ~ .df-body .df-basic {
-
-    display: grid;
-
-}
-
-
-#df2:checked ~ .df-body .df-history {
-
-    display: block;
-
-}
-
-
-#df3:checked ~ .df-body .df-digimon {
-
-    display: grid;
-
-}
-
-
-#df1:checked ~ .df-tabs label[for="df1"],
-#df2:checked ~ .df-tabs label[for="df2"],
-#df3:checked ~ .df-tabs label[for="df3"] {
-
-    color: white;
-
-    background: var(--emblema2);
-
-}
-
-
-#df1:checked ~ .df-tabs label[for="df1"] b,
-#df2:checked ~ .df-tabs label[for="df2"] b,
-#df3:checked ~ .df-tabs label[for="df3"] b {
-
-    color: white;
-
-}
-
-
-/* =========================================================
-   TÍTULOS
-   ========================================================= */
-
-.df-content h2,
-.df-history > h2 {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 22px;
-
-    color: var(--df-text);
-
-    font-size: 21px;
-
-    font-weight: 900;
-
-    text-transform: uppercase;
-
-    letter-spacing: -1px;
-
-}
-
-
-.df-content h2::after,
-.df-history > h2::after {
-
-    content: "";
-
-    flex: 1;
-
-    height: 2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--emblema2),
-            transparent
-        );
-
-}
-
-
-/* =========================================================
-   BÁSICO
-   ========================================================= */
-
-.df-basic {
-
-    grid-template-columns: 290px 1fr;
-
-    min-height: 560px;
-
-}
-
-
-.df-character {
-
-    position: relative;
-
-    min-height: 560px;
-
-    overflow: hidden;
-
-    background: var(--df-dark);
-
-    border-right: 1px solid var(--df-border);
-
-}
-
-
-.df-character img {
-
-    width: 100%;
-    height: 100%;
-
-    min-height: 560px;
-
-    display: block;
-
-    object-fit: cover;
-
-}
-
-
-.df-character::after {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            0deg,
-            rgba(5,7,7,.9),
-            transparent 55%
+            to bottom,
+            rgba(5,12,18,.05),
+            rgba(5,12,18,.82)
         );
 
     pointer-events: none;
-
 }
 
+.dr-head img {
+    width: 100%;
+    height: 100%;
 
-.df-character span {
+    display: block;
 
+    object-fit: cover;
+}
+
+.dr-head span {
     position: absolute;
-
-    left: 22px;
-    bottom: 20px;
-
     z-index: 2;
 
-    color: var(--emblema2);
+    left: 18px;
+    bottom: 15px;
 
-    font-size: 10px;
+    padding: 5px 10px;
 
-    font-weight: 900;
+    color: var(--dr-cyan);
 
-    letter-spacing: 3px;
+    border: 1px solid var(--dr-cyan);
 
-}
-
-
-.df-content {
-
-    padding: 35px;
-
-    background: var(--df-panel);
-
-}
-
-
-.df-text {
-
-    color: var(--df-muted);
-
-    font-size: 12px;
-
-    line-height: 1.7;
-
-    text-align: justify;
-
-}
-
-
-.df-text b {
-
-    color: var(--emblema1);
-
-}
-
-
-.df-content > .df-text {
-
-    margin-bottom: 35px;
-
-}
-
-
-/* =========================================================
-   DATOS
-   ========================================================= */
-
-.df-data {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 1px;
-
-    margin-bottom: 35px;
-
-    background: var(--df-border);
-
-    border: 1px solid var(--df-border);
-
-}
-
-
-.df-data span {
-
-    min-height: 65px;
-
-    padding: 14px;
-
-    background: var(--df-panel2);
-
-}
-
-
-.df-data b {
-
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: var(--emblema2);
-
+    font-family: 'Oxanium', sans-serif;
     font-size: 9px;
-
-    font-weight: 800;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-}
-
-
-.df-data i {
-
-    color: var(--df-text);
-
-    font-size: 12px;
-
-    font-style: normal;
-
     font-weight: 700;
-
-}
-
-
-/* =========================================================
-   HISTORIA
-   ========================================================= */
-
-.df-history {
-
-    padding: 35px;
-
-    min-height: 560px;
-
-    background: var(--df-panel);
-
-}
-
-
-.df-history > .df-text {
-
-    max-height: 250px;
-
-    overflow-y: auto;
-
-    padding-right: 15px;
-
-    margin-bottom: 25px;
-
-}
-
-
-.df-text::-webkit-scrollbar {
-
-    width: 3px;
-
-}
-
-
-.df-text::-webkit-scrollbar-thumb {
-
-    background: var(--emblema2);
-
-}
-
-
-/* =========================================================
-   BLOQUES
-   ========================================================= */
-
-.df-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 8px;
-
-    margin-bottom: 25px;
-
-}
-
-
-.df-grid span {
-
-    min-height: 95px;
-
-    padding: 17px;
-
-    background: var(--df-panel2);
-
-    border: 1px solid var(--df-border);
-
-    border-top: 2px solid var(--emblema2);
-
-}
-
-
-.df-grid b {
-
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--emblema1);
-
-    font-size: 10px;
-
-    font-weight: 900;
-
+    letter-spacing: 3px;
     text-transform: uppercase;
 
-    letter-spacing: 1px;
-
+    background: rgba(5,12,18,.65);
 }
 
 
-.df-grid i {
+/* ============================================================
+   NOMBRE
+   ============================================================ */
 
-    display: block;
+.dr-name {
+    margin: 18px 0 25px;
+    padding: 14px 17px;
 
-    color: var(--df-muted);
-
-    font-size: 11px;
-
-    line-height: 1.5;
-
-    font-style: normal;
-
-}
-
-
-.df-note {
-
-    margin-bottom: 35px;
-
-    padding: 14px;
-
-    color: var(--df-muted);
-
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    border: 1px dashed var(--emblema2);
-
-}
-
-
-.df-note b {
-
-    color: var(--emblema1);
-
-    text-transform: uppercase;
-
-    margin-right: 5px;
-
-}
-
-
-/* =========================================================
-   DIGIMON
-   ========================================================= */
-
-.df-digimon {
-
-    grid-template-columns: 280px 1fr;
-
-    min-height: 560px;
-
-}
-
-
-.df-digi {
-
-    padding: 22px;
-
-    background: var(--df-dark);
-
-    border-right: 1px solid var(--df-border);
-
-}
-
-
-.df-digi > img {
-
-    width: 100%;
-    height: 240px;
-
-    display: block;
-
-    object-fit: contain;
+    border: 1px solid rgba(53,216,255,.22);
 
     background:
-        radial-gradient(
-            circle,
-            var(--emblema2),
-            #101312 70%
+        linear-gradient(
+            100deg,
+            rgba(22,119,200,.20),
+            rgba(53,216,255,.05)
         );
 
-    border: 1px solid var(--emblema2);
+    color: var(--dr-cyan);
 
-}
-
-
-.df-digi > b {
-
-    display: block;
-
-    margin-top: 20px;
-
-    color: white;
-
-    font-size: 25px;
-
-    font-weight: 900;
-
-    text-transform: uppercase;
-
-    letter-spacing: -1px;
-
-}
-
-
-.df-digi > i {
-
-    display: block;
-
-    margin-top: 5px;
-
-    color: var(--emblema1);
-
-    font-size: 9px;
-
-    font-style: normal;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-}
-
-
-.df-digi-data {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 5px;
-
-    margin-top: 25px;
-
-}
-
-
-.df-digi-data span {
-
-    padding: 9px;
-
-    background: var(--df-panel);
-
-    border: 1px solid var(--df-border);
-
-}
-
-
-.df-digi-data b {
-
-    display: block;
-
-    margin-bottom: 4px;
-
-    color: var(--emblema2);
-
-    font-size: 8px;
-
-    text-transform: uppercase;
-
-}
-
-
-.df-digi-data i {
-
-    color: var(--df-text);
-
+    font-family: 'Oxanium', sans-serif;
     font-size: 10px;
-
-    font-style: normal;
-
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 
-/* =========================================================
-   DIGIMON — DERECHA
-   ========================================================= */
+/* ============================================================
+   PÁGINAS
+   ============================================================ */
 
-.df-digi-info {
+.dr-page {
+    display: none;
+}
 
-    padding: 35px;
-
-    background: var(--df-panel);
-
+#dr-tab1:checked ~ .dr-pages .dr-page1,
+#dr-tab2:checked ~ .dr-pages .dr-page2,
+#dr-tab3:checked ~ .dr-pages .dr-page3 {
+    display: block;
 }
 
 
-.df-digi-info > h2 {
+/* ============================================================
+   TÍTULOS
+   ============================================================ */
+
+.dr-page h2 {
+    margin: 25px 0 13px;
+    padding-left: 15px;
+
+    position: relative;
+
+    color: var(--dr-cyan);
+
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.dr-page h2:first-child {
+    margin-top: 0;
+}
+
+.dr-page h2:before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    position: absolute;
+    left: 0;
+    top: 7px;
+
+    background: var(--dr-cyan);
+
+    transform: rotate(45deg);
+}
+
+
+/* ============================================================
+   DATOS
+   ============================================================ */
+
+.dr-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.dr-data span {
+    min-height: 70px;
+    padding: 11px;
+
+    box-sizing: border-box;
 
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    justify-content: space-between;
-    align-items: center;
+    background: var(--dr-panel2);
 
-    margin-bottom: 25px;
+    border: 1px solid var(--dr-border);
+    border-top: 2px solid var(--dr-cyan);
 
-    color: var(--df-text);
-
-    font-size: 23px;
-
-    font-weight: 900;
-
-    text-transform: uppercase;
-
+    transition: .2s ease;
 }
 
-
-.df-digi-info > h2 i {
-
-    color: var(--emblema1);
-
-    font-size: 9px;
-
-    font-style: normal;
-
-    font-weight: 400;
-
-    letter-spacing: 2px;
-
+.dr-data span:hover {
+    border-color: rgba(53,216,255,.35);
+    transform: translateY(-2px);
 }
 
-
-/* =========================================================
-   STATS
-   ========================================================= */
-
-.df-stats {
-
-    display: grid;
-
-    grid-template-columns: repeat(5, 1fr);
-
-    gap: 5px;
-
-    margin-bottom: 30px;
-
-}
-
-
-.df-stats span {
-
-    padding: 13px 5px;
-
-    text-align: center;
-
-    background: var(--df-dark);
-
-    border-bottom: 2px solid var(--emblema2);
-
-}
-
-
-.df-stats b {
-
-    display: block;
-
-    margin-bottom: 6px;
-
-    color: var(--emblema1);
-
-    font-size: 9px;
-
-}
-
-
-.df-stats i {
-
-    color: white;
-
-    font-size: 20px;
-
-    font-style: normal;
-
-    font-weight: 900;
-
-}
-
-
-.df-digi-info .df-text {
-
-    max-height: 350px;
-
-    overflow-y: auto;
-
-    padding-right: 15px;
-
-}
-
-
-.df-digi-info h3 {
-
-    margin-top: 22px;
+.dr-data b {
     margin-bottom: 7px;
 
-    color: var(--emblema1);
+    color: var(--dr-muted);
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.dr-data i {
+    color: var(--dr-text);
+
+    font-style: normal;
 
     font-size: 10px;
+    line-height: 1.4;
+}
 
+
+/* ============================================================
+   TEXTO
+   ============================================================ */
+
+.dr-text {
+    padding: 17px;
+
+    box-sizing: border-box;
+
+    background: var(--dr-panel);
+
+    border: 1px solid var(--dr-border);
+
+    color: #b9cbd4;
+
+    font-size: 11px;
+    line-height: 1.8;
+
+    text-align: justify;
+}
+
+.dr-text p {
+    margin: 0 0 12px;
+}
+
+.dr-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================================================
+   BLOQUES DE INFORMACIÓN
+   ============================================================ */
+
+.dr-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.dr-info > div {
+    padding: 16px;
+
+    background: var(--dr-panel);
+
+    border: 1px solid var(--dr-border);
+
+    position: relative;
+}
+
+.dr-info > div:before {
+    content: ">";
+
+    position: absolute;
+    top: 12px;
+    right: 14px;
+
+    color: var(--dr-cyan);
+
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.dr-info b {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--dr-cyan);
+
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.dr-info p {
+    margin: 0;
+
+    color: #aabdc7;
+
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* ============================================================
+   DIGIMON
+   ============================================================ */
+
+.dr-digimon {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 10px;
+}
+
+
+/* TARJETA DEL DIGIMON */
+
+.dr-digimon-card {
+    min-height: 330px;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+    overflow: hidden;
+
+    background: var(--dr-panel2);
+
+    border: 1px solid var(--dr-border);
+}
+
+.dr-digimon-card:after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5,12,18,.95),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+.dr-digimon-card img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    object-fit: cover;
+}
+
+.dr-digimon-card strong,
+.dr-digimon-card small {
+    position: relative;
+    z-index: 2;
+}
+
+.dr-digimon-card strong {
+    color: #fff;
+
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.dr-digimon-card small {
+    margin-top: 3px;
+
+    color: var(--dr-cyan);
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+
+/* CONTENIDO DIGIMON */
+
+.dr-digimon-content {
+    min-width: 0;
+}
+
+.dr-data-small {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 12px;
+}
+
+.dr-data-small span {
+    min-height: 55px;
+}
+
+.dr-digimon-content h3 {
+    margin: 13px 0 7px;
+
+    color: var(--dr-cyan);
+
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+/* ============================================================
+   ESTADÍSTICAS
+   ============================================================ */
+
+.dr-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+}
+
+.dr-stats span {
+    padding: 13px 7px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--dr-panel2);
+
+    border: 1px solid var(--dr-border);
+
+    text-align: center;
+}
+
+.dr-stats b {
+    color: var(--dr-muted);
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.dr-stats i {
+    margin-top: 5px;
+
+    color: var(--dr-cyan);
+
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 23px;
+    font-style: normal;
+}
+
+
+/* ============================================================
+   PESTAÑAS
+   ============================================================ */
+
+.dr-tabs {
+    margin-top: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.dr-tabs label {
+    padding: 12px 8px;
+
+    background: var(--dr-panel2);
+
+    border: 1px solid var(--dr-border);
+
+    color: var(--dr-muted);
+
+    font-family: 'Oxanium', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
 
     letter-spacing: 1px;
+    text-align: center;
 
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.dr-tabs label small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--dr-muted);
+
+    font-size: 7px;
+}
+
+.dr-tabs label:hover {
+    color: var(--dr-cyan);
+    border-color: rgba(53,216,255,.35);
 }
 
 
-.df-digi-info h3:first-child {
+/* PESTAÑA ACTIVA */
 
-    margin-top: 0;
+#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"],
+#dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"],
+#dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] {
+    color: var(--dr-cyan);
 
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,119,200,.25),
+            rgba(53,216,255,.08)
+        );
+
+    border-color: var(--dr-cyan);
+}
+
+#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"] small,
+#dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"] small,
+#dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] small {
+    color: var(--dr-cyan);
 }
 
 
-/* =========================================================
+/* ============================================================
    RESPONSIVE
-   ========================================================= */
+   ============================================================ */
 
-@media (max-width: 750px) {
+@media (max-width: 650px) {
 
-    .digificha {
-
-        width: 95%;
-
+    .dr-ficha {
+        width: 96%;
+        padding: 12px;
     }
 
+    .dr-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-    .df-basic,
-    .df-digimon {
-
+    .dr-info {
         grid-template-columns: 1fr;
-
     }
 
-
-    .df-character {
-
-        min-height: 400px;
-
-        border-right: 0;
-
-        border-bottom: 1px solid var(--df-border);
-
+    .dr-digimon {
+        grid-template-columns: 1fr;
     }
 
-
-    .df-character img {
-
-        min-height: 400px;
-
+    .dr-digimon-card {
+        height: 300px;
+        min-height: 300px;
     }
 
-
-    .df-digi {
-
-        border-right: 0;
-
-        border-bottom: 1px solid var(--df-border);
-
+    .dr-stats {
+        grid-template-columns: repeat(5, 1fr);
     }
 
 }
 
+@media (max-width: 450px) {
 
-@media (max-width: 500px) {
-
-    .df-head {
-
-        height: 200px;
-
-        padding: 25px;
-
+    .dr-head {
+        height: 140px;
     }
 
-
-    .df-name {
-
-        font-size: 32px;
-
-    }
-
-
-    .df-head > i {
-
-        left: 25px;
-
-    }
-
-
-    .df-content,
-    .df-history,
-    .df-digi-info {
-
-        padding: 25px;
-
-    }
-
-
-    .df-data,
-    .df-grid {
-
+    .dr-data {
         grid-template-columns: 1fr;
-
     }
 
-
-    .df-stats {
-
-        grid-template-columns: repeat(5, 1fr);
-
+    .dr-stats {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-
-    .df-stats i {
-
-        font-size: 15px;
-
-    }
-
-
-    .df-tabs label {
-
-        font-size: 9px;
-
-        letter-spacing: 1px;
-
+    .dr-tabs label {
+        font-size: 8px;
     }
 
 }
