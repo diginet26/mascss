@@ -5965,14 +5965,12 @@ blockquote blockquote {
 @media screen and (max-width: 900px) {
     #digimon-statistics {padding: 20px;}
     .digimon-stats-main {grid-template-columns: 1fr;}
-    .digimon-stats-counters {grid-template-columns: 1fr;}
 }
 @media screen and (max-width: 600px) {
     #digimon-statistics {padding: 15px; border-radius: 10px;}
     .digimon-stats-header {align-items: flex-start; flex-direction: column;}
     .digimon-stats-status {align-self: flex-start;}
     .digimon-stats-heading h2 {font-size: 28px;}
-    .digimon-stats-bottom {grid-template-columns: 1fr;}
     .digimon-online-data {grid-template-columns: 1fr;}
     .digimon-groups-header {align-items: flex-start; flex-direction: column;}
 }
@@ -9058,22 +9056,8 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   CONTADORES GENERALES
-   ========================================================= */
-/*.digimon-stats-counters {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.714rem;
-    margin-top: 1rem;
-}*/
-
-/* =========================================================
    ÚLTIMO USUARIO / RÉCORD
    ========================================================= */
-.digimon-stats-bottom {
-    gap: 0.714rem;
-    margin-top: 0.714rem;
-}
-
 .digimon-newest-user, .digimon-record-users {
     display: flex;
     align-items: center;
@@ -9254,19 +9238,6 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   CONTADORES
-   ========================================================= */
-
-.digimon-stats-counters {
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 15px !important;
-    margin-top: 20px !important;
-    align-items: stretch !important;
-}
-
-/* =========================================================
    CONTADORES — TOTAL POSTS / TOTAL TOPICS
    ========================================================= */
 .digimon-counter {
@@ -9343,17 +9314,6 @@ blockquote blockquote {
     font: 0.5rem/1.2 "Oxanium", monospace;
     opacity: .55;
     letter-spacing: .04em;
-}
-
-/* =========================================================
-   INFORMACIÓN SECUNDARIA
-   ========================================================= */
-.digimon-stats-bottom {
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 20px !important;
-    margin-top: 20px !important;
 }
 
 /* =========================================================
