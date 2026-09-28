@@ -9887,6 +9887,7 @@ blockquote blockquote {
     overflow: hidden !important;
     box-sizing: border-box !important;
     border-radius: 50% !important;
+    align-self: center !important;
     flex-shrink: 0 !important;
 }
 
@@ -9908,12 +9909,7 @@ blockquote blockquote {
     align-items: center !important;
 }
 
-#digimon-statistics .digimon-newest-avatar {
-    align-self: center !important;
-    flex-shrink: 0 !important;
-}
 #digimon-statistics .digimon-groups-list {font-size: 0 !important;}
-
 #digimon-statistics .digimon-groups-list a {font-size: .75rem !important;}
 #digimon-statistics .digimon-newest-user {
     justify-content: center !important;
