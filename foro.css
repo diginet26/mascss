@@ -10441,84 +10441,48 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    --------------------------------------------------------- */
 
 #digimon-statistics .digimon-online-content {
-    position: relative;
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            rgba(255,255,255,.018) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.018) 1px,
-            transparent 1px
-        );
-
+    background:linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
     background-size: 2rem 2rem;
+    position: relative !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
 }
-
 
 /* ---------------------------------------------------------
    EFECTO DE ESCANEO
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-online-content::before {
     content: "";
-
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 0%,
-            rgba(255,255,255,.025) 50%,
-            transparent 100%
-        );
-
+    background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,.025) 50%, transparent 100%);
     background-size: 100% 8rem;
-
     pointer-events: none;
     opacity: .45;
-
-    animation:
-        digimon-online-scan
-        6s
-        linear
-        infinite;
+    animation: digimon-online-scan 6s linear infinite;
 }
 
-
 @keyframes digimon-online-scan {
-
     0% {
         background-position: 0 -8rem;
     }
-
     100% {
         background-position: 0 100%;
     }
-
 }
-
 
 /* ---------------------------------------------------------
    CONTENIDO POR ENCIMA DEL EFECTO
    --------------------------------------------------------- */
-
-#digimon-statistics .digimon-online-main,
-#digimon-statistics .digimon-online-details,
-#digimon-statistics .digimon-online-list {
+#digimon-statistics .digimon-online-main, #digimon-statistics .digimon-online-details, #digimon-statistics .digimon-online-list {
     position: relative;
     z-index: 2;
 }
 
-
 /* ---------------------------------------------------------
    USUARIOS REGISTRADOS / INVITADOS
    --------------------------------------------------------- */
-
 #digimon-statistics .digimon-online-details {
     display: flex;
     align-items: center;
@@ -10623,12 +10587,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
         0 0,
         0 0,
         0 0 !important;
-}
-
-/* Barrido de carga */
-#digimon-statistics .digimon-online-content {
-    position: relative !important;
-    overflow: hidden !important;
 }
 
 #digimon-statistics .digimon-online-content::before {
