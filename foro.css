@@ -9990,40 +9990,6 @@ blockquote blockquote {
     border-radius: 1rem;
 }
 
-#digimon-statistics .digimon-counter-data > span {letter-spacing: .12em;}/*ETIQUETA*/
-
-/*VALOR PRINCIPAL*/
-#digimon-statistics .digimon-counter-data > strong {
-    display: block;
-    margin-top: .25rem;
-    font-size: 1.5rem;
-    line-height: 1.15;
-}
-
-/*DESCRIPCIÓN*/
-#digimon-statistics .digimon-counter-data > small {
-    display: block;
-    margin-top: .25rem;
-    opacity: .55;
-    letter-spacing: .04em;
-}
-/*AJUSTE TIPOGRÁFICO DE CONTADORES*/
-#digimon-statistics .digimon-counter-data > span {
-    font-size: .65rem !important;
-    letter-spacing: .1em !important;
-}
-
-#digimon-statistics .digimon-counter-data > strong {
-    font-size: 1.15rem !important;
-    line-height: 1.25 !important;
-    margin-top: .35rem !important;
-}
-
-#digimon-statistics .digimon-counter-data > small {
-    font-size: .5rem !important;
-    margin-top: .3rem !important;
-    letter-spacing: .04em !important;
-}
 #digimon-statistics .digimon-newest-avatar {
     width: 3.5rem !important;
     height: 3.5rem !important;
@@ -11548,7 +11514,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-stats {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 7px;
 }
 
