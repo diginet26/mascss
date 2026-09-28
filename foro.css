@@ -9199,14 +9199,16 @@ blockquote blockquote {
 
 .digimon-stats-24h {
     min-width: 0 !important;
-    height: 400px !important;
-    min-height: 400px !important;
+    height: 20rem !important;
+    min-height: 20rem !important;
     display: flex !important;
     flex-direction: column !important;
+    padding: 20px !important;
     border: 1px solid var(--stats-border) !important;
     border-radius: 12px !important;
     background: var(--stats-panel) !important;
     overflow: hidden !important;
+    position: relative !important;
 }
 
 .digimon-stats-24h .digimon-window-header {flex-shrink: 0 !important;}/* CABECERA */
@@ -9324,28 +9326,18 @@ blockquote blockquote {
     box-sizing: border-box !important;
 }
 /* =========================================================
-   DIGITAL RIFT — ESTADÍSTICAS
-   PÍXELES FLOTANTES
+   ESTADÍSTICAS   PÍXELES FLOTANTES
    ========================================================= */
-
 #digimon-statistics {
     position: relative;
     overflow: hidden;
 }
 
 /* =========================================================
-   DIGITAL NETWORK — PIXELS
-   Decoración trasladada a LAST 24 HOURS
+   DIGITAL NETWORK — PIXELS   Decoración trasladada a LAST 24 HOURS
    ========================================================= */
-
 /* Quitamos los píxeles de la cabecera general */
 #digimon-statistics::before, #digimon-statistics::after {display: none !important;}
-
-/* Nueva decoración */
-#digimon-statistics .digimon-stats-24h {
-    position: relative !important;
-    overflow: hidden !important;
-}
 
 #digimon-statistics .digimon-stats-24h::after {
     content: "" !important;
@@ -9361,58 +9353,15 @@ blockquote blockquote {
     animation: digimon-24h-pixels 5s ease-in-out infinite !important;
 }
 
-@keyframes digimon-24h-pixels {
-    0%, 100% {
-        transform: translate(0, 0);
-        opacity: .5;
-    }
+@keyframes digimon-24h-pixels {0%, 100% {transform: translate(0, 0); opacity: .5;} 50% {transform: translate(-.3rem, -.25rem); opacity: .9;}}
 
-    50% {
-        transform: translate(-.3rem, -.25rem);
-        opacity: .9;
-    }
-}
-
-/* ---------------------------------------------------------
-   ANIMACIÓN — PÍXELES SUPERIORES
-   --------------------------------------------------------- */
-@keyframes digimon-stats-pixels-a {
-    0%,
-    100% {
-        transform: translate(0, 0);
-        opacity: .55;
-    }
-    50% {
-        transform: translate(
-            -0.429rem,
-            -0.286rem
-        );
-        opacity: .95;
-    }
-}
-
-/* ---------------------------------------------------------
-   ANIMACIÓN — PÍXELES INFERIORES
-   --------------------------------------------------------- */
-@keyframes digimon-stats-pixels-b {
-    0%,
-    100% {
-        transform: translate(0, 0);
-        opacity: .45;
-    }
-
-    50% {
-        transform: translate(
-            0.286rem,
-            0.429rem
-        );
-        opacity: .9;
-    }
-}
+/*ANIMACIÓN — PÍXELES SUPERIORES*/
+@keyframes digimon-stats-pixels-a {0%, 100% {transform: translate(0, 0); opacity: .55;} 50% {transform: translate(-0.429rem, -0.286rem); opacity: .95;}}
+/*ANIMACIÓN — PÍXELES INFERIORES*/
+@keyframes digimon-stats-pixels-b {0%, 100% {transform: translate(0, 0); opacity: .45;} 50% {transform: translate(0.286rem, 0.429rem); opacity: .9;}}
 #digimon-statistics .digimon-stats-status {display: none !important;}
 /* =========================================================
-   DIGITAL RIFT — GRUPOS DEL SISTEMA
-   NODOS DE LA RED DIGITAL
+   GRUPOS DEL SISTEMA   NODOS DE LA RED DIGITAL
    ========================================================= */
 #digimon-statistics .digimon-groups {
     position: relative;
@@ -9451,127 +9400,66 @@ blockquote blockquote {
 }
 
 /* CONTENEDOR DE GRUPOS */
-
 #digimon-statistics .digimon-groups-list {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: center;
-
     gap: .65rem;
-
     width: 100%;
-
     padding-top: .75rem;
 }
 
-
 /* CADA GRUPO */
-
 #digimon-statistics .digimon-groups-list a {
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     min-width: 8rem;
     min-height: 3rem;
-
     padding: .65rem 1rem;
-
     box-sizing: border-box;
-
     border: 1px solid currentColor;
     border-radius: .35rem;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.025),
-            rgba(255,255,255,.01)
-        );
-
+    background: linear-gradient(135deg, rgba(255,255,255,.025), rgba(255,255,255,.01));
     font-size: .75rem;
     font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
-
     text-decoration: none;
-
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        box-shadow .25s ease;
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
 }
 
-
 /* PEQUEÑO INDICADOR DE NODO */
-
 #digimon-statistics .digimon-groups-list a::before {
     content: "";
-
     width: .35rem;
     height: .35rem;
-
     margin-right: .6rem;
-
     background: currentColor;
-
-    box-shadow:
-        0 0 .45rem currentColor;
-
+    box-shadow: 0 0 .45rem currentColor;
     flex-shrink: 0;
 }
 
-
 /* CONEXIÓN DECORATIVA */
-
 #digimon-statistics .digimon-groups-list a::after {
     content: "";
-
     position: absolute;
-
     top: -.25rem;
     right: -.25rem;
-
     width: .35rem;
     height: .35rem;
-
     background: currentColor;
-
     opacity: .7;
 }
 
-
 /* HOVER */
-
 #digimon-statistics .digimon-groups-list a:hover {
     transform: translateY(-.15rem);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.06),
-            rgba(255,255,255,.02)
-        );
-
-    box-shadow:
-        0 0 .8rem color-mix(
-            in srgb,
-            currentColor 25%,
-            transparent
-        );
+    background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    box-shadow: 0 0 .8rem color-mix(in srgb, currentColor 25%, transparent);
 }
-/* =========================================================
-   DIGITAL RIFT — LAST 24 HOURS
-   DIGITAL ACTIVITY MONITOR
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-24h {
-    position: relative;
-}
-
 
 /* ---------------------------------------------------------
    FONDO DE MONITOR
@@ -10719,12 +10607,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     box-sizing: border-box !important;
 }
 
-/* LAST 24 HOURS NO FORMA PARTE DE ESA ALTURA */
-#digimon-statistics .digimon-stats-24h {
-    height: auto !important;
-    min-height: 0 !important;
-}
-
 /* Las dos columnas permanecen independientes */
 #digimon-statistics .digimon-stats-left,
 #digimon-statistics .digimon-stats-right {
@@ -10994,33 +10876,9 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     }
 }
 /* =========================================================
-   DIGITAL RIFT — COLUMNAS DE ESTADÍSTICAS
-   SEPARACIÓN VERTICAL
+   COLUMNAS DE ESTADÍSTICAS   SEPARACIÓN VERTICAL
    ========================================================= */
-
-#digimon-statistics .digimon-stats-left,
-#digimon-statistics .digimon-stats-right {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem !important;
-}
-
-
-/* =========================================================
-   ALTURA DE LOS BLOQUES PRINCIPALES
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-welcome,
-#digimon-statistics .digimon-stats-24h {
-    height: 400px !important;
-    min-height: 400px !important;
-}
-/* =========================================================
-   DIGITAL RIFT — SEPARACIÓN ENTRE BLOQUES
-   ========================================================= */
-
-#digimon-statistics .digimon-stats-left,
-#digimon-statistics .digimon-stats-right {
+#digimon-statistics .digimon-stats-left, #digimon-statistics .digimon-stats-right {
     display: flex !important;
     flex-direction: column !important;
     gap: 1rem !important;
@@ -11029,60 +10887,34 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 /* ============================================================
    DIGITAL RIFT — EXPEDIENTE
    ============================================================ */
-
 .dr-ficha {
     --dr-cyan: var(--emblema2, #35d8ff);
     --dr-blue: var(--emblema1, #1677c8);
-
     --dr-bg: #070d14;
     --dr-panel: #0c151f;
     --dr-panel2: #101e2b;
-
     --dr-text: #edf8fb;
     --dr-muted: #8195a4;
     --dr-border: rgba(255,255,255,.10);
-
     width: 720px;
     max-width: 94%;
     margin: 30px auto;
     padding: 18px;
-
     box-sizing: border-box;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(22,119,200,.08),
-            transparent 35%,
-            rgba(53,216,255,.04)
-        ),
-        var(--dr-bg);
-
+    background: linear-gradient(145deg, rgba(22,119,200,.08), transparent 35%, rgba(53,216,255,.04)), var(--dr-bg);
     border: 1px solid var(--dr-border);
-
     color: var(--dr-text);
-
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-
     position: relative;
     overflow: hidden;
 }
 
-
-/* ============================================================
-   OCULTAR RADIO
-   ============================================================ */
-
-.dr-ficha > input[type="radio"] {
-    display: none;
-}
-
+.dr-ficha > input[type="radio"] {display: none;}/*OCULTAR RADIO*/
 
 /* ============================================================
    DECORACIÓN SUPERIOR
    ============================================================ */
-
 .dr-dots {
     height: 10px;
     display: flex;
@@ -11100,95 +10932,59 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     opacity: .7;
 }
 
-.dr-dots i:nth-child(2) {
-    opacity: .45;
-}
-
-.dr-dots i:nth-child(3) {
-    opacity: .2;
-}
-
+.dr-dots i:nth-child(2) {opacity: .45;}
+.dr-dots i:nth-child(3) {opacity: .2;}
 
 /* ============================================================
    CABECERA
    ============================================================ */
-
 .dr-head {
     height: 174px;
     position: relative;
     overflow: hidden;
-
     border-bottom: 2px solid var(--dr-cyan);
-
     background: #09131d;
 }
-
 .dr-head:after {
     content: "";
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(5,12,18,.05),
-            rgba(5,12,18,.82)
-        );
-
+    background: linear-gradient(to bottom, rgba(5,12,18,.05), rgba(5,12,18,.82));
     pointer-events: none;
 }
 
 .dr-head img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
 }
 
 .dr-head span {
     position: absolute;
     z-index: 2;
-
     left: 18px;
     bottom: 15px;
-
     padding: 5px 10px;
-
     color: var(--dr-cyan);
-
     border: 1px solid var(--dr-cyan);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-
     background: rgba(5,12,18,.65);
 }
-
 
 /* ============================================================
    NOMBRE
    ============================================================ */
-
 .dr-name {
     margin: 18px 0 25px;
     padding: 14px 17px;
-
     border: 1px solid rgba(53,216,255,.22);
-
-    background:
-        linear-gradient(
-            100deg,
-            rgba(22,119,200,.20),
-            rgba(53,216,255,.05)
-        );
-
+    background:linear-gradient(100deg, rgba(22,119,200,.20), rgba(53,216,255,.05));
     color: var(--dr-cyan);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 10px;
     font-weight: 700;
@@ -11196,34 +10992,20 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     text-transform: uppercase;
 }
 
-
 /* ============================================================
    PÁGINAS
    ============================================================ */
-
-.dr-page {
-    display: none;
-}
-
-#dr-tab1:checked ~ .dr-pages .dr-page1,
-#dr-tab2:checked ~ .dr-pages .dr-page2,
-#dr-tab3:checked ~ .dr-pages .dr-page3 {
-    display: block;
-}
-
+.dr-page {display: none;}
+#dr-tab1:checked ~ .dr-pages .dr-page1, #dr-tab2:checked ~ .dr-pages .dr-page2, #dr-tab3:checked ~ .dr-pages .dr-page3 {display: block;}
 
 /* ============================================================
    TÍTULOS
    ============================================================ */
-
 .dr-page h2 {
     margin: 25px 0 13px;
     padding-left: 15px;
-
     position: relative;
-
     color: var(--dr-cyan);
-
     font-family: 'Jersey 15', sans-serif;
     font-size: 25px;
     font-weight: 400;
@@ -11231,30 +11013,22 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     line-height: 1;
 }
 
-.dr-page h2:first-child {
-    margin-top: 0;
-}
+.dr-page h2:first-child {margin-top: 0;}
 
 .dr-page h2:before {
     content: "";
-
     width: 7px;
     height: 7px;
-
     position: absolute;
     left: 0;
     top: 7px;
-
     background: var(--dr-cyan);
-
     transform: rotate(45deg);
 }
-
 
 /* ============================================================
    DATOS
    ============================================================ */
-
 .dr-data {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11264,18 +11038,13 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .dr-data span {
     min-height: 70px;
     padding: 11px;
-
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     background: var(--dr-panel2);
-
     border: 1px solid var(--dr-border);
     border-top: 2px solid var(--dr-cyan);
-
     transition: .2s ease;
 }
 
@@ -11286,61 +11055,41 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-data b {
     margin-bottom: 7px;
-
     color: var(--dr-muted);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 8px;
     font-weight: 700;
-
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 .dr-data i {
     color: var(--dr-text);
-
     font-style: normal;
-
     font-size: 10px;
     line-height: 1.4;
 }
 
-
 /* ============================================================
    TEXTO
    ============================================================ */
-
 .dr-text {
     padding: 17px;
-
     box-sizing: border-box;
-
     background: var(--dr-panel);
-
     border: 1px solid var(--dr-border);
-
     color: #b9cbd4;
-
     font-size: 11px;
     line-height: 1.8;
-
     text-align: justify;
 }
 
-.dr-text p {
-    margin: 0 0 12px;
-}
-
-.dr-text p:last-child {
-    margin-bottom: 0;
-}
-
+.dr-text p {margin: 0 0 12px;}
+.dr-text p:last-child {margin-bottom: 0;}
 
 /* ============================================================
    BLOQUES DE INFORMACIÓN
    ============================================================ */
-
 .dr-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -11349,34 +11098,25 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-info > div {
     padding: 16px;
-
     background: var(--dr-panel);
-
     border: 1px solid var(--dr-border);
-
     position: relative;
 }
 
 .dr-info > div:before {
     content: ">";
-
     position: absolute;
     top: 12px;
     right: 14px;
-
     color: var(--dr-cyan);
-
     font-family: monospace;
     font-weight: bold;
 }
 
 .dr-info b {
     display: block;
-
     margin-bottom: 9px;
-
     color: var(--dr-cyan);
-
     font-family: 'Jersey 15', sans-serif;
     font-size: 19px;
     font-weight: 400;
@@ -11385,83 +11125,59 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-info p {
     margin: 0;
-
     color: #aabdc7;
-
     font-size: 10px;
     line-height: 1.7;
     text-align: justify;
 }
 
-
 /* ============================================================
    DIGIMON
    ============================================================ */
-
 .dr-digimon {
     display: grid;
     grid-template-columns: 220px 1fr;
     gap: 10px;
 }
 
-
 /* TARJETA DEL DIGIMON */
-
 .dr-digimon-card {
     min-height: 330px;
-
     padding: 12px;
-
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-
     position: relative;
     overflow: hidden;
-
     background: var(--dr-panel2);
-
     border: 1px solid var(--dr-border);
 }
 
 .dr-digimon-card:after {
     content: "";
-
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(5,12,18,.95),
-            transparent 65%
-        );
-
+    background: linear-gradient(to top, rgba(5,12,18,.95), transparent 65%);
     pointer-events: none;
 }
 
 .dr-digimon-card img {
     width: 100%;
     height: 100%;
-
     position: absolute;
     inset: 0;
-
     object-fit: cover;
 }
 
-.dr-digimon-card strong,
-.dr-digimon-card small {
+.dr-digimon-card strong, .dr-digimon-card small {
     position: relative;
     z-index: 2;
 }
 
 .dr-digimon-card strong {
     color: #fff;
-
     font-family: 'Jersey 15', sans-serif;
     font-size: 27px;
     font-weight: 400;
@@ -11470,9 +11186,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-digimon-card small {
     margin-top: 3px;
-
     color: var(--dr-cyan);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 7px;
     font-weight: 700;
@@ -11480,38 +11194,27 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     text-transform: uppercase;
 }
 
-
 /* CONTENIDO DIGIMON */
-
-.dr-digimon-content {
-    min-width: 0;
-}
+.dr-digimon-content {min-width: 0;}
 
 .dr-data-small {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 12px;
 }
 
-.dr-data-small span {
-    min-height: 55px;
-}
-
+.dr-data-small span {min-height: 55px;}
 .dr-digimon-content h3 {
     margin: 13px 0 7px;
-
     color: var(--dr-cyan);
-
     font-family: 'Jersey 15', sans-serif;
     font-size: 19px;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
-
 /* ============================================================
    ESTADÍSTICAS
    ============================================================ */
-
 .dr-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -11520,21 +11223,16 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-stats span {
     padding: 13px 7px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background: var(--dr-panel2);
-
     border: 1px solid var(--dr-border);
-
     text-align: center;
 }
 
 .dr-stats b {
     color: var(--dr-muted);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 8px;
     letter-spacing: 1px;
@@ -11542,22 +11240,42 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-stats i {
     margin-top: 5px;
-
     color: var(--dr-cyan);
-
     font-family: 'Jersey 15', sans-serif;
     font-size: 23px;
     font-style: normal;
 }
+.dr-stats2 {margin-top: 7px;}
 
+.dr-stats2 span {
+    padding: 13px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+    text-align: center;
+}
 
+.dr-stats2 b {
+    color: var(--dr-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.dr-stats2 i {
+    margin-top: 5px;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 23px;
+    font-style: normal;
+}
 /* ============================================================
    PESTAÑAS
    ============================================================ */
-
 .dr-tabs {
     margin-top: 25px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
@@ -11565,32 +11283,22 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .dr-tabs label {
     padding: 12px 8px;
-
     background: var(--dr-panel2);
-
     border: 1px solid var(--dr-border);
-
     color: var(--dr-muted);
-
     font-family: 'Oxanium', sans-serif;
     font-size: 9px;
     font-weight: 700;
-
     letter-spacing: 1px;
     text-align: center;
-
     cursor: pointer;
-
     transition: .2s ease;
 }
 
 .dr-tabs label small {
     display: block;
-
     margin-bottom: 3px;
-
     color: var(--dr-muted);
-
     font-size: 7px;
 }
 
@@ -11599,81 +11307,35 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     border-color: rgba(53,216,255,.35);
 }
 
-
 /* PESTAÑA ACTIVA */
-
-#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"],
-#dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"],
-#dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] {
+#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"], #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"], #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] {
     color: var(--dr-cyan);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(22,119,200,.25),
-            rgba(53,216,255,.08)
-        );
-
+    background: linear-gradient(135deg, rgba(22,119,200,.25),rgba(53,216,255,.08));
     border-color: var(--dr-cyan);
 }
 
-#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"] small,
-#dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"] small,
-#dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] small {
-    color: var(--dr-cyan);
-}
-
-
+#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"] small, #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"] small, #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] small {color: var(--dr-cyan);}
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-
 @media (max-width: 650px) {
-
     .dr-ficha {
         width: 96%;
         padding: 12px;
     }
-
-    .dr-data {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .dr-info {
-        grid-template-columns: 1fr;
-    }
-
-    .dr-digimon {
-        grid-template-columns: 1fr;
-    }
-
+    .dr-data {grid-template-columns: repeat(2, 1fr);}
+    .dr-info {grid-template-columns: 1fr;}
+    .dr-digimon {grid-template-columns: 1fr;}
     .dr-digimon-card {
         height: 300px;
         min-height: 300px;
     }
-
-    .dr-stats {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
+    .dr-stats {grid-template-columns: repeat(5, 1fr);}
 }
 
 @media (max-width: 450px) {
-
-    .dr-head {
-        height: 140px;
-    }
-
-    .dr-data {
-        grid-template-columns: 1fr;
-    }
-
-    .dr-stats {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .dr-tabs label {
-        font-size: 8px;
-    }
-
+    .dr-head {height: 140px;}
+    .dr-data {grid-template-columns: 1fr;}
+    .dr-stats {grid-template-columns: repeat(3, 1fr);}
+    .dr-tabs label {font-size: 8px;}
 }
