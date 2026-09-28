@@ -11064,6 +11064,33 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     font-size: 23px;
     font-style: normal;
 }
+
+.dr-stats3 {padding: 6px 0px 0px;}
+
+.dr-stats3 span {
+    padding: 13px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+    text-align: center;
+}
+
+.dr-stats3 b {
+    color: var(--dr-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.dr-stats3 i {
+    margin-top: 5px;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 23px;
+    font-style: normal;
+}
 /* ============================================================
    PESTAÑAS
    ============================================================ */
