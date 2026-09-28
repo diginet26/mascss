@@ -11038,7 +11038,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     font-size: 23px;
     font-style: normal;
 }
-.dr-stats2 {margin-top: 7px;}
+.dr-stats2 {padding: 0px 0px 6px;}
 
 .dr-stats2 span {
     padding: 13px 7px;
