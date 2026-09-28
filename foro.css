@@ -11169,526 +11169,849 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     gap: 1rem !important;
 }
 
-/* ficha expediente */
-
 /* =========================================================
-   FORO — FICHA DE PERSONAJE
+   FICHA DE PERSONAJE
    ========================================================= */
 
-.foro-ficha {
-    --foro-bg: #151817;
-    --foro-panel: #202523;
-    --foro-panel2: #252b29;
-    --foro-border: rgba(255, 255, 255, .13);
-    --foro-text: #e9eeeb;
-    --foro-muted: #9fa9a4;
-    --foro-dark: #101211;
+.ficha {
+
+    --bg: #151817;
+    --panel: #202523;
+    --panel2: #252b29;
+    --dark: #101211;
+    --border: rgba(255,255,255,.13);
+    --text: #e9eeeb;
+    --muted: #9fa9a4;
+
     width: 63.333em;
     margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    background: var(--foro-bg);
-    color: var(--foro-text);
+
+    background: var(--bg);
+    color: var(--text);
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    border: 1px solid var(--foro-border);
-    box-shadow: 0 1.25em 3.333em rgba(0, 0, 0, .45);
-    position: relative;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 1.25em 3.333em rgba(0,0,0,.45);
+
     overflow: hidden;
-}
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
-.foro-ficha *,
-.foro-ficha *::before,
-.foro-ficha *::after {
     box-sizing: border-box;
 }
 
-.foro-ficha br { display: none; }
-.foro-ficha input { display: none; }
-.foro-ficha h1, .foro-ficha h2, .foro-ficha h3, .foro-ficha p { margin: 0; padding: 0; }
+
+.ficha *,
+.ficha *::before,
+.ficha *::after {
+
+    box-sizing: border-box;
+
+}
+
+
+.ficha br {
+
+    display: none;
+
+}
+
+
+.ficha input {
+
+    display: none;
+
+}
+
+
+.ficha h2,
+.ficha h3,
+.ficha p {
+
+    margin: 0;
+    padding: 0;
+
+}
 
 
 /* =========================================================
    CABECERA
    ========================================================= */
 
-.foro-header {
+.ficha-header {
+
     height: 12.917em;
+
     position: relative;
+
     display: flex;
     align-items: flex-end;
+
     overflow: hidden;
-    background: linear-gradient(115deg, var(--foro-panel), #111514);
-    border-bottom: 1px solid var(--foro-border);
-}
 
-.foro-header-image {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(16, 18, 17, .95) 0%, rgba(16, 18, 17, .72) 45%, rgba(16, 18, 17, .18) 100%), url("https://imgur.com/89JjQfJ.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: .65;
-}
-
-.foro-header-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
     padding: 2.083em 2.917em;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            115deg,
+            var(--panel),
+            #111514
+        );
+
 }
 
-.foro-smalltitle {
-    color: var(--emblema2);
-    font-size: .75em;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .25em;
-    margin-bottom: .667em;
+
+.ficha-header > img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: .55;
+
 }
 
-.foro-name {
+
+.ficha-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16,18,17,.95) 0%,
+            rgba(16,18,17,.72) 45%,
+            rgba(16,18,17,.18) 100%
+        );
+
+}
+
+
+.ficha-name {
+
+    position: relative;
+
+    z-index: 2;
+
     color: #fff;
+
     font-size: 2.583em;
     font-weight: 900;
+
     line-height: .95;
+
     text-transform: uppercase;
+
     letter-spacing: -.083em;
+
 }
 
-.foro-name span { color: var(--emblema1); }
 
-.foro-quote {
-    margin-top: 1em;
-    color: var(--foro-muted);
-    font-size: .833em;
-    font-style: italic;
-    letter-spacing: .042em;
+.ficha-name b {
+
+    display: inline;
+
 }
 
-.foro-emblema {
-    position: absolute;
-    right: 2.333em;
-    bottom: 2.083em;
-    width: 4.833em;
-    height: 4.833em;
-    border: 1px solid var(--emblema2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.ficha-name span {
+
     color: var(--emblema1);
-    font-size: 1.833em;
-    background: rgba(15, 18, 17, .8);
+
+}
+
+
+.ficha-header > i {
+
+    position: absolute;
+
+    left: 2.917em;
+    bottom: 1.7em;
+
+    z-index: 2;
+
+    color: var(--muted);
+
+    font-size: .833em;
+
+    letter-spacing: .042em;
+
 }
 
 
 /* =========================================================
-   NAVEGACIÓN
+   CONTENIDO
    ========================================================= */
 
-.foro-tabs {
-    min-height: 4em;
-    display: flex;
-    background: var(--foro-dark);
-    border-bottom: 1px solid var(--foro-border);
+.ficha-body {
+
+    position: relative;
+
 }
 
-.foro-tabs label {
-    flex: 1;
+
+.ficha-body > div {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   PESTAÑAS
+   ========================================================= */
+
+.ficha-bottom {
+
+    min-height: 4em;
+
     display: flex;
+
+    background: var(--dark);
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.ficha-bottom label {
+
+    flex: 1;
+
+    display: flex;
+
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
-    color: var(--foro-muted);
+
+    color: var(--muted);
+
     font-size: .75em;
     font-weight: 800;
+
     letter-spacing: .167em;
+
     text-transform: uppercase;
-    border-right: 1px solid var(--foro-border);
+
+    border-right: 1px solid var(--border);
+
     transition: .25s ease;
+
 }
 
-.foro-tabs label:last-child { border-right: 0; }
 
-.foro-tabs label:hover {
+.ficha-bottom label:last-child {
+
+    border-right: 0;
+
+}
+
+
+.ficha-bottom label:hover {
+
     color: var(--emblema1);
-    background: var(--foro-panel);
-}
 
-#foro-tab1:checked ~ .foro-tabs label[for="foro-tab1"], #foro-tab2:checked ~ .foro-tabs label[for="foro-tab2"], #foro-tab3:checked ~ .foro-tabs label[for="foro-tab3"] {
-    color: #fff;
-    background: var(--emblema2);
+    background: var(--panel);
+
 }
 
 
 /* =========================================================
-   CONTENIDO GENERAL
+   ACTIVAR PESTAÑAS
    ========================================================= */
 
-.foro-pages { position: relative; }
+#ficha1:checked ~ .ficha-body .ficha-basic {
 
-.foro-page {
-    display: none;
-    min-height: 40.833em;
-}
-
-#foro-tab1:checked ~ .foro-pages .foro-page1 { display: block; }
-#foro-tab2:checked ~ .foro-pages .foro-page2 { display: block; }
-#foro-tab3:checked ~ .foro-pages .foro-page3 { display: block; }
-
-
-/* =========================================================
-   PESTAÑA 1 — EXPEDIENTE
-   ========================================================= */
-
-.foro-basic {
     display: grid;
-    grid-template-columns: 19.4em 1fr;
-    min-height: 40.833em;
+
 }
 
-.foro-sidebar {
-    background: #111413;
-    border-right: 1px solid var(--foro-border);
-    padding: 0;
-    overflow: hidden;
-}
 
-.foro-sidebar-image {
-    width: 100%;
-    height: 100%;
-    min-height: 40.833em;
+#ficha2:checked ~ .ficha-body .ficha-history {
+
     display: block;
-    object-fit: cover;
+
 }
 
-.foro-about {
-    padding: 2.083em;
-    background: var(--foro-panel);
+
+#ficha3:checked ~ .ficha-body .ficha-digimon {
+
+    display: grid;
+
 }
 
-.foro-section-title {
+
+#ficha1:checked ~ .ficha-bottom label[for="ficha1"],
+#ficha2:checked ~ .ficha-bottom label[for="ficha2"],
+#ficha3:checked ~ .ficha-bottom label[for="ficha3"] {
+
+    color: #fff;
+
+    background: var(--emblema2);
+
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.ficha-info h2,
+.ficha-history > h2 {
+
     display: flex;
+
     align-items: center;
+
     gap: .833em;
-    color: var(--foro-text);
+
+    color: var(--text);
+
     font-size: 1.5em;
     font-weight: 900;
+
     text-transform: uppercase;
+
     letter-spacing: -.083em;
+
     margin-bottom: 1.5em;
+
 }
 
-.foro-section-title::after {
+
+.ficha-info h2::after,
+.ficha-history > h2::after {
+
     content: "";
+
     flex: 1;
+
     height: 1px;
+
     background: var(--emblema2);
+
 }
 
-.foro-section-title span { color: var(--emblema1); }
 
-.foro-description {
-    color: var(--foro-muted);
-    font-size: .917em;
-    line-height: 1.65;
-    text-align: justify;
-    margin-bottom: 2.083em;
-}
+.ficha-info h2:first-child {
 
-.foro-description b { color: var(--emblema1); }
+    margin-top: 0;
 
-.foro-basic-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .083em;
-    background: var(--foro-border);
-    border: 1px solid var(--foro-border);
-}
-
-.foro-basic-card {
-    min-height: 6em;
-    padding: 1.083em;
-    background: var(--foro-panel2);
-}
-
-.foro-basic-card b {
-    display: block;
-    color: var(--emblema2);
-    font-size: .583em;
-    text-transform: uppercase;
-    letter-spacing: .125em;
-    margin-bottom: .583em;
-}
-
-.foro-basic-card span {
-    color: var(--foro-text);
-    font-size: .917em;
-    font-weight: 700;
 }
 
 
 /* =========================================================
-   PESTAÑA 2 — HISTORIA
+   BÁSICO
    ========================================================= */
 
-.foro-history {
-    display: block;
-    min-height: 45.833em;
-}
+.ficha-basic {
 
-.foro-history-content {
-    padding: 2.083em;
-    background: var(--foro-panel);
-}
+    grid-template-columns: 19.4em 1fr;
 
-.foro-history-text {
-    color: var(--foro-muted);
-    font-size: .917em;
-    line-height: 1.7;
-    text-align: justify;
-    max-height: 21.667em;
-    overflow-y: auto;
-    padding-right: 1em;
-    margin-bottom: 1.667em;
-}
+    min-height: 40.833em;
 
-.foro-history-text::-webkit-scrollbar { width: 3px; }
-.foro-history-text::-webkit-scrollbar-thumb { background: var(--emblema2); }
-
-.foro-history-blocks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .667em;
-}
-
-.foro-history-box {
-    padding: 1.083em;
-    min-height: 7.5em;
-    background: var(--foro-panel2);
-    border: 1px solid var(--foro-border);
-    border-top: 2px solid var(--emblema2);
-}
-
-.foro-history-box h3 {
-    color: var(--emblema1);
-    font-size: .75em;
-    text-transform: uppercase;
-    letter-spacing: .083em;
-    margin-bottom: .583em;
-}
-
-.foro-history-box p {
-    color: var(--foro-muted);
-    font-size: .75em;
-    line-height: 1.45;
-    text-align: justify;
-}
-
-.foro-family {
-    margin-top: .667em;
-    padding: 1em;
-    border: 1px dashed var(--emblema2);
-    color: var(--foro-muted);
-    font-size: .75em;
-    line-height: 1.45;
 }
 
 
-/* =========================================================
-   PESTAÑA 3 — DIGIMON
-   ========================================================= */
+.ficha-basic > img {
 
-.foro-digimon {
-    display: grid;
-    grid-template-columns: 18.333em 1fr;
-    min-height: 46.667em;
-}
-
-.foro-digimon-side {
-    background: #101312;
-    border-right: 1px solid var(--foro-border);
-    padding: 1.25em;
-}
-
-.foro-digimon-image {
-    width: 100%;
-    height: 18.333em;
-    background: linear-gradient(145deg, var(--emblema2), #111);
-    border: 1px solid var(--emblema2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.foro-digimon-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-}
 
-.foro-digimon-name {
-    margin-top: 1.25em;
-    color: #fff;
-    font-size: 2em;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -.083em;
-}
+    min-height: 40.833em;
 
-.foro-digimon-name span {
     display: block;
-    color: var(--emblema1);
-    font-size: .667em;
-    letter-spacing: .167em;
-    margin-top: .333em;
-}
 
-.foro-digimon-data {
-    margin-top: 1.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .417em;
-}
+    object-fit: cover;
 
-.foro-digimon-data div {
-    padding: .667em;
-    background: var(--foro-panel);
-    border: 1px solid var(--foro-border);
-}
+    background: #111413;
 
-.foro-digimon-data b {
-    display: block;
-    color: var(--emblema2);
-    font-size: .583em;
-    text-transform: uppercase;
-    margin-bottom: .333em;
-}
-
-.foro-digimon-data span {
-    font-size: .75em;
-    color: var(--foro-text);
 }
 
 
-/* =========================================================
-   ZONA DERECHA — DIGIMON
-   ========================================================= */
+.ficha-info {
 
-.foro-digimon-content {
     padding: 2.083em;
-    background: var(--foro-panel);
-}
 
-.foro-digimon-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.25em;
-}
+    background: var(--panel);
 
-.foro-digimon-title h2 {
-    color: var(--foro-text);
-    font-size: 1.583em;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.foro-digimon-title span {
-    color: var(--emblema1);
-    font-size: .667em;
-    text-transform: uppercase;
-    letter-spacing: .167em;
 }
 
 
-/* =========================================================
-   STATS
-   ========================================================= */
+.ficha-text {
 
-.foro-stats {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: .333em;
-    margin-bottom: 1.667em;
-}
+    color: var(--muted);
 
-.foro-stat {
-    padding: .833em .417em;
-    text-align: center;
-    background: var(--foro-dark);
-    border-bottom: 2px solid var(--emblema2);
-}
+    font-size: .917em;
 
-.foro-stat b {
-    display: block;
-    color: var(--emblema1);
-    font-size: .667em;
-    margin-bottom: .417em;
-}
-
-.foro-stat span {
-    color: #fff;
-    font-size: 1.417em;
-    font-weight: 900;
-}
-
-
-/* =========================================================
-   HISTORIA DIGIMON
-   ========================================================= */
-
-.foro-digimon-story {
-    overflow-y: auto;
-    padding-right: 1em;
-    color: var(--foro-muted);
-    font-size: .833em;
     line-height: 1.65;
+
     text-align: justify;
+
 }
 
-.foro-digimon-story::-webkit-scrollbar { width: 3px; }
-.foro-digimon-story::-webkit-scrollbar-thumb { background: var(--emblema2); }
 
-.foro-digimon-story h3 {
+.ficha-text b {
+
     color: var(--emblema1);
-    font-size: .833em;
-    text-transform: uppercase;
-    letter-spacing: .083em;
-    margin-top: 1.417em;
-    margin-bottom: .417em;
+
 }
 
-.foro-digimon-story h3:first-child { margin-top: 0; }
+
+.ficha-data {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+
+    margin-bottom: 1.5em;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.ficha-data span {
+
+    min-height: 6em;
+
+    padding: 1.083em;
+
+    background: var(--panel2);
+
+}
+
+
+.ficha-data b,
+.ficha-digimon-data b {
+
+    display: block;
+
+    color: var(--emblema2);
+
+    font-size: .583em;
+
+    text-transform: uppercase;
+
+    letter-spacing: .125em;
+
+    margin-bottom: .583em;
+
+}
+
+
+.ficha-data i,
+.ficha-digimon-data i {
+
+    color: var(--text);
+
+    font-size: .917em;
+
+    font-style: normal;
+
+    font-weight: 700;
+
+}
 
 
 /* =========================================================
-   FOOTER
+   HISTORIA
    ========================================================= */
 
-.foro-footer {
-    min-height: 2.917em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.25em;
-    background: #101211;
-    border-top: 1px solid var(--foro-border);
-    color: var(--foro-muted);
-    font-size: .583em;
-    text-transform: uppercase;
-    letter-spacing: .083em;
+.ficha-history {
+
+    min-height: 45.833em;
+
+    padding: 2.083em;
+
+    background: var(--panel);
+
 }
 
-.foro-footer b { color: var(--emblema2); }
-.foro-footer a { color: var(--linkc1); text-decoration: none; }
+
+.ficha-history > .ficha-text {
+
+    max-height: 21.667em;
+
+    overflow-y: auto;
+
+    padding-right: 1em;
+
+    margin-bottom: 1.667em;
+
+}
+
+
+.ficha-text::-webkit-scrollbar {
+
+    width: 3px;
+
+}
+
+
+.ficha-text::-webkit-scrollbar-thumb {
+
+    background: var(--emblema2);
+
+}
+
+
+.ficha-boxes {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: .667em;
+
+    margin-bottom: .667em;
+
+}
+
+
+.ficha-boxes span {
+
+    display: block;
+
+    min-height: 7.5em;
+
+    padding: 1.083em;
+
+    background: var(--panel2);
+
+    border: 1px solid var(--border);
+
+    border-top: 2px solid var(--emblema2);
+
+}
+
+
+.ficha-boxes b {
+
+    display: block;
+
+    color: var(--emblema1);
+
+    font-size: .75em;
+
+    text-transform: uppercase;
+
+    letter-spacing: .083em;
+
+    margin-bottom: .583em;
+
+}
+
+
+.ficha-boxes i {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: .75em;
+
+    line-height: 1.45;
+
+    font-style: normal;
+
+    text-align: justify;
+
+}
+
+
+.ficha-family {
+
+    padding: 1em;
+
+    margin-bottom: 2em;
+
+    border: 1px dashed var(--emblema2);
+
+    color: var(--muted);
+
+    font-size: .75em;
+
+    line-height: 1.45;
+
+}
+
+
+.ficha-family b {
+
+    color: var(--emblema1);
+
+}
+
+
+/* =========================================================
+   DIGIMON
+   ========================================================= */
+
+.ficha-digimon {
+
+    grid-template-columns: 18.333em 1fr;
+
+    min-height: 46.667em;
+
+}
+
+
+.ficha-digimon-main {
+
+    padding: 1.25em;
+
+    background: #101312;
+
+    border-right: 1px solid var(--border);
+
+}
+
+
+.ficha-digimon-main > img {
+
+    width: 100%;
+    height: 18.333em;
+
+    display: block;
+
+    object-fit: contain;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--emblema2),
+            #111
+        );
+
+    border: 1px solid var(--emblema2);
+
+}
+
+
+.ficha-digimon-name {
+
+    margin-top: 1.25em;
+
+}
+
+
+.ficha-digimon-name b {
+
+    display: block;
+
+    color: #fff;
+
+    font-size: 2em;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: -.083em;
+
+}
+
+
+.ficha-digimon-name span {
+
+    display: block;
+
+    margin-top: .333em;
+
+    color: var(--emblema1);
+
+    font-size: .667em;
+
+    letter-spacing: .167em;
+
+    text-transform: uppercase;
+
+}
+
+
+.ficha-digimon-data {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: .417em;
+
+    margin-top: 1.5em;
+
+}
+
+
+.ficha-digimon-data span {
+
+    padding: .667em;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.ficha-digimon-data b {
+
+    margin-bottom: .333em;
+
+}
+
+
+.ficha-digimon-data i {
+
+    font-size: .75em;
+
+}
+
+
+.ficha-digimon-info {
+
+    padding: 2.083em;
+
+    background: var(--panel);
+
+}
+
+
+.ficha-digimon-info > h2 {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1.25em;
+
+    color: var(--text);
+
+    font-size: 1.583em;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+}
+
+
+.ficha-digimon-info > h2 span {
+
+    color: var(--emblema1);
+
+    font-size: .667em;
+
+    font-weight: normal;
+
+    letter-spacing: .167em;
+
+}
+
+
+.ficha-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: .333em;
+
+    margin-bottom: 1.667em;
+
+}
+
+
+.ficha-stats span {
+
+    padding: .833em .417em;
+
+    text-align: center;
+
+    background: var(--dark);
+
+    border-bottom: 2px solid var(--emblema2);
+
+}
+
+
+.ficha-stats b {
+
+    display: block;
+
+    color: var(--emblema1);
+
+    font-size: .667em;
+
+    margin-bottom: .417em;
+
+}
+
+
+.ficha-stats i {
+
+    color: #fff;
+
+    font-size: 1.417em;
+
+    font-weight: 900;
+
+    font-style: normal;
+
+}
+
+
+.ficha-digimon-info .ficha-text {
+
+    max-height: 30em;
+
+    overflow-y: auto;
+
+    padding-right: 1em;
+
+}
+
+
+.ficha-text h3 {
+
+    color: var(--emblema1);
+
+    font-size: .833em;
+
+    text-transform: uppercase;
+
+    letter-spacing: .083em;
+
+    margin-top: 1.417em;
+
+    margin-bottom: .417em;
+
+}
+
+
+.ficha-text h3:first-child {
+
+    margin-top: 0;
+
+}
 
 
 /* =========================================================
@@ -11696,26 +12019,85 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
    ========================================================= */
 
 @media (max-width: 800px) {
-    .foro-ficha { width: 95%; }
+
+    .ficha {
+
+        width: 95%;
+
+    }
+
 }
 
+
 @media (max-width: 600px) {
-    .foro-basic, .foro-history, .foro-digimon { grid-template-columns: 1fr; }
 
-    .foro-sidebar, .foro-digimon-side {
+    .ficha-basic,
+    .ficha-digimon {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .ficha-basic > img {
+
+        min-height: 25em;
+        height: 25em;
+
+    }
+
+
+    .ficha-digimon-main {
+
         border-right: 0;
-        border-bottom: 1px solid var(--foro-border);
+
+        border-bottom: 1px solid var(--border);
+
     }
 
-    .foro-digimon-side {
-        display: grid;
-        grid-template-columns: 11.667em 1fr;
-        gap: 1.25em;
+
+    .ficha-digimon-main > img {
+
+        height: 15em;
+
     }
 
-    .foro-digimon-image { height: 12.5em; }
-    .foro-digimon-data { margin-top: 0; }
-    .foro-header { height: 15em; }
-    .foro-header-content { padding: 1.667em; }
-    .foro-name { font-size: 2em; }
+
+    .ficha-data,
+    .ficha-boxes {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .ficha-stats {
+
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
+
+    .ficha-header {
+
+        height: 15em;
+
+        padding: 1.667em;
+
+    }
+
+
+    .ficha-header > i {
+
+        left: 1.667em;
+
+    }
+
+
+    .ficha-name {
+
+        font-size: 2em;
+
+    }
+
 }
