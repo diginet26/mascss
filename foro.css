@@ -9362,19 +9362,6 @@ blockquote blockquote {
     letter-spacing: .04em;
 }
 
-/* CADA CONTADOR ES INDEPENDIENTE */
-.digimon-stats-counters > .digimon-counter {
-    width: auto !important;
-    min-width: 0 !important;
-    min-height: 150px !important;
-    height: 150px !important;
-    margin: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-}
-
 /* =========================================================
    INFORMACIÓN SECUNDARIA
    ========================================================= */
@@ -10058,45 +10045,6 @@ blockquote blockquote {
 #digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-thumb {
     background:linear-gradient(180deg, var(--linkc1), var(--linkc2));
     border-radius: 1rem;
-}
-/* =========================================================
-   STAT COUNTERS   TERMINAL DATA STYLE
-   ========================================================= */
-/*#digimon-statistics .digimon-stats-counters > .digimon-counter {
-    position: relative;
-    overflow: hidden;
-}*/
-
-/*LÍNEA DE DATOS SUPERIOR*/
-
-/*#digimon-statistics .digimon-stats-counters > .digimon-counter::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 8rem;
-    height: .1rem;
-    background:linear-gradient(90deg, var(--linkc1), transparent);
-    opacity: .9;
-}*/
-
-/*PEQUEÑOS PÍXELES DECORATIVOS*/
-/*#digimon-statistics .digimon-stats-counters > .digimon-counter::after {
-    content: "";
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    width: .3rem;
-    height: .3rem;
-    background: var(--linkc1);
-    box-shadow: -.8rem .5rem 0 var(--linkc2), .5rem -.7rem 0 color-mix(in srgb, var(--linkc1) 65%, transparent);
-    opacity: .7;
-}*/
-
-/*ICONOS*/
-#digimon-statistics .digimon-stats-counters .digimon-counter-icon {
-    position: relative;
-    z-index: 2;
 }
 
 #digimon-statistics .digimon-counter-data > span {letter-spacing: .12em;}/*ETIQUETA*/
