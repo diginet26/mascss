@@ -11084,6 +11084,67 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     border-color: rgba(53,216,255,.35);
 }
 
+/* =========================================================
+   HEADER
+   ========================================================= */
+.dr-ficha .dr-cabeza {
+    position: relative;
+    min-height: 174px;
+    padding: 35px 40px 30px;
+    background: linear-gradient(90deg, rgba(8,15,24,.98) 0%, rgba(8,15,24,.87) 48%, rgba(8,15,24,.55) 100%        );
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--emblema1);
+}
+
+/* línea tecnológica */
+.dr-ficha.dr-cabeza:after {
+    content: "";
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    width: 160px;
+    height: 2px;
+    background: var(--emblema2);
+    box-shadow: 0 0 12px rgba(34,193,195,.5);
+}
+
+/* etiqueta */
+.dr-ficha .dr-label {
+    display: inline-block;
+    padding: 3px 9px;
+    margin-bottom: 10px;
+    border: 1px solid var(--emblema2);
+    color: var(--emblema2);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* título */
+.dr-ficha .dr-title {
+    margin: 0;
+    color: #fff;
+    font-family: 'Player Sans', 'Arial Narrow', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* subtítulo */
+.dr-ficha .dr-subtitle {
+    margin-top: 9px;
+    color: var(--dg-muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.dr-tadmin .dr-subtitle b {color: var(--emblema2);}
+
+
 /* PESTAÑA ACTIVA */
 #dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"], #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"], #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] {
     color: var(--dr-cyan);
