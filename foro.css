@@ -9211,6 +9211,38 @@ blockquote blockquote {
     line-height: 1.35;
 }
 
+.digimon-stats-secondary .digimon-counter:nth-child(2) {
+    justify-content: center;
+    gap: 0.857rem;
+}
+
+.digimon-stats-secondary .digimon-counter:nth-child(2) .digimon-counter-icon {
+    width: 2.143rem;
+    height: 2.143rem;
+    font-size: 0.857rem;
+}
+
+.digimon-stats-secondary .digimon-counter:nth-child(2) .digimon-counter-data {
+    display: flex;
+    align-items: baseline;
+    gap: 0.571rem;
+    width: auto;
+}
+
+.digimon-stats-secondary .digimon-counter:nth-child(2) .digimon-counter-data strong {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.digimon-stats-secondary .digimon-counter:nth-child(2) .digimon-counter-data small {
+    display: inline;
+    margin-top: 0;
+    color: var(--text-color);
+    opacity: 1;
+    font-size: 0.5rem;
+}
+
 /* =========================================================
    GRUPOS
    ========================================================= */
