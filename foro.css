@@ -8884,8 +8884,7 @@ blockquote blockquote {
     position: relative !important;
 }
 
-.digimon-stats-24h .digimon-window-header {flex-shrink: 0 !important;}/* CABECERA */
-.digimon-stats-24h .digimon-window-header {padding: 0.571rem 1rem !important;}
+.digimon-stats-24h .digimon-window-header {flex-shrink: 0 !important; padding: 0.571rem 1rem !important;}/* CABECERAS */
 /* CONTENIDO */
 .digimon-stats-24h-content {
     min-height: 0 !important;
