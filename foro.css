@@ -6790,24 +6790,6 @@ blockquote blockquote {
     overflow: visible;
 }
 
-
-/* ---------------------------------------------------------
-   FORO PRINCIPAL — IZQUIERDA
-   --------------------------------------------------------- */
-
-.digimon-forum-card:has(.rasymforum) {
-    grid-column: 1 / span 2 !important;
-    grid-row: 1 / span 2 !important;
-
-    min-width: 0;
-    min-height: 520px;
-
-    position: relative;
-    overflow: visible !important;
-    z-index: 4;
-}
-
-
 /* ---------------------------------------------------------
    CONTENIDO DEL FORO PRINCIPAL
    --------------------------------------------------------- */
@@ -6819,166 +6801,98 @@ blockquote blockquote {
     overflow: visible !important;
 }
 
-
 /* ---------------------------------------------------------
    ZONA INTERNA DEL FORO PRINCIPAL
    --------------------------------------------------------- */
-
 .digimon-forum-card:has(.rasymforum) .rasymforum {
     position: relative;
     width: 100%;
     height: 100%;
     min-height: 520px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     overflow: visible !important;
-
     background: var(--colorfondo4);
 }
-
 
 /* ---------------------------------------------------------
    IMAGEN SUPERPUESTA
    --------------------------------------------------------- */
-
 .digimon-forum-card:has(.rasymforum) .rforimg {
     position: absolute;
-
     top: 0;
     left: 25%;
-
     width: 150%;
     height: 100%;
-
     background-size: contain;
     background-position: center right;
     background-repeat: no-repeat;
-
     opacity: 1;
-
     z-index: 5;
-
     pointer-events: none;
-
-    transition:
-        transform .6s ease,
-        opacity .6s ease;
+    transition: transform .6s ease, opacity .6s ease;
 }
 
-
-/* Quitamos los degradados originales de la imagen
-   para comprobar primero la superposición pura */
-
-.digimon-forum-card:has(.rasymforum) .rforimg::before,
-.digimon-forum-card:has(.rasymforum) .rforimg::after {
-    opacity: 0;
-}
-
+/* Quitamos los degradados originales de la imagen   para comprobar primero la superposición pura */
+.digimon-forum-card:has(.rasymforum) .rforimg::before, .digimon-forum-card:has(.rasymforum) .rforimg::after {opacity: 0;}
 
 /* ---------------------------------------------------------
    TEXTO DEL FORO PRINCIPAL
    --------------------------------------------------------- */
-
 .digimon-forum-card:has(.rasymforum) .rfordesc {
     position: relative;
     z-index: 6;
-
     width: 100%;
     margin: 0;
-
     padding: 260px 20px 20px;
-
     box-sizing: border-box;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 0%,
-            var(--colorfondo4) 65%
-        );
+    background: linear-gradient(180deg, transparent 0%, var(--colorfondo4) 65%);
 }
-
 
 /* ---------------------------------------------------------
    ENLACES
    --------------------------------------------------------- */
-
 .digimon-forum-card:has(.rasymforum) .rforlinks {
     position: relative;
     z-index: 7;
 }
 
-
 /* ---------------------------------------------------------
    LOS DOS FOROS DE LA DERECHA
    --------------------------------------------------------- */
-
 /* Primer foro de la derecha */
-
-.digimon-forum-card:has(.rasymforum)
-+ .digimon-forum-card {
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card {
     grid-column: 3 / span 4 !important;
     grid-row: 1 !important;
-
     min-width: 0;
     min-height: 251px;
-
     position: relative;
     z-index: 2;
 }
-
 
 /* Segundo foro de la derecha */
-
-.digimon-forum-card:has(.rasymforum)
-+ .digimon-forum-card
-+ .digimon-forum-card {
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {
     grid-column: 3 / span 4 !important;
     grid-row: 2 !important;
-
     min-width: 0;
     min-height: 251px;
-
     position: relative;
     z-index: 2;
 }
-
 
 /* ---------------------------------------------------------
    ALTURA DE LOS FOROS DERECHOS
    --------------------------------------------------------- */
-
-.digimon-forum-card:has(.rasymforum)
-+ .digimon-forum-card
-.digimon-forum-content,
-
-.digimon-forum-card:has(.rasymforum)
-+ .digimon-forum-card
-+ .digimon-forum-card
-.digimon-forum-content {
-
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card .digimon-forum-content, .digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card .digimon-forum-content {
     min-height: 251px !important;
     height: 100%;
 }
 
-
-/* ---------------------------------------------------------
-   EVITAR QUE EL HOVER DE LA TARJETA DEFORME
-   LA COMPOSICIÓN
-   --------------------------------------------------------- */
-
-.digimon-forum-card:has(.rasymforum):hover {
-    transform: none;
-}
-
-
+.digimon-forum-card:has(.rasymforum):hover {transform: none;}/*EVITAR QUE EL HOVER DE LA TARJETA DEFORME   LA COMPOSICIÓN*/
 /* ---------------------------------------------------------
    RESPONSIVE
    --------------------------------------------------------- */
-
 @media screen and (max-width: 1000px) {
 
     .digimon-forums-grid:has(.rasymforum) {
