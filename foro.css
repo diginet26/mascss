@@ -10618,3 +10618,4 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+.digimon-index-footer { display: none; }/*elimina la navegacion antes de estadisticas*/
