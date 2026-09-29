@@ -10161,21 +10161,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 /* ---------------------------------------------------------
-   EFECTO DE ESCANEO
-   --------------------------------------------------------- */
-#digimon-statistics .digimon-online-content::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,.025) 50%, transparent 100%);
-    background-size: 100% 8rem;
-    pointer-events: none;
-    opacity: .45;
-    animation: digimon-online-scan 6s linear infinite;
-}
-
-@keyframes digimon-online-scan {0% {background-position: 0 -8rem;} 100% {background-position: 0 100%;}}
-/* ---------------------------------------------------------
    CONTENIDO POR ENCIMA DEL EFECTO
    --------------------------------------------------------- */
 #digimon-statistics .digimon-online-main, #digimon-statistics .digimon-online-details, #digimon-statistics .digimon-online-list {
@@ -10248,23 +10233,22 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 #digimon-statistics .digimon-online-content::before {
-    content: "" !important;
-    position: absolute !important;
-    top: -8rem !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 8rem !important;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 238, 255, .025) 35%, rgba(0, 238, 255, .07) 50%, rgba(0, 238, 255, .025) 65%, transparent 100%) !important;
-    pointer-events: none !important;
-    z-index: 1 !important;
-    animation: digimon-active-scan 6s linear infinite !important;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,238,255,.025) 35%, rgba(0,238,255,.07) 50%, rgba(0,238,255,.025) 65%, transparent 100%);
+    background-size: 100% 8rem;
+    pointer-events: none;
+    opacity: .45;
+    z-index: 1;
+    animation: digimon-active-scan 6s linear infinite;
 }
 
 #digimon-statistics .digimon-online-content > * {
     position: relative !important;
     z-index: 2 !important;
 }
-@keyframes digimon-active-scan {0% {top: -8rem;} 100% {top: 100%;}}
+@keyframes digimon-active-scan {0% {background-position: 0 -8rem;} 100% {background-position: 0 100%;}}
 /* ============================================================
    DIGITAL RIFT — EXPEDIENTE
    ============================================================ */
