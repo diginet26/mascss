@@ -10601,3 +10601,20 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     .dr-stats {grid-template-columns: repeat(3, 1fr);}
     .dr-tabs label {font-size: 8px;}
 }
+/*ICONO CATEGORIAS*/
+.digimon-forum-number {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.digimon-forum-number i {
+    font-size: 1.2rem;
+    animation: digimon-forum-icon-spin 4s linear infinite;
+}
+
+@keyframes digimon-forum-icon-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
