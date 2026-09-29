@@ -9104,13 +9104,13 @@ blockquote blockquote {
 
 .digimon-stats-24h {
     min-width: 0 !important;
-    height: 20rem !important;
-    min-height: 20rem !important;
+    height: 25rem !important;
+    min-height: 25rem !important;
     display: flex !important;
     flex-direction: column !important;
-    padding: 20px !important;
-    border: 1px solid var(--stats-border) !important;
-    border-radius: 12px !important;
+    padding: 1.25rem !important;
+    border: 0.063rem solid var(--stats-border) !important;
+    border-radius: 0.75rem !important;
     background: var(--stats-panel) !important;
     overflow: hidden !important;
     position: relative !important;
