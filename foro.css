@@ -6798,35 +6798,6 @@ blockquote blockquote {
 
 
 /* ---------------------------------------------------------
-   ANIMACIÓN DE APERTURA
-   --------------------------------------------------------- */
-
-/*.monomer-modal.monomer-open {
-    animation: digitalRiftPopup .25s ease-out !important;
-}
-
-
-@keyframes digitalRiftPopup {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translate(-50%, -48%)
-            scale(.96);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translate(-50%, -50%)
-            scale(1);
-    }
-}*/
-
-
-/* ---------------------------------------------------------
    MÓVIL
    --------------------------------------------------------- */
 @media (max-width: 600px) {
@@ -9236,6 +9207,12 @@ blockquote blockquote {
 #digimon-statistics {
     position: relative;
     overflow: hidden;
+}
+/*datos*/
+.digimon-stats-secondary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.714rem;
 }
 
 /* =========================================================
