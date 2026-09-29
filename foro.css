@@ -8997,7 +8997,26 @@ blockquote blockquote {
     overflow-wrap: anywhere;
 }
 
+.digimon-record-users {
+    align-items: center;
+}
 
+.digimon-record-users > div:last-child {
+    min-width: 0;
+    text-align: center;
+}
+
+.digimon-record-users h3 {
+    margin-top: 0;
+    font-size: 0.75rem;
+    line-height: 1.3;
+}
+
+.digimon-record-users small {
+    margin-top: 0.429rem;
+    font-size: 0.5rem;
+    line-height: 1.3;
+}
 
 /* =========================================================
    GRUPOS
