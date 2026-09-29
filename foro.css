@@ -8668,6 +8668,10 @@ blockquote blockquote {
 }
 
 .digimon-stats-online {border-radius: 0.714rem;}/*PANEL ACTIVE USERS*/
+#digimon-statistics .digimon-stats-online {
+    display: flex !important;
+    flex-direction: column !important;
+}
 
 /* CABECERA DE VENTANA */
 .digimon-window-header {
@@ -10260,8 +10264,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     position: relative !important;
     z-index: 2 !important;
 }
-@keyframes digimon-active-scan {0% {transform: translateY(0);} 100% {transform: translateY(calc(100% + 30rem));}}
-
+@keyframes digimon-active-scan {0% {top: -8rem;} 100% {top: 100%;}}
 /* ============================================================
    DIGITAL RIFT — EXPEDIENTE
    ============================================================ */
