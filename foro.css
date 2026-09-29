@@ -8868,8 +8868,8 @@ blockquote blockquote {
 
 .digimon-stats-24h {
     min-width: 0 !important;
-    height: 25rem !important;
-    min-height: 25rem !important;
+    height: auto !important;
+    min-height: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     padding: 1.25rem !important;
