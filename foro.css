@@ -8829,8 +8829,9 @@ blockquote blockquote {
 
 .digimon-stats-secondary .digimon-counter:first-child .digimon-counter-data strong {
     margin-top: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     line-height: 1.35;
+    white-space: nowrap;
 }
 
 .digimon-stats-secondary .digimon-counter:nth-child(2) {
