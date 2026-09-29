@@ -5689,6 +5689,7 @@ blockquote blockquote {
     border: 1px solid var(--stats-border);
     border-radius: 12px;
     background: var(--stats-panel);
+    border-radius: 0.714rem;
 }
 
 .digimon-stats-image {
@@ -8916,11 +8917,6 @@ blockquote blockquote {
 /* =========================================================
    BIENVENIDA
    ========================================================= */
-.digimon-stats-welcome {
-    min-height: 20rem;
-    border-radius: 0.714rem;
-}
-
 .digimon-stats-welcome-content {padding: 1.429rem;}
 .digimon-stats-welcome-content h3 {font-size: 1.714rem;}
 
