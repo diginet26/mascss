@@ -5668,15 +5668,6 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   BLOQUE PRINCIPAL
-   ========================================================= */
-.digimon-stats-main {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
-    gap: 20px;
-}
-
-/* =========================================================
    PANEL DE BIENVENIDA
   ========================================================= */
 .digimon-stats-welcome {
@@ -8878,14 +8869,6 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   BLOQUE PRINCIPAL
-   ========================================================= */
-.digimon-stats-main {
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: 1rem;
-}
-
-/* =========================================================
    BIENVENIDA
    ========================================================= */
 .digimon-stats-welcome-content {padding: 1.429rem;}
@@ -9061,10 +9044,21 @@ blockquote blockquote {
    ESTADÍSTICAS REESTRUCTURACIÓN VISUAL BLOQUE PRINCIPAL   BIENVENIDA + ÚLTIMAS 24 HORAS
    ========================================================= */
 .digimon-stats-main {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+.digimon-stats-top {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr) !important;
-    gap: 20px !important;
-    align-items: stretch !important;
+    gap: 1rem !important;
+}
+
+.digimon-stats-bottom {
+    display: grid !important;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) !important;
+    gap: 1rem !important;
 }
 
 .digimon-stats-welcome {
@@ -9211,7 +9205,7 @@ blockquote blockquote {
 /*datos*/
 .digimon-stats-secondary {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 0.714rem;
 }
 
