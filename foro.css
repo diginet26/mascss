@@ -7061,7 +7061,7 @@ blockquote blockquote {
 }
 
 /* ---------------------------------------------------------
-   NUEVA IMAGEN SUPERPUESTA
+   NUEVA IMAGEN SUPERPUESTA 
    --------------------------------------------------------- */
 
 .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
@@ -7148,22 +7148,7 @@ blockquote blockquote {
 .digimon-forum-card:has(.rasymforum) .digimon-forum-description {
     overflow: visible !important;
 }
-/* =========================================================
-   RASYMFORUM — PRUEBA POSICIÓN CULUMON
-   ========================================================= */
-.digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
-    top: -54%;
-    left: 75%;
-    width: 90%;
-    height: 100%;
 
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    z-index: 20;
-    pointer-events: none;
-}
 /* =========================================================
    RASYMFORUM — COMPOSICIÓN CON IMAGEN SUPERPUESTA
    ========================================================= */
@@ -7182,7 +7167,7 @@ blockquote blockquote {
 }
 
 /* ---------------------------------------------------------
-   CULUMON — IMAGEN DECORATIVA
+   CULUMON — IMAGEN DECORATIVA 
    --------------------------------------------------------- */
 
 .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
