@@ -8896,6 +8896,9 @@ blockquote blockquote {
     overflow: hidden !important;
     background: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px) !important;
     background-size: 2rem 2rem !important;
+    margin-left: -1.25rem !important;
+    margin-right: -1.25rem !important;
+    margin-bottom: -1.25rem !important;
 }
 
 /* TÍTULO + DESCRIPCIÓN */
