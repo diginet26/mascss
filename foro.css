@@ -4348,7 +4348,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* TÍTULO */
 #rift-header .rift-header-title {
     padding: 5px;
-    font: 500 120px/100% "Bungee", sans-serif;
+    font: 500 120px/100% "Jersey 15", sans-serif;
     letter-spacing: -7px;
     color: transparent;
     background: linear-gradient(45deg, transparent, var(--linkc1), var(--emblema2), transparent);
@@ -4368,7 +4368,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     text-align: right;
     line-height: 1;
     margin-top: 4px;
-    font-family: 'Jersey 15';
+    font-family: 'Oxanium';
     letter-spacing: 1px;
 }
 
