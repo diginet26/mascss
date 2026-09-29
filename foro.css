@@ -9188,6 +9188,29 @@ blockquote blockquote {
     letter-spacing: .04em;
 }
 
+.digimon-stats-secondary .digimon-counter:first-child {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.571rem;
+    text-align: center;
+}
+
+.digimon-stats-secondary .digimon-counter:first-child .digimon-counter-icon {
+    width: 2.143rem;
+    height: 2.143rem;
+    font-size: 0.857rem;
+}
+
+.digimon-stats-secondary .digimon-counter:first-child .digimon-counter-data {
+    width: 100%;
+}
+
+.digimon-stats-secondary .digimon-counter:first-child .digimon-counter-data strong {
+    margin-top: 0;
+    font-size: 0.8rem;
+    line-height: 1.35;
+}
+
 /* =========================================================
    GRUPOS
    ========================================================= */
