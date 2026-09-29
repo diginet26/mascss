@@ -8891,7 +8891,11 @@ blockquote blockquote {
     flex: 1 1 auto !important;
     display: flex !important;
     flex-direction: column !important;
-    padding: 22px !important;
+    padding: 1.571rem !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px) !important;
+    background-size: 2rem 2rem !important;
 }
 
 /* TÍTULO + DESCRIPCIÓN */
@@ -9193,16 +9197,6 @@ blockquote blockquote {
     transform: translateY(-.15rem);
     background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
     box-shadow: 0 0 .8rem color-mix(in srgb, currentColor 25%, transparent);
-}
-
-/* ---------------------------------------------------------
-   FONDO DE MONITOR
-   --------------------------------------------------------- */
-#digimon-statistics .digimon-stats-24h-content {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
-    background-size: 2rem 2rem;
 }
 
 /* ---------------------------------------------------------
