@@ -1569,3 +1569,9 @@
     .dr-stats {grid-template-columns: repeat(3, 1fr);}
     .dr-tabs label {font-size: 8px;}
 }
+
+/* MAPA */
+
+ .dr-map-interest-title { display: flex; align-items: center; min-height: 2.75rem; margin: 1.5rem 0 1rem; padding: .65rem 1rem; background: #287f82; border-radius: .4rem; color: #fff; font-size: .85rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; } .dr-map-interests { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .75rem; } .dr-map-interest { min-width: 0; padding: .5rem; background: #111b25; border: 1px solid #263442; border-radius: .5rem; overflow: hidden; } .dr-map-interest-image { width: 100%; height: 9rem; overflow: hidden; border-radius: .35rem; } .dr-map-interest-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; } .dr-map-interest:hover .dr-map-interest-image img { transform: scale(1.05); } .dr-map-interest-name { margin-top: .5rem; padding: .45rem .5rem; background: #287f82; border-radius: .3rem; color: #fff; font-size: .65rem; font-weight: 900; line-height: 1.2; letter-spacing: .05em; text-align: center; text-transform: uppercase; } .dr-map-interest-description { margin-top: .5rem; padding: .65rem .55rem; background: rgba(255,255,255,.025); border-left: 2px solid #42d4d4; color: #8996a2; font-size: .68rem; line-height: 1.55; text-align: justify; }
+
+@media (max-width: 40rem) .dr-map-interests { grid-template-columns: 1fr; } .dr-map-interest-image { height: 10rem; } } 
