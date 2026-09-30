@@ -26,7 +26,7 @@
 /* =========================================================
    DECORACIÓN SUPERIOR
    ========================================================= */
-.dr-tadmin:before {
+/*.dr-tadmin:before {
     content: "";
     display: block;
     padding: 7px 18px;
@@ -37,7 +37,7 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-}
+}*/
 
 /* pequeños indicadores */
 .dr-tadmin .dr-dots {
