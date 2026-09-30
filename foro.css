@@ -9064,7 +9064,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates-main {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     gap: 1.5rem;
     align-items: center;
 }
@@ -9075,7 +9075,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .digimon-affiliates-credits {
     grid-column: 1;
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9122,8 +9122,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     text-transform: uppercase;
 }
 
-.digimon-affiliates-credits h3::before,
-.digimon-affiliates-credits h3::after {
+.digimon-affiliates-credits h3::before, .digimon-affiliates-credits h3::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -9133,14 +9132,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     box-shadow: 0 0 5px var(--theme-accent1);
 }
 
-.digimon-affiliates-credits h3::before {
-    right: 100%;
-}
-
-.digimon-affiliates-credits h3::after {
-    left: 100%;
-}
-
+.digimon-affiliates-credits h3::before {right: 100%;}
+.digimon-affiliates-credits h3::after {left: 100%;}
 .digimon-affiliates-credits-text {
     max-width: 34rem;
     margin: 0;
@@ -9152,7 +9145,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .digimon-affiliates-siblings {
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
 }
 
 .digimon-affiliates-siblings-list {
@@ -9163,7 +9156,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .digimon-affiliates-elite {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
 }
 
 .digimon-affiliates-elite-list {
