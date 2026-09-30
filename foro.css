@@ -9170,8 +9170,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates-directory {
     grid-column: 1 / -1;
     grid-row: 3;
-    padding-top: 1rem;
-    border-top: 1px solid var(--theme-border);
 }
 
 .digimon-affiliates-siblings h3, .digimon-affiliates-elite h3, .digimon-affiliates-directory h3 {
