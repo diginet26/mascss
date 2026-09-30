@@ -10656,9 +10656,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     color: var(--text-color);
 }
 
-.digimon-affiliates-credits p {
+.digimon-affiliates-credits-text {
     max-width: 32rem;
-    margin: 0 auto;
     font-size: 0.7rem;
     line-height: 1.4;
     color: var(--text-color);
