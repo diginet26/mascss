@@ -9265,3 +9265,31 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     display: block;
     max-width: 100%;
 }
+/*icono navbar afiliados*/
+.digimon-affiliates-nav > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--theme-accent1);
+    border: 1px solid var(--theme-border);
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
+    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    animation: digimon-affiliates-network 4s ease-in-out infinite;
+}
+
+.digimon-affiliates-nav > i:hover {
+    color: var(--theme-accent2);
+    border-color: var(--theme-accent2);
+    box-shadow: 0 0 0.75rem rgba(150, 80, 255, 0.3);
+    transform: rotate(15deg) scale(1.08);
+}
+
+@keyframes digimon-affiliates-network {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
