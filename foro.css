@@ -10651,3 +10651,11 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     grid-column: 1 / -1;
     grid-row: 2;
 }
+
+.digimon-affiliates {
+    background: var(--theme-panel);
+    border: 1px solid var(--theme-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
