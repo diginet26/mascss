@@ -10622,7 +10622,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-index-tools { display: none; }/*elimina la navegacion antes de las categorias*/
 
 /* ================= AFILIADOS Y CRÉDITOS ================= */
-
 .digimon-affiliates {
     width: 100%;
     margin: 2rem 0 0;
@@ -10656,3 +10655,35 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     grid-column: 1 / -1;
     grid-row: 2;
 }
+
+.digimon-affiliates-nav {
+    width: 100%;
+    padding: 0 0 1rem;
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid var(--theme-border);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.digimon-affiliates-nav .linklist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.digimon-affiliates-nav .linklist li {
+    margin: 0;
+    padding: 0;
+}
+
+.digimon-affiliates-nav .linklist a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.digimon-affiliates-nav .linklist a:hover {color: var(--theme-accent1);}
