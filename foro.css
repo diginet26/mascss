@@ -10641,6 +10641,27 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates-credits {
     grid-column: 1;
     grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.digimon-affiliates-credits h3 {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.digimon-affiliates-credits p {
+    max-width: 32rem;
+    margin: 0 auto;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: var(--text-color);
 }
 
 .digimon-affiliates-side {
