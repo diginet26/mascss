@@ -1589,3 +1589,11 @@
 .dr-map-interest-description:before { content: "DATA // "; color: #42d4d4; font-size: .52rem; font-weight: 900; letter-spacing: .08em; } 
 
 @media (max-width: 40rem) .dr-map-interests { grid-template-columns: 1fr; } .dr-map-interest-image { height: 10rem; } .dr-map-interest-title:after { display: none; } } 
+
+
+/* CABECERA TABLILLAS*/
+
+.dr-cabecera { height: 30px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; background: #07111b; border-bottom: 1px solid var(--emblema2); color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; } 
+.sr-cabecera strong { color: var(--battle-cyan); }
+.dr-cabecera .battle-status { display: flex; align-items: center; gap: 7px; }
+.dr-cabecera .battle-status i { width: 5px; height: 5px; display: block; background: var(--battle-red); border-radius: 50%; box-shadow: 0 0 8px rgba(217,75,91,.7); }
