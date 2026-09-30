@@ -9067,8 +9067,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    min-height: 2.5rem !important;
-    margin: 0 0 0.5rem !important;
+    min-height: 2rem !important;
+    margin-bottom: 0 !important;
     padding: 0 4rem !important;
     border-bottom: 1px solid var(--theme-border) !important;
     box-sizing: border-box;
