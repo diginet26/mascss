@@ -9188,3 +9188,30 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-nav .linklist a:hover {color: var(--theme-accent1);}
+
+.digimon-affiliates-siblings-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.digimon-affiliates-elite-list {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.digimon-affiliates-directory-list {
+    display: grid;
+    grid-template-columns: repeat(5, 75px);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.digimon-affiliate-placeholder {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.digimon-affiliate-placeholder img {display: block;}
