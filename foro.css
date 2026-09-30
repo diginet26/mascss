@@ -9062,6 +9062,60 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     box-sizing: border-box;
 }
 
+.digimon-affiliates-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+    margin-bottom: 2rem;
+    padding: 0 3.5rem;
+    border-bottom: 1px solid var(--theme-border);
+    box-sizing: border-box;
+}
+
+.digimon-affiliates-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 30%;
+    height: 1px;
+    background: var(--theme-accent1);
+    box-shadow: 0 0 8px var(--theme-accent1);
+}
+
+.digimon-affiliates-nav > i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--theme-accent1);
+    border: 1px solid var(--theme-border);
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
+    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: digimon-affiliates-network 4s ease-in-out infinite;
+}
+
+.digimon-affiliates-nav > i:hover {
+    color: var(--theme-accent2);
+    border-color: var(--theme-accent2);
+    box-shadow: 0 0 0.75rem rgba(150, 80, 255, 0.3);
+}
+
+@keyframes digimon-affiliates-network {
+    0%, 100% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.08); }
+}
+
 .digimon-affiliates-main {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.8fr) minmax(0, 1.15fr);
@@ -9206,10 +9260,11 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-siblings-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    gap: 1rem;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
 .digimon-affiliates-siblings-list img {
@@ -9264,32 +9319,4 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliate-placeholder img {
     display: block;
     max-width: 100%;
-}
-/*icono navbar afiliados*/
-.digimon-affiliates-nav > i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.5rem;
-    color: var(--theme-accent1);
-    border: 1px solid var(--theme-border);
-    border-radius: 0.5rem;
-    background: rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
-    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    animation: digimon-affiliates-network 4s ease-in-out infinite;
-}
-
-.digimon-affiliates-nav > i:hover {
-    color: var(--theme-accent2);
-    border-color: var(--theme-accent2);
-    box-shadow: 0 0 0.75rem rgba(150, 80, 255, 0.3);
-    transform: rotate(15deg) scale(1.08);
-}
-
-@keyframes digimon-affiliates-network {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
 }
