@@ -9051,104 +9051,29 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-index-tools { display: none; }/*elimina la navegacion antes de las categorias*/
 
 /* ================= AFILIADOS Y CRÉDITOS ================= */
-.digimon-affiliates {
-    width: 100%;
-    margin: 2rem 0 0;
-    background: #0d141c;
-    border: 1px solid var(--theme-border);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-sizing: border-box;
-}
-
 .digimon-affiliates-main {
     display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: 1rem;
-}
-
-.digimon-affiliates-credits {
-    position: relative;
-    grid-column: 1;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1.5fr;
     align-items: center;
-    min-height: 12rem;
-    padding: 2rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-align: center;
-}
-
-.digimon-affiliates-credits::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35%;
-    height: 1px;
-    background: var(--theme-accent1);
-    box-shadow: 0 0 8px var(--theme-accent1);
-}
-
-.digimon-affiliates-credits::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 25%;
-    height: 1px;
-    background: var(--theme-accent2);
-    box-shadow: 0 0 8px var(--theme-accent2);
-}
-
-.digimon-affiliates-credits h3 {
-    position: relative;
-    margin: 0 0 0.75rem;
-    padding: 0 1rem;
-    font-size: 1rem;
-    font-weight: 800;
-    font-family: "Oxanium", sans-serif;
-    color: var(--text-color);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.digimon-affiliates-credits h3::before,
-.digimon-affiliates-credits h3::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 1.5rem;
-    height: 1px;
-    background: var(--theme-accent1);
-    box-shadow: 0 0 5px var(--theme-accent1);
-}
-
-.digimon-affiliates-credits h3::before {
-    right: 100%;
-}
-
-.digimon-affiliates-credits h3::after {
-    left: 100%;
-}
-
-.digimon-affiliates-credits-text {
-    max-width: 34rem;
-    margin: 0;
-    font-size: 0.75rem;
-    line-height: 1.6;
-    color: var(--text-color);
-    opacity: 0.8;
+    gap: 3rem;
 }
 
 .digimon-affiliates-side {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: contents;
+}
+
+.digimon-affiliates-credits {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.digimon-affiliates-siblings {
     grid-column: 2;
+    grid-row: 1;
+}
+
+.digimon-affiliates-elite {
+    grid-column: 3;
     grid-row: 1;
 }
 
@@ -9156,38 +9081,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     grid-column: 1 / -1;
     grid-row: 2;
 }
-
-.digimon-affiliates-nav {
-    width: 100%;
-    padding: 0 0 1rem;
-    margin: 0 0 1.5rem;
-    border-bottom: 1px solid var(--theme-border);
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.digimon-affiliates-nav .linklist {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.digimon-affiliates-nav .linklist li {
-    margin: 0;
-    padding: 0;
-}
-
-.digimon-affiliates-nav .linklist a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.digimon-affiliates-nav .linklist a:hover {color: var(--theme-accent1);}
 
 .digimon-affiliates-siblings-list {
     display: flex;
@@ -9203,10 +9096,10 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-directory-list {
-    display: grid;
-    grid-template-columns: repeat(5, 75px);
-    gap: 1rem;
+    display: flex;
     justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
 }
 
 .digimon-affiliate-placeholder {
@@ -9214,4 +9107,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     flex-shrink: 0;
 }
 
-.digimon-affiliate-placeholder img {display: block;}
+.digimon-affiliate-placeholder img {
+    display: block;
+}
