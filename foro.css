@@ -9054,7 +9054,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates {
     width: 100%;
     margin: 2rem 0 0;
-    background: #0d141c;
+    background: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 0.5rem), #0d141c;
     border: 1px solid var(--theme-border);
     border-radius: 1rem;
     padding: 2rem;
