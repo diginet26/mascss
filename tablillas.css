@@ -1597,3 +1597,36 @@
 .dr-tadmin .dr-cabecera strong { color: var(--battle-cyan); }
 .dr-tadmin .battle-status { display: flex; align-items: center; gap: 7px; }
 .dr-tadmin .battle-status i { width: 5px; height: 5px; display: block; background: var(--battle-red); border-radius: 50%; box-shadow: 0 0 8px rgba(217,75,91,.7); }
+
+.dr-system-bar {
+    width: 100%;
+    min-height: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    background: #071117;
+    border: 1px solid #123846;
+    font-family: monospace;
+    font-size: .55rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.dr-system-title {
+    color: #4ba8d0;
+}
+
+.dr-system-status {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #7193a2;
+}
+
+.dr-system-status i {
+    color: #ef3d59;
+    font-size: .45rem;
+    text-shadow: 0 0 .4rem #ef3d59;
+}
