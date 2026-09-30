@@ -9066,10 +9066,10 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     min-height: 3.5rem;
     margin-bottom: 2rem;
-    padding: 0 3.5rem;
+    padding: 0 0.5rem 1.5rem 4rem;
     border-bottom: 1px solid var(--theme-border);
     box-sizing: border-box;
 }
@@ -9088,20 +9088,19 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates-nav > i {
     position: absolute;
     left: 0;
-    top: 50%;
-    display: flex;
+    top: 0;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    transform: translateY(-50%);
     font-size: 1.4rem;
     color: var(--theme-accent1);
     border: 1px solid var(--theme-border);
     border-radius: 0.5rem;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
-    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     animation: digimon-affiliates-network 4s ease-in-out infinite;
 }
 
@@ -9109,11 +9108,40 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     color: var(--theme-accent2);
     border-color: var(--theme-accent2);
     box-shadow: 0 0 0.75rem rgba(150, 80, 255, 0.3);
+    transform: rotate(15deg) scale(1.08);
+}
+
+.digimon-affiliates-nav > a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.65rem;
+    color: var(--text-color);
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.digimon-affiliates-nav > a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -0.1rem;
+    color: var(--theme-accent1);
+    opacity: 0.7;
+}
+
+.digimon-affiliates-nav > a:hover {
+    color: var(--theme-accent1);
+    text-shadow: 0 0 0.5rem var(--theme-accent1);
 }
 
 @keyframes digimon-affiliates-network {
-    0%, 100% { transform: translateY(-50%) scale(1); }
-    50% { transform: translateY(-50%) scale(1.08); }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
 }
 
 .digimon-affiliates-main {
