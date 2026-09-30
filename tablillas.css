@@ -1593,7 +1593,7 @@
 
 /* CABECERA TABLILLAS*/
 
-.dr-cabecera { height: 30px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; background: #07111b; border-bottom: 1px solid var(--emblema2); color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; } 
-.sr-cabecera strong { color: var(--battle-cyan); }
-.dr-cabecera .battle-status { display: flex; align-items: center; gap: 7px; }
-.dr-cabecera .battle-status i { width: 5px; height: 5px; display: block; background: var(--battle-red); border-radius: 50%; box-shadow: 0 0 8px rgba(217,75,91,.7); }
+.dr-tadmin .dr-cabecera { height: 30px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; background: #07111b; border-bottom: 1px solid var(--emblema2); color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; } 
+.dr-tadmin .dr-cabecera strong { color: var(--battle-cyan); }
+.dr-tadmin .battle-status { display: flex; align-items: center; gap: 7px; }
+.dr-tadmin .battle-status i { width: 5px; height: 5px; display: block; background: var(--battle-red); border-radius: 50%; box-shadow: 0 0 8px rgba(217,75,91,.7); }
