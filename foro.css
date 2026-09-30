@@ -10653,7 +10653,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates {
-    background: var(--theme-panel);
+    background: #0d141c;
     border: 1px solid var(--theme-border);
     border-radius: 1rem;
     padding: 2rem;
