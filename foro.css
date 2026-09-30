@@ -9125,8 +9125,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     text-transform: uppercase;
 }
 
-.digimon-affiliates-credits h3::before,
-.digimon-affiliates-credits h3::after {
+.digimon-affiliates-credits h3::before, .digimon-affiliates-credits h3::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -9153,9 +9152,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     opacity: 0.8;
 }
 
-.digimon-affiliates-siblings,
-.digimon-affiliates-elite,
-.digimon-affiliates-directory {
+.digimon-affiliates-siblings, .digimon-affiliates-elite, .digimon-affiliates-directory {
     position: relative;
     text-align: center;
 }
@@ -9177,9 +9174,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     border-top: 1px solid var(--theme-border);
 }
 
-.digimon-affiliates-siblings h3,
-.digimon-affiliates-elite h3,
-.digimon-affiliates-directory h3 {
+.digimon-affiliates-siblings h3, .digimon-affiliates-elite h3, .digimon-affiliates-directory h3 {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -9193,12 +9188,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     text-transform: uppercase;
 }
 
-.digimon-affiliates-siblings h3::before,
-.digimon-affiliates-siblings h3::after,
-.digimon-affiliates-elite h3::before,
-.digimon-affiliates-elite h3::after,
-.digimon-affiliates-directory h3::before,
-.digimon-affiliates-directory h3::after {
+.digimon-affiliates-siblings h3::before, .digimon-affiliates-siblings h3::after, .digimon-affiliates-elite h3::before, .digimon-affiliates-elite h3::after, .digimon-affiliates-directory h3::before, .digimon-affiliates-directory h3::after {
     content: "";
     width: 1.5rem;
     height: 1px;
@@ -9247,4 +9237,35 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliate-placeholder img {
     display: block;
     max-width: 100%;
+}
+.digimon-affiliates-main {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.8fr) minmax(0, 1.15fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.digimon-affiliates-side {
+    display: contents;
+}
+
+.digimon-affiliates-credits {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.digimon-affiliates-siblings {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.digimon-affiliates-elite {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.digimon-affiliates-directory {
+    grid-column: 1 / -1;
+    grid-row: 2;
 }
