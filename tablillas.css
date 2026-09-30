@@ -461,3 +461,1111 @@
 .dr-tadmin .tienda-corner:after { content: ""; position: absolute; right: -1px; top: 14px; width: 8px; height: 1px; background: var(--emblema2); } 
 /* ========================================================== RESPONSIVE ========================================================== */
 @media (max-width: 760px) { .dr-tadmin .tienda-filters, .dr-tadmin .tienda-items, .dr-tadmin .tienda-footer { margin-left: 15px; margin-right: 15px; } .dr-tadmin .tienda-item { grid-template-columns: 50px 1fr; } .dr-tadmin .tienda-icon { width: 46px; height: 46px; } .dr-tadmin .tienda-price { grid-column: 2; justify-self: start; margin-top: 5px; } } 
+
+/* ==========================================================
+   DIGITAL RIFT — MAPA DE ZONAS
+   ========================================================== */
+.dr-map {
+    --map-blue:#1677C8;
+    --map-cyan:#22c1c3;
+    --map-bg:#080f18;
+    --map-panel:#0d1722;
+    --map-panel2:#111f2d;
+    --map-line:rgba(34,193,195,.22);
+    --map-text:#dce8f2;
+    --map-muted:#7f95a8;
+    color:var(--map-text);
+    font-family:"Oxanium",sans-serif;
+    font-size:11px;
+    line-height:1.7;
+}
+
+/* CABECERA */
+.dr-map-head {
+    padding:18px 20px;
+    background: linear-gradient(90deg, rgba(22,119,200,.14), transparent);
+    border:1px solid #183246;
+    border-bottom:1px solid var(--map-line);
+}
+
+.dr-map-label {
+    display:inline-block;
+    margin-bottom:6px;
+    padding:3px 8px;
+    border:1px solid var(--map-blue);
+    color:var(--emblema2);
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.dr-map-title {
+    color:#fff;
+    font-family:"Jersey 15",Arial,sans-serif;
+    font-size:27px;
+    letter-spacing:2px;
+    line-height:1;
+}
+
+.dr-map-subtitle {
+    margin-top:7px;
+    color:var(--map-muted);
+    font-size:8px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+/* INTRODUCCIÓN */
+.dr-map-intro {
+    margin-top:10px;
+    padding:13px 15px;
+    background:rgba(13,21,30,.85);
+    border-left:2px solid var(--map-blue);
+    border-right:1px solid var(--map-line);
+    color:#aebdca;
+    font-size:10px;
+}
+
+.dr-map-intro b {color:var(--emblema2);}
+
+/* SISTEMA */
+.dr-map-system {
+    position:relative;
+    margin-top:15px;
+}
+
+.dr-map-system > input {display:none;}
+
+/* PANEL */
+.dr-map-content {
+    position:relative;
+    min-height:330px;
+    background:#091119;
+    border:1px solid #183246;
+}
+
+/* ZONAS */
+.dr-map-zone {
+    display:none;
+    padding:18px;
+}
+
+#dr-zone-01:checked ~ .dr-map-content .dr-map-zone:nth-child(1), #dr-zone-02:checked ~ .dr-map-content .dr-map-zone:nth-child(2), #dr-zone-03:checked ~ .dr-map-content .dr-map-zone:nth-child(3),
+#dr-zone-04:checked ~ .dr-map-content .dr-map-zone:nth-child(4), #dr-zone-05:checked ~ .dr-map-content .dr-map-zone:nth-child(5), #dr-zone-06:checked ~ .dr-map-content .dr-map-zone:nth-child(6) {display:block;}
+
+/* CABECERA DE ZONA */
+.dr-map-zone-head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-bottom:10px;
+    margin-bottom:14px;
+    border-bottom:1px solid #183246;
+}
+
+.dr-map-zone-head span {
+    color:var(--emblema2);
+    font-family:"Oxanium",monospace;
+    font-size:8px;
+    letter-spacing:1px;
+}
+
+.dr-map-zone-head b {
+    color:#fff;
+    font-family:"Jersey 15",Arial,sans-serif;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+/* CUERPO */
+.dr-map-zone-body {
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:15px;
+}
+
+/* IMAGEN */
+.dr-map-image {
+    min-height:170px;
+    background:#071018;
+    border:1px solid #24475d;
+    overflow:hidden;
+}
+
+.dr-map-image img {
+    width:100%;
+    height:100%;
+    min-height:170px;
+    display:block;
+    object-fit:cover;
+    opacity:.82;
+    transition:.3s;
+}
+
+.dr-map-image:hover img {opacity:1;}
+
+/* INFORMACIÓN */
+.dr-map-info {
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+/* DATOS */
+.dr-map-data {
+    padding:8px 10px;
+    background:#0d1722;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.dr-map-data span {
+    display:block;
+    color:var(--map-muted);
+    font-family:"Oxanium",monospace;
+    font-size:7px;
+    letter-spacing:1px;
+}
+
+.dr-map-data b {
+    display:block;
+    margin-top:2px;
+    color:#eaf7fb;
+    font-size:9px;
+    text-transform:uppercase;
+}
+
+/* DESCRIPCIÓN */
+.dr-map-description {
+    flex:1;
+    padding:11px;
+    background:rgba(17,31,45,.55);
+    border-left:1px solid var(--map-blue);
+    color:#9fb1bf;
+    font-size:10px;
+}
+
+/* ZONA DE ROL */
+.dr-map-role {
+    margin-top:14px;
+    padding:10px 12px;
+    background: linear-gradient(90deg, rgba(22,119,200,.12), transparent);
+    border:1px solid rgba(34,193,195,.18);
+}
+
+.dr-map-role span {
+    display:block;
+    color:var(--emblema2);
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.dr-map-role b {
+    color:#b8c7d4;
+    font-size:9px;
+}
+
+/* ==========================================================
+   SELECTORES
+   ========================================================== */
+.dr-map-tabs {
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    margin-top:8px;
+    gap:5px;
+}
+
+.dr-map-tabs label {
+    position:relative;
+    padding:9px 5px;
+    background:#0b151e;
+    border:1px solid #183246;
+    cursor:pointer;
+    text-align:center;
+    transition:.2s;
+}
+
+.dr-map-tabs label:hover {
+    background:#111f2d;
+    border-color:var(--map-cyan);
+}
+
+.dr-map-tabs small {
+    display:block;
+    color:#526b7a;
+    font-family:"Oxanium",monospace;
+    font-size:7px;
+}
+
+.dr-map-tabs b {
+    display:block;
+    margin-top:2px;
+    color:#a9bac4;
+    font-size:8px;
+    letter-spacing:.5px;
+}
+
+/* =========================================================
+   IMAGEN ESTÁTICA 
+   ========================================================= */
+.dr-map-image2 {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 220px;
+    background-image: url("https://imgur.com/57bOqxx.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--emblema2);
+    box-sizing: border-box;
+}
+
+/* ESTADO ACTIVO */
+#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"], #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"], #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"],
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"], #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"], #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {background:rgba(22,119,200,.15); border-color:var(--emblema2);}
+
+#dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"] b, #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"] b, #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"] b,
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b, #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b, #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {color:var(--emblema2);}
+
+/* RESPONSIVE */
+@media(max-width:600px) {
+    .dr-map {
+        margin:15px 10px;
+    }
+    .dr-map-zone-body {
+        grid-template-columns:1fr;
+    }
+    .dr-map-image {
+        min-height:150px;
+    }
+    .dr-map-tabs {
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+/* TABLILLA DIGIMON */
+.digimon-status {
+    --bg: #07090e;
+    --panel: #0d1218;
+    --panel-light: #151d25;
+    --line: #26313a;
+    --line-light: #35424b;
+    --text: #d5dce0;
+    --muted: #69767e;
+    --blue: #61a9c9;
+    --cyan: #55c5cf;
+    --orange: #f3a31b;
+    width: 680px;
+    max-width: 95%;
+    margin: 25px auto;
+    padding: 18px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 20% 0%, rgba(50,85,105,.12), transparent 45%), linear-gradient(135deg, #080b10, #05070b);
+    border: 1px solid #222c34;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+.digimon-content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   CABECERA
+========================================================== */
+.digimon-top {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #111a23, #080d13);
+    border-bottom: 1px solid var(--line);
+}
+
+/* ==========================================================
+   RETRATO
+========================================================== */
+.digimon-portrait {
+    width: 82px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait-ring {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b141c;
+    box-shadow: 0 0 12px rgba(97,169,201,.25);
+    overflow: hidden;
+}
+
+.portrait-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================================
+   NOMBRE
+========================================================== */
+.digimon-title {flex: 1;}
+.digimon-name {
+    color: #eef3f5;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.digimon-description {
+    margin-top: 7px;
+    color: var(--orange);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.digimon-description i {
+    color: #59676f;
+    font-style: normal;
+    margin: 0 5px;
+}
+
+/* ==========================================================
+   NIVEL
+========================================================== */
+.digimon-level {
+    width: 70px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.digimon-level small {
+    display: block;
+    color: #7b878e;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.digimon-level strong {
+    display: block;
+    color: var(--orange);
+    font-size: 30px;
+    line-height: 27px;
+}
+
+.digimom-level em {
+    color: #68757d;
+    font-size: 9px;
+    font-style: normal;
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+.main-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+/* ==========================================================
+   HP / SP / EXP
+========================================================== */
+.big-stat {margin-bottom: 8px;}
+
+.stat-line {
+    display: flex;
+    align-items: center;
+}
+
+.stat-label {
+    width: 35px;
+    color: #8b989f;
+    font-size: 10px;
+}
+
+.stat-numbers {
+    color: #d1dade;
+    font-family: "Oxanium", sans-serif;
+    font-size: 11px;
+}
+
+.stat-numbers i {
+    color: #56646c;
+    font-style: normal;
+}
+
+/* ==========================================================
+   BARRAS
+========================================================== */
+.progress {
+    height: 5px;
+    margin-top: 4px;
+    padding: 1px;
+    box-sizing: border-box;
+    background: #131a21;
+    border: 1px solid #303b43;
+}
+
+.progress b {
+    display: block;
+    height: 100%;
+    background: var(--orange);
+}
+
+.progress.sp b {background: var(--blue);}
+
+/* ==========================================================
+   STATS DE COMBATE
+========================================================== */
+.combat-stat {
+    height: 19px;
+    display: flex;
+    align-items: center;
+    font-family: "Oxanium", sans-serif;
+}
+
+.combat-stat span {
+    width: 42px;
+    color: #89969c;
+    font-size: 10px;
+}
+
+.combat-stat strong {
+    width: 48px;
+    color: #d6dfe2;
+    font-size: 11px;
+    text-align: right;
+}
+
+.combat-stat i {
+    margin-left: 7px;
+    color: var(--blue);
+    font-size: 9px;
+    font-style: normal;
+}
+
+/* ==========================================================
+   HABILIDADES
+========================================================== */
+.ability-section {
+    margin-top: 8px;
+    border-bottom: 1px solid var(--line);
+}
+
+.ability-title {
+    height: 21px;
+    display: flex;
+    align-items: center;
+    padding: 0 7px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #182129, #0d1319);
+    color: #bdc9ce;
+    font-size: 9px;
+}
+
+.ability {
+    height: 20px;
+    display: grid;
+    grid-template-columns: 25px 1fr 30px;
+    align-items: center;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.ability:hover {background: #101920;}
+
+.ability-icon {
+    color: var(--cyan);
+    font-size: 8px;
+}
+
+.ability strong {
+    color: #c6d0d4;
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.ability.empty {opacity: .42;}
+
+/* ==========================================================
+   EQUIPMENT
+========================================================== */
+.equipment {margin-top: 8px;}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+@media (max-width:600px) {
+    .digimon-status {
+        width: 100%;
+        padding: 10px;
+    }
+    .digi-top {
+        height: auto;
+        min-height: 76px;
+    }
+    .digi-name {font-size: 17px;}
+    .digi-description {font-size: 7px;}
+    .main-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+/* ============================================================
+   DIGITAL RIFT — EXPEDIENTE
+   ============================================================ */
+.dr-ficha {
+    --dr-cyan: var(--emblema2, #35d8ff);
+    --dr-blue: var(--emblema1, #1677c8);
+    --dr-bg: #070d14;
+    --dr-panel: #0c151f;
+    --dr-panel2: #101e2b;
+    --dr-text: #edf8fb;
+    --dr-muted: #8195a4;
+    --dr-border: rgba(255,255,255,.10);
+    width: 720px;
+    max-width: 94%;
+    margin: 30px auto;
+    padding: 18px;
+    box-sizing: border-box;
+    background: linear-gradient(145deg, rgba(22,119,200,.08), transparent 35%, rgba(53,216,255,.04)), var(--dr-bg);
+    border: 1px solid var(--dr-border);
+    color: var(--dr-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dr-ficha > input[type="radio"] {display: none;}/*OCULTAR RADIO*/
+
+/* ============================================================
+   DECORACIÓN SUPERIOR
+   ============================================================ */
+.dr-dots {
+    height: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.dr-dots i {
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: var(--dr-cyan);
+    transform: rotate(45deg);
+    opacity: .7;
+}
+
+.dr-dots i:nth-child(2) {opacity: .45;}
+.dr-dots i:nth-child(3) {opacity: .2;}
+
+/* ============================================================
+   CABECERA
+   ============================================================ */
+.dr-head {
+    height: 174px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--dr-cyan);
+    background: #09131d;
+}
+.dr-head:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(5,12,18,.05), rgba(5,12,18,.82));
+    pointer-events: none;
+}
+
+.dr-head img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.dr-head span {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    bottom: 15px;
+    padding: 5px 10px;
+    color: var(--dr-cyan);
+    border: 1px solid var(--dr-cyan);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: rgba(5,12,18,.65);
+}
+
+/* ============================================================
+   NOMBRE
+   ============================================================ */
+.dr-name {
+    margin: 18px 0 25px;
+    padding: 14px 17px;
+    border: 1px solid rgba(53,216,255,.22);
+    background:linear-gradient(100deg, rgba(22,119,200,.20), rgba(53,216,255,.05));
+    color: var(--dr-cyan);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   PÁGINAS
+   ============================================================ */
+.dr-page {display: none;}
+#dr-tab1:checked ~ .dr-pages .dr-page1, #dr-tab2:checked ~ .dr-pages .dr-page2, #dr-tab3:checked ~ .dr-pages .dr-page3 {display: block;}
+
+/* ============================================================
+   TÍTULOS
+   ============================================================ */
+.dr-page h2 {
+    margin: 25px 0 13px;
+    padding-left: 15px;
+    position: relative;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.dr-page h2:first-child {margin-top: 0;}
+
+.dr-page h2:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    background: var(--dr-cyan);
+    transform: rotate(45deg);
+}
+
+/* ============================================================
+   DATOS
+   ============================================================ */
+.dr-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.dr-data span {
+    min-height: 70px;
+    padding: 11px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+    border-top: 2px solid var(--dr-cyan);
+    transition: .2s ease;
+}
+
+.dr-data span:hover {
+    border-color: rgba(53,216,255,.35);
+    transform: translateY(-2px);
+}
+
+.dr-data b {
+    margin-bottom: 7px;
+    color: var(--dr-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.dr-data i {
+    color: var(--dr-text);
+    font-style: normal;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* ============================================================
+   TEXTO
+   ============================================================ */
+.dr-text {
+    padding: 17px;
+    box-sizing: border-box;
+    background: var(--dr-panel);
+    border: 1px solid var(--dr-border);
+    color: #b9cbd4;
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.dr-text p {margin: 0 0 12px;}
+.dr-text p:last-child {margin-bottom: 0;}
+
+/* ============================================================
+   BLOQUES DE INFORMACIÓN
+   ============================================================ */
+.dr-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.dr-info > div {
+    padding: 16px;
+    background: var(--dr-panel);
+    border: 1px solid var(--dr-border);
+    position: relative;
+}
+
+.dr-info > div:before {
+    content: ">";
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    color: var(--dr-cyan);
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.dr-info b {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.dr-info p {
+    margin: 0;
+    color: #aabdc7;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* ============================================================
+   DIGIMON
+   ============================================================ */
+.dr-digimon {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 10px;
+}
+
+/* TARJETA DEL DIGIMON */
+.dr-digimon-card {
+    min-height: 330px;
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+}
+
+.dr-digimon-card:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5,12,18,.95), transparent 65%);
+    pointer-events: none;
+}
+
+.dr-digimon-card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+.dr-digimon-card strong, .dr-digimon-card small {
+    position: relative;
+    z-index: 2;
+}
+
+.dr-digimon-card strong {
+    color: #fff;
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.dr-digimon-card small {
+    margin-top: 3px;
+    color: var(--dr-cyan);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* CONTENIDO DIGIMON */
+.dr-digimon-content {min-width: 0;}
+
+.dr-data-small {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 12px;
+}
+
+.dr-data-small span {min-height: 55px;}
+.dr-digimon-content h3 {
+    margin: 13px 0 7px;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   ESTADÍSTICAS
+   ============================================================ */
+.dr-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+}
+
+.dr-stats span {
+    padding: 13px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+    text-align: center;
+}
+
+.dr-stats b {
+    color: var(--dr-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.dr-stats i {
+    margin-top: 5px;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 23px;
+    font-style: normal;
+}
+.dr-stats2 {padding: 0px 0px 6px;}
+
+.dr-stats2 span {
+    padding: 13px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+    text-align: center;
+}
+
+.dr-stats2 b {
+    color: var(--dr-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.dr-stats2 i {
+    margin-top: 5px;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 23px;
+    font-style: normal;
+}
+
+.dr-stats3 {padding: 6px 0px 0px;}
+
+.dr-stats3 span {
+    padding: 13px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+    text-align: center;
+}
+
+.dr-stats3 b {
+    color: var(--dr-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.dr-stats3 i {
+    margin-top: 5px;
+    color: var(--dr-cyan);
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 23px;
+    font-style: normal;
+}
+/* ============================================================
+   PESTAÑAS
+   ============================================================ */
+.dr-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.dr-tabs label {
+    padding: 12px 8px;
+    background: var(--dr-panel2);
+    border: 1px solid var(--dr-border);
+    color: var(--dr-muted);
+    font-family: 'Oxanium', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.dr-tabs label small {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--dr-muted);
+    font-size: 7px;
+}
+
+.dr-tabs label:hover {
+    color: var(--dr-cyan);
+    border-color: rgba(53,216,255,.35);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.dr-ficha .dr-cabeza {
+    position: relative;
+    min-height: 174px;
+    padding: 35px 40px 30px;
+    background: linear-gradient(90deg, rgba(8,15,24,.98) 0%, rgba(8,15,24,.87) 48%, rgba(8,15,24,.55) 100%        );
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--emblema1);
+}
+
+/* línea tecnológica */
+.dr-ficha.dr-cabeza:after {
+    content: "";
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    width: 160px;
+    height: 2px;
+    background: var(--emblema2);
+    box-shadow: 0 0 12px rgba(34,193,195,.5);
+}
+
+/* etiqueta */
+.dr-ficha .dr-label {
+    display: inline-block;
+    padding: 3px 9px;
+    margin-bottom: 10px;
+    border: 1px solid var(--emblema2);
+    color: var(--emblema2);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* título */
+.dr-ficha .dr-title {
+    margin: 0;
+    color: #fff;
+    font-family: 'Player Sans', 'Arial Narrow', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* subtítulo */
+.dr-ficha .dr-subtitle {
+    margin-top: 9px;
+    color: var(--dg-muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.dr-tadmin .dr-subtitle b {color: var(--emblema2);}
+
+
+/* PESTAÑA ACTIVA */
+#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"], #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"], #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] {
+    color: var(--dr-cyan);
+    background: linear-gradient(135deg, rgba(22,119,200,.25),rgba(53,216,255,.08));
+    border-color: var(--dr-cyan);
+}
+
+#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"] small, #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"] small, #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] small {color: var(--dr-cyan);}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 650px) {
+    .dr-ficha {
+        width: 96%;
+        padding: 12px;
+    }
+    .dr-data {grid-template-columns: repeat(2, 1fr);}
+    .dr-info {grid-template-columns: 1fr;}
+    .dr-digimon {grid-template-columns: 1fr;}
+    .dr-digimon-card {
+        height: 300px;
+        min-height: 300px;
+    }
+    .dr-stats {grid-template-columns: repeat(5, 1fr);}
+}
+
+@media (max-width: 450px) {
+    .dr-head {height: 140px;}
+    .dr-data {grid-template-columns: 1fr;}
+    .dr-stats {grid-template-columns: repeat(3, 1fr);}
+    .dr-tabs label {font-size: 8px;}
+}
