@@ -9415,6 +9415,55 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     width: 100%;
     height: auto;
 }
+/*CSS LISTA DE TEMAS*/
+ul.topiclist.topics dd.posts,
+ul.topiclist.topics dd.views {
+    display: inline-flex !important;
+    align-items: center;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0;
+    background: transparent !important;
+    border-radius: 0;
+    position: absolute;
+    bottom: 1rem;
+    color: var(--text-color);
+    font: 700 .571rem/1 "Roboto Mono", monospace;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+}
+
+ul.topiclist.topics dd.posts {
+    left: 1.5rem;
+}
+
+ul.topiclist.topics dd.views {
+    left: 9rem;
+}
+
+ul.topiclist.topics dd.posts::before {
+    content: "▣";
+    margin-right: .4rem;
+    color: var(--accent1);
+}
+
+ul.topiclist.topics dd.views::before {
+    content: "◉";
+    margin-right: .4rem;
+    color: var(--accent2);
+}
+
+ul.topiclist.topics dd.posts dfn,
+ul.topiclist.topics dd.views dfn {
+    display: inline !important;
+    position: static !important;
+    margin-left: .35rem;
+    color: var(--text-color);
+    font: inherit;
+    font-style: normal;
+}
+
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
