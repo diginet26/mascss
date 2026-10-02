@@ -9077,17 +9077,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     white-space: nowrap !important;
 }
 
-/*.digimon-affiliates-nav::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--theme-accent1);
-    box-shadow: 0 0 8px var(--theme-accent1);
-}*/
-
 .digimon-affiliates-nav > ul {
     display: flex !important;
     align-items: center !important;
@@ -9396,16 +9385,18 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .digimon-affiliates-character {
     position: absolute;
-    right: -24rem;
-    top: 7rem;
+    right: -4rem;
+    bottom: 0;
     width: 25rem;
     height: auto;
     z-index: 20;
     pointer-events: none;
 }
 
-.digimon-affiliates-character img {
-    display: block;
-    width: 100%;
-    height: auto;
+.digimon-affiliates-character img { display: block; width: 100%; height: auto; }
+
+#content,
+#main,
+#main-content {
+    overflow: visible !important;
 }
