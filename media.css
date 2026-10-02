@@ -1,1 +1,169 @@
 
+:root {
+    /* ==============================
+       DIGIMON — MEMBERLIST
+       ============================== */
+
+    --dg-blue: #1677C8;
+    --dg-blue-light: #38bdf8;
+    --dg-dark: #111820;
+    --dg-dark-2: #18232d;
+    --dg-panel: #f4f7f9;
+    --dg-border: #d6e1e8;
+    --dg-text: #26323a;
+    --dg-muted: #71808a;
+    --dg-group: #1677c8;
+
+    /* ==============================
+       TEMA
+       ============================== */
+
+    --bckg1: #222;
+    --bckg2: #1f1f1f;
+    --bckg3: #1c1c1c;
+    --bckg4: #191919;
+    --border1: 1px solid #000;
+
+    /* ==============================
+       PERFIL
+       ============================== */
+
+    --profile-group-color: var(--linkc1);
+    --profile-highlight: var(--accent3);
+    --profile-glow: color-mix(in srgb, var(--profile-group-color) 35%, transparent);
+    --profile-header-image: none;
+
+    /* ==============================
+       DIGIMON NAVBAR
+       ============================== */
+
+    --digimon-blue-dark: #06152b;
+    --digimon-blue: #0878d1;
+    --digimon-blue-light: #20bdf2;
+    --digimon-cyan: #36e4ff;
+    --digimon-yellow: #ffd21c;
+    --digimon-white: #f4fbff;
+    --digimon-border: rgba(48, 205, 255, .55);
+
+    /* ==============================
+       ACCESIBILIDAD
+       ============================== */
+
+    --dr-font-size: 14px;
+
+    /* ==============================
+       EMBLEMAS / COLORES
+       ============================== */
+
+    --emblema1: #298BF1;
+    --emblema2: #f16f29;
+    --linkc1: #29F16F;
+    --linkc2: #6F29F1;
+    --linkc3: #d8a839;
+    --accent3: var(--linkc3);
+
+    /* ==============================
+       DIGITAL RIFT — TABLÓN
+       ============================== */
+
+    --rift-border: var(--theme-border);
+    --rift-panel: var(--theme-panel);
+    --rift-panel-alt: var(--theme-panel-alt);
+    --rift-deep: var(--theme-panel-deep);
+    --rift-text: var(--theme-text);
+    --rift-muted: var(--theme-text-muted);
+    --rift-a1: var(--linkc1);
+    --rift-a2: var(--linkc2);
+    --rift-a3: var(--accent3);
+    --staff-mark: var(--rift-a1);
+
+    /* ==============================
+       DIGITAL RIFT — ELEMENTOS
+       ============================== */
+
+    --digimon-radius: 15px;
+    --digimon-radius-small: 9px;
+    --digimon-bg: linear-gradient(135deg,var(--colorfondo),var(--colorfondo2));
+    --digimon-panel: linear-gradient(135deg,var(--colorfondo),var(--colorfondo2));
+    --digimon-gradient: linear-gradient(120deg,var(--emblema1),var(--emblema2));
+    --digimon-gradient-reverse: linear-gradient(120deg,var(--emblema2),var(--emblema1));
+    --digimon-border: color-mix(in srgb,var(--colortextod1) 12%,transparent);
+    --digimon-muted: color-mix(in srgb,var(--colortextod1) 55%,transparent);
+
+    /* ==============================
+       ESTADÍSTICAS
+       ============================== */
+
+    --stats-border: color-mix(in srgb,var(--text-color) 12%,transparent);
+    --stats-muted: color-mix(in srgb,var(--text-color) 55%,transparent);
+    --stats-panel: linear-gradient(135deg,var(--colorfondo2),var(--colorfondo2));
+    --stats-gradient: linear-gradient(120deg,var(--linkc1),var(--linkc2));
+    --stats-gap: 1rem;
+
+    /* ==============================
+       DADOS
+       ============================== */
+
+    --dice-blue: #1677C8;
+    --dice-blue-dark: #0b3d68;
+    --dice-cyan: #22c1c3;
+    --dice-cyan-light: #35D8FF;
+    --dice-bg: #080f18;
+    --dice-panel: #0d1722;
+    --dice-panel2: #111f2d;
+    --dice-line: rgba(34,193,195,.22);
+    --dice-text: #dce8f2;
+    --dice-muted: #718695;
+
+    /* ==============================
+       TABLILLAS — BASE DIGIMON
+       ============================== */
+
+    --dg-blue-dark: #0b3d68;
+    --dg-cyan: #22c1c3;
+    --dg-gold: #f2b705;
+    --dg-bg: #080f18;
+    --dg-panel2: #111f2d;
+    --dg-line: rgba(34,193,195,.22);
+
+    /* ==============================
+       TABLILLA — MAPA
+       ============================== */
+
+    --map-blue: #1677C8;
+    --map-cyan: #22c1c3;
+    --map-bg: #080f18;
+    --map-panel: #0d1722;
+    --map-panel2: #111f2d;
+    --map-line: rgba(34,193,195,.22);
+    --map-text: #dce8f2;
+    --map-muted: #7f95a8;
+
+    /* ==============================
+       TABLILLA — OTROS
+       ============================== */
+
+    --bg: #07090e;
+    --panel: #0d1218;
+    --panel-light: #151d25;
+    --line: #26313a;
+    --line-light: #35424b;
+    --text: #d5dce0;
+    --muted: #69767e;
+    --blue: #61a9c9;
+    --cyan: #55c5cf;
+    --orange: #f3a31b;
+
+    /* ==============================
+       TABLILLA — EXPEDIENTE
+       ============================== */
+
+    --dr-cyan: var(--emblema2, #35d8ff);
+    --dr-blue: var(--emblema1, #1677c8);
+    --dr-bg: #070d14;
+    --dr-panel: #0c151f;
+    --dr-panel2: #101e2b;
+    --dr-text: #edf8fb;
+    --dr-muted: #8195a4;
+    --dr-border: rgba(255,255,255,.10);
+}
