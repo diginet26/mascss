@@ -9176,7 +9176,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     grid-template-rows: auto auto;
     gap: 1.5rem;
     align-items: center;
-    margin-top: 0.75rem;
 }
 
 .digimon-affiliates-side {display: contents;}
@@ -9252,11 +9251,13 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates-siblings {
     grid-column: 2;
     grid-row: 1;
+    transform: translateY(0.75rem);
 }
 
 .digimon-affiliates-elite {
     grid-column: 3;
     grid-row: 1;
+    transform: translateY(0.75rem);
 }
 
 .digimon-affiliates-directory {
