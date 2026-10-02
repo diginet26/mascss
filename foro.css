@@ -9416,6 +9416,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     height: auto;
 }
 /*CSS DE TEMAS*/
-.rpostcontainer {width:100%;}
+.rpostcontainer {width:calc(100% + 320px) !important;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
 .postprofile {display:none !important;}
