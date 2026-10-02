@@ -9392,13 +9392,14 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 /* ================= TERRIERMON ASSISTANT ================= */
 
 .digimon-affiliates-character {
-    position: absolute;
-    right: -10rem;
-    bottom: -2rem;
-    width: 25rem;
+    position: fixed;
+    right: 3vw;
+    top: 55%;
+    width: 22rem;
     height: auto;
-    z-index: 10;
+    z-index: 100;
     pointer-events: none;
+    transform: translateY(-50%);
 }
 
 .digimon-affiliates-character img {
