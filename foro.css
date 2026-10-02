@@ -9384,20 +9384,13 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-character {
-    position: absolute;
-    right: -25rem;
-    top: 4rem;
-    bottom: 0;
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
     width: 25rem;
     height: auto;
-    z-index: 20;
+    z-index: 9999;
     pointer-events: none;
 }
 
 .digimon-affiliates-character img { display: block; width: 100%; height: auto; }
-
-#content,
-#main,
-#main-content {
-    overflow: visible !important;
-}
