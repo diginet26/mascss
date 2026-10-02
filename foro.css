@@ -9386,8 +9386,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .digimon-affiliates-character {
     position: absolute;
-    top: 0.5rem;
-    right: 1rem;
+    top: -3.5rem;
+    right: -3rem;
     width: 8rem;
     height: auto;
     z-index: 10;
