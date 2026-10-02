@@ -9587,19 +9587,21 @@ ul.topiclist.topics li.row dl.icon::after {
    TOPICS — CABECERAS DIGITAL RIFT
    ========================================================= */
 
-ul.topiclist.topics > li.header { margin: 0 0 .8rem !important; padding: 0 !important; background: transparent !important; background-image: none !important; border: 0 !important; }
-
-.forumbg.announcement,
-.forumbg.announcement > .inner,
-.forumbg.announcement ul.topiclist.topics { background: transparent !important; background-image: none !important; border: 0 !important; box-shadow: none !important; }
+ul.topiclist.topics > li.header {
+    margin: 0 0 .8rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
 
 
 /* =========================================================
-   PANEL — ANUNCIO & NOTA + TEMAS
+   PANEL COMÚN
+   ANUNCIO & NOTA + TEMAS
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon,
-ul.topiclist.topics:not(.search) > li.header dl.icon {
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon {
     width: 100% !important;
     min-height: 4rem !important;
     height: 4rem !important;
@@ -9623,7 +9625,7 @@ ul.topiclist.topics:not(.search) > li.header dl.icon {
 
 
 /* =========================================================
-   ANUNCIO & NOTA
+   ANUNCIO & NOTA — SOLO SU TEXTO
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt {
@@ -9635,12 +9637,11 @@ ul.topiclist.topics:not(.search) > li.header dl.icon {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-sizing: border-box !important;
     position: absolute !important;
     inset: 0 !important;
     z-index: 2 !important;
+    box-sizing: border-box !important;
     background: transparent !important;
-    background-image: none !important;
     border: 0 !important;
     color: transparent !important;
     font-size: 0 !important;
@@ -9653,42 +9654,11 @@ ul.topiclist.topics:not(.search) > li.header dl.icon {
     padding: 0 !important;
     border: 0 !important;
     border-bottom: 0 !important;
+    color: transparent !important;
     background: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    color: transparent !important;
-    font: 400 1rem/1 "Jersey 15", sans-serif !important;
-    letter-spacing: .18rem !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-    text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
-}
-
-
-/* =========================================================
-   TEMAS
-   ========================================================= */
-
-ul.topiclist.topics:not(.search) > li.header dl.icon > dd.dterm {
-    width: 100% !important;
-    height: 4rem !important;
-    min-height: 4rem !important;
-    margin: 0 !important;
-    padding: 0 4rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 2 !important;
-    background: transparent !important;
-    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    color: transparent !important;
     font: 400 1rem/1 "Jersey 15", sans-serif !important;
     letter-spacing: .18rem !important;
     text-align: center !important;
@@ -9699,11 +9669,44 @@ ul.topiclist.topics:not(.search) > li.header dl.icon > dd.dterm {
 
 
 /* =========================================================
-   DECORACIÓN
+   TEMAS — SOLO SU TEXTO REAL
+   ========================================================= */
+
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm {
+    width: 100% !important;
+    height: 4rem !important;
+    min-height: 4rem !important;
+    margin: 0 !important;
+    padding: 0 4rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: transparent !important;
+    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font: 400 1rem/1 "Jersey 15", sans-serif !important;
+    letter-spacing: .18rem !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
+}
+
+
+/* =========================================================
+   DECORACIÓN COMÚN — SOLO EN DL.ICON
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon::before,
-ul.topiclist.topics:not(.search) > li.header dl.icon::before {
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon::before {
     content: "///" !important;
     position: absolute;
     left: 1.5rem;
@@ -9718,7 +9721,7 @@ ul.topiclist.topics:not(.search) > li.header dl.icon::before {
 }
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon::after,
-ul.topiclist.topics:not(.search) > li.header dl.icon::after {
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon::after {
     content: "///" !important;
     position: absolute;
     right: 1.5rem;
@@ -9734,7 +9737,7 @@ ul.topiclist.topics:not(.search) > li.header dl.icon::after {
 
 
 /* =========================================================
-   DESACTIVAR DECORACIONES ANTIGUAS
+   ELIMINAR DECORACIONES ANTIGUAS
    ========================================================= */
 
 ul.topiclist.topics > li.header dl.icon > dt::before,
@@ -9751,7 +9754,9 @@ ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
 
 ul.topiclist.topics > li.header dl.icon > dd.posts,
 ul.topiclist.topics > li.header dl.icon > dd.views,
-ul.topiclist.topics > li.header dl.icon > dd.lastpost { display: none !important; }
+ul.topiclist.topics > li.header dl.icon > dd.lastpost {
+    display: none !important;
+}
 
 /* =========================================================
    VIEWFORUM — CABECERA DE FORO
