@@ -9055,75 +9055,23 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates {
     width: 100%;
     margin: 2rem 0 0;
+    padding: 2rem;
+    box-sizing: border-box;
     background: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 0.5rem), #0d141c;
     border: 1px solid var(--theme-border);
     border-radius: 1rem;
-    padding: 2rem;
-    box-sizing: border-box;
 }
+
+/* ================= NAVEGACIÓN FOROACTIVO ================= */
 
 .digimon-affiliates-nav {
     position: relative;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     min-height: 3.5rem !important;
     margin-bottom: 0 !important;
-    padding: 0 4rem !important;
-    border-bottom: 1px solid var(--theme-border) !important;
-    box-sizing: border-box;
-}
-
-.digimon-affiliates-nav::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 30%;
-    height: 1px;
-    background: var(--theme-accent1);
-    box-shadow: 0 0 8px var(--theme-accent1);
-}
-
-.digimon-affiliates-nav > i {
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem !important;
-    height: 3.5rem !important;
-    font-size: 2rem !important;
-    transform: translateY(-50%);
-    color: var(--theme-accent1) !important;
-    border: 1px solid var(--theme-border);
-    border-radius: 0.5rem;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
-    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: digimon-affiliates-network 4s ease-in-out infinite;
-}
-
-.digimon-affiliates-nav > i:hover {
-    color: var(--theme-accent2) !important;
-    border-color: var(--theme-accent2);
-    box-shadow: 0 0 0.75rem rgba(150, 80, 255, 0.3);
-}
-
-.digimon-affiliates-nav {
-    position: relative;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: nowrap !important;
-    gap: 0.5rem !important;
-    min-height: 3.5rem !important;
-    margin-bottom: 0 !important;
-    padding: 0 4rem !important;
-    border-bottom: 1px solid var(--theme-border) !important;
+    padding: 0 5rem !important;
     box-sizing: border-box;
     font-size: 0 !important;
     white-space: nowrap !important;
@@ -9140,58 +9088,31 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     box-shadow: 0 0 8px var(--theme-accent1);
 }
 
-.digimon-affiliates-nav > i {
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem !important;
-    height: 3.5rem !important;
-    margin: 0 !important;
-    font-size: 2rem !important;
-    transform: translateY(-50%);
-    color: var(--theme-accent1) !important;
-    border: 1px solid var(--theme-border);
-    border-radius: 0.5rem;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
-    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: digimon-affiliates-network 4s ease-in-out infinite;
-}
-
-.digimon-affiliates-nav {
-    position: relative;
+.digimon-affiliates-nav > ul {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
-    min-height: 2rem !important;
-    margin-bottom: 0 !important;
-    padding: 0 5rem !important;
-    border-bottom: 1px solid var(--theme-border) !important;
-    box-sizing: border-box;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     font-size: 0 !important;
+    white-space: nowrap !important;
+    list-style: none !important;
 }
 
-.digimon-affiliates-nav::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 30%;
-    height: 1px;
-    background: var(--theme-accent1);
-    box-shadow: 0 0 8px var(--theme-accent1);
+.digimon-affiliates-nav > ul > li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    list-style: none !important;
 }
 
-.digimon-affiliates-nav > a {
+.digimon-affiliates-nav > ul > li > a {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 !important;
+    margin: 0 0.3rem !important;
     padding: 0.7rem 1rem !important;
     font-size: 0.65rem !important;
     font-weight: 800 !important;
@@ -9199,19 +9120,19 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     line-height: 1 !important;
     color: var(--text-color) !important;
     text-decoration: none !important;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
+    letter-spacing: 0.06em !important;
+    white-space: nowrap !important;
     border: 1px solid var(--theme-border) !important;
-    border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.02);
+    border-radius: 0.5rem !important;
+    background: rgba(255, 255, 255, 0.02) !important;
     box-sizing: border-box;
     transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.digimon-affiliates-nav > a:hover {
+.digimon-affiliates-nav > ul > li > a:hover {
     color: var(--theme-accent1) !important;
     border-color: var(--theme-accent1) !important;
-    background: rgba(0, 170, 255, 0.05);
+    background: rgba(0, 170, 255, 0.05) !important;
     box-shadow: 0 0 0.75rem rgba(0, 170, 255, 0.15);
     transform: translateY(-1px);
 }
@@ -9230,11 +9151,10 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     transform: translateY(-50%);
     font-size: 2rem !important;
     color: var(--theme-accent1) !important;
-    border: 1px solid var(--theme-border);
-    border-radius: 0.5rem;
-    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--theme-border) !important;
+    border-radius: 0.5rem !important;
+    background: rgba(0, 0, 0, 0.2) !important;
     box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
-    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     animation: digimon-affiliates-network 4s ease-in-out infinite;
 }
 
@@ -9249,6 +9169,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     50% { transform: translateY(-50%) scale(1.08); }
 }
 
+/* ================= CONTENIDO PRINCIPAL ================= */
+
 .digimon-affiliates-main {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.8fr) minmax(0, 1.15fr);
@@ -9261,10 +9183,12 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     display: contents;
 }
 
+/* ================= CRÉDITOS ================= */
+
 .digimon-affiliates-credits {
+    position: relative;
     grid-column: 1;
     grid-row: 1;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9341,6 +9265,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     opacity: 0.8;
 }
 
+/* ================= BLOQUES DE AFILIADOS ================= */
+
 .digimon-affiliates-siblings,
 .digimon-affiliates-elite,
 .digimon-affiliates-directory {
@@ -9392,6 +9318,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     box-shadow: 0 0 5px var(--theme-accent1);
 }
 
+/* ================= AFILIADOS HERMANOS ================= */
+
 .digimon-affiliates-siblings-list {
     display: grid;
     grid-template-columns: repeat(2, 100px);
@@ -9401,10 +9329,12 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-siblings-list img {
+    display: block;
     width: 100px;
     height: 100px;
-    display: block;
 }
+
+/* ================= AFILIADOS DE ÉLITE ================= */
 
 .digimon-affiliates-elite-list {
     display: grid;
@@ -9414,10 +9344,12 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-elite-list img {
+    display: block;
     width: 50px;
     height: 50px;
-    display: block;
 }
+
+/* ================= AFILIADOS DIRECTORIO ================= */
 
 .digimon-affiliates-directory-list {
     display: flex;
@@ -9428,15 +9360,17 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-directory-list img {
+    display: block;
     width: 50px;
     height: 50px;
-    display: block;
 }
 
+/* ================= PLACEHOLDERS ================= */
+
 .digimon-affiliate-placeholder {
+    position: relative;
     display: flex;
     flex-shrink: 0;
-    position: relative;
     border: 1px solid var(--theme-border);
     background: rgba(255, 255, 255, 0.025);
     box-sizing: border-box;
@@ -9452,74 +9386,4 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliate-placeholder img {
     display: block;
     max-width: 100%;
-}
-/* ================= AFILIADOS Y CRÉDITOS — NAVEGACIÓN FOROACTIVO ================= */
-
-.digimon-affiliates-nav {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: nowrap !important;
-    gap: 0.6rem !important;
-    min-height: 3.5rem !important;
-    margin-bottom: 0 !important;
-    padding: 0 5rem !important;
-    font-size: 0 !important;
-    white-space: nowrap !important;
-}
-
-.digimon-affiliates-nav > a {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 !important;
-    padding: 0.7rem 1rem !important;
-    font-size: 0.65rem !important;
-    font-weight: 800 !important;
-    font-family: "Oxanium", sans-serif !important;
-    line-height: 1 !important;
-    color: var(--text-color) !important;
-    text-decoration: none !important;
-    letter-spacing: 0.06em !important;
-    white-space: nowrap !important;
-    border: 1px solid var(--theme-border) !important;
-    border-radius: 0.5rem !important;
-    background: rgba(255, 255, 255, 0.02) !important;
-    box-sizing: border-box;
-    transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-}
-
-.digimon-affiliates-nav > a:hover {
-    color: var(--theme-accent1) !important;
-    border-color: var(--theme-accent1) !important;
-    background: rgba(0, 170, 255, 0.05) !important;
-    box-shadow: 0 0 0.75rem rgba(0, 170, 255, 0.15);
-    transform: translateY(-1px);
-}
-
-.digimon-affiliates-nav > i {
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 3.5rem !important;
-    height: 3.5rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    transform: translateY(-50%);
-    font-size: 2rem !important;
-    color: var(--theme-accent1) !important;
-    border: 1px solid var(--theme-border) !important;
-    border-radius: 0.5rem !important;
-    background: rgba(0, 0, 0, 0.2) !important;
-    box-shadow: 0 0 0.5rem rgba(0, 170, 255, 0.08);
-    animation: digimon-affiliates-network 4s ease-in-out infinite;
-}
-
-.digimon-affiliates-nav > i:hover {
-    color: var(--theme-accent2) !important;
-    border-color: var(--theme-accent2) !important;
-    box-shadow: 0 0 0.75rem rgba(150, 80, 255, 0.3);
 }
