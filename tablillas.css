@@ -1041,7 +1041,7 @@
     --dr-border: rgba(255,255,255,.10);
     width: 720px;
     max-width: 94%;
-    margin: 30px auto;
+    margin: -30px auto;
     padding: 18px;
     box-sizing: border-box;
     background: linear-gradient(145deg, rgba(22,119,200,.08), transparent 35%, rgba(53,216,255,.04)), var(--dr-bg);
@@ -1056,72 +1056,8 @@
 .dr-ficha > input[type="radio"] {display: none;}/*OCULTAR RADIO*/
 
 /* ============================================================
-   DECORACIÓN SUPERIOR
-   ============================================================ */
-.dr-dots {
-    height: 10px;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.dr-dots i {
-    width: 6px;
-    height: 6px;
-    display: block;
-    background: var(--dr-cyan);
-    transform: rotate(45deg);
-    opacity: .7;
-}
-
-.dr-dots i:nth-child(2) {opacity: .45;}
-.dr-dots i:nth-child(3) {opacity: .2;}
-
-/* ============================================================
-   CABECERA
-   ============================================================ */
-.dr-head {
-    height: 174px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 2px solid var(--dr-cyan);
-    background: #09131d;
-}
-.dr-head:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(5,12,18,.05), rgba(5,12,18,.82));
-    pointer-events: none;
-}
-
-.dr-head img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.dr-head span {
-    position: absolute;
-    z-index: 2;
-    left: 18px;
-    bottom: 15px;
-    padding: 5px 10px;
-    color: var(--dr-cyan);
-    border: 1px solid var(--dr-cyan);
-    font-family: 'Oxanium', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    background: rgba(5,12,18,.65);
-}
-
-/* ============================================================
    NOMBRE
-   ============================================================ */
+   ============================================================ 
 .dr-name {
     margin: 18px 0 25px;
     padding: 14px 17px;
@@ -1133,7 +1069,7 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-}
+} */
 
 /* ============================================================
    PÁGINAS
@@ -1171,7 +1107,7 @@
 
 /* ============================================================
    DATOS
-   ============================================================ */
+   ============================================================ 
 .dr-data {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1211,7 +1147,7 @@
     font-style: normal;
     font-size: 10px;
     line-height: 1.4;
-}
+} */
 
 /* ============================================================
    TEXTO
@@ -1340,12 +1276,12 @@
 /* CONTENIDO DIGIMON */
 .dr-digimon-content {min-width: 0;}
 
-.dr-data-small {
+/* .dr-data-small {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 12px;
 }
 
-.dr-data-small span {min-height: 55px;}
+.dr-data-small span {min-height: 55px;} */
 .dr-digimon-content h3 {
     margin: 13px 0 7px;
     color: var(--dr-cyan);
@@ -1475,67 +1411,6 @@
     color: var(--dr-cyan);
     border-color: rgba(53,216,255,.35);
 }
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-.dr-ficha .dr-cabeza {
-    position: relative;
-    min-height: 174px;
-    padding: 35px 40px 30px;
-    background: linear-gradient(90deg, rgba(8,15,24,.98) 0%, rgba(8,15,24,.87) 48%, rgba(8,15,24,.55) 100%        );
-    background-size: cover;
-    background-position: center;
-    border-bottom: 1px solid var(--emblema1);
-}
-
-/* línea tecnológica */
-.dr-ficha.dr-cabeza:after {
-    content: "";
-    position: absolute;
-    left: 40px;
-    bottom: 0;
-    width: 160px;
-    height: 2px;
-    background: var(--emblema2);
-    box-shadow: 0 0 12px rgba(34,193,195,.5);
-}
-
-/* etiqueta */
-.dr-ficha .dr-label {
-    display: inline-block;
-    padding: 3px 9px;
-    margin-bottom: 10px;
-    border: 1px solid var(--emblema2);
-    color: var(--emblema2);
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* título */
-.dr-ficha .dr-title {
-    margin: 0;
-    color: #fff;
-    font-family: 'Player Sans', 'Arial Narrow', sans-serif;
-    font-size: 38px;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-/* subtítulo */
-.dr-ficha .dr-subtitle {
-    margin-top: 9px;
-    color: var(--dg-muted);
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-.dr-tadmin .dr-subtitle b {color: var(--emblema2);}
-
 
 /* PESTAÑA ACTIVA */
 #dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"], #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"], #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] {
