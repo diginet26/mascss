@@ -9585,6 +9585,65 @@ ul.topiclist.topics li.row dl.icon::before {
     pointer-events: none;
 }
 
+/* =========================================================
+   TOPICS — ENCABEZADOS DE SECCIÓN
+   ========================================================= */
+
+ul.topiclist.topics > li.header dl.icon dt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 3rem;
+    margin: 0;
+    padding: .7rem 1rem !important;
+    box-sizing: border-box;
+    position: relative;
+    color: transparent;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    font: 800 1rem/1 "Bungee", sans-serif;
+    letter-spacing: .18rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 .8rem color-mix(in srgb, var(--accent1) 20%, transparent);
+}
+
+ul.topiclist.topics > li.header dl.icon dt::before,
+ul.topiclist.topics > li.header dl.icon dt::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 5rem;
+    height: .06rem;
+    background: linear-gradient(90deg, transparent, var(--accent1), var(--accent2));
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 35%, transparent);
+    transform: translateY(-50%);
+}
+
+ul.topiclist.topics > li.header dl.icon dt::before {
+    left: 0;
+}
+
+ul.topiclist.topics > li.header dl.icon dt::after {
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+ul.topiclist.topics > li.header dl.icon {
+    background: transparent !important;
+}
+
+ul.topiclist.topics > li.header {
+    background: transparent !important;
+    border: 0;
+}
+
+ul.topiclist.topics > li.header dl.icon dt {
+    text-shadow: 0 0 .65rem color-mix(in srgb, var(--accent2) 18%, transparent);
+}
+
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
