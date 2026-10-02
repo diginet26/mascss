@@ -9386,3 +9386,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     display: block;
     max-width: 100%;
 }
+.digimon-affiliates .digimon-digital-line {
+    margin-bottom: 1.5rem;
+}
