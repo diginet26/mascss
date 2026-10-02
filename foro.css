@@ -9591,16 +9591,27 @@ ul.topiclist.topics > li.header {
     margin: 0 0 .8rem !important;
     padding: 0 !important;
     background: transparent !important;
+    background-image: none !important;
     border: 0 !important;
+}
+
+.forumbg.announcement,
+.forumbg.announcement > .inner,
+.forumbg.announcement ul.topiclist.topics,
+.forumbg.announcement ul.topiclist.topics > li.header {
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
 }
 
 
 /* =========================================================
-   CONTENEDOR — ANUNCIO & NOTA + TEMAS
+   CONTENEDOR — TEMAS + ANUNCIO & NOTA
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon,
-.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon {
+ul.topiclist.topics:not(.search) > li.header dl.icon {
     width: 100% !important;
     min-height: 4rem !important;
     height: 4rem !important;
@@ -9617,7 +9628,6 @@ ul.topiclist.topics > li.header {
         repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3.05rem),
         repeating-linear-gradient(0deg, transparent 0, transparent 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1.05rem),
         var(--post-background) !important;
-    background-color: var(--post-background) !important;
     border: .06rem solid color-mix(in srgb, var(--accent1) 32%, transparent) !important;
     border-radius: .5rem !important;
     box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 65%, transparent), inset 0 0 2rem color-mix(in srgb, var(--accent2) 6%, transparent), 0 .3rem 1rem rgba(0,0,0,.14) !important;
@@ -9625,25 +9635,11 @@ ul.topiclist.topics > li.header {
 
 
 /* =========================================================
-   LIMPIEZA DEL CONTENEDOR DE ANUNCIO
-   ========================================================= */
-
-.forumbg.announcement,
-.forumbg.announcement > .inner,
-.forumbg.announcement ul.topiclist.topics {
-    background: transparent !important;
-    background-image: none !important;
-    border: 0 !important;
-    box-shadow: none !important;
-}
-
-
-/* =========================================================
-   TEXTO — MISMO CSS PARA AMBOS
+   TEXTO — ANUNCIO & NOTA + TEMAS
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt,
-.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm {
+ul.topiclist.topics:not(.search) > li.header dl.icon > dd.dterm {
     width: 100% !important;
     min-height: 4rem !important;
     height: 4rem !important;
@@ -9656,8 +9652,7 @@ ul.topiclist.topics > li.header {
     position: absolute !important;
     inset: 0 !important;
     z-index: 2 !important;
-    background: transparent !important;
-    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -9669,7 +9664,30 @@ ul.topiclist.topics > li.header {
     letter-spacing: .18rem !important;
     text-align: center !important;
     text-transform: uppercase !important;
+    text-decoration: none !important;
     text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
+}
+
+
+/* =========================================================
+   CORRECCIÓN DEL <b> DE ANUNCIO & NOTA
+   ========================================================= */
+
+.forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt b,
+.forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt strong,
+.forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt a {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-bottom: 0 !important;
+    color: transparent !important;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font: inherit !important;
+    letter-spacing: inherit !important;
+    text-decoration: none !important;
 }
 
 
@@ -9679,18 +9697,18 @@ ul.topiclist.topics > li.header {
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt::before,
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt::after,
-.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm::before,
-.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
+ul.topiclist.topics:not(.search) > li.header dl.icon > dd.dterm::before,
+ul.topiclist.topics:not(.search) > li.header dl.icon > dd.dterm::after {
     content: none !important;
 }
 
 
 /* =========================================================
-   ÚNICAS DECORACIONES — DL.ICON
+   ÚNICAS DECORACIONES — UNA A CADA LADO
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon::before,
-.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon::before {
+ul.topiclist.topics:not(.search) > li.header dl.icon::before {
     content: "///" !important;
     position: absolute;
     left: 1.5rem;
@@ -9705,7 +9723,7 @@ ul.topiclist.topics > li.header {
 }
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon::after,
-.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon::after {
+ul.topiclist.topics:not(.search) > li.header dl.icon::after {
     content: "///" !important;
     position: absolute;
     right: 1.5rem;
