@@ -10808,6 +10808,55 @@ ul.topiclist.topics > li.header dl.icon > dd.lastpost {
     display: none !important;
 }
 
+/* =========================================================
+   TOPICS — IGUALAR "TEMAS" A "ANUNCIO & NOTA"
+   ========================================================= */
+
+ul.topiclist.topics li.header dl.icon > dd.dterm {
+    width: 100% !important;
+    min-height: 4rem !important;
+    height: 4rem !important;
+    margin: 0 !important;
+    padding: .5rem 4rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    background: transparent !important;
+    color: transparent !important;
+    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font: 800 1rem/1 "Jersey 15", sans-serif !important;
+    letter-spacing: .18rem !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+}
+
+ul.topiclist.topics li.header dl.icon > dd.dterm::before {
+    content: "///";
+    position: absolute;
+    left: 1.5rem;
+    color: var(--accent1);
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .15rem;
+    -webkit-text-fill-color: var(--accent1);
+    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
+}
+
+ul.topiclist.topics li.header dl.icon > dd.dterm::after {
+    content: "///";
+    position: absolute;
+    right: 1.5rem;
+    color: var(--accent2);
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .15rem;
+    -webkit-text-fill-color: var(--accent2);
+    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
+}
+
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
