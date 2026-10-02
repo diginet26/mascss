@@ -9730,9 +9730,10 @@ h1.page-title {
     overflow: hidden;
     text-align: center;
     background:
-        linear-gradient(90deg, color-mix(in srgb, var(--accent1) 8%, transparent), transparent 35%, color-mix(in srgb, var(--accent2) 10%, transparent)),
-        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3.05rem),
-        repeating-linear-gradient(0deg, transparent 0, transparent 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.2rem);
+        linear-gradient(90deg, color-mix(in srgb, var(--accent1) 12%, transparent), transparent 42%, color-mix(in srgb, var(--accent2) 15%, transparent)),
+        linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.25)),
+        url("https://i.imgur.com/cXRt4Sw.png") center/cover no-repeat,
+        var(--post-background);
     border: .06rem solid color-mix(in srgb, var(--accent1) 22%, transparent);
     border-radius: .5rem;
 }
