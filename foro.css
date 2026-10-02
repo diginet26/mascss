@@ -9421,8 +9421,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 ul.topiclist.topics li.row dl.icon {
     margin: 0 0 .65rem !important;
-    padding: 1.65rem 0 2.75rem !important;
-    min-height: 8.75rem;
+    min-height: 5rem;
+    padding: 1rem 0 2rem !important;
     position: relative;
     background-color: color-mix(in srgb, var(--post-background) 88%, var(--body-background)) !important;
     border: .07rem solid color-mix(in srgb, var(--accent1) 20%, transparent);
@@ -9438,7 +9438,7 @@ ul.topiclist.topics li.row:hover dl.icon {
 }
 
 ul.topiclist.topics li.row .topictitle {
-    font: 700 2.35rem/1 "Bungee", sans-serif;
+    font: 700 1.75rem/1 "Bungee", sans-serif;
     letter-spacing: .02rem;
     color: var(--text-color);
     text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 12%, transparent);
@@ -9454,7 +9454,7 @@ ul.topiclist.topics span.span-tab {
     display: flex;
     align-items: center;
     gap: .35rem;
-    margin-top: .35rem;
+    margin-top: .2rem;
     font: 700 .58rem/1 "Roboto Mono", monospace;
     text-transform: uppercase;
     letter-spacing: .18rem;
@@ -9550,9 +9550,9 @@ ul.topiclist.topics dd.views dfn {
 }
 
 ul.topiclist.topics dd.lastpost .lastpost-avatar img {
-    height: 6.25rem;
     width: auto;
-    padding-right: .65rem;
+    height: 4rem;
+    padding-right: .5rem;
     filter: saturate(.8);
     opacity: .9;
 }
