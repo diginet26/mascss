@@ -9388,7 +9388,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     position: absolute;
     top: -3.5rem;
     right: -3rem;
-    width: 8rem;
+    width: 12rem;
     height: auto;
     z-index: 10;
     pointer-events: none;
