@@ -9630,7 +9630,7 @@ ul.topiclist.topics > li.header dl.icon {
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt,
-ul.topiclist.topics.bg_none > li.header dl.icon > dd.dterm {
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm {
     width: 100% !important;
     min-height: 4rem !important;
     height: 4rem !important;
@@ -9649,7 +9649,10 @@ ul.topiclist.topics.bg_none > li.header dl.icon > dd.dterm {
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    font: 400 1rem/1 "Jersey 15", sans-serif !important;
+    font-family: "Jersey 15", sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
     letter-spacing: .18rem !important;
     text-align: center !important;
     text-transform: uppercase !important;
@@ -9662,7 +9665,7 @@ ul.topiclist.topics.bg_none > li.header dl.icon > dd.dterm {
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt::before,
-ul.topiclist.topics.bg_none > li.header dl.icon > dd.dterm::before {
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm::before {
     content: "///";
     position: absolute;
     left: 1.5rem;
@@ -9676,7 +9679,7 @@ ul.topiclist.topics.bg_none > li.header dl.icon > dd.dterm::before {
 }
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt::after,
-ul.topiclist.topics.bg_none > li.header dl.icon > dd.dterm::after {
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
     content: "///";
     position: absolute;
     right: 1.5rem;
@@ -9699,7 +9702,6 @@ ul.topiclist.topics > li.header dl.icon > dd.views,
 ul.topiclist.topics > li.header dl.icon > dd.lastpost {
     display: none !important;
 }
-
 
 /* =========================================================
    VIEWFORUM — CABECERA DE FORO
