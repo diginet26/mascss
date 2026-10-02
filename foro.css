@@ -9399,3 +9399,19 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     width: 100%;
     height: auto;
 }
+
+.digimon-affiliates-character-left {
+    position: absolute;
+    top: 0.2rem;
+    left: 2rem;
+    width: 6rem;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.digimon-affiliates-character-left img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
