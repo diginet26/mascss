@@ -9572,13 +9572,14 @@ ul.topiclist.topics li.row dl.icon::after {
 ul.topiclist.topics li.row dl.icon::before {
     content: "";
     position: absolute;
-    top: -5%;
+    top: 6%;
     right: 40%;
-    width: .22rem;
-    height: 110%;
+    width: .12rem;
+    height: 88%;
     background: linear-gradient(180deg, var(--accent1), var(--accent2));
-    transform: skewX(-18deg);
-    box-shadow: 0 0 .65rem color-mix(in srgb, var(--accent1) 35%, transparent);
+    transform: rotate(14deg);
+    transform-origin: center;
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 30%, transparent);
     z-index: 4;
     pointer-events: none;
 }
