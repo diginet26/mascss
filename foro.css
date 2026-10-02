@@ -9145,6 +9145,18 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     transform: translateY(0);
 }
 
+.digimon-affiliates-nav a {
+    margin: 0 0.2rem !important;
+}
+
+.digimon-affiliates-nav a::after {
+    display: none !important;
+}
+
+.digimon-affiliates-nav {
+    gap: 0.25rem !important;
+}
+
 @keyframes digimon-affiliates-network {
     0%, 100% { transform: translateY(-50%) scale(1); }
     50% { transform: translateY(-50%) scale(1.08); }
