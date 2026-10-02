@@ -9695,6 +9695,28 @@ ul.topiclist.topics > li.header dl.icon > dd.lastpost {
     display: none !important;
 }
 
+ul.topiclist.topics > li.header dl.icon > dd.dterm {
+    width: 100% !important;
+    min-height: 4rem;
+    margin: 0 !important;
+    padding: .75rem 5rem !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    color: transparent !important;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font: 800 1rem/1 "Bungee", sans-serif;
+    letter-spacing: .18rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
