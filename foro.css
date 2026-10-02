@@ -10108,6 +10108,7 @@ h1.page-title a {
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--accent1) 18%, transparent);
 }
 
+
 /* =========================================================
    VIEWFORUM — USUARIOS NAVEGANDO
    ========================================================= */
@@ -10143,6 +10144,7 @@ h1.page-title a {
     margin-bottom: 0;
 }
 
+
 /* =========================================================
    VIEWFORUM — LEYENDA
    ========================================================= */
@@ -10165,9 +10167,75 @@ h1.page-title a {
     text-transform: uppercase;
 }
 
+
 /* =========================================================
-   VIEWFORUM — LIMPIEZA DE ACCIONES
+   VIEWFORUM — BARRA SUPERIOR / LIMPIEZA
    ========================================================= */
+
+.forum-top-actions {
+    font-size: 0 !important;
+}
+
+.forum-top-actions a,
+.forum-top-actions span,
+.forum-top-actions div {
+    font-size: .58rem;
+}
+
+.forum-top-actions .forum-mark-read {
+    display: inline-flex !important;
+}
+
+.forum-top-actions a[href*="watch"] {
+    display: inline-flex !important;
+}
+
+.forum-top-actions a[href^="javascript:showhide"] {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 4rem;
+    min-height: 2.2rem;
+    margin: 0 !important;
+    padding: 0 .8rem !important;
+    box-sizing: border-box;
+    border: .06rem solid var(--accent2) !important;
+    border-radius: .35rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 10%, transparent), color-mix(in srgb, var(--accent2) 12%, transparent)) !important;
+    color: var(--text-color) !important;
+    font: 700 .58rem/1 "Oxanium", monospace !important;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    box-shadow: none;
+    transition: .25s ease;
+}
+
+.forum-top-actions a[href^="javascript:showhide"] img {
+    display: none !important;
+}
+
+.forum-top-actions a[href^="javascript:showhide"]::before {
+    content: "¡MÁS!";
+    color: var(--text-color);
+}
+
+.forum-top-actions a[href^="javascript:showhide"]:hover {
+    border-color: var(--accent1) !important;
+    color: var(--accent1) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 16%, transparent), color-mix(in srgb, var(--accent2) 16%, transparent)) !important;
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--accent2) 20%, transparent);
+    transform: translateY(-.05rem);
+}
+
+.forum-top-actions a[href^="javascript:showhide"]:hover::before {
+    color: var(--accent1);
+}
+
+.forum-top-actions br,
+.forum-top-actions hr {
+    display: none !important;
+}
 
 .forum-top-actions a:empty,
 .forum-top-actions span:empty,
@@ -10178,9 +10246,31 @@ h1.page-title a {
     display: none !important;
 }
 
-/* Oculta separadores que queden sueltos al desaparecer un elemento */
-.forum-top-actions > .separator:empty,
-.forum-top-actions + .separator {
+
+/* =========================================================
+   VIEWFORUM — ELIMINAR PUNTOS DE SEPARACIÓN
+   ========================================================= */
+
+.topic-actions:not(:has(.search-box)) .pagination {
+    font-size: 0 !important;
+}
+
+.topic-actions:not(:has(.search-box)) .pagination a,
+.topic-actions:not(:has(.search-box)) .pagination span,
+.topic-actions:not(:has(.search-box)) .pagination div {
+    font-size: .55rem;
+}
+
+.topic-actions:not(:has(.search-box)) .pagination br {
+    display: none;
+}
+
+
+/* =========================================================
+   VIEWFORUM — ELIMINAR BOTÓN "VOLVER ARRIBA"
+   ========================================================= */
+
+.topic-actions:not(:has(.search-box)) .pagination a[href="#top"] {
     display: none !important;
 }
 
@@ -10284,7 +10374,6 @@ h1.page-title a {
     background: linear-gradient(135deg, var(--accent1), var(--accent2));
     box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 35%, transparent);
 }
-
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
