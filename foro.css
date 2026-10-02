@@ -9439,7 +9439,7 @@ ul.topiclist.topics li.row:hover dl.icon {
 }
 
 ul.topiclist.topics li.row .topictitle {
-    font: 700 1.75rem/1 "Bungee", sans-serif;
+    font: 700 3rem/1 "Jersey 15", sans-serif;
     letter-spacing: .02rem;
     color: var(--text-color);
     text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 12%, transparent);
