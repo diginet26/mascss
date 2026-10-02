@@ -9499,11 +9499,11 @@ ul.topiclist.topics dd.views {
 }
 
 ul.topiclist.topics dd.posts {
-    left: 8.5rem;
+    left: 6rem;
 }
 
 ul.topiclist.topics dd.views {
-    left: 17rem;
+    left: 12rem;
 }
 
 ul.topiclist.topics dd.posts::before,
@@ -9526,6 +9526,13 @@ ul.topiclist.topics dd.views::before {
     background: var(--accent2);
     color: var(--accent2);
     border-radius: 50%;
+}
+
+ul.topiclist.topics dd.posts::after {
+    content: "/";
+    margin-left: .65rem;
+    color: color-mix(in srgb, var(--text-color) 35%, transparent);
+    font-weight: 700;
 }
 
 ul.topiclist.topics dd.posts dfn,
