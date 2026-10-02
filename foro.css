@@ -9594,29 +9594,37 @@ ul.topiclist.topics > li.header {
     border: 0 !important;
 }
 
-ul.topiclist.topics > li.header dl.icon,
-.forumbg.announcement ul.topiclist.topics > li.header dl.icon {
+.forumbg.announcement {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+ul.topiclist.topics > li.header dl.icon {
     width: 100% !important;
     min-height: 4rem !important;
     height: 4rem !important;
     margin: 0 !important;
     padding: 0 !important;
     display: flex !important;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
     background:
-        linear-gradient(135deg, color-mix(in srgb, var(--accent1) 9%, transparent), transparent 38%),
-        linear-gradient(315deg, color-mix(in srgb, var(--accent2) 11%, transparent), transparent 45%),
-        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 4%, transparent) 3rem, color-mix(in srgb, var(--accent1) 4%, transparent) 3.05rem),
-        repeating-linear-gradient(0deg, transparent 0, transparent 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.2rem),
+        linear-gradient(135deg, color-mix(in srgb, var(--accent1) 9%, transparent), transparent 40%, color-mix(in srgb, var(--accent2) 10%, transparent)),
+        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3.05rem),
+        repeating-linear-gradient(0deg, transparent 0, transparent 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1.05rem),
         var(--post-background) !important;
     border: .06rem solid color-mix(in srgb, var(--accent1) 32%, transparent) !important;
     border-radius: .5rem !important;
-    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 70%, transparent), inset 0 0 2rem color-mix(in srgb, var(--accent2) 7%, transparent), 0 .35rem 1rem rgba(0,0,0,.18) !important;
+    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 65%, transparent), inset 0 0 2rem color-mix(in srgb, var(--accent2) 6%, transparent), 0 .3rem 1rem rgba(0,0,0,.14) !important;
 }
+
+/* =========================================================
+   TÍTULO — ANUNCIO & NOTA + TEMAS
+   ========================================================= */
 
 ul.topiclist.topics > li.header dl.icon > dt,
 ul.topiclist.topics > li.header dl.icon > dd.dterm {
@@ -9638,12 +9646,16 @@ ul.topiclist.topics > li.header dl.icon > dd.dterm {
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    font: 800 1rem/1 "Jersey 15", sans-serif !important;
+    font: 400 1rem/1 "Jersey 15", sans-serif !important;
     letter-spacing: .18rem !important;
     text-align: center !important;
     text-transform: uppercase !important;
     text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
 }
+
+/* =========================================================
+   DETALLES LATERALES
+   ========================================================= */
 
 ul.topiclist.topics > li.header dl.icon > dt::before,
 ul.topiclist.topics > li.header dl.icon > dd.dterm::before {
@@ -9673,14 +9685,19 @@ ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
     text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
 }
 
+/* =========================================================
+   COLUMNAS ORIGINALES
+   ========================================================= */
+
 ul.topiclist.topics > li.header dl.icon > dd.posts,
 ul.topiclist.topics > li.header dl.icon > dd.views,
 ul.topiclist.topics > li.header dl.icon > dd.lastpost {
     display: none !important;
 }
 
+
 /* =========================================================
-   VIEWFORUM — CABECERA DIGITAL RIFT
+   VIEWFORUM — CABECERA DE FORO
    ========================================================= */
 
 h1.page-title {
@@ -9716,7 +9733,7 @@ h1.page-title a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font: 700 7rem/1 "Jersey 15", sans-serif;
+    font: 400 7rem/1 "Jersey 15", sans-serif;
     letter-spacing: .04rem;
     text-transform: uppercase;
     text-decoration: none;
