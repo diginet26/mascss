@@ -9586,62 +9586,113 @@ ul.topiclist.topics li.row dl.icon::before {
 }
 
 /* =========================================================
-   TOPICS — ENCABEZADOS DE SECCIÓN
+   TOPICS — CABECERAS DIGITAL RIFT
    ========================================================= */
 
-ul.topiclist.topics > li.header dl.icon dt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 3rem;
-    margin: 0;
-    padding: .7rem 1rem !important;
-    box-sizing: border-box;
-    position: relative;
-    color: transparent;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2));
-    background-clip: text;
-    -webkit-background-clip: text;
-    font: 800 1rem/1 "Bungee", sans-serif;
-    letter-spacing: .18rem;
-    text-transform: uppercase;
-    text-align: center;
-    text-shadow: 0 0 .8rem color-mix(in srgb, var(--accent1) 20%, transparent);
-}
-
-ul.topiclist.topics > li.header dl.icon dt::before,
-ul.topiclist.topics > li.header dl.icon dt::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 5rem;
-    height: .06rem;
-    background: linear-gradient(90deg, transparent, var(--accent1), var(--accent2));
-    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 35%, transparent);
-    transform: translateY(-50%);
-}
-
-ul.topiclist.topics > li.header dl.icon dt::before {
-    left: 0;
-}
-
-ul.topiclist.topics > li.header dl.icon dt::after {
-    right: 0;
-    transform: translateY(-50%) rotate(180deg);
+ul.topiclist.topics > li.header {
+    margin: 0 0 1rem;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
 }
 
 ul.topiclist.topics > li.header dl.icon {
-    background: transparent !important;
+    width: 100%;
+    min-height: 4rem;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--accent1) 9%, transparent), transparent 38%),
+        linear-gradient(315deg, color-mix(in srgb, var(--accent2) 11%, transparent), transparent 45%),
+        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 4%, transparent) 3rem, color-mix(in srgb, var(--accent1) 4%, transparent) 3.05rem),
+        repeating-linear-gradient(0deg, transparent 0, transparent 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.2rem),
+        var(--post-background);
+    border: .06rem solid color-mix(in srgb, var(--accent1) 32%, transparent);
+    border-radius: .5rem;
+    box-shadow:
+        inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 70%, transparent),
+        inset 0 0 2rem color-mix(in srgb, var(--accent2) 7%, transparent),
+        0 .35rem 1rem rgba(0,0,0,.18);
 }
 
-ul.topiclist.topics > li.header {
-    background: transparent !important;
-    border: 0;
+ul.topiclist.topics > li.header dl.icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 3.5rem;
+    height: .12rem;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--accent1) 40%, transparent);
 }
 
-ul.topiclist.topics > li.header dl.icon dt {
-    text-shadow: 0 0 .65rem color-mix(in srgb, var(--accent2) 18%, transparent);
+ul.topiclist.topics > li.header dl.icon::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    width: 3.5rem;
+    height: .12rem;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--accent2) 40%, transparent);
+}
+/*titulos*/
+ul.topiclist.topics > li.header dl.icon > dt,
+ul.topiclist.topics > li.header dl.icon > dd.dterm {
+    width: 100% !important;
+    min-height: 4rem;
+    margin: 0 !important;
+    padding: .75rem 5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    color: transparent;
+    background: transparent !important;
+    font: 800 1rem/1 "Bungee", sans-serif;
+    letter-spacing: .18rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, var(--accent1), var(--accent2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
+}
+
+ul.topiclist.topics > li.header dl.icon > dt::before,
+ul.topiclist.topics > li.header dl.icon > dd.dterm::before {
+    content: "///";
+    position: absolute;
+    left: 1.5rem;
+    color: var(--accent1);
+    font: 700 .55rem/1 "Roboto Mono", monospace;
+    letter-spacing: .18rem;
+    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
+}
+
+ul.topiclist.topics > li.header dl.icon > dt::after,
+ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
+    content: "///";
+    position: absolute;
+    right: 1.5rem;
+    color: var(--accent2);
+    font: 700 .55rem/1 "Roboto Mono", monospace;
+    letter-spacing: .18rem;
+    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
+}
+
+ul.topiclist.topics > li.header dl.icon > dd.posts,
+ul.topiclist.topics > li.header dl.icon > dd.views,
+ul.topiclist.topics > li.header dl.icon > dd.lastpost {
+    display: none !important;
 }
 
 /*CSS DE TEMAS*/
