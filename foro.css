@@ -9170,9 +9170,10 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 /* ================= CONTENIDO PRINCIPAL ================= */
+
 .digimon-affiliates-main {
     display: grid;
-    grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 0.6fr) minmax(0, 0.6fr);
     grid-template-rows: auto auto;
     gap: 1.5rem;
     align-items: center;
@@ -9181,6 +9182,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates-side {display: contents;}
 
 /* ================= CRÉDITOS ================= */
+
 .digimon-affiliates-credits {
     position: relative;
     grid-column: 1;
@@ -9189,7 +9191,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 12rem;
+    min-height: 100%;
     padding: 2rem;
     box-sizing: border-box;
     overflow: hidden;
@@ -9222,13 +9224,8 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     box-shadow: 0 0 5px var(--theme-accent1);
 }
 
-.digimon-affiliates-credits h3::before {
-    right: 100%;
-}
-
-.digimon-affiliates-credits h3::after {
-    left: 100%;
-}
+.digimon-affiliates-credits h3::before {right: 100%;}
+.digimon-affiliates-credits h3::after {left: 100%;}
 
 .digimon-affiliates-credits-text {
     max-width: 34rem;
@@ -9261,7 +9258,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 }
 
 .digimon-affiliates-directory {
-    grid-column: 2 / -1;
+    grid-column: 2 / 4;
     grid-row: 2;
 }
 
