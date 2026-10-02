@@ -1618,15 +1618,4 @@
     color: #4ba8d0;
 }
 
-.dr-system-status {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    color: #7193a2;
-}
 
-.dr-system-status i {
-    color: #ef3d59;
-    font-size: .45rem;
-    text-shadow: 0 0 .4rem #ef3d59;
-}
