@@ -9378,19 +9378,4 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates .digimon-digital-line {
     margin-bottom: 1.5rem;
 }
-/*terriermon assistant*/
-.digimon-affiliates {
-    position: relative;
-}
 
-.digimon-affiliates-character {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 25rem;
-    height: auto;
-    z-index: 9999;
-    pointer-events: none;
-}
-
-.digimon-affiliates-character img { display: block; width: 100%; height: auto; }
