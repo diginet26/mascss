@@ -9717,6 +9717,211 @@ ul.topiclist.topics > li.header dl.icon > dd.dterm {
     text-transform: uppercase;
 }
 
+/* =========================================================
+   VIEWFORUM — CABECERA DIGITAL RIFT
+   ========================================================= */
+
+h1.page-title {
+    width: 100%;
+    margin: 0 0 2rem !important;
+    padding: 3rem 2rem 3.5rem !important;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    background:
+        linear-gradient(90deg, color-mix(in srgb, var(--accent1) 8%, transparent), transparent 35%, color-mix(in srgb, var(--accent2) 10%, transparent)),
+        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3.05rem),
+        repeating-linear-gradient(0deg, transparent 0, transparent 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.2rem);
+    border: .06rem solid color-mix(in srgb, var(--accent1) 22%, transparent);
+    border-radius: .5rem;
+}
+
+h1.page-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 35%, color-mix(in srgb, var(--accent2) 8%, transparent) 50%, transparent 65%);
+    pointer-events: none;
+}
+
+h1.page-title a {
+    position: relative;
+    z-index: 2;
+    color: transparent !important;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: 700 4rem/1 "Bungee", sans-serif;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 0 .9rem color-mix(in srgb, var(--accent1) 18%, transparent);
+}
+
+/* =========================================================
+   VIEWFORUM — HERRAMIENTAS
+   ========================================================= */
+
+.topic-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 1.5rem;
+}
+
+.topic-actions .buttons,
+.topic-actions .search-box,
+.forum-top-actions {
+    display: flex;
+    align-items: center;
+}
+
+.topic-actions .buttons {
+    margin: 0;
+}
+
+.topic-actions .post-icon a,
+.topic-actions .forum-mark-read,
+.topic-actions .button2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.3rem;
+    padding: 0 .9rem;
+    box-sizing: border-box;
+    border: .06rem solid var(--accent1);
+    border-radius: .35rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 12%, transparent), color-mix(in srgb, var(--accent2) 7%, transparent));
+    color: var(--text-color) !important;
+    font: 700 .58rem/1 "Oxanium", sans-serif;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: .25s ease;
+}
+
+.topic-actions .post-icon a:hover,
+.topic-actions .forum-mark-read:hover,
+.topic-actions .button2:hover {
+    color: var(--accent1) !important;
+    border-color: var(--accent2);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 20%, transparent), color-mix(in srgb, var(--accent2) 16%, transparent));
+    box-shadow: 0 0 .8rem color-mix(in srgb, var(--accent1) 20%, transparent);
+    transform: translateY(-.05rem);
+}
+
+.topic-actions .post-icon img {
+    display: none;
+}
+
+.topic-actions .post-icon a::before {
+    content: "+";
+    margin-right: .35rem;
+    color: var(--accent1);
+    font-size: .8rem;
+}
+
+.topic-actions .search-box {
+    margin-left: 0;
+}
+
+.topic-actions #forum-search {
+    display: flex;
+    align-items: center;
+}
+
+.topic-actions #forum-search fieldset {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    margin: 0;
+    padding: 0;
+}
+
+.topic-actions #search_keywords {
+    width: 13rem;
+    height: 2.3rem;
+    padding: 0 .75rem;
+    box-sizing: border-box;
+    border: .06rem solid color-mix(in srgb, var(--accent1) 35%, transparent);
+    border-radius: .35rem;
+    outline: none;
+    background: color-mix(in srgb, var(--post-background) 88%, var(--body-background));
+    color: var(--text-color);
+    font: 700 .58rem/1 "Oxanium", monospace;
+    letter-spacing: .05rem;
+    transition: .25s ease;
+}
+
+.topic-actions #search_keywords:focus {
+    border-color: var(--accent2);
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--accent2) 18%, transparent);
+}
+
+.topic-actions #search_keywords::placeholder {
+    color: color-mix(in srgb, var(--text-color) 45%, transparent);
+}
+
+.topic-actions .search-box .button2 {
+    min-width: 4rem;
+    cursor: pointer;
+}
+
+/* =========================================================
+   VIEWFORUM — ACCIONES DERECHA
+   ========================================================= */
+
+.forum-top-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 0 1.5rem;
+}
+
+.forum-top-actions {
+    gap: .4rem;
+    margin-left: auto;
+}
+
+.forum-top-actions a,
+.forum-top-actions > * {
+    font: 700 .58rem/1 "Oxanium", monospace;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+}
+
+.forum-top-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.2rem;
+    padding: 0 .8rem;
+    box-sizing: border-box;
+    border: .06rem solid var(--accent1);
+    border-radius: .35rem;
+    background: color-mix(in srgb, var(--post-background) 90%, transparent);
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+    transition: .25s ease;
+}
+
+.forum-top-actions a:hover {
+    color: var(--accent1) !important;
+    border-color: var(--accent2);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 12%, transparent), color-mix(in srgb, var(--accent2) 12%, transparent));
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--accent2) 18%, transparent);
+}
+
+.forum-top-actions .forum-mark-read::before {
+    content: "✓";
+    margin-right: .35rem;
+    color: var(--accent1);
+}
+
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
