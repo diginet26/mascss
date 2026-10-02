@@ -9594,14 +9594,13 @@ ul.topiclist.topics > li.header {
     border: 0 !important;
 }
 
-.forumbg.announcement,
-.forumbg.announcement > .inner {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-}
 
-ul.topiclist.topics > li.header dl.icon {
+/* =========================================================
+   CONTENEDOR — ANUNCIO & NOTA + TEMAS
+   ========================================================= */
+
+.forumbg.announcement ul.topiclist.topics > li.header dl.icon,
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon {
     width: 100% !important;
     min-height: 4rem !important;
     height: 4rem !important;
@@ -9618,6 +9617,7 @@ ul.topiclist.topics > li.header dl.icon {
         repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3.05rem),
         repeating-linear-gradient(0deg, transparent 0, transparent 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1.05rem),
         var(--post-background) !important;
+    background-color: var(--post-background) !important;
     border: .06rem solid color-mix(in srgb, var(--accent1) 32%, transparent) !important;
     border-radius: .5rem !important;
     box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 65%, transparent), inset 0 0 2rem color-mix(in srgb, var(--accent2) 6%, transparent), 0 .3rem 1rem rgba(0,0,0,.14) !important;
@@ -9625,8 +9625,21 @@ ul.topiclist.topics > li.header dl.icon {
 
 
 /* =========================================================
-   ANUNCIO & NOTA + TEMAS
-   MISMA ESTRUCTURA VISUAL
+   LIMPIEZA DEL CONTENEDOR DE ANUNCIO
+   ========================================================= */
+
+.forumbg.announcement,
+.forumbg.announcement > .inner,
+.forumbg.announcement ul.topiclist.topics {
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   TEXTO — MISMO CSS PARA AMBOS
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt,
@@ -9644,11 +9657,11 @@ ul.topiclist.topics > li.header dl.icon {
     inset: 0 !important;
     z-index: 2 !important;
     background: transparent !important;
-    color: transparent !important;
     background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
     font-family: "Jersey 15", sans-serif !important;
     font-size: 1rem !important;
     font-weight: 400 !important;
@@ -9661,40 +9674,54 @@ ul.topiclist.topics > li.header dl.icon {
 
 
 /* =========================================================
-   DETALLES LATERALES
+   ELIMINAR DECORACIONES ANTIGUAS
    ========================================================= */
 
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt::before,
-.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm::before {
-    content: "///";
-    position: absolute;
-    left: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--accent1);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent1);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
-}
-
 .forumbg.announcement ul.topiclist.topics > li.header dl.icon > dt::after,
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm::before,
 .forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
-    content: "///";
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--accent2);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent2);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
+    content: none !important;
 }
 
 
 /* =========================================================
-   COLUMNAS ORIGINALES DE LAS CABECERAS
+   ÚNICAS DECORACIONES — DL.ICON
+   ========================================================= */
+
+.forumbg.announcement ul.topiclist.topics > li.header dl.icon::before,
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon::before {
+    content: "///" !important;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    color: var(--accent1);
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .15rem;
+    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
+    pointer-events: none;
+}
+
+.forumbg.announcement ul.topiclist.topics > li.header dl.icon::after,
+.forumbg:not(.announcement) ul.topiclist.topics > li.header dl.icon::after {
+    content: "///" !important;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    color: var(--accent2);
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .15rem;
+    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   COLUMNAS ORIGINALES
    ========================================================= */
 
 ul.topiclist.topics > li.header dl.icon > dd.posts,
