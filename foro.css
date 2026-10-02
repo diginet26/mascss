@@ -9389,17 +9389,19 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 .digimon-affiliates .digimon-digital-line {
     margin-bottom: 1.5rem;
 }
-/* ================= TERRIERMON ASSISTANT ================= */
+/*terriermon assistant*/
+.digimon-affiliates {
+    position: relative;
+}
 
 .digimon-affiliates-character {
-    position: fixed;
-    right: 3vw;
-    top: 55%;
-    width: 22rem;
+    position: absolute;
+    right: -24rem;
+    top: 7rem;
+    width: 25rem;
     height: auto;
-    z-index: 100;
+    z-index: 20;
     pointer-events: none;
-    transform: translateY(-50%);
 }
 
 .digimon-affiliates-character img {
