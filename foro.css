@@ -9144,6 +9144,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     width: 100%;
     min-height: 3.5rem;
     margin: 0 0 1rem;
@@ -9159,6 +9160,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     height: 3.5rem;
     margin: 0;
     padding: 0;
+    flex-shrink: 0;
     font-size: 2rem;
     color: var(--theme-accent1);
     border: 1px solid var(--theme-border);
@@ -9174,6 +9176,18 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     color: var(--theme-accent2);
     border-color: var(--theme-accent2);
     box-shadow: 0 0 0.75rem rgba(150, 80, 255, 0.3);
+}
+
+.digimon-affiliates-icon > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-family: "Oxanium", sans-serif;
+    color: var(--text-color);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
 }
 
 @keyframes digimon-affiliates-network {
