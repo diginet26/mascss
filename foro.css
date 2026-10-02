@@ -9379,3 +9379,23 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     margin-bottom: 1.5rem;
 }
 
+/*terriermon*/
+.digimon-affiliates {
+    position: relative;
+}
+
+.digimon-affiliates-character {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    width: 8rem;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.digimon-affiliates-character img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
