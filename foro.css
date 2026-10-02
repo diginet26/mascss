@@ -9415,15 +9415,18 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     width: 100%;
     height: auto;
 }
+
 /* =========================================================
-   TOPICS — lista de temas
+   TOPICS — LISTA DE TEMAS
    ========================================================= */
 
 ul.topiclist.topics li.row dl.icon {
-    margin: 0 0 .65rem !important;
-    min-height: 5rem;
-    padding: 1rem 0 2rem !important;
+    margin: .45rem 0 !important;
+    min-height: 4.75rem !important;
+    height: 4.75rem;
+    padding: .9rem 0 1.75rem !important;
     position: relative;
+    box-sizing: border-box;
     background-color: color-mix(in srgb, var(--post-background) 88%, var(--body-background)) !important;
     border: .07rem solid color-mix(in srgb, var(--accent1) 20%, transparent);
     border-radius: .45rem;
@@ -9439,7 +9442,7 @@ ul.topiclist.topics li.row:hover dl.icon {
 }
 
 ul.topiclist.topics li.row .topictitle {
-    font: 700 3rem/1 "Jersey 15", sans-serif;
+    font: 700 1.8rem/1 "Jersey 15", sans-serif !important;
     letter-spacing: .02rem;
     color: var(--text-color);
     text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 12%, transparent);
@@ -9452,44 +9455,26 @@ ul.topiclist.topics li.row:hover .topictitle {
 }
 
 ul.topiclist.topics span.span-tab {
-    display: flex;
+    position: absolute;
+    left: 1.5rem;
+    bottom: .72rem;
+    display: inline-flex;
     align-items: center;
     gap: .35rem;
-    margin-top: .2rem;
-    font: 700 .58rem/1 "Roboto Mono", monospace;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    color: color-mix(in srgb, var(--text-color) 62%, transparent);
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .09rem;
     text-transform: uppercase;
-    letter-spacing: .18rem;
-    color: color-mix(in srgb, var(--text-color) 55%, transparent);
+    white-space: nowrap;
 }
 
 ul.topiclist.topics span.span-tab strong {
+    margin-left: .3rem;
     color: var(--accent2);
     font-weight: 700;
-}
-
-ul.topiclist.topics:not(.search) dd.lastpost {
-    top: 0;
-    right: 13%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font: 700 .65rem/1.4 "Oxanium", sans-serif;
-    color: var(--text-color);
-    text-transform: uppercase;
-    letter-spacing: .08rem;
-}
-
-ul.topiclist.topics dd.lastpost span {
-    font: 700 .62rem/1.4 "Roboto Mono", monospace;
-    text-transform: uppercase;
-    letter-spacing: .12rem;
-    color: var(--text-color);
-}
-
-ul.topiclist.topics dd.lastpost span dfn {
-    color: var(--accent1);
-    font-style: normal;
 }
 
 ul.topiclist.topics dd.posts,
@@ -9498,40 +9483,43 @@ ul.topiclist.topics dd.views {
     align-items: center;
     width: auto !important;
     height: auto !important;
+    min-height: 0 !important;
     padding: 0 !important;
     margin: 0;
-    position: absolute;
-    bottom: 1rem;
+    position: absolute !important;
+    bottom: .72rem;
     background: transparent !important;
-    border-radius: 0;
-    color: var(--text-color);
-    font: 700 .58rem/1 "Roboto Mono", monospace;
-    letter-spacing: .08rem;
+    border: 0 !important;
+    border-radius: 0 !important;
+    color: color-mix(in srgb, var(--text-color) 72%, transparent);
+    font: 700 .5rem/1 "Roboto Mono", monospace !important;
+    letter-spacing: .07rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 ul.topiclist.topics dd.posts {
-    left: 1.5rem;
+    left: 8.5rem;
 }
 
 ul.topiclist.topics dd.views {
-    left: 9rem;
+    left: 17rem;
 }
 
 ul.topiclist.topics dd.posts::before,
 ul.topiclist.topics dd.views::before {
     content: "";
-    width: .45rem;
-    height: .45rem;
-    margin-right: .4rem;
-    flex-shrink: 0;
-    box-shadow: 0 0 .5rem currentColor;
+    width: .38rem;
+    height: .38rem;
+    margin-right: .35rem;
+    flex: 0 0 .38rem;
+    box-shadow: 0 0 .4rem currentColor;
 }
 
 ul.topiclist.topics dd.posts::before {
     background: var(--accent1);
     color: var(--accent1);
-    border-radius: .1rem;
+    border-radius: .08rem;
 }
 
 ul.topiclist.topics dd.views::before {
@@ -9544,15 +9532,40 @@ ul.topiclist.topics dd.posts dfn,
 ul.topiclist.topics dd.views dfn {
     display: inline !important;
     position: static !important;
-    margin-left: .35rem;
-    color: color-mix(in srgb, var(--text-color) 70%, transparent);
-    font: inherit;
+    margin-left: .3rem;
+    color: color-mix(in srgb, var(--text-color) 58%, transparent);
+    font: inherit !important;
+    font-style: normal;
+}
+
+ul.topiclist.topics:not(.search) dd.lastpost {
+    top: 0;
+    right: 11%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 700 .65rem/1.4 "Oxanium", sans-serif;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+}
+
+ul.topiclist.topics dd.lastpost span {
+    font: 700 .5rem/1.35 "Roboto Mono", monospace !important;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+    color: var(--text-color);
+}
+
+ul.topiclist.topics dd.lastpost span dfn {
+    color: var(--accent1);
     font-style: normal;
 }
 
 ul.topiclist.topics dd.lastpost .lastpost-avatar img {
     width: auto;
-    height: 4rem;
+    height: 3.8rem !important;
     padding-right: .5rem;
     filter: saturate(.8);
     opacity: .9;
@@ -9570,41 +9583,28 @@ ul.topiclist.topics li.row dl.icon::after {
     pointer-events: none;
 }
 
-ul.topiclist.topics li.row dl.icon::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 40%;
-    width: .15rem;
-    background: linear-gradient(180deg, var(--accent1), var(--accent2));
-    transform: skewX(-14deg);
-    transform-origin: center;
-    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 30%, transparent);
-    z-index: 4;
-    pointer-events: none;
-}
-
 /* =========================================================
    TOPICS — CABECERAS DIGITAL RIFT
    ========================================================= */
 
 ul.topiclist.topics > li.header {
-    margin: 0 0 1rem;
+    margin: 0 0 .8rem;
     padding: 0 !important;
     background: transparent !important;
     border: 0 !important;
 }
 
-ul.topiclist.topics > li.header dl.icon {
-    width: 100%;
-    min-height: 4rem;
+ul.topiclist.topics > li.header dl.icon,
+.forumbg.announcement ul.topiclist.topics > li.header dl.icon {
+    width: 100% !important;
+    min-height: 4rem !important;
+    height: 4rem !important;
     margin: 0 !important;
     padding: 0 !important;
-    position: relative;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
+    position: relative;
     overflow: hidden;
     box-sizing: border-box;
     background:
@@ -9612,58 +9612,36 @@ ul.topiclist.topics > li.header dl.icon {
         linear-gradient(315deg, color-mix(in srgb, var(--accent2) 11%, transparent), transparent 45%),
         repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 4%, transparent) 3rem, color-mix(in srgb, var(--accent1) 4%, transparent) 3.05rem),
         repeating-linear-gradient(0deg, transparent 0, transparent 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.15rem, color-mix(in srgb, var(--accent2) 3%, transparent) 1.2rem),
-        var(--post-background);
-    border: .06rem solid color-mix(in srgb, var(--accent1) 32%, transparent);
-    border-radius: .5rem;
-    box-shadow:
-        inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 70%, transparent),
-        inset 0 0 2rem color-mix(in srgb, var(--accent2) 7%, transparent),
-        0 .35rem 1rem rgba(0,0,0,.18);
+        var(--post-background) !important;
+    border: .06rem solid color-mix(in srgb, var(--accent1) 32%, transparent) !important;
+    border-radius: .5rem !important;
+    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 70%, transparent), inset 0 0 2rem color-mix(in srgb, var(--accent2) 7%, transparent), 0 .35rem 1rem rgba(0,0,0,.18) !important;
 }
 
-ul.topiclist.topics > li.header dl.icon::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 1rem;
-    width: 3.5rem;
-    height: .12rem;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2));
-    box-shadow: 0 0 .6rem color-mix(in srgb, var(--accent1) 40%, transparent);
-}
-
-ul.topiclist.topics > li.header dl.icon::after {
-    content: "";
-    position: absolute;
-    right: 1rem;
-    bottom: 0;
-    width: 3.5rem;
-    height: .12rem;
-    background: linear-gradient(90deg, var(--accent2), var(--accent1));
-    box-shadow: 0 0 .6rem color-mix(in srgb, var(--accent2) 40%, transparent);
-}
-/*titulos*/
 ul.topiclist.topics > li.header dl.icon > dt,
 ul.topiclist.topics > li.header dl.icon > dd.dterm {
     width: 100% !important;
-    min-height: 4rem;
+    min-height: 4rem !important;
+    height: 4rem !important;
     margin: 0 !important;
-    padding: .75rem 5rem !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 2;
-    color: transparent;
+    padding: .5rem 4rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
     background: transparent !important;
-    font: 800 1rem/1 "Bungee", sans-serif;
-    letter-spacing: .18rem;
-    text-align: center;
-    text-transform: uppercase;
-    background-image: linear-gradient(90deg, var(--accent1), var(--accent2));
-    background-clip: text;
-    -webkit-background-clip: text;
+    color: transparent !important;
+    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font: 800 1rem/1 "Jersey 15", sans-serif !important;
+    letter-spacing: .18rem !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
     text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
 }
 
@@ -9672,9 +9650,12 @@ ul.topiclist.topics > li.header dl.icon > dd.dterm::before {
     content: "///";
     position: absolute;
     left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--accent1);
-    font: 700 .55rem/1 "Roboto Mono", monospace;
-    letter-spacing: .18rem;
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .15rem;
+    -webkit-text-fill-color: var(--accent1);
     text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
 }
 
@@ -9683,9 +9664,12 @@ ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
     content: "///";
     position: absolute;
     right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--accent2);
-    font: 700 .55rem/1 "Roboto Mono", monospace;
-    letter-spacing: .18rem;
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .15rem;
+    -webkit-text-fill-color: var(--accent2);
     text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
 }
 
@@ -9693,28 +9677,6 @@ ul.topiclist.topics > li.header dl.icon > dd.posts,
 ul.topiclist.topics > li.header dl.icon > dd.views,
 ul.topiclist.topics > li.header dl.icon > dd.lastpost {
     display: none !important;
-}
-
-ul.topiclist.topics > li.header dl.icon > dd.dterm {
-    width: 100% !important;
-    min-height: 4rem;
-    margin: 0 !important;
-    padding: .75rem 5rem !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 2;
-    color: transparent !important;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    font: 800 1rem/1 "Bungee", sans-serif;
-    letter-spacing: .18rem;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 /* =========================================================
@@ -10425,7 +10387,7 @@ h1.page-title a {
     border: .06rem solid color-mix(in srgb, var(--accent2) 20%, transparent);
     border-radius: .4rem;
     color: var(--text-color);
-    font: 700 .65rem/1 "Bungee", sans-serif;
+    font: 700 .65rem/1 "Jersey 15", sans-serif;
     letter-spacing: .12rem;
     text-transform: uppercase;
 }
@@ -10531,385 +10493,6 @@ h1.page-title a {
     box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 35%, transparent);
 }
 
-/* =========================================================
-   TOPICS — AJUSTE FINAL DE TARJETAS
-   ========================================================= */
-
-/* ---------------------------------------------------------
-   ELIMINAR DIAGONAL
-   --------------------------------------------------------- */
-
-ul.topiclist.topics li.row dl.icon::before {
-    content: none !important;
-    display: none !important;
-}
-
-
-/* ---------------------------------------------------------
-   TARJETAS — REDUCCIÓN DE ALTURA
-   --------------------------------------------------------- */
-
-ul.topiclist.topics li.row dl.icon {
-    min-height: 4.75rem !important;
-    height: 4.75rem;
-    padding: .9rem 0 1.75rem !important;
-    margin: .45rem 0 !important;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* ---------------------------------------------------------
-   TÍTULO
-   --------------------------------------------------------- */
-
-ul.topiclist.topics li.row .topictitle {
-    font: 700 1.8rem/1 "Bungee", sans-serif !important;
-    letter-spacing: .02rem;
-    color: var(--text-color);
-}
-
-
-/* ---------------------------------------------------------
-   AUTOR — SE INCORPORA A LA LÍNEA INFERIOR
-   --------------------------------------------------------- */
-
-ul.topiclist.topics span.span-tab {
-    position: absolute;
-    left: 1.5rem;
-    bottom: .72rem;
-    display: inline-flex;
-    align-items: center;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    color: color-mix(in srgb, var(--text-color) 62%, transparent);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .09rem;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-ul.topiclist.topics span.span-tab strong {
-    margin-left: .3rem;
-    color: var(--accent2);
-    font-weight: 700;
-}
-
-
-/* ---------------------------------------------------------
-   RESPUESTAS + VISTAS — MISMA LÍNEA
-   --------------------------------------------------------- */
-
-ul.topiclist.topics dd.posts,
-ul.topiclist.topics dd.views {
-    display: inline-flex !important;
-    align-items: center;
-    width: auto !important;
-    height: auto !important;
-    min-height: 0 !important;
-    padding: 0 !important;
-    margin: 0;
-    position: absolute !important;
-    bottom: .72rem;
-    background: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    color: color-mix(in srgb, var(--text-color) 72%, transparent);
-    font: 700 .5rem/1 "Roboto Mono", monospace !important;
-    letter-spacing: .07rem;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-
-/* Posición */
-
-ul.topiclist.topics dd.posts {
-    left: 8.5rem;
-}
-
-ul.topiclist.topics dd.views {
-    left: 17rem;
-}
-
-
-/* Icono respuestas */
-
-ul.topiclist.topics dd.posts::before {
-    content: "";
-    width: .38rem;
-    height: .38rem;
-    margin-right: .35rem;
-    flex: 0 0 .38rem;
-    border-radius: .08rem;
-    background: var(--accent1);
-    box-shadow: 0 0 .4rem color-mix(in srgb, var(--accent1) 45%, transparent);
-}
-
-
-/* Icono vistas */
-
-ul.topiclist.topics dd.views::before {
-    content: "";
-    width: .38rem;
-    height: .38rem;
-    margin-right: .35rem;
-    flex: 0 0 .38rem;
-    border-radius: 50%;
-    background: var(--accent2);
-    box-shadow: 0 0 .4rem color-mix(in srgb, var(--accent2) 45%, transparent);
-}
-
-
-/* Etiquetas */
-
-ul.topiclist.topics dd.posts dfn,
-ul.topiclist.topics dd.views dfn {
-    display: inline !important;
-    position: static !important;
-    margin: 0 0 0 .3rem;
-    color: color-mix(in srgb, var(--text-color) 58%, transparent);
-    font: inherit !important;
-    font-style: normal;
-}
-
-
-/* ---------------------------------------------------------
-   ÚLTIMO POST — MÁS COMPACTO
-   --------------------------------------------------------- */
-
-ul.topiclist.topics:not(.search) dd.lastpost {
-    top: 0;
-    right: 11%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-ul.topiclist.topics dd.lastpost .lastpost-avatar img {
-    height: 3.8rem !important;
-    width: auto;
-    padding-right: .5rem;
-}
-
-
-/* Texto del último post */
-
-ul.topiclist.topics dd.lastpost span {
-    font-size: .5rem !important;
-    line-height: 1.35;
-    letter-spacing: .08rem;
-}
-
-
-/* ---------------------------------------------------------
-   ANUNCIO & NOTA + TEMAS
-   MISMO ESTILO EXACTO
-   --------------------------------------------------------- */
-
-ul.topiclist.topics > li.header dl.icon {
-    width: 100% !important;
-    min-height: 4rem !important;
-    height: 4rem;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    background:
-        linear-gradient(135deg, color-mix(in srgb, var(--accent1) 9%, transparent), transparent 40%, color-mix(in srgb, var(--accent2) 10%, transparent)),
-        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3rem, color-mix(in srgb, var(--accent1) 3%, transparent) 3.05rem),
-        repeating-linear-gradient(0deg, transparent 0, transparent 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1rem, color-mix(in srgb, var(--accent2) 2%, transparent) 1.05rem),
-        var(--post-background) !important;
-    border: .06rem solid color-mix(in srgb, var(--accent1) 32%, transparent) !important;
-    border-radius: .5rem !important;
-    box-shadow:
-        inset 0 .1rem 0 color-mix(in srgb, var(--accent1) 65%, transparent),
-        inset 0 0 2rem color-mix(in srgb, var(--accent2) 6%, transparent),
-        0 .3rem 1rem rgba(0,0,0,.14);
-}
-
-
-/* ANUNCIO & NOTA */
-
-ul.topiclist.topics > li.header dl.icon > dt,
-
-
-/* TEMAS */
-
-ul.topiclist.topics > li.header dl.icon > dd.dterm {
-    width: 100% !important;
-    min-height: 4rem;
-    height: 4rem;
-    margin: 0 !important;
-    padding: .5rem 4rem !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 2;
-    background: transparent !important;
-    color: transparent !important;
-    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    font: 800 1rem/1 "Bungee", sans-serif !important;
-    letter-spacing: .18rem;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
-}
-
-
-/* ---------------------------------------------------------
-   DETALLES LATERALES DE AMBAS CABECERAS
-   --------------------------------------------------------- */
-
-ul.topiclist.topics > li.header dl.icon > dt::before,
-ul.topiclist.topics > li.header dl.icon > dd.dterm::before {
-    content: "///";
-    position: absolute;
-    left: 1.5rem;
-    color: var(--accent1);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent1);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
-}
-
-ul.topiclist.topics > li.header dl.icon > dt::after,
-ul.topiclist.topics > li.header dl.icon > dd.dterm::after {
-    content: "///";
-    position: absolute;
-    right: 1.5rem;
-    color: var(--accent2);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent2);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
-}
-
-
-/* ---------------------------------------------------------
-   OCULTAR COLUMNAS ANTIGUAS DE LAS CABECERAS
-   --------------------------------------------------------- */
-
-ul.topiclist.topics > li.header dl.icon > dd.posts,
-ul.topiclist.topics > li.header dl.icon > dd.views,
-ul.topiclist.topics > li.header dl.icon > dd.lastpost {
-    display: none !important;
-}
-
-/* =========================================================
-   TOPICS — IGUALAR "TEMAS" A "ANUNCIO & NOTA"
-   ========================================================= */
-
-ul.topiclist.topics li.header dl.icon > dd.dterm {
-    width: 100% !important;
-    min-height: 4rem !important;
-    height: 4rem !important;
-    margin: 0 !important;
-    padding: .5rem 4rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    background: transparent !important;
-    color: transparent !important;
-    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    font: 800 1rem/1 "Jersey 15", sans-serif !important;
-    letter-spacing: .18rem !important;
-    text-align: center !important;
-    text-transform: uppercase !important;
-}
-
-ul.topiclist.topics li.header dl.icon > dd.dterm::before {
-    content: "///";
-    position: absolute;
-    left: 1.5rem;
-    color: var(--accent1);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent1);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
-}
-
-ul.topiclist.topics li.header dl.icon > dd.dterm::after {
-    content: "///";
-    position: absolute;
-    right: 1.5rem;
-    color: var(--accent2);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent2);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
-}
-
-/* =========================================================
-   TOPICS — CABECERAS
-   TEMAS ES LA REFERENCIA
-   ========================================================= */
-
-ul.topiclist.topics li.header dl.icon > dd.dterm,
-ul.topiclist.topics li.header dl.icon > dt {
-    width: 100% !important;
-    min-height: 4rem !important;
-    height: 4rem !important;
-    margin: 0 !important;
-    padding: .5rem 4rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    background: transparent !important;
-    color: transparent !important;
-    background-image: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    font: 800 1rem/1 "Jersey 15", sans-serif !important;
-    letter-spacing: .18rem !important;
-    text-align: center !important;
-    text-transform: uppercase !important;
-    text-shadow: 0 0 .75rem color-mix(in srgb, var(--accent1) 18%, transparent);
-}
-
-ul.topiclist.topics li.header dl.icon > dd.dterm::before,
-ul.topiclist.topics li.header dl.icon > dt::before {
-    content: "///";
-    position: absolute;
-    left: 1.5rem;
-    color: var(--accent1);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent1);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent1) 45%, transparent);
-}
-
-ul.topiclist.topics li.header dl.icon > dd.dterm::after,
-ul.topiclist.topics li.header dl.icon > dt::after {
-    content: "///";
-    position: absolute;
-    right: 1.5rem;
-    color: var(--accent2);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .15rem;
-    -webkit-text-fill-color: var(--accent2);
-    text-shadow: 0 0 .5rem color-mix(in srgb, var(--accent2) 45%, transparent);
-}
 
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
