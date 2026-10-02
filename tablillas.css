@@ -14,7 +14,7 @@
     margin: 30px auto;
     position: relative;
     overflow: hidden;
-    background:linear-gradient(90deg, var(--colorfondo1) 0%, var(--colorfondo2) 48%, var(--emblema1) 250%        );
+    background:linear-gradient(90deg, var(--colorfondo) 0%, var(--colorfondo2) 48%, var(--emblema1) 250%        );
     border: 1px solid var(--dg-line);
     color: var(--colortextodl);
     font-family: "Oxanium",sans-serif;
@@ -42,15 +42,15 @@
 /* pequeños indicadores */
 .dr-tadmin .dr-dots {
     position: absolute;
-    top: 5px;
-    right: 18px;
+    top: 10px;
+    right: 20px;
     display: flex;
     gap: 5px;
 }
 
 .dr-tadmin .dr-dots i {
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     display: block;
     background: var(--emblema2);
     border-radius: 50%;
@@ -327,7 +327,7 @@
 
 /* ==================TABLA REGISTROS================= BLOQUES DE LETRAS ================================ */ 
 
-.dr-tadmin .dr-section2 { border:1px solid var(--emblema1); var(--colorfondo1); position:relative; } 
+.dr-tadmin .dr-section2 { border:1px solid var(--emblema1); var(--colorfondo); position:relative; } 
 .dr-tadmin .dr-section2:before { content:""; position:absolute; top:0; left:0; width:100px; height:2px; background:var(--emblema2); }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
@@ -1600,13 +1600,13 @@
 
 .dr-system-bar {
     width: 100%;
-    min-height: 2.5rem;
+    min-height: 1.5rem;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
-    background: #071117;
+    background: linear-gradient(90deg, var(--colorfondo) 0%, var(--colorfondo2) 48%, var(--emblema1) 250%        );
     border: 1px solid #123846;
     font-family: monospace;
     font-size: .55rem;
