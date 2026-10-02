@@ -9575,9 +9575,11 @@ ul.topiclist.topics li.row dl.icon::before {
     top: 0;
     bottom: 0;
     right: 40%;
-    width: .65rem;
+    width: .15rem;
     background: linear-gradient(180deg, var(--accent1), var(--accent2));
-    clip-path: polygon(65% 0, 100% 0, 35% 100%, 0 100%);
+    transform: skewX(-14deg);
+    transform-origin: center;
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 30%, transparent);
     z-index: 4;
     pointer-events: none;
 }
