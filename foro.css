@@ -9569,6 +9569,20 @@ ul.topiclist.topics li.row dl.icon::after {
     pointer-events: none;
 }
 
+ul.topiclist.topics li.row dl.icon::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: 40%;
+    width: .22rem;
+    height: 110%;
+    background: linear-gradient(180deg, var(--accent1), var(--accent2));
+    transform: skewX(-18deg);
+    box-shadow: 0 0 .65rem color-mix(in srgb, var(--accent1) 35%, transparent);
+    z-index: 4;
+    pointer-events: none;
+}
+
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
