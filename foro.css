@@ -9415,3 +9415,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     width: 100%;
     height: auto;
 }
+/*CSS DE TEMAS*/
+.rpostcontainer {width:100%;}
+.rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
+.postprofile {display:none !important;}
