@@ -9203,28 +9203,6 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     background: linear-gradient(135deg, rgba(0, 170, 255, 0.03), transparent 60%);
 }
 
-.digimon-affiliates-credits::before {
-    content: "";
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 35%;
-    height: 1px;
-    background: var(--theme-accent1);
-    box-shadow: 0 0 8px var(--theme-accent1);
-}
-
-.digimon-affiliates-credits::after {
-    content: "";
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    width: 25%;
-    height: 1px;
-    background: var(--theme-accent2);
-    box-shadow: 0 0 8px var(--theme-accent2);
-}
-
 .digimon-affiliates-credits h3 {
     position: relative;
     margin: 0 0 0.75rem;
