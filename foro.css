@@ -9402,9 +9402,9 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
 
 .digimon-affiliates-character-left {
     position: absolute;
-    top: 0.2rem;
-    left: 2rem;
-    width: 6rem;
+    top: -4rem;
+    left: -4rem;
+    width: 11rem;
     height: auto;
     z-index: 10;
     pointer-events: none;
