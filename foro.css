@@ -10165,6 +10165,126 @@ h1.page-title a {
     text-transform: uppercase;
 }
 
+/* =========================================================
+   VIEWFORUM — LIMPIEZA DE ACCIONES
+   ========================================================= */
+
+.forum-top-actions a:empty,
+.forum-top-actions span:empty,
+.forum-top-actions div:empty,
+.forum-top-pagination .pagination > a:empty,
+.forum-top-pagination .pagination > span:empty,
+.forum-top-pagination .pagination > div:empty {
+    display: none !important;
+}
+
+/* Oculta separadores que queden sueltos al desaparecer un elemento */
+.forum-top-actions > .separator:empty,
+.forum-top-actions + .separator {
+    display: none !important;
+}
+
+
+/* =========================================================
+   VIEWFORUM — LEYENDA DIGITAL RIFT
+   ========================================================= */
+
+#info_open ~ .h3 + .clearfix {
+    width: 100%;
+    margin: 1rem 0 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: .7rem;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--accent1) 4%, transparent), transparent 48%, color-mix(in srgb, var(--accent2) 6%, transparent)),
+        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--accent1) 2.5%, transparent) 3rem, color-mix(in srgb, var(--accent1) 2.5%, transparent) 3.05rem),
+        var(--post-background);
+    border: .06rem solid color-mix(in srgb, var(--accent1) 18%, transparent);
+    border-radius: .45rem;
+    box-shadow: inset 0 .08rem 0 color-mix(in srgb, var(--accent1) 35%, transparent), inset 0 0 1.5rem color-mix(in srgb, var(--accent2) 4%, transparent);
+}
+
+#info_open ~ .h3 + .clearfix::before {
+    content: "SYSTEM / TOPIC STATUS";
+    position: absolute;
+    top: .35rem;
+    left: .9rem;
+    color: color-mix(in srgb, var(--text-color) 40%, transparent);
+    font: 700 .42rem/1 "Roboto Mono", monospace;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+}
+
+#info_open ~ .h3 + .clearfix > ul.ul-icons {
+    width: 100%;
+    margin: 0;
+    padding: .9rem 0 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: .5rem;
+    list-style: none;
+}
+
+#info_open ~ .h3 + .clearfix > ul.ul-icons li {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.4rem;
+    padding: .5rem .7rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 7%, transparent), color-mix(in srgb, var(--accent2) 5%, transparent));
+    border: .06rem solid color-mix(in srgb, var(--accent1) 18%, transparent);
+    border-radius: .3rem;
+    color: color-mix(in srgb, var(--text-color) 72%, transparent);
+    font: 700 .5rem/1.35 "Oxanium", monospace;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: .25s ease;
+}
+
+#info_open ~ .h3 + .clearfix > ul.ul-icons li:hover {
+    color: var(--text-color);
+    border-color: var(--accent2);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 12%, transparent), color-mix(in srgb, var(--accent2) 10%, transparent));
+    box-shadow: 0 0 .65rem color-mix(in srgb, var(--accent2) 12%, transparent);
+    transform: translateY(-.04rem);
+}
+
+#info_open ~ .h3 + .clearfix > ul.ul-icons li img {
+    display: none !important;
+}
+
+#info_open ~ .h3 + .clearfix > ul.ul-icons li::before {
+    content: "";
+    width: .42rem;
+    height: .42rem;
+    flex: 0 0 .42rem;
+    border-radius: 50%;
+    background: var(--accent1);
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 45%, transparent);
+}
+
+#info_open ~ .h3 + .clearfix > ul.ul-icons:nth-child(2) li::before {
+    background: var(--accent2);
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent2) 45%, transparent);
+}
+
+#info_open ~ .h3 + .clearfix > ul.ul-icons:nth-child(3) li::before {
+    border-radius: .08rem;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--accent1) 35%, transparent);
+}
+
 /*CSS DE TEMAS*/
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
