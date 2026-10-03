@@ -7736,6 +7736,8 @@ blockquote blockquote {
 }
 
 .digimon-counter:nth-child(even)::before {
+    left: auto;
+    right: 0;
     background: var(--linkc2);
     box-shadow: 0 0 0.429rem var(--linkc2);
 }
@@ -7765,9 +7767,9 @@ blockquote blockquote {
 /* VALOR */
 .digimon-counter-data strong {
     display: block;
-    margin-top: 0.35rem;
+    margin-top: 0;
     color: var(--text-color);
-    font: 700 1.15rem/1.25 "Oxanium", sans-serif;
+    font: 700 1rem/1.25 "Oxanium", sans-serif;
 }
 
 /* DESCRIPCIÓN */
@@ -7775,11 +7777,12 @@ blockquote blockquote {
     display: block;
     margin-top: 0.3rem;
     color: var(--stats-muted);
-    font: 0.5rem/1.2 "Oxanium", monospace;
-    opacity: .55;
-    letter-spacing: .04em;
+    font: 700 0.75rem/1.25 "Oxanium", sans-serif;
+    opacity: 1;
+    letter-spacing: 0;
 }
 
+/* PRIMER CONTADOR */
 .digimon-stats-secondary .digimon-counter:first-child {
     flex-direction: column;
     justify-content: center;
@@ -7801,9 +7804,10 @@ blockquote blockquote {
     margin-top: 0;
     font-size: 0.75rem;
     line-height: 1.35;
-    white-space: nowrap;
+    white-space: normal;
 }
 
+/* SEGUNDO CONTADOR */
 .digimon-stats-secondary .digimon-counter:nth-child(2) {
     justify-content: center;
     gap: 0.857rem;
@@ -7833,7 +7837,7 @@ blockquote blockquote {
     margin-top: 0;
     color: var(--text-color);
     opacity: 1;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
 }
 
 /* =========================================================
