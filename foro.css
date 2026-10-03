@@ -3967,7 +3967,7 @@ blockquote blockquote {
 }
 
 /* Estado */
-.digimon-category-status {
+/*.digimon-category-status {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -3987,8 +3987,8 @@ blockquote blockquote {
     border-radius: 50%;
     background: var(--linkc2);
     box-shadow: 0 0 10px var(--linkc2);
-}
-
+}*/
+.digimon-category-status {display: none;}
 /* Separador */
 .digimon-category-line {
     width: calc(100% - 50px);
