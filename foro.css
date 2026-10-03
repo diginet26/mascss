@@ -6707,256 +6707,117 @@ blockquote blockquote {
         inset 0 1px 0 rgba(255,255,255,.04);
 }
 
-
-/* =========================================================
-   TARJETA 1
-   ========================================================= */
-
-.rift-info-card:nth-child(1) {
-    clip-path: polygon(
-        0 0,
-        calc(100% - 1.143rem) 0,
-        100% 1.143rem,
-        100% 100%,
-        0 100%
-    );
-}
-
-
-/* =========================================================
-   TARJETA 2
-   ========================================================= */
-
-.rift-info-card:nth-child(2) {
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        100% calc(100% - 1.143rem),
-        calc(100% - 1.143rem) 100%,
-        0 100%,
-        0 1.143rem
-    );
-}
-
-.rift-info-card:nth-child(2)::before {
-    background:
-        linear-gradient(
-            90deg,
-            var(--rift-a2),
-            var(--rift-a1),
-            transparent
-        );
-}
-
-
+.rift-info-card:nth-child(1), .rift-info-card:nth-child(2), .rift-info-card:nth-child(3) {clip-path: polygon(0 0, calc(100% - 1.143rem) 0, 100% 1.143rem, 100% 100%, 0 100%);}/*TARJETAS*/
+.rift-info-card:nth-child(2)::before {background: linear-gradient(90deg, var(--rift-a2), var(--rift-a1), transparent);}/*TARJETA 2*/
 /* =========================================================
    TARJETA 3
    ========================================================= */
-
-.rift-info-card:nth-child(3) {
-    clip-path: polygon(
-        1.143rem 0,
-        100% 0,
-        100% 100%,
-        0 100%,
-        0 1.143rem
-    );
-}
-
 .rift-info-card:nth-child(3)::before {
     width: 48%;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--rift-a1),
-            transparent
-        );
+    background: linear-gradient(90deg, var(--rift-a1), transparent);
 }
-
 
 /* =========================================================
    EVENTOS ESPECIALES
    ========================================================= */
-
 .rift-info-featured {
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     padding: 1rem;
-
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            rgba(255,255,255,.07),
-            transparent 45%
-        ),
-        linear-gradient(
-            145deg,
-            var(--rift-panel-alt),
-            var(--rift-deep)
-        );
-
-    clip-path: polygon(
-        1.143rem 0,
-        100% 0,
-        100% calc(100% - 1.143rem),
-        calc(100% - 1.143rem) 100%,
-        0 100%,
-        0 1.143rem
-    );
+    background: radial-gradient(circle at 50% 40%, rgba(255,255,255,.07), transparent 45%), linear-gradient(145deg, var(--rift-panel-alt), var(--rift-deep));
+    clip-path: polygon(1.143rem 0, 100% 0, 100% calc(100% - 1.143rem), calc(100% - 1.143rem) 100%, 0 100%, 0 1.143rem);
 }
-
 
 /* =========================================================
    ICONO EVENTOS
    ========================================================= */
-
 .rift-info-featured-icon {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     width: 4.5rem;
     height: 4.5rem;
-
     margin-bottom: 0.286rem;
-
     color: var(--rift-a1);
-
     font-size: 3.429rem;
     line-height: 1;
-
-    filter:
-        drop-shadow(
-            0 0 0.571rem
-            var(--rift-a1)
-        );
-
-    transition:
-        transform .35s ease,
-        color .35s ease,
-        filter .35s ease;
+    filter: drop-shadow(0 0 0.571rem var(--rift-a1));
+    transition: transform .35s ease, color .35s ease, filter .35s ease;
 }
-
 
 /* =========================================================
    EVENTOS — TÍTULO
    ========================================================= */
-
 .rift-info-featured > strong {
     display: block;
-
     color: var(--rift-text);
-
     font-family: 'Oxanium', sans-serif;
-
     font-size: 0.929rem;
     font-weight: 800;
-
     line-height: 1.1;
-
     letter-spacing: 0.1rem;
-
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    EVENTOS — SUBTÍTULO
    ========================================================= */
-
 .rift-info-featured > span {
     display: block;
-
     margin-top: 0.286rem;
-
     color: var(--rift-a2);
-
     font-family: 'Oxanium', sans-serif;
-
     font-size: 0.571rem;
     font-weight: 700;
-
     line-height: 1.2;
-
     letter-spacing: 0.143rem;
-
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    EVENTOS — DECORACIÓN
    ========================================================= */
-
 .rift-info-featured::before {
     content: "";
-
     position: absolute;
-
     top: 0.714rem;
     left: 0.714rem;
-
     width: 2.143rem;
     height: 2.143rem;
-
     border-top: 1px solid var(--rift-a1);
     border-left: 1px solid var(--rift-a1);
-
     opacity: .8;
 }
-
 
 .rift-info-featured::after {
     content: "";
-
     position: absolute;
-
     right: 0.714rem;
     bottom: 0.714rem;
-
     width: 2.143rem;
     height: 2.143rem;
-
     border-right: 1px solid var(--rift-a2);
     border-bottom: 1px solid var(--rift-a2);
-
     opacity: .8;
 }
-
 
 /* =========================================================
    HOVER — IMÁGENES
    ========================================================= */
-
 .rift-info-card:hover {
     transform: translateY(-0.214rem);
-
-    filter:
-        drop-shadow(
-            0 0 0.5rem
-            var(--rift-a1)
-        );
+    filter:drop-shadow(0 0 0.5rem var(--rift-a1));
 }
-
 
 .rift-info-card:hover img {
     transform: scale(1.07);
-
-    filter:
-        brightness(.82)
-        saturate(1.05);
+    filter: brightness(.82) saturate(1.05);
 }
-
 
 /* =========================================================
    HOVER — EVENTOS
    ========================================================= */
-
 .rift-info-featured:hover {
     background:
         radial-gradient(
