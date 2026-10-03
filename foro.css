@@ -10626,3 +10626,17 @@ h1.page-title a {
 .rpostcontainer {width:100%;}
 .rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
 .postprofile {display:none !important;}
+
+/* =========================================================
+   IMAGEN PERSONALIZADA DEL FORO
+   ========================================================= */
+.digimon-forum-custom-image {
+    position: absolute;
+    top: .45rem;
+    right: 1rem;
+    z-index: 5;
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: contain;
+    pointer-events: none;
+}
