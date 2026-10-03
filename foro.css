@@ -10648,3 +10648,13 @@ h1.page-title a {
     height: 8rem;
     transform: rotate(30deg);
 }
+.digimon-forum-image-ambientación {
+    position: absolute;
+    top: -4.5rem;
+    right: 1rem;
+    z-index: 10;
+    width: 9rem;
+    height: 10rem;
+    object-fit: contain;
+    pointer-events: none;
+}
