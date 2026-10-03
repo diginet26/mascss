@@ -4231,7 +4231,7 @@ blockquote blockquote {
 .digimon-forum-name a.forumtitle:hover {color: var(--linkc1);}
 
 /* Indicador */
-.digimon-forum-signal {
+/*.digimon-forum-signal {
     width: 10px;
     height: 10px;
     flex-shrink: 0;
@@ -4246,8 +4246,8 @@ blockquote blockquote {
     border-radius: 50%;
     background: var(--linkc2);
     box-shadow: 0 0 9px var(--linkc2);
-}
-
+}*/
+.digimon-forum-signal {display: none;}
 /* =========================================================
    DESCRIPCIÓN DEL FORO
    ========================================================= */
