@@ -7798,10 +7798,10 @@ blockquote blockquote {
 
 /* PRIMER CONTADOR */
 .digimon-stats-secondary .digimon-counter:first-child {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    gap: 0.571rem;
-    text-align: center;
+    gap: 0.857rem;
+    text-align: left;
 }
 
 .digimon-stats-secondary .digimon-counter:first-child .digimon-counter-icon {
@@ -7811,7 +7811,8 @@ blockquote blockquote {
 }
 
 .digimon-stats-secondary .digimon-counter:first-child .digimon-counter-data {
-    width: 100%;
+    width: auto;
+    min-width: 0;
 }
 
 .digimon-stats-secondary .digimon-counter:first-child .digimon-counter-data strong {
