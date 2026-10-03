@@ -9665,10 +9665,10 @@ h1.page-title a {
     text-shadow: 0 0 .9rem color-mix(in srgb, var(--accent1) 18%, transparent);
 }
 
+p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 /* =========================================================
    VIEWFORUM — HERRAMIENTAS
    ========================================================= */
-
 .topic-actions {
     width: 100%;
     display: flex;
@@ -9678,20 +9678,13 @@ h1.page-title a {
     margin: 0 0 1.5rem;
 }
 
-.topic-actions .buttons,
-.topic-actions .search-box,
-.forum-top-actions {
+.topic-actions .buttons, .topic-actions .search-box, .forum-top-actions {
     display: flex;
     align-items: center;
 }
 
-.topic-actions .buttons {
-    margin: 0;
-}
-
-.topic-actions .post-icon a,
-.topic-actions .forum-mark-read,
-.topic-actions .button2 {
+.topic-actions .buttons {margin: 0;}
+.topic-actions .post-icon a, .topic-actions .forum-mark-read, .topic-actions .button2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -9709,9 +9702,7 @@ h1.page-title a {
     transition: .25s ease;
 }
 
-.topic-actions .post-icon a:hover,
-.topic-actions .forum-mark-read:hover,
-.topic-actions .button2:hover {
+.topic-actions .post-icon a:hover, .topic-actions .forum-mark-read:hover, .topic-actions .button2:hover {
     color: var(--accent1) !important;
     border-color: var(--accent2);
     background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 20%, transparent), color-mix(in srgb, var(--accent2) 16%, transparent));
@@ -9719,10 +9710,7 @@ h1.page-title a {
     transform: translateY(-.05rem);
 }
 
-.topic-actions .post-icon img {
-    display: none;
-}
-
+.topic-actions .post-icon img {display: none;}
 .topic-actions .post-icon a::before {
     content: "+";
     margin-right: .35rem;
@@ -9730,10 +9718,7 @@ h1.page-title a {
     font-size: .8rem;
 }
 
-.topic-actions .search-box {
-    margin-left: 0;
-}
-
+.topic-actions .search-box {margin-left: 0;}
 .topic-actions #forum-search {
     display: flex;
     align-items: center;
@@ -9767,24 +9752,14 @@ h1.page-title a {
     box-shadow: 0 0 .7rem color-mix(in srgb, var(--accent2) 18%, transparent);
 }
 
-.topic-actions #search_keywords::placeholder {
-    color: color-mix(in srgb, var(--text-color) 45%, transparent);
-}
-
+.topic-actions #search_keywords::placeholder {color: color-mix(in srgb, var(--text-color) 45%, transparent);}
 .topic-actions .search-box .button2 {
     min-width: 4rem;
     cursor: pointer;
 }
-
 /* =========================================================
-   VIEWFORUM — SYSTEM / TOPIC CONTROL
+   VIEWFORUM — SYSTEM / TOPIC CONTROL BARRA SUPERIOR — ACCIONES DERECHA
    ========================================================= */
-
-
-/* =========================================================
-   BARRA SUPERIOR — ACCIONES DERECHA
-   ========================================================= */
-
 .forum-top-pagination {
     height: 0;
     margin: 0 !important;
@@ -9809,28 +9784,13 @@ h1.page-title a {
     white-space: nowrap;
 }
 
-.forum-top-pagination > *:not(.forum-top-actions) {
-    display: none !important;
-}
-
-.forum-top-actions > a,
-.forum-top-actions > span,
-.forum-top-actions > div {
-    font-size: 0 !important;
-}
-
-.forum-top-actions br,
-.forum-top-actions hr {
-    display: none !important;
-}
-
-
+.forum-top-pagination > *:not(.forum-top-actions) {display: none !important;}
+.forum-top-actions > a, .forum-top-actions > span, .forum-top-actions > div {font-size: 0 !important;}
+.forum-top-actions br, .forum-top-actions hr {display: none !important;}
 /* =========================================================
    MARCAR / VIGILAR
    ========================================================= */
-
-.forum-top-actions .forum-mark-read,
-.forum-top-actions a[href*="watch"] {
+.forum-top-actions .forum-mark-read, .forum-top-actions a[href*="watch"] {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -9855,8 +9815,7 @@ h1.page-title a {
     font-size: .65rem;
 }
 
-.forum-top-actions .forum-mark-read:hover,
-.forum-top-actions a[href*="watch"]:hover {
+.forum-top-actions .forum-mark-read:hover, .forum-top-actions a[href*="watch"]:hover {
     border-color: var(--accent2);
     color: var(--accent1) !important;
     background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 15%, transparent), color-mix(in srgb, var(--accent2) 14%, transparent));
@@ -9864,11 +9823,9 @@ h1.page-title a {
     transform: translateY(-.05rem);
 }
 
-
 /* =========================================================
    BOTÓN MÁS
    ========================================================= */
-
 .forum-top-actions a[href^="javascript:showhide"] {
     display: inline-flex !important;
     align-items: center;
@@ -9887,9 +9844,7 @@ h1.page-title a {
     transition: .25s ease;
 }
 
-.forum-top-actions a[href^="javascript:showhide"] img {
-    display: none !important;
-}
+.forum-top-actions a[href^="javascript:showhide"] img {display: none !important;}
 
 .forum-top-actions a[href^="javascript:showhide"]::before {
     content: "¡MÁS!";
@@ -9905,21 +9860,12 @@ h1.page-title a {
     transform: translateY(-.05rem);
 }
 
-.forum-top-actions a[href^="javascript:showhide"]:hover::before {
-    color: var(--accent1);
-}
-
-.forum-top-actions a:empty,
-.forum-top-actions span:empty,
-.forum-top-actions div:empty {
-    display: none !important;
-}
-
+.forum-top-actions a[href^="javascript:showhide"]:hover::before {color: var(--accent1);}
+.forum-top-actions a:empty, .forum-top-actions span:empty, .forum-top-actions div:empty {display: none !important;}
 
 /* =========================================================
    PANEL SUPERIOR
    ========================================================= */
-
 .topic-actions:has(.search-box) {
     width: 100%;
     min-height: 4.5rem;
@@ -9955,11 +9901,9 @@ h1.page-title a {
     text-transform: uppercase;
 }
 
-
 /* =========================================================
    PUBLICAR NUEVO TEMA
    ========================================================= */
-
 .topic-actions:has(.search-box) .buttons {
     margin: .25rem 0 0;
     flex-shrink: 0;
@@ -9990,10 +9934,7 @@ h1.page-title a {
     font-size: .75rem;
 }
 
-.topic-actions:has(.search-box) .post-icon img {
-    display: none;
-}
-
+.topic-actions:has(.search-box) .post-icon img {display: none;}
 .topic-actions:has(.search-box) .post-icon a:hover {
     border-color: var(--accent2);
     color: var(--accent1) !important;
@@ -10001,11 +9942,9 @@ h1.page-title a {
     transform: translateY(-.05rem);
 }
 
-
 /* =========================================================
    BUSCADOR
    ========================================================= */
-
 .topic-actions:has(.search-box) .search-box {
     display: flex;
     align-items: center;
