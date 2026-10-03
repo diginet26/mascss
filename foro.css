@@ -6707,8 +6707,8 @@ blockquote blockquote {
         inset 0 1px 0 rgba(255,255,255,.04);
 }
 
-.rift-info-card:nth-child(1), .rift-info-card:nth-child(2), .rift-info-card:nth-child(3) {clip-path: polygon(0 0, calc(100% - 1.143rem) 0, 100% 1.143rem, 100% 100%, 0 100%);}/*TARJETAS*/
-.rift-info-card:nth-child(2)::before {background: linear-gradient(90deg, var(--rift-a2), var(--rift-a1), transparent);}/*TARJETA 2*/
+.rift-info-card:nth-child(1), .rift-info-card:nth-child(2), .rift-info-card:nth-child(3) {clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 0 100%);} /*FORMAS ANGULARES*/
+.rift-info-card:nth-child(2)::before {background: linear-gradient(90deg, var(--rift-a2), var(--rift-a1), transparent);} /*TARJETA 2*/
 /* =========================================================
    TARJETA 3
    ========================================================= */
@@ -6984,87 +6984,17 @@ blockquote blockquote {
     letter-spacing: 0.071rem;
     text-transform: uppercase;
 }
-
-/* =========================================================
-   FORMAS ANGULARES
-   ========================================================= */
-.rift-info-card:nth-child(1) {
-    clip-path: polygon(
-        0 0,
-        calc(100% - 1rem) 0,
-        100% 1rem,
-        100% 100%,
-        0 100%
-    );
-}
-
-
-.rift-info-card:nth-child(2) {
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        100% calc(100% - 1rem),
-        calc(100% - 1rem) 100%,
-        0 100%,
-        0 1rem
-    );
-}
-
-
-.rift-info-card:nth-child(2)::before {
-    background:
-        linear-gradient(
-            90deg,
-            var(--rift-a2),
-            var(--rift-a1),
-            transparent
-        );
-}
-
-
-.rift-info-card:nth-child(3) {
-    clip-path: polygon(
-        1rem 0,
-        100% 0,
-        100% 100%,
-        0 100%,
-        0 1rem
-    );
-}
-
-
-.rift-info-card:nth-child(3)::before {
-    width: 48%;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--rift-a1),
-            transparent
-        );
-}
-
-
 /* =========================================================
    HOVER — IMÁGENES
    ========================================================= */
-
 .rift-info-card:hover {
     transform: translateY(-0.214rem);
-
-    filter:
-        drop-shadow(
-            0 0 0.5rem
-            var(--rift-a1)
-        );
+    filter:drop-shadow(0 0 0.5rem var(--rift-a1));
 }
 
 .rift-info-card:hover img {
     transform: scale(1.06);
-
-    filter:
-        brightness(.78)
-        saturate(1.05);
+    filter: brightness(.78) saturate(1.05);
 }
 
 /* =========================================================
