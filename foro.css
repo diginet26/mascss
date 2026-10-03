@@ -4323,7 +4323,7 @@ blockquote blockquote {
     color: var(--text-color);
     font: 11px/1.7 "Poppins", sans-serif;
     text-align: justify;
-    background: linear-gradient(87deg, transparent, var(--colorfondo) 70%)
+    background: linear-gradient(270deg, transparent, var(--colorfondo) 70%)
 }
 
 /* =========================================================
