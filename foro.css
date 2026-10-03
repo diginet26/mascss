@@ -7311,7 +7311,7 @@ blockquote blockquote {
 .digimon-user-list {
     min-height: 3.214rem;
     color: var(--text-color);
-    font: 0.714rem/1.8 "Poppins", sans-serif;
+    font: 0/1.8 "Oxanium", sans-serif;
 }
 
 .digimon-user-list a {
