@@ -2457,6 +2457,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     grid-area: current;
     min-width: 0;
     padding: 16px;
+    overflow: visible;
 }
 
 /* ---------------------------------------------------------
@@ -2583,20 +2584,21 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
    PERSONAJE
    --------------------------------------------------------- */
 #rift-character {
-    width:180px;
-    height:260px;
-    float: left;
-    margin: -14px 20px 0 -14px;
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: -18rem;
+    left: -2rem;
+    width: 30rem;
+    height: 42rem;
+    z-index: 20;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    pointer-events: none;
 }
 
 #rift-character img {
-    width: 180px;
-    height: 260px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
 }
@@ -6269,6 +6271,7 @@ blockquote blockquote {
 #rift-current-content {
     height: 17.143rem;
     padding: 1rem;
+    overflow: visible;
 }
 
 #rift-current-content::before {
