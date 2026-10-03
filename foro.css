@@ -7532,22 +7532,29 @@ blockquote blockquote {
     overflow: hidden;
 }
 
+/* LÍNEA SUPERIOR */
 .digimon-newest-user::before, .digimon-record-users::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
     width: 30%;
     height: 1px;
+}
+
+.digimon-newest-user::before {
+    left: 0;
     background: var(--linkc1);
+    box-shadow: 0 0 0.429rem var(--linkc1);
 }
 
 .digimon-record-users::before {
     left: auto;
     right: 0;
     background: var(--linkc2);
+    box-shadow: 0 0 0.429rem var(--linkc2);
 }
 
+/* ICONOS */
 .digimon-bottom-icon {
     width: 2.857rem;
     height: 2.857rem;
@@ -7556,10 +7563,11 @@ blockquote blockquote {
     font-size: 1rem;
 }
 
+/* TEXTO */
 .digimon-newest-user h3, .digimon-record-users h3 {
-    margin-top: 5px;
+    margin-top: 0;
     color: var(--text-color);
-    font: 700 0.857rem/1.2 "Oxanium", sans-serif;
+    font: 700 0.75rem/1.3 "Oxanium", sans-serif;
     overflow-wrap: anywhere;
 }
 
@@ -7572,16 +7580,10 @@ blockquote blockquote {
     text-align: center;
 }
 
-.digimon-record-users h3 {
-    margin-top: 0;
-    font-size: 0.75rem;
-    line-height: 1.3;
-}
-
 .digimon-record-users small {
     margin-top: 0.429rem;
-    font-size: 0.5rem;
-    line-height: 1.3;
+    color: var(--linkc2);
+    font: 700 0.75rem/1.3 "Oxanium", sans-serif;
 }
 
 /* =========================================================
