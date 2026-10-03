@@ -2585,9 +2585,9 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
    --------------------------------------------------------- */
 #rift-character {
     position: absolute;
-    top: -35rem;
-    left: -2rem;
-    width: 30rem;
+    top: -18.5rem;
+    left: 0rem;
+    width: 21rem;
     height: 42rem;
     z-index: 20;
     display: flex;
@@ -2615,6 +2615,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     padding-right: 10px;
     box-sizing: border-box;
     text-align: justify;
+    padding: 0 0 0 300px;
 }
 
 #rift-current-text p {margin:0 0 12px 0;}
