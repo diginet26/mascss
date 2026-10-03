@@ -7309,9 +7309,45 @@ blockquote blockquote {
 }
 
 .digimon-user-list {
-    min-height: 3rem;
-    font-size: 0.714rem;
-    line-height: 1.7;
+    min-height: 3.214rem;
+    color: var(--text-color);
+    font: 0.714rem/1.8 "Poppins", sans-serif;
+}
+
+.digimon-user-list a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6rem;
+    min-height: 2rem;
+    margin: .3rem;
+    padding: .35rem .75rem;
+    box-sizing: border-box;
+    border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    border-radius: .3rem;
+    background: rgba(255,255,255,.025);
+    color: inherit;
+    font: 700 .65rem/1 "Oxanium", monospace;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.digimon-user-list a::before {
+    content: "";
+    width: .35rem;
+    height: .35rem;
+    margin-right: .5rem;
+    flex-shrink: 0;
+    background: currentColor;
+    box-shadow: 0 0 .5rem currentColor;
+}
+
+.digimon-user-list a:hover {
+    transform: translateY(-.1rem);
+    background: color-mix(in srgb, currentColor 8%, transparent);
+    border-color: color-mix(in srgb, currentColor 65%, transparent);
+    box-shadow: 0 0 .8rem color-mix(in srgb, currentColor 20%, transparent);
 }
 
 /* =========================================================
