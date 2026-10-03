@@ -10641,11 +10641,10 @@ h1.page-title a {
     object-fit: contain;
     pointer-events: none;
 }
-.digimon-forum-image-registros {transform: rotate(-8deg);}
 .digimon-forum-image-registros {
-    top: -2rem;
-    right: .5rem;
-    width: 7rem;
-    height: 7rem;
-    transform: rotate(-8deg);
+    top: -6rem;
+    right: 0.5rem;
+    width: 16rem;
+    height: 8rem;
+    transform: rotate(30deg);
 }
