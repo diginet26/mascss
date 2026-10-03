@@ -9925,6 +9925,15 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     text-transform: uppercase;
     text-decoration: none !important;
     transition: .25s ease;
+    box-shadow: none;
+}
+
+.topic-actions:has(.search-box) .post-icon a img {display: none !important;}
+.topic-actions:has(.search-box) .post-icon {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }
 
 .topic-actions:has(.search-box) .post-icon a::before {
