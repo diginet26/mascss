@@ -10630,13 +10630,14 @@ h1.page-title a {
 /* =========================================================
    IMAGEN PERSONALIZADA DEL FORO
    ========================================================= */
+.digimon-forum-card:has(.digimon-forum-custom-image) {overflow: visible;}
 .digimon-forum-custom-image {
     position: absolute;
-    top: .45rem;
+    top: -1.5rem;
     right: 1rem;
-    z-index: 5;
-    width: 4.5rem;
-    height: 4.5rem;
+    z-index: 10;
+    width: 6rem;
+    height: 6rem;
     object-fit: contain;
     pointer-events: none;
 }
