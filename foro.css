@@ -4314,6 +4314,18 @@ blockquote blockquote {
     background: linear-gradient(87deg, transparent, var(--colorfondo) 70%)
 }
 
+.digimon-forum-description .rfordesc2 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 75px 20px 20px;
+    color: var(--text-color);
+    font: 11px/1.7 "Poppins", sans-serif;
+    text-align: justify;
+    background: linear-gradient(87deg, transparent, var(--colorfondo) 70%)
+}
+
 /* =========================================================
    ENLACES DEL FORO
    ========================================================= */
