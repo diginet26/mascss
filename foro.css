@@ -10437,6 +10437,189 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 
 /* =========================================================
    DIGITAL RIFT — SKIN CLARA
-   CATEGORÍA + SUBFOROS
+   PORTADA — LEGIBILIDAD Y SEPARACIÓN VISUAL
    ========================================================= */
 
+body.light-mode #rift-board {
+    background: var(--theme-panel);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+
+/* =========================================================
+   CABECERA DEL TABLÓN
+   ========================================================= */
+
+body.light-mode #rift-board-top {
+    background: linear-gradient(
+        90deg,
+        var(--theme-panel-deep),
+        var(--theme-panel)
+    );
+    border-color: var(--theme-border);
+}
+
+body.light-mode #rift-board .rift-box-title {
+    color: var(--theme-text);
+    border-bottom-color: var(--theme-border);
+}
+
+
+/* =========================================================
+   PANELES PRINCIPALES
+   ========================================================= */
+
+body.light-mode #rift-current,
+body.light-mode #rift-staff,
+body.light-mode #rift-recent {
+    background: var(--theme-panel);
+    border: 1px solid var(--theme-border);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+
+/* =========================================================
+   SITUACIÓN ACTUAL
+   ========================================================= */
+
+body.light-mode #rift-current-text {
+    color: var(--theme-text-muted);
+}
+
+body.light-mode #rift-current-text a {
+    color: var(--theme-text);
+}
+
+
+/* =========================================================
+   ÚLTIMOS TEMAS
+   ========================================================= */
+
+body.light-mode #rift-recent-content {
+    color: var(--theme-text-muted);
+}
+
+body.light-mode #rift-recent-content a {
+    color: var(--theme-text);
+}
+
+body.light-mode #rift-recent-content li {
+    border-bottom-color: var(--theme-border);
+}
+
+
+/* =========================================================
+   ENLACES RÁPIDOS
+   ========================================================= */
+
+body.light-mode #rift-quick-links > a {
+    background: var(--theme-panel-alt);
+    border-color: var(--theme-border);
+    color: var(--theme-text-muted);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.65),
+        0 3px 10px rgba(0,0,0,.06);
+}
+
+body.light-mode #rift-quick-links > a > span {
+    color: var(--theme-text-muted);
+}
+
+body.light-mode #rift-quick-links > a:hover {
+    background: var(--theme-panel);
+    color: var(--theme-text);
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+body.light-mode .rift-info-card,
+body.light-mode .rift-info-box {
+    background: var(--theme-panel-alt);
+    border-color: var(--theme-border);
+    color: var(--theme-text);
+}
+
+body.light-mode .rift-info-box > div {
+    color: var(--theme-text-muted);
+}
+
+
+/* =========================================================
+   REDES SOCIALES
+   ========================================================= */
+
+body.light-mode #rift-social-links {
+    background: var(--theme-panel-alt);
+    border-color: var(--theme-border);
+}
+
+body.light-mode #rift-social-links a {
+    background: var(--theme-panel);
+    border-color: var(--theme-border);
+    color: var(--theme-text);
+}
+
+
+/* =========================================================
+   NOTICIAS
+   ========================================================= */
+
+body.light-mode .rift-news-item {
+    background: var(--theme-panel);
+    border-color: var(--theme-border);
+}
+
+body.light-mode .rift-news-title {
+    background: var(--theme-panel-alt);
+    border-color: var(--theme-border);
+    color: var(--theme-text);
+}
+
+body.light-mode .rift-news-name {
+    color: var(--theme-text);
+}
+
+body.light-mode .rift-news-text {
+    color: var(--theme-text-muted);
+}
+
+body.light-mode .rift-news-date {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--theme-panel)
+    );
+}
+
+
+/* =========================================================
+   HEADER DIGITAL RIFT
+   ========================================================= */
+
+body.light-mode #rift-header .rift-header-bg {
+    background-color: var(--theme-panel-alt);
+    background-blend-mode: multiply;
+}
+
+
+/* =========================================================
+   SCROLLS
+   ========================================================= */
+
+body.light-mode #rift-board ::-webkit-scrollbar-track {
+    background: var(--theme-panel-alt);
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+body.light-mode #rift-board a:hover {
+    text-decoration: none;
+}
