@@ -10737,3 +10737,4 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     color: var(--theme-text) !important;
     opacity: 1 !important;
 }
+body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: var(--linkc1) !important;}
