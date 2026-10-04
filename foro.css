@@ -10437,46 +10437,171 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 
 /* =========================================================
    DIGITAL RIFT — SKIN CLARA
-   TARJETAS INSERTADAS EN FORUM_DESC
+   CATEGORÍAS + FOROS
    ========================================================= */
 
-body.light-mode .digimon-index {
 
-    /* Las variables YA EXISTEN en el CSS.
-       Aquí solo les damos contexto dentro de .digimon-index. */
+/* =========================================================
+   CATEGORÍA
+   ========================================================= */
 
-    --rift-border: var(--theme-border);
-    --rift-panel: var(--theme-panel);
-    --rift-panel-alt: var(--theme-panel-alt);
-    --rift-deep: var(--theme-panel-deep);
-    --rift-text: var(--theme-text);
-    --rift-muted: var(--theme-text-muted);
+body.light-mode .digimon-category {
+    background:
+        linear-gradient(
+            135deg,
+            var(--theme-panel-alt),
+            var(--theme-panel)
+        );
 
-    --rift-a1: var(--linkc1);
-    --rift-a2: var(--linkc2);
-    --rift-a3: var(--accent3);
+    border-color: var(--theme-border);
+
+    box-shadow:
+        0 0 0 1px color-mix(
+            in srgb,
+            var(--theme-text) 4%,
+            transparent
+        ),
+        0 15px 35px color-mix(
+            in srgb,
+            var(--theme-text) 10%,
+            transparent
+        );
 }
 
 
 /* =========================================================
-   TARJETAS
+   CABECERA DE CATEGORÍA
    ========================================================= */
 
-body.light-mode .digimon-index .rift-info-card {
-    background: var(--rift-panel);
-    color: var(--rift-text);
-    border-color: var(--rift-border);
+body.light-mode .digimon-category-header {
+    background:
+        linear-gradient(
+            100deg,
+            var(--theme-panel-alt),
+            var(--theme-panel)
+        );
+
+    border-color: var(--theme-border);
+}
+
+body.light-mode .digimon-category-label {
+    color: var(--theme-text-muted);
+}
+
+body.light-mode .digimon-category-title h2 {
+    color: var(--theme-text) !important;
+}
+
+body.light-mode .digimon-category-icon {
+    color: var(--linkc1);
+}
+
+body.light-mode .digimon-category-line {
+    opacity: .65;
 }
 
 
 /* =========================================================
-   IMAGEN
+   TARJETAS DE FORO
+   ========================================================= */
+
+body.light-mode .digimon-forum-card {
+    background:
+        linear-gradient(
+            135deg,
+            var(--theme-panel),
+            var(--theme-panel-alt)
+        );
+
+    border-color: var(--theme-border);
+
+    box-shadow:
+        0 8px 25px color-mix(
+            in srgb,
+            var(--theme-text) 10%,
+            transparent
+        );
+}
+
+body.light-mode .digimon-forum-card:hover {
+    border-color: var(--linkc1);
+
+    box-shadow:
+        0 12px 35px color-mix(
+            in srgb,
+            var(--theme-text) 14%,
+            transparent
+        ),
+        0 0 20px color-mix(
+            in srgb,
+            var(--linkc1) 10%,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CABECERA DEL FORO
+   ========================================================= */
+
+body.light-mode .digimon-forum-heading {
+    background: var(--theme-panel-alt);
+
+    border-bottom-color: var(--theme-border);
+}
+
+body.light-mode .digimon-forum-number {
+    background: var(--theme-panel);
+
+    border-color: var(--theme-border);
+
+    color: var(--emblema2);
+}
+
+body.light-mode .digimon-forum-name a.forumtitle {
+    color: var(--theme-text) !important;
+
+    text-shadow: none !important;
+}
+
+body.light-mode .digimon-forum-name a.forumtitle:hover {
+    color: var(--linkc1) !important;
+}
+
+
+/* =========================================================
+   RSINGLE / RDOUBLE / RTRIPLE
+   FONDO BASE
    ========================================================= */
 
 body.light-mode
-.digimon-index
-.rift-info-image img {
-    filter: brightness(.9) saturate(.9);
+.digimon-forum-description
+.rsingleforum,
+
+body.light-mode
+.digimon-forum-description
+.rdoubleforum,
+
+body.light-mode
+.digimon-forum-description
+.rtripleforum {
+
+    background: var(--theme-panel-alt);
+}
+
+
+/* =========================================================
+   IMAGEN DE LOS FOROS
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-description
+.rforimg {
+
+    opacity: .80;
+
+    filter: saturate(.95);
+
 }
 
 
@@ -10485,9 +10610,92 @@ body.light-mode
    ========================================================= */
 
 body.light-mode
-.digimon-index
-.rift-info-image
-.rift-info-overlay {
+.digimon-forum-description
+.rforimg::after {
+
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(
+                in srgb,
+                var(--theme-panel) 5%,
+                transparent
+            ) 0%,
+
+            transparent 45%,
+
+            color-mix(
+                in srgb,
+                var(--theme-panel) 82%,
+                transparent
+            ) 100%
+        );
+}
+
+
+/* =========================================================
+   COLOR DIGITAL SOBRE LA IMAGEN
+   Conservamos emblema1 / emblema2 intactos
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-description
+.rforimg::before {
+
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(
+                in srgb,
+                var(--emblema1) 22%,
+                transparent
+            ),
+            transparent 65%,
+            color-mix(
+                in srgb,
+                var(--emblema2) 16%,
+                transparent
+            )
+        );
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN — SINGLE
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-card:has(.rsingleforum)
+.rfordesc {
+
+    background:
+        linear-gradient(
+            87deg,
+            transparent 0%,
+            color-mix(
+                in srgb,
+                var(--theme-panel) 92%,
+                transparent
+            ) 72%
+        );
+
+    color: var(--theme-text) !important;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN — DOUBLE / TRIPLE
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-card:has(.rdoubleforum)
+.rfordesc,
+
+body.light-mode
+.digimon-forum-card:has(.rtripleforum)
+.rfordesc {
 
     background:
         linear-gradient(
@@ -10495,78 +10703,120 @@ body.light-mode
             transparent 0%,
             color-mix(
                 in srgb,
-                var(--rift-panel) 8%,
+                var(--theme-panel) 94%,
                 transparent
-            ) 20%,
-            color-mix(
-                in srgb,
-                var(--rift-panel-deep, var(--theme-panel-deep)) 82%,
-                transparent
-            ) 100%
+            ) 68%,
+            var(--theme-panel) 100%
         );
 
-    box-shadow:
-        inset 0 1px 0
-        color-mix(
-            in srgb,
-            var(--rift-text) 8%,
-            transparent
-        );
+    color: var(--theme-text) !important;
 }
 
 
 /* =========================================================
-   TÍTULO
+   TEXTO INTERNO
    ========================================================= */
 
 body.light-mode
-.digimon-index
-.rift-info-overlay strong {
-    color: var(--rift-text);
-    text-shadow: none;
+.digimon-forum-description
+.rfordesc,
+
+body.light-mode
+.digimon-forum-description
+.rfordesc2 {
+
+    color: var(--theme-text) !important;
 }
 
 
 /* =========================================================
-   SUBTÍTULO
+   ENLACES
    ========================================================= */
 
 body.light-mode
-.digimon-index
-.rift-info-overlay span {
-    color: var(--rift-a2);
+.digimon-forum-description
+.rforlinks a {
+
+    background: var(--linkc3);
+
+    color: var(--theme-text) !important;
+
+    border-color: var(--theme-border);
+}
+
+body.light-mode
+.digimon-forum-description
+.rforlinks a:hover {
+
+    color: var(--theme-panel) !important;
 }
 
 
 /* =========================================================
-   TARJETAS ESPECIALES
+   INFORMACIÓN INFERIOR
+   ========================================================= */
+
+body.light-mode .digimon-forum-bottom {
+
+    background: var(--theme-border);
+
+    border-top-color: var(--theme-border);
+}
+
+body.light-mode
+.digimon-forum-stat,
+
+body.light-mode
+.digimon-forum-lastpost {
+
+    background: var(--theme-panel-alt);
+}
+
+
+/* =========================================================
+   ESTADÍSTICAS
    ========================================================= */
 
 body.light-mode
-.digimon-index
-.rift-info-featured {
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            color-mix(
-                in srgb,
-                var(--rift-a1) 8%,
-                transparent
-            ),
-            transparent 50%
-        ),
-        linear-gradient(
-            145deg,
-            var(--rift-panel-alt),
-            var(--rift-deep)
-        );
+.digimon-forum-stat strong {
 
-    color: var(--rift-text);
+    color: var(--theme-text) !important;
 }
-body.light-mode .digimon-index .digimon-forum-description {
-    outline: 5px solid red !important;
-    background: rgba(255, 0, 0, .15) !important;
+
+body.light-mode
+.digimon-forum-stat small {
+
+    color: var(--theme-text-muted) !important;
 }
-body.light-mode .digimon-index .digimon-forum-description * {
-    color: red !important;
+
+body.light-mode
+.digimon-stat-icon {
+
+    color: var(--emblema2);
+}
+
+
+/* =========================================================
+   ÚLTIMO MENSAJE
+   ========================================================= */
+
+body.light-mode
+.digimon-lastpost-label,
+
+body.light-mode
+.digimon-lastpost-user {
+
+    color: var(--theme-text-muted) !important;
+}
+
+body.light-mode
+.digimon-lastpost-info > a {
+
+    color: var(--theme-text) !important;
+}
+
+body.light-mode
+.digimon-lastpost-info > a:hover {
+
+    color: var(--linkc1) !important;
 }
