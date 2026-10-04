@@ -10468,6 +10468,7 @@ body.light-mode .digimon-forum-card {
     background: linear-gradient(135deg, var(--theme-panel), var(--theme-panel-alt));
     border-color: var(--theme-border);
     box-shadow: 0 8px 25px color-mix(in srgb, var(--theme-text) 10%, transparent);
+    border-color: var(--emblema2);
 }
 
 body.light-mode .digimon-forum-card:hover {
