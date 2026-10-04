@@ -10588,6 +10588,7 @@ body.light-mode .digimon-forum-number i {
     border: none !important;
     box-shadow: none !important;
 }
+
 /* =========================================================
    ESTADÍSTICAS — SKIN CLARA  SOLO COLORES
    ========================================================= */
@@ -10607,7 +10608,7 @@ body.light-mode #digimon-statistics .digimon-newest-user h3, body.light-mode #di
 body.light-mode #digimon-statistics .digimon-groups-list, body.light-mode #digimon-statistics .digimon-stats-24h-list {color: var(--theme-text);}
 
 body.light-mode #digimon-statistics .digimon-stats-heading p, body.light-mode #digimon-statistics .digimon-stats-status, body.light-mode #digimon-statistics .digimon-stats-24h-heading p,
-body.light-mode #digimon-statistics .digimon-newest-user p, body.light-mode #digimon-statistics .digimon-record-users p {color: var(--theme-text-muted);}
+body.light-mode #digimon-statistics .digimon-newest-user p, body.light-mode #digimon-statistics .digimon-record-users p, body.light-mode #digimon-statistics .digimon-stats-online-info small {color: var(--theme-text-muted) !important; opacity: 1 !important;}
 
 body.light-mode #digimon-statistics .digimon-stats-status, body.light-mode #digimon-statistics .digimon-stats-welcome, body.light-mode #digimon-statistics .digimon-stats-24h, body.light-mode #digimon-statistics .digimon-counter,
 body.light-mode #digimon-statistics .digimon-newest-user, body.light-mode #digimon-statistics .digimon-record-users, body.light-mode #digimon-statistics .digimon-groups {border-color: var(--theme-border);}
@@ -10615,7 +10616,13 @@ body.light-mode #digimon-statistics .digimon-newest-user, body.light-mode #digim
 body.light-mode #digimon-statistics .digimon-stats-image::after {background: linear-gradient(180deg, transparent 15%, var(--theme-panel) 100%);}
 
 body.light-mode #digimon-statistics .digimon-online, body.light-mode #digimon-statistics .digimon-online-content, body.light-mode #digimon-statistics .digimon-stats-24h-content {
-    background: linear-gradient(rgba(34,34,34,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(34,34,34,.025) 1px, transparent 1px);}
+    background:
+        linear-gradient(180deg, color-mix(in srgb, var(--theme-text) 3%, transparent) 0%, transparent 18%, transparent 82%, color-mix(in srgb, var(--theme-text) 3%, transparent) 100%),
+        linear-gradient(color-mix(in srgb, var(--theme-text) 7%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--theme-text) 7%, transparent) 1px, transparent 1px) !important;
+    background-size: 100% 100%, 2rem 2rem, 2rem 2rem !important;
+    background-position: 0 0, 0 0, 0 0 !important;
+}
 
 body.light-mode #digimon-statistics .digimon-counter-icon {
     background: var(--theme-panel-deep);
@@ -10635,4 +10642,4 @@ body.light-mode #digimon-statistics .digimon-groups-list a {background: color-mi
 body.light-mode #digimon-statistics .digimon-groups-list a:hover {background: var(--theme-panel);}
 body.light-mode #digimon-statistics .digimon-stats-24h-members-icon .fa-users {color: var(--linkc1) !important;}
 
-body.light-mode #digimon-statistics .digimon-stats-24h-content::before {background: linear-gradient(180deg, transparent 0%, rgba(34,34,34,.025) 50%, transparent 100%);}
+body.light-mode #digimon-statistics .digimon-stats-24h-content::before {background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--theme-text) 3%, transparent) 50%, transparent 100%);}
