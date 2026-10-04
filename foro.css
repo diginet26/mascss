@@ -10437,166 +10437,129 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 
 /* =========================================================
    DIGITAL RIFT — SKIN CLARA
-   PORTADA — CONTRASTE REAL
+   TARJETAS INSERTADAS EN FORUM_DESC
    ========================================================= */
 
-body.light-mode #rift-board .rift-box-title {
-    color: var(--theme-text) !important;
-    text-shadow: none !important;
-    border-bottom-color: var(--theme-border) !important;
+body.light-mode .digimon-index {
+
+    /* Las variables YA EXISTEN en el CSS.
+       Aquí solo les damos contexto dentro de .digimon-index. */
+
+    --rift-border: var(--theme-border);
+    --rift-panel: var(--theme-panel);
+    --rift-panel-alt: var(--theme-panel-alt);
+    --rift-deep: var(--theme-panel-deep);
+    --rift-text: var(--theme-text);
+    --rift-muted: var(--theme-text-muted);
+
+    --rift-a1: var(--linkc1);
+    --rift-a2: var(--linkc2);
+    --rift-a3: var(--accent3);
 }
 
 
 /* =========================================================
-   SITUACIÓN ACTUAL
+   TARJETAS
    ========================================================= */
 
-body.light-mode #rift-current-content {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
-}
-
-body.light-mode #rift-current-text,
-body.light-mode #rift-current-text p {
-    color: var(--theme-text) !important;
-}
-
-body.light-mode #rift-current-text a {
-    color: var(--theme-text) !important;
+body.light-mode .digimon-index .rift-info-card {
+    background: var(--rift-panel);
+    color: var(--rift-text);
+    border-color: var(--rift-border);
 }
 
 
 /* =========================================================
-   STAFF
+   IMAGEN
    ========================================================= */
 
-body.light-mode #rift-staff-grid > a {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
-    color: var(--theme-text) !important;
-}
-
-/* Texto de las tarjetas STAFF */
-body.light-mode #rift-staff-grid > a
-:is(h1,h2,h3,h4,h5,h6,p,span,strong,small,div) {
-    color: var(--theme-text) !important;
-    text-shadow: none !important;
-}
-
-
-/* Imagen STAFF */
-body.light-mode #rift-staff-grid > a img {
-    filter: saturate(.9) brightness(1) !important;
+body.light-mode
+.digimon-index
+.rift-info-image img {
+    filter: brightness(.9) saturate(.9);
 }
 
 
 /* =========================================================
-   ÚLTIMOS TEMAS
+   VELO SOBRE LA IMAGEN
    ========================================================= */
 
-body.light-mode #rift-recent {
-    background: var(--theme-panel) !important;
-    border: 1px solid var(--theme-border) !important;
-}
+body.light-mode
+.digimon-index
+.rift-info-image
+.rift-info-overlay {
 
-body.light-mode #rift-recent-content {
-    color: var(--theme-text) !important;
-}
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            color-mix(
+                in srgb,
+                var(--rift-panel) 8%,
+                transparent
+            ) 20%,
+            color-mix(
+                in srgb,
+                var(--rift-panel-deep, var(--theme-panel-deep)) 82%,
+                transparent
+            ) 100%
+        );
 
-body.light-mode #rift-recent-content .rift-recent-item {
-    color: var(--theme-text) !important;
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-    box-shadow: 0 3px 10px rgba(0,0,0,.06) !important;
-}
-
-body.light-mode #rift-recent-content .rift-recent-item > a {
-    color: var(--theme-text) !important;
+    box-shadow:
+        inset 0 1px 0
+        color-mix(
+            in srgb,
+            var(--rift-text) 8%,
+            transparent
+        );
 }
 
 
 /* =========================================================
-   ENLACES RÁPIDOS
+   TÍTULO
    ========================================================= */
 
-body.light-mode #rift-quick-links > a {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-    color: var(--theme-text-muted) !important;
-    box-shadow: 0 3px 10px rgba(0,0,0,.06) !important;
-}
-
-body.light-mode #rift-quick-links > a > span {
-    color: var(--theme-text-muted) !important;
+body.light-mode
+.digimon-index
+.rift-info-overlay strong {
+    color: var(--rift-text);
+    text-shadow: none;
 }
 
 
 /* =========================================================
-   INFORMACIÓN
+   SUBTÍTULO
    ========================================================= */
 
-body.light-mode .rift-info-card,
-body.light-mode .rift-info-box {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-}
-
-body.light-mode .rift-info-box > div {
-    color: var(--theme-text-muted) !important;
+body.light-mode
+.digimon-index
+.rift-info-overlay span {
+    color: var(--rift-a2);
 }
 
 
 /* =========================================================
-   REDES
+   TARJETAS ESPECIALES
    ========================================================= */
 
-body.light-mode #rift-social-links {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-}
+body.light-mode
+.digimon-index
+.rift-info-featured {
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            color-mix(
+                in srgb,
+                var(--rift-a1) 8%,
+                transparent
+            ),
+            transparent 50%
+        ),
+        linear-gradient(
+            145deg,
+            var(--rift-panel-alt),
+            var(--rift-deep)
+        );
 
-body.light-mode #rift-social-links a {
-    background: var(--theme-panel) !important;
-    border-color: var(--theme-border) !important;
-    color: var(--theme-text) !important;
-}
-
-
-/* =========================================================
-   NOTICIAS
-   ========================================================= */
-
-body.light-mode .rift-news-item {
-    background: var(--theme-panel) !important;
-    border-color: var(--theme-border) !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,.07) !important;
-    color: var(--theme-text) !important;
-}
-
-body.light-mode .rift-news-title {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-    color: var(--theme-text) !important;
-}
-
-body.light-mode .rift-news-name {
-    color: var(--theme-text) !important;
-}
-
-body.light-mode .rift-news-text {
-    color: var(--theme-text-muted) !important;
-}
-
-
-/* =========================================================
-   PANELES EXTERIORES
-   ========================================================= */
-
-body.light-mode #rift-current,
-body.light-mode #rift-staff,
-body.light-mode #rift-recent {
-    background: transparent !important;
-    border: 0 !important;
+    color: var(--rift-text);
 }
