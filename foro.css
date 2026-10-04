@@ -10567,3 +10567,6 @@ body.light-mode .digimon-index .digimon-forum-description {
     outline: 5px solid red !important;
     background: rgba(255, 0, 0, .15) !important;
 }
+body.light-mode .digimon-index .digimon-forum-description * {
+    color: red !important;
+}
