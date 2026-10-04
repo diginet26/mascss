@@ -10611,12 +10611,15 @@ body.light-mode #digimon-statistics .digimon-stats-heading p, body.light-mode #d
 body.light-mode #digimon-statistics .digimon-stats-online-detail .digimon-data-name, body.light-mode #digimon-statistics .digimon-counter-data small,
 body.light-mode #digimon-statistics .digimon-newest-user p, body.light-mode #digimon-statistics .digimon-record-users p,
 body.light-mode #digimon-statistics .digimon-stats-online-info small, body.light-mode #digimon-statistics .digimon-stats-welcome-content p,
-body.light-mode #digimon-statistics .digimon-stats-version {color: color-mix(in srgb, var(--theme-text) 75%, var(--theme-text-muted)) !important; opacity: 1 !important;}
+body.light-mode #digimon-statistics .digimon-stats-version {color: color-mix(in srgb, var(--theme-text) 85%, var(--theme-text-muted)) !important; opacity: 1 !important;}
 
 body.light-mode #digimon-statistics .digimon-stats-status, body.light-mode #digimon-statistics .digimon-stats-welcome, body.light-mode #digimon-statistics .digimon-stats-24h, body.light-mode #digimon-statistics .digimon-counter,
 body.light-mode #digimon-statistics .digimon-newest-user, body.light-mode #digimon-statistics .digimon-record-users, body.light-mode #digimon-statistics .digimon-groups {border-color: var(--theme-border);}
 
 body.light-mode #digimon-statistics .digimon-stats-image::after {background: linear-gradient(180deg, transparent 15%, var(--theme-panel) 100%);}
+
+body.light-mode #digimon-statistics .digimon-stats-welcome-content p,
+body.light-mode #digimon-statistics .digimon-stats-version {text-shadow: 0 1px 2px rgba(255,255,255,.35);}
 
 body.light-mode #digimon-statistics .digimon-online, body.light-mode #digimon-statistics .digimon-online-content, body.light-mode #digimon-statistics .digimon-stats-24h-content {
     background:
