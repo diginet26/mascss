@@ -10684,3 +10684,26 @@ body.light-mode #digimon-statistics .digimon-groups-list a:hover {background: va
 body.light-mode #digimon-statistics .digimon-stats-24h-members-icon .fa-users {color: var(--linkc1) !important;}
 
 body.light-mode #digimon-statistics .digimon-stats-24h-content::before {background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--theme-text) 2%, transparent) 50%, transparent 100%);}
+/* =========================================================
+   AJUSTE FINAL DE LEGIBILIDAD
+   ========================================================= */
+
+body.light-mode #digimon-statistics .digimon-stats-online-info * {color: var(--theme-text) !important; opacity: 1 !important;}
+body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: var(--theme-text) !important; opacity: 1 !important;}
+
+body.light-mode #digimon-statistics .digimon-user-list a {
+    background: var(--theme-panel-deep) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 35%, var(--theme-border)) !important;
+    color: var(--theme-text) !important;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--theme-border) 35%, transparent);
+}
+
+body.light-mode #digimon-statistics .digimon-user-list a::before {
+    background: var(--linkc1);
+    box-shadow: 0 0 .5rem var(--linkc1);
+}
+
+body.light-mode #digimon-statistics .digimon-user-list a:hover {
+    background: var(--theme-panel) !important;
+    border-color: var(--emblema2) !important;
+}
