@@ -10416,10 +10416,6 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     pointer-events: none;
 }
 
-
-/*CSS DE TEMAS*/
-.rpostcontainer {width:100%;}
-.rpostcontainer .postbody {width:100% !important;box-sizing:border-box;}
 /* =========================================================
    VIEWFORUM — FONDO DE SECCIONES
    ========================================================= */
