@@ -10434,3 +10434,266 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     border-radius: .5rem;
     box-shadow: inset 0 0 2rem rgba(255,255,255,.02);
 }
+
+/*SKIN CLARA - SUBFOROS LISTA DE TEMAS*/
+/* =========================================================
+   DIGITAL RIFT — SKIN CLARA
+   PRUEBA: CATEGORÍAS Y SUBFOROS
+   SOLO VARIABLES YA EXISTENTES
+   ========================================================= */
+
+body.light-mode .digimon-category {
+    background: linear-gradient(
+        135deg,
+        var(--colorfondo2),
+        var(--colorfondo)
+    );
+
+    border-color: color-mix(
+        in srgb,
+        var(--colortextod1) 12%,
+        transparent
+    );
+
+    box-shadow:
+        0 0 0 1px color-mix(
+            in srgb,
+            var(--colortextod1) 5%,
+            transparent
+        ),
+        0 15px 45px color-mix(
+            in srgb,
+            var(--colortextod1) 12%,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CABECERA DE CATEGORÍA
+   ========================================================= */
+
+body.light-mode .digimon-category-header {
+    background: linear-gradient(
+        100deg,
+        var(--colorfondo4),
+        transparent 65%
+    );
+}
+
+body.light-mode .digimon-category-label {
+    color: color-mix(
+        in srgb,
+        var(--colortextod1) 55%,
+        transparent
+    );
+}
+
+body.light-mode .digimon-category-title h2 {
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   ICONO
+   ========================================================= */
+
+body.light-mode .digimon-category-icon {
+    color: var(--colorfondo2);
+}
+
+
+/* =========================================================
+   SEPARADOR
+   ========================================================= */
+
+body.light-mode .digimon-category-line {
+    opacity: .65;
+}
+
+
+/* =========================================================
+   TARJETAS DE SUBFOROS
+   ========================================================= */
+
+body.light-mode .digimon-forum-card {
+    background: linear-gradient(
+        135deg,
+        var(--colorfondo2),
+        var(--colorfondo)
+    );
+
+    border-color: color-mix(
+        in srgb,
+        var(--colortextod1) 12%,
+        transparent
+    );
+
+    box-shadow:
+        0 8px 25px color-mix(
+            in srgb,
+            var(--colortextod1) 10%,
+            transparent
+        );
+}
+
+body.light-mode .digimon-forum-card:hover {
+    box-shadow:
+        0 12px 35px color-mix(
+            in srgb,
+            var(--colortextod1) 15%,
+            transparent
+        ),
+        0 0 20px color-mix(
+            in srgb,
+            var(--linkc1) 10%,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CABECERA DEL SUBFORO
+   ========================================================= */
+
+body.light-mode .digimon-forum-heading {
+    background: var(--colorfondo4);
+
+    border-bottom-color: color-mix(
+        in srgb,
+        var(--colortextod1) 12%,
+        transparent
+    );
+}
+
+body.light-mode .digimon-forum-number {
+    background: var(--colorfondo4);
+
+    border-color: color-mix(
+        in srgb,
+        var(--colortextod1) 12%,
+        transparent
+    );
+}
+
+
+/* =========================================================
+   CONTENIDO DEL SUBFORO
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-description
+.rsingleforum,
+
+body.light-mode
+.digimon-forum-description
+.rdoubleforum,
+
+body.light-mode
+.digimon-forum-description
+.rtripleforum {
+    background: var(--colorfondo4);
+}
+
+
+/* =========================================================
+   IMAGEN DE LOS SUBFOROS
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-description
+.rforimg::after {
+    background: linear-gradient(
+        180deg,
+        var(--colorfondo4) 0%,
+        var(--colorfondo4) 15%,
+        transparent 55%,
+        var(--colorfondo4) 100%
+    );
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-description
+.rfordesc {
+    background: linear-gradient(
+        87deg,
+        transparent,
+        var(--colorfondo2) 70%
+    );
+
+    color: var(--text-color);
+}
+
+body.light-mode
+.digimon-forum-description
+.rfordesc2 {
+    background: linear-gradient(
+        270deg,
+        transparent,
+        var(--colorfondo2) 70%
+    );
+
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   ENLACES DE LOS SUBFOROS
+   ========================================================= */
+
+body.light-mode
+.digimon-forum-description
+.rforlinks a {
+    background: var(--linkc3);
+    color: var(--text-color);
+
+    border-color: color-mix(
+        in srgb,
+        var(--colortextod1) 12%,
+        transparent
+    );
+}
+
+
+/* =========================================================
+   INFORMACIÓN INFERIOR
+   ========================================================= */
+
+body.light-mode .digimon-forum-bottom {
+    background: color-mix(
+        in srgb,
+        var(--colortextod1) 10%,
+        transparent
+    );
+
+    border-top-color: color-mix(
+        in srgb,
+        var(--colortextod1) 12%,
+        transparent
+    );
+}
+
+body.light-mode .digimon-forum-stat,
+body.light-mode .digimon-forum-lastpost {
+    background: var(--colorfondo4);
+}
+
+body.light-mode .digimon-forum-stat strong,
+body.light-mode .digimon-lastpost-info > a {
+    color: var(--text-color);
+}
+
+body.light-mode .digimon-forum-stat small,
+body.light-mode .digimon-lastpost-label,
+body.light-mode .digimon-lastpost-user {
+    color: color-mix(
+        in srgb,
+        var(--colortextod1) 55%,
+        transparent
+    );
+}
