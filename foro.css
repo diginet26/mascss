@@ -10752,7 +10752,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-shadow:
         0 0 0 1px color-mix(in srgb, var(--emblema1) 4%, transparent),
         0 0 1.5rem rgba(0,0,0,.18);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .dr-topic-post .inner {
@@ -11147,12 +11147,17 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
    ========================================================= */
 
 .dr-post-sidebar {
+    position: sticky;
+    top: 4rem;
+    z-index: 5;
     width: 21.43rem;
     min-width: 0;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     box-sizing: border-box;
+    align-self: start;
 }
 
 .dr-post-avatar {
@@ -11165,23 +11170,39 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     background: var(--theme-panel-deep);
     border: .12rem solid var(--dr-group-color, var(--emblema2));
     box-shadow:
-        0 0 0 .25rem var(--theme-panel-deep),
-        0 0 0 .31rem var(--dr-group-color, var(--emblema2));
+        0 0 0 .18rem var(--theme-panel-deep),
+        0 0 0 .26rem var(--dr-group-color, var(--emblema2));
+}
+
+.dr-post-avatar::before {
+    content: "";
+    position: absolute;
+    inset: .45rem;
+    z-index: 2;
+    pointer-events: none;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 70%, transparent);
+    box-shadow:
+        inset 0 0 0 .18rem color-mix(in srgb, var(--emblema1) 16%, transparent),
+        inset 0 0 .9rem color-mix(in srgb, var(--emblema2) 10%, transparent);
+    background:
+        linear-gradient(90deg, var(--emblema2) 0 2.1rem, transparent 2.1rem) top left / 2.1rem .06rem no-repeat,
+        linear-gradient(90deg, transparent calc(100% - 2.1rem), var(--emblema1) calc(100% - 2.1rem)) top right / 2.1rem .06rem no-repeat,
+        linear-gradient(90deg, var(--emblema1) 0 2.1rem, transparent 2.1rem) bottom left / 2.1rem .06rem no-repeat,
+        linear-gradient(90deg, transparent calc(100% - 2.1rem), var(--emblema2) calc(100% - 2.1rem)) bottom right / 2.1rem .06rem no-repeat;
 }
 
 .dr-post-avatar::after {
     content: "";
     position: absolute;
-    inset: .35rem;
-    border: .06rem solid color-mix(
-        in srgb,
-        var(--dr-group-color, var(--emblema2)) 45%,
-        transparent
-    );
+    inset: .72rem;
+    z-index: 2;
     pointer-events: none;
+    border: .04rem dashed color-mix(in srgb, var(--emblema1) 44%, transparent);
 }
 
 .dr-post-avatar img {
+    position: relative;
+    z-index: 1;
     display: block;
     width: 100% !important;
     height: 100% !important;
@@ -11191,79 +11212,81 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 /* =========================================================
-   ENLACES DEL PERSONAJE
+   ICONOS DEL PERSONAJE
    ========================================================= */
 
 .dr-post-links {
-    display: flex;
-    flex-direction: column;
-    gap: .4rem;
-    margin-top: .9rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin-top: .6rem;
+    box-sizing: border-box;
+    border: .06rem solid color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 32%, transparent);
+    background: var(--theme-panel-deep);
 }
 
-.dr-post-profile-link,
-.dr-post-native-link {
+.dr-post-icon {
     position: relative;
-    width: 100%;
-    min-height: 2.35rem;
+    min-width: 0;
+    height: 2.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: .5rem .7rem;
-    background: var(--theme-panel-deep);
-    border: .06rem solid color-mix(
-        in srgb,
-        var(--dr-group-color, var(--emblema2)) 35%,
-        transparent
-    );
-    color: var(--text-color) !important;
-    font: 700 .52rem/1 "Oxanium", sans-serif;
-    letter-spacing: .08rem;
+    color: color-mix(in srgb, var(--text-color) 64%, transparent);
     text-decoration: none !important;
-    text-transform: uppercase;
-    transition:
-        background .2s ease,
-        border-color .2s ease,
-        color .2s ease,
-        box-shadow .2s ease;
+    border-right: .06rem solid color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 18%, transparent);
+    transition: background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
-.dr-post-profile-link:hover,
-.dr-post-native-link:hover {
-    background: color-mix(
-        in srgb,
-        var(--dr-group-color, var(--emblema2)) 8%,
-        var(--theme-panel-deep)
-    );
-    color: var(--dr-group-color, var(--emblema2)) !important;
-    border-color: var(--dr-group-color, var(--emblema2));
-    box-shadow: 0 0 .65rem color-mix(
-        in srgb,
-        var(--dr-group-color, var(--emblema2)) 18%,
-        transparent
-    );
+.dr-post-icon:last-child {
+    border-right: 0;
 }
 
-.dr-post-native-link {
-    cursor: pointer;
+.dr-post-icon:hover {
+    color: var(--dr-group-color, var(--emblema2));
+    background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, var(--theme-panel-deep));
+    box-shadow: inset 0 0 .8rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, transparent);
 }
 
-.dr-post-native-link > a {
+.dr-post-icon > a {
     position: absolute;
     inset: 0;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
-.dr-post-native-link > a img {
+.dr-post-icon img {
     display: none !important;
 }
 
-.dr-post-native-link span {
+.dr-post-pm::before {
+    content: "\f0e0";
+}
+
+.dr-post-profile-link[data-profile-field="expediente"]::before {
+    content: "\f07b";
+}
+
+.dr-post-profile-link[data-profile-field="cronologia"]::before {
+    content: "\f017";
+}
+
+.dr-post-icon::before {
     position: relative;
     z-index: 1;
+    font: 900 1rem/1 "FontAwesome";
+}
+
+.dr-post-pm > a {
+    z-index: 3;
 }
 
 /* =========================================================
