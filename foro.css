@@ -11168,8 +11168,40 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     overflow: hidden;
     box-sizing: border-box;
     background: var(--theme-panel-deep);
-    border: .14rem solid var(--dr-group-color, var(--emblema2));
+    border: .14rem solid var(--dg-group);
     box-shadow: 0 0 0 .06rem var(--theme-panel-deep);
+}
+
+/* Borde interior tecnológico — colores del sistema de emblemas */
+.dr-post-avatar::before {
+    content: "";
+    position: absolute;
+    inset: .42rem;
+    z-index: 3;
+    pointer-events: none;
+    border: .07rem solid var(--emblema1);
+    box-shadow:
+        inset 0 0 0 .05rem var(--emblema2),
+        0 0 .45rem color-mix(in srgb, var(--emblema2) 15%, transparent);
+}
+
+/* Detalle ornamental en las esquinas */
+.dr-post-avatar::after {
+    content: "";
+    position: absolute;
+    inset: .58rem;
+    z-index: 4;
+    pointer-events: none;
+    background:
+        linear-gradient(var(--emblema2), var(--emblema2)) left top / 1.5rem .07rem no-repeat,
+        linear-gradient(var(--emblema2), var(--emblema2)) left top / .07rem 1.5rem no-repeat,
+        linear-gradient(var(--emblema2), var(--emblema2)) right top / 1.5rem .07rem no-repeat,
+        linear-gradient(var(--emblema2), var(--emblema2)) right top / .07rem 1.5rem no-repeat,
+        linear-gradient(var(--emblema2), var(--emblema2)) left bottom / 1.5rem .07rem no-repeat,
+        linear-gradient(var(--emblema2), var(--emblema2)) left bottom / .07rem 1.5rem no-repeat,
+        linear-gradient(var(--emblema2), var(--emblema2)) right bottom / 1.5rem .07rem no-repeat,
+        linear-gradient(var(--emblema2), var(--emblema2)) right bottom / .07rem 1.5rem no-repeat;
+    opacity: .8;
 }
 
 .dr-post-avatar img {
@@ -11194,7 +11226,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     gap: 0;
     margin-top: .6rem;
     box-sizing: border-box;
-    border: .06rem solid color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 32%, transparent);
+    border: .06rem solid color-mix(in srgb, var(--emblema1) 45%, transparent);
     background: var(--theme-panel-deep);
 }
 
@@ -11206,9 +11238,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    color: color-mix(in srgb, var(--text-color) 64%, transparent);
+    color: color-mix(in srgb, var(--emblema1) 72%, var(--text-color));
     text-decoration: none !important;
-    border-right: .06rem solid color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 18%, transparent);
+    border-right: .06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
     transition: background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
@@ -11217,9 +11249,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-post-icon:hover {
-    color: var(--dr-group-color, var(--emblema2));
-    background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, var(--theme-panel-deep));
-    box-shadow: inset 0 0 .8rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, transparent);
+    color: var(--emblema2);
+    background: color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep));
+    box-shadow: inset 0 0 .8rem color-mix(in srgb, var(--emblema2) 8%, transparent);
 }
 
 .dr-post-icon > a {
@@ -11248,23 +11280,23 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: block !important;
     width: 1.25rem !important;
     height: 1.25rem !important;
-    max-width: none !important;
-    max-height: none !important;
+    max-width: 1.25rem !important;
+    max-height: 1.25rem !important;
     object-fit: contain;
 }
 
 .dr-post-profile-link[data-profile-field="expediente"]::before {
-    content: "\f07b";
+    content: "\\f07b";
 }
 
 .dr-post-profile-link[data-profile-field="cronologia"]::before {
-    content: "\f017";
+    content: "\\f017";
 }
 
 .dr-post-icon::before {
     position: relative;
     z-index: 1;
-    font: 900 1rem/1 "FontAwesome";
+    font: 900 1.25rem/1 "FontAwesome";
 }
 
 .dr-post-pm > a {
