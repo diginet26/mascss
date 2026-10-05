@@ -11169,35 +11169,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-sizing: border-box;
     background: var(--theme-panel-deep);
     border: .12rem solid var(--dr-group-color, var(--emblema2));
-    box-shadow:
-        0 0 0 .18rem var(--theme-panel-deep),
-        0 0 0 .26rem var(--dr-group-color, var(--emblema2));
-}
-
-.dr-post-avatar::before {
-    content: "";
-    position: absolute;
-    inset: .45rem;
-    z-index: 2;
-    pointer-events: none;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 70%, transparent);
-    box-shadow:
-        inset 0 0 0 .18rem color-mix(in srgb, var(--emblema1) 16%, transparent),
-        inset 0 0 .9rem color-mix(in srgb, var(--emblema2) 10%, transparent);
-    background:
-        linear-gradient(90deg, var(--emblema2) 0 2.1rem, transparent 2.1rem) top left / 2.1rem .06rem no-repeat,
-        linear-gradient(90deg, transparent calc(100% - 2.1rem), var(--emblema1) calc(100% - 2.1rem)) top right / 2.1rem .06rem no-repeat,
-        linear-gradient(90deg, var(--emblema1) 0 2.1rem, transparent 2.1rem) bottom left / 2.1rem .06rem no-repeat,
-        linear-gradient(90deg, transparent calc(100% - 2.1rem), var(--emblema2) calc(100% - 2.1rem)) bottom right / 2.1rem .06rem no-repeat;
-}
-
-.dr-post-avatar::after {
-    content: "";
-    position: absolute;
-    inset: .72rem;
-    z-index: 2;
-    pointer-events: none;
-    border: .04rem dashed color-mix(in srgb, var(--emblema1) 44%, transparent);
 }
 
 .dr-post-avatar img {
@@ -11267,8 +11238,18 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: none !important;
 }
 
+/* El icono de MP lo aporta ForoActivo para conservar su tooltip nativo. */
 .dr-post-pm::before {
-    content: "\f0e0";
+    display: none !important;
+}
+
+.dr-post-pm > a img {
+    display: block !important;
+    width: 1rem !important;
+    height: 1rem !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain;
 }
 
 .dr-post-profile-link[data-profile-field="expediente"]::before {
