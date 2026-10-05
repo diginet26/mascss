@@ -21898,6 +21898,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-shadow: none !important;
 }
 
+.dr-post-sidebar.is-stuck {
+    z-index: 10000000;
+}
+
 /* =========================================================
    CLIP DIGITAL — CONEXIÓN CON LA NAVBAR
    ========================================================= */
@@ -21959,21 +21963,17 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
         inset 0 0 .25rem color-mix(in srgb, var(--emblema2) 18%, transparent);
 
     pointer-events: none;
-
     opacity: 0;
     visibility: hidden;
-
-    transition:
-        opacity .2s ease,
-        visibility .2s ease;
+    transition: opacity .2s ease, visibility .2s ease;
 }
 
 /* APARECE SOLO DURANTE EL STICKY */
-
 .dr-post-sidebar.is-stuck::before,
 .dr-post-sidebar.is-stuck::after {
     opacity: 1;
     visibility: visible;
+    z-index: 20;
 }
 
 .dr-post-avatar {
