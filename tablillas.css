@@ -1909,6 +1909,39 @@
 
 }
 
+/* ESTADO */
+
+.dr-canon-status-label {
+    position: absolute;
+    z-index: 3;
+
+    top: .65rem;
+    right: .65rem;
+
+    padding: .3rem .45rem;
+
+    background: rgba(3,10,16,.8);
+
+    border: 1px solid currentColor;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: .42rem;
+    font-weight: 700;
+    letter-spacing: .06rem;
+}
+
+.dr-canon-card.libre .dr-canon-status-label {
+    color: #4ee38b;
+}
+
+.dr-canon-card.reservado .dr-canon-status-label {
+    color: #f2b705;
+}
+
+.dr-canon-card.ocupado .dr-canon-status-label {
+    color: #d94b5b;
+}
+
 
 @media (max-width: 28.125rem) {
 
