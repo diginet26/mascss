@@ -11124,3 +11124,191 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
         min-width: 3.1rem;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — VIEWTOPIC
+   FASE 2 — AVATAR + CONTENIDO
+   ========================================================= */
+
+.dr-post-container {
+    display: grid;
+    grid-template-columns: 21.43rem minmax(0, 1fr);
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: 1.4rem;
+    box-sizing: border-box;
+    gap: 1.4rem;
+    background: var(--post-background);
+}
+
+/* =========================================================
+   COLUMNA DEL PERSONAJE
+   ========================================================= */
+
+.dr-post-sidebar {
+    width: 21.43rem;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.dr-post-avatar {
+    position: relative;
+    width: 21.43rem;
+    height: 35.71rem;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: var(--theme-panel-deep);
+    border: .12rem solid var(--emblema2);
+    box-shadow:
+        0 0 0 .25rem var(--theme-panel-deep),
+        0 0 0 .31rem var(--emblema2);
+}
+
+.dr-post-avatar img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover;
+}
+
+.dr-post-sidebar-group {
+    width: 100%;
+    margin-top: .9rem;
+    padding: .7rem .8rem;
+    box-sizing: border-box;
+    background: var(--theme-panel-deep);
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 30%, transparent);
+    color: var(--emblema2);
+    font: 700 .58rem/1 "Oxanium", sans-serif;
+    letter-spacing: .12rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   ENLACES DEL PERSONAJE
+   ========================================================= */
+
+.dr-post-links {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin-top: .6rem;
+}
+
+.dr-post-profile-link,
+.dr-post-native-link {
+    position: relative;
+    width: 100%;
+    min-height: 2.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: .5rem .7rem;
+    background: var(--theme-panel-deep);
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 30%, transparent);
+    color: var(--text-color) !important;
+    font: 700 .52rem/1 "Oxanium", sans-serif;
+    letter-spacing: .08rem;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: .2s ease;
+}
+
+.dr-post-profile-link:hover,
+.dr-post-native-link:hover {
+    background: color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep));
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 15%, transparent);
+}
+
+.dr-post-native-link {
+    cursor: pointer;
+}
+
+.dr-post-native-link > a {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.dr-post-native-link > a img {
+    display: none !important;
+}
+
+.dr-post-native-link span {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   MENSAJE
+   ========================================================= */
+
+.dr-post-main {
+    min-width: 0;
+    width: 100%;
+}
+
+.dr-post-main .postbody {
+    width: 100% !important;
+    min-width: 0;
+    float: none !important;
+    box-sizing: border-box;
+}
+
+.dr-post-main .postbody .content {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .dr-post-container {
+        grid-template-columns: 15rem minmax(0,1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .dr-post-sidebar {
+        width: 15rem;
+    }
+
+    .dr-post-avatar {
+        width: 15rem;
+        height: 25rem;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .dr-post-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-post-sidebar {
+        width: min(21.43rem, 100%);
+        margin: 0 auto;
+    }
+
+    .dr-post-avatar {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 5;
+    }
+}
