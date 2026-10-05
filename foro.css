@@ -21888,11 +21888,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     top: 0;
     bottom: 0;
 
-    /* el fondo empieza donde empieza la zona del avatar */
-    left: 1.4rem;
-
-    /* mantenemos todo el ancho hacia el contenido */
-    right: 0;
+    /* después del avatar + gap */
+    left: calc(1.4rem + 15rem + 1.4rem);
+    right: 1.4rem;
 
     background: var(--post-background);
     pointer-events: none;
@@ -21917,7 +21915,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     width: 15rem;
     height: max-content;
     align-self: start;
-    background: var(--post-background) !important;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
@@ -22132,7 +22130,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-post-main {
     min-width: 0;
     width: 100%;
-    background: var(--post-background);
+    background: transparent;
 }
 
 .dr-post-main .postbody {
