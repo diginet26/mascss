@@ -21487,7 +21487,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: 0 !important;
     box-sizing: border-box;
     background: transparent;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 24%, transparent);
+    /*border: .06rem solid color-mix(in srgb, var(--emblema2) 24%, transparent);*/
     box-shadow:
         0 0 0 1px color-mix(in srgb, var(--emblema1) 4%, transparent),
         0 0 1.5rem rgba(0,0,0,.18);
