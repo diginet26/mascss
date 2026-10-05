@@ -21903,76 +21903,134 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 /* =========================================================
-   CLIP DIGITAL — CONEXIÓN CON LA NAVBAR
+   CLIP DIGITAL — DIGIVICE DOCK
    ========================================================= */
 
 .dr-post-sidebar::before {
     content: "";
     position: absolute;
-    top: -0.9rem;
+    top: -1.05rem;
     left: 50%;
-    width: 4.8rem;
-    height: 0.9rem;
+    width: 5.8rem;
+    height: 1.05rem;
     transform: translateX(-50%);
     box-sizing: border-box;
 
     background:
+        /* línea central */
         linear-gradient(
             90deg,
             transparent 0%,
-            color-mix(in srgb, var(--emblema1) 14%, transparent) 20%,
-            color-mix(in srgb, var(--emblema2) 22%, transparent) 50%,
-            color-mix(in srgb, var(--emblema1) 14%, transparent) 80%,
+            transparent 38%,
+            var(--emblema1) 39%,
+            var(--emblema2) 50%,
+            var(--emblema1) 61%,
+            transparent 62%,
             transparent 100%
+        ) center bottom / 100% .08rem no-repeat,
+
+        /* brazos laterales */
+        linear-gradient(
+            135deg,
+            transparent 0%,
+            transparent 47%,
+            var(--emblema1) 48%,
+            var(--emblema2) 50%,
+            var(--emblema1) 52%,
+            transparent 53%
+        ) left center / 1.15rem .55rem no-repeat,
+
+        linear-gradient(
+            45deg,
+            transparent 0%,
+            transparent 47%,
+            var(--emblema1) 48%,
+            var(--emblema2) 50%,
+            var(--emblema1) 52%,
+            transparent 53%
+        ) right center / 1.15rem .55rem no-repeat,
+
+        /* cuerpo del dock */
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--emblema1) 8%, transparent),
+            color-mix(in srgb, var(--emblema2) 18%, transparent),
+            color-mix(in srgb, var(--emblema1) 8%, transparent)
         );
 
-    border-left: .08rem solid var(--emblema1);
-    border-right: .08rem solid var(--emblema1);
-    border-bottom: .08rem solid var(--emblema2);
+    border-left: .07rem solid color-mix(in srgb, var(--emblema1) 80%, transparent);
+    border-right: .07rem solid color-mix(in srgb, var(--emblema1) 80%, transparent);
+    border-bottom: .07rem solid var(--emblema2);
 
     box-shadow:
-        0 0 .55rem color-mix(in srgb, var(--emblema2) 20%, transparent),
-        inset 0 -.15rem .3rem color-mix(in srgb, var(--emblema1) 10%, transparent);
+        0 0 .7rem color-mix(in srgb, var(--emblema2) 25%, transparent),
+        inset 0 -.2rem .4rem color-mix(in srgb, var(--emblema1) 10%, transparent);
 
     pointer-events: none;
 
     opacity: 0;
     visibility: hidden;
-
     transition:
         opacity .2s ease,
         visibility .2s ease;
 }
 
+
+/* =========================================================
+   NÚCLEO DEL DIGIVICE
+   ========================================================= */
+
 .dr-post-sidebar::after {
     content: "";
     position: absolute;
-    top: -1.05rem;
+    top: -1.22rem;
     left: 50%;
-    width: .72rem;
-    height: .72rem;
+    width: .78rem;
+    height: .78rem;
     transform: translateX(-50%) rotate(45deg);
     box-sizing: border-box;
 
-    background: var(--theme-panel-deep);
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 22%, var(--theme-panel-deep)),
+            var(--theme-panel-deep)
+        );
 
-    border: .07rem solid var(--emblema1);
+    border: .08rem solid var(--emblema1);
 
     box-shadow:
-        0 0 .45rem color-mix(in srgb, var(--emblema2) 30%, transparent),
-        inset 0 0 .25rem color-mix(in srgb, var(--emblema2) 18%, transparent);
+        0 0 .3rem var(--emblema1),
+        0 0 .75rem color-mix(in srgb, var(--emblema2) 35%, transparent),
+        inset 0 0 .25rem color-mix(in srgb, var(--emblema2) 20%, transparent);
 
     pointer-events: none;
+
     opacity: 0;
     visibility: hidden;
-    transition: opacity .2s ease, visibility .2s ease;
+    transition:
+        opacity .2s ease,
+        visibility .2s ease;
 }
 
-/* APARECE SOLO DURANTE EL STICKY */
+
+/* =========================================================
+   ACTIVO SOLO DURANTE LA COLISIÓN
+   ========================================================= */
+
 .dr-post-sidebar.is-stuck::before,
 .dr-post-sidebar.is-stuck::after {
     opacity: 1;
     visibility: visible;
+}
+
+
+/* =========================================================
+   CAPA DEL DOCK
+   ========================================================= */
+
+.dr-post-sidebar.is-stuck::before,
+.dr-post-sidebar.is-stuck::after {
     z-index: 20;
 }
 
