@@ -21888,7 +21888,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 
 .dr-post-sidebar {
     position: sticky;
-    top: 4rem;
+    top: 6rem;
     z-index: 5;
     width: 15rem;
     height: max-content;
