@@ -1492,3 +1492,450 @@
 .dr-system-title {
     color: #4ba8d0;
 }
+
+
+/* ============================================================
+   CATEGORÍA
+   ============================================================ */
+
+.dr-canon-section {
+    margin: 0 1.25rem 1.5rem;
+}
+
+
+.dr-canon-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: .75rem;
+    padding: .55rem .7rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--emblema1),
+            rgba(22,119,200,.28),
+            transparent
+        );
+
+    border-left: 3px solid var(--emblema2);
+    border-bottom: 1px solid rgba(53,216,255,.18);
+}
+
+
+.dr-canon-section-title span {
+    color: #fff;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
+}
+
+
+.dr-canon-section-title small {
+    color: rgba(255,255,255,.35);
+    font-family: "Roboto Mono", monospace;
+    font-size: .43rem;
+    letter-spacing: .08rem;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.dr-canon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+}
+
+
+/* ============================================================
+   TARJETA
+   ============================================================ */
+
+.dr-canon-card {
+    position: relative;
+    min-width: 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0e1b27,
+            #08121b
+        );
+
+    border: 1px solid rgba(53,216,255,.13);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.dr-canon-card:hover {
+    transform: translateY(-.15rem);
+
+    border-color: var(--emblema2);
+
+    box-shadow:
+        0 0 .8rem rgba(53,216,255,.08);
+}
+
+
+/* ============================================================
+   IMAGEN
+   ============================================================ */
+
+.dr-canon-image {
+    position: relative;
+
+    height: 14rem;
+
+    overflow: hidden;
+
+    background: #050b11;
+}
+
+
+.dr-canon-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: saturate(.8);
+
+    transition:
+        transform .45s ease,
+        filter .45s ease;
+}
+
+
+.dr-canon-card:hover .dr-canon-image img {
+    transform: scale(1.045);
+    filter: saturate(1.1);
+}
+
+
+.dr-canon-image:after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(3,10,16,.25) 65%,
+            rgba(3,10,16,.95) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* efecto digital */
+
+.dr-canon-image-scan {
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--emblema2);
+
+    opacity: .35;
+
+    box-shadow: 0 0 .5rem var(--emblema2);
+
+    animation: drCanonScan 4s linear infinite;
+}
+
+@keyframes drCanonScan {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .35;
+    }
+
+    90% {
+        opacity: .35;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+
+/* ============================================================
+   ESTADO DE LA TARJETA
+   ============================================================ */
+
+.dr-canon-status-label {
+    position: absolute;
+    z-index: 3;
+
+    top: .65rem;
+    right: .65rem;
+
+    padding: .3rem .45rem;
+
+    background: rgba(3,10,16,.8);
+
+    border: 1px solid currentColor;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: .42rem;
+    font-weight: 700;
+
+    letter-spacing: .06rem;
+}
+
+
+.dr-canon-card.available .dr-canon-status-label {
+    color: #4ee38b;
+}
+
+.dr-canon-card.reserved .dr-canon-status-label {
+    color: #f2b705;
+}
+
+.dr-canon-card.taken .dr-canon-status-label {
+    color: #d94b5b;
+}
+
+
+/* ============================================================
+   INFORMACIÓN
+   ============================================================ */
+
+.dr-canon-info {
+    position: relative;
+
+    padding: .8rem;
+}
+
+
+/* ============================================================
+   NOMBRE
+   ============================================================ */
+
+.dr-canon-name {
+    margin-bottom: .7rem;
+
+    padding-bottom: .5rem;
+
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+
+.dr-canon-name span {
+    display: block;
+
+    color: #fff;
+
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.5rem;
+    line-height: .95;
+
+    text-transform: uppercase;
+}
+
+
+.dr-canon-name small {
+    display: block;
+
+    margin-top: .25rem;
+
+    color: var(--emblema2);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: .43rem;
+
+    letter-spacing: .08rem;
+}
+
+
+/* ============================================================
+   DATOS
+   ============================================================ */
+
+.dr-canon-data {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .35rem;
+
+    margin-bottom: .7rem;
+}
+
+
+.dr-canon-data span {
+    min-width: 0;
+
+    padding: .4rem;
+
+    background: rgba(255,255,255,.025);
+
+    border-left: 2px solid var(--emblema1);
+
+    color: #8a9ca9;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: .43rem;
+
+    line-height: 1.35;
+}
+
+
+.dr-canon-data b {
+    display: block;
+
+    margin-bottom: .15rem;
+
+    color: var(--emblema2);
+
+    font-size: .38rem;
+    letter-spacing: .05rem;
+}
+
+
+/* ============================================================
+   DESCRIPCIÓN
+   ============================================================ */
+
+.dr-canon-description {
+    min-height: 4.3rem;
+
+    padding: .55rem;
+
+    background: rgba(0,0,0,.12);
+
+    border-top: 1px solid rgba(255,255,255,.04);
+    border-bottom: 1px solid rgba(255,255,255,.04);
+
+    color: #7d909e;
+
+    font-family: "Oxanium", sans-serif;
+    font-size: .56rem;
+
+    line-height: 1.55;
+    text-align: justify;
+}
+
+
+/* ============================================================
+   PIE
+   ============================================================ */
+
+.dr-canon-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: .65rem;
+}
+
+
+.dr-canon-footer span {
+    color: #4f6372;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: .4rem;
+
+    letter-spacing: .1rem;
+}
+
+
+.dr-canon-footer strong {
+    font-family: "Roboto Mono", monospace;
+    font-size: .4rem;
+
+    letter-spacing: .07rem;
+}
+
+
+.dr-canon-card.available .dr-canon-footer strong {
+    color: #4ee38b;
+}
+
+.dr-canon-card.reserved .dr-canon-footer strong {
+    color: #f2b705;
+}
+
+.dr-canon-card.taken .dr-canon-footer strong {
+    color: #d94b5b;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 40.625rem) {
+
+    .dr-canon {
+        width: 96%;
+    }
+
+    .dr-canon-head {
+        padding: 1.4rem 1.25rem 1.25rem;
+    }
+
+    .dr-canon-title {
+        font-size: 2.1rem;
+    }
+
+    .dr-canon-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 28.125rem) {
+
+    .dr-canon-intro {
+        margin-left: .75rem;
+        margin-right: .75rem;
+    }
+
+    .dr-canon-status {
+        margin-left: .75rem;
+        margin-right: .75rem;
+        justify-content: flex-start;
+    }
+
+    .dr-canon-section {
+        margin-left: .75rem;
+        margin-right: .75rem;
+    }
+
+    .dr-canon-section-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    .dr-canon-image {
+        height: 16rem;
+    }
+
+}
