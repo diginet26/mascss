@@ -10746,18 +10746,20 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     width: 100%;
     margin: 0 0 1.5rem !important;
     padding: 0 !important;
-    background: var(--post-background);
-    border: 0.06rem solid color-mix(in srgb, var(--emblema2) 24%, transparent);
     box-sizing: border-box;
-    overflow: hidden;
+    background: var(--post-background);
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 24%, transparent);
     box-shadow:
         0 0 0 1px color-mix(in srgb, var(--emblema1) 4%, transparent),
-        0 0 1.5rem rgba(0, 0, 0, .18);
+        0 0 1.5rem rgba(0,0,0,.18);
+    overflow: hidden;
 }
 
 .dr-topic-post .inner {
+    width: 100%;
     margin: 0 !important;
     padding: 0 !important;
+    box-sizing: border-box;
     background: transparent !important;
 }
 
@@ -10773,10 +10775,13 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-header {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 10rem;
+    grid-template-columns: minmax(0,1fr) 10rem;
     grid-template-rows: 6rem 4rem;
     width: 100%;
     min-height: 10rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background:
         linear-gradient(
             110deg,
@@ -10785,13 +10790,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
             color-mix(in srgb, var(--emblema1) 4%, transparent)
         ),
         var(--post-background);
-    border-bottom: 0.06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
-    box-sizing: border-box;
+    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
     overflow: hidden;
 }
 
 /* =========================================================
-   ZONA DE IDENTIDAD
+   IDENTIDAD
    ========================================================= */
 
 .dr-topic-header-main {
@@ -10867,7 +10871,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 /* =========================================================
-   DIGIMON — DERECHA
+   DIGIMON
    ========================================================= */
 
 .dr-topic-digimon {
@@ -10879,9 +10883,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: end;
     align-self: stretch;
+    justify-self: end;
     overflow: hidden;
+    box-sizing: border-box;
     background:
         linear-gradient(
             135deg,
@@ -10889,16 +10894,15 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
             transparent
         ),
         var(--theme-panel-deep);
-    border-left: 0.06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
-    box-sizing: border-box;
+    border-left: .06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
 }
 
 .dr-topic-digimon img {
     display: block;
     width: 100% !important;
     height: 100% !important;
-    min-width: 100%;
-    min-height: 100%;
+    max-width: none !important;
+    max-height: none !important;
     object-fit: cover;
 }
 
@@ -10923,7 +10927,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
             transparent 50%
         ),
         var(--theme-panel-deep);
-    border-top: 0.06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
+    border-top: .06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
 
 .dr-topic-meta-left {
@@ -10960,12 +10964,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     white-space: nowrap;
 }
 
-.dr-topic-date img {
-    display: none !important;
-}
-
 /* =========================================================
-   BOTONES DEL POST
+   ACCIONES
    ========================================================= */
 
 .dr-topic-actions {
@@ -11000,10 +11000,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: 0 .5rem;
     box-sizing: border-box;
     background: color-mix(in srgb, var(--post-background) 85%, transparent);
-    border: 0.06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
-    color: var(--text-color) !important;
-    font: 700 .45rem/1 "Oxanium", sans-serif;
-    letter-spacing: .06rem;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 1;
     text-decoration: none !important;
     transition: .2s ease;
 }
@@ -11028,17 +11028,88 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     content: "IP";
 }
 
+.dr-topic-actions li a::before {
+    color: var(--text-color);
+    font: 700 .45rem/1 "Oxanium", sans-serif;
+    letter-spacing: .06rem;
+}
+
+.dr-topic-actions li a:hover::before {
+    color: var(--emblema2);
+}
+
 .dr-topic-actions li a:hover {
-    color: var(--emblema2) !important;
     border-color: var(--emblema2);
     background: color-mix(in srgb, var(--emblema2) 8%, var(--post-background));
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 14%, transparent);
 }
 
 /* =========================================================
-   CAMPOS DEL PERFIL — BANCO TÉCNICO
+   CUERPO DEL POST
+   PREPARADO PARA AVATAR + MENSAJE
    ========================================================= */
 
+.dr-topic-post .rpostcontainer {
+    width: 100% !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+.dr-topic-post .postbody {
+    width: 100% !important;
+    min-width: 0;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+.dr-topic-post .postbody .content {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* El título y fecha antiguos ya no forman parte del diseño */
+.dr-topic-post .topic-title,
+.dr-topic-post .author {
+    display: none !important;
+}
+
+/* Banco técnico de campos */
 .dr-profile-fields {
     display: none !important;
+}
+
+/* =========================================================
+   RESPONSIVE — CABECERA
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .dr-topic-header {
+        grid-template-columns: minmax(0,1fr) 7rem;
+        grid-template-rows: 6rem 4rem;
+    }
+
+    .dr-topic-digimon {
+        width: 7rem;
+        height: 10rem;
+        min-width: 7rem;
+    }
+
+    .dr-topic-username {
+        font-size: 1.8rem;
+    }
+
+    .dr-topic-stats {
+        gap: .3rem .6rem;
+    }
+
+    .dr-topic-actions li a {
+        min-width: 3.1rem;
+    }
 }
