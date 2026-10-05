@@ -10980,9 +10980,17 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-actions li {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
-    list-style: none;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    list-style: none !important;
 }
 
 .dr-topic-actions li:nth-child(1),
@@ -10992,15 +11000,18 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-actions li a {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
     min-width: 3.6rem;
     height: 1.7rem;
+    margin: 0 !important;
     padding: 0 .5rem;
     box-sizing: border-box;
-    background: color-mix(in srgb, var(--post-background) 85%, transparent);
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
+    background: color-mix(in srgb, var(--post-background) 85%, transparent) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     color: transparent !important;
     font-size: 0 !important;
     line-height: 1;
