@@ -21898,6 +21898,50 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-shadow: none !important;
 }
 
+/* =========================================================
+   CLIP DIGITAL — CONEXIÓN CON LA NAVBAR
+   ========================================================= */
+
+.dr-post-sidebar::before {
+    content: "";
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    width: 3.2rem;
+    height: 0.75rem;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    border-left: .08rem solid var(--emblema1);
+    border-right: .08rem solid var(--emblema1);
+    border-bottom: .08rem solid var(--emblema2);
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb, var(--emblema2) 20%, transparent),
+            transparent
+        );
+    box-shadow:
+        0 0 .5rem color-mix(in srgb, var(--emblema2) 18%, transparent);
+    pointer-events: none;
+}
+
+.dr-post-sidebar::after {
+    content: "";
+    position: absolute;
+    top: -0.95rem;
+    left: 50%;
+    width: .5rem;
+    height: .5rem;
+    transform: translateX(-50%) rotate(45deg);
+    box-sizing: border-box;
+    border: .06rem solid var(--emblema1);
+    background: var(--theme-panel-deep);
+    box-shadow:
+        0 0 .35rem color-mix(in srgb, var(--emblema1) 25%, transparent);
+    pointer-events: none;
+}
+
 .dr-post-avatar {
     position: relative;
     width: 15rem;
