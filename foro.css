@@ -21865,11 +21865,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 /* =========================================================
-   DIGITAL RIFT — VIEWTOPIC
-   FASE 2 — AVATAR + CONTENIDO
+   VIEWTOPIC — FONDO DEL POST
    ========================================================= */
 
 .dr-post-container {
+    position: relative;
     display: grid;
     grid-template-columns: 15rem minmax(0, 1fr);
     align-items: start;
@@ -21879,6 +21879,26 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-sizing: border-box;
     gap: 1.4rem;
     background: transparent;
+}
+
+/* Fondo visual independiente */
+.dr-post-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.4rem;
+    right: 1.4rem;
+    background: var(--post-background);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Contenido por encima del fondo */
+.dr-post-sidebar,
+.dr-post-main {
+    position: relative;
+    z-index: 1;
 }
 
 /* =========================================================
@@ -22107,7 +22127,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-post-main {
     min-width: 0;
     width: 100%;
-    background: var(--post-background);
+    background: transparent;
 }
 
 .dr-post-main .postbody {
