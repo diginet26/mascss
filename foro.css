@@ -11292,14 +11292,15 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     flex: 0 0 1.25rem;
     text-align: center;
     font: 900 1.25rem/1.25rem "FontAwesome";
+    color: color-mix(in srgb, var(--emblema1) 72%, var(--text-color));
 }
 
 .dr-post-profile-link[data-profile-field="expediente"]::before {
-    content: "\f07b";
+    content: "\f07b" !important;
 }
 
 .dr-post-profile-link[data-profile-field="cronologia"]::before {
-    content: "\f017";
+    content: "\f017" !important;
 }
 
 /* Enlace nativo de MP */
