@@ -22015,10 +22015,29 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
    MP conserva el icono nativo de ForoActivo y su tooltip.
    ========================================================= */
 
-.dr-post-icon::before {
+/*.dr-post-icon::before {
     content: none !important;
     display: none !important;
+}*/
+
+.dr-post-link::before {
+    display: block !important;
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    font-size: 1.25rem;
+    line-height: 1;
 }
+
+.dr-post-link[data-profile-field="expediente"]::before {
+    content: "\f07b" !important;
+}
+
+.dr-post-link[data-profile-field="cronologia"]::before {
+    content: "\f017" !important;
+}
+
+
+
 
 .dr-post-profile-link::before {
     position: relative;
