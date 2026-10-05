@@ -22162,3 +22162,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
         aspect-ratio: 3 / 5;
     }
 }
+/* =========================================================
+   VIEWTOPIC — PERMITIR STICKY DEL PERFIL
+   ========================================================= */
+
+#content-container div#main {
+    overflow: unset !important;
+}
