@@ -21624,12 +21624,13 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     justify-content: center;
     align-self: center;
     justify-self: end;
-    margin-right: .7rem;
+    margin-right: 0rem;
     overflow: hidden;
     box-sizing: border-box;
     background: var(--theme-panel-deep);
     border: .08rem solid var(--emblema2);
     box-shadow: 0 0 0 .05rem var(--emblema1), 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
+    z-index: 9;
 }
 
 .dr-topic-digimon img {
