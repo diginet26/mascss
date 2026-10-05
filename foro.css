@@ -21543,7 +21543,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     min-width: 0;
     display: flex;
     align-items: center;
-    padding: 1rem 1.4rem;
+    padding: 1rem .8rem;
     box-sizing: border-box;
 }
 
@@ -21626,14 +21626,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     justify-self: end;
     overflow: hidden;
     box-sizing: border-box;
-    background:
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--emblema2) 8%, transparent),
-            transparent
-        ),
-        var(--theme-panel-deep);
-    border-left: .06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
+    background: var(--theme-panel-deep);
+    border-left: 0;
+    border: .08rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema2) 12%, transparent);
 }
 
 .dr-topic-digimon img {
@@ -21644,7 +21640,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     max-height: none !important;
     object-fit: cover;
 }
-
 /* =========================================================
    BARRA INFERIOR
    ========================================================= */
@@ -21686,15 +21681,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-permalink::before {
-    content: "↗";
+    content: "/f0c1";
     margin-right: .3rem;
     color: var(--emblema2);
 }
 
-.dr-topic-permalink:hover {
-    color: var(--emblema2);
-}
-
+.dr-topic-permalink:hover {color: var(--emblema2);}
 .dr-topic-date {
     min-width: 0;
     color: color-mix(in srgb, var(--text-color) 55%, transparent);
