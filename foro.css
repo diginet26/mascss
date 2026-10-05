@@ -21622,14 +21622,14 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: stretch;
+    align-self: center;
     justify-self: end;
+    margin-right: .7rem;
     overflow: hidden;
     box-sizing: border-box;
     background: var(--theme-panel-deep);
-    border-left: 0;
-    border: .08rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
-    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema2) 12%, transparent);
+    border: .08rem solid var(--emblema2);
+    box-shadow: 0 0 0 .05rem var(--emblema1), 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
 
 .dr-topic-digimon img {
