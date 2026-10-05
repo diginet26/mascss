@@ -10734,3 +10734,311 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     opacity: 1 !important;
 }
 body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: var(--linkc1) !important;}
+
+
+
+/* =========================================================
+   DIGITAL RIFT — VIEWTOPIC
+   FASE 1 — CABECERA DE LOS POSTS
+   ========================================================= */
+
+.dr-topic-post {
+    width: 100%;
+    margin: 0 0 1.5rem !important;
+    padding: 0 !important;
+    background: var(--post-background);
+    border: 0.06rem solid color-mix(in srgb, var(--emblema2) 24%, transparent);
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px color-mix(in srgb, var(--emblema1) 4%, transparent),
+        0 0 1.5rem rgba(0, 0, 0, .18);
+}
+
+.dr-topic-post .inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.dr-topic-post .corners-top,
+.dr-topic-post .corners-bottom {
+    display: none !important;
+}
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.dr-topic-header {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 10rem;
+    grid-template-rows: 6rem 4rem;
+    width: 100%;
+    min-height: 10rem;
+    background:
+        linear-gradient(
+            110deg,
+            color-mix(in srgb, var(--emblema2) 5%, transparent),
+            transparent 42%,
+            color-mix(in srgb, var(--emblema1) 4%, transparent)
+        ),
+        var(--post-background);
+    border-bottom: 0.06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* =========================================================
+   ZONA DE IDENTIDAD
+   ========================================================= */
+
+.dr-topic-header-main {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.4rem;
+    box-sizing: border-box;
+}
+
+.dr-topic-identity {
+    min-width: 0;
+}
+
+.dr-topic-username {
+    color: var(--text-color);
+    font: 400 2.15rem/1 "Jersey 15", sans-serif;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 12%, transparent);
+}
+
+.dr-topic-username a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.dr-topic-rank {
+    margin-top: .25rem;
+    color: var(--emblema2);
+    font: 700 .55rem/1 "Oxanium", sans-serif;
+    letter-spacing: .16rem;
+    text-transform: uppercase;
+}
+
+.dr-topic-accent {
+    width: 3.2rem;
+    height: .12rem;
+    margin: .5rem 0 .55rem;
+    background: var(--emblema2);
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 30%, transparent);
+}
+
+/* =========================================================
+   ESTADÍSTICAS
+   ========================================================= */
+
+.dr-topic-stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .35rem .9rem;
+}
+
+.dr-topic-stat {
+    display: flex;
+    align-items: baseline;
+    gap: .3rem;
+    white-space: nowrap;
+}
+
+.dr-topic-stat > span {
+    color: color-mix(in srgb, var(--text-color) 48%, transparent);
+    font: 700 .48rem/1 "Roboto Mono", monospace;
+    letter-spacing: .08rem;
+}
+
+.dr-topic-stat > strong {
+    color: var(--text-color);
+    font: 700 .58rem/1 "Roboto Mono", monospace;
+}
+
+/* =========================================================
+   DIGIMON — DERECHA
+   ========================================================= */
+
+.dr-topic-digimon {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 10rem;
+    height: 10rem;
+    min-width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    align-self: stretch;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 8%, transparent),
+            transparent
+        ),
+        var(--theme-panel-deep);
+    border-left: 0.06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
+    box-sizing: border-box;
+}
+
+.dr-topic-digimon img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   BARRA INFERIOR
+   ========================================================= */
+
+.dr-topic-meta {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: 0 1rem 0 1.4rem;
+    box-sizing: border-box;
+    background:
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--emblema2) 8%, transparent),
+            transparent 50%
+        ),
+        var(--theme-panel-deep);
+    border-top: 0.06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
+}
+
+.dr-topic-meta-left {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.dr-topic-permalink {
+    flex-shrink: 0;
+    color: var(--text-color);
+    font: 700 .5rem/1 "Oxanium", sans-serif;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+
+.dr-topic-permalink::before {
+    content: "↗";
+    margin-right: .3rem;
+    color: var(--emblema2);
+}
+
+.dr-topic-permalink:hover {
+    color: var(--emblema2);
+}
+
+.dr-topic-date {
+    min-width: 0;
+    color: color-mix(in srgb, var(--text-color) 55%, transparent);
+    font: 500 .48rem/1.2 "Roboto Mono", monospace;
+    letter-spacing: .03rem;
+    white-space: nowrap;
+}
+
+.dr-topic-date img {
+    display: none !important;
+}
+
+/* =========================================================
+   BOTONES DEL POST
+   ========================================================= */
+
+.dr-topic-actions {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .3rem;
+    list-style: none;
+    flex-shrink: 0;
+}
+
+.dr-topic-actions li {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+}
+
+.dr-topic-actions li:nth-child(1),
+.dr-topic-actions li:nth-child(2),
+.dr-topic-actions li:nth-child(7) {
+    display: none !important;
+}
+
+.dr-topic-actions li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.6rem;
+    height: 1.7rem;
+    padding: 0 .5rem;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--post-background) 85%, transparent);
+    border: 0.06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
+    color: var(--text-color) !important;
+    font: 700 .45rem/1 "Oxanium", sans-serif;
+    letter-spacing: .06rem;
+    text-decoration: none !important;
+    transition: .2s ease;
+}
+
+.dr-topic-actions li a img {
+    display: none !important;
+}
+
+.dr-topic-actions li:nth-child(3) a::before {
+    content: "CITAR";
+}
+
+.dr-topic-actions li:nth-child(4) a::before {
+    content: "EDITAR";
+}
+
+.dr-topic-actions li:nth-child(5) a::before {
+    content: "BORRAR";
+}
+
+.dr-topic-actions li:nth-child(6) a::before {
+    content: "IP";
+}
+
+.dr-topic-actions li a:hover {
+    color: var(--emblema2) !important;
+    border-color: var(--emblema2);
+    background: color-mix(in srgb, var(--emblema2) 8%, var(--post-background));
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 14%, transparent);
+}
+
+/* =========================================================
+   CAMPOS DEL PERFIL — BANCO TÉCNICO
+   ========================================================= */
+
+.dr-profile-fields {
+    display: none !important;
+}
