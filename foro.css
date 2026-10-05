@@ -21887,8 +21887,13 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     position: absolute;
     top: 0;
     bottom: 0;
+
+    /* el fondo empieza donde empieza la zona del avatar */
     left: 1.4rem;
-    right: 1.4rem;
+
+    /* mantenemos todo el ancho hacia el contenido */
+    right: 0;
+
     background: var(--post-background);
     pointer-events: none;
     z-index: 0;
