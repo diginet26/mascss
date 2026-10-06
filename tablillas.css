@@ -2244,3 +2244,651 @@
         line-height: 1.9;
     }
 }
+
+/* ==========================================================
+   DIGITAL RIFT — TABLILLA DE BATALLA
+   ========================================================== */
+
+.dr-battle {
+    --battle-blue: #1677C8;
+    --battle-blue-dark: #0b3d68;
+    --battle-cyan: #22c1c3;
+    --battle-gold: #f2b705;
+    --battle-red: #d94b5b;
+    --battle-bg: #080f18;
+    --battle-panel: #0d1722;
+    --battle-panel2: #111f2d;
+    --battle-line: rgba(34,193,195,.22);
+    --battle-text: #dce8f2;
+    --battle-muted: #7f95a8;
+
+    width: 45rem;
+    margin: 1.875rem auto;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        rgba(8,15,24,.99),
+        rgba(8,15,24,.94)
+    );
+
+    border: 0.0625rem solid var(--battle-line);
+    color: var(--battle-text);
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.7;
+
+    box-shadow:
+        0 0 2.1875rem rgba(0,0,0,.45),
+        inset 0 0 2.8125rem rgba(22,119,200,.04);
+}
+
+
+/* ==========================================================
+   BARRA SUPERIOR
+   ========================================================== */
+
+.dr-battle .battle-top {
+    height: 1.875rem;
+    padding: 0 1.125rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #07111b;
+    border-bottom: 0.0625rem solid var(--battle-line);
+    color: var(--battle-muted);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-top strong {
+    color: var(--battle-cyan);
+}
+
+.dr-battle .battle-status {
+    display: flex;
+    align-items: center;
+    gap: 0.4375rem;
+}
+
+.dr-battle .battle-status i {
+    width: 0.3125rem;
+    height: 0.3125rem;
+
+    display: block;
+
+    background: var(--battle-red);
+    border-radius: 50%;
+
+    box-shadow: 0 0 0.5rem rgba(217,75,91,.7);
+}
+
+
+/* ==========================================================
+   CABECERA DEL PERSONAJE
+   ========================================================== */
+
+.dr-battle .battle-header {
+    min-height: 9.375rem;
+    padding: 1.5625rem;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    background: linear-gradient(
+        90deg,
+        rgba(8,15,24,.98) 0%,
+        rgba(8,15,24,.86) 50%,
+        rgba(8,15,24,.45) 100%
+    );
+
+    border-bottom: 0.0625rem solid var(--battle-line);
+}
+
+
+/* línea decorativa */
+
+.dr-battle .battle-header:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 1.5625rem;
+
+    width: 10.9375rem;
+    height: 0.125rem;
+
+    background: var(--battle-cyan);
+
+    box-shadow: 0 0 0.75rem rgba(34,193,195,.55);
+}
+
+
+/* ==========================================================
+   RETRATO
+   ========================================================== */
+
+.dr-battle .battle-avatar {
+    width: 6.5625rem;
+    height: 6.5625rem;
+
+    flex-shrink: 0;
+    position: relative;
+    padding: 0.25rem;
+
+    background: #07111b;
+    border: 0.0625rem solid var(--battle-blue);
+
+    clip-path: polygon(
+        15% 0,
+        85% 0,
+        100% 15%,
+        100% 85%,
+        85% 100%,
+        15% 100%,
+        0 85%,
+        0 15%
+    );
+}
+
+.dr-battle .battle-avatar:before {
+    content: "";
+    position: absolute;
+    inset: 0.3125rem;
+
+    border: 0.0625rem solid rgba(34,193,195,.3);
+    pointer-events: none;
+}
+
+.dr-battle .battle-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    clip-path: polygon(
+        15% 0,
+        85% 0,
+        100% 15%,
+        100% 85%,
+        85% 100%,
+        15% 100%,
+        0 85%,
+        0 15%
+    );
+
+    filter: saturate(.8) contrast(1.1);
+}
+
+
+/* ==========================================================
+   INFORMACIÓN
+   ========================================================== */
+
+.dr-battle .battle-data {
+    flex: 1;
+    min-width: 0;
+}
+
+.dr-battle .battle-label {
+    display: inline-block;
+
+    margin-bottom: 0.5rem;
+    padding: 0.1875rem 0.5rem;
+
+    border: 0.0625rem solid var(--battle-blue);
+    color: var(--battle-cyan);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-name {
+    margin: 0;
+
+    color: #fff;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 2.375rem;
+    font-weight: 400;
+    line-height: .9;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-subtitle {
+    margin-top: 0.5625rem;
+
+    color: var(--battle-muted);
+    font-size: 0.5625rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-subtitle b {
+    color: var(--battle-gold);
+}
+
+
+/* ==========================================================
+   ICONO DE COMBATE
+   ========================================================== */
+
+.dr-battle .battle-symbol {
+    position: absolute;
+    right: 1.75rem;
+    bottom: 0.9375rem;
+
+    color: var(--battle-cyan);
+    font-size: 2.1875rem;
+    opacity: .12;
+
+    transform: rotate(-15deg);
+}
+
+
+/* ==========================================================
+   SEPARADOR
+   ========================================================== */
+
+.dr-battle .battle-separator {
+    margin: 0 1.5625rem;
+
+    border: 0;
+    border-top: 0.0625rem solid rgba(34,193,195,.14);
+}
+
+
+/* ==========================================================
+   ESTADÍSTICAS
+   ========================================================== */
+
+.dr-battle .battle-stats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    margin: 1.25rem 1.5625rem 0.9375rem;
+
+    border: 0.0625rem solid #183246;
+}
+
+.dr-battle .battle-stat {
+    padding: 0.6875rem 0.3125rem;
+
+    text-align: center;
+
+    background: #09131d;
+    border-right: 0.0625rem solid #183246;
+}
+
+.dr-battle .battle-stat:last-child {
+    border-right: 0;
+}
+
+.dr-battle .battle-stat b {
+    display: block;
+
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.0625rem;
+    line-height: 1;
+}
+
+.dr-battle .battle-stat i {
+    display: block;
+
+    margin-top: 0.3125rem;
+
+    color: var(--battle-muted);
+    font-style: normal;
+    font-size: 0.4375rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-stat:hover {
+    background: linear-gradient(
+        180deg,
+        rgba(22,119,200,.12),
+        transparent
+    );
+}
+
+.dr-battle .battle-stat:hover b {
+    color: var(--battle-cyan);
+}
+
+
+/* ==========================================================
+   BARRAS DE ESTADO
+   ========================================================== */
+
+.dr-battle .battle-bars {
+    margin: 1.125rem 1.5625rem 1.25rem;
+}
+
+
+/* barra */
+
+.dr-battle .battle-bar {
+    margin-bottom: 0.75rem;
+
+    position: relative;
+    height: 1.3125rem;
+
+    background: #071019;
+    border: 0.0625rem solid #203b4c;
+    overflow: hidden;
+}
+
+
+/* relleno */
+
+.dr-battle .battle-bar b {
+    display: block;
+
+    width: calc(
+        (var(--actual) / var(--total)) * 100%
+    );
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        var(--battle-blue-dark),
+        var(--battle-cyan)
+    );
+
+    box-shadow: 0 0 0.75rem rgba(34,193,195,.25);
+
+    transition: width .3s ease;
+}
+
+
+/* barra de vida */
+
+.dr-battle .battle-bar.hp b {
+    background: linear-gradient(
+        90deg,
+        #0b3d68,
+        #22c1c3
+    );
+}
+
+
+/* barra de energía */
+
+.dr-battle .battle-bar.energy b {
+    background: linear-gradient(
+        90deg,
+        #1677c8,
+        #4b9dff
+    );
+}
+
+
+/* barra de digievolución */
+
+.dr-battle .battle-bar.digi b {
+    background: linear-gradient(
+        90deg,
+        #735100,
+        #f2b705
+    );
+
+    box-shadow: 0 0 0.75rem rgba(242,183,5,.2);
+}
+
+
+/* texto de barra */
+
+.dr-battle .battle-bar:after {
+    content: attr(data-name);
+
+    position: absolute;
+    left: 0.5625rem;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    font-weight: 700;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    text-shadow: 0 0.0625rem 0.1875rem #000;
+}
+
+
+/* ==========================================================
+   PANEL DE COMBATE
+   ========================================================== */
+
+.dr-battle .battle-panel {
+    margin: 1.25rem 1.5625rem 1.5625rem;
+
+    border: 0.0625rem solid #183246;
+    background: rgba(9,17,24,.82);
+}
+
+
+/* cabecera del panel */
+
+.dr-battle .battle-panel-title {
+    min-height: 2.625rem;
+    padding: 0 0.9375rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        90deg,
+        rgba(22,119,200,.14),
+        transparent
+    );
+
+    border-bottom: 0.0625rem solid #183246;
+}
+
+.dr-battle .battle-panel-title span {
+    color: #fff;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.3125rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-panel-title span i {
+    margin-right: 0.5rem;
+
+    color: var(--battle-cyan);
+    font-size: 0.75rem;
+}
+
+.dr-battle .battle-panel-title small {
+    color: #526b7a;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.0625rem;
+}
+
+
+/* ==========================================================
+   LOG DE COMBATE
+   ========================================================== */
+
+.dr-battle .battle-log {
+    padding: 0.9375rem 1.0625rem;
+}
+
+.dr-battle .battle-log p {
+    margin: 0;
+    padding: 0.375rem 0;
+
+    color: #8498a7;
+    font-size: 0.5625rem;
+
+    border-bottom: 0.0625rem solid rgba(24,50,70,.45);
+}
+
+.dr-battle .battle-log p:last-child {
+    border-bottom: 0;
+}
+
+.dr-battle .battle-log p i {
+    margin-right: 0.4375rem;
+
+    color: var(--battle-cyan);
+    font-size: 0.5rem;
+}
+
+.dr-battle .battle-log p b {
+    color: #dce8f2;
+}
+
+
+/* ==========================================================
+   TÉCNICAS / ACCIONES
+   ========================================================== */
+
+.dr-battle .battle-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0.4375rem;
+    margin: 0 1.0625rem 1.0625rem;
+}
+
+.dr-battle .battle-action {
+    padding: 0.6875rem 0.8125rem;
+
+    background: #0b151f;
+    border: 0.0625rem solid #203b4c;
+
+    transition: .2s ease;
+}
+
+.dr-battle .battle-action:hover {
+    border-color: var(--battle-cyan);
+    background: rgba(34,193,195,.04);
+
+    transform: translateX(0.125rem);
+}
+
+.dr-battle .battle-action small {
+    display: block;
+
+    color: var(--battle-cyan);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-action b {
+    display: block;
+
+    margin-top: 0.1875rem;
+
+    color: #fff;
+    font-size: 0.6875rem;
+}
+
+.dr-battle .battle-action span {
+    display: block;
+
+    margin-top: 0.1875rem;
+
+    color: #6f8493;
+    font-size: 0.5rem;
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.dr-battle .battle-footer {
+    margin: 0 1.5625rem 1.5625rem;
+    padding: 0.75rem 0.9375rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        90deg,
+        rgba(22,119,200,.12),
+        rgba(34,193,195,.035)
+    );
+
+    border: 0.0625rem solid rgba(34,193,195,.18);
+}
+
+.dr-battle .battle-footer span {
+    color: #718695;
+    font-size: 0.4375rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.dr-battle .battle-footer b {
+    color: var(--battle-cyan);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.0625rem;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 47.5rem) {
+
+    .dr-battle {
+        width: calc(100% - 1.875rem);
+    }
+
+    .dr-battle .battle-header {
+        padding: 1.375rem;
+        gap: 0.9375rem;
+    }
+
+    .dr-battle .battle-avatar {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .dr-battle .battle-name {
+        font-size: 1.875rem;
+    }
+
+    .dr-battle .battle-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dr-battle .battle-stat:nth-child(3) {
+        border-right: 0;
+    }
+
+    .dr-battle .battle-stat:nth-child(-n+3) {
+        border-bottom: 0.0625rem solid #183246;
+    }
+
+    .dr-battle .battle-actions {
+        grid-template-columns: 1fr;
+    }
+}
