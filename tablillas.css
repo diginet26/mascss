@@ -2735,7 +2735,6 @@
     margin: 0;
     color: #8498a7;
     font-size: 0.5625rem;
-    border-bottom: 0.0625rem solid rgba(24,50,70,.45);
 }
 
 .dr-battle .battle-log i {
@@ -2747,6 +2746,10 @@
 
 .dr-battle .battle-log b {
     color: #dce8f2;
+}
+
+.dr-battle .battle-log hr {
+    border-bottom: 0.0625rem solid rgba(24,50,70,.45);
 }
 
 
