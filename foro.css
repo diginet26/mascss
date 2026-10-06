@@ -10069,7 +10069,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     margin: .35rem 0 0;
 }
 
-.topic-actions:not(:has(.search-box)) .post-icon a {
+.topic-actions:not(:has(.search-box)) .buttons > a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -10097,10 +10097,10 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 .topic-actions:not(:has(.search-box)) .post-icon img {
-    display: none;
+    display: none !important;
 }
 
-.topic-actions:not(:has(.search-box)) .post-icon a:hover {
+.topic-actions:not(:has(.search-box)) .buttons > a:hover {
     border-color: var(--emblema2);
     color: var(--emblema2) !important;
     background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent));
