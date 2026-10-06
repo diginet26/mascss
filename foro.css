@@ -21937,6 +21937,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     background: var(--theme-panel-deep);
     border: .14rem solid var(--dg-group);
     box-shadow: 0 0 0 .06rem var(--theme-panel-deep);
+    top: 1px;
 }
 
 /* Borde interior tecnológico — colores del sistema de emblemas */
@@ -21991,7 +21992,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
-    margin-top: 0;
+    margin-top: 2px;
     box-sizing: border-box;
     border: .06rem solid color-mix(in srgb, var(--emblema1) 45%, transparent);
     background: var(--theme-panel-deep);
