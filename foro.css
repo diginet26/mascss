@@ -21515,7 +21515,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     position: relative;
     display: grid;
     grid-template-columns: minmax(0,1fr) 10rem;
-    grid-template-rows: 6rem 4rem;
+    grid-template-rows: 6rem 3rem;
     width: 100%;
     min-height: 10rem;
     margin: 0;
@@ -21665,6 +21665,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
         ),
         var(--theme-panel-deep);
     border-top: .06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
+    height: 3rem;
 }
 
 .dr-topic-meta-left {
