@@ -21710,8 +21710,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .28rem;
+    gap: 5.28rem;
     min-width: 0;
+    margin-left: 7rem;
 }
 
 .dr-topic-wave span {
