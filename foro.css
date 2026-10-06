@@ -9921,7 +9921,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 .topic-actions:has(.search-box) .post-icon a::before {
-    content: "+";
+    content: "";
     margin-right: .4rem;
     color: var(--emblema2);
     font-size: .75rem;
