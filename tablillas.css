@@ -2809,43 +2809,6 @@
     font-size: 0.5rem;
 }
 
-
-/* ==========================================================
-   FOOTER
-   ========================================================== */
-
-.dr-battle .battle-footer {
-    margin: 0 1.5625rem 1.5625rem;
-    padding: 0.75rem 0.9375rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: linear-gradient(
-        90deg,
-        rgba(22,119,200,.12),
-        rgba(34,193,195,.035)
-    );
-
-    border: 0.0625rem solid rgba(34,193,195,.18);
-}
-
-.dr-battle .battle-footer span {
-    color: #718695;
-    font-size: 0.4375rem;
-    letter-spacing: 0.0625rem;
-    text-transform: uppercase;
-}
-
-.dr-battle .battle-footer b {
-    color: var(--battle-cyan);
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.4375rem;
-    letter-spacing: 0.0625rem;
-}
-
-
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
