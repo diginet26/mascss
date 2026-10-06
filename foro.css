@@ -9891,7 +9891,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
         inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
 }
 
-.topic-actions:has(.search-box)::before {
+/*.topic-actions:has(.search-box)::before {
     content: "SYSTEM / TOPIC CONTROL";
     position: absolute;
     top: .45rem;
@@ -9900,7 +9900,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     font: 700 .45rem/1 "Roboto Mono", monospace;
     letter-spacing: .14rem;
     text-transform: uppercase;
-}
+}*/
 
 /* =========================================================
    PUBLICAR NUEVO TEMA
@@ -10054,7 +10054,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent), inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
 }
 
-.topic-actions:not(:has(.search-box))::before {
+/*.topic-actions:not(:has(.search-box))::before {
     content: "SYSTEM / TOPIC CONTROL";
     position: absolute;
     top: .45rem;
@@ -10063,9 +10063,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     font: 700 .45rem/1 "Roboto Mono", monospace;
     letter-spacing: .14rem;
     text-transform: uppercase;
-}
-
-xxx
+}*/
 
 .topic-actions:not(:has(.search-box)) .pagination {
     display: flex;
