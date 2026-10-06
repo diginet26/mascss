@@ -21651,55 +21651,53 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     grid-column: 1;
     grid-row: 2;
     min-width: 0;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: .75rem;
-    padding: 0 1rem 0 1.4rem;
+    padding: 0 .8rem 0 0;
     box-sizing: border-box;
-    background:
-        linear-gradient(
-            90deg,
-            color-mix(in srgb, var(--emblema2) 8%, transparent),
-            transparent 50%
-        ),
-        var(--theme-panel-deep);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 8%, transparent), transparent 50%), var(--theme-panel-deep);
     border-top: .06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
-    height: 3rem;
 }
 
 .dr-topic-meta-left {
     min-width: 0;
     display: flex;
     align-items: center;
-    gap: .8rem;
+    gap: .65rem;
+    height: 100%;
 }
 
 .dr-topic-permalink {
-    flex: 0 0 3.4rem;
-    width: 2.4rem;
-    height: 3.4rem;
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
     color: var(--emblema2);
     text-decoration: none !important;
-    box-sizing: border-box;
-    transition: color .2s ease, text-shadow .2s ease;
-    margin-left: -1.2rem;
-    border: 3px solid var(--emblema2);
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 55%, transparent);
+    background: color-mix(in srgb, var(--emblema2) 6%, transparent);
+    transition: color .2s ease, background .2s ease, border-color .2s ease, text-shadow .2s ease;
 }
 
 .dr-topic-permalink::before {
     content: "\f0c1";
     font-family: "Font Awesome 7 Free";
     font-weight: 900;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     line-height: 1;
 }
 
 .dr-topic-permalink:hover {
     color: var(--emblema1);
+    background: color-mix(in srgb, var(--emblema1) 8%, transparent);
+    border-color: var(--emblema1);
     text-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema1) 35%, transparent);
 }
 .dr-topic-date {
@@ -21709,10 +21707,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     letter-spacing: .03rem;
     white-space: nowrap;
 }
-
-/* =========================================================
-   ACCIONES
-   ========================================================= */
 
 /* =========================================================
    ACCIONES DEL POST
@@ -21743,61 +21737,36 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     list-style: none !important;
 }
 
-.dr-topic-actions li:nth-child(1),
-.dr-topic-actions li:nth-child(2),
-.dr-topic-actions li:nth-child(7) {
-    display: none !important;
-}
+.dr-topic-actions li:nth-child(1), .dr-topic-actions li:nth-child(2), .dr-topic-actions li:nth-child(7) {display: none !important;}
 
 .dr-topic-actions li a {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-
     width: auto;
     min-width: 0;
     height: 1.55rem;
-
     margin: 0 !important;
     padding: 0 .45rem;
-
     box-sizing: border-box;
-
     background: color-mix(in srgb, var(--post-background) 85%, transparent) !important;
     border: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-
     color: transparent !important;
     font-size: 0 !important;
     line-height: 1;
-
     text-decoration: none !important;
     white-space: nowrap;
-
     transition: .2s ease;
 }
 
 /* Elimina cualquier contenido nativo interno de ForoActivo */
-.dr-topic-actions li a > * {
-    display: none !important;
-}
-
-.dr-topic-actions li:nth-child(3) a::before {
-    content: "CITAR";
-}
-
-.dr-topic-actions li:nth-child(4) a::before {
-    content: "EDITAR";
-}
-
-.dr-topic-actions li:nth-child(5) a::before {
-    content: "BORRAR";
-}
-
-.dr-topic-actions li:nth-child(6) a::before {
-    content: "IP";
-}
+.dr-topic-actions li a > * {display: none !important;}
+.dr-topic-actions li:nth-child(3) a::before {content: "CITAR";}
+.dr-topic-actions li:nth-child(4) a::before {content: "EDITAR";}
+.dr-topic-actions li:nth-child(5) a::before {content: "BORRAR";}
+.dr-topic-actions li:nth-child(6) a::before {content: "IP";}
 
 .dr-topic-actions li a::before {
     color: var(--text-color);
@@ -21805,9 +21774,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     letter-spacing: .05rem;
 }
 
-.dr-topic-actions li a:hover::before {
-    color: var(--emblema2);
-}
+.dr-topic-actions li a:hover::before {color: var(--emblema2);}
 
 .dr-topic-actions li a:hover {
     border-color: var(--emblema2);
@@ -21815,25 +21782,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 14%, transparent);
 }
 
-.dr-topic-actions li a img {
-    display: none !important;
-}
-
-.dr-topic-actions li:nth-child(3) a::before {
-    content: "CITAR";
-}
-
-.dr-topic-actions li:nth-child(4) a::before {
-    content: "EDITAR";
-}
-
-.dr-topic-actions li:nth-child(5) a::before {
-    content: "BORRAR";
-}
-
-.dr-topic-actions li:nth-child(6) a::before {
-    content: "IP";
-}
+.dr-topic-actions li a img {display: none !important;}
+.dr-topic-actions li:nth-child(3) a::before {content: "CITAR";}
+.dr-topic-actions li:nth-child(4) a::before {content: "EDITAR";}
+.dr-topic-actions li:nth-child(5) a::before {content: "BORRAR";}
+.dr-topic-actions li:nth-child(6) a::before {content: "IP";}
 
 .dr-topic-actions li a::before {
     color: var(--text-color);
@@ -21841,10 +21794,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     letter-spacing: .06rem;
 }
 
-.dr-topic-actions li a:hover::before {
-    color: var(--emblema2);
-}
-
+.dr-topic-actions li a:hover::before {color: var(--emblema2);}
 .dr-topic-actions li a:hover {
     border-color: var(--emblema2);
     background: color-mix(in srgb, var(--emblema2) 8%, var(--post-background));
