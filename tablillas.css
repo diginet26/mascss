@@ -1889,7 +1889,7 @@
    ========================================================== */
 
 #dr-post {
-    --dr-blue: var(--dg-blue, #1677C8);
+    --dr-blue: var(--emblema1, #1677C8);
     --dr-cyan: var(--emblema2, #22c1c3);
     --dr-gold: var(--dg-gold, #f2b705);
     --dr-bg: #080f18;
@@ -2269,96 +2269,6 @@
     font-size: 0.4375rem;
     letter-spacing: 0.125rem;
 }
-
-
-/* ==========================================================
-   FOOTER
-   ========================================================== */
-
-#dr-post .dr-post-footer {
-    display: flex;
-    align-items: center;
-
-    min-height: 3.625rem;
-    padding: 0.625rem 1.25rem;
-
-    background: #0d1722;
-    border-top: 0.0625rem solid rgba(255,255,255,.035);
-}
-
-
-/* icono tag */
-
-#dr-post .dr-footer-icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    flex: 0 0 1.75rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-right: 0.75rem;
-
-    color: #fff;
-
-    background: linear-gradient(
-        135deg,
-        var(--dr-blue),
-        var(--dr-cyan)
-    );
-
-    clip-path: polygon(
-        25% 0,
-        75% 0,
-        100% 25%,
-        100% 75%,
-        75% 100%,
-        25% 100%,
-        0 75%,
-        0 25%
-    );
-
-    font-size: 0.625rem;
-}
-
-#dr-post .dr-footer-label {
-    color: var(--dr-muted);
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.5rem;
-    letter-spacing: 0.0625rem;
-    text-transform: uppercase;
-}
-
-
-/* ==========================================================
-   BADGE INFERIOR
-   ========================================================== */
-
-#dr-post .dr-post-badge {
-    display: table;
-    margin: 0.5rem auto 0;
-    padding: 0.1875rem 0.75rem;
-
-    color: #dce8f2;
-
-    background: linear-gradient(
-        90deg,
-        var(--dr-blue),
-        var(--dr-cyan)
-    );
-
-    border-radius: 0.625rem;
-
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.375rem;
-    font-weight: 700;
-    letter-spacing: 0.0625rem;
-    text-transform: uppercase;
-
-    box-shadow: 0 0 0.625rem rgba(34,193,195,.15);
-}
-
 
 /* ==========================================================
    DECORACIÓN DIGITAL
