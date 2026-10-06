@@ -10073,17 +10073,19 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.35rem;
-    padding: 0 1rem;
+    min-width: 4rem;
+    min-height: 2.2rem;
+    margin: 0 !important;
+    padding: 0 .8rem;
     box-sizing: border-box;
-    border: .06rem solid var(--emblema2);
+    border: .06rem solid var(--emblema1);
     border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), color-mix(in srgb, var(--emblema1) 12%, transparent));
     color: var(--text-color) !important;
-    text-decoration: none !important;
-    font: 700 .58rem/1 "Oxanium", sans-serif;
-    letter-spacing: .09rem;
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .07rem;
     text-transform: uppercase;
+    text-decoration: none !important;
     transition: .25s ease;
 }
 
@@ -10099,9 +10101,10 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 .topic-actions:not(:has(.search-box)) .post-icon a:hover {
-    border-color: var(--emblema1);
+    border-color: var(--emblema2);
     color: var(--emblema2) !important;
-    box-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent));
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
     transform: translateY(-.05rem);
 }
 
@@ -10113,13 +10116,8 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     font-size: 0 !important;
 }
 
-.topic-actions:not(:has(.search-box)) .pagination br {
-    display: none;
-}
-
-.topic-actions:not(:has(.search-box)) .pagination a[href="#top"] {
-    display: none !important;
-}
+.topic-actions:not(:has(.search-box)) .pagination br {display: none;}
+.topic-actions:not(:has(.search-box)) .pagination a[href="#top"] {display: none !important;}
 
 .topic-actions:not(:has(.search-box)) .pagination > a {
     display: inline-flex;
