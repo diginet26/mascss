@@ -2987,7 +2987,7 @@
 }
 
 /* ==========================================================
-   DIGITAL RIFT — RETRATO EXTERIOR DEL PERSONAJE
+   DIGITAL RIFT — RETRATO DIGIMON
    ========================================================== */
 
 .dr-post-wrap {
@@ -2999,7 +2999,7 @@
 
 
 /* ==========================================================
-   CONTENEDOR DEL RETRATO
+   CONTENEDOR
    ========================================================== */
 
 .dr-post-character {
@@ -3022,7 +3022,7 @@
 
 
 /* ==========================================================
-   CÍRCULO EXTERIOR
+   ARO DIGITAL EXTERIOR
    ========================================================== */
 
 .dr-post-character::before {
@@ -3034,15 +3034,54 @@
     height: 8.75rem;
 
     border: 0.0625rem solid rgba(255,255,255,.65);
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    /* segmentos digitales */
+    border-top-color: var(--emblema2);
+    border-right-color: transparent;
+    border-bottom-color: rgba(255,255,255,.45);
+    border-left-color: transparent;
+
+    box-shadow:
+        0 0 0.375rem rgba(34,193,195,.25),
+        inset 0 0 0.375rem rgba(34,193,195,.08);
+
+    transform: rotate(-25deg);
+}
+
+
+/* ==========================================================
+   ARO DIGITAL INTERMEDIO
+   ========================================================== */
+
+.dr-post-character::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7.25rem;
+    height: 7.25rem;
 
     border-radius: 50%;
 
     box-sizing: border-box;
+
+    border: 0.0625rem dashed rgba(255,255,255,.28);
+
+    box-shadow:
+        0 0 0.5rem rgba(34,193,195,.12);
+
+    transform: rotate(35deg);
 }
 
 
-/* segundo aro */
-.dr-post-character::after {
+/* ==========================================================
+   ANILLO TECNOLÓGICO ADICIONAL
+   ========================================================== */
+
+.dr-post-character-ring::before {
     content: "";
 
     position: absolute;
@@ -3050,16 +3089,58 @@
     width: 6.75rem;
     height: 6.75rem;
 
-    border: 0.0625rem solid rgba(255,255,255,.18);
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 
     border-radius: 50%;
 
-    box-sizing: border-box;
+    border: 0.0625rem solid transparent;
+
+    border-top-color: var(--emblema2);
+    border-bottom-color: var(--emblema1);
+
+    box-shadow:
+        0 0 0.5rem rgba(34,193,195,.25);
+
+    pointer-events: none;
 }
 
 
 /* ==========================================================
-   IMAGEN DEL PERSONAJE
+   MARCAS DIGITALES
+   ========================================================== */
+
+.dr-post-character-ring::after {
+    content: "+  //  01  //  +";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -1.25rem;
+
+    transform: translateX(-50%);
+
+    width: 7rem;
+
+    color: var(--emblema2);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.375rem;
+    font-weight: 700;
+
+    letter-spacing: 0.125rem;
+    text-align: center;
+
+    white-space: nowrap;
+
+    opacity: .75;
+}
+
+
+/* ==========================================================
+   CÍRCULO DE LA IMAGEN
    ========================================================== */
 
 .dr-post-character-ring {
@@ -3068,23 +3149,38 @@
     width: 5.75rem;
     height: 5.75rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 50%;
 
     padding: 0.1875rem;
 
-    background: var(--emblema2);
+    background:
+        linear-gradient(
+            135deg,
+            var(--emblema2),
+            var(--emblema1)
+        );
 
     box-sizing: border-box;
 
-    z-index: 2;
+    z-index: 3;
 
     box-shadow:
-        0 0 0.625rem rgba(0,0,0,.55),
-        0 0 1.25rem color-mix(in srgb, var(--emblema2) 25%, transparent);
+        0 0 0.625rem rgba(0,0,0,.65),
+        0 0 1rem color-mix(
+            in srgb,
+            var(--emblema2) 30%,
+            transparent
+        );
 }
 
 
-/* imagen */
+/* ==========================================================
+   IMAGEN
+   ========================================================== */
 
 .dr-post-character-ring img {
     display: block;
@@ -3099,11 +3195,46 @@
     border: 0.1875rem solid #080f18;
 
     box-sizing: border-box;
+
+    background: #080f18;
 }
 
 
 /* ==========================================================
-   ADAPTACIÓN DE LA TABLILLA
+   PEQUEÑOS NODOS DIGITALES
+   ========================================================== */
+
+.dr-post-character {
+    background:
+        radial-gradient(
+            circle at 50% 5%,
+            var(--emblema2) 0,
+            var(--emblema2) 0.125rem,
+            transparent 0.1875rem
+        ),
+        radial-gradient(
+            circle at 95% 50%,
+            var(--emblema1) 0,
+            var(--emblema1) 0.125rem,
+            transparent 0.1875rem
+        ),
+        radial-gradient(
+            circle at 50% 95%,
+            var(--emblema2) 0,
+            var(--emblema2) 0.125rem,
+            transparent 0.1875rem
+        ),
+        radial-gradient(
+            circle at 5% 50%,
+            var(--emblema1) 0,
+            var(--emblema1) 0.125rem,
+            transparent 0.1875rem
+        );
+}
+
+
+/* ==========================================================
+   AJUSTE TABLILLA
    ========================================================== */
 
 .dr-post-wrap #dr-post {
@@ -3135,13 +3266,18 @@
     }
 
     .dr-post-character::after {
-        width: 4.75rem;
-        height: 4.75rem;
+        width: 5.25rem;
+        height: 5.25rem;
     }
 
     .dr-post-character-ring {
         width: 4.25rem;
         height: 4.25rem;
+    }
+
+    .dr-post-character-ring::before {
+        width: 5rem;
+        height: 5rem;
     }
 
 }
@@ -3163,7 +3299,8 @@
     }
 
     .dr-post-character::after {
-        display: none;
+        width: 4.5rem;
+        height: 4.5rem;
     }
 
     .dr-post-character-ring {
@@ -3171,4 +3308,15 @@
         height: 3.5rem;
     }
 
+    .dr-post-character-ring::before {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+
+    .dr-post-character-ring::after {
+        display: none;
+    }
+
 }
+
+
