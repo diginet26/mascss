@@ -3196,7 +3196,7 @@
    ========================================================== */
 
 .dr-post-character-ring::after {
-    content: "+  //  01  //  +";
+    content: "";
 
     position: absolute;
 
