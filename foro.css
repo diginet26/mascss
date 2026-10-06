@@ -21496,7 +21496,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 /* =========================================================
    CABECERA
    ========================================================= */
-
 .dr-topic-header {
     position: relative;
     display: grid;
@@ -21507,22 +21506,14 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background:
-        linear-gradient(
-            110deg,
-            color-mix(in srgb, var(--emblema2) 5%, transparent),
-            transparent 42%,
-            color-mix(in srgb, var(--emblema1) 4%, transparent)
-        ),
-        var(--post-background);
-    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent);
+    background: linear-gradient(110deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 42%, color-mix(in srgb, var(--emblema1) 4%, transparent)), var(--post-background);
+    border-bottom: .06rem solid color-mix(in srgb, var(--dg-group) 22%, transparent);
     overflow: hidden;
 }
 
 /* =========================================================
    IDENTIDAD
    ========================================================= */
-
 .dr-topic-header-main {
     grid-column: 1;
     grid-row: 1;
@@ -21560,18 +21551,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     text-transform: uppercase;
 }
 
-.dr-topic-accent {
-    width: 3.2rem;
-    height: .12rem;
-    margin: .5rem 0 .55rem;
-    background: var(--emblema2);
-    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 30%, transparent);
-}
+.dr-topic-accent {display: none !important;}/*SIN SUBRAYADO BAJO EL NOMBRE*/
 
 /* =========================================================
    ESTADÍSTICAS
    ========================================================= */
-
 .dr-topic-stats {
     display: flex;
     align-items: center;
@@ -21603,138 +21587,62 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 
 .dr-topic-digimon {
     position: relative;
-
     grid-column: 2;
     grid-row: 1 / span 2;
-
     width: 10rem;
     height: 9rem;
     min-width: 10rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     align-self: center;
     justify-self: end;
     margin-right: 0;
-
     overflow: visible;
     box-sizing: border-box;
-
     background: var(--theme-panel-deep);
-
     border: .08rem solid var(--emblema2);
-
-    box-shadow:
-        0 0 0 .05rem var(--emblema1),
-        0 0 .8rem color-mix(
-            in srgb,
-            var(--emblema2) 18%,
-            transparent
-        );
-
+    box-shadow: 0 0 0 .05rem var(--emblema1), 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
     z-index: 9;
 }
 
 /* =========================================================
    GRUPO DE PÍXELES — LATERAL IZQUIERDO
    ========================================================= */
-
 .dr-topic-digimon::before {
     content: "";
     position: absolute;
-
     left: -2.65rem;
     top: 1.15rem;
-
     width: .38rem;
     height: .38rem;
-
-    background: var(--emblema2);
-
-    box-shadow:
-        .52rem -.42rem 0 color-mix(
-            in srgb,
-            var(--emblema2) 72%,
-            var(--emblema1)
-        ),
-        .95rem .12rem 0 color-mix(
-            in srgb,
-            var(--emblema2) 48%,
-            var(--emblema1)
-        ),
-        .42rem .72rem 0 var(--emblema2),
-        1.18rem .98rem 0 color-mix(
-            in srgb,
-            var(--emblema2) 82%,
-            var(--emblema1)
-        ),
-        .02rem 1.3rem 0 color-mix(
-            in srgb,
-            var(--emblema2) 58%,
-            var(--emblema1)
-        );
-
+    background: var(--dg-group);
+    box-shadow: .52rem -.42rem 0 color-mix(in srgb, var(--dg-group) 72%, white),.95rem .12rem 0 color-mix(in srgb, var(--dg-group) 48%, white), .42rem .72rem 0 var(--dg-group), 1.18rem .98rem 0 color-mix(in srgb, var(--dg-group) 82%, white), .02rem 1.3rem 0 color-mix(in srgb, var(--dg-group) 58%, white);
     opacity: .85;
-
-    box-shadow:
-        .52rem -.42rem 0 color-mix(in srgb, var(--emblema2) 72%, var(--emblema1)),
-        .95rem .12rem 0 color-mix(in srgb, var(--emblema2) 48%, var(--emblema1)),
-        .42rem .72rem 0 var(--emblema2),
-        1.18rem .98rem 0 color-mix(in srgb, var(--emblema2) 82%, var(--emblema1)),
-        .02rem 1.3rem 0 color-mix(in srgb, var(--emblema2) 58%, var(--emblema1));
-
     pointer-events: none;
-
     animation: dr-topic-pixels-a 4s ease-in-out infinite;
 }
 
 /* =========================================================
    PÍXELES SECUNDARIOS
    ========================================================= */
-
 .dr-topic-digimon::after {
     content: "";
     position: absolute;
-
     left: -1.55rem;
     top: 2.65rem;
-
     width: .25rem;
     height: .25rem;
-
-    background: color-mix(
-        in srgb,
-        var(--emblema2) 55%,
-        var(--emblema1)
-    );
-
-    box-shadow:
-        -.55rem .18rem 0 var(--emblema2),
-        .32rem .62rem 0 color-mix(
-            in srgb,
-            var(--emblema2) 70%,
-            var(--emblema1)
-        ),
-        .92rem -.5rem 0 var(--emblema2),
-        1.38rem .35rem 0 color-mix(
-            in srgb,
-            var(--emblema2) 42%,
-            var(--emblema1)
-        );
-
+    background: color-mix(in srgb, var(--dg-group) 55%, white);
+    box-shadow: -.55rem .18rem 0 var(--dg-group), .32rem .62rem 0 color-mix(in srgb, var(--dg-group) 70%, white), .92rem -.5rem 0 var(--dg-group), 1.38rem .35rem 0 color-mix(in srgb, var(--dg-group) 42%, white);
     opacity: .72;
-
     pointer-events: none;
-
     animation: dr-topic-pixels-b 4.5s ease-in-out infinite;
 }
 
 /* =========================================================
    ANIMACIÓN — PÍXELES
    ========================================================= */
-
 @keyframes dr-topic-pixels-a {
     0%, 100% {
         transform: translate(0, 0);
@@ -21766,15 +21674,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-digimon img {
     position: relative;
     z-index: 1;
-
     display: block;
-
     width: 100% !important;
     height: 100% !important;
-
     max-width: none !important;
     max-height: none !important;
-
     object-fit: cover;
 }
 /* =========================================================
@@ -21793,7 +21697,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: 0 .8rem 0 0;
     box-sizing: border-box;
     background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 8%, transparent), transparent 50%), var(--theme-panel-deep);
-    border-top: .06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
+    border-top: .06rem solid var(--dg-group);
 }
 
 .dr-topic-meta-left {
@@ -21813,7 +21717,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     justify-content: center;
     margin: 0;
     box-sizing: border-box;
-    color: var(--emblema2);
+    color: var(--dg-group);
     text-decoration: none !important;
     transition: color .2s ease, background .2s ease, border-color .2s ease, text-shadow .2s ease;
 }
@@ -21827,10 +21731,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-permalink:hover {
-    color: var(--emblema1);
-    border-color: var(--emblema1);
-    text-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema1) 35%, transparent);
+    color: var(--dg-group);
+    border-color: var(--dg-group);
+    text-shadow: 0 0 .6rem color-mix(in srgb, var(--dg-group) 35%, transparent);
 }
+
 .dr-topic-date {
     min-width: 0;
     color: color-mix(in srgb, var(--text-color) 55%, transparent);
@@ -21882,7 +21787,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: 0 .45rem;
     box-sizing: border-box;
     background: color-mix(in srgb, var(--post-background) 85%, transparent) !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
+    border: .06rem solid color-mix(in srgb, var(--dg-group) 45%, transparent) !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     color: transparent !important;
@@ -21909,9 +21814,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-actions li a:hover::before {color: var(--emblema2);}
 
 .dr-topic-actions li a:hover {
-    border-color: var(--emblema2);
-    background: color-mix(in srgb, var(--emblema2) 8%, var(--post-background));
-    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 14%, transparent);
+    border-color: var(--dg-group) !important;
+    background: color-mix(in srgb, var(--dg-group) 8%, var(--post-background)) !important;
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--dg-group) 20%, transparent);
 }
 
 .dr-topic-actions li a img {display: none !important;}
