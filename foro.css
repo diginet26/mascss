@@ -20802,13 +20802,12 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     padding: 0 .8rem !important;
     box-sizing: border-box;
     border: .06rem solid var(--emblema1) !important;
-    border-radius: .35rem;
-    background:
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--emblema2) 10%, transparent),
-            color-mix(in srgb, var(--emblema1) 12%, transparent)
-        ) !important;
+    border-radius: .35rem !important;
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 10%, transparent),
+        color-mix(in srgb, var(--emblema1) 12%, transparent)
+    ) !important;
     color: var(--text-color) !important;
     font: 700 .55rem/1 "Oxanium", monospace !important;
     letter-spacing: .07rem;
@@ -20822,12 +20821,15 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
    ========================================================= */
 
 .topic-actions:not(:has(.search-box)) .buttons > a:first-child {
+    min-width: 0;
+    min-height: 0;
     padding: 0 !important;
-    background: transparent !important;
     border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
-/* El botón real de ForoActivo */
+/* Botón real de ForoActivo */
 .topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton {
     display: inline-flex !important;
     align-items: center;
@@ -20838,26 +20840,26 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     padding: 0 .8rem !important;
     box-sizing: border-box;
     border: .06rem solid var(--emblema1) !important;
-    border-radius: .35rem;
-    background:
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--emblema2) 10%, transparent),
-            color-mix(in srgb, var(--emblema1) 12%, transparent)
-        ) !important;
+    border-radius: .35rem !important;
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 10%, transparent),
+        color-mix(in srgb, var(--emblema1) 12%, transparent)
+    ) !important;
     color: var(--text-color) !important;
     font: 700 .55rem/1 "Oxanium", monospace !important;
     letter-spacing: .07rem;
     text-transform: uppercase;
+    text-decoration: none !important;
     transition: .25s ease;
 }
 
-/* Ocultamos la imagen nativa */
+/* Ocultar imagen nativa */
 .topic-actions:not(:has(.search-box)) .buttons > a:first-child img {
     display: none !important;
 }
 
-/* El + de Publicar */
+/* Símbolo + */
 .topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton::before {
     content: "+";
     margin-right: .4rem;
@@ -20870,12 +20872,17 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
    ========================================================= */
 
 .topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"] {
+    min-width: 4rem;
+    min-height: 2.2rem;
     padding: 0 .8rem !important;
 }
 
-/* El enlace de responder está vacío */
+/* El enlace está vacío */
 .topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"]::before {
     content: "RESPONDER AL TEMA";
+    color: var(--text-color);
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .07rem;
 }
 
 /* =========================================================
@@ -20886,15 +20893,18 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 .topic-actions:not(:has(.search-box)) .buttons > a:hover .rtopicbutton {
     border-color: var(--emblema2) !important;
     color: var(--emblema2) !important;
-    background:
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--emblema2) 16%, transparent),
-            color-mix(in srgb, var(--emblema1) 16%, transparent)
-        ) !important;
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 16%, transparent),
+        color-mix(in srgb, var(--emblema1) 16%, transparent)
+    ) !important;
     box-shadow:
         0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
     transform: translateY(-.05rem);
+}
+
+.topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"]:hover::before {
+    color: var(--emblema2);
 }
 
 /* =========================================================
