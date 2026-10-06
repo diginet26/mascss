@@ -21675,9 +21675,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-permalink {
-    flex: 0 0 2.4rem;
+    flex: 0 0 3.4rem;
     width: 2.4rem;
-    height: 2.4rem;
+    height: 3.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21685,6 +21685,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     text-decoration: none !important;
     box-sizing: border-box;
     transition: color .2s ease, text-shadow .2s ease;
+    margin-left: -1.2rem;
+    border: 3px solid var(--emblema2);
 }
 
 .dr-topic-permalink::before {
