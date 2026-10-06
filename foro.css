@@ -20766,7 +20766,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
         inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
 }
 
-.topic-actions:not(:has(.search-box))::before {
+/*.topic-actions:not(:has(.search-box))::before {
     content: "SYSTEM / TOPIC CONTROL";
     position: absolute;
     top: .45rem;
@@ -20775,7 +20775,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     font: 700 .45rem/1 "Roboto Mono", monospace;
     letter-spacing: .14rem;
     text-transform: uppercase;
-}
+}*/
 
 /* =========================================================
    BOTONES PUBLICAR / RESPONDER
@@ -20789,77 +20789,74 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 /* ---------------------------------------------------------
-   BASE COMÚN
+   ENLACES CONTENEDORES
    --------------------------------------------------------- */
 
 .topic-actions:not(:has(.search-box)) .buttons > a {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    min-width: 4rem;
-    min-height: 2.2rem;
-    margin: 0 !important;
-    padding: 0 .8rem !important;
-    box-sizing: border-box;
-    border: .06rem solid var(--emblema1) !important;
-    border-radius: .35rem !important;
-    background: linear-gradient(
-        135deg,
-        color-mix(in srgb, var(--emblema2) 10%, transparent),
-        color-mix(in srgb, var(--emblema1) 12%, transparent)
-    ) !important;
-    color: var(--text-color) !important;
-    font: 700 .55rem/1 "Oxanium", monospace !important;
-    letter-spacing: .07rem;
-    text-transform: uppercase;
-    text-decoration: none !important;
-    transition: .25s ease;
-}
-
-/* =========================================================
-   PUBLICAR NUEVO TEMA
-   ========================================================= */
-
-.topic-actions:not(:has(.search-box)) .buttons > a:first-child {
     min-width: 0;
     min-height: 0;
+    margin: 0 !important;
     padding: 0 !important;
-    border: 0 !important;
+    box-sizing: border-box;
     background: transparent !important;
+    border: 0 !important;
     box-shadow: none !important;
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
-/* Botón real de ForoActivo */
-.topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton {
+/* ---------------------------------------------------------
+   BOTÓN REAL — PUBLICAR / RESPONDER
+   --------------------------------------------------------- */
+
+.topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+
     min-width: 4rem;
     min-height: 2.2rem;
+
     margin: 0 !important;
     padding: 0 .8rem !important;
+
     box-sizing: border-box;
+
     border: .06rem solid var(--emblema1) !important;
     border-radius: .35rem !important;
+
     background: linear-gradient(
         135deg,
         color-mix(in srgb, var(--emblema2) 10%, transparent),
         color-mix(in srgb, var(--emblema1) 12%, transparent)
     ) !important;
+
     color: var(--text-color) !important;
+
     font: 700 .55rem/1 "Oxanium", monospace !important;
     letter-spacing: .07rem;
+
     text-transform: uppercase;
     text-decoration: none !important;
+
     transition: .25s ease;
 }
 
-/* Ocultar imagen nativa */
-.topic-actions:not(:has(.search-box)) .buttons > a:first-child img {
+/* ---------------------------------------------------------
+   OCULTAR IMÁGENES NATIVAS
+   --------------------------------------------------------- */
+
+.topic-actions:not(:has(.search-box)) .buttons > a img {
     display: none !important;
 }
 
-/* Símbolo + */
+/* ---------------------------------------------------------
+   SÍMBOLO + SOLO EN PUBLICAR
+   --------------------------------------------------------- */
+
 .topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton::before {
     content: "+";
     margin-right: .4rem;
@@ -20868,43 +20865,28 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 /* =========================================================
-   RESPONDER AL TEMA
-   ========================================================= */
-
-.topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"] {
-    min-width: 4rem;
-    min-height: 2.2rem;
-    padding: 0 .8rem !important;
-}
-
-/* El enlace está vacío */
-.topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"]::before {
-    content: "RESPONDER AL TEMA";
-    color: var(--text-color);
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .07rem;
-}
-
-/* =========================================================
    HOVER
    ========================================================= */
 
-.topic-actions:not(:has(.search-box)) .buttons > a:hover,
-.topic-actions:not(:has(.search-box)) .buttons > a:hover .rtopicbutton {
+.topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton:hover {
     border-color: var(--emblema2) !important;
+
     color: var(--emblema2) !important;
+
     background: linear-gradient(
         135deg,
         color-mix(in srgb, var(--emblema2) 16%, transparent),
         color-mix(in srgb, var(--emblema1) 16%, transparent)
     ) !important;
-    box-shadow:
-        0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
-    transform: translateY(-.05rem);
-}
 
-.topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"]:hover::before {
-    color: var(--emblema2);
+    box-shadow:
+        0 0 .7rem color-mix(
+            in srgb,
+            var(--emblema1) 20%,
+            transparent
+        );
+
+    transform: translateY(-.05rem);
 }
 
 /* =========================================================
