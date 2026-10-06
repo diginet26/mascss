@@ -22281,3 +22281,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 #content-container div#main {
     overflow: unset !important;
 }
+
+.topic-actions:not(:has(.search-box)) .pagination a[href^="javascript:showhide"] {
+    display: none !important;
+}
