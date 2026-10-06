@@ -9827,27 +9827,10 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 /* =========================================================
    BOTÓN MÁS
    ========================================================= */
-.forum-top-actions a[href^="javascript:showhide"] {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    min-width: 4rem;
-    min-height: 2.2rem;
-    margin: 0 !important;
-    padding: 0 .8rem !important;
-    box-sizing: border-box;
-    border: .06rem solid var(--emblema1) !important;
-    border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), color-mix(in srgb, var(--emblema1) 12%, transparent)) !important;
-    color: transparent !important;
-    font-size: 0 !important;
-    text-decoration: none !important;
-    transition: .25s ease;
-}
-
+.forum-top-actions a[href^="javascript:showhide"] {display: none !important;}
 .forum-top-actions a[href^="javascript:showhide"] img {display: none !important;}
 
-.forum-top-actions a[href^="javascript:showhide"]::before {
+/*.forum-top-actions a[href^="javascript:showhide"]::before {
     content: "¡MÁS!";
     color: var(--text-color);
     font: 700 .55rem/1 "Oxanium", monospace;
@@ -9862,7 +9845,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 .forum-top-actions a[href^="javascript:showhide"]:hover::before {color: var(--emblema2);}
-.forum-top-actions a:empty, .forum-top-actions span:empty, .forum-top-actions div:empty {display: none !important;}
+.forum-top-actions a:empty, .forum-top-actions span:empty, .forum-top-actions div:empty {display: none !important;}*/
 
 /* =========================================================
    PANEL SUPERIOR
