@@ -2985,3 +2985,190 @@
 .dg-core-footer b {
     color: var(--emblema2);
 }
+
+/* ==========================================================
+   DIGITAL RIFT — RETRATO EXTERIOR DEL PERSONAJE
+   ========================================================== */
+
+.dr-post-wrap {
+    position: relative;
+    width: 42.5rem;
+    max-width: calc(100% - 1.875rem);
+    margin: 2.1875rem auto;
+}
+
+
+/* ==========================================================
+   CONTENEDOR DEL RETRATO
+   ========================================================== */
+
+.dr-post-character {
+    position: absolute;
+
+    left: -5.625rem;
+    top: -3.125rem;
+
+    width: 10rem;
+    height: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   CÍRCULO EXTERIOR
+   ========================================================== */
+
+.dr-post-character::before {
+    content: "";
+
+    position: absolute;
+
+    width: 8.75rem;
+    height: 8.75rem;
+
+    border: 0.0625rem solid rgba(255,255,255,.65);
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+
+/* segundo aro */
+.dr-post-character::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6.75rem;
+    height: 6.75rem;
+
+    border: 0.0625rem solid rgba(255,255,255,.18);
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   IMAGEN DEL PERSONAJE
+   ========================================================== */
+
+.dr-post-character-ring {
+    position: relative;
+
+    width: 5.75rem;
+    height: 5.75rem;
+
+    border-radius: 50%;
+
+    padding: 0.1875rem;
+
+    background: var(--emblema2);
+
+    box-sizing: border-box;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 0.625rem rgba(0,0,0,.55),
+        0 0 1.25rem color-mix(in srgb, var(--emblema2) 25%, transparent);
+}
+
+
+/* imagen */
+
+.dr-post-character-ring img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 0.1875rem solid #080f18;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   ADAPTACIÓN DE LA TABLILLA
+   ========================================================== */
+
+.dr-post-wrap #dr-post {
+    margin: 0;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 43.75rem) {
+
+    .dr-post-wrap {
+        width: calc(100% - 1.25rem);
+    }
+
+    .dr-post-character {
+        left: -2rem;
+        top: -2.75rem;
+
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .dr-post-character::before {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+
+    .dr-post-character::after {
+        width: 4.75rem;
+        height: 4.75rem;
+    }
+
+    .dr-post-character-ring {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+
+}
+
+
+@media (max-width: 30rem) {
+
+    .dr-post-character {
+        left: -1rem;
+        top: -2.25rem;
+
+        width: 5.75rem;
+        height: 5.75rem;
+    }
+
+    .dr-post-character::before {
+        width: 5.25rem;
+        height: 5.25rem;
+    }
+
+    .dr-post-character::after {
+        display: none;
+    }
+
+    .dr-post-character-ring {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+}
