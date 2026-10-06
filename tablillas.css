@@ -2028,34 +2028,6 @@
 
 
 /* ==========================================================
-   POST NUMBER
-   ========================================================== */
-
-#dr-post .dr-post-number {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5625rem;
-    margin-bottom: 1.125rem;
-
-    color: var(--dr-muted);
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 0.125rem;
-    text-transform: uppercase;
-}
-
-#dr-post .dr-post-number::after {
-    content: "";
-    width: 2rem;
-    height: 0.0625rem;
-    background: var(--dr-cyan);
-    opacity: .55;
-}
-
-
-/* ==========================================================
    ICONO SUPERIOR DERECHO
    ========================================================== */
 
@@ -2096,11 +2068,11 @@
     margin: 0;
 
     color: #fff;
-    font-family: "Player Sans", "Arial Narrow", sans-serif;
-    font-size: 2.125rem;
+    font-family: "Jersey 15";
+    font-size: 3rem;
     font-weight: 900;
-    line-height: .98;
-    letter-spacing: 0.125rem;
+    line-height: 1;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
 
@@ -2120,19 +2092,6 @@
 }
 
 
-/* subtítulo */
-
-#dr-post .dr-post-subtitle {
-    position: relative;
-    margin-top: 0.5625rem;
-
-    color: var(--dr-muted);
-    font-size: 0.5rem;
-    letter-spacing: 0.1875rem;
-    text-transform: uppercase;
-}
-
-
 /* ==========================================================
    BOTONES / TAGS
    ========================================================== */
@@ -2142,7 +2101,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1.375rem;
 }
 
 #dr-post .dr-post-tab {
@@ -2195,79 +2153,12 @@
 
 
 /* ==========================================================
-   PÁRRAFOS
-   ========================================================== */
-
-#dr-post .dr-post-body p {
-    margin: 0 0 1.1875rem;
-
-    color: #aebdca;
-    font-family: "Oxanium", sans-serif;
-    font-size: 0.6875rem;
-    line-height: 2;
-    text-align: justify;
-}
-
-#dr-post .dr-post-body p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ==========================================================
    ÉNFASIS
    ========================================================== */
 
 #dr-post .dr-post-body strong {
-    color: #fff;
+    color: var(--dg-group);
     font-weight: 700;
-}
-
-#dr-post .dr-post-body em {
-    color: var(--dr-cyan);
-    font-style: italic;
-}
-
-#dr-post .dr-highlight {
-    color: var(--dr-blue);
-    font-weight: 700;
-}
-
-#dr-post .dr-highlight2 {
-    color: var(--dr-cyan);
-    font-weight: 700;
-}
-
-
-/* ==========================================================
-   CITA / TEXTO DESTACADO
-   ========================================================== */
-
-#dr-post .dr-post-quote {
-    position: relative;
-    margin: 1.5625rem 0;
-    padding: 0.875rem 1.125rem 0.875rem 1.25rem;
-
-    background: linear-gradient(
-        90deg,
-        rgba(22,119,200,.12),
-        transparent
-    );
-
-    border-left: 0.125rem solid var(--dr-blue);
-    color: #b8c7d4;
-    font-size: 0.625rem;
-    line-height: 1.8;
-}
-
-#dr-post .dr-post-quote::before {
-    content: "SYSTEM // DATA";
-    display: block;
-    margin-bottom: 0.3125rem;
-
-    color: var(--dr-cyan);
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.4375rem;
-    letter-spacing: 0.125rem;
 }
 
 /* ==========================================================
