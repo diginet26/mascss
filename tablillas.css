@@ -1882,3 +1882,564 @@
     }
 
 }
+
+
+/* ==========================================================
+   DIGITAL RIFT — POST / TABLILLA DE ROL
+   ========================================================== */
+
+#dr-post {
+    --dr-blue: var(--dg-blue, #1677C8);
+    --dr-cyan: var(--emblema2, #22c1c3);
+    --dr-gold: var(--dg-gold, #f2b705);
+    --dr-bg: #080f18;
+    --dr-panel: #0d1722;
+    --dr-panel2: #111f2d;
+    --dr-line: rgba(34,193,195,.22);
+    --dr-text: #dce8f2;
+    --dr-muted: #7f95a8;
+
+    width: 42.5rem;
+    max-width: calc(100% - 1.875rem);
+    margin: 2.1875rem auto;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        rgba(8,15,24,.98),
+        rgba(10,20,30,.96)
+    );
+
+    border: 0.0625rem solid var(--dr-line);
+    color: var(--dr-text);
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.8;
+    text-align: left;
+
+    box-shadow:
+        0 0 2.1875rem rgba(0,0,0,.45),
+        inset 0 0 2.5rem rgba(22,119,200,.035);
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   DECORACIÓN GENERAL
+   ========================================================== */
+
+#dr-post *,
+#dr-post *::before,
+#dr-post *::after {
+    box-sizing: border-box;
+}
+
+
+/* línea superior */
+
+#dr-post::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11.25rem;
+    height: 0.125rem;
+    background: var(--dr-cyan);
+    box-shadow: 0 0 0.625rem rgba(34,193,195,.45);
+    z-index: 5;
+}
+
+
+/* línea lateral */
+
+#dr-post::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7.5rem;
+    width: 0.125rem;
+    height: 8.125rem;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--dr-blue),
+        transparent
+    );
+
+    opacity: .65;
+    z-index: 5;
+}
+
+
+/* ==========================================================
+   CABECERA
+   ========================================================== */
+
+#dr-post .dr-post-header {
+    position: relative;
+    min-height: 11.875rem;
+    padding: 1.75rem 2.125rem 1.5625rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,119,200,.10),
+            transparent 45%
+        ),
+        linear-gradient(
+            90deg,
+            #0a141e,
+            #0c1721
+        );
+
+    border-bottom: 0.0625rem solid rgba(255,255,255,.035);
+    overflow: hidden;
+}
+
+
+/* rejilla tecnológica */
+
+#dr-post .dr-post-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 49%,
+            rgba(34,193,195,.035) 50%,
+            transparent 51%
+        ),
+        linear-gradient(
+            0deg,
+            transparent 49%,
+            rgba(34,193,195,.025) 50%,
+            transparent 51%
+        );
+
+    background-size: 2.375rem 2.375rem;
+    opacity: .35;
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   POST NUMBER
+   ========================================================== */
+
+#dr-post .dr-post-number {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5625rem;
+    margin-bottom: 1.125rem;
+
+    color: var(--dr-muted);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+#dr-post .dr-post-number::after {
+    content: "";
+    width: 2rem;
+    height: 0.0625rem;
+    background: var(--dr-cyan);
+    opacity: .55;
+}
+
+
+/* ==========================================================
+   ICONO SUPERIOR DERECHO
+   ========================================================== */
+
+#dr-post .dr-post-icon {
+    position: absolute;
+    top: 1.5625rem;
+    right: 1.75rem;
+
+    width: 1.875rem;
+    height: 1.875rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0.0625rem solid rgba(34,193,195,.35);
+    color: var(--dr-cyan);
+    background: rgba(8,15,24,.7);
+
+    transform: rotate(45deg);
+
+    box-shadow: 0 0 0.75rem rgba(34,193,195,.08);
+}
+
+#dr-post .dr-post-icon i {
+    transform: rotate(-45deg);
+    font-size: 0.6875rem;
+}
+
+
+/* ==========================================================
+   TÍTULO
+   ========================================================== */
+
+#dr-post .dr-post-title {
+    position: relative;
+    max-width: 31.875rem;
+    margin: 0;
+
+    color: #fff;
+    font-family: "Player Sans", "Arial Narrow", sans-serif;
+    font-size: 2.125rem;
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+
+/* degradado del título */
+
+#dr-post .dr-post-title span {
+    background: linear-gradient(
+        90deg,
+        var(--dr-blue),
+        var(--dr-cyan)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* subtítulo */
+
+#dr-post .dr-post-subtitle {
+    position: relative;
+    margin-top: 0.5625rem;
+
+    color: var(--dr-muted);
+    font-size: 0.5rem;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   BOTONES / TAGS
+   ========================================================== */
+
+#dr-post .dr-post-tabs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.375rem;
+}
+
+#dr-post .dr-post-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    padding: 0.1875rem 0.625rem;
+
+    color: var(--dr-cyan);
+    background: rgba(22,119,200,.09);
+    border: 0.0625rem solid rgba(34,193,195,.24);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    font-weight: 700;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+#dr-post .dr-post-tab i {
+    color: var(--dr-blue);
+    font-size: 0.4375rem;
+}
+
+#dr-post .dr-post-tab:hover {
+    color: #fff;
+    background: rgba(34,193,195,.10);
+    border-color: var(--dr-cyan);
+    box-shadow: 0 0 0.625rem rgba(34,193,195,.10);
+}
+
+
+/* ==========================================================
+   CUERPO
+   ========================================================== */
+
+#dr-post .dr-post-body {
+    padding: 1.875rem 2.875rem 2.1875rem;
+
+    background: linear-gradient(
+        180deg,
+        rgba(9,17,24,.96),
+        rgba(8,15,22,.98)
+    );
+}
+
+
+/* ==========================================================
+   PÁRRAFOS
+   ========================================================== */
+
+#dr-post .dr-post-body p {
+    margin: 0 0 1.1875rem;
+
+    color: #aebdca;
+    font-family: "Oxanium", sans-serif;
+    font-size: 0.6875rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+#dr-post .dr-post-body p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   ÉNFASIS
+   ========================================================== */
+
+#dr-post .dr-post-body strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+#dr-post .dr-post-body em {
+    color: var(--dr-cyan);
+    font-style: italic;
+}
+
+#dr-post .dr-highlight {
+    color: var(--dr-blue);
+    font-weight: 700;
+}
+
+#dr-post .dr-highlight2 {
+    color: var(--dr-cyan);
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   CITA / TEXTO DESTACADO
+   ========================================================== */
+
+#dr-post .dr-post-quote {
+    position: relative;
+    margin: 1.5625rem 0;
+    padding: 0.875rem 1.125rem 0.875rem 1.25rem;
+
+    background: linear-gradient(
+        90deg,
+        rgba(22,119,200,.12),
+        transparent
+    );
+
+    border-left: 0.125rem solid var(--dr-blue);
+    color: #b8c7d4;
+    font-size: 0.625rem;
+    line-height: 1.8;
+}
+
+#dr-post .dr-post-quote::before {
+    content: "SYSTEM // DATA";
+    display: block;
+    margin-bottom: 0.3125rem;
+
+    color: var(--dr-cyan);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.125rem;
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+#dr-post .dr-post-footer {
+    display: flex;
+    align-items: center;
+
+    min-height: 3.625rem;
+    padding: 0.625rem 1.25rem;
+
+    background: #0d1722;
+    border-top: 0.0625rem solid rgba(255,255,255,.035);
+}
+
+
+/* icono tag */
+
+#dr-post .dr-footer-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex: 0 0 1.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 0.75rem;
+
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        var(--dr-blue),
+        var(--dr-cyan)
+    );
+
+    clip-path: polygon(
+        25% 0,
+        75% 0,
+        100% 25%,
+        100% 75%,
+        75% 100%,
+        25% 100%,
+        0 75%,
+        0 25%
+    );
+
+    font-size: 0.625rem;
+}
+
+#dr-post .dr-footer-label {
+    color: var(--dr-muted);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   BADGE INFERIOR
+   ========================================================== */
+
+#dr-post .dr-post-badge {
+    display: table;
+    margin: 0.5rem auto 0;
+    padding: 0.1875rem 0.75rem;
+
+    color: #dce8f2;
+
+    background: linear-gradient(
+        90deg,
+        var(--dr-blue),
+        var(--dr-cyan)
+    );
+
+    border-radius: 0.625rem;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.375rem;
+    font-weight: 700;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+
+    box-shadow: 0 0 0.625rem rgba(34,193,195,.15);
+}
+
+
+/* ==========================================================
+   DECORACIÓN DIGITAL
+   ========================================================== */
+
+#dr-post .dr-pixel {
+    position: absolute;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    background: var(--dr-cyan);
+    opacity: .35;
+}
+
+#dr-post .dr-pixel-1 {
+    right: 1rem;
+    bottom: 4.375rem;
+}
+
+#dr-post .dr-pixel-2 {
+    right: 1.625rem;
+    bottom: 5.125rem;
+    opacity: .18;
+}
+
+#dr-post .dr-pixel-3 {
+    left: 0.8125rem;
+    top: 15.625rem;
+    background: var(--dr-blue);
+}
+
+#dr-post .dr-pixel-4 {
+    left: 1.25rem;
+    top: 16.5rem;
+    opacity: .18;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 43.75rem) {
+
+    #dr-post {
+        width: calc(100% - 1.25rem);
+        margin: 1.25rem auto;
+    }
+
+    #dr-post .dr-post-header {
+        min-height: 10.9375rem;
+        padding: 1.5625rem 1.5625rem 1.375rem;
+    }
+
+    #dr-post .dr-post-title {
+        max-width: 85%;
+        font-size: 1.75rem;
+    }
+
+    #dr-post .dr-post-body {
+        padding: 1.5625rem 1.75rem 1.875rem;
+    }
+}
+
+
+@media (max-width: 30rem) {
+
+    #dr-post .dr-post-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.0625rem;
+    }
+
+    #dr-post .dr-post-icon {
+        right: 1.125rem;
+    }
+
+    #dr-post .dr-post-body {
+        padding: 1.375rem 1.25rem 1.5625rem;
+    }
+
+    #dr-post .dr-post-body p {
+        font-size: 0.625rem;
+        line-height: 1.9;
+    }
+}
