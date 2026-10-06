@@ -21681,8 +21681,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-sizing: border-box;
     color: var(--emblema2);
     text-decoration: none !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 55%, transparent);
-    background: color-mix(in srgb, var(--emblema2) 6%, transparent);
     transition: color .2s ease, background .2s ease, border-color .2s ease, text-shadow .2s ease;
 }
 
@@ -21696,7 +21694,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 
 .dr-topic-permalink:hover {
     color: var(--emblema1);
-    background: color-mix(in srgb, var(--emblema1) 8%, transparent);
     border-color: var(--emblema1);
     text-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema1) 35%, transparent);
 }
@@ -21706,6 +21703,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     font: 500 .48rem/1.2 "Roboto Mono", monospace;
     letter-spacing: .03rem;
     white-space: nowrap;
+    margin-left: -15px;
 }
 
 /* =========================================================
