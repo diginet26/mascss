@@ -10065,48 +10065,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     text-transform: uppercase;
 }
 
-.topic-actions:not(:has(.search-box)) .buttons {
-    margin: .35rem 0 0;
-}
-
-.topic-actions:not(:has(.search-box)) .buttons > a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 4rem;
-    min-height: 2.2rem;
-    margin: 0 !important;
-    padding: 0 .8rem;
-    box-sizing: border-box;
-    border: .06rem solid var(--emblema1);
-    border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), color-mix(in srgb, var(--emblema1) 12%, transparent));
-    color: var(--text-color) !important;
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .07rem;
-    text-transform: uppercase;
-    text-decoration: none !important;
-    transition: .25s ease;
-}
-
-.topic-actions:not(:has(.search-box)) .post-icon a::before {
-    content: "+";
-    margin-right: .4rem;
-    color: var(--emblema2);
-    font-size: .8rem;
-}
-
-.topic-actions:not(:has(.search-box)) .post-icon img {
-    display: none !important;
-}
-
-.topic-actions:not(:has(.search-box)) .buttons > a:hover {
-    border-color: var(--emblema2);
-    color: var(--emblema2) !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent));
-    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
-    transform: translateY(-.05rem);
-}
+xxx
 
 .topic-actions:not(:has(.search-box)) .pagination {
     display: flex;
@@ -20765,7 +20724,6 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     display: none !important;
 }
 
-
 /* =========================================================
    VIEWFORUM — ZONA DE HERRAMIENTAS INFERIOR
    ========================================================= */
@@ -20782,13 +20740,32 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     position: relative;
     overflow: hidden;
     background:
-        linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 35%, color-mix(in srgb, var(--emblema1) 7%, transparent)),
-        repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--emblema2) 3%, transparent) 3rem, color-mix(in srgb, var(--emblema2) 3%, transparent) 3.05rem),
-        repeating-linear-gradient(0deg, transparent 0, transparent 1rem, color-mix(in srgb, var(--emblema1) 2%, transparent) 1rem, color-mix(in srgb, var(--emblema1) 2%, transparent) 1.05rem),
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--emblema2) 5%, transparent),
+            transparent 35%,
+            color-mix(in srgb, var(--emblema1) 7%, transparent)
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 3rem,
+            color-mix(in srgb, var(--emblema2) 3%, transparent) 3rem,
+            color-mix(in srgb, var(--emblema2) 3%, transparent) 3.05rem
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 1rem,
+            color-mix(in srgb, var(--emblema1) 2%, transparent) 1rem,
+            color-mix(in srgb, var(--emblema1) 2%, transparent) 1.05rem
+        ),
         var(--post-background);
     border: .06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
     border-radius: .5rem;
-    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent), inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
+    box-shadow:
+        inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent),
+        inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
 }
 
 .topic-actions:not(:has(.search-box))::before {
@@ -20802,45 +20779,129 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     text-transform: uppercase;
 }
 
+/* =========================================================
+   BOTONES PUBLICAR / RESPONDER
+   ========================================================= */
+
 .topic-actions:not(:has(.search-box)) .buttons {
     margin: .35rem 0 0;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
 }
 
-.topic-actions:not(:has(.search-box)) .post-icon a {
-    display: inline-flex;
+/* ---------------------------------------------------------
+   BASE COMÚN
+   --------------------------------------------------------- */
+
+.topic-actions:not(:has(.search-box)) .buttons > a {
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    min-height: 2.35rem;
-    padding: 0 1rem;
+    min-width: 4rem;
+    min-height: 2.2rem;
+    margin: 0 !important;
+    padding: 0 .8rem !important;
     box-sizing: border-box;
-    border: .06rem solid var(--emblema2);
+    border: .06rem solid var(--emblema1) !important;
     border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 10%, transparent),
+            color-mix(in srgb, var(--emblema1) 12%, transparent)
+        ) !important;
     color: var(--text-color) !important;
+    font: 700 .55rem/1 "Oxanium", monospace !important;
+    letter-spacing: .07rem;
+    text-transform: uppercase;
     text-decoration: none !important;
-    font: 700 .58rem/1 "Oxanium", sans-serif;
-    letter-spacing: .09rem;
+    transition: .25s ease;
+}
+
+/* =========================================================
+   PUBLICAR NUEVO TEMA
+   ========================================================= */
+
+.topic-actions:not(:has(.search-box)) .buttons > a:first-child {
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+/* El botón real de ForoActivo */
+.topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 4rem;
+    min-height: 2.2rem;
+    margin: 0 !important;
+    padding: 0 .8rem !important;
+    box-sizing: border-box;
+    border: .06rem solid var(--emblema1) !important;
+    border-radius: .35rem;
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 10%, transparent),
+            color-mix(in srgb, var(--emblema1) 12%, transparent)
+        ) !important;
+    color: var(--text-color) !important;
+    font: 700 .55rem/1 "Oxanium", monospace !important;
+    letter-spacing: .07rem;
     text-transform: uppercase;
     transition: .25s ease;
 }
 
-.topic-actions:not(:has(.search-box)) .post-icon a::before {
+/* Ocultamos la imagen nativa */
+.topic-actions:not(:has(.search-box)) .buttons > a:first-child img {
+    display: none !important;
+}
+
+/* El + de Publicar */
+.topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton::before {
     content: "+";
     margin-right: .4rem;
     color: var(--emblema2);
-    font-size: .8rem;
+    font-size: .75rem;
 }
 
-.topic-actions:not(:has(.search-box)) .post-icon img {
-    display: none;
+/* =========================================================
+   RESPONDER AL TEMA
+   ========================================================= */
+
+.topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"] {
+    padding: 0 .8rem !important;
 }
 
-.topic-actions:not(:has(.search-box)) .post-icon a:hover {
-    border-color: var(--emblema1);
+/* El enlace de responder está vacío */
+.topic-actions:not(:has(.search-box)) .buttons > a[href*="mode=reply"]::before {
+    content: "RESPONDER AL TEMA";
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.topic-actions:not(:has(.search-box)) .buttons > a:hover,
+.topic-actions:not(:has(.search-box)) .buttons > a:hover .rtopicbutton {
+    border-color: var(--emblema2) !important;
     color: var(--emblema2) !important;
-    box-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 16%, transparent),
+            color-mix(in srgb, var(--emblema1) 16%, transparent)
+        ) !important;
+    box-shadow:
+        0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
     transform: translateY(-.05rem);
 }
+
+/* =========================================================
+   PAGINACIÓN
+   ========================================================= */
 
 .topic-actions:not(:has(.search-box)) .pagination {
     display: flex;
@@ -20879,10 +20940,15 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 .topic-actions:not(:has(.search-box)) .pagination > a:hover {
     border-color: var(--emblema1);
     color: var(--emblema2) !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), color-mix(in srgb, var(--emblema1) 10%, transparent));
-    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 16%, transparent);
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 10%, transparent),
+            color-mix(in srgb, var(--emblema1) 10%, transparent)
+        );
+    box-shadow:
+        0 0 .7rem color-mix(in srgb, var(--emblema1) 16%, transparent);
 }
-
 
 /* =========================================================
    VIEWFORUM — ORDENAR / CAMBIAR DE FORO
