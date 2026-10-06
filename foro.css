@@ -21675,21 +21675,30 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-permalink {
-    flex-shrink: 0;
-    color: var(--text-color);
-    font: 700 .5rem/1 "Oxanium", sans-serif;
-    letter-spacing: .08rem;
-    text-transform: uppercase;
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--emblema2);
     text-decoration: none !important;
+    box-sizing: border-box;
+    transition: color .2s ease, text-shadow .2s ease;
 }
 
 .dr-topic-permalink::before {
-    content: "/f0c1";
-    margin-right: .3rem;
-    color: var(--emblema2);
+    content: "\f0c1";
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    font-size: 1.35rem;
+    line-height: 1;
 }
 
-.dr-topic-permalink:hover {color: var(--emblema2);}
+.dr-topic-permalink:hover {
+    color: var(--emblema1);
+    text-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema1) 35%, transparent);
+}
 .dr-topic-date {
     min-width: 0;
     color: color-mix(in srgb, var(--text-color) 55%, transparent);
@@ -21702,13 +21711,17 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
    ACCIONES
    ========================================================= */
 
+/* =========================================================
+   ACCIONES DEL POST
+   ========================================================= */
+
 .dr-topic-actions {
     margin: 0 !important;
     padding: 0 !important;
     display: flex !important;
     align-items: center;
     justify-content: flex-end;
-    gap: .3rem;
+    gap: .25rem;
     list-style: none;
     flex-shrink: 0;
 }
@@ -21737,20 +21750,66 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    min-width: 3.6rem;
-    height: 1.7rem;
+
+    width: auto;
+    min-width: 0;
+    height: 1.55rem;
+
     margin: 0 !important;
-    padding: 0 .5rem;
+    padding: 0 .45rem;
+
     box-sizing: border-box;
+
     background: color-mix(in srgb, var(--post-background) 85%, transparent) !important;
     border: .06rem solid color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+
     color: transparent !important;
     font-size: 0 !important;
     line-height: 1;
+
     text-decoration: none !important;
+    white-space: nowrap;
+
     transition: .2s ease;
+}
+
+/* Elimina cualquier contenido nativo interno de ForoActivo */
+.dr-topic-actions li a > * {
+    display: none !important;
+}
+
+.dr-topic-actions li:nth-child(3) a::before {
+    content: "CITAR";
+}
+
+.dr-topic-actions li:nth-child(4) a::before {
+    content: "EDITAR";
+}
+
+.dr-topic-actions li:nth-child(5) a::before {
+    content: "BORRAR";
+}
+
+.dr-topic-actions li:nth-child(6) a::before {
+    content: "IP";
+}
+
+.dr-topic-actions li a::before {
+    color: var(--text-color);
+    font: 700 .42rem/1 "Oxanium", sans-serif;
+    letter-spacing: .05rem;
+}
+
+.dr-topic-actions li a:hover::before {
+    color: var(--emblema2);
+}
+
+.dr-topic-actions li a:hover {
+    border-color: var(--emblema2);
+    background: color-mix(in srgb, var(--emblema2) 8%, var(--post-background));
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 14%, transparent);
 }
 
 .dr-topic-actions li a img {
