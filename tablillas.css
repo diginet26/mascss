@@ -2987,7 +2987,7 @@
 }
 
 /* ==========================================================
-   DIGITAL RIFT — RETRATO DIGIMON
+   DIGITAL RIFT — RETRATO DIGIMON ANIMADO
    ========================================================== */
 
 .dr-post-wrap {
@@ -3005,7 +3005,7 @@
 .dr-post-character {
     position: absolute;
 
-    left: -5.625rem;
+    left: 34.375rem;
     top: -3.125rem;
 
     width: 10rem;
@@ -3022,7 +3022,7 @@
 
 
 /* ==========================================================
-   ARO DIGITAL EXTERIOR
+   ARO EXTERIOR — GIRA A LA DERECHA
    ========================================================== */
 
 .dr-post-character::before {
@@ -3033,27 +3033,26 @@
     width: 8.75rem;
     height: 8.75rem;
 
-    border: 0.0625rem solid rgba(255,255,255,.65);
     border-radius: 50%;
+
+    border: 0.0625rem solid rgba(255,255,255,.5);
+
+    border-top-color: var(--emblema2);
+    border-right-color: transparent;
+    border-bottom-color: rgba(255,255,255,.3);
+    border-left-color: transparent;
 
     box-sizing: border-box;
 
-    /* segmentos digitales */
-    border-top-color: var(--emblema2);
-    border-right-color: transparent;
-    border-bottom-color: rgba(255,255,255,.45);
-    border-left-color: transparent;
-
     box-shadow:
-        0 0 0.375rem rgba(34,193,195,.25),
-        inset 0 0 0.375rem rgba(34,193,195,.08);
+        0 0 0.5rem rgba(34,193,195,.25);
 
-    transform: rotate(-25deg);
+    animation: dr-post-ring-right 12s linear infinite;
 }
 
 
 /* ==========================================================
-   ARO DIGITAL INTERMEDIO
+   ARO INTERIOR — GIRA A LA IZQUIERDA
    ========================================================== */
 
 .dr-post-character::after {
@@ -3066,81 +3065,49 @@
 
     border-radius: 50%;
 
+    border: 0.0625rem dashed rgba(255,255,255,.3);
+
     box-sizing: border-box;
 
-    border: 0.0625rem dashed rgba(255,255,255,.28);
-
     box-shadow:
-        0 0 0.5rem rgba(34,193,195,.12);
+        0 0 0.625rem rgba(34,193,195,.12);
 
-    transform: rotate(35deg);
+    animation: dr-post-ring-left 8s linear infinite;
 }
 
 
 /* ==========================================================
-   ANILLO TECNOLÓGICO ADICIONAL
+   ANIMACIONES DE LOS AROS
    ========================================================== */
 
-.dr-post-character-ring::before {
-    content: "";
+@keyframes dr-post-ring-right {
 
-    position: absolute;
+    from {
+        transform: rotate(0deg);
+    }
 
-    width: 6.75rem;
-    height: 6.75rem;
+    to {
+        transform: rotate(360deg);
+    }
 
-    left: 50%;
-    top: 50%;
+}
 
-    transform: translate(-50%, -50%);
 
-    border-radius: 50%;
+@keyframes dr-post-ring-left {
 
-    border: 0.0625rem solid transparent;
+    from {
+        transform: rotate(0deg);
+    }
 
-    border-top-color: var(--emblema2);
-    border-bottom-color: var(--emblema1);
+    to {
+        transform: rotate(-360deg);
+    }
 
-    box-shadow:
-        0 0 0.5rem rgba(34,193,195,.25);
-
-    pointer-events: none;
 }
 
 
 /* ==========================================================
-   MARCAS DIGITALES
-   ========================================================== */
-
-.dr-post-character-ring::after {
-    content: "+  //  01  //  +";
-
-    position: absolute;
-
-    left: 50%;
-    bottom: -1.25rem;
-
-    transform: translateX(-50%);
-
-    width: 7rem;
-
-    color: var(--emblema2);
-
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.375rem;
-    font-weight: 700;
-
-    letter-spacing: 0.125rem;
-    text-align: center;
-
-    white-space: nowrap;
-
-    opacity: .75;
-}
-
-
-/* ==========================================================
-   CÍRCULO DE LA IMAGEN
+   CÍRCULO CENTRAL
    ========================================================== */
 
 .dr-post-character-ring {
@@ -3179,7 +3146,84 @@
 
 
 /* ==========================================================
-   IMAGEN
+   ARO CENTRAL — GIRA AL LADO CONTRARIO
+   ========================================================== */
+
+.dr-post-character-ring::before {
+    content: "";
+
+    position: absolute;
+
+    width: 6.75rem;
+    height: 6.75rem;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border: 0.0625rem solid transparent;
+
+    border-top-color: var(--emblema2);
+    border-bottom-color: var(--emblema1);
+
+    box-shadow:
+        0 0 0.5rem rgba(34,193,195,.25);
+
+    pointer-events: none;
+
+    animation: dr-post-ring-center 6s linear infinite;
+}
+
+
+@keyframes dr-post-ring-center {
+
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+
+}
+
+
+/* ==========================================================
+   MARCAS DIGITALES
+   ========================================================== */
+
+.dr-post-character-ring::after {
+    content: "+  //  01  //  +";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -1.25rem;
+
+    transform: translateX(-50%);
+
+    width: 7rem;
+
+    color: var(--emblema2);
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.375rem;
+    font-weight: 700;
+
+    letter-spacing: 0.125rem;
+    text-align: center;
+
+    white-space: nowrap;
+
+    opacity: .75;
+}
+
+
+/* ==========================================================
+   IMAGEN DEL PERSONAJE
    ========================================================== */
 
 .dr-post-character-ring img {
@@ -3201,7 +3245,7 @@
 
 
 /* ==========================================================
-   PEQUEÑOS NODOS DIGITALES
+   NODOS DIGITALES
    ========================================================== */
 
 .dr-post-character {
@@ -3239,6 +3283,21 @@
 
 .dr-post-wrap #dr-post {
     margin: 0;
+}
+
+
+/* ==========================================================
+   REDUCCIÓN DE MOVIMIENTO
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dr-post-character::before,
+    .dr-post-character::after,
+    .dr-post-character-ring::before {
+        animation: none;
+    }
+
 }
 
 
@@ -3318,5 +3377,3 @@
     }
 
 }
-
-
