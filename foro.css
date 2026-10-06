@@ -21602,31 +21602,179 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
    ========================================================= */
 
 .dr-topic-digimon {
+    position: relative;
+
     grid-column: 2;
     grid-row: 1 / span 2;
+
     width: 10rem;
     height: 9rem;
     min-width: 10rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     align-self: center;
     justify-self: end;
-    margin-right: 0rem;
-    overflow: hidden;
+    margin-right: 0;
+
+    overflow: visible;
     box-sizing: border-box;
+
     background: var(--theme-panel-deep);
+
     border: .08rem solid var(--emblema2);
-    box-shadow: 0 0 0 .05rem var(--emblema1), 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
+
+    box-shadow:
+        0 0 0 .05rem var(--emblema1),
+        0 0 .8rem color-mix(
+            in srgb,
+            var(--emblema2) 18%,
+            transparent
+        );
+
     z-index: 9;
 }
 
+/* =========================================================
+   GRUPO DE PÍXELES — LATERAL IZQUIERDO
+   ========================================================= */
+
+.dr-topic-digimon::before {
+    content: "";
+    position: absolute;
+
+    left: -2.65rem;
+    top: 1.15rem;
+
+    width: .38rem;
+    height: .38rem;
+
+    background: var(--emblema2);
+
+    box-shadow:
+        .52rem -.42rem 0 color-mix(
+            in srgb,
+            var(--emblema2) 72%,
+            var(--emblema1)
+        ),
+        .95rem .12rem 0 color-mix(
+            in srgb,
+            var(--emblema2) 48%,
+            var(--emblema1)
+        ),
+        .42rem .72rem 0 var(--emblema2),
+        1.18rem .98rem 0 color-mix(
+            in srgb,
+            var(--emblema2) 82%,
+            var(--emblema1)
+        ),
+        .02rem 1.3rem 0 color-mix(
+            in srgb,
+            var(--emblema2) 58%,
+            var(--emblema1)
+        );
+
+    opacity: .85;
+
+    box-shadow:
+        .52rem -.42rem 0 color-mix(in srgb, var(--emblema2) 72%, var(--emblema1)),
+        .95rem .12rem 0 color-mix(in srgb, var(--emblema2) 48%, var(--emblema1)),
+        .42rem .72rem 0 var(--emblema2),
+        1.18rem .98rem 0 color-mix(in srgb, var(--emblema2) 82%, var(--emblema1)),
+        .02rem 1.3rem 0 color-mix(in srgb, var(--emblema2) 58%, var(--emblema1));
+
+    pointer-events: none;
+
+    animation: dr-topic-pixels-a 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   PÍXELES SECUNDARIOS
+   ========================================================= */
+
+.dr-topic-digimon::after {
+    content: "";
+    position: absolute;
+
+    left: -1.55rem;
+    top: 2.65rem;
+
+    width: .25rem;
+    height: .25rem;
+
+    background: color-mix(
+        in srgb,
+        var(--emblema2) 55%,
+        var(--emblema1)
+    );
+
+    box-shadow:
+        -.55rem .18rem 0 var(--emblema2),
+        .32rem .62rem 0 color-mix(
+            in srgb,
+            var(--emblema2) 70%,
+            var(--emblema1)
+        ),
+        .92rem -.5rem 0 var(--emblema2),
+        1.38rem .35rem 0 color-mix(
+            in srgb,
+            var(--emblema2) 42%,
+            var(--emblema1)
+        );
+
+    opacity: .72;
+
+    pointer-events: none;
+
+    animation: dr-topic-pixels-b 4.5s ease-in-out infinite;
+}
+
+/* =========================================================
+   ANIMACIÓN — PÍXELES
+   ========================================================= */
+
+@keyframes dr-topic-pixels-a {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: .72;
+    }
+
+    50% {
+        transform: translate(.18rem, -.12rem);
+        opacity: .95;
+    }
+}
+
+@keyframes dr-topic-pixels-b {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: .58;
+    }
+
+    50% {
+        transform: translate(-.12rem, .16rem);
+        opacity: .82;
+    }
+}
+
+/* =========================================================
+   IMAGEN DEL DIGIMON
+   ========================================================= */
+
 .dr-topic-digimon img {
+    position: relative;
+    z-index: 1;
+
     display: block;
+
     width: 100% !important;
     height: 100% !important;
+
     max-width: none !important;
     max-height: none !important;
+
     object-fit: cover;
 }
 /* =========================================================
