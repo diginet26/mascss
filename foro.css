@@ -21507,7 +21507,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: 0;
     box-sizing: border-box;
     background: linear-gradient(110deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 42%, color-mix(in srgb, var(--emblema1) 4%, transparent)), var(--post-background);
-    border-bottom: .06rem solid color-mix(in srgb, var(--dg-group) 22%, transparent);
+    border-bottom: .06rem solid color-mix(in srgb, var(--dg-group-color) 22%, transparent);
     overflow: hidden;
 }
 
@@ -21584,12 +21584,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 /* =========================================================
    DIGIMON
    ========================================================= */
-
-.dr-topic-digimon {
-/* =========================================================
-   DIGIMON
-   ========================================================= */
-
 .dr-topic-digimon {
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -21868,11 +21862,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-actions li a:hover::before {color: var(--emblema2);}
-.dr-topic-actions li a:hover {
-    border-color: var(--emblema2);
-    background: color-mix(in srgb, var(--emblema2) 8%, var(--post-background));
-    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 14%, transparent);
-}
 
 /* =========================================================
    CUERPO DEL POST
