@@ -9921,10 +9921,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 .topic-actions:has(.search-box) .post-icon a::before {
-    content: "";
-    margin-right: .4rem;
-    color: var(--emblema2);
-    font-size: .75rem;
+    display: none !important;
 }
 
 .topic-actions:has(.search-box) .post-icon img {display: none;}
@@ -10002,20 +9999,11 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
 
-
-/* =========================================================
-   OCULTAR MIGAS DE PAN
-   ========================================================= */
-
-.topic-actions:has(.search-box) p.nomargin.path {
-    display: none !important;
-}
-
-
+.topic-actions:has(.search-box) p.nomargin.path {display: none !important;}/*OCULTAR MIGAS DE PAN*/
+.topic-actions:has(.search-box) .pagination {display: none !important;}/*OCULTAR PAGINACIÓN SUPERIOR*/
 /* =========================================================
    VIEWFORUM — ZONA DE HERRAMIENTAS INFERIOR
    ========================================================= */
-
 .topic-actions:not(:has(.search-box)) {
     width: 100%;
     margin: 1.5rem 0;
@@ -10036,17 +10024,6 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     border-radius: .5rem;
     box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent), inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
 }
-
-/*.topic-actions:not(:has(.search-box))::before {
-    content: "SYSTEM / TOPIC CONTROL";
-    position: absolute;
-    top: .45rem;
-    left: 1rem;
-    color: color-mix(in srgb, var(--text-color) 45%, transparent);
-    font: 700 .45rem/1 "Roboto Mono", monospace;
-    letter-spacing: .14rem;
-    text-transform: uppercase;
-}*/
 
 .topic-actions:not(:has(.search-box)) > .right > .pagination {
     display: flex;
@@ -10084,7 +10061,6 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 16%, transparent);
 }
 
-
 /* =========================================================
    VIEWFORUM — ORDENAR / CAMBIAR DE FORO
    ========================================================= */
@@ -10100,9 +10076,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    background:
-        linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 50%, color-mix(in srgb, var(--emblema1) 6%, transparent)),
-        var(--post-background);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 50%, color-mix(in srgb, var(--emblema1) 6%, transparent)), var(--post-background);
     border: .06rem solid color-mix(in srgb, var(--emblema1) 20%, transparent);
     border-radius: .5rem;
     box-shadow: inset 0 0 1.5rem color-mix(in srgb, var(--emblema2) 4%, transparent);
