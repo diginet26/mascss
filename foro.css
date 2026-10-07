@@ -21586,7 +21586,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
    ========================================================= */
 
 .dr-topic-digimon {
-    position: relative;
+/* =========================================================
+   DIGIMON
+   ========================================================= */
+
+.dr-topic-digimon {
     grid-column: 2;
     grid-row: 1 / span 2;
     width: 10rem;
@@ -21601,8 +21605,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     overflow: visible;
     box-sizing: border-box;
     background: var(--theme-panel-deep);
-    border: .08rem solid var(--emblema2);
-    box-shadow: 0 0 0 .05rem var(--emblema1), 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
+    border: .08rem solid var(--dr-group-color, var(--emblema2));
+    box-shadow: 0 0 0 .05rem var(--emblema2), 0 0 .8rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 18%, transparent);
     z-index: 9;
 }
 
@@ -21616,8 +21620,29 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     top: 1.15rem;
     width: .38rem;
     height: .38rem;
-    background: var(--dg-group);
-    box-shadow: .52rem -.42rem 0 color-mix(in srgb, var(--dg-group) 72%, white),.95rem .12rem 0 color-mix(in srgb, var(--dg-group) 48%, white), .42rem .72rem 0 var(--dg-group), 1.18rem .98rem 0 color-mix(in srgb, var(--dg-group) 82%, white), .02rem 1.3rem 0 color-mix(in srgb, var(--dg-group) 58%, white);
+    background: var(--dr-group-color, var(--emblema2));
+    box-shadow:
+        .52rem -.42rem 0 color-mix(
+            in srgb,
+            var(--dr-group-color, var(--emblema2)) 72%,
+            white
+        ),
+        .95rem .12rem 0 color-mix(
+            in srgb,
+            var(--dr-group-color, var(--emblema2)) 48%,
+            white
+        ),
+        .42rem .72rem 0 var(--dr-group-color, var(--emblema2)),
+        1.18rem .98rem 0 color-mix(
+            in srgb,
+            var(--dr-group-color, var(--emblema2)) 82%,
+            white
+        ),
+        .02rem 1.3rem 0 color-mix(
+            in srgb,
+            var(--dr-group-color, var(--emblema2)) 58%,
+            white
+        );
     opacity: .85;
     pointer-events: none;
     animation: dr-topic-pixels-a 4s ease-in-out infinite;
@@ -21633,8 +21658,20 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     top: 2.65rem;
     width: .25rem;
     height: .25rem;
-    background: color-mix(in srgb, var(--dg-group) 55%, white);
-    box-shadow: -.55rem .18rem 0 var(--dg-group), .32rem .62rem 0 color-mix(in srgb, var(--dg-group) 70%, white), .92rem -.5rem 0 var(--dg-group), 1.38rem .35rem 0 color-mix(in srgb, var(--dg-group) 42%, white);
+    background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 55%, white);
+    box-shadow:
+        -.55rem .18rem 0 var(--dr-group-color, var(--emblema2)),
+        .32rem .62rem 0 color-mix(
+            in srgb,
+            var(--dr-group-color, var(--emblema2)) 70%,
+            white
+        ),
+        .92rem -.5rem 0 var(--dr-group-color, var(--emblema2)),
+        1.38rem .35rem 0 color-mix(
+            in srgb,
+            var(--dr-group-color, var(--emblema2)) 42%,
+            white
+        );
     opacity: .72;
     pointer-events: none;
     animation: dr-topic-pixels-b 4.5s ease-in-out infinite;
@@ -21684,7 +21721,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 /* =========================================================
    BARRA INFERIOR
    ========================================================= */
-
 .dr-topic-meta {
     grid-column: 1;
     grid-row: 2;
@@ -21697,7 +21733,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: 0 .8rem 0 0;
     box-sizing: border-box;
     background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 8%, transparent), transparent 50%), var(--theme-panel-deep);
-    border-top: .06rem solid var(--dg-group);
+    border-top: .06rem solid var(--dr-group-color, var(--emblema2));
 }
 
 .dr-topic-meta-left {
@@ -21717,7 +21753,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     justify-content: center;
     margin: 0;
     box-sizing: border-box;
-    color: var(--dg-group);
+    color: var(--dr-group-color, var(--emblema2));
     text-decoration: none !important;
     transition: color .2s ease, background .2s ease, border-color .2s ease, text-shadow .2s ease;
 }
@@ -21731,9 +21767,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 .dr-topic-permalink:hover {
-    color: var(--dg-group);
-    border-color: var(--dg-group);
-    text-shadow: 0 0 .6rem color-mix(in srgb, var(--dg-group) 35%, transparent);
+    color: var(--dr-group-color, var(--emblema2));
+    border-color: var(--dr-group-color, var(--emblema2));
+    text-shadow:0 0 .6rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 35%, transparent);
 }
 
 .dr-topic-date {
@@ -21787,7 +21823,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: 0 .45rem;
     box-sizing: border-box;
     background: color-mix(in srgb, var(--post-background) 85%, transparent) !important;
-    border: .06rem solid color-mix(in srgb, var(--dg-group) 45%, transparent) !important;
+    border: .06rem solid color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 45%, transparent) !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     color: transparent !important;
@@ -21814,9 +21850,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-actions li a:hover::before {color: var(--emblema2);}
 
 .dr-topic-actions li a:hover {
-    border-color: var(--dg-group) !important;
-    background: color-mix(in srgb, var(--dg-group) 8%, var(--post-background)) !important;
-    box-shadow: 0 0 .6rem color-mix(in srgb, var(--dg-group) 20%, transparent);
+    border-color: var(--dr-group-color, var(--emblema2)) !important;
+    background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, var(--post-background)) !important;
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 20%,transparent);
 }
 
 .dr-topic-actions li a img {display: none !important;}
@@ -21964,6 +22000,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     box-shadow: none !important;
 }
 
+/* =========================================================
+   AVATAR
+   ========================================================= */
 .dr-post-avatar {
     position: relative;
     width: 15rem;
@@ -21972,25 +22011,23 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     overflow: hidden;
     box-sizing: border-box;
     background: var(--theme-panel-deep);
-    border: .14rem solid var(--dg-group);
+    border: .14rem solid var(--dr-group-color, var(--emblema2));
     box-shadow: 0 0 0 .06rem var(--theme-panel-deep);
     top: 1px;
 }
 
-/* Borde interior tecnológico — colores del sistema de emblemas */
+/* Borde interior tecnológico = EMBLEMA2 */
 .dr-post-avatar::before {
     content: "";
     position: absolute;
     inset: .42rem;
     z-index: 3;
     pointer-events: none;
-    border: .07rem solid var(--emblema1);
-    box-shadow:
-        inset 0 0 0 .05rem var(--emblema2),
-        0 0 .45rem color-mix(in srgb, var(--emblema2) 15%, transparent);
+    border: .07rem solid var(--emblema2);
+    box-shadow: inset 0 0 0 .05rem var(--emblema2), 0 0 .45rem color-mix(in srgb, var(--emblema2) 15%, transparent);
 }
 
-/* Detalle ornamental en las esquinas */
+/* Esquinas interiores = EMBLEMA2 */
 .dr-post-avatar::after {
     content: "";
     position: absolute;
@@ -22006,9 +22043,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
         linear-gradient(var(--emblema2), var(--emblema2)) left bottom / .07rem 1.5rem no-repeat,
         linear-gradient(var(--emblema2), var(--emblema2)) right bottom / 1.5rem .07rem no-repeat,
         linear-gradient(var(--emblema2), var(--emblema2)) right bottom / .07rem 1.5rem no-repeat;
-    opacity: .8;
 }
-
 .dr-post-avatar img {
     position: relative;
     z-index: 1;
