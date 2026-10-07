@@ -21610,10 +21610,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-digimon::before {
     content: "";
     position: absolute;
-    left: -2.65rem;
+    right: 100%;
     top: 1.15rem;
     width: .38rem;
     height: .38rem;
+    margin-right: .55rem;
+    display: block;
     background: var(--dr-group-color, var(--emblema2));
     box-shadow:
         .52rem -.42rem 0 color-mix(
@@ -21639,6 +21641,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
         );
     opacity: .85;
     pointer-events: none;
+    z-index: 2;
     animation: dr-topic-pixels-a 4s ease-in-out infinite;
 }
 
@@ -21648,26 +21651,17 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-digimon::after {
     content: "";
     position: absolute;
-    left: -1.55rem;
-    top: 2.65rem;
+    right: 100%;
+    top: 2.55rem;
     width: .25rem;
     height: .25rem;
+    margin-right: .15rem;
+    display: block;
     background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 55%, white);
-    box-shadow:
-        -.55rem .18rem 0 var(--dr-group-color, var(--emblema2)),
-        .32rem .62rem 0 color-mix(
-            in srgb,
-            var(--dr-group-color, var(--emblema2)) 70%,
-            white
-        ),
-        .92rem -.5rem 0 var(--dr-group-color, var(--emblema2)),
-        1.38rem .35rem 0 color-mix(
-            in srgb,
-            var(--dr-group-color, var(--emblema2)) 42%,
-            white
-        );
+    box-shadow: -.55rem .18rem 0 var(--dr-group-color, var(--emblema2)), .32rem .62rem 0 color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 70%, white), .92rem -.5rem 0 var(--dr-group-color, var(--emblema2)), 1.38rem .35rem 0 color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 42%, white);
     opacity: .72;
     pointer-events: none;
+    z-index: 2;
     animation: dr-topic-pixels-b 4.5s ease-in-out infinite;
 }
 
