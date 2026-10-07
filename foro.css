@@ -21615,7 +21615,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     top: 1.15rem;
     width: .38rem;
     height: .38rem;
-    margin-right: .55rem;
+    margin-right: 1.55rem;
     display: block;
     background: var(--dr-group-color, var(--emblema2));
     box-shadow:
@@ -21653,10 +21653,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     content: "";
     position: absolute;
     right: 100%;
-    top: 2.55rem;
+    top: 3rem;
     width: .25rem;
     height: .25rem;
-    margin-right: .15rem;
+    margin-right: 1.15rem;
     display: block;
     background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 55%, white);
     box-shadow: -.55rem .18rem 0 var(--dr-group-color, var(--emblema2)), .32rem .62rem 0 color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 70%, white), .92rem -.5rem 0 var(--dr-group-color, var(--emblema2)), 1.38rem .35rem 0 color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 42%, white);
