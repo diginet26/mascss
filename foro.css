@@ -1371,7 +1371,7 @@ button[title="Destino"] {
     justify-content: center;
     background: var(--emblema2);
     border: 2px solid var(--emblema1);
-    transform: translateY(12px) rotate(45deg);
+    transform: translateY(12px) rotate(315deg);
     box-shadow: 0 0 8px rgba(25,220,255,.5), inset 0 0 8px rgba(0,0,0,.7);
     overflow: hidden;
 }
