@@ -21527,11 +21527,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-identity {
     min-width: 0;
     text-align: left;
+    margin-left: 1rem;
 }
 
 .dr-topic-username {
     color: var(--text-color);
-    font: 400 2.15rem/1 "Jersey 15", sans-serif;
+    font: 400 3rem/1 "Jersey 15", sans-serif;
     letter-spacing: .04rem;
     text-align: left;
     text-transform: uppercase;
@@ -21656,7 +21657,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     top: 3rem;
     width: .25rem;
     height: .25rem;
-    margin-right: 1.15rem;
+    margin-right: 1.6rem;
     display: block;
     background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 55%, white);
     box-shadow: -.55rem .18rem 0 var(--dr-group-color, var(--emblema2)), .32rem .62rem 0 color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 70%, white), .92rem -.5rem 0 var(--dr-group-color, var(--emblema2)), 1.38rem .35rem 0 color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 42%, white);
