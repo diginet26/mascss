@@ -22153,7 +22153,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     align-items: center;
     justify-content: flex-end;
     gap: .25rem;
-    margin: .3rem 0 0 !important;
+    margin: .3rem .9rem 0 0 !important;
     padding: 0 !important;
     font: 700 .48rem/1 "Oxanium", sans-serif !important;
     letter-spacing: .04rem;
