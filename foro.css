@@ -20588,7 +20588,15 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     padding: 0 !important;
 }
 
-.topic-actions:has(.search-box) .post-icon a::before {display: none !important;}
+.topic-actions:has(.search-box) .post-icon a {font-size: 0 !important;}
+.topic-actions:has(.search-box) .post-icon a::after {
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+}
+
+.topic-actions:has(.search-box) .post-icon:first-child a::after {content: "Nuevo";}
+.topic-actions:has(.search-box) .post-icon:nth-child(2) a::after {content: "Responder";}
 .topic-actions:has(.search-box) .post-icon img {display: none;}
 .topic-actions:has(.search-box) .post-icon a:hover {
     border-color: var(--emblema1);
