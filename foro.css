@@ -20757,15 +20757,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 }
 
 .topic-actions:not(:has(.search-box)) .buttons > a img {display: none !important;}/*OCULTAR IMÁGENES NATIVAS*/
-/* ---------------------------------------------------------
-   SÍMBOLO + SOLO EN PUBLICAR
-   --------------------------------------------------------- */
-.topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton::before {
-    content: "+";
-    margin-right: .4rem;
-    color: var(--emblema2);
-    font-size: .75rem;
-}
+.topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton::before {display: none !important;}/*SÍMBOLO + SOLO EN PUBLICAR OCULTO*/
 
 /* =========================================================
    HOVER
