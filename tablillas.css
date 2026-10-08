@@ -1481,7 +1481,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
-    background: linear-gradient(90deg, var(--colorfondo) 20%, var(--colorfondo4) 120%)
+    background: var(--colorfondo);
     border: 1px solid var(--emblema1);
     font-family: monospace;
     font-size: .55rem;
