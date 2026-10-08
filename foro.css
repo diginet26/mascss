@@ -22182,7 +22182,26 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     color: var(--emblema2);
     background: color-mix(in srgb, var(--emblema2) 7%, transparent);
 }
+.dr-topic-tools-right .pagination > span:not(.page-sep) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.15rem;
+    min-width: 1.15rem;
+    height: 1.15rem;
+    padding: 0;
+    box-sizing: border-box;
+    border: .05rem solid var(--emblema2);
+    background: color-mix(in srgb, var(--emblema2) 12%, var(--post-background));
+    color: var(--emblema2) !important;
+}
 
+.dr-topic-tools-right .pagination > span:not(.page-sep) strong {
+    color: var(--emblema2) !important;
+    font-size: .6rem;
+    font-weight: 800;
+    line-height: 1;
+}
 /* =========================================================
    DIGITAL RIFT — LOGIN DESCONECTADO
    Solo afecta a los formularios nativos de acceso
