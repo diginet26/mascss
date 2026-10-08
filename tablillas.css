@@ -78,7 +78,7 @@
     content: "";
     position: absolute;
     left: 2.5rem;
-    bottom: 0;
+    bottom: -0.1rem;
     width: 10rem;
     height: 0.125rem;
     background: var(--emblema2);
