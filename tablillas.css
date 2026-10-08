@@ -14,7 +14,7 @@
     margin: 1.875rem auto;
     position: relative;
     overflow: hidden;
-    background:linear-gradient(90deg, var(--colorfondo) 0%, var(--colorfondo2) 48%, var(--emblema1) 250%        );
+    background:linear-gradient(90deg, var(--colorfondo) 0%, var(--colorfondo4) 48%, var(--colorfondo) 250%        );
     border: 1px solid var(--dg-line);
     color: var(--colortextodl);
     font-family: "Oxanium",sans-serif;
@@ -173,7 +173,7 @@
     margin-top: 1.25rem;
     padding: 1.0625rem;
     background: rgba(13,21,30,.85);
-    border: 1px solid #213746;
+    border: 1px solid var(--emblema2);
 }
 
 .dr-block p {margin: 0 0 0.75rem;}
