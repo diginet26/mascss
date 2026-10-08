@@ -172,7 +172,7 @@
 .dr-block {
     margin-top: 1.25rem;
     padding: 1.0625rem;
-    background: rgba(13,21,30,.85);
+    background: var(--colorfondo);
     border: 1px solid var(--emblema2);
 }
 
@@ -296,8 +296,8 @@
 .dr-relation {
     min-height: 4.375rem;
     padding: 0.625rem;
-    background: #0d1720;
-    border: 1px solid #233b4a;
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--emblema2);
     position: relative;
 }
 
