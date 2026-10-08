@@ -21501,7 +21501,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-topic-identity {
     min-width: 0;
     text-align: left;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .dr-topic-username {
@@ -21954,7 +21954,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     width: 15rem;
     height: max-content;
     align-self: start;
-    background: transparent !important;
+    background: var(--colorfondo4) !important;
     border: none !important;
     box-shadow: none !important;
 }
