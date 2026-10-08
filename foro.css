@@ -22213,21 +22213,20 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     height: 1.15rem;
     padding: 0;
     box-sizing: border-box;
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
+    background: color-mix(in srgb, var(--emblema2) 7%, var(--post-background));
+    color: var(--emblema2) !important;
+    font-size: .62rem;
+    font-weight: 800;
+    line-height: 1;
 }
+
+.dr-topic-tools-right .pagination a:empty {display: none !important;}
 
 .dr-topic-tools-right .pagination > span:not(.page-sep) > a {
     border: .05rem solid color-mix(in srgb, var(--emblema2) 35%, transparent);
     background: color-mix(in srgb, var(--post-background) 75%, transparent);
     color: var(--text-color);
-}
-
-.dr-topic-tools-right .pagination > span:not(.page-sep) > strong {
-    border: 0;
-    background: transparent;
-    color: var(--emblema2) !important;
-    font-size: .62rem;
-    font-weight: 800;
-    line-height: 1;
 }
 
 .dr-topic-tools-right .pagination a:hover {
