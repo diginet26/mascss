@@ -22176,7 +22176,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     white-space: nowrap;
     transition: .2s ease;
 }
-
+.dr-topic-tools-right .pagination > a[href^="javascript:Pagination"] {
+    height: 1.15rem;
+    min-height: 1.15rem;
+}
 .dr-topic-tools-right .pagination .page-sep {display: none !important;}
 .dr-topic-tools-right .pagination a:hover {
     border-color: var(--emblema2);
