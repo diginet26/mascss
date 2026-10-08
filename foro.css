@@ -21910,14 +21910,14 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 .dr-post-container {
     position: relative;
     display: grid;
-    grid-template-columns: 15rem minmax(0, 1fr);
+    grid-template-columns: 13.5rem minmax(0, 1fr);
     align-items: start;
     width: 100%;
     margin: 0;
     padding: 1.4rem;
     box-sizing: border-box;
     gap: 1.4rem;
-    background: transparent !important;
+    background: var(--colorfondo4) !important;
 }
 
 /* Fondo visual independiente */
