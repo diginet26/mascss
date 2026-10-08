@@ -22165,14 +22165,15 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 1.15rem;
     height: 1.15rem;
-    padding: 0 .25rem;
+    min-height: 1.15rem;
+    padding: 0 .35rem;
     box-sizing: border-box;
     border: .05rem solid color-mix(in srgb, var(--emblema2) 35%, transparent);
     background: color-mix(in srgb, var(--post-background) 75%, transparent);
     color: var(--text-color);
     text-decoration: none !important;
+    white-space: nowrap;
     transition: .2s ease;
 }
 
