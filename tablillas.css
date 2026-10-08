@@ -304,11 +304,11 @@
 .dr-relation:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -0.1rem;
     left: 0;
-    width: 1.5625rem;
+    width: 2rem;
     height: 0.125rem;
-    background: var(--emblema2);
+    background: var(--emblema1);
 }
 
 .dr-relation small {
