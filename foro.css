@@ -22160,12 +22160,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     color: color-mix(in srgb, var(--text-color) 58%, transparent);
 }
 
-.dr-topic-tools-right .pagination br {
-    display: none !important;
-}
-
-.dr-topic-tools-right .pagination a,
-.dr-topic-tools-right .pagination span {
+.dr-topic-tools-right .pagination br {display: none !important;}
+.dr-topic-tools-right .pagination a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -22180,6 +22176,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     transition: .2s ease;
 }
 
+.dr-topic-tools-right .pagination .page-sep {display: none !important;}
 .dr-topic-tools-right .pagination a:hover {
     border-color: var(--emblema2);
     color: var(--emblema2);
