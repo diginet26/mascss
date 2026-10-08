@@ -20588,13 +20588,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     padding: 0 !important;
 }
 
-.topic-actions:has(.search-box) .post-icon a::before {
-    content: "+";
-    margin-right: .4rem;
-    color: var(--emblema2);
-    font-size: .75rem;
-}
-
+.topic-actions:has(.search-box) .post-icon a::before {display: none !important;}
 .topic-actions:has(.search-box) .post-icon img {display: none;}
 .topic-actions:has(.search-box) .post-icon a:hover {
     border-color: var(--emblema1);
@@ -20646,10 +20640,7 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 18%, transparent);
 }
 
-.topic-actions:has(.search-box) #search_keywords::placeholder {
-    color: color-mix(in srgb, var(--text-color) 45%, transparent);
-}
-
+.topic-actions:has(.search-box) #search_keywords::placeholder {color: color-mix(in srgb, var(--text-color) 45%, transparent);}
 .topic-actions:has(.search-box) .button2 {
     min-height: 2.2rem;
     padding: 0 .7rem;
@@ -20670,19 +20661,10 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
 
-
-/* =========================================================
-   OCULTAR MIGAS DE PAN
-   ========================================================= */
-
-.topic-actions:has(.search-box) p.nomargin.path {
-    display: none !important;
-}
-
+.topic-actions:has(.search-box) p.nomargin.path {display: none !important;}/*OCULTAR MIGAS DE PAN*/
 /* =========================================================
    VIEWFORUM — ZONA DE HERRAMIENTAS INFERIOR
    ========================================================= */
-
 .topic-actions:not(:has(.search-box)) {
     width: 100%;
     margin: 1.5rem 0;
@@ -20722,22 +20704,9 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
         inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent),
         inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
 }
-
-/*.topic-actions:not(:has(.search-box))::before {
-    content: "SYSTEM / TOPIC CONTROL";
-    position: absolute;
-    top: .45rem;
-    left: 1rem;
-    color: color-mix(in srgb, var(--text-color) 45%, transparent);
-    font: 700 .45rem/1 "Roboto Mono", monospace;
-    letter-spacing: .14rem;
-    text-transform: uppercase;
-}*/
-
 /* =========================================================
    BOTONES PUBLICAR / RESPONDER
    ========================================================= */
-
 .topic-actions:not(:has(.search-box)) .buttons {
     margin: .35rem 0 0;
     display: flex;
@@ -20748,7 +20717,6 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 /* ---------------------------------------------------------
    ENLACES CONTENEDORES
    --------------------------------------------------------- */
-
 .topic-actions:not(:has(.search-box)) .buttons > a {
     display: inline-flex !important;
     align-items: center;
@@ -20768,52 +20736,30 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 /* ---------------------------------------------------------
    BOTÓN REAL — PUBLICAR / RESPONDER
    --------------------------------------------------------- */
-
 .topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-
     min-width: 4rem;
     min-height: 2.2rem;
-
     margin: 0 !important;
     padding: 0 .8rem !important;
-
     box-sizing: border-box;
-
     border: .06rem solid var(--emblema1) !important;
     border-radius: .35rem !important;
-
-    background: linear-gradient(
-        135deg,
-        color-mix(in srgb, var(--emblema2) 10%, transparent),
-        color-mix(in srgb, var(--emblema1) 12%, transparent)
-    ) !important;
-
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), color-mix(in srgb, var(--emblema1) 12%, transparent)) !important;
     color: var(--text-color) !important;
-
     font: 700 .55rem/1 "Oxanium", monospace !important;
     letter-spacing: .07rem;
-
     text-transform: uppercase;
     text-decoration: none !important;
-
     transition: .25s ease;
 }
 
-/* ---------------------------------------------------------
-   OCULTAR IMÁGENES NATIVAS
-   --------------------------------------------------------- */
-
-.topic-actions:not(:has(.search-box)) .buttons > a img {
-    display: none !important;
-}
-
+.topic-actions:not(:has(.search-box)) .buttons > a img {display: none !important;}/*OCULTAR IMÁGENES NATIVAS*/
 /* ---------------------------------------------------------
    SÍMBOLO + SOLO EN PUBLICAR
    --------------------------------------------------------- */
-
 .topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton::before {
     content: "+";
     margin-right: .4rem;
@@ -20827,22 +20773,18 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
 
 .topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton:hover {
     border-color: var(--emblema2) !important;
-
     color: var(--emblema2) !important;
-
     background: linear-gradient(
         135deg,
         color-mix(in srgb, var(--emblema2) 16%, transparent),
         color-mix(in srgb, var(--emblema1) 16%, transparent)
     ) !important;
-
     box-shadow:
         0 0 .7rem color-mix(
             in srgb,
             var(--emblema1) 20%,
             transparent
         );
-
     transform: translateY(-.05rem);
 }
 
