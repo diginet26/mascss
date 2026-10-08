@@ -22176,17 +22176,35 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     white-space: nowrap;
     transition: .2s ease;
 }
-.dr-topic-tools-right .pagination > a[href^="javascript:Pagination"] {
+
+.dr-topic-tools-right .pagination > a[href*="Pagination"] {
     height: 1.15rem;
     min-height: 1.15rem;
+    padding: 0 .45rem;
+    line-height: 1;
+    white-space: nowrap;
 }
-.dr-topic-tools-right .pagination .page-sep {display: none !important;}
-.dr-topic-tools-right .pagination a:hover {
-    border-color: var(--emblema2);
-    color: var(--emblema2);
-    background: color-mix(in srgb, var(--emblema2) 7%, transparent);
+
+.dr-topic-tools-right .pagination .page-sep {
+    display: none !important;
 }
+
 .dr-topic-tools-right .pagination > span:not(.page-sep) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .25rem;
+    width: auto;
+    min-width: 0;
+    height: 1.15rem;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    background: transparent;
+}
+
+.dr-topic-tools-right .pagination > span:not(.page-sep) > a,
+.dr-topic-tools-right .pagination > span:not(.page-sep) > strong {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -22195,18 +22213,37 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     height: 1.15rem;
     padding: 0;
     box-sizing: border-box;
-    border: .05rem solid var(--emblema2);
-    background: color-mix(in srgb, var(--emblema2) 12%, var(--post-background));
-    color: var(--emblema2) !important;
 }
 
-.dr-topic-tools-right .pagination > span:not(.page-sep) strong {
+.dr-topic-tools-right .pagination > span:not(.page-sep) > a {
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 35%, transparent);
+    background: color-mix(in srgb, var(--post-background) 75%, transparent);
+    color: var(--text-color);
+}
+
+.dr-topic-tools-right .pagination > span:not(.page-sep) > strong {
+    border: 0;
+    background: transparent;
     color: var(--emblema2) !important;
-    font-size: .6rem;
+    font-size: .62rem;
     font-weight: 800;
     line-height: 1;
-    background: none;
-    border: none;
+}
+
+.dr-topic-tools-right .pagination a:hover {
+    border-color: var(--emblema2);
+    color: var(--emblema2);
+    background: color-mix(in srgb, var(--emblema2) 7%, transparent);
+}
+
+.dr-topic-tools-right .pagination > a[href*="Pagination"]:hover {
+    background: color-mix(in srgb, var(--post-background) 75%, transparent);
+}
+
+.dr-topic-tools-right .pagination > a[href*="Pagination"] {
+    font-weight: 700;
+    letter-spacing: .04rem;
+    word-spacing: .08rem;
 }
 /* =========================================================
    DIGITAL RIFT — LOGIN DESCONECTADO
