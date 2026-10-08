@@ -22267,6 +22267,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
    Solo afecta a los formularios nativos de acceso
    ========================================================= */
 
+
 /* ---------------------------------------------------------
    CONTENEDOR DEL LOGIN
    --------------------------------------------------------- */
@@ -22284,6 +22285,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     padding: .8rem 1rem !important;
 
     color: var(--theme-text) !important;
+
     font-family: "Oxanium", sans-serif !important;
     font-size: .65rem !important;
 }
@@ -22301,7 +22303,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     margin: 0 !important;
     padding: 0 !important;
 
-    color: var(--theme-text-muted) !important;
+    color: var(--theme-text) !important;
 
     font-family: "Oxanium", sans-serif !important;
     font-size: .58rem !important;
@@ -22351,7 +22353,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     outline: none !important;
 
     box-shadow:
-        inset 0 0 .5rem rgba(0,0,0,.18) !important;
+        inset 0 0 .5rem rgba(0, 0, 0, .18) !important;
 
     transition:
         border-color .2s ease,
@@ -22361,7 +22363,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 
 
 /* ---------------------------------------------------------
-   FOCUS
+   FOCUS DE LOS CAMPOS
    --------------------------------------------------------- */
 
 .user_login_form input.post:focus {
@@ -22381,7 +22383,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
             var(--emblema2) 25%,
             transparent
         ),
-        inset 0 0 .5rem rgba(0,0,0,.2) !important;
+        inset 0 0 .5rem rgba(0, 0, 0, .2) !important;
 }
 
 
@@ -22434,7 +22436,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 
-/* CHECKBOX ACTIVO */
+/* ---------------------------------------------------------
+   CHECKBOX ACTIVO
+   --------------------------------------------------------- */
 
 .user_login_form input.radio:checked {
     border-color: var(--emblema2) !important;
@@ -22449,15 +22453,17 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 
-/* MARCA DEL CHECK */
+/* ---------------------------------------------------------
+   MARCA DEL CHECK
+   --------------------------------------------------------- */
 
 .user_login_form input.radio:checked::after {
     content: "✓" !important;
 
     position: absolute !important;
 
-    left: 50% !important;
     top: 50% !important;
+    left: 50% !important;
 
     transform: translate(-50%, -52%) !important;
 
@@ -22540,28 +22546,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 
 
 /* ---------------------------------------------------------
-   ACTIVE
+   ACTIVE BOTÓN
    --------------------------------------------------------- */
 
 .user_login_form input.mainoption.button1:active {
     transform: translateY(0) !important;
-}
-
-
-/* ---------------------------------------------------------
-   SEPARACIÓN ENTRE ELEMENTOS
-   --------------------------------------------------------- */
-
-/* Eliminamos los espacios HTML &nbsp; que generan
-   separaciones irregulares entre los elementos */
-
-.user_login_form {
-    font-size: 0 !important;
-}
-
-.user_login_form label,
-.user_login_form input {
-    font-size: revert !important;
 }
 
 
@@ -22579,7 +22568,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 
 
 /* ---------------------------------------------------------
-   RESPONSIVE
+   RESPONSIVE — TABLET
    --------------------------------------------------------- */
 
 @media (max-width: 700px) {
@@ -22602,6 +22591,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     }
 }
 
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MÓVIL
+   --------------------------------------------------------- */
 
 @media (max-width: 520px) {
 
