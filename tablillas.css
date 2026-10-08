@@ -126,7 +126,7 @@
 .dr-tadmin .dr-intro {
     margin: 1.375rem 1.5625rem 0.625rem;
     padding: 1.0625rem 1.25rem;
-    background: rgba(17,31,45,.7);
+    background: var(--colorfondo);
     border-left: 2px solid var(--emblema2);
     color: #aebdca;
     font-size: 0.6875rem;
@@ -229,8 +229,8 @@
 .dr-tadmin .dr-aviso {
     margin: 1.5625rem;
     padding: 1.125rem 1.25rem;
-    background:linear-gradient(90deg, rgba(22,119,200,.16), rgba(34,193,195,.04));
-    border: 1px solid rgba(34,193,195,.25);
+    background: linear-gradient(90deg, var(--colorfondo4), var(--colorfondo));
+    border: 1px solid var(--emblema1);
 }
 
 /* =========================================================
@@ -366,7 +366,7 @@
 .dr-rule-list { margin: 0.8125rem 0 0; padding: 0; list-style: none; } 
 .dr-rule-list li { position: relative; padding-left: 1.125rem; color: var(--colortextod1); font-size: 0.75rem; line-height: 1.7; padding-right: 1.25rem;} .dr-rule-list li:last-child { margin-bottom: 0; } .dr-rule-list li:before { content: ">"; position: absolute; left: -0.9375rem; top: -0.5rem; font-size:1.375rem; color: var(--emblema2); font-family: "Jersey 15", monospace; font-weight: 700; }
 /* ========================================================= LISTADO OFICIAL ========================================================= */ 
-.dr-tadmin .dr-lista { position: relative; margin-bottom: 0.5rem; padding: 0.9375rem 1.125rem 0.9375rem 3.25rem; background: var(--dg-panel); border: 1px solid rgba(255,255,255,.05); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista:hover { background: var(--dg-panel2); border-color: var(--dg-line); transform: translateX(0.1875rem); }
+.dr-tadmin .dr-lista { position: relative; margin-bottom: 0.5rem; padding: 0.9375rem 1.125rem 0.9375rem 3.25rem; background: var(--colorfondo); border: 1px solid var(--emblema2); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista:hover { background: var(--colorfondo4); border-color: var(--emblema1); transform: translateX(0.1875rem); }
 .dr-tadmin .dr-lista .dr-icon {
     position: absolute;
     left: 1.0625rem;
