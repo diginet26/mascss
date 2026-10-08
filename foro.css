@@ -22262,3 +22262,369 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     font-size: .55rem !important;
 }
 
+/* =========================================================
+   DIGITAL RIFT — LOGIN DESCONECTADO
+   Solo afecta a los formularios nativos de acceso
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   CONTENEDOR DEL LOGIN
+   --------------------------------------------------------- */
+
+.user_login_form {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: .65rem !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    padding: .8rem 1rem !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: .65rem !important;
+}
+
+
+/* ---------------------------------------------------------
+   ETIQUETAS
+   --------------------------------------------------------- */
+
+.user_login_form label {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: .35rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--theme-text-muted) !important;
+
+    font-family: "Oxanium", sans-serif !important;
+    font-size: .58rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .06rem !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* ---------------------------------------------------------
+   CAMPOS DE USUARIO Y CONTRASEÑA
+   --------------------------------------------------------- */
+
+.user_login_form input.post {
+    width: 7.5rem !important;
+    height: 1.8rem !important;
+
+    margin: 0 !important;
+    padding: .25rem .55rem !important;
+
+    box-sizing: border-box !important;
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--emblema2) 28%,
+        var(--theme-border)
+    ) !important;
+
+    border-radius: .2rem !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 5%, transparent),
+            transparent
+        ),
+        var(--theme-panel-deep) !important;
+
+    color: var(--theme-text) !important;
+
+    font-family: "Roboto Mono", monospace !important;
+    font-size: .62rem !important;
+
+    outline: none !important;
+
+    box-shadow:
+        inset 0 0 .5rem rgba(0,0,0,.18) !important;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease !important;
+}
+
+
+/* ---------------------------------------------------------
+   FOCUS
+   --------------------------------------------------------- */
+
+.user_login_form input.post:focus {
+    border-color: var(--emblema2) !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 9%, transparent),
+            transparent
+        ),
+        var(--theme-panel-deep) !important;
+
+    box-shadow:
+        0 0 .5rem color-mix(
+            in srgb,
+            var(--emblema2) 25%,
+            transparent
+        ),
+        inset 0 0 .5rem rgba(0,0,0,.2) !important;
+}
+
+
+/* ---------------------------------------------------------
+   PLACEHOLDER / TEXTO INTERNO
+   --------------------------------------------------------- */
+
+.user_login_form input.post::placeholder {
+    color: color-mix(
+        in srgb,
+        var(--theme-text-muted) 65%,
+        transparent
+    ) !important;
+}
+
+
+/* ---------------------------------------------------------
+   CHECKBOX
+   --------------------------------------------------------- */
+
+.user_login_form input.radio {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    position: relative !important;
+
+    width: .85rem !important;
+    height: .85rem !important;
+
+    margin: 0 !important;
+
+    flex: 0 0 .85rem !important;
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--emblema2) 55%,
+        var(--theme-border)
+    ) !important;
+
+    border-radius: .15rem !important;
+
+    background: var(--theme-panel-deep) !important;
+
+    cursor: pointer !important;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease !important;
+}
+
+
+/* CHECKBOX ACTIVO */
+
+.user_login_form input.radio:checked {
+    border-color: var(--emblema2) !important;
+    background: var(--emblema2) !important;
+
+    box-shadow:
+        0 0 .45rem color-mix(
+            in srgb,
+            var(--emblema2) 45%,
+            transparent
+        ) !important;
+}
+
+
+/* MARCA DEL CHECK */
+
+.user_login_form input.radio:checked::after {
+    content: "✓" !important;
+
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -52%) !important;
+
+    color: var(--theme-panel-deep) !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: .65rem !important;
+    font-weight: 900 !important;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÓN CONECTARSE
+   --------------------------------------------------------- */
+
+.user_login_form input.mainoption.button1 {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 1.8rem !important;
+    min-width: 6rem !important;
+
+    margin: 0 !important;
+    padding: .25rem .8rem !important;
+
+    box-sizing: border-box !important;
+
+    border: 1px solid var(--emblema2) !important;
+    border-radius: .2rem !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 92%, transparent),
+            var(--emblema2)
+        ) !important;
+
+    color: var(--theme-panel-deep) !important;
+
+    font-family: "Jersey 15", sans-serif !important;
+    font-size: .85rem !important;
+    font-weight: 400 !important;
+    letter-spacing: .08rem !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+
+    cursor: pointer !important;
+
+    box-shadow:
+        0 0 .45rem color-mix(
+            in srgb,
+            var(--emblema2) 25%,
+            transparent
+        ) !important;
+
+    transition:
+        transform .18s ease,
+        filter .18s ease,
+        box-shadow .18s ease !important;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER BOTÓN
+   --------------------------------------------------------- */
+
+.user_login_form input.mainoption.button1:hover {
+    transform: translateY(-1px) !important;
+
+    filter: brightness(1.1) !important;
+
+    box-shadow:
+        0 0 .8rem color-mix(
+            in srgb,
+            var(--emblema2) 55%,
+            transparent
+        ) !important;
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE
+   --------------------------------------------------------- */
+
+.user_login_form input.mainoption.button1:active {
+    transform: translateY(0) !important;
+}
+
+
+/* ---------------------------------------------------------
+   SEPARACIÓN ENTRE ELEMENTOS
+   --------------------------------------------------------- */
+
+/* Eliminamos los espacios HTML &nbsp; que generan
+   separaciones irregulares entre los elementos */
+
+.user_login_form {
+    font-size: 0 !important;
+}
+
+.user_login_form label,
+.user_login_form input {
+    font-size: revert !important;
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN SOCIAL
+   --------------------------------------------------------- */
+
+.user_login_form .social_btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: .4rem !important;
+
+    margin: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .user_login_form {
+        gap: .55rem !important;
+        padding: .7rem !important;
+    }
+
+    .user_login_form input.post {
+        width: 6.5rem !important;
+    }
+
+    .user_login_form label {
+        font-size: .52rem !important;
+    }
+
+    .user_login_form input.mainoption.button1 {
+        min-width: 5.5rem !important;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .user_login_form {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: .55rem !important;
+    }
+
+    .user_login_form label {
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    .user_login_form input.post {
+        width: 10rem !important;
+    }
+
+    .user_login_form label:nth-of-type(3) {
+        justify-content: flex-start !important;
+    }
+
+    .user_login_form input.mainoption.button1 {
+        width: 100% !important;
+    }
+}
