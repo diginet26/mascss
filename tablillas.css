@@ -15,7 +15,7 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(90deg, var(--colorfondo) 20%, var(--colorfondo4) 120%);
-    border: 1px solid var(--dg-line);
+    border: 1px solid var(--emblema1);
     color: var(--colortextodl);
     font-family: "Oxanium",sans-serif;
     font-size: 0.75rem;
@@ -1481,8 +1481,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
-    background: linear-gradient(90deg, var(--colorfondo) 0%, var(--colorfondo2) 48%, var(--colorfondo) 250%);
-    border: 1px solid #123846;
+    background: linear-gradient(90deg, var(--colorfondo) 20%, var(--colorfondo4) 120%)
+    border: 1px solid var(--emblema1);
     font-family: monospace;
     font-size: .55rem;
     letter-spacing: .18em;
