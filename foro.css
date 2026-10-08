@@ -22177,6 +22177,49 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     transition: .2s ease;
 }
 
+.dr-topic-tools-right .pagination a:has(img[alt="Anterior"]),
+.dr-topic-tools-right .pagination a:has(img[alt="Siguiente"]) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.15rem;
+    min-width: 1.15rem;
+    height: 1.15rem;
+    min-height: 1.15rem;
+    padding: 0;
+    box-sizing: border-box;
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 35%, transparent);
+    background: transparent;
+    color: var(--emblema2) !important;
+    text-decoration: none !important;
+}
+
+.dr-topic-tools-right .pagination a:has(img[alt="Anterior"])::before {
+    content: "‹";
+    font-size: .8rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.dr-topic-tools-right .pagination a:has(img[alt="Siguiente"])::before {
+    content: "›";
+    font-size: .8rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.dr-topic-tools-right .pagination a:has(img[alt="Anterior"]) img,
+.dr-topic-tools-right .pagination a:has(img[alt="Siguiente"]) img {
+    display: none !important;
+}
+
+.dr-topic-tools-right .pagination a:has(img[alt="Anterior"]):hover,
+.dr-topic-tools-right .pagination a:has(img[alt="Siguiente"]):hover {
+    border-color: var(--emblema2);
+    background: color-mix(in srgb, var(--emblema2) 8%, transparent);
+    color: var(--emblema2) !important;
+}
+
 .dr-topic-tools-right .pagination > a[href*="Pagination"] {
     height: 1.15rem;
     min-height: 1.15rem;
