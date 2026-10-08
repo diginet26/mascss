@@ -21686,7 +21686,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     white-space: nowrap;
     margin-left: -15px;
 }
-
+.topic-actions > .pagination {display: none !important;}/*elimina la primera paginacion*/
 /* =========================================================
    ACCIONES DEL POST
    ========================================================= */
@@ -21811,9 +21811,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 }
 
 /* Banco técnico de campos */
-.dr-profile-fields {
-    display: none !important;
-}
+.dr-profile-fields {display: none !important;}
 
 /* =========================================================
    RESPONSIVE — CABECERA
@@ -21848,7 +21846,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 /* =========================================================
    VIEWTOPIC — FONDO DEL POST
    ========================================================= */
-
 .dr-post-container {
     position: relative;
     display: grid;
@@ -21862,25 +21859,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     background: var(--colorfondo4) !important;
 }
 
-/* Fondo visual independiente */
-/*.dr-post-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;*/
-
-    /* después del avatar + gap */
-   /* left: calc(1.4rem + 15rem + 1.4rem);
-    right: 1.4rem;
-
-    background: var(--post-background);
-    pointer-events: none;
-    z-index: 0;
-}*/
-
 /* Contenido por encima del fondo */
-.dr-post-sidebar,
-.dr-post-main {
+.dr-post-sidebar, .dr-post-main {
     position: relative;
     z-index: 1;
 }
@@ -21888,7 +21868,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
 /* =========================================================
    COLUMNA DEL PERSONAJE
    ========================================================= */
-
 .dr-post-sidebar {
     position: sticky;
     top: 6rem;
@@ -21985,10 +21964,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     transition: background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
-.dr-post-icon:last-child {
-    border-right: 0;
-}
-
+.dr-post-icon:last-child {border-right: 0;}
 .dr-post-icon:hover {
     color: var(--emblema2);
     background: color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep));
@@ -22008,20 +21984,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     text-decoration: none !important;
 }
 
-.dr-post-icon img {
-    display: none !important;
-}
+.dr-post-icon img {display: none !important;}
 
 /* =========================================================
    ICONOS — NORMALIZACIÓN VISUAL
    MP conserva el icono nativo de ForoActivo y su tooltip.
    ========================================================= */
-
-/*.dr-post-icon::before {
-    content: none !important;
-    display: none !important;
-}*/
-
 .dr-post-link::before {
     display: block !important;
     font-family: "Font Awesome 7 Free";
@@ -22030,16 +21998,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     line-height: 1;
 }
 
-.dr-post-link[data-profile-field="expediente"]::before {
-    content: "\f07b" !important;
-}
-
-.dr-post-link[data-profile-field="cronologia"]::before {
-    content: "\f017" !important;
-}
-
-
-
+.dr-post-link[data-profile-field="expediente"]::before {content: "\f07b" !important;}
+.dr-post-link[data-profile-field="cronologia"]::before {content: "\f017" !important;}
 
 .dr-post-profile-link::before {
     position: relative;
@@ -22058,13 +22018,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     color: color-mix(in srgb, var(--emblema1) 72%, var(--text-color));
 }
 
-.dr-post-profile-link[data-profile-field="expediente"]::before {
-    content: "\f07b" !important;
-}
-
-.dr-post-profile-link[data-profile-field="cronologia"]::before {
-    content: "\f017" !important;
-}
+.dr-post-profile-link[data-profile-field="expediente"]::before {content: "\f07b" !important;}
+.dr-post-profile-link[data-profile-field="cronologia"]::before {content: "\f017" !important;}
 
 /* Enlace nativo de MP */
 .dr-post-pm > a {
@@ -22080,12 +22035,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     text-decoration: none !important;
 }
 
-.dr-post-pm > a > i,
-.dr-post-pm > a .fa,
-.dr-post-pm > a .fas,
-.dr-post-pm > a .far,
-.dr-post-pm > a .fa-solid,
-.dr-post-pm > a .fa-envelope {
+.dr-post-pm > a > i, .dr-post-pm > a .fa, .dr-post-pm > a .fas, .dr-post-pm > a .far, .dr-post-pm > a .fa-solid, .dr-post-pm > a .fa-envelope {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -22208,12 +22158,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
    DIGITAL RIFT — LOGIN DESCONECTADO
    Solo afecta a los formularios nativos de acceso
    ========================================================= */
-
-
-/* ---------------------------------------------------------
-   CONTENEDOR DEL LOGIN
-   --------------------------------------------------------- */
-
 .user_login_form {
     display: flex !important;
     align-items: center !important;
