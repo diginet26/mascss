@@ -14,7 +14,7 @@
     margin: 1.875rem auto;
     position: relative;
     overflow: hidden;
-    background:linear-gradient(90deg, var(--colorfondo) 0%, var(--colorfondo4) 48%, var(--colorfondo) 250%        );
+    background: linear-gradient(90deg, var(--colorfondo) 20%, var(--colorfondo4) 120%);
     border: 1px solid var(--dg-line);
     color: var(--colortextodl);
     font-family: "Oxanium",sans-serif;
