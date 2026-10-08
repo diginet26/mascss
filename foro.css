@@ -22185,10 +22185,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     white-space: nowrap;
 }
 
-.dr-topic-tools-right .pagination .page-sep {
-    display: none !important;
-}
-
+.dr-topic-tools-right .pagination .page-sep {display: none !important;}
+.dr-topic-tools-right .pagination a[href="#top"] {display: none !important;}
 .dr-topic-tools-right .pagination > span:not(.page-sep) {
     display: flex;
     align-items: center;
