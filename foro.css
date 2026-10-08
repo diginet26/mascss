@@ -22201,6 +22201,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {color: v
     font-size: .6rem;
     font-weight: 800;
     line-height: 1;
+    background: none;
+    border: none;
 }
 /* =========================================================
    DIGITAL RIFT — LOGIN DESCONECTADO
