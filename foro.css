@@ -4938,7 +4938,7 @@ blockquote blockquote {
     background: var(--theme-panel);
 }
 
-/*.digimon-forum-number {
+.digimon-forum-number {
     width: 34px;
     height: 34px;
     display: flex;
@@ -4950,7 +4950,7 @@ blockquote blockquote {
     border: 1px solid var(--digimon-border);
     color: var(--emblema2);
     font-size: 14px;
-}*/
+}
 
 .digimon-forum-name {
     min-width: 0;
