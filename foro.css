@@ -6303,10 +6303,29 @@ blockquote blockquote {
     background: var(--emblema2);
 }
 
-
 /* =========================================================
-   DIGITAL RIFT — CAMPOS Y ACCIONES DEL EDITOR
+   DIGITAL RIFT — ICONOS FONT AWESOME DEL EDITOR
    ========================================================= */
+.sceditor-container .sceditor-toolbar .sceditor-button > i {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    color: var(--text-color) !important;
+    font-size: .9rem;
+    line-height: 1;
+    text-align: center;
+    filter: none !important;
+    transition: color .18s ease, transform .18s ease;
+}
+
+.sceditor-container .sceditor-toolbar .sceditor-button:hover > i {
+    color: var(--emblema2) !important;
+    transform: scale(1.08);
+}
+
+.sceditor-container .sceditor-toolbar .sceditor-button.active > i {
+    color: var(--emblema2) !important;
+}
 
 
 /* =========================================================
