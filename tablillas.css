@@ -1989,10 +1989,8 @@
             rgba(22,119,200,.10),
             transparent 45%
         ),
-        linear-gradient(
-            90deg,
-            #0a141e,
-            #0c1721
+  linear-gradient(
+218deg, var(--colorfondo4), var(--colorfondot))
         );
 
     border-bottom: 0.0625rem solid rgba(255,255,255,.035);
@@ -2044,7 +2042,7 @@
     justify-content: center;
 
     border: 0.0625rem solid rgba(34,193,195,.35);
-    color: var(--dr-cyan);
+    color: var(--emblema2);
     background: rgba(8,15,24,.7);
 
     transform: rotate(45deg);
@@ -2082,8 +2080,8 @@
 #dr-post .dr-post-title span {
     background: linear-gradient(
         90deg,
-        var(--dr-blue),
-        var(--dr-cyan)
+        var(--emblema2),
+        var(--emblema1)
     );
 
     -webkit-background-clip: text;
@@ -2110,9 +2108,9 @@
 
     padding: 0.1875rem 0.625rem;
 
-    color: var(--dr-cyan);
-    background: rgba(22,119,200,.09);
-    border: 0.0625rem solid rgba(34,193,195,.24);
+    color: var(--emblema2);
+    background: var(--colorfondo);
+    border: 0.0625rem solid var(--emblema2);
 
     font-family: "Roboto Mono", monospace;
     font-size: 0.4375rem;
@@ -2125,7 +2123,7 @@
 }
 
 #dr-post .dr-post-tab i {
-    color: var(--dr-blue);
+    color: var(--emblema1);
     font-size: 0.4375rem;
 }
 
@@ -2145,7 +2143,7 @@
     padding: 1.875rem 2.875rem 2.1875rem;
 
     background: linear-gradient(
-        180deg,
+        13deg,
         var(--colorfondo4),
        var(--colorfondot)
     );
@@ -2252,7 +2250,6 @@
 .dr-battle {
     --battle-blue: #1677C8;
     --battle-blue-dark: #0b3d68;
-    --emblema2: #22c1c3;
     --battle-gold: #f2b705;
     --battle-red: #d94b5b;
     --battle-bg: #080f18;
