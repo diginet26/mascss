@@ -2267,13 +2267,8 @@
     position: relative;
     overflow: hidden;
 
-    background: linear-gradient(
-        135deg,
-        rgba(8,15,24,.99),
-        rgba(8,15,24,.94)
-    );
-
-    border: 0.0625rem solid var(--battle-line);
+    background: var(--colorfondot);
+    border: 0.0625rem solid var(--colorfondo);
     color: var(--battle-text);
     font-family: "Oxanium", sans-serif;
     font-size: 0.75rem;
@@ -2297,9 +2292,8 @@
     align-items: center;
     justify-content: space-between;
 
-    background: #07111b;
-    border-bottom: 0.0625rem solid var(--battle-line);
-    color: var(--battle-muted);
+    background: var(--colorfondot);
+    border-bottom: 0.0625rem solid var(--emblema2);
 
     font-family: "Roboto Mono", monospace;
     font-size: 0.5rem;
@@ -2308,7 +2302,7 @@
 }
 
 .dr-battle .battle-top strong {
-    color: var(--battle-cyan);
+    color: var(--colorfondo);
 }
 
 .dr-battle .battle-status {
@@ -2323,7 +2317,7 @@
 
     display: block;
 
-    background: var(--battle-red);
+    background: var(--emblema2);
     border-radius: 50%;
 
     box-shadow: 0 0 0.5rem rgba(217,75,91,.7);
@@ -2343,14 +2337,9 @@
     align-items: center;
     gap: 1.25rem;
 
-    background: linear-gradient(
-        90deg,
-        rgba(8,15,24,.98) 0%,
-        rgba(8,15,24,.86) 50%,
-        rgba(8,15,24,.45) 100%
-    );
+    background: var(--colorfondot);
 
-    border-bottom: 0.0625rem solid var(--battle-line);
+    border-bottom: 0.0625rem solid var(--emblema2);
 }
 
 
@@ -2365,7 +2354,7 @@
     width: 10.9375rem;
     height: 0.125rem;
 
-    background: var(--battle-cyan);
+    background: var(--emblema1);
 
     box-shadow: 0 0 0.75rem rgba(34,193,195,.55);
 }
@@ -2468,15 +2457,13 @@
 
 .dr-battle .battle-subtitle {
     margin-top: 0.5625rem;
-
-    color: var(--battle-muted);
     font-size: 0.5625rem;
     letter-spacing: 0.09375rem;
     text-transform: uppercase;
 }
 
 .dr-battle .battle-subtitle b {
-    color: var(--battle-gold);
+    color: var(--emblema1);
 }
 
 
@@ -2527,7 +2514,7 @@
 
     text-align: center;
 
-    background: #09131d;
+    background: var(--colorfondo);
     border-right: 0.0625rem solid #183246;
 }
 
