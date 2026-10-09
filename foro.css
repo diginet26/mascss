@@ -6352,13 +6352,18 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
 }
 
 /* =========================================================
-   ÁREA DE ESCRITURA EN MODO FUENTE
-   El contenido WYSIWYG se estiliza desde el JS del iframe.
+   ÁREA DE ESCRITURA — ALTURA AMPLIADA
    ========================================================= */
-.sceditor-container iframe, .sceditor-container textarea {
+#quick_reply .sceditor-container iframe,
+#quick_reply .sceditor-container textarea,
+form[name="post"] .sceditor-container iframe,
+form[name="post"] .sceditor-container textarea {
     display: block;
+    width: 100% !important;
+    height: 22rem !important;
+    min-height: 22rem !important;
+    max-height: none !important;
     box-sizing: border-box;
-    min-height: 8rem !important;
     background-color: var(--theme-panel-deep) !important;
     color: var(--text-color) !important;
     font-family: "IBM Plex Mono", monospace !important;
@@ -6369,7 +6374,8 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
     caret-color: var(--emblema2);
 }
 
-.sceditor-container textarea {
+#quick_reply .sceditor-container textarea,
+form[name="post"] .sceditor-container textarea {
     padding: .85rem !important;
     background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px) !important;
     background-size: 1.5rem 1.5rem !important;
@@ -6379,6 +6385,28 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
 .sceditor-container:focus-within {
     border-color: var(--emblema2) !important;
     box-shadow: 0 0 0 .05rem color-mix(in srgb, var(--emblema2) 25%, transparent), 0 .5rem 1.5rem rgba(0,0,0,.22) !important;
+}
+
+/* =========================================================
+   RESPUESTA RÁPIDA — REDUCIR SEPARACIÓN SUPERIOR
+   ========================================================= */
+a[name="quickreply"] {
+    display: block;
+    height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+}
+
+form#quick_reply {
+    margin-top: .25rem !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+#quick_reply .sceditor-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 /* =========================================================
