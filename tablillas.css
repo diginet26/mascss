@@ -1487,7 +1487,7 @@
     justify-content: space-between;
     padding: 0 1.5rem;
     background: var(--colorfondo);
-    border: 1px solid var(--emblema1);
+    border-bottom: 1px solid var(--emblema1);
     font-family: monospace;
     font-size: .55rem;
     letter-spacing: .18em;
