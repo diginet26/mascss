@@ -6156,7 +6156,7 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
     gap: .25rem;
     clear: none !important;
     float: none !important;
-    width: 100% !important;
+    width: 82% !important;
     min-width: 0 !important;
     max-width: 100% !important;
     height: auto !important;
@@ -6187,7 +6187,7 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
     content: "";
     position: absolute;
     top: -3.5rem;
-    right: .5rem;
+    right: calc(-22% + .5rem) !important;
     width: 7rem;
     height: 9rem;
     background-image: url("https://imgur.com/ys6xFXr.png");
@@ -6555,6 +6555,28 @@ form[name="post"] .sceditor-container {
     min-width: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
+}
+
+/* =========================================================
+   EXTENSIÓN DE LA BARRA HASTA EL BORDE DERECHO
+   ========================================================= */
+.sceditor-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18%;
+    height: 7.5rem;
+    box-sizing: border-box;
+    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep)), var(--theme-panel-deep) 55%, color-mix(in srgb, var(--emblema1) 7%, var(--theme-panel-deep)));
+    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 60%, transparent);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.sceditor-toolbar {
+    position: relative !important;
+    z-index: 2;
 }
 
 /* =========================================================
