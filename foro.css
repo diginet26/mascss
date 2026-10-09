@@ -6079,26 +6079,22 @@ blockquote blockquote {
 /* =========================================================
    DIGITAL RIFT — COMPOSER SYSTEM
    REDISEÑO UNIFICADO DE TODOS LOS EDITORES
-   Sustituye el bloque CSS anterior del editor.
-   Compatible con el JS de iconos Font Awesome 4.7.
-   ========================================================= */
-
-/* =========================================================
-   CONTENEDOR PRINCIPAL
    ========================================================= */
 .sceditor-container {
     position: relative;
-    box-sizing: border-box;
+    width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible !important;
     background: var(--theme-panel-deep) !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 65%, var(--theme-border)) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 75%, var(--theme-border)) !important;
+    border-right: .1rem solid var(--emblema2) !important;
     border-radius: .25rem !important;
-    box-shadow: 0 .5rem 1.4rem rgba(0,0,0,.2), inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
+    box-shadow: 0 .5rem 1.4rem rgba(0,0,0,.2), inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 22%, transparent), inset -.06rem 0 0 var(--emblema2) !important;
 }
 
 /* =========================================================
-   CABECERAS DEL EDITOR
-   Respuesta rápida y editores de tema/respuesta
+   CABECERAS DEL EDITOR   Respuesta rápida y editores de tema/respuesta
    ========================================================= */
 div.h3:has(+ br + form#quick_reply),
 form[name="post"] .inner > div.h3:has(+ fieldset.fields1),
