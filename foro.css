@@ -11702,6 +11702,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     border-radius: .5rem;
     box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent), inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
 }
+
 /* =========================================================
    BOTONES PUBLICAR / RESPONDER
    ========================================================= */
@@ -11732,34 +11733,52 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 /* =========================================================
-   TEXTOS DE LOS BOTONES — PUBLICAR / RESPONDER
+   BOTONES — NUEVO / RESPONDER
    ========================================================= */
-/*.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton {font-size: 0 !important;}
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton::after {
-    content: "NUEVO";
-    color: var(--text-color);
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .07rem;
+.topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 4rem;
+    min-height: 2.2rem;
+    margin: 0 !important;
+    padding: 0 .8rem !important;
+    box-sizing: border-box;
+    border: .06rem solid var(--emblema2) !important;
+    border-radius: .35rem !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent)) !important;
+    color: var(--text-color) !important;
+    font: 700 .55rem/1 "Oxanium", monospace !important;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: .25s ease;
+    box-shadow: none;
 }
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton {font-size: 0 !important;}
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton::after {
-    content: "RESPONDER";
-    color: var(--text-color);
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .07rem;
-}*/
+
+/* ---------------------------------------------------------
+   OCULTAR IMÁGENES NATIVAS Y PSEUDOELEMENTOS
+   --------------------------------------------------------- */
+.topic-actions:not(:has(.search-box)) .buttons > a img {
+    display: none !important;
+}
+
+.topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton::before,
+.topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton::after {
+    content: none !important;
+}
 
 /* =========================================================
    HOVER
    ========================================================= */
-
 .topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton:hover {
-    border-color: var(--emblema2) !important;
+    border-color: var(--emblema1) !important;
     color: var(--emblema2) !important;
-    background: linear-gradient( 135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent) ) !important;
-    box-shadow: 0 0 .7rem color-mix( in srgb, var(--emblema1) 20%, transparent );
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent)) !important;
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
     transform: translateY(-.05rem);
 }
+
 
 /* =========================================================
    VIEWFORUM — ORDENAR / CAMBIAR DE FORO
