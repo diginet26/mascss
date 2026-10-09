@@ -2875,12 +2875,14 @@
     letter-spacing: 0.1875rem;
     color: var(--emblema1);
     text-transform: uppercase;
+        font-family: 'Oxanium', Arial, sans-serif;
+
 }
 
 .dg-core-title {
     margin-top: 0.5rem;
 
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1;
 
@@ -2902,15 +2904,15 @@
 }
 
 .dg-core-tag {
-    padding: 0.3125rem 0.5625rem;
+    padding: 0.4rem 1rem;
 
     background: var(--emblema1);
     border: 0.0625rem solid #284554;
 
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
-    color: var(--cyan);
+    color: var(--colortextod1);
 }
 
 
