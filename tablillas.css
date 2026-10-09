@@ -2867,7 +2867,11 @@
 
     padding: 0.125rem 0.5625rem;
 
-    background: var(--colorfondo);
+    background: linear-gradient(
+        175deg,
+        var(--colorfondo4),
+       var(--colorfondo)
+    );
 
     font-size: 0.75rem;
     letter-spacing: 0.125rem;
