@@ -11733,37 +11733,29 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-decoration: none !important;
 }
 
-/* ---------------------------------------------------------
-   BOTÓN REAL — PUBLICAR / RESPONDER
-   --------------------------------------------------------- */
-.topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    min-width: 4rem;
-    min-height: 2.2rem;
-    margin: 0 !important;
-    padding: 0 .8rem !important;
-    box-sizing: border-box;
-    border: .06rem solid var(--emblema1) !important;
-    border-radius: .35rem !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), color-mix(in srgb, var(--emblema1) 12%, transparent)) !important;
-    color: var(--text-color) !important;
-    font: 700 .55rem/1 "Oxanium", monospace !important;
-    letter-spacing: .07rem;
+
+/* =========================================================
+   TEXTOS DE LOS BOTONES — PUBLICAR / RESPONDER
+   ========================================================= */
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton {
+    font-size: 0 !important;
+}
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton::after {
+    content: "Nuevo";
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .08rem;
     text-transform: uppercase;
-    text-decoration: none !important;
-    transition: .25s ease;
+}
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton {
+    font-size: 0 !important;
+}
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton::after {
+    content: "Responder";
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
 }
 
-.topic-actions:not(:has(.search-box)) .buttons > a img {
-    display: none !important;
-}
-/*OCULTAR IMÁGENES NATIVAS*/
-.topic-actions:not(:has(.search-box)) .buttons > a:first-child .rtopicbutton::before {
-    display: none !important;
-}
-/*SÍMBOLO + SOLO EN PUBLICAR OCULTO*/
 
 /* =========================================================
    HOVER
