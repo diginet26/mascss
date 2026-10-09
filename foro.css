@@ -6076,124 +6076,185 @@ blockquote blockquote {
     width: calc(100% - 30px);
 }}
 
+/* =========================================================
+   DIGITAL RIFT — COMPOSER SYSTEM
+   REDISEÑO UNIFICADO DE TODOS LOS EDITORES
+   Sustituye el bloque CSS anterior del editor.
+   Compatible con el JS de iconos Font Awesome 4.7.
+   ========================================================= */
 
 /* =========================================================
-   DIGITAL RIFT — SCEDITOR
-   SISTEMA VISUAL PARA TODOS LOS EDITORES
+   CONTENEDOR PRINCIPAL
    ========================================================= */
 .sceditor-container {
     position: relative;
     box-sizing: border-box;
     max-width: 100%;
     background: var(--theme-panel-deep) !important;
-    border: .07rem solid color-mix(in srgb, var(--emblema2) 75%, var(--theme-border)) !important;
-    border-radius: .35rem !important;
-    box-shadow: 0 0 0 .05rem color-mix(in srgb, var(--emblema1) 20%, transparent), 0 .65rem 1.5rem rgba(0,0,0,.22), inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 25%, transparent) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 65%, var(--theme-border)) !important;
+    border-radius: .25rem !important;
+    box-shadow: 0 .5rem 1.4rem rgba(0,0,0,.2), inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
 }
 
 /* =========================================================
-   BARRA DE HERRAMIENTAS
+   CABECERAS DEL EDITOR
+   Respuesta rápida y editores de tema/respuesta
+   ========================================================= */
+div.h3:has(+ br + form#quick_reply),
+form[name="post"] .inner > div.h3:has(+ fieldset.fields1),
+form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1) {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 1rem !important;
+    padding: .45rem .8rem !important;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep)), var(--theme-panel-deep) 70%) !important;
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 35%, transparent) !important;
+    border-radius: .15rem !important;
+    color: var(--text-color) !important;
+    font: 700 .65rem/1.4 "Oxanium", sans-serif !important;
+    letter-spacing: .1rem !important;
+    text-transform: uppercase;
+}
+
+div.h3:has(+ br + form#quick_reply)::before,
+form[name="post"] .inner > div.h3:has(+ fieldset.fields1)::before,
+form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 .38rem;
+    width: .38rem;
+    height: .38rem;
+    background: var(--emblema2);
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--emblema2) 45%, transparent);
+}
+
+div.h3:has(+ br + form#quick_reply)::after,
+form[name="post"] .inner > div.h3:has(+ fieldset.fields1)::after,
+form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
+    content: "SYSTEM ONLINE";
+    margin-left: .45rem;
+    padding-left: .55rem;
+    border-left: .05rem solid color-mix(in srgb, var(--emblema2) 40%, transparent);
+    color: color-mix(in srgb, var(--text-color) 55%, transparent);
+    font: 500 .48rem/1 "IBM Plex Mono", monospace;
+    letter-spacing: .04rem;
+}
+
+/* =========================================================
+   BARRA DE HERRAMIENTAS — PANEL TÉCNICO
    ========================================================= */
 .sceditor-toolbar {
     position: relative;
     display: flex !important;
-    align-items: center;
     flex-wrap: wrap !important;
-    gap: .25rem;
+    align-items: center;
+    gap: .3rem;
     width: auto !important;
     height: auto !important;
-    min-height: 2.75rem;
-    padding: .5rem !important;
+    min-height: 2.8rem;
+    padding: .8rem .6rem .55rem !important;
     box-sizing: border-box;
     overflow: visible !important;
-    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep)), var(--theme-panel-deep) 55%, color-mix(in srgb, var(--emblema1) 7%, var(--theme-panel-deep))) !important;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep)), var(--theme-panel-deep) 55%, color-mix(in srgb, var(--emblema1) 6%, var(--theme-panel-deep))) !important;
+    background-size: 1.25rem 1.25rem, 1.25rem 1.25rem, auto !important;
     border: 0 !important;
-    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 60%, transparent) !important;
-    box-shadow: inset 0 -.06rem 0 color-mix(in srgb, var(--emblema1) 15%, transparent) !important;
+    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 55%, transparent) !important;
+    box-shadow: none !important;
 }
 
-/* DETALLE DE ENERGÍA */
 .sceditor-toolbar::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: .06rem;
+    height: .1rem;
     background: linear-gradient(90deg, transparent, var(--emblema2) 25%, var(--emblema1) 75%, transparent);
-    opacity: .8;
+    pointer-events: none;
+}
+
+.sceditor-toolbar::after {
+    content: "DIGITAL RIFT / TEXT INTERFACE";
+    display: block;
+    flex: 1 0 100%;
+    margin-top: .15rem;
+    padding-top: .35rem;
+    border-top: .05rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
+    color: color-mix(in srgb, var(--text-color) 38%, transparent);
+    font: 500 .46rem/1.3 "IBM Plex Mono", monospace;
+    letter-spacing: .08rem;
+    text-align: right;
     pointer-events: none;
 }
 
 /* =========================================================
-   GRUPOS DE HERRAMIENTAS — ELIMINAR ESTILO NATIVO
+   GRUPOS DE HERRAMIENTAS — MÓDULOS
    ========================================================= */
 .sceditor-container .sceditor-toolbar .sceditor-group {
     display: flex !important;
-    align-items: center;
     flex-shrink: 0;
-    gap: .2rem;
-    margin: 0 .25rem 0 0 !important;
-    padding: 0 .4rem 0 0 !important;
+    align-items: center;
+    gap: .17rem;
+    margin: 0 .12rem 0 0 !important;
+    padding: .22rem !important;
     box-sizing: border-box;
-    background: transparent !important;
-    background-image: none !important;
-    border: 0 !important;
-    border-right: .06rem solid color-mix(in srgb, var(--emblema2) 28%, transparent) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+    background: color-mix(in srgb, var(--theme-panel-deep) 82%, transparent) !important;
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 24%, transparent) !important;
+    border-radius: .18rem !important;
+    box-shadow: inset 0 0 .45rem rgba(0,0,0,.12) !important;
 }
 
-.sceditor-container .sceditor-toolbar .sceditor-group:last-child {border-right: 0 !important;}
-
-
 /* =========================================================
-   BOTONES DE HERRAMIENTAS — ACABADO LIMPIO
+   BOTONES DE HERRAMIENTAS — CONTROLES DIGITALES
    ========================================================= */
 .sceditor-toolbar .sceditor-button {
     position: relative;
     display: inline-flex !important;
+    flex: 0 0 1.8rem;
     align-items: center;
     justify-content: center;
-    flex: 0 0 1.95rem;
-    width: 1.95rem !important;
-    min-width: 1.95rem !important;
-    max-width: 1.95rem !important;
-    height: 1.95rem !important;
-    min-height: 1.95rem !important;
-    max-height: 1.95rem !important;
+    width: 1.8rem !important;
+    min-width: 1.8rem !important;
+    max-width: 1.8rem !important;
+    height: 1.8rem !important;
+    min-height: 1.8rem !important;
+    max-height: 1.8rem !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
     appearance: none !important;
     text-indent: 0 !important;
     color: var(--text-color) !important;
-    background: var(--theme-panel-deep) !important;
+    background: linear-gradient(145deg, color-mix(in srgb, var(--emblema2) 6%, var(--theme-panel)), var(--theme-panel-deep)) !important;
     background-image: none !important;
-    border: .06rem solid var(--emblema2) !important;
-    border-radius: .2rem !important;
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 36%, transparent) !important;
+    border-radius: .15rem !important;
     outline: none !important;
     box-shadow: none !important;
-    transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
 
-
-/* ESQUINAS TÉCNICAS */
 .sceditor-toolbar .sceditor-button::before {
     content: "";
     position: absolute;
-    top: -.06rem;
-    left: -.06rem;
-    width: .3rem;
-    height: .3rem;
-    border-top: .06rem solid var(--emblema2);
-    border-left: .06rem solid var(--emblema2);
-    opacity: .65;
+    top: -.05rem;
+    left: -.05rem;
+    width: .25rem;
+    height: .25rem;
+    border-top: .05rem solid var(--emblema2);
+    border-left: .05rem solid var(--emblema2);
+    opacity: .6;
     pointer-events: none;
 }
 
-/* ICONOS NATIVOS DE SCEDITOR */
-.sceditor-toolbar .sceditor-button div {
+/* Iconos nativos: reserva para comandos que no sustituya el JS */
+.sceditor-toolbar .sceditor-button > div {
     border: 0 !important;
     outline: none !important;
     box-shadow: none !important;
@@ -6202,42 +6263,72 @@ blockquote blockquote {
     transition: filter .18s ease, opacity .18s ease;
 }
 
-/* HOVER */
 .sceditor-toolbar .sceditor-button:hover {
     background: color-mix(in srgb, var(--emblema2) 15%, var(--theme-panel-deep)) !important;
     border-color: var(--emblema2) !important;
-    box-shadow: inset 0 0 .55rem color-mix(in srgb, var(--emblema2) 10%, transparent), 0 0 .5rem color-mix(in srgb, var(--emblema2) 15%, transparent) !important;
-    transform: translateY(-.06rem);
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 12%, transparent) !important;
+    transform: translateY(-.04rem);
 }
 
-.sceditor-toolbar .sceditor-button:hover div {
+.sceditor-toolbar .sceditor-button:hover > div {
     opacity: 1;
     filter: brightness(0) invert(1) drop-shadow(0 0 .18rem var(--emblema2));
 }
 
-/* HERRAMIENTA ACTIVA */
 .sceditor-toolbar .sceditor-button.active {
-    background: color-mix(in srgb, var(--emblema2) 22%, var(--theme-panel-deep)) !important;
+    background: color-mix(in srgb, var(--emblema2) 20%, var(--theme-panel-deep)) !important;
     border-color: var(--emblema2) !important;
-    box-shadow: inset 0 0 .5rem color-mix(in srgb, var(--emblema2) 15%, transparent), 0 0 .35rem color-mix(in srgb, var(--emblema2) 15%, transparent) !important;
+    box-shadow: inset 0 0 .4rem color-mix(in srgb, var(--emblema2) 12%, transparent) !important;
 }
 
 /* =========================================================
-   MENÚS DESPLEGABLES
+   ICONOS FONT AWESOME 4.7 — COMPATIBLE CON EL JS ACTUAL
+   ========================================================= */
+.sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {
+    display: inline-block !important;
+    flex: 0 0 1.1rem;
+    width: 1.1rem !important;
+    height: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    text-indent: 0 !important;
+    color: var(--text-color) !important;
+    font-family: FontAwesome !important;
+    font-size: .9rem !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    filter: none !important;
+    transition: color .18s ease, transform .18s ease;
+}
+
+.sceditor-container .sceditor-toolbar .sceditor-button:hover > i.dr-sceditor-fa,
+.sceditor-container .sceditor-toolbar .sceditor-button.active > i.dr-sceditor-fa {
+    color: var(--emblema2) !important;
+}
+
+.sceditor-container .sceditor-toolbar .sceditor-button:hover > i.dr-sceditor-fa {
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   MENÚS DESPLEGABLES DE LAS HERRAMIENTAS
    ========================================================= */
 .sceditor-dropdown {
     z-index: 10000 !important;
     background: var(--theme-panel-deep) !important;
     border: .06rem solid var(--emblema2) !important;
-    border-radius: .3rem !important;
-    box-shadow: 0 .6rem 1.5rem rgba(0,0,0,.35), inset 0 .06rem 0 color-mix(in srgb, var(--emblema2) 15%, transparent) !important;
+    border-radius: .2rem !important;
+    box-shadow: 0 .6rem 1.5rem rgba(0,0,0,.35) !important;
     color: var(--text-color) !important;
 }
 
 .sceditor-dropdown label {
     color: var(--text-color) !important;
-    font-family: "Oxanium", sans-serif;
-    font-size: .75rem;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: .75rem !important;
 }
 
 .sceditor-dropdown input,
@@ -6245,8 +6336,8 @@ blockquote blockquote {
 .sceditor-dropdown textarea {
     box-sizing: border-box;
     background: var(--theme-panel) !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, var(--theme-border)) !important;
-    border-radius: .2rem !important;
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 45%, var(--theme-border)) !important;
+    border-radius: .15rem !important;
     color: var(--text-color) !important;
     font-family: "IBM Plex Mono", monospace !important;
     font-size: .8rem !important;
@@ -6261,28 +6352,33 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   ÁREA DE ESCRITURA
+   ÁREA DE ESCRITURA EN MODO FUENTE
+   El contenido WYSIWYG se estiliza desde el JS del iframe.
    ========================================================= */
 .sceditor-container iframe,
 .sceditor-container textarea {
+    display: block;
     box-sizing: border-box;
-    background: var(--theme-panel-deep) !important;
+    background-color: var(--theme-panel-deep) !important;
     color: var(--text-color) !important;
     font-family: "IBM Plex Mono", monospace !important;
     font-size: 1rem !important;
     line-height: 1.7 !important;
     outline: none !important;
     border: 0 !important;
+    caret-color: var(--emblema2);
 }
 
 .sceditor-container textarea {
-    padding: .75rem !important;
+    padding: .85rem !important;
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px) !important;
+    background-size: 1.5rem 1.5rem !important;
     resize: vertical;
 }
 
 .sceditor-container:focus-within {
     border-color: var(--emblema2) !important;
-    box-shadow: 0 0 0 .05rem color-mix(in srgb, var(--emblema2) 25%, transparent), 0 0 .8rem color-mix(in srgb, var(--emblema2) 10%, transparent), inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 20%, transparent) !important;
+    box-shadow: 0 0 0 .05rem color-mix(in srgb, var(--emblema2) 25%, transparent), 0 .5rem 1.5rem rgba(0,0,0,.22) !important;
 }
 
 /* =========================================================
@@ -6307,39 +6403,7 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   DIGITAL RIFT — ICONOS FONT AWESOME DEL EDITOR
-   ========================================================= */
-.sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {
-    display: inline-block !important;
-    width: 1.1rem !important;
-    height: 1rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-    text-indent: 0 !important;
-    color: var(--text-color) !important;
-    font-family: FontAwesome !important;
-    font-size: 1rem !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    line-height: 1 !important;
-    text-align: center !important;
-    filter: none !important;
-}
-
-
-.sceditor-container .sceditor-toolbar .sceditor-button:hover > i {
-    color: var(--emblema2) !important;
-    transform: scale(1.08);
-}
-
-.sceditor-container .sceditor-toolbar .sceditor-button.active > i {
-    color: var(--emblema2) !important;
-}
-
-
-/* =========================================================
-   DIGITAL RIFT — TÍTULO Y ACCIONES DEL EDITOR
+   CAMPO DEL TÍTULO — NUEVO TEMA / RESPUESTA
    ========================================================= */
 form[name="post"] input.inputbox.medium[name="subject"] {
     display: block !important;
@@ -6349,11 +6413,11 @@ form[name="post"] input.inputbox.medium[name="subject"] {
     padding: .65rem .85rem !important;
     box-sizing: border-box !important;
     appearance: none !important;
-    background: var(--theme-panel-deep, #0b1118) !important;
+    background: var(--theme-panel-deep) !important;
     background-image: none !important;
     border: .06rem solid var(--emblema2) !important;
-    border-radius: .2rem !important;
-    color: var(--text-color, #e7faff) !important;
+    border-radius: .15rem !important;
+    color: var(--text-color) !important;
     font-family: "IBM Plex Mono", monospace !important;
     font-size: .8rem !important;
     font-weight: 600 !important;
@@ -6365,30 +6429,33 @@ form[name="post"] input.inputbox.medium[name="subject"] {
 }
 
 form[name="post"] input.inputbox.medium[name="subject"]:focus {
-    background: var(--theme-panel-deep, #0b1118) !important;
     border-color: var(--emblema2) !important;
-    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 22%, transparent), inset 0 0 .6rem rgba(0,0,0,.15) !important;
+    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
 }
 
 /* =========================================================
-   BOTONES — PREVISUALIZAR / BOSQUEJO / ENVIAR
+   BOTONES DE ACCIÓN — PREVISUALIZAR / BOSQUEJO / ENVIAR
    ========================================================= */
-input.button2[name="preview"], input.button2[name="draft"], input.button1[name="post"], #quick_reply input[type="submit"], #quick_reply input[type="button"] {
+form[name="post"] input.button2[name="preview"],
+form[name="post"] input.button2[name="draft"],
+form[name="post"] input.button1[name="post"],
+form#quick_reply input[type="submit"],
+form#quick_reply input[type="button"] {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    min-width: 4rem !important;
-    min-height: 2rem !important;
-    margin: .25rem .12rem !important;
-    padding: .45rem .75rem !important;
+    min-width: 4.5rem !important;
+    min-height: 2.25rem !important;
+    margin: .3rem .15rem !important;
+    padding: .55rem .85rem !important;
     box-sizing: border-box !important;
     appearance: none !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel-deep)), color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))) !important;
+    background: linear-gradient(110deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel-deep)), color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))) !important;
     border: .06rem solid var(--emblema2) !important;
-    border-radius: .3rem !important;
+    border-radius: .2rem !important;
     color: var(--text-color) !important;
-    font: 700 .55rem/1.2 "Oxanium", monospace !important;
-    letter-spacing: .05rem !important;
+    font: 700 .58rem/1.2 "Oxanium", monospace !important;
+    letter-spacing: .06rem !important;
     text-transform: uppercase !important;
     text-shadow: none !important;
     box-shadow: none !important;
@@ -6396,21 +6463,26 @@ input.button2[name="preview"], input.button2[name="draft"], input.button1[name="
     transition: background .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease !important;
 }
 
-/* HOVER */
-input.button2[name="preview"]:hover, input.button2[name="draft"]:hover, input.button1[name="post"]:hover, #quick_reply input[type="submit"]:hover, #quick_reply input[type="button"]:hover {
-    background: color-mix(in srgb, var(--emblema2) 17%, var(--theme-panel-deep)) !important;
+form[name="post"] input.button2[name="preview"]:hover,
+form[name="post"] input.button2[name="draft"]:hover,
+form[name="post"] input.button1[name="post"]:hover,
+form#quick_reply input[type="submit"]:hover,
+form#quick_reply input[type="button"]:hover {
+    background: color-mix(in srgb, var(--emblema2) 18%, var(--theme-panel-deep)) !important;
     border-color: var(--emblema2) !important;
     color: var(--emblema2) !important;
-    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 18%, transparent) !important;
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 16%, transparent) !important;
     transform: translateY(-.04rem);
 }
 
-/* FOCO DE TECLADO */
-input.button2[name="preview"]:focus-visible, input.button2[name="draft"]:focus-visible, input.button1[name="post"]:focus-visible, #quick_reply input[type="submit"]:focus-visible, #quick_reply input[type="button"]:focus-visible {
+form[name="post"] input.button2[name="preview"]:focus-visible,
+form[name="post"] input.button2[name="draft"]:focus-visible,
+form[name="post"] input.button1[name="post"]:focus-visible,
+form#quick_reply input[type="submit"]:focus-visible,
+form#quick_reply input[type="button"]:focus-visible {
     outline: .06rem solid var(--emblema2) !important;
     outline-offset: .12rem !important;
 }
-
 
 /* =========================================================
    DIGITAL RIFT — SWITCHEROO LOGIN POPUP
