@@ -1979,7 +1979,7 @@
 
     background: var(--colorfondot);
 
-    border-bottom: 0.0625rem solid rgba(255,255,255,.035);
+    border-bottom: 0.0625rem solid var(--emblema1);
     overflow: hidden;
 }
 
