@@ -6485,6 +6485,39 @@ form#quick_reply input[type="button"]:focus-visible {
 }
 
 /* =========================================================
+   EDITORES — ANCHO COMPLETO COMO LOS POSTS
+   ========================================================= */
+#quick_reply,
+form[name="post"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+#quick_reply #textarea_content,
+form[name="post"] #textarea_content {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    float: none !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+}
+
+#quick_reply .sceditor-container,
+form[name="post"] .sceditor-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* =========================================================
    DIGITAL RIFT — SWITCHEROO LOGIN POPUP
    ========================================================= */
 
