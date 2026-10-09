@@ -2608,8 +2608,8 @@
 .dr-battle .battle-bar.hp b {
     background: linear-gradient(
         90deg,
-        #0b3d68,
-        #22c1c3
+        var(--emblema1),
+        var(--emblema2)
     );
 }
 
