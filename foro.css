@@ -4538,7 +4538,7 @@ blockquote blockquote {
     padding: 12px 18px;
     border: 1px solid var(--digimon-border);
     border-radius: var(--digimon-radius-small);
-    background: linear-gradient(90deg, var(--colorfondo4), transparent);
+    background: linear-gradient(90deg, var(), transparent);
     font: 700 9px/1.2 "Oxanium", monospace;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -4558,7 +4558,7 @@ blockquote blockquote {
     border: 1px solid var(--digimon-border);
     border-radius: 6px;
     color: var(--text-color);
-    background: var(--colorfondo4);
+    background: var();
     transition: 0.3s ease;
 }
 
@@ -4567,7 +4567,7 @@ blockquote blockquote {
 }
 
 .digimon-tools-left a:hover, .digimon-mark-read:hover {
-    color: var(--colorfondo4);
+    color: var();
     background: var(--digimon-gradient);
     border-color: transparent;
     transform: translateY(-2px);
@@ -4598,7 +4598,7 @@ blockquote blockquote {
     gap: 18px;
     padding: 20px 25px;
     position: relative;
-    background: linear-gradient(100deg, var(--colorfondo4), transparent 65%);
+    background: linear-gradient(100deg, var(), transparent 65%);
 }
 
 /* Línea de brillo superior */
@@ -4622,7 +4622,7 @@ blockquote blockquote {
     flex-shrink: 0;
     border-radius: 12px;
     background: var(--digimon-gradient);
-    color: var(--colorfondo4);
+    color: var();
     font-size: 20px;
     box-shadow: 0 0 20px color-mix(in srgb, var(--linkc1) 25%, transparent);
 }
@@ -6920,7 +6920,7 @@ form[name="post"] .sceditor-container {
     min-height: 0 !important;
 }
 .digimon-forum-description .rdoubleforum .rforimg::after {
-   background: linear-gradient( 180deg, var(--colorfondo4) 0%, transparent 55%, var(--colorfondo4) 100% ) !important; 
+/*   background: linear-gradient( 180deg, var(--colorfondo4) 0%, transparent 55%, var(--colorfondo4) 100% ) !important; */
 }
 
 .digimon-forum-description .rdoubleforum .rfordesc {
