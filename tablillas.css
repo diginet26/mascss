@@ -2365,7 +2365,7 @@
     padding: 0.25rem;
 
     background: #07111b;
-    border: 0.0625rem solid var(--battle-blue);
+    border: 0.0625rem solid var(--emblema2);
 
     clip-path: polygon(
         15% 0,
@@ -2744,7 +2744,7 @@
     padding: 0.6875rem 0.8125rem;
 
     background: var(--colorfondo);
-    border: 0.0625rem solid #203b4c;
+    border: 0.0625rem solid var(--emblema2);
 
     transition: .2s ease;
 }
