@@ -4934,8 +4934,8 @@ blockquote blockquote {
     align-items: center;
     gap: 12px;
     padding: 17px 18px;
-    border-bottom: 1px solid var(--digimon-border);
-    background: linear-gradient(10deg, var(--colorfondo), var(--colorfondo4));
+    border-bottom: 1px solid var(--colorfondo);
+    background: var(--theme-panel);
 }
 
 .digimon-forum-number {
@@ -5146,7 +5146,7 @@ blockquote blockquote {
     align-items: center;
     justify-content: center;
     gap: 3px;
-    background: var(--colorfondo);
+    background: var(--theme-panel);
 }
 
 .digimon-stat-icon {
@@ -5174,7 +5174,7 @@ blockquote blockquote {
     align-items: center;
     gap: 12px;
     padding: 12px 15px;
-    background: linear-gradient(159deg, var(--colorfondo), var(--colorfondo4));
+    background: var(--theme-panel);
 }
 
 .digimon-lastpost-info {
