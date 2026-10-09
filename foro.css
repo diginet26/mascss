@@ -10687,6 +10687,74 @@ p.right.rightside, p:has(+ h1.page-title) {
     min-width: 4rem;
     cursor: pointer;
 }
+
+
+/* =========================================================
+   VIEWTOPIC — CONTROLES EN LA BARRA INFERIOR
+   ========================================================= */
+
+.topic-actions:has(.dr-topic-bottom-tools) .buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .35rem;
+}
+
+.topic-actions .buttons > a.dr-topic-watch-link {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.3rem;
+    margin: 0 !important;
+    padding: 0 .9rem !important;
+    box-sizing: border-box;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
+    border-radius: .35rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 9%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
+    color: var(--text-color) !important;
+    font: 700 .58rem/1 "Oxanium", sans-serif !important;
+    letter-spacing: .07rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: .2s ease;
+}
+
+.topic-actions .buttons > a.dr-topic-watch-link img {
+    display: none !important;
+}
+
+.topic-actions .buttons > a.dr-topic-watch-link::before {
+    content: "\f0f3";
+    margin-right: .4rem;
+    color: var(--emblema2);
+    font-family: FontAwesome;
+    font-size: .8rem;
+}
+
+.topic-actions .buttons > a.dr-topic-watch-link:hover {
+    border-color: var(--emblema1);
+    color: var(--emblema2) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 15%, transparent), color-mix(in srgb, var(--emblema1) 12%, transparent));
+}
+
+.topic-actions .dr-topic-bottom-tools {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .35rem;
+    margin: 0 0 0 auto;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.topic-actions .dr-topic-bottom-tools .pagination {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
 /* =========================================================
    VIEWFORUM — SYSTEM / TOPIC CONTROL BARRA SUPERIOR — ACCIONES DERECHA
    ========================================================= */
