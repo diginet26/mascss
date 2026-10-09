@@ -1036,7 +1036,7 @@
     --dr-bg: #070d14;
     --dr-panel: #0c151f;
     --dr-panel2: #101e2b;
-    --dr-text: #edf8fb;
+    --colortextodl: #edf8fb;
     --dr-muted: #8195a4;
     --dr-border: rgba(255,255,255,.10);
     width: 45rem;
@@ -1046,7 +1046,7 @@
     box-sizing: border-box;
     background: linear-gradient(145deg, rgba(22,119,200,.08), transparent 35%, rgba(53,216,255,.04)), var(--dr-bg);
     border: 1px solid var(--dr-border);
-    color: var(--dr-text);
+    color: var(--colortextodl);
     font-family: 'Poppins', sans-serif;
     font-size: 0.75rem;
     position: relative;
@@ -1143,7 +1143,7 @@
 }
 
 .dr-data i {
-    color: var(--dr-text);
+    color: var(--colortextodl);
     font-style: normal;
     font-size: 0.625rem;
     line-height: 1.4;
@@ -1152,7 +1152,7 @@
 /* ============================================================
    TEXTO
    ============================================================ */
-.dr-text {
+.--colortextodl {
     padding: 1.0625rem;
     box-sizing: border-box;
     background: var(--dr-panel);
@@ -1163,8 +1163,8 @@
     text-align: justify;
 }
 
-.dr-text p {margin: 0 0 0.75rem;}
-.dr-text p:last-child {margin-bottom: 0;}
+.--colortextodl p {margin: 0 0 0.75rem;}
+.--colortextodl p:last-child {margin-bottom: 0;}
 
 /* ============================================================
    BLOQUES DE INFORMACIÓN
@@ -1891,13 +1891,7 @@
 #dr-post {
     --dr-blue: var(--emblema1, #1677C8);
     --dr-cyan: var(--emblema2, #22c1c3);
-    --dr-gold: var(--dg-gold, #f2b705);
-    --dr-bg: #080f18;
-    --dr-panel: #0d1722;
-    --dr-panel2: #111f2d;
     --dr-line: rgba(34,193,195,.22);
-    --dr-text: #dce8f2;
-    --dr-muted: #7f95a8;
 
     width: 42.5rem;
     max-width: calc(100% - 1.875rem);
@@ -1912,7 +1906,7 @@
     );
 
     border: 0.0625rem solid var(--dr-line);
-    color: var(--dr-text);
+    color: var(--colortextodl);
     font-family: "Oxanium", sans-serif;
     font-size: 0.75rem;
     line-height: 1.8;
@@ -1983,10 +1977,7 @@
     min-height: 11.875rem;
     padding: 1.75rem 2.125rem 1.5625rem;
 
-    background:
-  linear-gradient(
-218deg, var(--colorfondo4), var(--colorfondot))
-        );
+    background: var(--colorfondot);
 
     border-bottom: 0.0625rem solid rgba(255,255,255,.035);
     overflow: hidden;
@@ -2137,11 +2128,7 @@
 #dr-post .dr-post-body {
     padding: 1.875rem 2.875rem 2.1875rem;
 
-    background: linear-gradient(
-        13deg,
-        var(--colorfondo4),
-       var(--colorfondot)
-    );
+    background: var(--colorfondot);
 }
 
 
