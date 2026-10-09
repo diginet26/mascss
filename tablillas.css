@@ -1455,7 +1455,7 @@
 .dr-map-interest-title:before { content: "◈"; margin-right: .55rem; color: #8fffff; font-size: .75rem; } 
 .dr-map-interest-title:after { content: "INTEREST POINTS"; margin-left: auto; color: rgba(255,255,255,.35); font-size: .5rem; letter-spacing: .12em; } 
 .dr-map-interests { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .65rem; } 
-.dr-map-interest { min-width: 0; padding: .45rem; background: var(--fondocolor); border: 1px solid var(--fondocolort); position: relative; overflow: hidden; } 
+.dr-map-interest { min-width: 0; padding: .45rem; background: var(--colorfondo); border: 1px solid var(--colorfondot); position: relative; overflow: hidden; } 
 .dr-map-interest:before { content: ""; position: absolute; top: 0; left: 0; width: 1.5rem; height: 1.5rem; border-top: 2px solid var(--emblema2); border-left: 2px solid var(--emblema2); pointer-events: none; } 
 .dr-map-interest:after { content: ""; position: absolute; right: 0; bottom: 0; width: 1.5rem; height: 1.5rem; border-right: 2px solid var(--emblema2); border-bottom: 2px solid var(--emblema2); pointer-events: none; } 
 .dr-map-interest-image { position: relative; width: 100%; height: 8.5rem; overflow: hidden; background: #071019; } 
