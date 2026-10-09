@@ -6166,6 +6166,8 @@ blockquote blockquote {
     padding: 0 !important;
     box-sizing: border-box;
     appearance: none !important;
+    text-indent: 0 !important;
+    color: var(--text-color) !important;
     background: var(--theme-panel-deep) !important;
     background-image: none !important;
     border: .06rem solid var(--emblema2) !important;
@@ -6174,6 +6176,7 @@ blockquote blockquote {
     box-shadow: none !important;
     transition: background .18s ease, border-color .18s ease, transform .18s ease;
 }
+
 
 /* ESQUINAS TÉCNICAS */
 .sceditor-toolbar .sceditor-button::before {
@@ -6306,17 +6309,24 @@ blockquote blockquote {
 /* =========================================================
    DIGITAL RIFT — ICONOS FONT AWESOME DEL EDITOR
    ========================================================= */
-.sceditor-container .sceditor-toolbar .sceditor-button > i {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
+.sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {
+    display: inline-block !important;
+    width: 1.1rem !important;
+    height: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    text-indent: 0 !important;
     color: var(--text-color) !important;
-    font-size: .9rem;
-    line-height: 1;
-    text-align: center;
+    font-family: FontAwesome !important;
+    font-size: 1rem !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    line-height: 1 !important;
+    text-align: center !important;
     filter: none !important;
-    transition: color .18s ease, transform .18s ease;
 }
+
 
 .sceditor-container .sceditor-toolbar .sceditor-button:hover > i {
     color: var(--emblema2) !important;
