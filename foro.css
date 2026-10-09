@@ -20561,48 +20561,26 @@ p.right.rightside, p:has(+ h1.page-title) {display: none !important;}
     flex-shrink: 0;
 }
 
-.topic-actions:has(.search-box) .post-icon a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 2.2rem;
-    padding: 0 .9rem;
-    box-sizing: border-box;
-    border: .06rem solid var(--emblema2);
-    border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
-    color: var(--text-color) !important;
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .08rem;
-    text-transform: uppercase;
-    text-decoration: none !important;
-    transition: .25s ease;
-    box-shadow: none;
+.topic-actions:has(.search-box) .buttons > a:nth-of-type(1) .rtopicbutton {
+    font-size: 0 !important;
 }
 
-.topic-actions:has(.search-box) .post-icon a img {display: none !important;}
-.topic-actions:has(.search-box) .post-icon {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-}
-
-.topic-actions:has(.search-box) .post-icon a {font-size: 0 !important;}
-.topic-actions:has(.search-box) .post-icon a::after {
+.topic-actions:has(.search-box) .buttons > a:nth-of-type(1) .rtopicbutton::after {
+    content: "Nuevo";
     font: 700 .55rem/1 "Oxanium", monospace;
     letter-spacing: .08rem;
     text-transform: uppercase;
 }
 
-.topic-actions:has(.search-box) .post-icon:first-child a::after {content: "Nuevo";}
-.topic-actions:has(.search-box) .post-icon:nth-child(2) a::after {content: "Responder";}
-.topic-actions:has(.search-box) .post-icon img {display: none;}
-.topic-actions:has(.search-box) .post-icon a:hover {
-    border-color: var(--emblema1);
-    color: var(--emblema2) !important;
-    box-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent);
-    transform: translateY(-.05rem);
+.topic-actions:has(.search-box) .buttons > a:nth-of-type(2) .rtopicbutton {
+    font-size: 0 !important;
+}
+
+.topic-actions:has(.search-box) .buttons > a:nth-of-type(2) .rtopicbutton::after {
+    content: "Responder";
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
 }
 
 /* =========================================================
