@@ -2146,8 +2146,8 @@
 
     background: linear-gradient(
         180deg,
-        rgba(9,17,24,.96),
-        rgba(8,15,22,.98)
+        var(--colorfondo4),
+       var(--colorfondot)
     );
 }
 
@@ -2348,7 +2348,7 @@
 .dr-battle .battle-header:after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -0.1rem;
     left: 1.5625rem;
 
     width: 10.9375rem;
