@@ -15,7 +15,7 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(90deg, var(--colorfondo) 20%, var(--colorfondo4) 120%);
-    border: 1px solid var(--emblema1);
+    border: 1px solid var(--colorfondo);
     color: var(--colortextodl);
     font-family: "Oxanium",sans-serif;
     font-size: 0.75rem;
@@ -358,7 +358,12 @@
 
 /* ========================================================= DIGIMON — TABLILLA REGLA ========================================================= */
 /* ========================================================= ÍNDICE ========================================================= */ 
-.dr-rule-index { display: grid; grid-template-columns: repeat(3, 1fr); margin: 1.25rem 1.5625rem 0; border: 1px solid #183246; background: rgba(9,17,24,.85); } .dr-rule-index a { min-height: 3.25rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; box-sizing: border-box; border-right: 1px solid #183246; border-bottom: 1px solid #183246; color: var(--dg-muted); font-family: "Oxanium", monospace; font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.0625rem; text-transform: uppercase; text-decoration: none; transition: .2s ease; } .dr-rule-index a:nth-child(3n) { border-right: 0; } .dr-rule-index a:nth-child(n+4) { border-bottom: 0; } .dr-rule-index a:hover { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.05) ); box-shadow: inset 0 -0.125rem 0 var(--dg-cyan); } .dr-rule-index a span { color: var(--dg-cyan); margin-right: 0.375rem; }
+.dr-rule-index { display: grid; grid-template-columns: repeat(3, 1fr); margin: 1.25rem 1.5625rem 0; border: 1px solid var(--emblema2); background: var(--colorfondo); } 
+.dr-rule-index a { min-height: 3.25rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; box-sizing: border-box; border-right: 1px solid var(--emblema2); border-bottom: 1px solid var(--emblema2); color: var(--colortextod1); font-family: "Oxanium", monospace; font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.0625rem; text-transform: uppercase; text-decoration: none; transition: .2s ease; }
+.dr-rule-index a:nth-child(3n) { border-right: 0; } 
+.dr-rule-index a:nth-child(n+4) { border-bottom: 0; } 
+.dr-rule-index a:hover { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.05) ); box-shadow: inset 0 -0.125rem 0 var(--dg-cyan); } 
+.dr-rule-index a span { color: var(--dg-cyan); margin-right: 0.375rem; }
 
 /* ========================================================= BLOQUE DE NORMA ========================================================= */ 
 .dr-rule { margin-bottom: 0.5rem; padding: 1.0625rem; background: rgba(13,21,30,.85); border: 1px solid #213746; transition: .25s ease; box-sizing: border-box; } .dr-rule:hover { background: rgba(17,31,45,.95); border-color: rgba(34,193,195,.25); } 
