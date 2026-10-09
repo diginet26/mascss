@@ -2,9 +2,7 @@
     width: 100% !important;
     padding: 0 !important;
 }
-body {
-    overflow-x: hidden;
-}
+body {overflow-x: hidden;}
 /* FUENTES */
 .jersey-15-regular {
     font-family: "Jersey 15", sans-serif;
@@ -11733,36 +11731,26 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-decoration: none !important;
 }
 
-
-
 /* =========================================================
    TEXTOS DE LOS BOTONES — PUBLICAR / RESPONDER
    ========================================================= */
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton {
-    font-size: .55rem !important;
-}
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton, .topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton {font-size: 0 !important;}
 .topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton::before {
     content: "NUEVO";
+    display: inline !important;
+    color: var(--text-color) !important;
     font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .08rem;
+    letter-spacing: .07rem;
     text-transform: uppercase;
-}
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton {
-    color: transparent !important;
-    font-size: 0 !important;
 }
 .topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton::before {
     content: "RESPONDER";
+    display: inline !important;
+    color: var(--text-color) !important;
     font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .08rem;
+    letter-spacing: .07rem;
     text-transform: uppercase;
 }
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton {
-    color: transparent !important;
-    font-size: 0 !important;
-}
-
-
 
 /* =========================================================
    HOVER
@@ -11854,10 +11842,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* =========================================================
    VIEWFORUM — USUARIOS NAVEGANDO
    ========================================================= */
-
-.action-box + #info_open {
-    width: 100%;
-}
+.action-box + #info_open {width: 100%;}
 
 #info_open {
     padding: 1rem 1.2rem;
@@ -11882,16 +11867,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     font: 600 .58rem/1.5 "Roboto Mono", monospace;
 }
 
-#info_open p:last-child {
-    margin-bottom: 0;
-}
-
+#info_open p:last-child {margin-bottom: 0;}
 /* =========================================================
    VIEWFORUM — LEYENDA
    ========================================================= */
-
-#info_open + .h3,
-#info_open ~ .h3 {
+#info_open + .h3, #info_open ~ .h3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11980,10 +11960,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transform: translateY(-.04rem);
 }
 
-#info_open ~ .h3 + .clearfix > ul.ul-icons li img {
-    display: none !important;
-}
-
+#info_open ~ .h3 + .clearfix > ul.ul-icons li img {display: none !important;}
 #info_open ~ .h3 + .clearfix > ul.ul-icons li::before {
     content: "";
     width: .42rem;
@@ -12008,9 +11985,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* =========================================================
    IMAGEN PERSONALIZADA DEL FORO
    ========================================================= */
-.digimon-forum-card:has(.digimon-forum-custom-image) {
-    overflow: visible;
-}
+.digimon-forum-card:has(.digimon-forum-custom-image) {overflow: visible;}
 .digimon-forum-custom-image {
     position: absolute;
     top: -3.5rem;
@@ -12058,8 +12033,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* =========================================================
    DIGITAL RIFT — SKIN CLARA
    CATEGORÍAS + FOROS
-
-   CATEGORÍA
    ========================================================= */
 body.light-mode .digimon-category {
     background:linear-gradient(135deg, var(--theme-panel-alt), var(--theme-panel));
@@ -12075,18 +12048,10 @@ body.light-mode .digimon-category-header {
     border-color: var(--theme-border);
 }
 
-body.light-mode .digimon-category-label {
-    color: var(--theme-text-muted);
-}
-body.light-mode .digimon-category-title h2 {
-    color: var(--theme-text) !important;
-}
-body.light-mode .digimon-category-icon {
-    color: var(--linkc1);
-}
-body.light-mode .digimon-category-line {
-    opacity: .65;
-}
+body.light-mode .digimon-category-label {color: var(--theme-text-muted);}
+body.light-mode .digimon-category-title h2 {color: var(--theme-text) !important;}
+body.light-mode .digimon-category-icon {color: var(--linkc1);}
+body.light-mode .digimon-category-line {opacity: .65;}
 
 /* =========================================================
    TARJETAS DE FORO
@@ -12121,16 +12086,12 @@ body.light-mode .digimon-forum-name a.forumtitle {
     text-shadow: none !important;
 }
 
-body.light-mode .digimon-forum-name a.forumtitle:hover {
-    color: var(--linkc1) !important;
-}
+body.light-mode .digimon-forum-name a.forumtitle:hover {color: var(--linkc1) !important;}
 
 /* =========================================================
    RSINGLE / RDOUBLE / RTRIPLE   FONDO BASE
    ========================================================= */
-body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digimon-forum-description .rdoubleforum, body.light-mode .digimon-forum-description .rtripleforum {
-    background: var(--theme-panel-alt);
-}
+body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digimon-forum-description .rdoubleforum, body.light-mode .digimon-forum-description .rtripleforum {background: var(--theme-panel-alt);}
 
 /* =========================================================
    IMAGEN DE LOS FOROS
