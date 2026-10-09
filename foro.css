@@ -4726,7 +4726,7 @@ blockquote blockquote {
 /* Imagen horizontal */
 .digimon-forum-card:has(.rsingleforum) .rforimg {
     width: 55%;
-    -webkit-mask-image: linear-gradient(90deg,black 50%,transparent 100%);
+    /*-webkit-mask-image: linear-gradient(90deg,black 50%,transparent 100%);*/
     mask-image: linear-gradient(90deg, black 50%, transparent 100%);
 }
 
@@ -4935,7 +4935,7 @@ blockquote blockquote {
     gap: 12px;
     padding: 17px 18px;
     border-bottom: 1px solid var(--digimon-border);
-    background: var(--colorfondo4);
+    background: linear-gradient(10deg, var(--colorfondo), var(--colorfondo4));
 }
 
 .digimon-forum-number {
@@ -5021,7 +5021,7 @@ blockquote blockquote {
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
-    background: var(--colorfondo4);
+    background: var(--colorfondot);
 }
 
 /* Imagen del foro */
@@ -5146,7 +5146,7 @@ blockquote blockquote {
     align-items: center;
     justify-content: center;
     gap: 3px;
-    background: var(--colorfondo4);
+    background: var(--colorfondo);
 }
 
 .digimon-stat-icon {
@@ -5174,7 +5174,7 @@ blockquote blockquote {
     align-items: center;
     gap: 12px;
     padding: 12px 15px;
-    background: var(--colorfondo4);
+    background: linear-gradient(159deg, var(--colorfondo), var(--colorfondo4));
 }
 
 .digimon-lastpost-info {
