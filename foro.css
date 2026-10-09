@@ -6355,10 +6355,10 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
    ÁREA DE ESCRITURA EN MODO FUENTE
    El contenido WYSIWYG se estiliza desde el JS del iframe.
    ========================================================= */
-.sceditor-container iframe,
-.sceditor-container textarea {
+.sceditor-container iframe, .sceditor-container textarea {
     display: block;
     box-sizing: border-box;
+    min-height: 8rem !important;
     background-color: var(--theme-panel-deep) !important;
     color: var(--text-color) !important;
     font-family: "IBM Plex Mono", monospace !important;
