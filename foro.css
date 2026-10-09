@@ -6297,72 +6297,88 @@ blockquote blockquote {
    DIGITAL RIFT — CAMPOS Y ACCIONES DEL EDITOR
    ========================================================= */
 
+
+/* =========================================================
+   DIGITAL RIFT — TÍTULO Y ACCIONES DEL EDITOR
+   ========================================================= */
+
 /* CAMPO DEL TÍTULO */
-input#subject,
-input[name="subject"] {
-    display: block;
-    width: min(100%, 34rem);
-    min-height: 2.4rem;
-    margin: .45rem auto 1rem;
-    padding: .55rem .8rem;
-    box-sizing: border-box;
-    background: var(--theme-panel-deep) !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 48%, transparent) !important;
-    border-radius: .25rem !important;
-    color: var(--text-color) !important;
+input.inputbox.medium[name="subject"] {
+    display: block !important;
+    width: min(100%, 34rem) !important;
+    min-height: 2.5rem !important;
+    margin: .45rem auto 1rem !important;
+    padding: .6rem .8rem !important;
+    box-sizing: border-box !important;
+    appearance: none !important;
+    background: var(--theme-panel-deep, #0b1118) !important;
+    border: .06rem solid var(--emblema2) !important;
+    border-radius: .2rem !important;
+    color: var(--text-color, #e7faff) !important;
     font: 600 .8rem/1.4 "IBM Plex Mono", monospace !important;
-    letter-spacing: .02rem;
-    box-shadow: inset 0 0 .6rem rgba(0,0,0,.18);
-    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
-}
-
-input#subject:focus,
-input[name="subject"]:focus {
+    letter-spacing: .02rem !important;
+    box-shadow: inset 0 0 .6rem rgba(0,0,0,.2) !important;
     outline: none !important;
-    border-color: var(--emblema2) !important;
-    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 17%, transparent), inset 0 0 .6rem rgba(0,0,0,.15);
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease !important;
 }
 
-/* BOTONES DE PREVISUALIZAR, BOSQUEJO Y ENVIAR */
-form[name="post"] input[type="submit"],
-form[name="post"] input[type="button"],
-form#quick_reply input[type="submit"],
-form#quick_reply input[type="button"] {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 1.9rem;
-    margin: .25rem .12rem;
-    padding: .45rem .75rem;
-    box-sizing: border-box;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep)), color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))) !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 70%, transparent) !important;
+input.inputbox.medium[name="subject"]:focus {
+    background: var(--theme-panel-deep, #0b1118) !important;
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 22%, transparent), inset 0 0 .6rem rgba(0,0,0,.15) !important;
+}
+
+/* =========================================================
+   BOTONES — PREVISUALIZAR / BOSQUEJO / ENVIAR
+   ========================================================= */
+input.button2[name="preview"],
+input.button2[name="draft"],
+input.button1[name="post"],
+#quick_reply input[type="submit"],
+#quick_reply input[type="button"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 4rem !important;
+    min-height: 2rem !important;
+    margin: .25rem .12rem !important;
+    padding: .45rem .75rem !important;
+    box-sizing: border-box !important;
+    appearance: none !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel-deep)), color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))) !important;
+    border: .06rem solid var(--emblema2) !important;
     border-radius: .3rem !important;
     color: var(--text-color) !important;
     font: 700 .55rem/1.2 "Oxanium", monospace !important;
-    letter-spacing: .05rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+    letter-spacing: .05rem !important;
+    text-transform: uppercase !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    transition: background .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease !important;
 }
 
-form[name="post"] input[type="submit"]:hover,
-form[name="post"] input[type="button"]:hover,
-form#quick_reply input[type="submit"]:hover,
-form#quick_reply input[type="button"]:hover {
+/* HOVER */
+input.button2[name="preview"]:hover,
+input.button2[name="draft"]:hover,
+input.button1[name="post"]:hover,
+#quick_reply input[type="submit"]:hover,
+#quick_reply input[type="button"]:hover {
     background: color-mix(in srgb, var(--emblema2) 17%, var(--theme-panel-deep)) !important;
     border-color: var(--emblema2) !important;
     color: var(--emblema2) !important;
-    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 15%, transparent);
+    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 18%, transparent) !important;
     transform: translateY(-.04rem);
 }
 
-form[name="post"] input[type="submit"]:focus-visible,
-form[name="post"] input[type="button"]:focus-visible,
-form#quick_reply input[type="submit"]:focus-visible,
-form#quick_reply input[type="button"]:focus-visible {
-    outline: .06rem solid var(--emblema2);
-    outline-offset: .12rem;
+/* FOCO DE TECLADO */
+input.button2[name="preview"]:focus-visible,
+input.button2[name="draft"]:focus-visible,
+input.button1[name="post"]:focus-visible,
+#quick_reply input[type="submit"]:focus-visible,
+#quick_reply input[type="button"]:focus-visible {
+    outline: .06rem solid var(--emblema2) !important;
+    outline-offset: .12rem !important;
 }
 
 
