@@ -6175,19 +6175,32 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
     pointer-events: none;
 }
 
-/*.sceditor-toolbar::after {
-    content: "DIGITAL RIFT / TEXT INTERFACE";
-    display: block;
-    flex: 1 0 100%;
-    margin-top: .15rem;
-    padding-top: .35rem;
-    border-top: .05rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
-    color: color-mix(in srgb, var(--text-color) 38%, transparent);
-    font: 500 .46rem/1.3 "IBM Plex Mono", monospace;
-    letter-spacing: .08rem;
-    text-align: right;
+.sceditor-toolbar {
+    position: relative;
+    overflow: visible !important;
+}
+
+.sceditor-toolbar::after {
+    content: "";
+    position: absolute;
+    top: -3.5rem;
+    right: .5rem;
+    width: 7rem;
+    height: 9rem;
+    background-image: url("https://imgur.com/ys6xFXr.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    filter: drop-shadow(0 0 .35rem color-mix(in srgb, var(--emblema2) 30%, transparent));
+    z-index: 20;
     pointer-events: none;
-}*/
+}
+
+@media (max-width: 700px) {
+    .sceditor-toolbar::after {
+        display: none;
+    }
+}
 
 /* =========================================================
    GRUPOS DE HERRAMIENTAS — MÓDULOS
