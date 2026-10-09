@@ -6148,20 +6148,23 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
 .sceditor-toolbar {
     position: relative;
     display: flex !important;
-    flex-wrap: wrap !important;
     align-items: center;
-    gap: .3rem;
-    width: auto !important;
+    align-content: flex-start;
+    flex-wrap: wrap !important;
+    gap: .25rem;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
     height: auto !important;
-    min-height: 2.8rem;
-    padding: .8rem .6rem .55rem !important;
+    min-height: 2.75rem;
+    margin: 0 !important;
+    padding: .5rem !important;
     box-sizing: border-box;
     overflow: visible !important;
-    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep)), var(--theme-panel-deep) 55%, color-mix(in srgb, var(--emblema1) 6%, var(--theme-panel-deep))) !important;
-    background-size: 1.25rem 1.25rem, 1.25rem 1.25rem, auto !important;
+    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep)), var(--theme-panel-deep) 55%, color-mix(in srgb, var(--emblema1) 7%, var(--theme-panel-deep))) !important;
     border: 0 !important;
-    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 55%, transparent) !important;
-    box-shadow: none !important;
+    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 60%, transparent) !important;
+    box-shadow: inset 0 -.06rem 0 color-mix(in srgb, var(--emblema1) 15%, transparent) !important;
 }
 
 .sceditor-toolbar::before {
@@ -6173,11 +6176,6 @@ form[name="post"] .inner > div.h3:has(+ br + fieldset.fields1)::after {
     height: .1rem;
     background: linear-gradient(90deg, transparent, var(--emblema2) 25%, var(--emblema1) 75%, transparent);
     pointer-events: none;
-}
-
-.sceditor-toolbar {
-    position: relative;
-    overflow: visible !important;
 }
 
 .sceditor-toolbar::after {
