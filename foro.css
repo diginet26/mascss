@@ -11734,27 +11734,34 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 
+
 /* =========================================================
    TEXTOS DE LOS BOTONES — PUBLICAR / RESPONDER
    ========================================================= */
 .topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton {
+    font-size: .55rem !important;
+}
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton::before {
+    content: "NUEVO";
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+}
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton {
+    color: transparent !important;
     font-size: 0 !important;
 }
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(1) .rtopicbutton::after {
-    content: "Nuevo";
+.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton::before {
+    content: "RESPONDER";
     font: 700 .55rem/1 "Oxanium", monospace;
     letter-spacing: .08rem;
     text-transform: uppercase;
 }
 .topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton {
+    color: transparent !important;
     font-size: 0 !important;
 }
-.topic-actions:not(:has(.search-box)) .buttons > a:nth-of-type(2) .rtopicbutton::after {
-    content: "Responder";
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .08rem;
-    text-transform: uppercase;
-}
+
 
 
 /* =========================================================
