@@ -6126,21 +6126,26 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   GRUPOS DE HERRAMIENTAS
+   GRUPOS DE HERRAMIENTAS — ELIMINAR ESTILO NATIVO
    ========================================================= */
-.sceditor-group {
+.sceditor-container .sceditor-toolbar .sceditor-group {
     display: flex !important;
     align-items: center;
     flex-shrink: 0;
     gap: .2rem;
     margin: 0 .25rem 0 0 !important;
     padding: 0 .4rem 0 0 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
     border-right: .06rem solid color-mix(in srgb, var(--emblema2) 28%, transparent) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
-.sceditor-group:last-child {
-    border-right: 0 !important;
-}
+.sceditor-container .sceditor-toolbar .sceditor-group:last-child {border-right: 0 !important;}
+
 
 /* =========================================================
    BOTONES DE HERRAMIENTAS — ACABADO LIMPIO
