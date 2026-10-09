@@ -6143,7 +6143,7 @@ blockquote blockquote {
 }
 
 /* =========================================================
-   BOTONES DE HERRAMIENTAS
+   BOTONES DE HERRAMIENTAS — ACABADO LIMPIO
    ========================================================= */
 .sceditor-toolbar .sceditor-button {
     position: relative;
@@ -6160,11 +6160,14 @@ blockquote blockquote {
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
-    background: color-mix(in srgb, var(--theme-panel) 70%, var(--theme-panel-deep)) !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border)) !important;
-    border-radius: .22rem !important;
-    box-shadow: inset 0 0 .35rem color-mix(in srgb, var(--emblema2) 5%, transparent);
-    transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+    appearance: none !important;
+    background: var(--theme-panel-deep) !important;
+    background-image: none !important;
+    border: .06rem solid var(--emblema2) !important;
+    border-radius: .2rem !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: background .18s ease, border-color .18s ease, transform .18s ease;
 }
 
 /* ESQUINAS TÉCNICAS */
@@ -6181,8 +6184,11 @@ blockquote blockquote {
     pointer-events: none;
 }
 
-/* ICONOS */
+/* ICONOS NATIVOS DE SCEDITOR */
 .sceditor-toolbar .sceditor-button div {
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
     opacity: .9;
     filter: brightness(0) invert(1);
     transition: filter .18s ease, opacity .18s ease;
