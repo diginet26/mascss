@@ -12955,20 +12955,21 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     object-fit: cover;
 }
 
+
 /* =========================================================
    ICONOS DEL PERSONAJE
    ========================================================= */
-
 .dr-post-links {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0;
     margin-top: 2px;
     box-sizing: border-box;
     border: .06rem solid color-mix(in srgb, var(--emblema1) 45%, transparent);
     background: var(--theme-panel-deep);
 }
+
 
 .dr-post-icon {
     position: relative;
@@ -13085,6 +13086,16 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 .dr-post-pm > a img {
     display: none !important;
 }
+
+
+.dr-post-profile-link[data-profile-field="baul"]::before {
+    content: "\f466" !important;
+}
+
+.dr-post-profile-link[data-profile-field="digivice"]::before {
+    content: "\f10b" !important;
+}
+
 
 /* =========================================================
    MENSAJE
