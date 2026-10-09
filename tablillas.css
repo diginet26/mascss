@@ -1469,7 +1469,7 @@
 /* CABECERA TABLILLAS*/
 
 .dr-tadmin .dr-cabecera { height: 1.875rem; padding: 0 1.125rem; display: flex; align-items: center; justify-content: space-between; background: #07111b; border-bottom: 1px solid var(--emblema2); color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 0.5rem; letter-spacing: 0.09375rem; text-transform: uppercase; } 
-.dr-tadmin .dr-cabecera strong { color: var(--battle-cyan); }
+.dr-tadmin .dr-cabecera strong { color: var(--emblema2); }
 .dr-tadmin .battle-status { display: flex; align-items: center; gap: 0.4375rem; }
 .dr-tadmin .battle-status i { width: 0.3125rem; height: 0.3125rem; display: block; background: var(--battle-red); border-radius: 50%; box-shadow: 0 0 0.5rem rgba(217,75,91,.7); }
 
@@ -2252,7 +2252,7 @@
 .dr-battle {
     --battle-blue: #1677C8;
     --battle-blue-dark: #0b3d68;
-    --battle-cyan: #22c1c3;
+    --emblema2: #22c1c3;
     --battle-gold: #f2b705;
     --battle-red: #d94b5b;
     --battle-bg: #080f18;
@@ -2435,7 +2435,7 @@
     padding: 0.1875rem 0.5rem;
 
     border: 0.0625rem solid var(--battle-blue);
-    color: var(--battle-cyan);
+    color: var(--emblema2);
 
     font-family: "Roboto Mono", monospace;
     font-size: 0.4375rem;
@@ -2476,7 +2476,7 @@
     right: 1.75rem;
     bottom: 0.9375rem;
 
-    color: var(--battle-cyan);
+    color: var(--emblema2);
     font-size: 2.1875rem;
     opacity: .12;
 
@@ -2552,7 +2552,7 @@
 }
 
 .dr-battle .battle-stat:hover b {
-    color: var(--battle-cyan);
+    color: var(--emblema2);
 }
 
 
@@ -2594,7 +2594,7 @@
     background: linear-gradient(
         90deg,
         var(--battle-blue-dark),
-        var(--battle-cyan)
+        var(--emblema2)
     );
 
     box-shadow: 0 0 0.75rem rgba(34,193,195,.25);
@@ -2667,7 +2667,7 @@
     margin: 1.25rem 1.5625rem 1.5625rem;
 
     border: 0.0625rem solid #183246;
-    background: rgba(9,17,24,.82);
+    background: var(--colorfondo);
 }
 
 
@@ -2701,7 +2701,7 @@
 .dr-battle .battle-panel-title span i {
     margin-right: 0.5rem;
 
-    color: var(--battle-cyan);
+    color: var(--emblema2);
     font-size: 0.75rem;
 }
 
@@ -2727,7 +2727,7 @@
 .dr-battle .battle-log i {
     margin-right: 0.4375rem;
 
-    color: var(--battle-cyan);
+    color: var(--emblema2);
     font-size: 0.5rem;
 }
 
@@ -2749,20 +2749,20 @@
     grid-template-columns: repeat(2, 1fr);
 
     gap: 0.4375rem;
-    margin: 0 1.0625rem 1.0625rem;
+    margin: 0 1.6rem 2rem;
 }
 
 .dr-battle .battle-action {
     padding: 0.6875rem 0.8125rem;
 
-    background: #0b151f;
+    background: var(--colorfondo);
     border: 0.0625rem solid #203b4c;
 
     transition: .2s ease;
 }
 
 .dr-battle .battle-action:hover {
-    border-color: var(--battle-cyan);
+    border-color: var(--emblema2);
     background: rgba(34,193,195,.04);
 
     transform: translateX(0.125rem);
@@ -2771,7 +2771,7 @@
 .dr-battle .battle-action small {
     display: block;
 
-    color: var(--battle-cyan);
+    color: var(--emblema2);
     font-family: "Roboto Mono", monospace;
     font-size: 0.4375rem;
     letter-spacing: 0.0625rem;
