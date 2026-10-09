@@ -1984,11 +1984,6 @@
     padding: 1.75rem 2.125rem 1.5625rem;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(22,119,200,.10),
-            transparent 45%
-        ),
   linear-gradient(
 218deg, var(--colorfondo4), var(--colorfondot))
         );
@@ -2503,7 +2498,7 @@
 
     margin: 1.25rem 1.5625rem 0.9375rem;
 
-    border: 0.0625rem solid #183246;
+    border: 0.0625rem solid var(--emblema2);
 }
 
 .dr-battle .battle-stat {
@@ -2512,7 +2507,7 @@
     text-align: center;
 
     background: var(--colorfondo);
-    border-right: 0.0625rem solid #183246;
+    border-right: 0.0625rem solid var(--emblema2);
 }
 
 .dr-battle .battle-stat:last-child {
@@ -2663,7 +2658,7 @@
 .dr-battle .battle-panel {
     margin: 1.25rem 1.5625rem 1.5625rem;
 
-    border: 0.0625rem solid #183246;
+    border: 0.0625rem solid var(--emblema2);
     background: var(--colorfondo);
 }
 
@@ -2678,13 +2673,9 @@
     align-items: center;
     justify-content: space-between;
 
-    background: linear-gradient(
-        90deg,
-        rgba(22,119,200,.14),
-        transparent
-    );
+    background: var(--colorfondo);
 
-    border-bottom: 0.0625rem solid #183246;
+    border-bottom: 0.0625rem solid var(--emblema2);
 }
 
 .dr-battle .battle-panel-title span {
@@ -2826,7 +2817,7 @@
     }
 
     .dr-battle .battle-stat:nth-child(-n+3) {
-        border-bottom: 0.0625rem solid #183246;
+        border-bottom: 0.0625rem solid var(--emblema2);
     }
 
     .dr-battle .battle-actions {
