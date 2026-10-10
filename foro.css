@@ -6135,8 +6135,9 @@ form[name="post"]:not(#quick_reply) .inner > div.h3:has(+ br + fieldset.fields1)
 }
 
 /* =========================================================
-   BARRA DE HERRAMIENTAS — BASE COMÚN
-   Respuesta rápida conserva el ancho completo.
+   BARRA DE HERRAMIENTAS — LOS TRES EDITORES
+   Reserva la columna derecha para Ekakimon en respuesta rápida,
+   nuevo tema y respuesta completa.
    ========================================================= */
 .sceditor-toolbar {
     position: relative !important;
@@ -6149,7 +6150,7 @@ form[name="post"]:not(#quick_reply) .inner > div.h3:has(+ br + fieldset.fields1)
     gap: .25rem;
     clear: none !important;
     float: none !important;
-    width: 100% !important;
+    width: 82% !important;
     min-width: 0 !important;
     max-width: 100% !important;
     height: auto !important;
@@ -6176,16 +6177,8 @@ form[name="post"]:not(#quick_reply) .inner > div.h3:has(+ br + fieldset.fields1)
     pointer-events: none;
 }
 
-/* =========================================================
-   EDITORES COMPLETOS — COLUMNA DE EKAKIMON
-   Solo en las páginas Nuevo tema y Responder.
-   No afecta a #quick_reply, cuyo formulario también usa name="post".
-   ========================================================= */
-form[name="post"]:not(#quick_reply) .sceditor-toolbar {
-    width: 82% !important;
-}
-
-form[name="post"]:not(#quick_reply) .sceditor-container::before {
+/* Columna lateral de la barra: la comparte cada editor. */
+.sceditor-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -6199,7 +6192,8 @@ form[name="post"]:not(#quick_reply) .sceditor-container::before {
     z-index: 0;
 }
 
-form[name="post"]:not(#quick_reply) .sceditor-toolbar::after {
+/* Ekakimon: aparece también en la respuesta rápida. */
+.sceditor-toolbar::after {
     content: "";
     position: absolute;
     top: -3.5rem;
@@ -6213,6 +6207,18 @@ form[name="post"]:not(#quick_reply) .sceditor-toolbar::after {
     filter: drop-shadow(0 0 .35rem color-mix(in srgb, var(--emblema2) 30%, transparent));
     z-index: 20;
     pointer-events: none;
+}
+
+@media (max-width: 700px) {
+    .sceditor-toolbar {
+        width: 100% !important;
+    }
+    .sceditor-container::before {
+        display: none !important;
+    }
+    .sceditor-toolbar::after {
+        display: none !important;
+    }
 }
 
 /* =========================================================
@@ -6561,21 +6567,6 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     float: none !important;
     text-align: left !important;
     box-sizing: border-box !important;
-}
-
-/* En móvil desaparece el Digimon decorativo y la barra recupera el ancho completo. */
-@media (max-width: 700px) {
-    form[name="post"]:not(#quick_reply) .sceditor-toolbar {
-        width: 100% !important;
-    }
-
-    form[name="post"]:not(#quick_reply) .sceditor-container::before {
-        display: none;
-    }
-
-    form[name="post"]:not(#quick_reply) .sceditor-toolbar::after {
-        display: none;
-    }
 }
 
 /* =========================================================
