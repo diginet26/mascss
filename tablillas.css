@@ -1465,7 +1465,7 @@
 .dr-map-interest-image img { transform: scale(1.05); filter: saturate(1.15); } 
 .dr-map-interest-name { position: relative; z-index: 2; margin: -.15rem .35rem 0; padding: .4rem .5rem; background: var(--emblema2); border: 1px solid var(--emblema1); color: #fff; font-size: .58rem; font-weight: 900; line-height: 1.2; letter-spacing: .08em; text-align: center; text-transform: uppercase; clip-path: polygon(2% 0,98% 0,100% 100%,0 100%); } 
 .dr-map-interest-description { margin: .55rem .3rem .25rem; padding: .55rem .5rem .6rem; border-top: 1px solid #193542; color: #7f929d; font-size: .62rem; line-height: 1.55; text-align: justify;  max-height: 7rem; overflow: auto; } 
-.dr-map-interest-description:before { content: "DATA // "; color: var(--emblema1); font-size: .52rem; font-weight: 900; letter-spacing: .08em; } 
+.dr-map-interest-description:before { content: "// "; color: var(--emblema1); font-size: .52rem; font-weight: 900; letter-spacing: .08em; } 
 
 @media (max-width: 40rem) .dr-map-interests { grid-template-columns: 1fr; } .dr-map-interest-image { height: 10rem; } .dr-map-interest-title:after { display: none; } } 
 
