@@ -10731,53 +10731,62 @@ p.right.rightside, p:has(+ h1.page-title) {
 /* =========================================================
    VIEWTOPIC — CONTROLES EN LA BARRA INFERIOR
    ========================================================= */
-
 .topic-actions:has(.dr-topic-bottom-tools) .buttons {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: .35rem;
+    gap: .4rem;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link {
+.topic-actions .buttons > a.dr-topic-watch-link,
+.topic-actions .buttons > a[href*="watch=topic"],
+.topic-actions .buttons > a[title*="vigilar" i] {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    width: 2.3rem;
-    min-width: 2.3rem;
-    height: 2.3rem;
-    min-height: 2.3rem;
-    flex: 0 0 2.3rem;
+    width: 2.3rem !important;
+    min-width: 2.3rem !important;
+    height: 2.3rem !important;
+    min-height: 2.3rem !important;
+    flex: 0 0 2.3rem !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
-    border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 9%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
-    color: var(--text-color) !important;
-    font: 0/0 "Oxanium", sans-serif !important;
-    letter-spacing: 0;
-    text-transform: uppercase;
+    border: 1px solid var(--emblema2) !important;
+    border-radius: .35rem !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 13%, var(--post-background)), var(--post-background)) !important;
+    color: var(--emblema2) !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    letter-spacing: 0 !important;
     text-decoration: none !important;
     white-space: nowrap;
     transition: .2s ease;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link img {
+.topic-actions .buttons > a.dr-topic-watch-link img,
+.topic-actions .buttons > a[href*="watch=topic"] img,
+.topic-actions .buttons > a[title*="vigilar" i] img {
     display: none !important;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link::before {
+.topic-actions .buttons > a.dr-topic-watch-link::before,
+.topic-actions .buttons > a[href*="watch=topic"]::before,
+.topic-actions .buttons > a[title*="vigilar" i]::before {
     content: "\f0f3";
-    margin: 0;
-    color: var(--emblema2);
-    font: normal 400 .8rem/1 FontAwesome;
+    display: block;
+    margin: 0 !important;
+    color: var(--emblema2) !important;
+    font: normal 400 .85rem/1 FontAwesome !important;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link:hover {
-    border-color: var(--emblema1);
+.topic-actions .buttons > a.dr-topic-watch-link:hover,
+.topic-actions .buttons > a[href*="watch=topic"]:hover,
+.topic-actions .buttons > a[title*="vigilar" i]:hover {
+    border-color: var(--emblema1) !important;
+    background: color-mix(in srgb, var(--emblema1) 12%, var(--post-background)) !important;
     color: var(--emblema2) !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 15%, transparent), color-mix(in srgb, var(--emblema1) 12%, transparent));
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema2) 20%, transparent);
 }
 
 .topic-actions .dr-topic-bottom-tools {
@@ -11956,66 +11965,71 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
    VIEWTOPIC — SELECTOR CAMBIAR A DENTRO DE LA BARRA INFERIOR
    ========================================================= */
 .dr-topic-footer-bar > .dr-topic-jumpbox {
-    display: flex;
+    display: flex !important;
     align-items: center;
     flex: 0 1 auto;
     min-width: 0;
-    margin: 0 0 0 .75rem;
+    margin: 0 0 0 .75rem !important;
 }
 
 .dr-topic-footer-bar .dr-topic-jumpbox-fieldset {
-    display: flex;
+    display: flex !important;
     align-items: center;
-    gap: .35rem;
+    gap: .4rem;
     min-width: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
     white-space: nowrap;
 }
 
 .dr-topic-footer-bar .dr-topic-jumpbox-fieldset label {
-    margin: 0;
-    color: var(--text-color);
-    font: 600 .58rem/1 "Oxanium", sans-serif;
+    margin: 0 !important;
+    color: var(--emblema2) !important;
+    font: 700 .55rem/1 "Oxanium", sans-serif !important;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
     white-space: nowrap;
 }
 
 .dr-topic-footer-bar .dr-topic-jumpbox select {
-    width: 11rem;
+    width: 11rem !important;
     max-width: 18vw;
     min-width: 8rem;
-    height: 2.2rem;
-    margin: 0;
-    padding: 0 .65rem;
+    height: 2.2rem !important;
+    margin: 0 !important;
+    padding: 0 .65rem !important;
     box-sizing: border-box;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
-    border-radius: .35rem;
-    outline: 0;
-    background: color-mix(in srgb, var(--post-background) 90%, transparent);
-    color: var(--text-color);
-    font: 600 .55rem/1 "Oxanium", sans-serif;
+    border: 1px solid var(--emblema2) !important;
+    border-radius: .35rem !important;
+    outline: 0 !important;
+    background: var(--post-background) !important;
+    color: var(--text-color) !important;
+    font: 600 .55rem/1 "Oxanium", sans-serif !important;
+    box-shadow: inset 0 0 .65rem color-mix(in srgb, var(--emblema2) 8%, transparent);
 }
 
 .dr-topic-footer-bar .dr-topic-jumpbox .button2 {
-    min-width: 2.2rem;
-    height: 2.2rem;
-    margin: 0;
-    padding: 0 .55rem;
+    min-width: 2.2rem !important;
+    height: 2.2rem !important;
+    margin: 0 !important;
+    padding: 0 .55rem !important;
     box-sizing: border-box;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
-    border-radius: .35rem;
-    background: color-mix(in srgb, var(--post-background) 90%, transparent);
-    color: var(--text-color);
-    font: 700 .53rem/1 "Oxanium", sans-serif;
+    border: 1px solid var(--emblema2) !important;
+    border-radius: .35rem !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 13%, var(--post-background)), var(--post-background)) !important;
+    color: var(--text-color) !important;
+    font: 700 .53rem/1 "Oxanium", sans-serif !important;
+    letter-spacing: .04rem;
     cursor: pointer;
     transition: .2s ease;
 }
 
 .dr-topic-footer-bar .dr-topic-jumpbox .button2:hover {
-    border-color: var(--emblema1);
-    color: var(--emblema2);
+    border-color: var(--emblema1) !important;
+    background: color-mix(in srgb, var(--emblema1) 12%, var(--post-background)) !important;
+    color: var(--emblema2) !important;
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
 
@@ -12025,7 +12039,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     }
 
     .dr-topic-footer-bar > .dr-topic-jumpbox {
-        margin-left: .5rem;
+        margin-left: .5rem !important;
     }
 
     .dr-topic-footer-bar .dr-topic-jumpbox select {
