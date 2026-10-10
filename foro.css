@@ -10727,20 +10727,26 @@ p.right.rightside, p:has(+ h1.page-title) {
     cursor: pointer;
 }
 
-
 /* =========================================================
    VIEWTOPIC — CONTROLES EN LA BARRA INFERIOR
    ========================================================= */
-.topic-actions:has(.dr-topic-bottom-tools) .buttons {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .4rem;
+.topic-actions.dr-topic-footer-bar {
+    justify-content: flex-start;
+    gap: .65rem;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link,
-.topic-actions .buttons > a[href*="watch=topic"],
-.topic-actions .buttons > a[title*="vigilar" i] {
+.topic-actions.dr-topic-footer-bar .buttons {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    gap: .35rem;
+    margin: 0;
+}
+
+.topic-actions.dr-topic-footer-bar a.dr-topic-watch-link,
+.topic-actions.dr-topic-footer-bar a[href*="watch"],
+.topic-actions.dr-topic-footer-bar a[title*="vigilar" i] {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -10752,9 +10758,9 @@ p.right.rightside, p:has(+ h1.page-title) {
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
-    border: 1px solid var(--emblema2) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, transparent) !important;
     border-radius: .35rem !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 13%, var(--post-background)), var(--post-background)) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, var(--post-background)), var(--post-background)) !important;
     color: var(--emblema2) !important;
     font-size: 0 !important;
     line-height: 0 !important;
@@ -10764,15 +10770,15 @@ p.right.rightside, p:has(+ h1.page-title) {
     transition: .2s ease;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link img,
-.topic-actions .buttons > a[href*="watch=topic"] img,
-.topic-actions .buttons > a[title*="vigilar" i] img {
+.topic-actions.dr-topic-footer-bar a.dr-topic-watch-link img,
+.topic-actions.dr-topic-footer-bar a[href*="watch"] img,
+.topic-actions.dr-topic-footer-bar a[title*="vigilar" i] img {
     display: none !important;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link::before,
-.topic-actions .buttons > a[href*="watch=topic"]::before,
-.topic-actions .buttons > a[title*="vigilar" i]::before {
+.topic-actions.dr-topic-footer-bar a.dr-topic-watch-link::before,
+.topic-actions.dr-topic-footer-bar a[href*="watch"]::before,
+.topic-actions.dr-topic-footer-bar a[title*="vigilar" i]::before {
     content: "\f0f3";
     display: block;
     margin: 0 !important;
@@ -10780,31 +10786,64 @@ p.right.rightside, p:has(+ h1.page-title) {
     font: normal 400 .85rem/1 FontAwesome !important;
 }
 
-.topic-actions .buttons > a.dr-topic-watch-link:hover,
-.topic-actions .buttons > a[href*="watch=topic"]:hover,
-.topic-actions .buttons > a[title*="vigilar" i]:hover {
+.topic-actions.dr-topic-footer-bar a.dr-topic-watch-link:hover,
+.topic-actions.dr-topic-footer-bar a[href*="watch"]:hover,
+.topic-actions.dr-topic-footer-bar a[title*="vigilar" i]:hover {
     border-color: var(--emblema1) !important;
     background: color-mix(in srgb, var(--emblema1) 12%, var(--post-background)) !important;
     color: var(--emblema2) !important;
     box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema2) 20%, transparent);
 }
 
-.topic-actions .dr-topic-bottom-tools {
-    display: flex !important;
-    flex-direction: row !important;
+.topic-actions.dr-topic-footer-bar .dr-topic-jumpbox {
+    display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: .35rem;
-    margin: 0 0 0 auto;
+    flex: 0 1 auto;
     min-width: 0;
+    margin: 0;
+}
+
+.topic-actions.dr-topic-footer-bar .dr-topic-jumpbox-fieldset {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.topic-actions.dr-topic-footer-bar .dr-topic-jumpbox label {
+    margin: 0;
+    color: var(--text-color);
+    font: 600 .6rem/1.2 "Oxanium", sans-serif;
     white-space: nowrap;
 }
 
-.topic-actions .dr-topic-bottom-tools .pagination {
-    margin: 0 !important;
-    padding: 0 !important;
+.topic-actions.dr-topic-footer-bar .dr-topic-jumpbox select {
+    width: 13rem;
+    max-width: 24vw;
+    height: 2.3rem;
+    padding: 0 .65rem;
+    box-sizing: border-box;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
+    border-radius: .35rem;
+    outline: none;
+    background: var(--post-background);
+    color: var(--text-color);
+    font: 600 .58rem/1 "Oxanium", sans-serif;
 }
 
+.topic-actions.dr-topic-footer-bar .dr-topic-jumpbox select:focus {
+    border-color: var(--emblema1);
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 18%, transparent);
+}
+
+.topic-actions.dr-topic-footer-bar > .pagination {
+    flex: 0 0 auto;
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+}
 
 /* =========================================================
    VIEWFORUM — SYSTEM / TOPIC CONTROL BARRA SUPERIOR — ACCIONES DERECHA
