@@ -10844,7 +10844,7 @@ p.right.rightside, p:has(+ h1.page-title) {
     margin: 0 0 0 auto !important;
     padding: 0 !important;
 }
-
+.topic-actions.dr-topic-footer-bar > .pagination a[href*="Pagination"], .topic-actions.dr-topic-footer-bar > .pagination .page-sep {display: none !important;}
 /* =========================================================
    VIEWFORUM — SYSTEM / TOPIC CONTROL BARRA SUPERIOR — ACCIONES DERECHA
    ========================================================= */
