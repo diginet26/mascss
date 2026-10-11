@@ -12025,7 +12025,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 .dr-topic-footer-bar .dr-topic-jumpbox-fieldset label {display: none !important;}
 .dr-topic-footer-bar .dr-topic-jumpbox select {
-    width: 11rem !important;
+    width: 21rem !important;
     max-width: 18vw;
     min-width: 8rem;
     height: 2.2rem !important;
