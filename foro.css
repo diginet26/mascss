@@ -13310,7 +13310,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     inset: .42rem;
     z-index: 3;
     pointer-events: none;
-    border: .07rem solid var(--dr-group-color, var(--emblema2));
+    /*border: .07rem solid var(--dr-group-color, var(--emblema2));*/
     box-shadow: inset 0 0 0 .05rem var(--dr-group-color, var(--emblema2)), 0 0 .45rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 15%, transparent);
 }
 
