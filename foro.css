@@ -10866,7 +10866,7 @@ p.right.rightside, p:has(+ h1.page-title) {
 
 .forum-top-actions {
     position: absolute;
-    top: 1.85rem;
+    top: 1.35rem;
     right: 1rem;
     display: flex;
     align-items: center;
