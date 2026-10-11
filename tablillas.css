@@ -489,8 +489,7 @@
 .dr-map-head {
     padding:1.125rem 1.25rem;
     background: var(--colorfondo);
-    border:1px solid #183246;
-    border-bottom:1px solid var(--map-line);
+    border:1px solid var(--emblema2);
 }
 
 .dr-map-label {
@@ -522,12 +521,10 @@
 
 /* INTRODUCCIÓN */
 .dr-map-intro {
-    margin-top:0.625rem;
     padding:0.8125rem 0.9375rem;
-    background:rgba(13,21,30,.85);
-    border-left:2px solid var(--map-blue);
-    border-right:1px solid var(--map-line);
-    color:#aebdca;
+    background: var(--colorfondo);
+/*    border-left:2px solid var(--map-blue);
+    border-right:1px solid var(--map-line);*/
     font-size:0.625rem;
 }
 
