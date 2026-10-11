@@ -10271,6 +10271,7 @@ ul.topiclist.topics li.row:hover .topictitle {
     text-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 22%, transparent);
 }
 
+
 ul.topiclist.topics span.span-tab {
     position: absolute;
     left: 1.5rem;
@@ -10278,20 +10279,27 @@ ul.topiclist.topics span.span-tab {
     display: inline-flex;
     align-items: center;
     gap: .35rem;
-    width: auto;
+    width: 30%;
+    max-width: 30%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     color: color-mix(in srgb, var(--text-color) 62%, transparent);
     font: 700 .5rem/1 "Roboto Mono", monospace;
     letter-spacing: .09rem;
     text-transform: uppercase;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 ul.topiclist.topics span.span-tab strong {
+    min-width: 0;
     margin-left: .3rem;
+    overflow: hidden;
     color: var(--emblema1);
     font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 ul.topiclist.topics dd.posts,
@@ -10316,11 +10324,11 @@ ul.topiclist.topics dd.views {
 }
 
 ul.topiclist.topics dd.posts {
-    left: 6rem;
+    left: 36%;
 }
 
 ul.topiclist.topics dd.views {
-    left: 12rem;
+    left: 60%;
 }
 
 ul.topiclist.topics dd.posts::before,
@@ -10361,6 +10369,7 @@ ul.topiclist.topics dd.views dfn {
     font: inherit !important;
     font-style: normal;
 }
+
 
 ul.topiclist.topics:not(.search) dd.lastpost {
     top: 0;
