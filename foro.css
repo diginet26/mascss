@@ -13286,7 +13286,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     overflow: hidden;
     box-sizing: border-box;
     background: var(--theme-panel-deep);
-    border: .14rem solid var(--dr-group-color, var(--emblema2));
+    border: 0;
     box-shadow: 0 0 0 .06rem var(--theme-panel-deep);
     top: 1px;
 }
