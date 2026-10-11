@@ -13291,15 +13291,15 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     top: 1px;
 }
 
-/* Borde interior tecnológico = EMBLEMA2 */
+/* Borde interior tecnológico = COLOR DEL GRUPO */
 .dr-post-avatar::before {
     content: "";
     position: absolute;
     inset: .42rem;
     z-index: 3;
     pointer-events: none;
-    border: .07rem solid var(--emblema2);
-    box-shadow: inset 0 0 0 .05rem var(--emblema2), 0 0 .45rem color-mix(in srgb, var(--emblema2) 15%, transparent);
+    border: .07rem solid var(--dr-group-color, var(--emblema2));
+    box-shadow: inset 0 0 0 .05rem var(--dr-group-color, var(--emblema2)), 0 0 .45rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 15%, transparent);
 }
 
 /* Esquinas interiores = EMBLEMA2 */
