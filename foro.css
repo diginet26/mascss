@@ -10272,6 +10272,10 @@ ul.topiclist.topics li.row:hover .topictitle {
 }
 
 
+ul.topiclist.topics li.row dl.icon dt img {
+    display: none !important;
+}
+
 ul.topiclist.topics span.span-tab {
     position: absolute;
     left: 1.5rem;
@@ -10279,8 +10283,8 @@ ul.topiclist.topics span.span-tab {
     display: inline-flex;
     align-items: center;
     gap: .35rem;
-    width: 30%;
-    max-width: 30%;
+    width: 22%;
+    max-width: 22%;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -10324,11 +10328,11 @@ ul.topiclist.topics dd.views {
 }
 
 ul.topiclist.topics dd.posts {
-    left: 36%;
+    left: 27%;
 }
 
 ul.topiclist.topics dd.views {
-    left: 60%;
+    left: 58%;
 }
 
 ul.topiclist.topics dd.posts::before,
@@ -10369,7 +10373,6 @@ ul.topiclist.topics dd.views dfn {
     font: inherit !important;
     font-style: normal;
 }
-
 
 ul.topiclist.topics:not(.search) dd.lastpost {
     top: 0;
