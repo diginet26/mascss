@@ -10609,6 +10609,15 @@ h1.page-title::before {
     pointer-events: none;
 }
 
+h1.page-title::after {
+    content: "";
+    position: absolute;
+    inset: .65rem;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(var(--emblema2), var(--emblema2)) left top / 1.35rem .07rem no-repeat, linear-gradient(var(--emblema2), var(--emblema2)) left top / .07rem 1.35rem no-repeat, linear-gradient(var(--emblema1), var(--emblema1)) right top / 1.35rem .07rem no-repeat, linear-gradient(var(--emblema1), var(--emblema1)) right top / .07rem 1.35rem no-repeat, linear-gradient(var(--emblema1), var(--emblema1)) left bottom / 1.35rem .07rem no-repeat, linear-gradient(var(--emblema1), var(--emblema1)) left bottom / .07rem 1.35rem no-repeat, linear-gradient(var(--emblema2), var(--emblema2)) right bottom / 1.35rem .07rem no-repeat, linear-gradient(var(--emblema2), var(--emblema2)) right bottom / .07rem 1.35rem no-repeat;
+}
+
 h1.page-title a {
     position: relative;
     z-index: 2;
