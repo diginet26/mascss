@@ -10731,17 +10731,17 @@ p.right.rightside, p:has(+ h1.page-title) {
    VIEWTOPIC — CONTROLES EN LA BARRA INFERIOR
    ========================================================= */
 .topic-actions.dr-topic-footer-bar {
+    align-items: center;
     justify-content: flex-start;
-    gap: .65rem;
+    gap: .45rem !important;
 }
-
 .topic-actions.dr-topic-footer-bar .buttons {
     display: flex;
     align-items: center;
     flex: 0 0 auto;
     flex-wrap: nowrap;
-    gap: .35rem;
-    margin: 0;
+    gap: .4rem;
+    margin: 0 !important;
 }
 
 .topic-actions.dr-topic-footer-bar a.dr-topic-watch-link,
@@ -10750,11 +10750,11 @@ p.right.rightside, p:has(+ h1.page-title) {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    width: 2.3rem !important;
-    min-width: 2.3rem !important;
-    height: 2.3rem !important;
-    min-height: 2.3rem !important;
-    flex: 0 0 2.3rem !important;
+    width: 2.2rem !important;
+    min-width: 2.2rem !important;
+    height: 2.2rem !important;
+    min-height: 2.2rem !important;
+    flex: 0 0 2.2rem !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
@@ -12008,7 +12008,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     align-items: center;
     flex: 0 1 auto;
     min-width: 0;
-    margin: 0 0 0 .75rem !important;
+    margin: 0 !important;
 }
 
 .dr-topic-footer-bar .dr-topic-jumpbox-fieldset {
