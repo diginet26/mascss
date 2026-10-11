@@ -12023,15 +12023,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     white-space: nowrap;
 }
 
-.dr-topic-footer-bar .dr-topic-jumpbox-fieldset label {
-    margin: 0 !important;
-    color: var(--emblema2) !important;
-    font: 700 .55rem/1 "Oxanium", sans-serif !important;
-    letter-spacing: .04rem;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
+.dr-topic-footer-bar .dr-topic-jumpbox-fieldset label {display: none !important;}
 .dr-topic-footer-bar .dr-topic-jumpbox select {
     width: 11rem !important;
     max-width: 18vw;
@@ -12073,17 +12065,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 @media (max-width: 850px) {
-    .dr-topic-footer-bar {
-        flex-wrap: wrap;
-    }
-
-    .dr-topic-footer-bar > .dr-topic-jumpbox {
-        margin-left: .5rem !important;
-    }
-
-    .dr-topic-footer-bar .dr-topic-jumpbox select {
-        max-width: 35vw;
-    }
+    .dr-topic-footer-bar {flex-wrap: wrap;}
+    .dr-topic-footer-bar > .dr-topic-jumpbox {margin-left: .5rem !important;}
+    .dr-topic-footer-bar .dr-topic-jumpbox select {max-width: 35vw;}
 }
 
 /* =========================================================
