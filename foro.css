@@ -13577,6 +13577,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     margin: .3rem .9rem 0 0 !important;
     padding: 0 !important;
     font: 700 .48rem/1 "Oxanium", sans-serif !important;
+    font-size: 0 !important;
     letter-spacing: .04rem;
     color: color-mix(in srgb, var(--text-color) 58%, transparent);
 }
