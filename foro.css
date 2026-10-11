@@ -10327,16 +10327,9 @@ ul.topiclist.topics dd.views {
     white-space: nowrap;
 }
 
-ul.topiclist.topics dd.posts {
-    left: 27%;
-}
-
-ul.topiclist.topics dd.views {
-    left: 58%;
-}
-
-ul.topiclist.topics dd.posts::before,
-ul.topiclist.topics dd.views::before {
+ul.topiclist.topics dd.posts {left: 25%;}
+ul.topiclist.topics dd.views {left: 52%;}
+ul.topiclist.topics dd.posts::before, ul.topiclist.topics dd.views::before {
     content: "";
     width: .38rem;
     height: .38rem;
@@ -10364,8 +10357,7 @@ ul.topiclist.topics dd.posts::after {
     font-weight: 700;
 }
 
-ul.topiclist.topics dd.posts dfn,
-ul.topiclist.topics dd.views dfn {
+ul.topiclist.topics dd.posts dfn, ul.topiclist.topics dd.views dfn {
     display: inline !important;
     position: static !important;
     margin-left: .3rem;
