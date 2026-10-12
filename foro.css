@@ -13959,3 +13959,25 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
     transform: translateY(-.05rem);
 }
+.topic-bottom-bar .post-icon a {
+    background: transparent !important;
+    border: .07rem solid var(--emblema2) !important;
+    border-radius: .4rem !important;
+    padding: .5rem 1rem !important;
+    min-height: 2.6rem;
+    box-sizing: border-box;
+}
+
+.topic-bottom-bar .post-icon a::before,
+.topic-bottom-bar .post-icon a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.topic-bottom-bar .post-icon a img {
+    display: none !important;
+}
+
+.topic-bottom-bar .post-icon a {
+    font-size: 0 !important;
+}
