@@ -13948,9 +13948,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     min-height: 2.6rem;
     padding: .5rem 1rem;
     box-sizing: border-box;
-    background: transparent;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
     border: .07rem solid var(--emblema2);
     border-radius: .4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: .25s ease;
 }
 
 .topic-bottom-bar .post-icon a::before {
@@ -13965,10 +13968,18 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 .topic-bottom-bar .post-icon a::after {
     content: "PUBLICAR NUEVO TEMA";
-    padding: .55rem .8rem;
-    background: var(--post-background);
+    padding: 0;
+    background: transparent;
     color: var(--text-color);
     font: 700 .5rem/1 "Roboto Mono", monospace;
     letter-spacing: .12rem;
     text-transform: uppercase;
+}
+
+.topic-bottom-bar .post-icon a:hover {
+    border-color: var(--emblema1);
+    color: var(--emblema2);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent));
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
+    transform: translateY(-.05rem);
 }
