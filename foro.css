@@ -13948,14 +13948,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transition: .25s ease;
 }
 
-.topic-bottom-bar .post-icon a::before {
-    content: "+";
-    color: var(--emblema2);
-    font: 700 .9rem/1 "Oxanium", sans-serif;
-}
-
+.topic-bottom-bar .post-icon a::before {content: none !important;}
 .topic-bottom-bar .post-icon img {display: none !important;}
-
 .topic-bottom-bar .post-icon a::after {content: none !important;}
 
 .topic-bottom-bar .post-icon a:hover {
