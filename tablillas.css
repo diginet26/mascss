@@ -3378,7 +3378,6 @@
     gap: 1rem;
     min-width: 0;
     padding: .625rem;
-    background: linear-gradient(135deg, var(--mission-panel), transparent);
     position: relative;
 }
 
