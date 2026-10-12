@@ -13929,3 +13929,46 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
         max-width: 100%;
     }
 }
+
+.topic-bottom-bar .buttons {
+    margin: 0;
+    padding: 0;
+}
+
+.topic-bottom-bar .post-icon {
+    margin: 0;
+    padding: 0;
+}
+
+.topic-bottom-bar .post-icon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    min-height: 2.6rem;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    background: transparent;
+    border: .07rem solid var(--emblema2);
+    border-radius: .4rem;
+}
+
+.topic-bottom-bar .post-icon a::before {
+    content: "+";
+    color: var(--emblema2);
+    font: 700 .9rem/1 "Oxanium", sans-serif;
+}
+
+.topic-bottom-bar .post-icon img {
+    display: none !important;
+}
+
+.topic-bottom-bar .post-icon a::after {
+    content: "PUBLICAR NUEVO TEMA";
+    padding: .55rem .8rem;
+    background: var(--post-background);
+    color: var(--text-color);
+    font: 700 .5rem/1 "Roboto Mono", monospace;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+}
