@@ -1,13 +1,36 @@
 #wrap {width: 100% !important; padding: 0 !important;}
 body {overflow-x: hidden;}
+#page-footer p.copyright a[href*="/admin/"] {
+    position: fixed !important;
+    left: .6rem !important;
+    bottom: .6rem !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    border: 1px solid var(--emblema2) !important;
+    border-radius: 50% !important;
+    background: var(--theme-panel, #171b22) !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    text-decoration: none !important;
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 35%, transparent);
+}
 #page-footer p.copyright a[href*="/admin/"]::before {
-    content: "\f013";
-    display: inline-block;
+    content: "\\f013" !important;
+    display: block !important;
     font-family: FontAwesome !important;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 1;
-    color: #fff;
+    font-weight: normal !important;
+    font-size: 1.1rem !important;
+    line-height: 1 !important;
+    color: var(--emblema2) !important;
 }
 /* FUENTES */
 .jersey-15-regular {
