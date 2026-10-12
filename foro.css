@@ -13913,62 +13913,62 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 .topic-bottom-bar > .topic-actions .pagination {display: none;}
 .topic-bottom-bar .action-box #sort-box,
 .topic-bottom-bar .action-box form {margin: 0;}
-
 .topic-bottom-bar .action-box fieldset {margin: 0;}
 
 .topic-bottom-bar .buttons,
-.topic-bottom-bar .post-icon {
-    margin: 0;
-    padding: 0;
-}
+.topic-bottom-bar .post-icon {margin: 0; padding: 0;}
 
 .topic-bottom-bar .post-icon a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.6rem;
-    padding: .5rem 1rem !important;
+    min-height: 2.3rem;
+    padding: 0 .9rem !important;
     box-sizing: border-box;
-    background: transparent !important;
-    border: .07rem solid var(--emblema2) !important;
-    border-radius: .4rem !important;
-    color: var(--text-color);
-    text-decoration: none;
+    border: .06rem solid var(--emblema2) !important;
+    border-radius: .35rem !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent)) !important;
+    color: var(--text-color) !important;
     font-size: 0 !important;
+    text-decoration: none !important;
     transition: .25s ease;
 }
 
 .topic-bottom-bar .post-icon a::before,
 .topic-bottom-bar .post-icon a::after,
-.topic-bottom-bar .post-icon a img {
-    display: none !important;
-    content: none !important;
-}
+.topic-bottom-bar .post-icon a img {display: none !important; content: none !important;}
 
 .topic-bottom-bar .post-icon a .rtopicbutton {
-    display: inline !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
     margin: 0 !important;
     padding: 0 !important;
-    background: transparent !important;
     border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
     box-shadow: none !important;
     color: var(--text-color) !important;
     font-size: 0 !important;
     line-height: 1;
-    text-transform: uppercase;
+    text-decoration: none !important;
 }
+
+.topic-bottom-bar .post-icon a .rtopicbutton::before {content: none !important; display: none !important;}
 
 .topic-bottom-bar .post-icon a .rtopicbutton::after {
     content: "PUBLICAR";
-    font: 700 .65rem/1 "Roboto Mono", monospace;
-    letter-spacing: .12rem;
+    color: inherit;
+    font: 700 .58rem/1 "Oxanium", sans-serif;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
 }
 
 .topic-bottom-bar .post-icon a:hover {
     border-color: var(--emblema1) !important;
-    color: var(--emblema2);
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent)) !important;
-    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
+    color: var(--emblema2) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 20%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent)) !important;
+    box-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 20%, transparent);
     transform: translateY(-.05rem);
 }
 
