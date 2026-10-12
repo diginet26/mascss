@@ -3354,14 +3354,14 @@
 
 .dr-mission {
     --mission-panel: var(--colorfondo);
-    --mission-line: var(--emblema2);
+    --mission-line: var(--emblema1);
     position: relative;
     margin: 1rem auto;
     padding: 1rem;
     overflow: hidden;
     color: var(--colortextod1);
     background: var(--colorfondot);
-    border: 1px solid var(--emblema1);
+    border: 1px solid var(--emblema2);
     font-family: "Oxanium", sans-serif;
     font-size: .75rem;
     line-height: 1.7;
@@ -3379,7 +3379,7 @@
     min-width: 0;
     padding: .625rem;
     background: linear-gradient(135deg, var(--mission-panel), transparent);
-    border: 1px solid var(--emblema1);
+    border: 1px solid var(--emblema2);
     position: relative;
 }
 
@@ -3390,8 +3390,8 @@
     left: .625rem;
     width: 4rem;
     height: 2px;
-    background: var(--emblema2);
-    box-shadow: 0 0 .625rem var(--emblema2);
+    background: var(--emblema1);
+    box-shadow: 0 0 .625rem var(--emblema1);
 }
 
 /* IMAGEN */
@@ -3402,7 +3402,7 @@
     position: relative;
     overflow: hidden;
     background: #071019;
-    border: 1px solid var(--emblema1);
+    border: 1px solid var(--emblema2);
 }
 
 .dr-mission-image:before {
@@ -3446,7 +3446,7 @@
     padding: .2rem .4rem;
     color: #fff;
     background: rgba(5,12,18,.85);
-    border-left: 2px solid var(--emblema2);
+    border-left: 2px solid var(--emblema1);
     font-family: "Roboto Mono", monospace;
     font-size: .5rem;
     letter-spacing: .08em;
@@ -3466,8 +3466,8 @@
     align-items: center;
     gap: .4rem;
     padding-bottom: .5rem;
-    border-bottom: 1px solid var(--emblema1);
-    color: var(--emblema2);
+    border-bottom: 1px solid var(--emblema2);
+    color: var(--emblema1);
     font-family: "Roboto Mono", monospace;
     font-size: .5rem;
     font-weight: 700;
@@ -3479,13 +3479,13 @@
     width: .4rem;
     height: .4rem;
     flex: 0 0 .4rem;
-    background: var(--emblema2);
-    box-shadow: 0 0 .4rem var(--emblema2);
+    background: var(--emblema1);
+    box-shadow: 0 0 .4rem var(--emblema1);
 }
 
 .dr-mission-id {
     margin-left: auto;
-    color: var(--emblema1);
+    color: var(--emblema2);
 }
 
 .dr-mission-title {
@@ -3507,7 +3507,7 @@
     font-size: .7rem;
     line-height: 1.75;
     scrollbar-width: thin;
-    scrollbar-color: var(--emblema2) var(--colorfondo);
+    scrollbar-color: var(--emblema1) var(--colorfondo);
 }
 
 .dr-mission-description p {margin: 0 0 .625rem;}
@@ -3515,12 +3515,12 @@
 
 .dr-mission-description::-webkit-scrollbar {width: 4px;}
 .dr-mission-description::-webkit-scrollbar-track {background: var(--colorfondo);}
-.dr-mission-description::-webkit-scrollbar-thumb {background: var(--emblema2);}
+.dr-mission-description::-webkit-scrollbar-thumb {background: var(--emblema1);}
 
 .dr-mission-transmission {
     margin-top: auto;
     padding-top: .625rem;
-    color: var(--emblema1);
+    color: var(--emblema2);
     font-family: "Roboto Mono", monospace;
     font-size: .45rem;
     letter-spacing: .06em;
@@ -3530,7 +3530,7 @@
 
 .dr-mission-rules {
     margin-top: .75rem;
-    border: 1px solid var(--emblema1);
+    border: 1px solid var(--emblema2);
     background: var(--mission-panel);
 }
 
@@ -3557,7 +3557,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--emblema2);
+    background: var(--emblema1);
     transition: width .25s ease;
 }
 
@@ -3575,8 +3575,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--emblema2);
-    color: var(--emblema2);
+    border: 1px solid var(--emblema1);
+    color: var(--emblema1);
     font-family: "Jersey 15", sans-serif;
     font-size: 1.5rem;
     line-height: 1;
@@ -3585,7 +3585,7 @@
 
 .dr-mission-rules[open] .dr-mission-rules-icon {
     color: var(--colorfondot);
-    background: var(--emblema2);
+    background: var(--emblema1);
     transform: rotate(45deg);
 }
 
@@ -3597,7 +3597,7 @@
 }
 
 .dr-mission-rules-heading small {
-    color: var(--emblema2);
+    color: var(--emblema1);
     font-family: "Roboto Mono", monospace;
     font-size: .45rem;
     letter-spacing: .1em;
@@ -3614,7 +3614,7 @@
 
 .dr-mission-rules-toggle {
     margin-left: auto;
-    color: var(--emblema1);
+    color: var(--emblema2);
     font-family: "Roboto Mono", monospace;
     font-size: .45rem;
     letter-spacing: .05em;
@@ -3628,7 +3628,7 @@
 
 .dr-mission-rules-content {
     padding: .75rem;
-    border-top: 1px solid var(--emblema1);
+    border-top: 1px solid var(--emblema2);
     animation: dr-mission-open .2s ease;
 }
 
@@ -3643,7 +3643,7 @@
     gap: .625rem;
     align-items: start;
     padding: .625rem .375rem;
-    border-bottom: 1px solid var(--emblema1);
+    border-bottom: 1px solid var(--emblema2);
 }
 
 .dr-mission-rule:last-child {border-bottom: 0;}
@@ -3654,8 +3654,8 @@
     justify-content: center;
     width: 1.5rem;
     height: 1.5rem;
-    border: 1px solid var(--emblema1);
-    color: var(--emblema2);
+    border: 1px solid var(--emblema2);
+    color: var(--emblema1);
     font-family: "Roboto Mono", monospace;
     font-size: .55rem;
 }
@@ -3667,7 +3667,7 @@
     line-height: 1.7;
 }
 
-.dr-mission-rule p b {color: var(--emblema2);}
+.dr-mission-rule p b {color: var(--emblema1);}
 
 /* PIE DE SISTEMA */
 
@@ -3679,7 +3679,7 @@
     gap: .375rem;
     margin-top: .625rem;
     padding: .5rem .625rem;
-    border-top: 1px solid var(--emblema1);
+    border-top: 1px solid var(--emblema2);
     color: var(--colortextod2);
     font-family: "Roboto Mono", monospace;
     font-size: .43rem;
