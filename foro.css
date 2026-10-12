@@ -10233,6 +10233,7 @@ html[style*="14px"] #digimon-statistics .digimon-stats-quick-links {
     height: auto;
 }
 
+
 /* =========================================================
    TOPICS — LISTA DE TEMAS
    ========================================================= */
@@ -10270,7 +10271,6 @@ ul.topiclist.topics li.row:hover .topictitle {
     color: var(--emblema2);
     text-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 22%, transparent);
 }
-
 
 ul.topiclist.topics li.row dl.icon dt img {
     display: none !important;
@@ -10315,8 +10315,7 @@ ul.topiclist.topics dd.views {
     min-height: 0 !important;
     padding: 0 !important;
     margin: 0;
-    position: absolute !important;
-    bottom: .72rem;
+    position: static !important;
     background: transparent !important;
     border: 0 !important;
     border-radius: 0 !important;
@@ -10327,9 +10326,8 @@ ul.topiclist.topics dd.views {
     white-space: nowrap;
 }
 
-ul.topiclist.topics dd.posts {left: 15%;}
-ul.topiclist.topics dd.views {left: 25%;}
-ul.topiclist.topics dd.posts::before, ul.topiclist.topics dd.views::before {
+ul.topiclist.topics dd.posts::before,
+ul.topiclist.topics dd.views::before {
     content: "";
     width: .38rem;
     height: .38rem;
@@ -10357,13 +10355,29 @@ ul.topiclist.topics dd.posts::after {
     font-weight: 700;
 }
 
-ul.topiclist.topics dd.posts dfn, ul.topiclist.topics dd.views dfn {
+ul.topiclist.topics dd.posts dfn,
+ul.topiclist.topics dd.views dfn {
     display: inline !important;
     position: static !important;
     margin-left: .3rem;
     color: color-mix(in srgb, var(--text-color) 58%, transparent);
     font: inherit !important;
     font-style: normal;
+}
+
+ul.topiclist.topics li.row dl.icon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.topiclist.topics li.row dl.icon dt {
+    width: 100%;
+}
+
+ul.topiclist.topics li.row dl.icon dd.posts,
+ul.topiclist.topics li.row dl.icon dd.views {
+    position: static !important;
+    align-self: flex-end;
 }
 
 ul.topiclist.topics:not(.search) dd.lastpost {
