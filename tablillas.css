@@ -359,7 +359,7 @@
 /* ========================================================= DIGIMON — TABLILLA REGLA ========================================================= */
 /* ========================================================= ÍNDICE ========================================================= */ 
 .dr-rule-index { display: grid; grid-template-columns: repeat(3, 1fr); margin: 1.25rem 1.5625rem 0; border: 1px solid var(--emblema2); background: var(--colorfondo); } 
-.dr-rule-index a { min-height: 3.25rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; box-sizing: border-box; border-right: 1px solid var(--emblema2); border-bottom: 1px solid var(--emblema2); color: var(--colortextod1); font-family: "Oxanium", monospace; font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.0625rem; text-transform: uppercase; text-decoration: none; transition: .2s ease; }
+.dr-rule-index a { min-height: 3.25rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; box-sizing: border-box; border-right: 1px solid var(--emblema2); border-bottom: 1px solid var(--emblema2); color: var(--colortextodl); font-family: "Oxanium", monospace; font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.0625rem; text-transform: uppercase; text-decoration: none; transition: .2s ease; }
 .dr-rule-index a:nth-child(3n) { border-right: 0; } 
 .dr-rule-index a:nth-child(n+4) { border-bottom: 0; } 
 .dr-rule-index a:hover { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.05) ); box-shadow: inset 0 -0.125rem 0 var(--dg-cyan); } 
@@ -369,7 +369,7 @@
 .dr-rule { margin-bottom: 0.5rem; padding: 1.0625rem; background: rgba(13,21,30,.85); border: 1px solid #213746; transition: .25s ease; box-sizing: border-box; } .dr-rule:hover { background: rgba(17,31,45,.95); border-color: rgba(34,193,195,.25); } 
 /* ========================================================= LISTADOS ========================================================= */ 
 .dr-rule-list { margin: 0.8125rem 0 0; padding: 0; list-style: none; } 
-.dr-rule-list li { position: relative; padding-left: 1.125rem; color: var(--colortextod1); font-size: 0.75rem; line-height: 1.7; padding-right: 1.25rem;} .dr-rule-list li:last-child { margin-bottom: 0; } .dr-rule-list li:before { content: ">"; position: absolute; left: -0.9375rem; top: -0.5rem; font-size:1.375rem; color: var(--emblema2); font-family: "Jersey 15", monospace; font-weight: 700; }
+.dr-rule-list li { position: relative; padding-left: 1.125rem; color: var(--colortextodl); font-size: 0.75rem; line-height: 1.7; padding-right: 1.25rem;} .dr-rule-list li:last-child { margin-bottom: 0; } .dr-rule-list li:before { content: ">"; position: absolute; left: -0.9375rem; top: -0.5rem; font-size:1.375rem; color: var(--emblema2); font-family: "Jersey 15", monospace; font-weight: 700; }
 /* ========================================================= LISTADO OFICIAL ========================================================= */ 
 .dr-tadmin .dr-lista { position: relative; margin-bottom: 0.5rem; padding: 0.9375rem 1.125rem 0.9375rem 3.25rem; background: var(--colorfondo); border: 1px solid var(--emblema2); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista:hover { background: var(--colorfondo4); border-color: var(--emblema1); transform: translateX(0.1875rem); }
 .dr-tadmin .dr-lista .dr-icon {
@@ -393,7 +393,7 @@
 /* NOMBRE */
 .dr-tadmin .dr-lista h3 {
     margin: 0.125rem 0.3125rem 0.125rem;
-    color: var(--colortextod1);
+    color: var(--colortextodl);
     font-size: 1.0625rem;
     font-family: "Jersey 15";
     letter-spacing: 0.0625rem;
@@ -405,7 +405,7 @@
 /* DESCRIPCIÓN */
 .dr-tadmin .dr-lista p {
     margin: 0;
-    color: var(--colortextod1);
+    color: var(--colortextodl);
     font-size: 0.75rem;
     line-height: 1.7;
 }
@@ -2913,7 +2913,7 @@
     font-size: 0.6rem;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
-    color: var(--colortextod1);
+    color: var(--colortextodl);
 }
 
 
@@ -3359,7 +3359,7 @@
     margin: 1rem auto;
     padding: 1rem;
     overflow: hidden;
-    color: var(--colortextod1);
+    color: var(--colortextodl);
     background: var(--colorfondot);
     border: 1px solid var(--emblema2);
     font-family: "Oxanium", sans-serif;
@@ -3374,12 +3374,11 @@
 
 .dr-mission-card {
     display: grid;
-    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    grid-template-columns: minmax(0, .5fr) minmax(0, 1.1fr);
     gap: 1rem;
     min-width: 0;
     padding: .625rem;
     background: linear-gradient(135deg, var(--mission-panel), transparent);
-    border: 1px solid var(--emblema2);
     position: relative;
 }
 
@@ -3469,9 +3468,9 @@
     border-bottom: 1px solid var(--emblema2);
     color: var(--emblema1);
     font-family: "Roboto Mono", monospace;
-    font-size: .5rem;
+    font-size: .7rem;
     font-weight: 700;
-    letter-spacing: .09em;
+    letter-spacing: .03em;
     text-transform: uppercase;
 }
 
@@ -3488,22 +3487,11 @@
     color: var(--emblema2);
 }
 
-.dr-mission-title {
-    margin: .65rem 0 .5rem;
-    color: var(--colortextod1);
-    font-family: "Jersey 15", sans-serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: .035em;
-    text-transform: uppercase;
-}
-
 .dr-mission-description {
     max-height: 9rem;
     overflow-y: auto;
     padding-right: .5rem;
-    color: var(--colortextod1);
+    color: var(--colortextodl);
     font-size: .7rem;
     line-height: 1.75;
     scrollbar-width: thin;
@@ -3516,15 +3504,6 @@
 .dr-mission-description::-webkit-scrollbar {width: 4px;}
 .dr-mission-description::-webkit-scrollbar-track {background: var(--colorfondo);}
 .dr-mission-description::-webkit-scrollbar-thumb {background: var(--emblema1);}
-
-.dr-mission-transmission {
-    margin-top: auto;
-    padding-top: .625rem;
-    color: var(--emblema2);
-    font-family: "Roboto Mono", monospace;
-    font-size: .45rem;
-    letter-spacing: .06em;
-}
 
 /* DESPLEGABLE DE NORMAS */
 
@@ -3596,15 +3575,8 @@
     gap: .125rem;
 }
 
-.dr-mission-rules-heading small {
-    color: var(--emblema1);
-    font-family: "Roboto Mono", monospace;
-    font-size: .45rem;
-    letter-spacing: .1em;
-}
-
 .dr-mission-rules-heading strong {
-    color: var(--colortextod1);
+    color: var(--colortextodl);
     font-family: "Jersey 15", sans-serif;
     font-size: 1.35rem;
     font-weight: 400;
@@ -3662,31 +3634,12 @@
 
 .dr-mission-rule p {
     margin: 0;
-    color: var(--colortextod1);
+    color: var(--colortextodl);
     font-size: .68rem;
     line-height: 1.7;
 }
 
 .dr-mission-rule p b {color: var(--emblema1);}
-
-/* PIE DE SISTEMA */
-
-.dr-mission-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: .375rem;
-    margin-top: .625rem;
-    padding: .5rem .625rem;
-    border-top: 1px solid var(--emblema2);
-    color: var(--colortextod2);
-    font-family: "Roboto Mono", monospace;
-    font-size: .43rem;
-    letter-spacing: .05em;
-}
-
-.dr-mission-footer b {color: var(--emblema2);}
 
 /* RESPONSIVE */
 
