@@ -12515,16 +12515,53 @@ body.light-mode .forumbg:not(.announcement) {
     box-shadow: 0 .6rem 1.5rem rgba(56, 69, 81, .12), inset 0 1px 0 rgba(255, 255, 255, .8);
 }
 
+/* VIEWFORUM — LEYENDA Y ESTADO, SKIN CLARA */
+body.light-mode #info_open p {
+    color: #687681 !important;
+    text-shadow: none !important;
+}
+
+body.light-mode #info_open + .h3,
+body.light-mode #info_open ~ .h3 {
+    background: linear-gradient(110deg, #e6e9ec, #d9dfe3 52%, #e9ecef);
+    border-color: #c4cdd5;
+    color: #596873 !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 .2rem .65rem rgba(56, 69, 81, .08);
+}
+
+body.light-mode #info_open ~ .h3 + .clearfix {
+    background: linear-gradient(135deg, rgba(219, 225, 229, .92), rgba(232, 235, 238, .96)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92, 108, 122, .04) 3rem, rgba(92, 108, 122, .04) 3.05rem), #e2e6e9;
+    border-color: #c5cfd7;
+    box-shadow: inset 0 .08rem 0 rgba(255, 255, 255, .9), inset 0 0 1.5rem rgba(80, 96, 109, .04), 0 .35rem .9rem rgba(56, 69, 81, .09);
+}
+
+body.light-mode #info_open ~ .h3 + .clearfix::before {
+    color: #78858f;
+}
+
+body.light-mode #info_open ~ .h3 + .clearfix > ul.ul-icons li {
+    background: linear-gradient(135deg, #e9ecef, #d8dfe3);
+    border-color: #c4ced6;
+    color: #596873;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 .15rem .35rem rgba(56, 69, 81, .06);
+}
+
+body.light-mode #info_open ~ .h3 + .clearfix > ul.ul-icons li:hover {
+    background: linear-gradient(135deg, #eef0f2, #dfe4e7);
+    border-color: var(--emblema1);
+    color: #465762;
+    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema1) 12%, transparent);
+}
+
 body.light-mode .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header,
 body.light-mode .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header {
-    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 7%, #e1e6ea), transparent 45%, color-mix(in srgb, var(--emblema1) 7%, #e7ebee)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92, 108, 122, .035) 3rem, rgba(92, 108, 122, .035) 3.05rem), #e5e9ed !important;
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92, 108, 122, .035) 3rem, rgba(92, 108, 122, .035) 3.05rem), linear-gradient(115deg, #e7eaed 0%, #d9dfe3 52%, #e9ecef 100%) !important;
     border-color: color-mix(in srgb, var(--emblema2) 28%, #b9c5ce) !important;
-    color: #687682 !important;
     box-shadow: inset 0 .1rem 0 rgba(255, 255, 255, .85), 0 .25rem .8rem rgba(56, 69, 81, .09) !important;
 }
 
 body.light-mode ul.topiclist.topics li.row dl.icon {
-    background: linear-gradient(110deg, color-mix(in srgb, var(--emblema2) 2.5%, #e9edf0), transparent 45%, color-mix(in srgb, var(--emblema1) 2.5%, #e1e6ea)), #e7ebee !important;
+    background: linear-gradient(90deg, #e7ebee 0%, #e7ebee 46%, rgba(231, 235, 238, .82) 57%, rgba(231, 235, 238, .38) 69%, rgba(231, 235, 238, 0) 80%) !important;
     border-color: color-mix(in srgb, var(--emblema2) 22%, #c2cdd5);
     box-shadow: inset 0 .12rem 0 rgba(255, 255, 255, .85), 0 .25rem .8rem rgba(56, 69, 81, .09);
 }
