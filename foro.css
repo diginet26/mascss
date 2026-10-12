@@ -1,5 +1,10 @@
 #wrap {width: 100% !important; padding: 0 !important;}
 body {overflow-x: hidden;}
+#page-footer p.copyright a[href*="/admin/"]::before {
+    content: "⚙";
+    font-size: 20px;
+    color: #fff;
+}
 /* FUENTES */
 .jersey-15-regular {
     font-family: "Jersey 15", sans-serif;
