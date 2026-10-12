@@ -13902,6 +13902,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 .forum-top-actions a[href^="javascript:showhide"], .topic-actions:not(:has(.search-box)) .pagination a[href^="javascript:showhide"] {display: none !important;}/* DIGITAL RIFT — OCULTAR BOTÓN MÁS */
 
+
 /* =========================================================
    TOPIC BOTTOM BAR — ACCIONES Y ORDENACIÓN UNIFICADAS
    ========================================================= */
@@ -13940,68 +13941,59 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 .topic-bottom-bar > .topic-actions .pagination {display: none;}
 .topic-bottom-bar .action-box #sort-box,
 .topic-bottom-bar .action-box form {margin: 0;}
-
 .topic-bottom-bar .action-box fieldset {margin: 0;}
 
 .topic-bottom-bar .buttons,
 .topic-bottom-bar .post-icon {
-    margin: 0;
-    padding: 0;
-}
-
-.topic-bottom-bar .post-icon a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 2.6rem;
-    padding: .5rem 1rem !important;
-    box-sizing: border-box;
-    background: transparent !important;
-    border: .07rem solid var(--emblema2) !important;
-    border-radius: .4rem !important;
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 0 !important;
-    transition: .25s ease;
-}
-
-.topic-bottom-bar .post-icon a::before,
-.topic-bottom-bar .post-icon a::after,
-.topic-bottom-bar .post-icon a img {
-    display: none !important;
-    content: none !important;
-}
-
-.topic-bottom-bar .post-icon a .rtopicbutton {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100%;
     margin: 0 !important;
     padding: 0 !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
+}
+
+.topic-bottom-bar .post-icon a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 7.5rem;
+    min-height: 2.2rem;
+    margin: 0 !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box;
+    border: .06rem solid var(--emblema2) !important;
+    border-radius: .35rem !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent)) !important;
     color: var(--text-color) !important;
     font-size: 0 !important;
     line-height: 1;
     text-align: center !important;
-    text-transform: uppercase;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    transition: .25s ease;
 }
 
-.topic-bottom-bar .post-icon a .rtopicbutton::after {
+.topic-bottom-bar .post-icon a img,
+.topic-bottom-bar .post-icon a .rtopicbutton,
+.topic-bottom-bar .post-icon a::before {
+    display: none !important;
+    content: none !important;
+}
+
+.topic-bottom-bar .post-icon a::after {
     content: "PUBLICAR";
     display: block;
-    font: 700 .65rem/1 "Roboto Mono", monospace;
-    letter-spacing: .12rem;
+    color: var(--text-color);
+    font: 700 .55rem/1 "Oxanium", monospace;
+    letter-spacing: .08rem;
+    text-transform: uppercase;
     text-align: center;
 }
 
 .topic-bottom-bar .post-icon a:hover {
     border-color: var(--emblema1) !important;
-    color: var(--emblema2);
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent)) !important;
-    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 20%, transparent);
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 18%, transparent) !important;
     transform: translateY(-.05rem);
 }
 
