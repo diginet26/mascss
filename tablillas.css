@@ -3346,3 +3346,358 @@
     }
 
 }
+
+
+/* ==========================================================
+   DIGITAL RIFT — TABLÓN DE MISIONES
+   ========================================================== */
+
+.dr-mission {
+    --mission-panel: var(--colorfondo);
+    --mission-line: var(--emblema2);
+    position: relative;
+    margin: 1rem auto;
+    padding: 1rem;
+    overflow: hidden;
+    color: var(--colortextod1);
+    background: var(--colorfondot);
+    border: 1px solid var(--emblema1);
+    font-family: "Oxanium", sans-serif;
+    font-size: .75rem;
+    line-height: 1.7;
+    box-sizing: border-box;
+}
+
+.dr-mission * {box-sizing: border-box;}
+
+/* PANEL PRINCIPAL */
+
+.dr-mission-card {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: 1rem;
+    min-width: 0;
+    padding: .625rem;
+    background: linear-gradient(135deg, var(--mission-panel), transparent);
+    border: 1px solid var(--emblema1);
+    position: relative;
+}
+
+.dr-mission-card:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: .625rem;
+    width: 4rem;
+    height: 2px;
+    background: var(--emblema2);
+    box-shadow: 0 0 .625rem var(--emblema2);
+}
+
+/* IMAGEN */
+
+.dr-mission-image {
+    min-width: 0;
+    min-height: 13rem;
+    position: relative;
+    overflow: hidden;
+    background: #071019;
+    border: 1px solid var(--emblema1);
+}
+
+.dr-mission-image:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: .375rem;
+    border: 1px solid rgba(255,255,255,.16);
+    pointer-events: none;
+}
+
+.dr-mission-image:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, rgba(3,10,16,.55));
+    pointer-events: none;
+}
+
+.dr-mission-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 13rem;
+    object-fit: cover;
+    filter: saturate(.85) contrast(1.05);
+    transition: transform .35s ease, filter .35s ease;
+}
+
+.dr-mission-card:hover .dr-mission-image img {
+    transform: scale(1.035);
+    filter: saturate(1.1) contrast(1.05);
+}
+
+.dr-mission-image-code {
+    position: absolute;
+    z-index: 2;
+    left: .625rem;
+    bottom: .5rem;
+    padding: .2rem .4rem;
+    color: #fff;
+    background: rgba(5,12,18,.85);
+    border-left: 2px solid var(--emblema2);
+    font-family: "Roboto Mono", monospace;
+    font-size: .5rem;
+    letter-spacing: .08em;
+}
+
+/* INFORMACIÓN */
+
+.dr-mission-content {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: .25rem .25rem .375rem 0;
+}
+
+.dr-mission-system {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--emblema1);
+    color: var(--emblema2);
+    font-family: "Roboto Mono", monospace;
+    font-size: .5rem;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.dr-mission-status {
+    width: .4rem;
+    height: .4rem;
+    flex: 0 0 .4rem;
+    background: var(--emblema2);
+    box-shadow: 0 0 .4rem var(--emblema2);
+}
+
+.dr-mission-id {
+    margin-left: auto;
+    color: var(--emblema1);
+}
+
+.dr-mission-title {
+    margin: .65rem 0 .5rem;
+    color: var(--colortextod1);
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+}
+
+.dr-mission-description {
+    max-height: 9rem;
+    overflow-y: auto;
+    padding-right: .5rem;
+    color: var(--colortextod1);
+    font-size: .7rem;
+    line-height: 1.75;
+    scrollbar-width: thin;
+    scrollbar-color: var(--emblema2) var(--colorfondo);
+}
+
+.dr-mission-description p {margin: 0 0 .625rem;}
+.dr-mission-description p:last-child {margin-bottom: 0;}
+
+.dr-mission-description::-webkit-scrollbar {width: 4px;}
+.dr-mission-description::-webkit-scrollbar-track {background: var(--colorfondo);}
+.dr-mission-description::-webkit-scrollbar-thumb {background: var(--emblema2);}
+
+.dr-mission-transmission {
+    margin-top: auto;
+    padding-top: .625rem;
+    color: var(--emblema1);
+    font-family: "Roboto Mono", monospace;
+    font-size: .45rem;
+    letter-spacing: .06em;
+}
+
+/* DESPLEGABLE DE NORMAS */
+
+.dr-mission-rules {
+    margin-top: .75rem;
+    border: 1px solid var(--emblema1);
+    background: var(--mission-panel);
+}
+
+.dr-mission-rules summary {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    min-height: 3.5rem;
+    padding: .625rem .875rem;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    background: linear-gradient(90deg, var(--colorfondo), transparent);
+    transition: background .2s ease;
+}
+
+.dr-mission-rules summary::-webkit-details-marker {display: none;}
+.dr-mission-rules summary::marker {content: "";}
+
+.dr-mission-rules summary:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--emblema2);
+    transition: width .25s ease;
+}
+
+.dr-mission-rules summary:hover:after,
+.dr-mission-rules[open] summary:after {width: 100%;}
+
+.dr-mission-rules summary:hover {
+    background: linear-gradient(90deg, var(--colorfondo4), transparent);
+}
+
+.dr-mission-rules-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex: 0 0 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--emblema2);
+    color: var(--emblema2);
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.dr-mission-rules[open] .dr-mission-rules-icon {
+    color: var(--colorfondot);
+    background: var(--emblema2);
+    transform: rotate(45deg);
+}
+
+.dr-mission-rules-heading {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+}
+
+.dr-mission-rules-heading small {
+    color: var(--emblema2);
+    font-family: "Roboto Mono", monospace;
+    font-size: .45rem;
+    letter-spacing: .1em;
+}
+
+.dr-mission-rules-heading strong {
+    color: var(--colortextod1);
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.dr-mission-rules-toggle {
+    margin-left: auto;
+    color: var(--emblema1);
+    font-family: "Roboto Mono", monospace;
+    font-size: .45rem;
+    letter-spacing: .05em;
+    white-space: nowrap;
+}
+
+.dr-mission-rules-toggle:before {content: "＋ ABRIR";}
+.dr-mission-rules[open] .dr-mission-rules-toggle:before {content: "－ CERRAR";}
+
+/* CONTENIDO DE LAS NORMAS */
+
+.dr-mission-rules-content {
+    padding: .75rem;
+    border-top: 1px solid var(--emblema1);
+    animation: dr-mission-open .2s ease;
+}
+
+@keyframes dr-mission-open {
+    from {opacity: 0; transform: translateY(-4px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.dr-mission-rule {
+    display: grid;
+    grid-template-columns: 1.75rem minmax(0, 1fr);
+    gap: .625rem;
+    align-items: start;
+    padding: .625rem .375rem;
+    border-bottom: 1px solid var(--emblema1);
+}
+
+.dr-mission-rule:last-child {border-bottom: 0;}
+
+.dr-mission-rule > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--emblema1);
+    color: var(--emblema2);
+    font-family: "Roboto Mono", monospace;
+    font-size: .55rem;
+}
+
+.dr-mission-rule p {
+    margin: 0;
+    color: var(--colortextod1);
+    font-size: .68rem;
+    line-height: 1.7;
+}
+
+.dr-mission-rule p b {color: var(--emblema2);}
+
+/* PIE DE SISTEMA */
+
+.dr-mission-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .375rem;
+    margin-top: .625rem;
+    padding: .5rem .625rem;
+    border-top: 1px solid var(--emblema1);
+    color: var(--colortextod2);
+    font-family: "Roboto Mono", monospace;
+    font-size: .43rem;
+    letter-spacing: .05em;
+}
+
+.dr-mission-footer b {color: var(--emblema2);}
+
+/* RESPONSIVE */
+
+@media (max-width: 38rem) {
+    .dr-mission {padding: .625rem;}
+    .dr-mission-card {grid-template-columns: minmax(0, 1fr); gap: .75rem;}
+    .dr-mission-image, .dr-mission-image img {min-height: 0; height: 13rem;}
+    .dr-mission-content {padding: .25rem;}
+    .dr-mission-description {max-height: 10rem;}
+    .dr-mission-rules summary {gap: .5rem; padding: .625rem;}
+    .dr-mission-rules-toggle {font-size: 0;}
+    .dr-mission-rules-toggle:before {font-size: .45rem;}
+    .dr-mission-rule {grid-template-columns: 1.5rem minmax(0, 1fr); gap: .5rem;}
+}
