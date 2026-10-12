@@ -10327,8 +10327,8 @@ ul.topiclist.topics dd.views {
     white-space: nowrap;
 }
 
-ul.topiclist.topics dd.posts {left: 25%;}
-ul.topiclist.topics dd.views {left: 52%;}
+ul.topiclist.topics dd.posts {left: 15%;}
+ul.topiclist.topics dd.views {left: 42%;}
 ul.topiclist.topics dd.posts::before, ul.topiclist.topics dd.views::before {
     content: "";
     width: .38rem;
