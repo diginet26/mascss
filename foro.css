@@ -12515,9 +12515,9 @@ body.light-mode .forumbg:not(.announcement) {
     box-shadow: 0 .6rem 1.5rem rgba(56, 69, 81, .12), inset 0 1px 0 rgba(255, 255, 255, .8);
 }
 
-/* CABECERA GENERAL — SKIN CLARA: aclara el fondo sin quitar la ilustración ni los adornos */
+/* CABECERA GENERAL — SKIN CLARA: gris #bcc0c4 manteniendo ilustración y adornos */
 body.light-mode h1.page-title {
-    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 12%, transparent), transparent 42%, color-mix(in srgb, var(--emblema1) 15%, transparent)), linear-gradient(90deg, rgba(225, 230, 234, .72), rgba(205, 214, 220, .64)), url("https://i.imgur.com/cXRt4Sw.png") center/cover no-repeat, var(--post-background);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 12%, transparent), transparent 42%, color-mix(in srgb, var(--emblema1) 15%, transparent)), linear-gradient(90deg, rgba(188, 192, 196, .8), rgba(188, 192, 196, .8)), url("https://i.imgur.com/cXRt4Sw.png") center/cover no-repeat, #bcc0c4;
 }
 
 /* VIEWFORUM — LEYENDA Y ESTADO, SKIN CLARA */
