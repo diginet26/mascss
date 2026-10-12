@@ -12510,23 +12510,23 @@ body.light-mode .digimon-forum-card:hover {
    ========================================================= */
 body.light-mode .forumbg.announcement,
 body.light-mode .forumbg:not(.announcement) {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #e9edf0), transparent 48%, color-mix(in srgb, var(--emblema1) 3%, #e9edf0)), #e9edf0;
-    border-color: #cbd4dc;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #e4e8eb), transparent 48%, color-mix(in srgb, var(--emblema1) 3%, #e4e8eb)), #e4e8eb;
+    border-color: #c5cfd7;
     box-shadow: 0 .6rem 1.5rem rgba(56, 69, 81, .12), inset 0 1px 0 rgba(255, 255, 255, .8);
 }
 
 body.light-mode .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header,
 body.light-mode .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header {
-    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 5%, #e5eaee), transparent 45%, color-mix(in srgb, var(--emblema1) 5%, #f1f3f5)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92, 108, 122, .035) 3rem, rgba(92, 108, 122, .035) 3.05rem), #edf0f2;
-    border-color: color-mix(in srgb, var(--emblema2) 28%, #c6d0d8) !important;
-    color: #78838d !important;
-    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 40%, rgba(255, 255, 255, .8)), 0 .25rem .8rem rgba(56, 69, 81, .09) !important;
+    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 7%, #e1e6ea), transparent 45%, color-mix(in srgb, var(--emblema1) 7%, #e7ebee)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92, 108, 122, .035) 3rem, rgba(92, 108, 122, .035) 3.05rem), #e5e9ed !important;
+    border-color: color-mix(in srgb, var(--emblema2) 28%, #b9c5ce) !important;
+    color: #687682 !important;
+    box-shadow: inset 0 .1rem 0 rgba(255, 255, 255, .85), 0 .25rem .8rem rgba(56, 69, 81, .09) !important;
 }
 
 body.light-mode ul.topiclist.topics li.row dl.icon {
-    background: linear-gradient(110deg, color-mix(in srgb, var(--emblema2) 2.5%, #f3f5f6), transparent 45%, color-mix(in srgb, var(--emblema1) 2.5%, #e9edf0)), #f0f2f4 !important;
-    border-color: color-mix(in srgb, var(--emblema2) 22%, #c8d2da);
-    box-shadow: inset 0 .12rem 0 color-mix(in srgb, var(--emblema2) 32%, rgba(255, 255, 255, .8)), 0 .25rem .8rem rgba(56, 69, 81, .09);
+    background: linear-gradient(110deg, color-mix(in srgb, var(--emblema2) 2.5%, #e9edf0), transparent 45%, color-mix(in srgb, var(--emblema1) 2.5%, #e1e6ea)), #e7ebee !important;
+    border-color: color-mix(in srgb, var(--emblema2) 22%, #c2cdd5);
+    box-shadow: inset 0 .12rem 0 rgba(255, 255, 255, .85), 0 .25rem .8rem rgba(56, 69, 81, .09);
 }
 
 body.light-mode ul.topiclist.topics li.row:hover dl.icon {
@@ -12584,9 +12584,9 @@ body.light-mode ul.topiclist.topics li.row dl.icon::after {
 }
 
 body.light-mode .topic-actions:has(.search-box) {
-    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, #e7ebee), transparent 45%, color-mix(in srgb, var(--emblema1) 3%, #e7ebee)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92, 108, 122, .03) 3rem, rgba(92, 108, 122, .03) 3.05rem), #e7ebee;
-    border-color: color-mix(in srgb, var(--emblema2) 25%, #c6d0d8);
-    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 32%, rgba(255, 255, 255, .8)), 0 .4rem 1rem rgba(56, 69, 81, .1);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, #e2e7eb), transparent 45%, color-mix(in srgb, var(--emblema1) 3%, #e2e7eb)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92, 108, 122, .03) 3rem, rgba(92, 108, 122, .03) 3.05rem), #e2e7eb;
+    border-color: color-mix(in srgb, var(--emblema2) 25%, #bdc9d2);
+    box-shadow: inset 0 .1rem 0 rgba(255, 255, 255, .85), 0 .4rem 1rem rgba(56, 69, 81, .1);
 }
 
 body.light-mode .topic-actions:has(.search-box) #search_keywords {
@@ -12602,15 +12602,40 @@ body.light-mode .topic-actions:has(.search-box) #search_keywords::placeholder {
 
 body.light-mode .topic-actions:has(.search-box) .button2,
 body.light-mode .topic-actions:has(.search-box) .buttons > a .rtopicbutton {
-    border-color: color-mix(in srgb, var(--emblema2) 55%, #c5cfd7) !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, #eef1f3), color-mix(in srgb, var(--emblema1) 4%, #e6eaed)) !important;
-    color: #65727d !important;
+    border-color: color-mix(in srgb, var(--emblema2) 55%, #b9c6cf) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, #e6eaed), color-mix(in srgb, var(--emblema1) 4%, #dfe5e9)) !important;
+    color: #566571 !important;
+}
+
+body.light-mode .topic-actions:has(.search-box) .post-icon a::after {
+    color: #566571 !important;
 }
 
 body.light-mode .topic-actions:has(.search-box) .button2:hover,
 body.light-mode .topic-actions:has(.search-box) .buttons > a .rtopicbutton:hover {
     border-color: var(--emblema1) !important;
     color: var(--emblema1) !important;
+}
+
+body.light-mode .forum-top-actions .forum-mark-read,
+body.light-mode .forum-top-actions a[href*="watch"] {
+    border-color: color-mix(in srgb, var(--emblema2) 48%, #bac6cf) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 6%, #e8ecef), color-mix(in srgb, var(--emblema1) 4%, #e1e6ea)) !important;
+    color: #566571 !important;
+    text-shadow: none !important;
+}
+
+body.light-mode .forum-top-actions .forum-mark-read::before {
+    color: var(--emblema2) !important;
+}
+
+body.light-mode ul.topiclist.topics dd.lastpost span {
+    color: #e6ebef !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .75);
+}
+
+body.light-mode ul.topiclist.topics dd.lastpost span dfn {
+    color: var(--emblema2) !important;
 }
 
 body.light-mode .topic-bottom-bar {
