@@ -10290,6 +10290,11 @@ ul.topiclist.topics li.row dl.icon {
     overflow: hidden;
 }
 
+/* La capa decorativa de la tarjeta no debe interceptar los clics */
+ul.topiclist.topics li.row dl.icon > .rbgimg {
+    pointer-events: none;
+}
+
 ul.topiclist.topics li.row:hover dl.icon {
     transform: translateY(-.08rem);
     border-color: color-mix(in srgb, var(--emblema1) 45%, transparent);
