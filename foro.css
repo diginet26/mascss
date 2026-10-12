@@ -13873,7 +13873,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* =========================================================
    TOPIC BOTTOM BAR — ACCIONES Y ORDENACIÓN UNIFICADAS
    ========================================================= */
-
 .topic-bottom-bar {
     display: flex;
     align-items: center;
@@ -13889,8 +13888,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     box-shadow: inset 0 .12rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent);
 }
 
-.topic-bottom-bar > .topic-actions,
-.topic-bottom-bar > .action-box {
+.topic-bottom-bar > .topic-actions, .topic-bottom-bar > .action-box {
     display: flex !important;
     align-items: center;
     flex: 0 1 auto;
@@ -13905,14 +13903,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     box-shadow: none !important;
 }
 
-.topic-bottom-bar > .topic-actions .pagination {
-    display: none;
-}
-
-.topic-bottom-bar .action-box #sort-box,
-.topic-bottom-bar .action-box form {
-    margin: 0;
-}
+.topic-bottom-bar > .topic-actions .pagination {display: none;}
+.topic-bottom-bar .action-box #sort-box, .topic-bottom-bar .action-box form {margin: 0;}
 
 .topic-bottom-bar .action-box fieldset {
     margin: 0;
@@ -13962,19 +13954,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     font: 700 .9rem/1 "Oxanium", sans-serif;
 }
 
-.topic-bottom-bar .post-icon img {
-    display: none !important;
-}
+.topic-bottom-bar .post-icon img {display: none !important;}
 
-.topic-bottom-bar .post-icon a::after {
-    content: "PUBLICAR NUEVO TEMA";
-    padding: 0;
-    background: transparent;
-    color: var(--text-color);
-    font: 700 .5rem/1 "Roboto Mono", monospace;
-    letter-spacing: .12rem;
-    text-transform: uppercase;
-}
+.topic-bottom-bar .post-icon a::after {content: none !important;}
 
 .topic-bottom-bar .post-icon a:hover {
     border-color: var(--emblema1);
