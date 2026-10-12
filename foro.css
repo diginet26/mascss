@@ -13986,3 +13986,36 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 .topic-bottom-bar .post-icon a {
     font-size: 0 !important;
 }
+
+/* BOTÓN PUBLICAR — BARRA INFERIOR */
+
+.topic-bottom-bar .post-icon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.6rem;
+    padding: .5rem 1rem !important;
+    background: transparent !important;
+    border: .07rem solid var(--emblema2) !important;
+    border-radius: .4rem !important;
+    box-sizing: border-box;
+}
+
+.topic-bottom-bar .post-icon a::before,
+.topic-bottom-bar .post-icon a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.topic-bottom-bar .post-icon a .rtopicbutton {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: var(--text-color) !important;
+    font: 700 .5rem/1 "Roboto Mono", monospace !important;
+    letter-spacing: .12rem !important;
+    text-transform: uppercase;
+}
