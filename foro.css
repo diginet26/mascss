@@ -10316,6 +10316,7 @@ ul.topiclist.topics dd.views {
     padding: 0 !important;
     margin: 0;
     position: absolute !important;
+    bottom: .72rem;
     background: transparent !important;
     border: 0 !important;
     border-radius: 0 !important;
