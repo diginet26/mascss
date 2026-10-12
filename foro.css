@@ -10336,9 +10336,11 @@ ul.topiclist.topics li.row:hover .topictitle {
 
 ul.topiclist.topics li.row strong.pagination {
     position: absolute !important;
-    top: 50%;
-    right: 36%;
-    transform: translateY(-50%);
+    top: auto !important;
+    bottom: .65rem;
+    left: 50%;
+    right: auto !important;
+    transform: translateX(-50%);
 }
 
 ul.topiclist.topics span.span-tab {
