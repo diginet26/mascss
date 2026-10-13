@@ -542,7 +542,7 @@
 .dr-map-content {
     position:relative;
     min-height:20.625rem;
-    background:#091119;
+    background: var(--colorfondot);
     border:1px solid #183246;
 }
 
