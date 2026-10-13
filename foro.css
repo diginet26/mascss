@@ -14853,3 +14853,26 @@ form[name="post"] #list_dice #dice_to_del a:hover {
         min-width: 0;
     }
 }
+
+/* DIGITAL RIFT — ETIQUETA DE CADA LANZADA */
+form[name="post"] #list_dice tbody td {
+    --dice-label-color: var(--emblema2);
+}
+
+/* Texto de identificación de la tirada */
+form[name="post"] #list_dice tbody td {
+    font-family: "Oxanium", sans-serif !important;
+}
+
+form[name="post"] #list_dice tbody td {
+    color: var(--text-color) !important;
+}
+
+/* Resaltar suavemente el nombre y el número */
+form[name="post"] #list_dice tbody td {
+    background-image: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--emblema2) 3%, transparent),
+        transparent 24%
+    ) !important;
+}
