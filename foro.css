@@ -14665,3 +14665,176 @@ form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl {
         min-width: 0;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — DICE ROLL SYSTEM
+   PANEL DINÁMICO DE LANZADAS
+   ========================================================= */
+
+/* CABECERA DEL PANEL */
+form[name="post"] .h3:has(+ .panel.row3 #list_dice) {
+    display: flex !important;
+    align-items: center;
+    gap: .55rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1.25rem auto 0 !important;
+    padding: .55rem .9rem !important;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)), var(--theme-panel-deep)) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 55%, var(--theme-border)) !important;
+    border-bottom: 0 !important;
+    border-radius: .25rem .25rem 0 0 !important;
+    color: var(--emblema2) !important;
+    font: 700 .7rem/1.4 "Oxanium", sans-serif !important;
+    letter-spacing: .1rem !important;
+    text-transform: uppercase;
+}
+
+/* INDICADOR DIGITAL */
+form[name="post"] .h3:has(+ .panel.row3 #list_dice)::before {
+    content: "";
+    width: .4rem;
+    height: .4rem;
+    flex: 0 0 .4rem;
+    background: var(--emblema2);
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 65%, transparent);
+}
+
+/* PANEL EXTERIOR */
+form[name="post"] .panel.row3:has(#list_dice) {
+    width: min(100%, 58rem) !important;
+    margin: 0 auto 1.25rem !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--emblema2) 5%, var(--theme-panel-deep)), var(--theme-panel-deep) 65%) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 55%, var(--theme-border)) !important;
+    border-radius: .25rem !important;
+    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 20%, transparent), 0 .5rem 1.5rem rgba(0,0,0,.18) !important;
+    color: var(--text-color) !important;
+}
+
+/* CONTENEDOR INTERIOR */
+form[name="post"] .panel.row3:has(#list_dice) > .inner {
+    padding: .75rem !important;
+    background: transparent !important;
+}
+
+/* TABLA DINÁMICA */
+form[name="post"] #list_dice {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 .4rem !important;
+    table-layout: auto;
+}
+
+/* CADA LANZADA: UNA FILA INDEPENDIENTE */
+form[name="post"] #list_dice tr {
+    background: color-mix(in srgb, var(--emblema2) 4%, var(--theme-panel-deep));
+}
+
+form[name="post"] #list_dice td {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .55rem;
+    min-width: 0;
+    padding: .7rem .8rem !important;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 35%, var(--theme-border)) !important;
+    border-left: .18rem solid var(--emblema2) !important;
+    color: var(--text-color) !important;
+    font: 500 .68rem/1.5 "Oxanium", sans-serif !important;
+}
+
+/* ETIQUETAS */
+form[name="post"] #list_dice label {
+    margin: 0 !important;
+    color: var(--text-color) !important;
+    font: 600 .65rem/1.4 "Oxanium", sans-serif !important;
+}
+
+/* SELECTOR DE DADOS */
+form[name="post"] #list_dice select {
+    min-width: 7rem;
+    max-width: 100%;
+    padding: .45rem .6rem !important;
+    box-sizing: border-box;
+    background: var(--theme-panel-deep) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 60%, var(--theme-border)) !important;
+    border-radius: .2rem !important;
+    color: var(--text-color) !important;
+    font: 500 .7rem "IBM Plex Mono", monospace !important;
+    outline: none;
+}
+
+/* NÚMERO DE LANZAMIENTOS */
+form[name="post"] #list_dice input[name^="nb_rolls"] {
+    width: 3.5rem !important;
+    min-width: 3.5rem;
+    min-height: 2rem;
+    padding: .3rem .45rem !important;
+    box-sizing: border-box;
+    background: var(--theme-panel-deep) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 60%, var(--theme-border)) !important;
+    border-radius: .2rem !important;
+    color: var(--text-color) !important;
+    font: 600 .75rem "IBM Plex Mono", monospace !important;
+    text-align: center;
+    outline: none;
+}
+
+/* FOCO DE LOS CONTROLES */
+form[name="post"] #list_dice select:focus,
+form[name="post"] #list_dice input[name^="nb_rolls"]:focus {
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 25%, transparent) !important;
+}
+
+/* BOTÓN + — CONSERVA EL ENLACE ORIGINAL */
+form[name="post"] #list_dice #dice_to_del a {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel-deep));
+    border: .06rem solid var(--emblema2);
+    border-radius: .2rem;
+    color: var(--emblema2) !important;
+    text-decoration: none !important;
+    font: 700 1.15rem/1 "Oxanium", sans-serif;
+    transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+/* Sustituye visualmente el icono, no la función */
+form[name="post"] #list_dice #dice_to_del a img {
+    display: none !important;
+}
+
+form[name="post"] #list_dice #dice_to_del a::before {
+    content: "+";
+}
+
+form[name="post"] #list_dice #dice_to_del a:hover {
+    background: color-mix(in srgb, var(--emblema2) 24%, var(--theme-panel-deep));
+    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 28%, transparent);
+    transform: translateY(-.05rem);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    form[name="post"] .panel.row3:has(#list_dice) {
+        width: 100% !important;
+    }
+
+    form[name="post"] #list_dice td {
+        gap: .45rem;
+        padding: .6rem !important;
+    }
+
+    form[name="post"] #list_dice select {
+        flex: 1 1 7rem;
+    }
+}
