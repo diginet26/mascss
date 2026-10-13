@@ -2855,7 +2855,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     right: 14px !important;
     bottom: auto !important;
     left: auto !important;
-    width: 330px !important;
+    width: 400px !important;
     max-width: calc(100vw - 20px) !important;
     max-height: 450px !important;
     overflow-y: auto !important;
