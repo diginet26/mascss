@@ -14595,3 +14595,8 @@ form[name="post"] #postingbox input[name="subject"]::placeholder {
 form[name="post"] #postingbox input[name="subject"] {
     text-align: left !important;
 }
+
+/* PUBLICAR NUEVO TEMA — OCULTAR CABECERA INTERNA */
+form[name="post"] #postingbox > .inner > .h3 {
+    display: none !important;
+}
