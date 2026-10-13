@@ -3099,10 +3099,11 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 
 /* ÚLTIMOS TEMAS */
 #rift-recent {
-    grid-area: recent;
-    min-width: 0;
-    padding: 16px;
-    min-height: 560px;
+    padding: 1.143rem;
+    min-height: 0 !important;
+    height: fit-content !important;
+    align-self: start !important;
+    box-sizing: border-box;
     margin-right: 1.429rem;
 }
 
@@ -7426,7 +7427,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* TARJETAS */
 #rift-staff-grid > a {
     width: 100%;
-    height: 5.714rem;
+    height: 6.3rem;
     min-width: 0;
     padding: 0.357rem;
     box-sizing: border-box;
