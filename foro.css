@@ -15224,3 +15224,135 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     font-weight: 700 !important;
     letter-spacing: .04rem !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — POST PREVIEW
+   PREVISUALIZACIÓN DEL MENSAJE
+   ========================================================= */
+
+/* PANEL PRINCIPAL */
+#preview.post.row2 {
+    display: block !important;
+    width: min(100%, 58rem) !important;
+    margin: 1.25rem auto !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, var(--theme-panel-deep)), var(--theme-panel-deep) 65%) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 55%, var(--theme-border)) !important;
+    border-radius: .25rem !important;
+    color: var(--text-color) !important;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.18), inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 18%, transparent) !important;
+    overflow: hidden;
+}
+
+/* CONTENEDOR INTERIOR */
+#preview > .inner {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+}
+
+/* ESQUINAS ANTIGUAS DE FOROACTIVO */
+#preview .corners-top,
+#preview .corners-bottom {
+    display: none !important;
+}
+
+/* CUERPO */
+#preview .postbody {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    color: var(--text-color) !important;
+}
+
+/* CABECERA PREVISUALIZACIÓN */
+#preview .postbody > .h3 {
+    display: flex !important;
+    align-items: center;
+    gap: .55rem;
+    margin: 0 !important;
+    padding: .8rem 1rem !important;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
+    border: 0 !important;
+    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 50%, var(--theme-border)) !important;
+    color: var(--emblema2) !important;
+    font: 700 .75rem/1.4 "Oxanium", sans-serif !important;
+    letter-spacing: .08rem !important;
+    text-transform: uppercase;
+}
+
+/* INDICADOR DIGITAL */
+#preview .postbody > .h3::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 .4rem;
+    width: .4rem;
+    height: .4rem;
+    background: var(--emblema2);
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 50%, transparent);
+}
+
+/* ÁREA DEL MENSAJE */
+#preview .postbody > .content {
+    display: block !important;
+    min-width: 0;
+    min-height: 10rem;
+    margin: 0 !important;
+    padding: 1.25rem !important;
+    box-sizing: border-box;
+    background-color: var(--theme-panel-deep) !important;
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px) !important;
+    background-size: 1.5rem 1.5rem !important;
+    color: var(--text-color) !important;
+    font: 400 .85rem/1.8 "IBM Plex Mono", monospace !important;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* SEPARADOR POSTERIOR */
+#preview + hr {
+    width: min(100%, 58rem);
+    margin: 1.25rem auto !important;
+    border: 0 !important;
+    border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
+}
+
+/* =========================================================
+   SKIN CLARA — PREVISUALIZACIÓN
+   ========================================================= */
+
+body.light-mode #preview.post.row2 {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #e4e8eb), #e4e8eb 65%) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 38%, #c5cfd7) !important;
+    color: #394752 !important;
+    box-shadow: 0 .5rem 1.5rem rgba(56,69,81,.10), inset 0 1px 0 rgba(255,255,255,.7) !important;
+}
+
+body.light-mode #preview .postbody > .h3 {
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 6%, #e9ecef), #e1e6e9 75%) !important;
+    border-bottom-color: color-mix(in srgb, var(--emblema2) 35%, #c5cfd7) !important;
+    color: var(--emblema2) !important;
+}
+
+body.light-mode #preview .postbody > .content {
+    background-color: #f3f5f6 !important;
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;
+    color: #394752 !important;
+}
+
+body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    #preview.post.row2 {
+        width: 100% !important;
+        margin: 1rem auto !important;
+    }
+    #preview .postbody > .content {padding: .85rem !important;}
+}
