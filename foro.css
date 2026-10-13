@@ -2851,7 +2851,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* NOTIFICACIONES — POSICIÓN Y CAPA */
 #fa_toolbar #fa_right.notification #notif_list {
     position: fixed !important;
-    top: 96px !important;
+    top: 110px !important;
     right: 14px !important;
     bottom: auto !important;
     left: auto !important;
