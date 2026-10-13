@@ -2851,7 +2851,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* NOTIFICACIONES — POSICIÓN Y CAPA */
 #fa_toolbar #fa_right.notification #notif_list {
     position: fixed !important;
-    top: 110px !important;
+    top: 96px !important;
     right: 14px !important;
     bottom: auto !important;
     left: auto !important;
@@ -14343,7 +14343,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     position: relative;
     min-width: 0;
     margin: 0 !important;
-    padding: 0 34px 0 0 !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
     overflow-wrap: anywhere;
     background: transparent !important;
@@ -14363,6 +14363,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     font-family: "Oxanium", sans-serif;
     font-size: 10px !important;
     line-height: 1.6 !important;
+    text-align: left !important;
     overflow-wrap: anywhere;
 }
 
@@ -14384,6 +14385,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* FECHA */
 #fa_toolbar #fa_right #notif_list li .contentTime {
     display: block !important;
+    width: 100% !important;
     max-width: 100% !important;
     margin-top: 6px !important;
     padding: 5px 0 0 !important;
@@ -14393,6 +14395,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     font-family: "Oxanium", sans-serif;
     font-size: 9px !important;
     line-height: 1.35 !important;
+    white-space: nowrap !important;
     overflow-wrap: normal !important;
     word-break: normal !important;
     text-align: right !important;
@@ -14413,6 +14416,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 #fa_toolbar #fa_right #notif_list li a.delete:hover {
     opacity: 1;
     filter: drop-shadow(0 0 4px var(--emblema2));
+}
+
+@media screen and (max-width: 440px) {
+    #fa_toolbar #fa_right #notif_list li .contentTime {
+        white-space: normal !important;
+    }
 }
 
 /* PIE — VER TODAS LAS NOTIFICACIONES */
