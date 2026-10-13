@@ -1044,8 +1044,8 @@
     margin: -1.875rem auto;
     padding: 1.125rem;
     box-sizing: border-box;
-    background: linear-gradient(145deg, rgba(22,119,200,.08), transparent 35%, rgba(53,216,255,.04)), var(--dr-bg);
-    border: 1px solid var(--dr-border);
+    background: var(--colorfondot);
+    border: 1px solid var(--colorfondo);
     color: var(--colortextodl);
     font-family: 'Poppins', sans-serif;
     font-size: 0.75rem;
@@ -1388,7 +1388,7 @@
 
 .dr-tabs label {
     padding: 0.75rem 0.5rem;
-    background: var(--dr-panel2);
+    background: var(--colorfondo);
     border: 1px solid var(--dr-border);
     color: var(--dr-muted);
     font-family: 'Oxanium', sans-serif;
