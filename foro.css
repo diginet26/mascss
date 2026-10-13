@@ -6555,6 +6555,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     position: fixed !important;
     z-index: 99998 !important;
     inset: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
     background: radial-gradient( circle at center, color-mix( in srgb, var(--emblema2) 8%, transparent ), rgba(0, 0, 0, .84) ) !important;
     backdrop-filter: blur(5px) !important;
     transition: opacity .25s ease !important;
@@ -6573,6 +6575,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     padding: 0 !important;
     box-sizing: border-box !important;
     transform: translate(-50%, -50%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
     border: 1px solid var(--emblema2) !important;
     border-radius: 14px !important;
     background: radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--emblema2) 18%, transparent), transparent 55%), linear-gradient(145deg, var(--theme-panel-deep), var(--theme-panel)) !important;
@@ -14422,7 +14426,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 /* ENLACE PARA ELIMINAR */
-#fa_toolbar #fa_right #notif_list li:not(.see_all) a.delete {
+#fa_toolbar #fa_right #notif_list > li:not(.see_all) > a.delete {
     position: absolute !important;
     top: 7px !important;
     right: 8px !important;
@@ -14452,7 +14456,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
-#fa_toolbar #fa_right #notif_list li:not(.see_all) a.delete::before {
+#fa_toolbar #fa_right #notif_list > li:not(.see_all) > a.delete::before {
     content: "×" !important;
     display: block !important;
     color: var(--emblema2) !important;
@@ -14463,18 +14467,18 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-indent: 0 !important;
 }
 
-#fa_toolbar #fa_right #notif_list li:not(.see_all) a.delete img {
+#fa_toolbar #fa_right #notif_list > li:not(.see_all) > a.delete img {
     display: none !important;
 }
 
-#fa_toolbar #fa_right #notif_list li:not(.see_all) a.delete:hover {
+#fa_toolbar #fa_right #notif_list > li:not(.see_all) > a.delete:hover {
     transform: scale(1.08) !important;
     border-color: var(--emblema2) !important;
     background: var(--emblema2) !important;
     box-shadow: 0 0 12px color-mix(in srgb, var(--emblema2) 65%, transparent) !important;
 }
 
-#fa_toolbar #fa_right #notif_list li:not(.see_all) a.delete:hover::before {
+#fa_toolbar #fa_right #notif_list li a.delete:hover::before {
     color: #111 !important;
 }
 
