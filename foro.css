@@ -14555,3 +14555,43 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     background: var(--emblema2) !important;
     color: #fff !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — PUBLICAR NUEVO TEMA
+   LIMPIEZA DE CABECERA Y CAMPO DEL TÍTULO
+   ========================================================= */
+
+/* 1. Ocultar la fecha y hora situada encima del encabezado */
+body:has(form[name="post"] #postingbox) p:has(+ form[name="post"]) {
+    display: none !important;
+}
+
+form[name="post"] > p.right.rightside,
+form[name="post"] > p:has(+ h1.page-title) {
+    display: none !important;
+}
+
+/* La fecha actual de posting_body está fuera del formulario */
+body:has(form[name="post"] #postingbox) > p:has(+ form[name="post"]) {
+    display: none !important;
+}
+
+/* 2. Ocultar el segundo título "Publicar un nuevo tema" */
+form[name="post"] #postingbox > .inner > .h3 {
+    display: none !important;
+}
+
+/* 3. Ocultar la etiqueta flotante "Título del tema" */
+form[name="post"] #postingbox dl:has(input[name="subject"]) dt {
+    display: none !important;
+}
+
+/* 4. Mostrar "Título del tema" dentro del campo */
+form[name="post"] #postingbox input[name="subject"]::placeholder {
+    color: var(--theme-text-muted);
+    opacity: 1;
+}
+
+form[name="post"] #postingbox input[name="subject"] {
+    text-align: left !important;
+}
