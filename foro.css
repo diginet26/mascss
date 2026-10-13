@@ -14899,3 +14899,59 @@ form[name="post"] #list_dice .dr-dice-number {
 }
 form[name="post"] .h3:has(+ .panel.row3 #list_dice) {display: none !important;}/* DIGITAL RIFT — OCULTAR CABECERA REDUNDANTE DE DADOS */
 #smiley-box .dr-editor-statuses {display: none !important;}/* DIGITAL RIFT — OCULTAR ESTADOS DEL EDITOR */
+
+
+/* =========================================================
+   DIGITAL RIFT — PUBLICAR TEMA
+   TÍTULO A ANCHO COMPLETO Y PEGADO AL EDITOR
+   ========================================================= */
+
+/* Contenedor del título */
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl:has(input[name="subject"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Eliminar la etiqueta exterior */
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl:has(input[name="subject"]) dt {
+    display: none !important;
+}
+
+/* Contenedor del campo */
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl:has(input[name="subject"]) dd {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Campo de título: ocupar todo el ancho */
+form[name="post"]:not(#quick_reply) #postingbox input[name="subject"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 2.7rem !important;
+    margin: 0 0 .4rem !important;
+    box-sizing: border-box !important;
+}
+
+/* Eliminar el espacio entre el título y el editor */
+form[name="post"]:not(#quick_reply) #smiley-box {display: none !important;}
+form[name="post"]:not(#quick_reply) #message-box {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+form[name="post"]:not(#quick_reply) #message-box > br {display: none !important;}
+form[name="post"]:not(#quick_reply) #message-box #textarea_content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
