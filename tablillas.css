@@ -640,9 +640,9 @@
 .dr-map-description {
     flex:1;
     padding:0.6875rem;
-    background:rgba(17,31,45,.55);
-    border-left:1px solid var(--map-blue);
-    color:#9fb1bf;
+    background: var(--colorfondo);
+    border-left:1px solid var(--emblema2);
+    color: var(--colorfondod);
     font-size:0.625rem;
 }
 
@@ -650,8 +650,8 @@
 .dr-map-role {
     margin-top:0.875rem;
     padding:0.625rem 0.75rem;
-    background: linear-gradient(90deg, rgba(22,119,200,.12), transparent);
-    border:1px solid rgba(34,193,195,.18);
+    background: linear-gradient(90deg, var(--colorfondo), transparent);
+    border:1px solid var(--emblema2);
 }
 
 .dr-map-role span {
