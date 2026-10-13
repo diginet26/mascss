@@ -14311,7 +14311,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     position: relative;
     display: list-item;
     margin: 0 0 5px !important;
-    padding: 9px 9px 8px 12px !important;
+    padding: 10px 28px 9px 12px !important;
     background: var(--theme-panel-deep) !important;
     border: 1px solid var(--theme-border) !important;
     border-left: 2px solid var(--emblema1) !important;
@@ -14341,8 +14341,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* CONTENIDO */
 #fa_toolbar #fa_right #notif_list li .content {
     position: relative;
+    min-width: 0;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 34px 0 0 !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere;
     background: transparent !important;
     color: var(--theme-text);
 }
@@ -14380,20 +14383,30 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 /* FECHA */
 #fa_toolbar #fa_right #notif_list li .contentTime {
-    display: block;
+    display: block !important;
+    max-width: 100% !important;
     margin-top: 6px !important;
-    padding-top: 5px;
+    padding: 5px 0 0 !important;
     border-top: 1px solid var(--theme-border);
+    box-sizing: border-box !important;
     color: var(--theme-text-muted) !important;
     font-family: "Oxanium", sans-serif;
     font-size: 9px !important;
-    line-height: 1.4;
-    text-align: right;
+    line-height: 1.35 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    text-align: right !important;
 }
 
 /* ENLACE PARA ELIMINAR */
 #fa_toolbar #fa_right #notif_list li a.delete {
-    opacity: .7;
+    position: absolute !important;
+    top: 7px !important;
+    right: 7px !important;
+    z-index: 5 !important;
+    display: block !important;
+    margin: 0 !important;
+    opacity: .85;
     transition: opacity .2s ease, filter .2s ease;
 }
 
@@ -14437,95 +14450,4 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 #fa_toolbar #fa_right #notif_list > li.see_all a:hover {
     background: var(--emblema2) !important;
     color: #fff !important;
-}
-
-/* =========================================================
-   DIGITAL RIFT — NOTIFICACIONES // ANCHO Y CONTENIDO
-   ========================================================= */
-
-#fa_toolbar #fa_right #notif_list {
-    width: 400px !important;
-    max-width: calc(100vw - 24px) !important;
-}
-
-/* Reservar espacio para la X de eliminar */
-#fa_toolbar #fa_right #notif_list > li:not(.see_all) {
-    padding: 10px 28px 9px 12px !important;
-}
-
-/* Evitar que el contenido invada la zona de la X */
-#fa_toolbar #fa_right #notif_list li .content {
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
-/* Mantener visible el botón de eliminar */
-#fa_toolbar #fa_right #notif_list li a.delete {
-    position: absolute !important;
-    top: 8px !important;
-    right: 7px !important;
-    z-index: 3 !important;
-    display: block !important;
-    opacity: .85;
-}
-
-/* Aprovechar el ancho adicional */
-#fa_toolbar #fa_right #notif_list li .contentText {
-    padding-right: 0 !important;
-    overflow-wrap: anywhere;
-}
-
-/* Ajuste para pantallas estrechas */
-@media screen and (max-width: 440px) {
-    #fa_toolbar #fa_right #notif_list {
-        width: calc(100vw - 20px) !important;
-        max-width: calc(100vw - 20px) !important;
-        right: 10px !important;
-    }
-}
-
-/* =========================================================
-   DIGITAL RIFT — NOTIFICACIONES
-   AJUSTE DE LA X Y LAS FECHAS
-   ========================================================= */
-
-/* TARJETAS: reservar espacio para la X */
-#fa_toolbar #fa_right #notif_list > li:not(.see_all) {
-    padding-right: 12px !important;
-}
-
-/* CONTENIDO: dejar espacio a la derecha para la fecha */
-#fa_toolbar #fa_right #notif_list li .content {
-    padding-right: 34px !important;
-    box-sizing: border-box !important;
-}
-
-/* X: mantenerla en la esquina superior derecha */
-#fa_toolbar #fa_right #notif_list li a.delete {
-    position: absolute !important;
-    top: 7px !important;
-    right: 7px !important;
-    z-index: 5 !important;
-    margin: 0 !important;
-    opacity: .85;
-}
-
-/* FECHA: evitar cortes innecesarios */
-#fa_toolbar #fa_right #notif_list li .contentTime {
-    display: block !important;
-    max-width: 100% !important;
-    margin-top: 6px !important;
-    padding-top: 5px !important;
-    padding-right: 0 !important;
-    box-sizing: border-box !important;
-    overflow-wrap: normal !important;
-    word-break: normal !important;
-    line-height: 1.35 !important;
-    text-align: right !important;
-}
-
-/* HOVER DE LA X */
-#fa_toolbar #fa_right #notif_list li a.delete:hover {
-    opacity: 1 !important;
-    filter: drop-shadow(0 0 4px var(--emblema2));
 }
