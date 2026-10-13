@@ -1078,7 +1078,7 @@ box-sizing: border-box;
 background: var(--colorfondo);
 border: 0.071rem solid var(--dr-border);
 color: var(--colortextod);
-font-size: 0.929rem;
+font-size: 0.6rem;
 line-height: 1.8;
 text-align: justify;
 }
