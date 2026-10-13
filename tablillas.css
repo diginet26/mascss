@@ -1071,6 +1071,21 @@
     text-transform: uppercase;
 } */
 
+/* TEXTO */
+.dr-text {
+    padding: 17px;
+    box-sizing: border-box;
+    background: var(--dr-panel);
+    border: 1px solid var(--dr-border);
+    color: #b9cbd4;
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.dr-text p {margin: 0 0 12px;}
+.dr-text p:last-child {margin-bottom: 0;}
+
 /* ============================================================
    PÁGINAS
    ============================================================ */
