@@ -1177,7 +1177,7 @@
 
 .dr-info > div {
     padding: 1rem;
-    background: var(--dr-panel);
+    background: var(--colorfondo);
     border: 1px solid var(--dr-border);
     position: relative;
 }
@@ -1221,7 +1221,7 @@
 
 /* TARJETA DEL DIGIMON */
 .dr-digimon-card {
-    min-height: 20.625rem;
+    min-height: 18.625rem;
     padding: 0.75rem;
     box-sizing: border-box;
     display: flex;
@@ -1305,7 +1305,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--dr-panel2);
+    background: var(--colorfondo);
     border: 1px solid var(--dr-border);
     text-align: center;
 }
@@ -1331,7 +1331,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--dr-panel2);
+    background: var(--colorfondo);
     border: 1px solid var(--dr-border);
     text-align: center;
 }
@@ -1358,7 +1358,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--dr-panel2);
+    background: var(--colorfondo);
     border: 1px solid var(--dr-border);
     text-align: center;
 }
@@ -1433,7 +1433,7 @@
     .dr-digimon {grid-template-columns: 1fr;}
     .dr-digimon-card {
         height: 18.75rem;
-        min-height: 18.75rem;
+        min-height: 1.75rem;
     }
     .dr-stats {grid-template-columns: repeat(5, 1fr);}
 }
