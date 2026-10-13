@@ -3101,8 +3101,8 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #rift-recent {
     padding: 1.143rem;
     min-height: 0 !important;
-    height: fit-content !important;
-    align-self: start !important;
+    height: auto !important;
+    align-self: stretch !important;
     box-sizing: border-box;
     margin-right: 1.429rem;
 }
