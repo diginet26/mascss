@@ -14666,6 +14666,7 @@ form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl {
     }
 }
 
+
 /* =========================================================
    DIGITAL RIFT — DICE ROLL SYSTEM
    PANEL DINÁMICO DE LANZADAS
@@ -14720,31 +14721,41 @@ form[name="post"] .panel.row3:has(#list_dice) > .inner {
     background: transparent !important;
 }
 
-/* TABLA DINÁMICA */
+/* TABLA DINÁMICA — CONSERVAR ESTRUCTURA ORIGINAL */
 form[name="post"] #list_dice {
+    display: table !important;
     width: 100% !important;
+    table-layout: auto !important;
     border-collapse: separate !important;
-    border-spacing: 0 .4rem !important;
-    table-layout: auto;
+    border-spacing: 0 .45rem !important;
 }
 
-/* CADA LANZADA: UNA FILA INDEPENDIENTE */
-form[name="post"] #list_dice tr {
-    background: color-mix(in srgb, var(--emblema2) 4%, var(--theme-panel-deep));
+/* CUERPO DE LA TABLA */
+form[name="post"] #list_dice tbody {
+    width: 100%;
 }
 
-form[name="post"] #list_dice td {
+/* CADA LANZADA: FILA HORIZONTAL INDEPENDIENTE */
+form[name="post"] #list_dice tbody tr {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel-deep)), var(--theme-panel-deep) 75%) !important;
+}
+
+/* CELDA COMO BARRA DIGITAL */
+form[name="post"] #list_dice tbody td {
     display: flex !important;
-    align-items: center;
+    align-items: center !important;
     flex-wrap: wrap;
-    gap: .55rem;
+    gap: .65rem;
+    width: 100% !important;
     min-width: 0;
-    padding: .7rem .8rem !important;
+    min-height: 3.2rem;
+    padding: .65rem .85rem !important;
     box-sizing: border-box;
     background: transparent !important;
-    border: .05rem solid color-mix(in srgb, var(--emblema2) 35%, var(--theme-border)) !important;
-    border-left: .18rem solid var(--emblema2) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, transparent) !important;
+    border-left: .2rem solid var(--emblema2) !important;
     color: var(--text-color) !important;
+    text-align: left !important;
     font: 500 .68rem/1.5 "Oxanium", sans-serif !important;
 }
 
@@ -14757,7 +14768,8 @@ form[name="post"] #list_dice label {
 
 /* SELECTOR DE DADOS */
 form[name="post"] #list_dice select {
-    min-width: 7rem;
+    flex: 0 1 14rem;
+    min-width: 9rem;
     max-width: 100%;
     padding: .45rem .6rem !important;
     box-sizing: border-box;
@@ -14792,15 +14804,17 @@ form[name="post"] #list_dice input[name^="nb_rolls"]:focus {
     box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 25%, transparent) !important;
 }
 
-/* BOTÓN + — CONSERVA EL ENLACE ORIGINAL */
+/* BOTÓN + — CONSERVAR EL ENLACE ORIGINAL */
 form[name="post"] #list_dice #dice_to_del a {
-    display: inline-grid;
-    place-items: center;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
     width: 2rem;
     height: 2rem;
+    flex: 0 0 2rem;
     box-sizing: border-box;
     background: color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel-deep));
-    border: .06rem solid var(--emblema2);
+    border: .06rem solid var(--emblema2) !important;
     border-radius: .2rem;
     color: var(--emblema2) !important;
     text-decoration: none !important;
@@ -14808,7 +14822,7 @@ form[name="post"] #list_dice #dice_to_del a {
     transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
-/* Sustituye visualmente el icono, no la función */
+/* SUSTITUIR VISUALMENTE EL ICONO, NO LA FUNCIÓN */
 form[name="post"] #list_dice #dice_to_del a img {
     display: none !important;
 }
@@ -14829,12 +14843,13 @@ form[name="post"] #list_dice #dice_to_del a:hover {
         width: 100% !important;
     }
 
-    form[name="post"] #list_dice td {
+    form[name="post"] #list_dice tbody td {
         gap: .45rem;
         padding: .6rem !important;
     }
 
     form[name="post"] #list_dice select {
-        flex: 1 1 7rem;
+        flex: 1 1 8rem;
+        min-width: 0;
     }
 }
