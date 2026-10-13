@@ -14876,3 +14876,35 @@ form[name="post"] #list_dice tbody td {
         transparent 24%
     ) !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — ETIQUETAS DE LANZADAS
+   ========================================================= */
+
+form[name="post"] #list_dice .dr-dice-label {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    flex: 0 0 auto;
+    margin-right: .15rem;
+    color: var(--emblema2) !important;
+    font: 700 .68rem/1.4 "Oxanium", sans-serif !important;
+    letter-spacing: .025rem;
+    text-transform: uppercase;
+}
+
+form[name="post"] #list_dice .dr-dice-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.35rem;
+    min-height: 1.25rem;
+    padding: .1rem .25rem;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep));
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 45%, transparent);
+    border-radius: .15rem;
+    color: var(--emblema2) !important;
+    font: 600 .62rem/1 "IBM Plex Mono", monospace !important;
+    letter-spacing: 0;
+}
