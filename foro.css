@@ -15384,3 +15384,24 @@ body.light-mode #preview, body.light-mode #preview > .inner, body.light-mode #pr
 }
 
 body.light-mode #preview .postbody > .content {background-color: #f3f5f6 !important;}
+
+
+/* DIGITAL RIFT — PREVISUALIZACIÓN
+   MISMO ANCHO QUE EL TÍTULO Y EL EDITOR */
+
+form[name="post"] #preview.post.row2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Separador alineado con la previsualización */
+form[name="post"] #preview + hr {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+}
