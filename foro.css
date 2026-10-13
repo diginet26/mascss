@@ -10290,8 +10290,13 @@ ul.topiclist.topics li.row dl.icon {
     overflow: hidden;
 }
 
-/* La capa decorativa de la tarjeta no debe interceptar los clics */
-ul.topiclist.topics li.row dl.icon > .rbgimg {
+/* La imagen decorativa se inserta dentro de li.row: cada tema debe ser su referencia */
+ul.topiclist.topics li.row {
+    position: relative !important;
+}
+
+/* La capa decorativa no debe interceptar los clics de la tarjeta */
+ul.topiclist.topics li.row > .rbgimg {
     pointer-events: none;
 }
 
