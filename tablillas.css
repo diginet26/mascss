@@ -543,7 +543,7 @@
     position:relative;
     min-height:20.625rem;
     background: var(--colorfondot);
-    border:1px solid #183246;
+    border:1px solid var(--emblema2);
 }
 
 /* ZONAS */
@@ -689,8 +689,8 @@
 }
 
 .dr-map-tabs label:hover {
-    background:#111f2d;
-    border-color:var(--map-cyan);
+    background: var(--emblema2);
+    border-color:var(--colorfondo);
 }
 
 .dr-map-tabs small {
