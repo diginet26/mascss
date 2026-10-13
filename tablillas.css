@@ -562,7 +562,7 @@
     justify-content:space-between;
     padding-bottom:0.625rem;
     margin-bottom:0.875rem;
-    border-bottom:1px solid #183246;
+    border-bottom:1px solid var(--emblema2);
 }
 
 .dr-map-zone-head span {
@@ -573,7 +573,7 @@
 }
 
 .dr-map-zone-head b {
-    color:#fff;
+    color: var(--colortextod);
     font-family:"Jersey 15",Arial,sans-serif;
     font-size:1.25rem;
     letter-spacing:0.0625rem;
@@ -616,7 +616,7 @@
 /* DATOS */
 .dr-map-data {
     padding:0.5rem 0.625rem;
-    background:#0d1722;
+    background: var(--colorfondo);
     border:1px solid rgba(255,255,255,.05);
 }
 
@@ -681,8 +681,8 @@
 .dr-map-tabs label {
     position:relative;
     padding:0.5625rem 0.3125rem;
-    background:#0b151e;
-    border:1px solid #183246;
+    background: var(--colorfondo);
+    border:1px solid var(--colortextod);
     cursor:pointer;
     text-align:center;
     transition:.2s;
