@@ -14908,3 +14908,7 @@ form[name="post"] #list_dice .dr-dice-number {
     font: 600 .62rem/1 "IBM Plex Mono", monospace !important;
     letter-spacing: 0;
 }
+/* DIGITAL RIFT — OCULTAR CABECERA REDUNDANTE DE DADOS */
+form[name="post"] .h3:has(+ .panel.row3 #list_dice) {
+    display: none !important;
+}
