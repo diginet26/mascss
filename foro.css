@@ -3099,13 +3099,15 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 
 /* ÚLTIMOS TEMAS */
 #rift-recent {
+    display: flex;
+    flex-direction: column;
     padding: 1.143rem;
     min-height: 0 !important;
     height: auto !important;
     align-self: stretch !important;
+    box-sizing: border-box;
     margin-right: 1.429rem;
     margin-bottom: 1.143rem;
-    box-sizing: border-box;
 }
 
 #rift-board {z-index: 1;}
@@ -3574,11 +3576,13 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
    ÚLTIMOS TEMAS
    --------------------------------------------------------- */
 #rift-recent-content {
-    height:500px;
-    overflow-y:auto;
-    font-size:12px;
-    line-height:1.5;
-    color:var(--rift-muted);
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto !important;
+    max-height: none;
+    overflow: hidden !important;
+    font-size: .857rem;
+    line-height: 1.5;
 }
 
 /* En caso de que el contenido de Foroactivo genere elementos de lista */
@@ -7299,10 +7303,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* ==========================================================
    DIGITAL RIFT — ESCALA DE ACCESIBILIDAD DEL TABLÓN   PRUEBA CONTROLADA
    ========================================================== */
-#rift-board {
-    font-size: 1rem;
-}
-
+#rift-board {font-size: 1rem;}
 /* CUERPO PRINCIPAL */
 #rift-board-body {
     gap: 0.857rem;
@@ -7310,58 +7311,30 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 }
 
 /* PANELES */
-#rift-current,
-#rift-staff,
-#rift-recent {
+#rift-current, #rift-staff, #rift-recent {
     padding: 1.143rem;
 }
 
 /* ÚLTIMOS TEMAS */
-
-#rift-recent {
-    min-height: 32rem;
-}
-
+#rift-recent {min-height: 32rem;}
 #rift-recent-content {
     height: 30rem;
     font-size: 0.857rem;
 }
 
 /* CÍRCULOS */
-
-.rift-board-dots {
-    gap: 0.429rem;
-}
-
+.rift-board-dots {gap: 0.429rem;}
 .rift-board-dots span {
     width: 0.643rem;
     height: 0.643rem;
 }
 
-/* ==========================================================
-   TEXTOS DEL TABLÓN
-   ========================================================== */
-
-#rift-board h1,
-#rift-board h2,
-#rift-board h3,
-#rift-board h4,
-#rift-board p,
-#rift-board span,
-#rift-board a {
-    line-height: 1.5;
-}
+#rift-board h1, #rift-board h2, #rift-board h3, #rift-board h4, #rift-board p, #rift-board span, #rift-board a {line-height: 1.5;}/*TEXTOS DEL TABLÓN*/
 /* =========================================================
    ACCESIBILIDAD — TABLÓN — TIPOGRAFÍA
    ========================================================= */
-
-#rift-current-text {
-    font-size: 0.929rem;
-}
-
-#rift-recent-content {
-    font-size: 0.857rem;
-}
+#rift-current-text {font-size: 0.929rem;}
+#rift-recent-content {font-size: 0.857rem;}
 /* =========================================================
    ACCESIBILIDAD — TABLÓN — ENLACES RÁPIDOS
    ========================================================= */
@@ -7485,30 +7458,17 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* =========================================================
    ACCESIBILIDAD — TABLÓN — ÚLTIMOS TEMAS
    ========================================================= */
-
-#rift-recent-content .marquee {
-    height: 30rem !important;
-}
-
-#rift-recent-content {
-    height: 30rem !important;
-    overflow: hidden !important;
+#rift-recent-content > .module, #rift-recent-content > .module > .inner, #rift-recent-content #comments_scroll_div, #rift-recent-content .marquee {
+    height: 100% !important;
+    min-height: 0;
+    box-sizing: border-box;
 }
 /* =========================================================
    ACCESIBILIDAD — TABLÓN — NOTICIAS
    ========================================================= */
-
-#rift-news {
-    padding: 1.143rem;
-}
-
-#rift-news-carousel {
-    gap: 0.714rem;
-}
-
-#rift-news-track {
-    gap: 3.214rem;
-}
+#rift-news {padding: 1.143rem;}
+#rift-news-carousel {gap: 0.714rem;}
+#rift-news-track {gap: 3.214rem;}
 
 .rift-news-item {
     height: 8.214rem;
@@ -7540,7 +7500,6 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* =========================================================
    ACCESIBILIDAD — TABLÓN — INFORMACIÓN — TEXTO
    ========================================================= */
-
 .rift-info-box > div {
     font-size: 0.786rem;
     line-height: 1.5;
@@ -7550,7 +7509,6 @@ form[name="post"]:not(#quick_reply) #textarea_content {
    DIGITAL RIFT — INFORMACIÓN
    DISEÑO 02 — TARJETAS ANGULARES
    ========================================================= */
-
 #rift-info-row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -7701,27 +7659,10 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* =========================================================
    LÍNEA DE DATOS
    ========================================================= */
-
-.rift-info-overlay {
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
-}
-
-.rift-info-card:nth-child(1), .rift-info-card:nth-child(2), .rift-info-card:nth-child(3) {
-    clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 0 100%);
-}
-/*FORMAS ANGULARES*/
-.rift-info-card:nth-child(2)::before {
-    background: linear-gradient(90deg, var(--rift-a2), var(--rift-a1), transparent);
-}
-/*TARJETA 2*/
-/* =========================================================
-   TARJETA 3
-   ========================================================= */
-.rift-info-card:nth-child(3)::before {
-    width: 48%;
-    background: linear-gradient(90deg, var(--rift-a1), transparent);
-}
-
+.rift-info-overlay {box-shadow: inset 0 1px 0 rgba(255,255,255,.04);}
+.rift-info-card:nth-child(1), .rift-info-card:nth-child(2), .rift-info-card:nth-child(3) {clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 0 100%);}/*FORMAS ANGULARES*/
+.rift-info-card:nth-child(2)::before {background: linear-gradient(90deg, var(--rift-a2), var(--rift-a1), transparent);}/*TARJETA 2*/
+.rift-info-card:nth-child(3)::before {width: 48%; background: linear-gradient(90deg, var(--rift-a1), transparent);}/*TARJETA 3*/
 /* =========================================================
    EVENTOS ESPECIALES
    ========================================================= */
