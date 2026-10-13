@@ -328,7 +328,7 @@
 /* ==================TABLA REGISTROS================= BLOQUES DE LETRAS ================================ */ 
 
 .dr-tadmin .dr-section2 { border:1px solid var(--emblema1); var(--colorfondo); position:relative; } 
-.dr-tadmin .dr-section2:before { content:""; position:absolute; top:0; left:0; width:6.25rem; height:0.125rem; background:var(--emblema2); }
+.dr-tadmin .dr-section2:before { content:""; position:absolute; top:-0.1rem; left:0; width:6.25rem; height:0.125rem; background:var(--emblema2); }
 
 /* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
 
