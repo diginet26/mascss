@@ -14438,3 +14438,48 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     background: var(--emblema2) !important;
     color: #fff !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — NOTIFICACIONES // ANCHO Y CONTENIDO
+   ========================================================= */
+
+#fa_toolbar #fa_right #notif_list {
+    width: 400px !important;
+    max-width: calc(100vw - 24px) !important;
+}
+
+/* Reservar espacio para la X de eliminar */
+#fa_toolbar #fa_right #notif_list > li:not(.see_all) {
+    padding: 10px 28px 9px 12px !important;
+}
+
+/* Evitar que el contenido invada la zona de la X */
+#fa_toolbar #fa_right #notif_list li .content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Mantener visible el botón de eliminar */
+#fa_toolbar #fa_right #notif_list li a.delete {
+    position: absolute !important;
+    top: 8px !important;
+    right: 7px !important;
+    z-index: 3 !important;
+    display: block !important;
+    opacity: .85;
+}
+
+/* Aprovechar el ancho adicional */
+#fa_toolbar #fa_right #notif_list li .contentText {
+    padding-right: 0 !important;
+    overflow-wrap: anywhere;
+}
+
+/* Ajuste para pantallas estrechas */
+@media screen and (max-width: 440px) {
+    #fa_toolbar #fa_right #notif_list {
+        width: calc(100vw - 20px) !important;
+        max-width: calc(100vw - 20px) !important;
+        right: 10px !important;
+    }
+}
