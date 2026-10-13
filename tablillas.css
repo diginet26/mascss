@@ -918,8 +918,7 @@
     margin-top: 0.25rem;
     padding: 0.0625rem;
     box-sizing: border-box;
-    background: #131a21;
-    border: 1px solid #303b43;
+    border: 1px solid var(--colorfondo);
 }
 
 .progress b {
