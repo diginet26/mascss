@@ -15356,3 +15356,31 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
     }
     #preview .postbody > .content {padding: .85rem !important;}
 }
+
+/* =========================================================
+   DIGITAL RIFT — PREVISUALIZACIÓN
+   CORREGIR FONDO GRIS RESIDUAL
+   ========================================================= */
+body:not(.light-mode) #preview, body:not(.light-mode) #preview > .inner, body:not(.light-mode) #preview .postbody {
+    background: var(--theme-panel-deep) !important;
+    background-image: none !important;
+    height: auto !important;
+    min-height: 0;
+}
+
+/* Mantener la cuadrícula únicamente en el mensaje */
+body:not(.light-mode) #preview .postbody > .content {
+    background-color: var(--theme-panel-deep) !important;
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px) !important;
+    background-size: 1.5rem 1.5rem !important;
+}
+
+/* Skin clara: conservar el fondo gris perla */
+body.light-mode #preview, body.light-mode #preview > .inner, body.light-mode #preview .postbody {
+    background: #e4e8eb !important;
+    background-image: none !important;
+    height: auto !important;
+    min-height: 0;
+}
+
+body.light-mode #preview .postbody > .content {background-color: #f3f5f6 !important;}
