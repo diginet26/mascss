@@ -3099,15 +3099,12 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 
 /* ÚLTIMOS TEMAS */
 #rift-recent {
-    display: flex;
-    flex-direction: column;
     padding: 1.143rem;
     min-height: 0 !important;
-    height: auto !important;
-    align-self: stretch !important;
+    height: fit-content !important;
+    align-self: start !important;
     box-sizing: border-box;
     margin-right: 1.429rem;
-    margin-bottom: 1.143rem;
 }
 
 #rift-board {z-index: 1;}
@@ -3576,10 +3573,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
    ÚLTIMOS TEMAS
    --------------------------------------------------------- */
 #rift-recent-content {
-    flex: 1 1 auto;
-    min-height: 0;
-    height: auto !important;
-    max-height: none;
+    height: 30rem !important;
     overflow: hidden !important;
     font-size: .857rem;
     line-height: 1.5;
@@ -7458,11 +7452,11 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* =========================================================
    ACCESIBILIDAD — TABLÓN — ÚLTIMOS TEMAS
    ========================================================= */
-#rift-recent-content > .module, #rift-recent-content > .module > .inner, #rift-recent-content #comments_scroll_div, #rift-recent-content .marquee {
+/*#rift-recent-content > .module, #rift-recent-content > .module > .inner, #rift-recent-content #comments_scroll_div, #rift-recent-content .marquee {
     height: 100% !important;
     min-height: 0;
     box-sizing: border-box;
-}
+}*/
 /* =========================================================
    ACCESIBILIDAD — TABLÓN — NOTICIAS
    ========================================================= */
