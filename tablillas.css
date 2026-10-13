@@ -588,9 +588,9 @@
 
 /* IMAGEN */
 .dr-map-image {
-    min-height:10.625rem;
+    max-height:14.625rem;
     background:#071018;
-    border:1px solid #24475d;
+    border:1px solid var(--colorfondo);
     overflow:hidden;
 }
 
