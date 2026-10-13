@@ -15225,16 +15225,18 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     letter-spacing: .04rem !important;
 }
 
+
 /* =========================================================
-   DIGITAL RIFT — POST PREVIEW
-   PREVISUALIZACIÓN DEL MENSAJE
+   DIGITAL RIFT — POST PREVIEW + TOPIC REVIEW
+   COMPONENTES COMPARTIDOS
    ========================================================= */
 
-/* PANEL PRINCIPAL */
-#preview.post.row2 {
+/* PANELES PRINCIPALES */
+#preview.post.row2,
+.dr-topic-review-post {
     display: block !important;
-    width: min(100%, 58rem) !important;
-    margin: 1.25rem auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 0 !important;
     box-sizing: border-box;
     background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, var(--theme-panel-deep)), var(--theme-panel-deep) 65%) !important;
@@ -15245,8 +15247,18 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     overflow: hidden;
 }
 
-/* CONTENEDOR INTERIOR */
-#preview > .inner {
+/* Espaciado independiente */
+#preview.post.row2 {
+    margin: 1.25rem 0 !important;
+}
+
+.dr-topic-review-post {
+    margin: .65rem 0 !important;
+}
+
+/* CONTENEDORES INTERIORES */
+#preview > .inner,
+.dr-topic-review-post > .inner {
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
@@ -15254,23 +15266,32 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     background: transparent !important;
 }
 
-/* ESQUINAS ANTIGUAS DE FOROACTIVO */
+/* ELIMINAR ESQUINAS DECORATIVAS ANTIGUAS */
 #preview .corners-top,
-#preview .corners-bottom {
+#preview .corners-bottom,
+.dr-topic-review-post .corners-top,
+.dr-topic-review-post .corners-bottom {
     display: none !important;
 }
 
-/* CUERPO */
-#preview .postbody {
+/* CUERPOS DE LAS PUBLICACIONES */
+#preview .postbody,
+.dr-topic-review-post .postbody {
     float: none !important;
     width: 100% !important;
+    min-width: 0;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
+    background: transparent !important;
     color: var(--text-color) !important;
 }
 
-/* CABECERA PREVISUALIZACIÓN */
+/* =========================================================
+   CABECERAS
+   ========================================================= */
+
+/* Cabecera interna de previsualización */
 #preview .postbody > .h3 {
     display: flex !important;
     align-items: center;
@@ -15287,8 +15308,29 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     text-transform: uppercase;
 }
 
-/* INDICADOR DIGITAL */
-#preview .postbody > .h3::before {
+/* Título exterior de revisión del tema */
+.dr-topic-review-title {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1rem auto .6rem !important;
+    padding: .5rem .85rem !important;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, var(--theme-border)) !important;
+    border-radius: .25rem .25rem 0 0 !important;
+    color: var(--emblema2) !important;
+    font: 700 .7rem/1.4 "Oxanium", sans-serif !important;
+    letter-spacing: .1rem !important;
+    text-transform: uppercase;
+}
+
+/* Indicador digital compartido */
+#preview .postbody > .h3::before,
+.dr-topic-review-title::before {
     content: "";
     display: inline-block;
     flex: 0 0 .4rem;
@@ -15298,11 +15340,42 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 50%, transparent);
 }
 
-/* ÁREA DEL MENSAJE */
-#preview .postbody > .content {
+/* Asunto de cada publicación revisada */
+.dr-topic-review-post .postbody > h3 {
+    margin: 0 !important;
+    padding: .7rem 1rem !important;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
+    border-bottom: .05rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
+    color: var(--emblema2) !important;
+    font: 700 .75rem/1.5 "Oxanium", sans-serif !important;
+    letter-spacing: .025rem;
+}
+
+/* Autor y fecha */
+.dr-topic-review-post .postbody > .author {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin: 0 !important;
+    padding: .45rem 1rem !important;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--emblema2) 4%, var(--theme-panel-deep)) !important;
+    border-bottom: .05rem solid color-mix(in srgb, var(--emblema2) 18%, var(--theme-border)) !important;
+    color: var(--text-color) !important;
+    font: 500 .55rem/1.6 "Oxanium", sans-serif !important;
+}
+
+/* =========================================================
+   ÁREAS DE MENSAJE COMPARTIDAS
+   ========================================================= */
+
+#preview .postbody > .content,
+.dr-topic-review-post .postbody > .content,
+.dr-topic-review-hidden > .inner > p {
     display: block !important;
     min-width: 0;
-    min-height: 10rem;
     margin: 0 !important;
     padding: 1.25rem !important;
     box-sizing: border-box;
@@ -15315,32 +15388,70 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     overflow-wrap: anywhere;
 }
 
-/* SEPARADOR POSTERIOR */
-#preview + hr {
-    width: min(100%, 58rem);
-    margin: 1.25rem auto !important;
-    border: 0 !important;
-    border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
+/* Altura mínima solo para la previsualización */
+#preview .postbody > .content {
+    min-height: 10rem;
+}
+
+/* Mensajes del historial: altura natural */
+.dr-topic-review-post .postbody > .content,
+.dr-topic-review-hidden > .inner > p {
+    min-height: 0;
 }
 
 /* =========================================================
-   SKIN CLARA — PREVISUALIZACIÓN
+   SEPARADOR DE PREVISUALIZACIÓN
    ========================================================= */
 
-body.light-mode #preview.post.row2 {
+#preview + hr {
+    width: 100%;
+    max-width: 100%;
+    margin: 1.25rem 0 !important;
+    border: 0 !important;
+    border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   SKIN CLARA — COMPONENTES COMPARTIDOS
+   ========================================================= */
+
+body.light-mode #preview.post.row2,
+body.light-mode .dr-topic-review-post {
     background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #e4e8eb), #e4e8eb 65%) !important;
     border-color: color-mix(in srgb, var(--emblema2) 38%, #c5cfd7) !important;
     color: #394752 !important;
     box-shadow: 0 .5rem 1.5rem rgba(56,69,81,.10), inset 0 1px 0 rgba(255,255,255,.7) !important;
 }
 
-body.light-mode #preview .postbody > .h3 {
+body.light-mode #preview .postbody,
+body.light-mode .dr-topic-review-post .postbody {
+    background: transparent !important;
+    color: #394752 !important;
+}
+
+body.light-mode #preview .postbody > .h3,
+body.light-mode .dr-topic-review-title {
     background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 6%, #e9ecef), #e1e6e9 75%) !important;
-    border-bottom-color: color-mix(in srgb, var(--emblema2) 35%, #c5cfd7) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 35%, #c5cfd7) !important;
     color: var(--emblema2) !important;
 }
 
-body.light-mode #preview .postbody > .content {
+body.light-mode .dr-topic-review-post .postbody > h3 {
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 5%, #e9ecef), #e1e6e9 75%) !important;
+    border-bottom-color: color-mix(in srgb, var(--emblema2) 30%, #c5cfd7) !important;
+    color: var(--emblema2) !important;
+}
+
+body.light-mode .dr-topic-review-post .postbody > .author {
+    background: color-mix(in srgb, var(--emblema2) 3%, #e9ecef) !important;
+    border-bottom-color: color-mix(in srgb, var(--emblema2) 18%, #c5cfd7) !important;
+    color: #687681 !important;
+}
+
+body.light-mode #preview .postbody > .content,
+body.light-mode .dr-topic-review-post .postbody > .content,
+body.light-mode .dr-topic-review-hidden > .inner > p {
     background-color: #f3f5f6 !important;
     background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;
     color: #394752 !important;
@@ -15348,60 +15459,24 @@ body.light-mode #preview .postbody > .content {
 
 body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;}
 
-/* RESPONSIVE */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
 @media (max-width: 600px) {
     #preview.post.row2 {
         width: 100% !important;
-        margin: 1rem auto !important;
+        margin: 1rem 0 !important;
     }
-    #preview .postbody > .content {padding: .85rem !important;}
-}
 
-/* =========================================================
-   DIGITAL RIFT — PREVISUALIZACIÓN
-   CORREGIR FONDO GRIS RESIDUAL
-   ========================================================= */
-body:not(.light-mode) #preview, body:not(.light-mode) #preview > .inner, body:not(.light-mode) #preview .postbody {
-    background: var(--theme-panel-deep) !important;
-    background-image: none !important;
-    height: auto !important;
-    min-height: 0;
-}
+    #preview .postbody > .content,
+    .dr-topic-review-post .postbody > .content,
+    .dr-topic-review-hidden > .inner > p {
+        padding: .85rem !important;
+    }
 
-/* Mantener la cuadrícula únicamente en el mensaje */
-body:not(.light-mode) #preview .postbody > .content {
-    background-color: var(--theme-panel-deep) !important;
-    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px) !important;
-    background-size: 1.5rem 1.5rem !important;
-}
-
-/* Skin clara: conservar el fondo gris perla */
-body.light-mode #preview, body.light-mode #preview > .inner, body.light-mode #preview .postbody {
-    background: #e4e8eb !important;
-    background-image: none !important;
-    height: auto !important;
-    min-height: 0;
-}
-
-body.light-mode #preview .postbody > .content {background-color: #f3f5f6 !important;}
-
-
-/* DIGITAL RIFT — PREVISUALIZACIÓN
-   MISMO ANCHO QUE EL TÍTULO Y EL EDITOR */
-
-form[name="post"] #preview.post.row2 {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-}
-
-/* Separador alineado con la previsualización */
-form[name="post"] #preview + hr {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
+    .dr-topic-review-title {
+        max-width: 100%;
+        text-align: center;
+    }
 }
