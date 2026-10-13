@@ -2402,6 +2402,37 @@ button[title="Destino"] {
     color: var(--theme-panel-deep) !important;
 }
 
+/* BOTÓN PERSONALIZADO — ACTUALIZAR CUENTAS */
+#switcheroo .switcheroo__button--refresh {
+    color: var(--emblema2) !important;
+    font-size: 26px !important;
+    text-decoration: none !important;
+}
+
+#switcheroo .switcheroo__button--refresh i {
+    display: block !important;
+    line-height: 1 !important;
+    pointer-events: none;
+    transition: transform .2s ease;
+}
+
+#switcheroo .switcheroo__button--refresh:hover i {
+    transform: rotate(45deg);
+}
+
+#switcheroo .switcheroo__button--refresh.is-refreshing i {
+    animation: dr-switcheroo-refresh .8s linear infinite;
+}
+
+#switcheroo .switcheroo__button--refresh:focus-visible {
+    outline: 2px solid var(--emblema1) !important;
+    outline-offset: 3px !important;
+}
+
+@keyframes dr-switcheroo-refresh {
+    to { transform: rotate(360deg); }
+}
+
 /* =========================================================
    BOTÓN X — ELIMINAR CUENTA
    ========================================================= */
