@@ -14483,3 +14483,49 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
         right: 10px !important;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — NOTIFICACIONES
+   AJUSTE DE LA X Y LAS FECHAS
+   ========================================================= */
+
+/* TARJETAS: reservar espacio para la X */
+#fa_toolbar #fa_right #notif_list > li:not(.see_all) {
+    padding-right: 12px !important;
+}
+
+/* CONTENIDO: dejar espacio a la derecha para la fecha */
+#fa_toolbar #fa_right #notif_list li .content {
+    padding-right: 34px !important;
+    box-sizing: border-box !important;
+}
+
+/* X: mantenerla en la esquina superior derecha */
+#fa_toolbar #fa_right #notif_list li a.delete {
+    position: absolute !important;
+    top: 7px !important;
+    right: 7px !important;
+    z-index: 5 !important;
+    margin: 0 !important;
+    opacity: .85;
+}
+
+/* FECHA: evitar cortes innecesarios */
+#fa_toolbar #fa_right #notif_list li .contentTime {
+    display: block !important;
+    max-width: 100% !important;
+    margin-top: 6px !important;
+    padding-top: 5px !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    line-height: 1.35 !important;
+    text-align: right !important;
+}
+
+/* HOVER DE LA X */
+#fa_toolbar #fa_right #notif_list li a.delete:hover {
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 4px var(--emblema2));
+}
