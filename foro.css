@@ -14189,11 +14189,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 .forum-top-actions a[href^="javascript:showhide"], .topic-actions:not(:has(.search-box)) .pagination a[href^="javascript:showhide"] {display: none !important;}/* DIGITAL RIFT — OCULTAR BOTÓN MÁS */
 
-
 /* =========================================================
    TOPIC BOTTOM BAR — ACCIONES Y ORDENACIÓN UNIFICADAS
    ========================================================= */
-
 .topic-bottom-bar {
     display: flex;
     align-items: center;
@@ -14209,8 +14207,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     box-shadow: inset 0 .12rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent);
 }
 
-.topic-bottom-bar > .topic-actions,
-.topic-bottom-bar > .action-box {
+.topic-bottom-bar > .topic-actions, .topic-bottom-bar > .action-box {
     display: flex !important;
     align-items: center;
     flex: 0 1 auto;
@@ -14226,12 +14223,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 .topic-bottom-bar > .topic-actions .pagination {display: none;}
-.topic-bottom-bar .action-box #sort-box,
-.topic-bottom-bar .action-box form {margin: 0;}
+.topic-bottom-bar .action-box #sort-box, .topic-bottom-bar .action-box form {margin: 0;}
 .topic-bottom-bar .action-box fieldset {margin: 0;}
 
-.topic-bottom-bar .buttons,
-.topic-bottom-bar .post-icon {
+.topic-bottom-bar .buttons, .topic-bottom-bar .post-icon {
     margin: 0 !important;
     padding: 0 !important;
     background: transparent !important;
@@ -14260,9 +14255,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transition: .25s ease;
 }
 
-.topic-bottom-bar .post-icon a img,
-.topic-bottom-bar .post-icon a .rtopicbutton,
-.topic-bottom-bar .post-icon a::before {
+.topic-bottom-bar .post-icon a img, .topic-bottom-bar .post-icon a .rtopicbutton, .topic-bottom-bar .post-icon a::before {
     display: none !important;
     content: none !important;
 }
@@ -14286,8 +14279,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 @media (max-width: 900px) {
     .topic-bottom-bar {align-items: flex-start;}
-    .topic-bottom-bar > .topic-actions,
-    .topic-bottom-bar > .action-box {
+    .topic-bottom-bar > .topic-actions, .topic-bottom-bar > .action-box {
         flex-wrap: wrap;
         max-width: 100%;
     }
@@ -14296,34 +14288,22 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* =========================================================
    DIGITAL RIFT — NOTIFICACIONES // PANEL Y TARJETAS
    ========================================================= */
-
 #fa_toolbar #fa_right #notif_list {
     scrollbar-width: thin;
     scrollbar-color: var(--emblema2) var(--theme-panel-deep);
     background: var(--theme-panel) !important;
     border: 1px solid var(--emblema2) !important;
     border-radius: 5px !important;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.7),
-                0 8px 28px rgba(0,0,0,.65),
-                0 0 14px color-mix(in srgb, var(--emblema2) 18%, transparent) !important;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.7), 0 8px 28px rgba(0,0,0,.65), 0 0 14px color-mix(in srgb, var(--emblema2) 18%, transparent) !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
     padding: 5px !important;
     box-sizing: border-box !important;
-    background-image: repeating-linear-gradient(
-        -45deg,
-        transparent 0,
-        transparent 12px,
-        color-mix(in srgb, var(--emblema1) 3%, transparent) 12px,
-        color-mix(in srgb, var(--emblema1) 3%, transparent) 13px
-    ) !important;
+    background-image: repeating-linear-gradient(-45deg, transparent 0, transparent 12px, color-mix(in srgb, var(--emblema1) 3%, transparent) 12px, color-mix(in srgb, var(--emblema1) 3%, transparent) 13px) !important;
 }
 
 /* SCROLLBAR NEÓN */
-#fa_toolbar #fa_right #notif_list::-webkit-scrollbar {
-    width: 6px;
-}
-
+#fa_toolbar #fa_right #notif_list::-webkit-scrollbar {width: 6px;}
 #fa_toolbar #fa_right #notif_list::-webkit-scrollbar-track {
     background: var(--theme-panel-deep);
     border-left: 1px solid var(--theme-border);
@@ -14391,9 +14371,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 /* ELIMINAR SEPARADORES NATIVOS */
-#fa_toolbar #fa_right #notif_list li hr {
-    display: none !important;
-}
+#fa_toolbar #fa_right #notif_list li hr {display: none !important;}
 
 /* TEXTO PRINCIPAL */
 #fa_toolbar #fa_right #notif_list li .contentText {
@@ -14419,16 +14397,14 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 /* ENLACES A TEMAS Y APARTADOS */
-#fa_toolbar #fa_right #notif_list li .contentText a[href*="/t"],
-#fa_toolbar #fa_right #notif_list li .contentText a[href*="/f"] {
+#fa_toolbar #fa_right #notif_list li .contentText a[href*="/t"], #fa_toolbar #fa_right #notif_list li .contentText a[href*="/f"] {
     color: var(--theme-linkc1) !important;
     text-decoration: none !important;
     font-weight: 700;
     transition: color .2s ease, text-shadow .2s ease;
 }
 
-#fa_toolbar #fa_right #notif_list li .contentText a[href*="/t"]:hover,
-#fa_toolbar #fa_right #notif_list li .contentText a[href*="/f"]:hover {
+#fa_toolbar #fa_right #notif_list li .contentText a[href*="/t"]:hover, #fa_toolbar #fa_right #notif_list li .contentText a[href*="/f"]:hover {
     color: var(--emblema2) !important;
     text-shadow: 0 0 7px color-mix(in srgb, var(--emblema2) 35%, transparent);
 }
@@ -14498,10 +14474,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-indent: 0 !important;
 }
 
-#fa_toolbar #fa_right #notif_list > li:not(.see_all) > a.delete img {
-    display: none !important;
-}
-
+#fa_toolbar #fa_right #notif_list > li:not(.see_all) > a.delete img {display: none !important;}
 #fa_toolbar #fa_right #notif_list > li:not(.see_all) > a.delete:hover {
     transform: scale(1.08) !important;
     border-color: var(--emblema2) !important;
@@ -14509,15 +14482,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     box-shadow: 0 0 12px color-mix(in srgb, var(--emblema2) 65%, transparent) !important;
 }
 
-#fa_toolbar #fa_right #notif_list li a.delete:hover::before {
-    color: #111 !important;
-}
-
-@media screen and (max-width: 440px) {
-    #fa_toolbar #fa_right #notif_list li .contentTime {
-        white-space: normal !important;
-    }
-}
+#fa_toolbar #fa_right #notif_list li a.delete:hover::before {color: #111 !important;}
+@media screen and (max-width: 440px) {#fa_toolbar #fa_right #notif_list li .contentTime {white-space: normal !important;}}
 
 /* PIE — VER TODAS LAS NOTIFICACIONES */
 #fa_toolbar #fa_right #notif_list > li.see_all {
@@ -14535,11 +14501,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     display: block !important;
     margin: 0 !important;
     padding: 12px 8px !important;
-    background: linear-gradient(
-        90deg,
-        color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep)),
-        var(--theme-panel-deep)
-    ) !important;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel-deep)),var(--theme-panel-deep)) !important;
     color: var(--emblema2) !important;
     font-family: "Oxanium", sans-serif;
     font-size: 9px !important;
@@ -14560,52 +14522,24 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
    DIGITAL RIFT — PUBLICAR NUEVO TEMA
    LIMPIEZA DE CABECERA Y CAMPO DEL TÍTULO
    ========================================================= */
-
 /* 1. Ocultar la fecha y hora situada encima del encabezado */
-body:has(form[name="post"] #postingbox) p:has(+ form[name="post"]) {
-    display: none !important;
-}
-
-form[name="post"] > p.right.rightside,
-form[name="post"] > p:has(+ h1.page-title) {
-    display: none !important;
-}
-
-/* La fecha actual de posting_body está fuera del formulario */
-body:has(form[name="post"] #postingbox) > p:has(+ form[name="post"]) {
-    display: none !important;
-}
-
-/* 2. Ocultar el segundo título "Publicar un nuevo tema" */
-form[name="post"]:not(#quick_reply) #postingbox > .inner > div.h3:has(+ fieldset.fields1) {
-    display: none !important;
-}
-
-
-/* 3. Ocultar la etiqueta flotante "Título del tema" */
-form[name="post"] #postingbox dl:has(input[name="subject"]) dt {
-    display: none !important;
-}
-
+body:has(form[name="post"] #postingbox) p:has(+ form[name="post"]) {display: none !important;}
+form[name="post"] > p.right.rightside, form[name="post"] > p:has(+ h1.page-title) {display: none !important;}
+body:has(form[name="post"] #postingbox) > p:has(+ form[name="post"]) {display: none !important;}/* La fecha actual de posting_body está fuera del formulario */
+form[name="post"]:not(#quick_reply) #postingbox > .inner > div.h3:has(+ fieldset.fields1) {display: none !important;}/* 2. Ocultar el segundo título "Publicar un nuevo tema" */
+form[name="post"] #postingbox dl:has(input[name="subject"]) dt {display: none !important;}/* 3. Ocultar la etiqueta flotante "Título del tema" */
 /* 4. Mostrar "Título del tema" dentro del campo */
 form[name="post"] #postingbox input[name="subject"]::placeholder {
     color: var(--theme-text-muted);
     opacity: 1;
 }
 
-form[name="post"] #postingbox input[name="subject"] {
-    text-align: left !important;
-}
-
+form[name="post"] #postingbox input[name="subject"] {text-align: left !important;}
 /* =========================================================
    DIGITAL RIFT — PUBLICAR TEMA
    PANEL INFERIOR: DADOS Y OPCIONES
    ========================================================= */
-
-form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 {
-    box-sizing: border-box;
-}
-
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 {box-sizing: border-box;}
 /* Títulos de los apartados */
 form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 > dl > dt,
 form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 legend {
@@ -14618,12 +14552,7 @@ form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 legend {
 }
 
 /* Campos de selección y cantidad */
-form[name="post"]:not(#quick_reply) #postingbox select,
-form[name="post"]:not(#quick_reply) #postingbox input[type="number"],
-form[name="post"]:not(#quick_reply) #postingbox input[type="text"] {
-    accent-color: var(--emblema2);
-}
-
+form[name="post"]:not(#quick_reply) #postingbox select, form[name="post"]:not(#quick_reply) #postingbox input[type="number"], form[name="post"]:not(#quick_reply) #postingbox input[type="text"] {accent-color: var(--emblema2);}
 form[name="post"]:not(#quick_reply) #postingbox select {
     max-width: 100%;
     padding: .35rem .5rem;
@@ -14650,9 +14579,7 @@ form[name="post"]:not(#quick_reply) #postingbox input[type="checkbox"] {
 }
 
 /* Separación de las opciones */
-form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl {
-    margin-bottom: .45rem;
-}
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl {margin-bottom: .45rem;}
 
 /* Adaptación a pantallas pequeñas */
 @media (max-width: 600px) {
@@ -14661,17 +14588,13 @@ form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl {
         overflow-wrap: anywhere;
     }
 
-    form[name="post"]:not(#quick_reply) #postingbox select {
-        min-width: 0;
-    }
+    form[name="post"]:not(#quick_reply) #postingbox select {min-width: 0;}
 }
-
 
 /* =========================================================
    DIGITAL RIFT — DICE ROLL SYSTEM
    PANEL DINÁMICO DE LANZADAS
    ========================================================= */
-
 /* CABECERA DEL PANEL */
 form[name="post"] .h3:has(+ .panel.row3 #list_dice) {
     display: flex !important;
@@ -14731,14 +14654,10 @@ form[name="post"] #list_dice {
 }
 
 /* CUERPO DE LA TABLA */
-form[name="post"] #list_dice tbody {
-    width: 100%;
-}
+form[name="post"] #list_dice tbody {width: 100%;}
 
 /* CADA LANZADA: FILA HORIZONTAL INDEPENDIENTE */
-form[name="post"] #list_dice tbody tr {
-    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel-deep)), var(--theme-panel-deep) 75%) !important;
-}
+form[name="post"] #list_dice tbody tr {background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel-deep)), var(--theme-panel-deep) 75%) !important;}
 
 /* CELDA COMO BARRA DIGITAL */
 form[name="post"] #list_dice tbody td {
@@ -14798,8 +14717,7 @@ form[name="post"] #list_dice input[name^="nb_rolls"] {
 }
 
 /* FOCO DE LOS CONTROLES */
-form[name="post"] #list_dice select:focus,
-form[name="post"] #list_dice input[name^="nb_rolls"]:focus {
+form[name="post"] #list_dice select:focus, form[name="post"] #list_dice input[name^="nb_rolls"]:focus {
     border-color: var(--emblema2) !important;
     box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 25%, transparent) !important;
 }
@@ -14823,13 +14741,8 @@ form[name="post"] #list_dice #dice_to_del a {
 }
 
 /* SUSTITUIR VISUALMENTE EL ICONO, NO LA FUNCIÓN */
-form[name="post"] #list_dice #dice_to_del a img {
-    display: none !important;
-}
-
-form[name="post"] #list_dice #dice_to_del a::before {
-    content: "+";
-}
+form[name="post"] #list_dice #dice_to_del a img {display: none !important;}
+form[name="post"] #list_dice #dice_to_del a::before {content: "+";}
 
 form[name="post"] #list_dice #dice_to_del a:hover {
     background: color-mix(in srgb, var(--emblema2) 24%, var(--theme-panel-deep));
@@ -14839,10 +14752,7 @@ form[name="post"] #list_dice #dice_to_del a:hover {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-    form[name="post"] .panel.row3:has(#list_dice) {
-        width: 100% !important;
-    }
-
+    form[name="post"] .panel.row3:has(#list_dice) {width: 100% !important;}
     form[name="post"] #list_dice tbody td {
         gap: .45rem;
         padding: .6rem !important;
@@ -14859,13 +14769,7 @@ form[name="post"] #list_dice tbody td {font-family: "Oxanium", sans-serif !impor
 form[name="post"] #list_dice tbody td {color: var(--text-color) !important;}
 
 /* Resaltar suavemente el nombre y el número */
-form[name="post"] #list_dice tbody td {
-    background-image: linear-gradient(
-        90deg,
-        color-mix(in srgb, var(--emblema2) 3%, transparent),
-        transparent 24%
-    ) !important;
-}
+form[name="post"] #list_dice tbody td {background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, transparent), transparent 24%) !important;}
 
 /* =========================================================
    DIGITAL RIFT — ETIQUETAS DE LANZADAS
@@ -14972,7 +14876,6 @@ form[name="post"] input[name="subject"]:-webkit-autofill:focus {
    DIGITAL RIFT — POSTING OPTIONS
    OPCIONES DE PUBLICACIÓN
    ========================================================= */
-
 /* CABECERA */
 form[name="post"] .h3:has(+ .panel.row3 input[name="disable_html"]) {
     display: flex !important;
@@ -15023,10 +14926,7 @@ form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {
     background: transparent !important;
 }
 
-form[name="post"] .panel.row3:has(input[name="disable_html"]) .corners-top,
-form[name="post"] .panel.row3:has(input[name="disable_html"]) .corners-bottom {
-    display: none !important;
-}
+form[name="post"] .panel.row3:has(input[name="disable_html"]) .corners-top, form[name="post"] .panel.row3:has(input[name="disable_html"]) .corners-bottom {display: none !important;}
 
 /* FIELDSETS */
 form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 {
@@ -15064,8 +14964,7 @@ form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 >
 }
 
 /* COLOR DINÁMICO DE CASILLAS Y RADIO */
-form[name="post"] .panel.row3:has(input[name="disable_html"]) input[type="checkbox"],
-form[name="post"] .panel.row3:has(input[name="disable_html"]) input[type="radio"] {
+form[name="post"] .panel.row3:has(input[name="disable_html"]) input[type="checkbox"], form[name="post"] .panel.row3:has(input[name="disable_html"]) input[type="radio"] {
     accent-color: var(--emblema2);
     cursor: pointer;
     flex: 0 0 auto;
@@ -15102,13 +15001,8 @@ form[name="post"] .panel.row3:has(input[name="disable_html"]) hr.dashed {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-    form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {
-        padding: .7rem !important;
-    }
-
-    form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {
-        width: 100%;
-    }
+    form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {padding: .7rem !important;}
+    form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {width: 100%;}
 }
 
 /* =========================================================
@@ -15182,19 +15076,12 @@ body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-
     opacity: 1 !important;
 }
 
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button:hover > div {
-    filter: brightness(0) opacity(.9) !important;
-}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button:hover > div {filter: brightness(0) opacity(.9) !important;}
 
 /* ICONOS FONT AWESOME */
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {
-    color: #596873 !important;
-}
-
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button:hover > i.dr-sceditor-fa,
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button.active > i.dr-sceditor-fa {
-    color: var(--emblema2) !important;
-}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {color: #596873 !important;}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button:hover > i.dr-sceditor-fa, 
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button.active > i.dr-sceditor-fa {color: var(--emblema2) !important;}
 
 /* HOVER Y SELECCIÓN */
 body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button:hover {
@@ -15212,21 +15099,14 @@ body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-
 /* ---------------------------------------------------------
    ÁREA DE ESCRITURA
    --------------------------------------------------------- */
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container iframe,
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container iframe, body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {
     background-color: #f3f5f6 !important;
     color: #394752 !important;
     caret-color: var(--emblema2) !important;
 }
 
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {
-    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;
-}
-
-body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea::placeholder {
-    color: #89949d !important;
-}
-
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea::placeholder {color: #89949d !important;}
 /* ---------------------------------------------------------
    MENÚS DESPLEGABLES DEL EDITOR
    --------------------------------------------------------- */
@@ -15237,13 +15117,8 @@ body.light-mode .sceditor-dropdown {
     box-shadow: 0 .6rem 1.5rem rgba(56,69,81,.16) !important;
 }
 
-body.light-mode .sceditor-dropdown label {
-    color: #596873 !important;
-}
-
-body.light-mode .sceditor-dropdown input,
-body.light-mode .sceditor-dropdown select,
-body.light-mode .sceditor-dropdown textarea {
+body.light-mode .sceditor-dropdown label {color: #596873 !important;}
+body.light-mode .sceditor-dropdown input, body.light-mode .sceditor-dropdown select, body.light-mode .sceditor-dropdown textarea {
     background: #f7f8f9 !important;
     border-color: #c5cfd7 !important;
     color: #596873 !important;
@@ -15252,9 +15127,7 @@ body.light-mode .sceditor-dropdown textarea {
 /* ---------------------------------------------------------
    DADOS — FILAS INDEPENDIENTES
    --------------------------------------------------------- */
-body.light-mode form[name="post"] #list_dice tbody tr {
-    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, #edf0f2), #edf0f2 75%) !important;
-}
+body.light-mode form[name="post"] #list_dice tbody tr {background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, #edf0f2), #edf0f2 75%) !important;}
 
 body.light-mode form[name="post"] #list_dice tbody td {
     background: transparent !important;
@@ -15263,10 +15136,7 @@ body.light-mode form[name="post"] #list_dice tbody td {
     color: #596873 !important;
 }
 
-body.light-mode form[name="post"] #list_dice .dr-dice-label {
-    color: var(--emblema2) !important;
-}
-
+body.light-mode form[name="post"] #list_dice .dr-dice-label {color: var(--emblema2) !important;}
 body.light-mode form[name="post"] #list_dice .dr-dice-number {
     background: color-mix(in srgb, var(--emblema2) 7%, #f3f5f6) !important;
     border-color: color-mix(in srgb, var(--emblema2) 40%, #c5cfd7) !important;
@@ -15334,19 +15204,23 @@ body.light-mode form[name="post"] .panel.row3:has(input[name="disable_html"]) fi
 /* ---------------------------------------------------------
    BOTONES DE PUBLICACIÓN
    --------------------------------------------------------- */
-body.light-mode form[name="post"] input.button2[name="preview"],
-body.light-mode form[name="post"] input.button2[name="draft"],
-body.light-mode form[name="post"] input.button1[name="post"] {
+body.light-mode form[name="post"] input.button2[name="preview"], body.light-mode form[name="post"] input.button2[name="draft"], body.light-mode form[name="post"] input.button1[name="post"] {
     background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, #edf0f2), color-mix(in srgb, var(--emblema1) 4%, #e5e9ec)) !important;
     border-color: color-mix(in srgb, var(--emblema2) 50%, #c5cfd7) !important;
     color: #596873 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.7) !important;
 }
 
-body.light-mode form[name="post"] input.button2[name="preview"]:hover,
-body.light-mode form[name="post"] input.button2[name="draft"]:hover,
-body.light-mode form[name="post"] input.button1[name="post"]:hover {
+body.light-mode form[name="post"] input.button2[name="preview"]:hover, body.light-mode form[name="post"] input.button2[name="draft"]:hover, body.light-mode form[name="post"] input.button1[name="post"]:hover {
     background: color-mix(in srgb, var(--emblema2) 9%, #edf0f2) !important;
     border-color: var(--emblema2) !important;
     color: var(--emblema2) !important;
+}
+
+/* DIGITAL RIFT — SKIN CLARA   PLACEHOLDER DEL TÍTULO MÁS VISIBLE */
+body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::placeholder {
+    color: #596873 !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+    letter-spacing: .04rem !important;
 }
