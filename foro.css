@@ -15110,3 +15110,243 @@ form[name="post"] .panel.row3:has(input[name="disable_html"]) hr.dashed {
         width: 100%;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — POSTING BODY
+   SKIN CLARA
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   CAMPO DEL TÍTULO
+   --------------------------------------------------------- */
+body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"] {
+    background: #f3f5f6 !important;
+    background-image: none !important;
+    border-color: color-mix(in srgb, var(--emblema2) 55%, #c5cfd7) !important;
+    color: #596873 !important;
+    box-shadow: inset 0 1px 3px rgba(56,69,81,.06) !important;
+    caret-color: var(--emblema2) !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::placeholder {
+    color: #89949d !important;
+    opacity: 1;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]:focus {
+    background: #f7f8f9 !important;
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 15%, transparent) !important;
+}
+
+/* ---------------------------------------------------------
+   EDITOR — CONTENEDOR
+   --------------------------------------------------------- */
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container {
+    background: #e4e8eb !important;
+    border-color: color-mix(in srgb, var(--emblema2) 55%, #c5cfd7) !important;
+    box-shadow: 0 .5rem 1.4rem rgba(56,69,81,.10), inset 0 1px 0 rgba(255,255,255,.75) !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container:focus-within {
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 14%, transparent), 0 .5rem 1.4rem rgba(56,69,81,.10) !important;
+}
+
+/* ---------------------------------------------------------
+   BARRA DE HERRAMIENTAS
+   --------------------------------------------------------- */
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar {
+    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 5%, #edf0f2), #e5e9ec 55%, color-mix(in srgb, var(--emblema1) 4%, #edf0f2)) !important;
+    border-bottom-color: color-mix(in srgb, var(--emblema2) 40%, #c5cfd7) !important;
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,.65) !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-group {
+    background: linear-gradient(135deg, #f0f3f5, #e3e8eb) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.7) !important;
+}
+
+/* BOTONES */
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button {
+    background: linear-gradient(145deg, #f5f7f8, #e5e9ec) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 32%, #c5cfd7) !important;
+    color: #596873 !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.7) !important;
+}
+
+/* ICONOS NATIVOS */
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button > div {
+    filter: brightness(0) opacity(.68) !important;
+    opacity: 1 !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button:hover > div {
+    filter: brightness(0) opacity(.9) !important;
+}
+
+/* ICONOS FONT AWESOME */
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {
+    color: #596873 !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button:hover > i.dr-sceditor-fa,
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button.active > i.dr-sceditor-fa {
+    color: var(--emblema2) !important;
+}
+
+/* HOVER Y SELECCIÓN */
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button:hover {
+    background: color-mix(in srgb, var(--emblema2) 8%, #f3f5f6) !important;
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--emblema2) 12%, transparent) !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button.active {
+    background: color-mix(in srgb, var(--emblema2) 12%, #e8ecef) !important;
+    border-color: var(--emblema2) !important;
+    box-shadow: inset 0 0 .4rem color-mix(in srgb, var(--emblema2) 8%, transparent) !important;
+}
+
+/* ---------------------------------------------------------
+   ÁREA DE ESCRITURA
+   --------------------------------------------------------- */
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container iframe,
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {
+    background-color: #f3f5f6 !important;
+    color: #394752 !important;
+    caret-color: var(--emblema2) !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;
+}
+
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea::placeholder {
+    color: #89949d !important;
+}
+
+/* ---------------------------------------------------------
+   MENÚS DESPLEGABLES DEL EDITOR
+   --------------------------------------------------------- */
+body.light-mode .sceditor-dropdown {
+    background: #edf0f2 !important;
+    border-color: var(--emblema2) !important;
+    color: #596873 !important;
+    box-shadow: 0 .6rem 1.5rem rgba(56,69,81,.16) !important;
+}
+
+body.light-mode .sceditor-dropdown label {
+    color: #596873 !important;
+}
+
+body.light-mode .sceditor-dropdown input,
+body.light-mode .sceditor-dropdown select,
+body.light-mode .sceditor-dropdown textarea {
+    background: #f7f8f9 !important;
+    border-color: #c5cfd7 !important;
+    color: #596873 !important;
+}
+
+/* ---------------------------------------------------------
+   DADOS — FILAS INDEPENDIENTES
+   --------------------------------------------------------- */
+body.light-mode form[name="post"] #list_dice tbody tr {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, #edf0f2), #edf0f2 75%) !important;
+}
+
+body.light-mode form[name="post"] #list_dice tbody td {
+    background: transparent !important;
+    border-color: color-mix(in srgb, var(--emblema2) 35%, #c5cfd7) !important;
+    border-left-color: var(--emblema2) !important;
+    color: #596873 !important;
+}
+
+body.light-mode form[name="post"] #list_dice .dr-dice-label {
+    color: var(--emblema2) !important;
+}
+
+body.light-mode form[name="post"] #list_dice .dr-dice-number {
+    background: color-mix(in srgb, var(--emblema2) 7%, #f3f5f6) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 40%, #c5cfd7) !important;
+    color: var(--emblema2) !important;
+}
+
+body.light-mode form[name="post"] #list_dice select,
+body.light-mode form[name="post"] #list_dice input[name^="nb_rolls"] {
+    background: #f7f8f9 !important;
+    border-color: color-mix(in srgb, var(--emblema2) 40%, #c5cfd7) !important;
+    color: #596873 !important;
+}
+
+body.light-mode form[name="post"] #list_dice #dice_to_del a {
+    background: color-mix(in srgb, var(--emblema2) 8%, #edf0f2) !important;
+    border-color: var(--emblema2) !important;
+    color: var(--emblema2) !important;
+}
+
+body.light-mode form[name="post"] #list_dice #dice_to_del a:hover {
+    background: color-mix(in srgb, var(--emblema2) 15%, #edf0f2) !important;
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 14%, transparent) !important;
+}
+
+/* ---------------------------------------------------------
+   OPCIONES DE PUBLICACIÓN
+   --------------------------------------------------------- */
+body.light-mode form[name="post"] .h3:has(+ .panel.row3 input[name="disable_html"]) {
+    background: linear-gradient(110deg, #e9ecef, #dfe4e7 70%) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 45%, #c5cfd7) !important;
+    color: var(--emblema2) !important;
+}
+
+body.light-mode form[name="post"] .panel.row3:has(input[name="disable_html"]) {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #e4e8eb), #e4e8eb 75%) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 35%, #c5cfd7) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 .4rem 1rem rgba(56,69,81,.08) !important;
+    color: #596873 !important;
+}
+
+body.light-mode form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {
+    background: linear-gradient(135deg, #f0f3f5, #e5e9ec) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 22%, #c5cfd7) !important;
+    border-left-color: var(--emblema2) !important;
+    color: #596873 !important;
+}
+
+body.light-mode form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]):hover {
+    background: color-mix(in srgb, var(--emblema2) 5%, #f0f3f5) !important;
+    border-color: var(--emblema2) !important;
+}
+
+body.light-mode form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1:last-child label:has(input[type="radio"]) {
+    background: linear-gradient(135deg, #f0f3f5, #e5e9ec) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;
+    color: #596873 !important;
+}
+
+body.light-mode form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1:last-child label:has(input[type="radio"]):hover {
+    background: color-mix(in srgb, var(--emblema2) 7%, #edf0f2) !important;
+    border-color: var(--emblema2) !important;
+    color: var(--emblema2) !important;
+}
+
+/* ---------------------------------------------------------
+   BOTONES DE PUBLICACIÓN
+   --------------------------------------------------------- */
+body.light-mode form[name="post"] input.button2[name="preview"],
+body.light-mode form[name="post"] input.button2[name="draft"],
+body.light-mode form[name="post"] input.button1[name="post"] {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, #edf0f2), color-mix(in srgb, var(--emblema1) 4%, #e5e9ec)) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 50%, #c5cfd7) !important;
+    color: #596873 !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.7) !important;
+}
+
+body.light-mode form[name="post"] input.button2[name="preview"]:hover,
+body.light-mode form[name="post"] input.button2[name="draft"]:hover,
+body.light-mode form[name="post"] input.button1[name="post"]:hover {
+    background: color-mix(in srgb, var(--emblema2) 9%, #edf0f2) !important;
+    border-color: var(--emblema2) !important;
+    color: var(--emblema2) !important;
+}
