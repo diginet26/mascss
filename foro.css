@@ -14596,3 +14596,72 @@ form[name="post"] #postingbox input[name="subject"]::placeholder {
 form[name="post"] #postingbox input[name="subject"] {
     text-align: left !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — PUBLICAR TEMA
+   PANEL INFERIOR: DADOS Y OPCIONES
+   ========================================================= */
+
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 {
+    box-sizing: border-box;
+}
+
+/* Títulos de los apartados */
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 > dl > dt,
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 legend {
+    color: var(--emblema2) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: .7rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .08rem !important;
+    text-transform: uppercase;
+}
+
+/* Campos de selección y cantidad */
+form[name="post"]:not(#quick_reply) #postingbox select,
+form[name="post"]:not(#quick_reply) #postingbox input[type="number"],
+form[name="post"]:not(#quick_reply) #postingbox input[type="text"] {
+    accent-color: var(--emblema2);
+}
+
+form[name="post"]:not(#quick_reply) #postingbox select {
+    max-width: 100%;
+    padding: .35rem .5rem;
+    background-color: var(--theme-panel-deep) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 50%, var(--theme-border)) !important;
+    border-radius: .2rem;
+    color: var(--text-color) !important;
+    font-family: "IBM Plex Mono", monospace !important;
+    font-size: .7rem !important;
+}
+
+/* Etiquetas y opciones */
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 label {
+    color: var(--text-color) !important;
+    font-family: "Oxanium", sans-serif;
+    font-size: .68rem;
+    line-height: 1.6;
+}
+
+/* Casillas */
+form[name="post"]:not(#quick_reply) #postingbox input[type="checkbox"] {
+    accent-color: var(--emblema2);
+    cursor: pointer;
+}
+
+/* Separación de las opciones */
+form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl {
+    margin-bottom: .45rem;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 600px) {
+    form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    form[name="post"]:not(#quick_reply) #postingbox select {
+        min-width: 0;
+    }
+}
