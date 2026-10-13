@@ -14967,3 +14967,146 @@ form[name="post"] input[name="subject"]:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--text-color) !important;
     caret-color: var(--emblema2) !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — POSTING OPTIONS
+   OPCIONES DE PUBLICACIÓN
+   ========================================================= */
+
+/* CABECERA */
+form[name="post"] .h3:has(+ .panel.row3 input[name="disable_html"]) {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1.2rem auto 0 !important;
+    padding: .5rem 1rem !important;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel-deep)), var(--theme-panel-deep)) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 50%, var(--theme-border)) !important;
+    border-bottom: 0 !important;
+    border-radius: .25rem .25rem 0 0 !important;
+    color: var(--emblema2) !important;
+    font: 700 .7rem/1.4 "Oxanium", sans-serif !important;
+    letter-spacing: .1rem !important;
+    text-transform: uppercase;
+}
+
+/* INDICADOR DIGITAL */
+form[name="post"] .h3:has(+ .panel.row3 input[name="disable_html"])::before {
+    content: "";
+    width: .38rem;
+    height: .38rem;
+    flex: 0 0 .38rem;
+    background: var(--emblema2);
+    box-shadow: 0 0 .45rem color-mix(in srgb, var(--emblema2) 55%, transparent);
+}
+
+/* PANEL PRINCIPAL */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) {
+    width: min(100%, 58rem) !important;
+    margin: 0 auto 1.25rem !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--emblema2) 4%, var(--theme-panel-deep)), var(--theme-panel-deep) 75%) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, var(--theme-border)) !important;
+    border-radius: .25rem !important;
+    box-shadow: inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 15%, transparent) !important;
+    color: var(--text-color) !important;
+}
+
+/* INTERIOR */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {
+    padding: 1rem 1.1rem !important;
+    background: transparent !important;
+}
+
+form[name="post"] .panel.row3:has(input[name="disable_html"]) .corners-top,
+form[name="post"] .panel.row3:has(input[name="disable_html"]) .corners-bottom {
+    display: none !important;
+}
+
+/* FIELDSETS */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 {
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    color: var(--text-color) !important;
+    text-align: center;
+}
+
+/* CASILLAS HTML, BBCODE Y NOTIFICACIONES */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    width: min(100%, 27rem);
+    margin: .35rem auto !important;
+    padding: .55rem .7rem;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--emblema2) 4%, var(--theme-panel-deep));
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 20%, var(--theme-border));
+    border-left: .15rem solid color-mix(in srgb, var(--emblema2) 65%, transparent);
+    border-radius: .15rem;
+    color: var(--text-color) !important;
+    font: 500 .68rem/1.5 "Oxanium", sans-serif;
+    text-align: left;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+/* HOVER DE LAS OPCIONES */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]):hover {
+    background: color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel-deep));
+    border-color: color-mix(in srgb, var(--emblema2) 45%, var(--theme-border));
+}
+
+/* COLOR DINÁMICO DE CASILLAS Y RADIO */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) input[type="checkbox"],
+form[name="post"] .panel.row3:has(input[name="disable_html"]) input[type="radio"] {
+    accent-color: var(--emblema2);
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+/* TEXTO Y SELECCIÓN DEL TIPO DE TEMA */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1:last-child label:has(input[type="radio"]) {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    margin: .3rem .15rem !important;
+    padding: .4rem .6rem;
+    background: color-mix(in srgb, var(--emblema2) 5%, var(--theme-panel-deep));
+    border: .05rem solid color-mix(in srgb, var(--emblema2) 25%, var(--theme-border));
+    border-radius: .15rem;
+    color: var(--text-color) !important;
+    font: 600 .65rem/1.4 "Oxanium", sans-serif;
+    transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+
+/* HOVER DE NORMAL, NOTA Y ANUNCIO */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1:last-child label:has(input[type="radio"]):hover {
+    background: color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel-deep));
+    border-color: var(--emblema2);
+    color: var(--emblema2) !important;
+}
+
+/* SEPARADOR */
+form[name="post"] .panel.row3:has(input[name="disable_html"]) hr.dashed {
+    border: 0 !important;
+    border-top: .05rem solid color-mix(in srgb, var(--emblema2) 25%, var(--theme-border)) !important;
+    margin: .85rem 0 !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {
+        padding: .7rem !important;
+    }
+
+    form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {
+        width: 100%;
+    }
+}
