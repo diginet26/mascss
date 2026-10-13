@@ -3103,8 +3103,9 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     min-height: 0 !important;
     height: auto !important;
     align-self: stretch !important;
-    box-sizing: border-box;
     margin-right: 1.429rem;
+    margin-bottom: 1.143rem;
+    box-sizing: border-box;
 }
 
 #rift-board {z-index: 1;}
