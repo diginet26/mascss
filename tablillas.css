@@ -1040,7 +1040,7 @@
     --dr-muted: #8195a4;
     --dr-border: rgba(255,255,255,.10);
     width: 45rem;
-    max-width: 94%;
+    /*max-width: 94%;*/
     margin: -1.875rem auto;
     padding: 1.125rem;
     box-sizing: border-box;
