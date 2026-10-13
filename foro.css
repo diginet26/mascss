@@ -2851,7 +2851,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* NOTIFICACIONES — POSICIÓN Y CAPA */
 #fa_toolbar #fa_right.notification #notif_list {
     position: fixed !important;
-    top: 96px !important;
+    top: 126px !important;
     right: 14px !important;
     bottom: auto !important;
     left: auto !important;
@@ -14311,7 +14311,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     position: relative;
     display: list-item;
     margin: 0 0 5px !important;
-    padding: 10px 28px 9px 12px !important;
+    padding: 10px 40px 9px 12px !important;
     background: var(--theme-panel-deep) !important;
     border: 1px solid var(--theme-border) !important;
     border-left: 2px solid var(--emblema1) !important;
@@ -14340,8 +14340,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 /* CONTENIDO */
 #fa_toolbar #fa_right #notif_list li .content {
-    position: relative;
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
     min-width: 0;
+    min-height: 44px;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
@@ -14357,14 +14360,25 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 /* TEXTO PRINCIPAL */
 #fa_toolbar #fa_right #notif_list li .contentText {
+    display: block !important;
+    max-height: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    overflow: visible !important;
     color: var(--theme-text) !important;
     font-family: "Oxanium", sans-serif;
     font-size: 11px !important;
     line-height: 1.55 !important;
     text-align: left !important;
+    white-space: normal !important;
+    text-overflow: clip !important;
     overflow-wrap: anywhere;
+    word-break: normal !important;
+}
+
+#fa_toolbar #fa_right #notif_list li .contentText a {
+    display: inline !important;
+    vertical-align: baseline !important;
 }
 
 /* ENLACES A TEMAS Y APARTADOS */
@@ -14388,9 +14402,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     inset: auto !important;
     float: none !important;
     display: block !important;
+    flex: 0 0 auto;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 6px 0 0 !important;
+    margin: auto 0 0 !important;
     padding: 5px 0 0 !important;
     border-top: 1px solid var(--theme-border);
     box-sizing: border-box !important;
@@ -14407,7 +14422,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* ENLACE PARA ELIMINAR */
 #fa_toolbar #fa_right #notif_list li a.delete {
     position: absolute !important;
-    top: 10px !important;
+    top: 7px !important;
     right: 8px !important;
     transform: none !important;
     z-index: 5 !important;
