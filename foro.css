@@ -15375,3 +15375,303 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
         text-align: center;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — LOGIN EN TRES COLUMNAS
+   Página /login. Requiere el JavaScript DR Login Cards.
+   ========================================================= */
+#dr-login-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1rem;
+    width: min(88rem, calc(100% - 2rem));
+    margin: 1.5rem auto 2.5rem;
+    box-sizing: border-box;
+    color: var(--theme-text);
+    font-family: "Oxanium", sans-serif;
+}
+
+#dr-login-grid .dr-login-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, transparent), transparent 58%),
+        var(--theme-panel, #0b1017);
+    border: 1px solid color-mix(in srgb, var(--emblema2) 55%, var(--theme-border));
+    box-shadow: inset 0 .15rem 0 color-mix(in srgb, var(--emblema2) 70%, transparent), 0 .65rem 1.8rem rgba(0,0,0,.22);
+}
+
+#dr-login-grid .dr-login-card::after {
+    content: "";
+    position: absolute;
+    right: -2.5rem;
+    bottom: -3rem;
+    width: 7rem;
+    height: 7rem;
+    border: 1px solid color-mix(in srgb, var(--emblema1) 35%, transparent);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+#dr-login-grid .dr-login-card-heading {
+    position: relative;
+    z-index: 1;
+    min-height: 4.2rem;
+    padding: 1rem 1.1rem .85rem;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--theme-panel-deep) 88%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border));
+}
+
+#dr-login-grid .dr-login-card-kicker {
+    display: block;
+    margin-bottom: .35rem;
+    color: var(--emblema1);
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .12rem;
+    line-height: 1.2;
+}
+
+#dr-login-grid .dr-login-card-heading h2 {
+    margin: 0;
+    color: var(--emblema2);
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    letter-spacing: .06rem;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+#dr-login-grid .dr-login-card-body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 1rem 1.1rem 1.2rem;
+    box-sizing: border-box;
+    color: var(--theme-text);
+    font-size: .72rem;
+    line-height: 1.6;
+}
+
+#dr-login-grid form[action="/login"] {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#dr-login-grid form[action="/login"] .panel,
+#dr-login-grid form[action="/login"] .panel > .inner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#dr-login-grid form[action="/login"] .corners-top,
+#dr-login-grid form[action="/login"] .corners-bottom {
+    display: none !important;
+}
+
+#dr-login-grid form[action="/login"] fieldset {
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+#dr-login-grid form[action="/login"] dl {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: .3rem !important;
+    margin: 0 0 .8rem !important;
+    padding: 0 !important;
+}
+
+#dr-login-grid form[action="/login"] dt,
+#dr-login-grid form[action="/login"] dd {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+}
+
+#dr-login-grid form[action="/login"] label {
+    display: block !important;
+    margin: 0 0 .25rem !important;
+    padding: 0 !important;
+    color: var(--emblema1) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: .62rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .07rem !important;
+    line-height: 1.4 !important;
+    text-transform: uppercase;
+}
+
+#dr-login-grid form[action="/login"] input[type="text"],
+#dr-login-grid form[action="/login"] input[type="password"],
+#dr-login-grid form[action="/login"] input[type="email"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 2.25rem !important;
+    margin: 0 !important;
+    padding: .45rem .65rem !important;
+    box-sizing: border-box !important;
+    border: 1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border)) !important;
+    border-radius: .2rem !important;
+    outline: 0 !important;
+    background: color-mix(in srgb, var(--theme-panel-deep) 92%, #000) !important;
+    color: var(--theme-text) !important;
+    font-family: "Roboto Mono", monospace !important;
+    font-size: .7rem !important;
+    box-shadow: inset 0 0 .45rem rgba(0,0,0,.2) !important;
+}
+
+#dr-login-grid form[action="/login"] input[type="text"]:focus,
+#dr-login-grid form[action="/login"] input[type="password"]:focus,
+#dr-login-grid form[action="/login"] input[type="email"]:focus {
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema2) 25%, transparent) !important;
+}
+
+#dr-login-grid form[action="/login"] input[type="checkbox"] {
+    accent-color: var(--emblema2);
+    margin-right: .35rem;
+}
+
+#dr-login-grid form[action="/login"] label:has(input[type="checkbox"]) {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: .35rem;
+    margin: .45rem 0 .75rem !important;
+    color: var(--theme-text) !important;
+    font-size: .65rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+#dr-login-grid form[action="/login"] a {
+    color: var(--emblema2) !important;
+    text-decoration: none !important;
+}
+
+#dr-login-grid form[action="/login"] a:hover {
+    color: var(--emblema1) !important;
+    text-decoration: underline !important;
+}
+
+#dr-login-grid form[action="/login"] input[type="submit"],
+#dr-login-grid form[action="/login"] input.button1,
+#dr-login-grid .dr-login-register a[href="/register"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 2.25rem !important;
+    margin: .55rem 0 0 !important;
+    padding: .5rem .75rem !important;
+    box-sizing: border-box !important;
+    border: 1px solid var(--emblema2) !important;
+    border-radius: .2rem !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 92%, transparent), var(--emblema2)) !important;
+    color: var(--theme-panel-deep, #10141a) !important;
+    font-family: "Jersey 15", sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    letter-spacing: .08rem !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    cursor: pointer !important;
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 22%, transparent) !important;
+    transition: filter .2s ease, transform .2s ease, box-shadow .2s ease !important;
+}
+
+#dr-login-grid form[action="/login"] input[type="submit"]:hover,
+#dr-login-grid form[action="/login"] input.button1:hover,
+#dr-login-grid .dr-login-register a[href="/register"]:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 45%, transparent) !important;
+}
+
+#dr-login-grid .social_btn {
+    display: flex !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+    margin: .7rem 0 0 !important;
+}
+
+#dr-login-grid .social_btn iframe {
+    max-width: 100% !important;
+}
+
+#dr-login-grid .dr-login-register-copy {
+    margin: 0 0 .7rem !important;
+    color: var(--theme-text-muted, #aab2bf);
+    font-size: .72rem;
+    line-height: 1.7;
+}
+
+#dr-login-grid .dr-login-register p {
+    margin: 0 !important;
+}
+
+#dr-login-grid .dr-login-register a[href="/register"] {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+    #dr-login-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(58rem, calc(100% - 1.5rem));
+    }
+    #dr-login-grid .dr-login-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    #dr-login-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: calc(100% - 1.25rem);
+        gap: .8rem;
+        margin: 1rem auto 1.5rem;
+    }
+    #dr-login-grid .dr-login-card:last-child {
+        grid-column: auto;
+    }
+    #dr-login-grid .dr-login-card-heading {
+        min-height: 0;
+        padding: .8rem .9rem;
+    }
+    #dr-login-grid .dr-login-card-body {
+        padding: .9rem;
+    }
+}
