@@ -294,7 +294,7 @@
 }
 
 .dr-relation {
-    min-height: 4.375rem;
+    min-height: 3rem;
     padding: 0.625rem;
     background: var(--theme-panel-deep);
     border: 1px solid var(--emblema2);
