@@ -15675,3 +15675,67 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
         padding: .9rem;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — LOGIN
+   REPASO VISUAL · PRIMERA CORRECCIÓN
+   ========================================================= */
+
+/* OCULTAR EL ELEMENTO DECORATIVO DEL LOGIN */
+#dr-login-grid .dr-login-card-body .rbimg {
+    display: none !important;
+}
+
+/* INTEGRAR EL TEXTO INFORMATIVO */
+#dr-login-grid .dr-login-card-body .content .h3 {
+    display: block !important;
+    margin: 0 0 1.2rem !important;
+    padding: .5rem 0 .8rem !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+/* EVITAR EL TEXTO DEMASIADO ESPACIADO */
+#dr-login-grid .dr-login-card-body .content .h3 b {
+    display: inline !important;
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: .68rem !important;
+    font-weight: 500 !important;
+    letter-spacing: .04rem !important;
+    line-height: 1.6 !important;
+    text-transform: none !important;
+    border: 0 !important;
+}
+
+/* ELIMINAR CAJAS INTERNAS INNECESARIAS */
+#dr-login-grid .dr-login-card-body .panel,
+#dr-login-grid .dr-login-card-body .panel > .inner,
+#dr-login-grid .dr-login-card-body .panel .content {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* CONSERVAR EL ESPACIO INTERIOR DEL FORMULARIO */
+#dr-login-grid .dr-login-card-body .panel > .inner {
+    padding: .9rem !important;
+}
+
+/* FORMULARIOS: EVITAR DESBORDAMIENTOS */
+#dr-login-grid .dr-login-card-body form {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* CAMPOS: ANCHO UNIFORME */
+#dr-login-grid .dr-login-card-body input[type="text"],
+#dr-login-grid .dr-login-card-body input[type="password"],
+#dr-login-grid .dr-login-card-body input[type="email"] {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
