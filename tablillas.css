@@ -1424,7 +1424,7 @@ text-align: justify;
 
 .dr-tabs label:hover {
     color: var(--dr-cyan);
-    border-color: rgba(53,216,255,.35);
+    border-color: var(--emblema1);
 }
 
 /* PESTAÑA ACTIVA */
