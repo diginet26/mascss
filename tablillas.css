@@ -414,7 +414,7 @@
 /* ocultar radios */ 
 .dr-tadmin input[type="radio"] { display: none; } 
 /* ========================================================== NAVEGACIÓN DE CATEGORÍAS ========================================================== */ 
-.dr-tadmin .tienda-filters { display: flex; gap: 0; margin: 1.25rem 0rem 0; border: 1px solid rgba(34,193,195,.18); background: #09131d; } 
+.dr-tadmin .tienda-filters { display: flex; gap: 0; margin: 1.25rem 0rem 0; border: 1px solid rgba(34,193,195,.18); background: #var(--colorfondo); } 
 /* botón */ 
 .dr-tadmin .tienda-filters label { flex: 1; min-height: 2.625rem; padding: 0.4375rem 0.3125rem; display: flex; align-items: center; justify-content: center; gap: 0.375rem; border-right: 1px solid rgba(34,193,195,.12); color: #60798b; font-family: "Roboto Mono", monospace; font-size: 0.4375rem; letter-spacing: .0.5rem; text-transform: uppercase; cursor: pointer; transition: .2s ease; }
 .dr-tadmin .tienda-filters label:last-child { border-right: 0; } 
@@ -433,9 +433,9 @@
 .dr-tadmin #tienda-recovery:checked ~ .tienda-filters label[for="tienda-recovery"] i,
 .dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"] i { color: var(--emblema2); text-shadow: 0 0 0.5rem rgba(34,193,195,.5); } 
 /* ========================================================== CONTENEDOR DE OBJETOS ========================================================== */ 
-.dr-tadmin .tienda-items { /*margin: 1.125rem 1.5625rem 1.5625rem;*/ border: 1px solid #183246; background: rgba(9,17,24,.75); } 
+.dr-tadmin .tienda-items { /*margin: 1.125rem 1.5625rem 1.5625rem;*/ border: 1px solid #183246; background: var(--colorfondo); } 
 /* ========================================================== OBJETO ========================================================== */ 
-.dr-tadmin .tienda-item { min-height: 5.75rem; padding: 0.8125rem; display: grid; grid-template-columns: 3.625rem 1fr 5.625rem; align-items: center; gap: 0.9375rem; position: relative; border-bottom: 1px solid rgba(24,50,70,.65); transition: .2s ease; } 
+.dr-tadmin .tienda-item { min-height: 5.75rem; padding: 0.8125rem; display: grid; grid-template-columns: 3.625rem 1fr 5.625rem; align-items: center; gap: 0.9375rem; position: relative; border-bottom: 1px solid var(--emblema2); transition: .2s ease; } 
 .dr-tadmin .tienda-item:last-child { border-bottom: 0; } 
 .dr-tadmin .tienda-item:hover { background: rgba(40,215,232,.035); } 
 /* ========================================================== ICONO ========================================================== */ 
