@@ -15739,3 +15739,80 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
     max-width: 100% !important;
     box-sizing: border-box !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — LOGIN
+   REPASO 2 · FONDOS Y ESPACIADO
+   ========================================================= */
+
+/* MENSAJES INFORMATIVOS: ELIMINAR DEGRADADOS */
+#dr-login-grid .dr-login-card-body .content .h3,
+#dr-login-grid .dr-login-card-body .content .h3 b {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* MENSAJE DEL LOGIN */
+#dr-login-grid .dr-login-card-body form[name="form_login"] .content .h3 {
+    margin: 0 0 1.2rem !important;
+    padding: .3rem 0 .8rem !important;
+    border-bottom: 1px solid color-mix(in srgb, var(--emblema2) 35%, transparent) !important;
+    text-align: center !important;
+}
+
+/* MENSAJE DEL ACCESO POR EMAIL */
+#dr-login-grid .dr-login-card-body form .content > p {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* CAJAS NEGRAS HEREDADAS */
+#dr-login-grid .dr-login-card-body .panel,
+#dr-login-grid .dr-login-card-body .panel > .inner,
+#dr-login-grid .dr-login-card-body .panel .content,
+#dr-login-grid .dr-login-card-body fieldset,
+#dr-login-grid .dr-login-card-body dl {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* CAMPOS: MISMO ESTILO EN AMBOS FORMULARIOS */
+#dr-login-grid .dr-login-card-body input[type="text"],
+#dr-login-grid .dr-login-card-body input[type="password"],
+#dr-login-grid .dr-login-card-body input[type="email"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: .35rem 0 .8rem !important;
+    padding: .65rem .75rem !important;
+    box-sizing: border-box !important;
+    background: var(--theme-panel-deep) !important;
+    border: 1px solid color-mix(in srgb, var(--emblema2) 35%, var(--theme-border)) !important;
+    border-radius: .2rem !important;
+    color: var(--theme-text) !important;
+}
+
+/* ETIQUETAS */
+#dr-login-grid .dr-login-card-body label {
+    display: block !important;
+    margin: .5rem 0 .25rem !important;
+}
+
+/* RECUPERAR CONTRASEÑA */
+#dr-login-grid .dr-login-card-body a[href*="profile?mode=sendpassword"],
+#dr-login-grid .dr-login-card-body a[href*="sendpassword"] {
+    display: inline-block !important;
+    margin: 0 0 .8rem !important;
+}
+
+/* BOTONES: EVITAR EL ESPACIO NEGRO INFERIOR */
+#dr-login-grid .dr-login-card-body input[type="submit"],
+#dr-login-grid .dr-login-card-body a.button2 {
+    box-shadow: none !important;
+}
+
+/* FORMULARIO NORMAL: REDUCIR ESPACIO ANTES DEL BOTÓN */
+#dr-login-grid .dr-login-card-body form[name="form_login"] fieldset {
+    padding-bottom: .5rem !important;
+}
