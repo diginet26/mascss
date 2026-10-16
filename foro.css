@@ -16214,11 +16214,13 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
     transition: .2s ease;
 }
 
-#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li > a:not(:has(img)):hover {
-    border-color: var(--emblema1) !important;
-    background: color-mix(in srgb, var(--emblema2) 13%, transparent) !important;
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li > a:not(:has(img)):hover,
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li > a:not(:has(img)):focus-visible {
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    background: transparent !important;
     color: var(--emblema2) !important;
-    box-shadow: inset 0 -.12rem 0 var(--emblema2), 0 0 .65rem color-mix(in srgb, var(--emblema2) 15%, transparent);
+    box-shadow: inset 0 -.12rem 0 var(--emblema2) !important;
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose {
