@@ -3102,7 +3102,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     height: auto !important;
     align-self: stretch !important;
     margin-top: 1.15rem !important;
-    margin-bottom: 3.85rem !important;
+    margin-bottom: 1.35rem !important;
     margin-right: 1.429rem;
     box-sizing: border-box;
 }
@@ -3573,7 +3573,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
    ÚLTIMOS TEMAS
    --------------------------------------------------------- */
 #rift-recent-content {
-    height: 30rem !important;
+    height: calc(30rem - 50px) !important;
     overflow: hidden !important;
     font-size: .857rem;
     line-height: 1.5;
