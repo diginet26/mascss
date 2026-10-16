@@ -3096,13 +3096,9 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 /* ---------------------------------------------------------
    ÚLTIMOS TEMAS
    --------------------------------------------------------- */
-
-/* ÚLTIMOS TEMAS */
 #rift-recent {
     padding: 1.143rem;
     min-height: 0 !important;
-    height: fit-content !important;
-    align-self: start !important;
     box-sizing: border-box;
     margin-right: 1.429rem;
 }
