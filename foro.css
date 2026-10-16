@@ -16274,11 +16274,23 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
     display: none !important;
 }
 
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a {
+    font-size: 0 !important;
+    letter-spacing: 0 !important;
+}
+
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a::before {
-    content: "+";
-    flex: 0 0 auto;
-    color: var(--emblema2);
-    font-size: .95rem;
+    content: none !important;
+    display: none !important;
+}
+
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a::after {
+    content: "Nuevo MP";
+    display: inline-block;
+    color: inherit;
+    font: 700 .62rem/1.35 "Oxanium", sans-serif;
+    letter-spacing: .065rem;
+    text-transform: uppercase;
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a:hover,
@@ -16324,9 +16336,7 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter label {
-    color: var(--theme-text-muted, var(--text-color));
-    font: inherit;
-    white-space: normal;
+    display: none !important;
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter select {
