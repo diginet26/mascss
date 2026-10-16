@@ -15816,3 +15816,19 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
 #dr-login-grid .dr-login-card-body form[name="form_login"] fieldset {
     padding-bottom: .5rem !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — LOGIN
+   ELIMINAR DEGRADADOS DE LOS MENSAJES
+   ========================================================= */
+
+#dr-login-grid .dr-login-card-body .content .h3 .rbimg,
+#dr-login-grid .dr-login-card-body .content .h3 .rbimg::before,
+#dr-login-grid .dr-login-card-body .content .h3 .rbimg::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    background-image: none !important;
+    opacity: 0 !important;
+    box-shadow: none !important;
+}
