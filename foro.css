@@ -16892,3 +16892,228 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
         justify-content: flex-end;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — MENSAJES PRIVADOS
+   SKIN CLARA · ESCALA BLANCO / GRIS TECNOLÓGICO
+   Solo afecta a la zona de MP cuando body.light-mode está activo.
+   Se conservan las variables existentes --emblema2 y --emblema1.
+   ========================================================= */
+
+/* CONTENEDOR GENERAL */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) {
+    color: #485762;
+}
+
+/* BARRA SUPERIOR: gris claro con tintes de los emblemas */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar {
+    background: linear-gradient(105deg, color-mix(in srgb, var(--emblema2) 5%, #e9ecef), #e2e6e9 48%, color-mix(in srgb, var(--emblema1) 5%, #e9ecef)) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 62%, #c5cfd7) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 .35rem 1rem rgba(56,69,81,.10) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar::before {
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 2.4rem, color-mix(in srgb, var(--emblema2) 5%, transparent) 2.4rem, color-mix(in srgb, var(--emblema2) 5%, transparent) 2.46rem) !important;
+    opacity: .55;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li {
+    background: linear-gradient(145deg, rgba(255,255,255,.58), rgba(229,233,236,.72)) !important;
+    border-right-color: color-mix(in srgb, var(--emblema2) 24%, #c5cfd7) !important;
+    color: #3e4b55 !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li > a:not(:has(img)) {
+    color: #3e4b55 !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li > a:not(:has(img)):hover,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li > a:not(:has(img)):focus-visible {
+    color: var(--emblema2) !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: transparent !important;
+    box-shadow: inset 0 -.12rem 0 var(--emblema2) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose {
+    background: linear-gradient(145deg, rgba(255,255,255,.30), rgba(222,227,231,.45)) !important;
+    border-right-color: color-mix(in srgb, var(--emblema2) 24%, #c5cfd7) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type .post-icon a {
+    color: #3e4b55 !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a:hover,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a:focus-visible,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type .post-icon a:hover,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type .post-icon a:focus-visible {
+    color: var(--emblema2) !important;
+    -webkit-text-fill-color: currentColor !important;
+    box-shadow: inset 0 -.12rem 0 var(--emblema2) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter {
+    color: #687681 !important;
+    border-right-color: color-mix(in srgb, var(--emblema2) 20%, #c5cfd7) !important;
+}
+
+/* Selectores y botones: mismo acabado que los desplegables del resto de la skin clara */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter select,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] {
+    background: linear-gradient(145deg, #f7f8f9, #e4e8eb) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 62%, #c5cfd7) !important;
+    color: #35434c !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 .12rem .35rem rgba(56,69,81,.06) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter select:focus,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"]:focus {
+    border-color: var(--emblema1) !important;
+    outline: 0 !important;
+    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema1) 18%, transparent) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter input.button2,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] + input[type="submit"],
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] ~ input[type="submit"] {
+    background: linear-gradient(145deg, #edf0f2, #d5dbe0) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 64%, #c5cfd7) !important;
+    color: #35434c !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.85), 0 .12rem .35rem rgba(56,69,81,.06) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter input.button2:hover,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] + input[type="submit"]:hover,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] ~ input[type="submit"]:hover {
+    background: linear-gradient(145deg, #f1f3f5, #dfe4e7) !important;
+    border-color: var(--emblema1) !important;
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 14%, transparent) !important;
+}
+
+/* LISTADO Y CABECERA DE COLUMNAS */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .forabg {
+    background: #f4f6f7 !important;
+    border-color: #c5cfd7 !important;
+    box-shadow: 0 .3rem .9rem rgba(56,69,81,.08) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .forabg ul.topiclist li.header {
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 7%, #d9dfe3), #e6e9ec 53%, color-mix(in srgb, var(--emblema1) 6%, #e6e9ec)) !important;
+    border-bottom-color: #c5cfd7 !important;
+    color: var(--emblema2) !important;
+    text-shadow: none !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row {
+    background: #f7f8f9 !important;
+    border-bottom-color: #d7dee3 !important;
+    color: #35434c !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row:nth-child(even) {
+    background: #edf0f2 !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row:hover {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 7%, #e9edf0), #f6f7f8 55%) !important;
+    border-left-color: var(--emblema2) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row dt > a {
+    color: #293842 !important;
+    -webkit-text-fill-color: currentColor !important;
+    text-shadow: none !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row dt > a:hover {
+    color: var(--emblema2) !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row dt span {
+    color: #71808a !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row dt span a {
+    color: var(--emblema1) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist dd.mark input[type="checkbox"] {
+    accent-color: var(--emblema2) !important;
+}
+
+/* MENSAJE VACÍO Y CONTROLES DE SELECCIÓN */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .pmlist li.row strong,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-mark-controls,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-mark-controls a {
+    color: #53616b !important;
+    text-shadow: none !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-mark-controls a:hover {
+    color: var(--emblema2) !important;
+}
+
+/* PAGINACIÓN INFERIOR */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > p:has(> span.pagination) {
+    color: #687681 !important;
+    text-shadow: none !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) span.pagination a,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) span.pagination span {
+    background: linear-gradient(145deg, #f7f8f9, #e4e8eb) !important;
+    border-color: #c5cfd7 !important;
+    color: #485762 !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) span.pagination a:hover,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) span.pagination span.current {
+    background: color-mix(in srgb, var(--emblema2) 8%, #e4e8eb) !important;
+    border-color: var(--emblema2) !important;
+    color: var(--emblema2) !important;
+}
+
+/* BARRA INFERIOR */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type {
+    background: linear-gradient(105deg, color-mix(in srgb, var(--emblema2) 6%, #e9ecef), #e2e6e9 48%, color-mix(in srgb, var(--emblema1) 6%, #e9ecef)) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 62%, #c5cfd7) !important;
+    border-left-color: var(--emblema2) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 .3rem .9rem rgba(56,69,81,.08) !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type .post-icon a::after {
+    color: #3e4b55 !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type input.button1,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type input.button2 {
+    background: linear-gradient(145deg, #edf0f2, #d5dbe0) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 58%, #c5cfd7) !important;
+    color: #35434c !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type input.button1:hover,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type input.button2:hover {
+    background: linear-gradient(145deg, #f1f3f5, #dfe4e7) !important;
+    border-color: var(--emblema1) !important;
+    color: var(--emblema2) !important;
+}
+
+/* SALTO DE FORO: selector y botón IR en escala clara */
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] {
+    background: linear-gradient(145deg, #f7f8f9, #e4e8eb) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 62%, #c5cfd7) !important;
+    color: #35434c !important;
+}
+
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox) label,
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) label {
+    color: #687681 !important;
+}
