@@ -3320,6 +3320,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     line-height: 1;
     letter-spacing: .6px;
     text-transform: uppercase;
+    line-height: 1.25;
 }
 
 /* Si el icono es texto en lugar de <i> */
