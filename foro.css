@@ -3097,10 +3097,14 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
    ÚLTIMOS TEMAS
    --------------------------------------------------------- */
 #rift-recent {
-    padding: 1.143rem;
+    align-self: stretch !important;
+    height: auto !important;
     min-height: 0 !important;
-    box-sizing: border-box;
-    margin-right: 1.429rem;
+    margin-top: 1.9rem !important;
+    margin-bottom: 1.9rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 #rift-board {z-index: 1;}
