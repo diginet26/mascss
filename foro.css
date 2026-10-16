@@ -16698,19 +16698,21 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
 
-/* El selector JUMPBOX queda visualmente integrado a la derecha de la barra inferior. */
+/* El JUMPBOX se desplaza visualmente hacia la barra inferior existente. */
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox),
-#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) {
-    position: absolute !important;
-    right: .65rem !important;
-    bottom: 1.95rem !important;
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(div, form, p):has(select[name="selected_id"]),
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .jumpbox {
+    position: relative !important;
+    top: -3.2rem !important;
+    right: auto !important;
+    bottom: auto !important;
     z-index: 8;
     display: flex !important;
     align-items: center;
     justify-content: flex-end;
     width: max-content;
     max-width: calc(100% - 11rem);
-    margin: 0 !important;
+    margin: 0 .65rem -3.2rem auto !important;
     padding: 0 !important;
     box-sizing: border-box;
     background: transparent !important;
@@ -16854,12 +16856,14 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
     }
 
     #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox),
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]),
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > form.jumpbox {
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(div, form, p):has(select[name="selected_id"]),
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .jumpbox {
         position: static !important;
+        top: auto !important;
         width: 100%;
         max-width: 100%;
         margin: .45rem 0 0 !important;
+        padding: 0 !important;
         justify-content: flex-end;
     }
 }
