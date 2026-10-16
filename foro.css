@@ -16107,7 +16107,6 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
     box-sizing: border-box;
 }
 
-#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > h1.page-title,
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > p.right.rightside,
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > p.rcurrtime,
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > p:has(+ form[name="privmsg_list"]),
