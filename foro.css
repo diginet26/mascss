@@ -16524,7 +16524,7 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > p:has(> span.pagination) {
     position: absolute;
     left: 50%;
-    bottom: .65rem;
+    bottom: 1.65rem;
     z-index: 8;
     display: flex !important;
     align-items: center;
@@ -16568,11 +16568,11 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type {
     position: relative;
     display: flex !important;
-    align-items: center;
+    align-items: center !important;
     justify-content: space-between;
     gap: .55rem;
-    flex-wrap: wrap;
-    min-height: 3.5rem;
+    flex-wrap: nowrap;
+    min-height: 3.8rem;
     margin: 0 !important;
     padding: .45rem .65rem;
     box-sizing: border-box;
@@ -16703,7 +16703,7 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(div, form, p):has(select[name="selected_id"]),
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .jumpbox {
     position: relative !important;
-    top: -3.2rem !important;
+    top: -2.7rem !important;
     right: auto !important;
     bottom: auto !important;
     z-index: 8;
@@ -16772,25 +16772,42 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox) input[type="submit"],
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) input[type="submit"],
-#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > form.jumpbox input[type="submit"] {
-    min-height: 2.25rem;
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > form.jumpbox input[type="submit"],
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] + input[type="submit"],
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] ~ input[type="submit"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 2.55rem !important;
+    min-height: 2.25rem !important;
+    height: 2.25rem !important;
     margin: 0 !important;
-    padding: .35rem .6rem !important;
-    box-sizing: border-box;
+    padding: .35rem .65rem !important;
+    box-sizing: border-box !important;
     border: .06rem solid var(--emblema2) !important;
-    border-radius: .25rem !important;
+    border-radius: .3rem !important;
     background: color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel)) !important;
     color: var(--text-color) !important;
-    font: 700 .55rem/1.2 "Oxanium", sans-serif !important;
-    text-transform: uppercase;
+    font: 700 .58rem/1.2 "Oxanium", sans-serif !important;
+    letter-spacing: .02rem !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    vertical-align: middle !important;
     cursor: pointer;
+    appearance: none;
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox) input[type="submit"]:hover,
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) input[type="submit"]:hover,
-#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > form.jumpbox input[type="submit"]:hover {
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > form.jumpbox input[type="submit"]:hover,
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] + input[type="submit"]:hover,
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) select[name="selected_id"] ~ input[type="submit"]:hover {
     border-color: var(--emblema1) !important;
+    background: color-mix(in srgb, var(--emblema2) 18%, var(--theme-panel)) !important;
     color: var(--emblema2) !important;
+    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 16%, transparent);
 }
 
 @media (max-width: 1100px) {
@@ -16859,6 +16876,7 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 
     #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type {
         align-items: stretch;
+        flex-wrap: wrap;
         padding-bottom: .65rem;
     }
 
