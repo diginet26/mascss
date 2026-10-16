@@ -16247,36 +16247,34 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a {
+    position: relative !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
-    gap: .4rem;
     width: 100%;
     min-width: 0;
     min-height: 3.8rem;
     height: 100%;
+    margin: 0 !important;
     padding: .45rem .5rem !important;
     box-sizing: border-box;
     border: .06rem solid transparent !important;
     border-radius: 0 !important;
     background: transparent !important;
     color: var(--text-color) !important;
-    font: 700 .58rem/1.35 "Oxanium", sans-serif !important;
-    letter-spacing: .065rem !important;
-    text-align: center;
-    text-transform: uppercase;
+    -webkit-text-fill-color: currentColor !important;
+    font-size: 0 !important;
+    letter-spacing: 0 !important;
+    text-indent: 0 !important;
     text-decoration: none !important;
-    overflow-wrap: anywhere;
+    overflow: hidden !important;
     transition: .2s ease;
 }
 
-#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon img {
+/* Oculta el texto, iconos e imágenes originales que genera Foroactivo. */
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a > *,
+#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a img {
     display: none !important;
-}
-
-#main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a {
-    font-size: 0 !important;
-    letter-spacing: 0 !important;
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a::before {
@@ -16285,12 +16283,23 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a::after {
-    content: "Nuevo MP";
-    display: inline-block;
-    color: inherit;
-    font: 700 .62rem/1.35 "Oxanium", sans-serif;
-    letter-spacing: .065rem;
+    content: "Nuevo MP" !important;
+    position: absolute;
+    inset: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: .45rem .5rem;
+    box-sizing: border-box;
+    color: currentColor !important;
+    -webkit-text-fill-color: currentColor !important;
+    font: 700 .62rem/1.35 "Oxanium", sans-serif !important;
+    letter-spacing: .065rem !important;
+    text-indent: 0 !important;
     text-transform: uppercase;
+    white-space: normal;
+    pointer-events: none;
 }
 
 #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose .post-icon a:hover,
