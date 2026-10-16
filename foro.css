@@ -3101,8 +3101,8 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     min-height: 0 !important;
     height: auto !important;
     align-self: stretch !important;
-    margin-top: 1.9rem !important;
-    margin-bottom: 1.9rem !important;
+    margin-top: 3.8rem !important;
+    margin-bottom: 4.1rem !important;
     margin-right: 1.429rem;
     box-sizing: border-box;
 }
