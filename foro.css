@@ -15681,10 +15681,15 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
    REPASO VISUAL · PRIMERA CORRECCIÓN
    ========================================================= */
 
-/* OCULTAR EL ELEMENTO DECORATIVO DEL LOGIN */
-#dr-login-grid .dr-login-card-body .rbimg {
+/* DIGITAL RIFT — LOGIN   ELIMINAR DEGRADADOS DECORATIVOS */
+.dr-login-card-body .h3 .rbimg, .dr-login-card-body .h3 .rbimg::before, .dr-login-card-body .h3 .rbimg::after {
     display: none !important;
+    content: none !important;
+    background: none !important;
+    background-image: none !important;
+    box-shadow: none !important;
 }
+
 
 /* INTEGRAR EL TEXTO INFORMATIVO */
 #dr-login-grid .dr-login-card-body .content .h3 {
