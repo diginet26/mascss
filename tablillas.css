@@ -3667,3 +3667,26 @@ text-align: justify;
     .dr-mission-rules-toggle:before {font-size: .45rem;}
     .dr-mission-rule {grid-template-columns: 1.5rem minmax(0, 1fr); gap: .5rem;}
 }
+
+/* ==========================================================
+   DIGITAL RIFT — CARRITO DE LA TIENDA
+   ========================================================== */
+.dr-tadmin .tienda-add { margin-top:.4rem; padding:.35rem .5rem; width:100%; background:var(--colorfondo); border:1px solid var(--emblema2); color:var(--emblema2); font-family:"Roboto Mono",monospace; font-size:.5rem; text-transform:uppercase; cursor:pointer; transition:.2s ease; }
+.dr-tadmin .tienda-add:hover { background:var(--emblema2); color:#fff; }
+.dr-tadmin .tienda-cart { margin:1rem 0; padding:1rem; background:var(--colorfondo); border:1px solid var(--emblema2); }
+.dr-tadmin .tienda-cart-title { margin:0 0 .75rem; color:var(--emblema2); font-family:"Jersey 15",sans-serif; font-size:1.5rem; text-transform:uppercase; }
+.dr-tadmin .tienda-cart-empty { color:var(--colortextod); font-size:.65rem; }
+.dr-tadmin .tienda-cart-row { display:grid; grid-template-columns:minmax(0,1fr) auto auto; align-items:center; gap:.75rem; padding:.65rem 0; border-bottom:1px solid var(--colorfondo4); }
+.dr-tadmin .tienda-cart-name { color:var(--colortextodl); font-size:.7rem; overflow-wrap:anywhere; }
+.dr-tadmin .tienda-cart-qty { display:flex; align-items:center; gap:.4rem; }
+.dr-tadmin .tienda-cart-qty button, .dr-tadmin .tienda-cart-remove { padding:.25rem .45rem; background:var(--colorfondo); border:1px solid var(--emblema2); color:var(--emblema2); cursor:pointer; }
+.dr-tadmin .tienda-cart-line { color:var(--emblema1); font-family:"Roboto Mono",monospace; font-size:.65rem; white-space:nowrap; }
+.dr-tadmin .tienda-cart-total { display:flex; justify-content:space-between; gap:1rem; margin-top:.9rem; padding-top:.75rem; border-top:1px solid var(--emblema2); color:var(--colortextodl); font-size:.75rem; }
+.dr-tadmin .tienda-cart-total strong { color:var(--emblema1); font-family:"Roboto Mono",monospace; }
+.dr-tadmin .tienda-cart-submit { margin-top:.85rem; width:100%; padding:.7rem; background:var(--emblema2); border:1px solid var(--emblema2); color:#fff; font-family:"Roboto Mono",monospace; font-size:.65rem; text-transform:uppercase; cursor:pointer; }
+.dr-tadmin .tienda-cart-submit:disabled { opacity:.45; cursor:not-allowed; }
+.dr-tadmin .tienda-cart-notice { margin-top:.65rem; color:var(--colortextod); font-size:.6rem; line-height:1.6; }
+@media (max-width:30rem) {
+  .dr-tadmin .tienda-cart-row { grid-template-columns:minmax(0,1fr) auto; }
+  .dr-tadmin .tienda-cart-line { grid-column:1/-1; }
+}
