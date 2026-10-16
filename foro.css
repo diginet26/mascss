@@ -15838,7 +15838,6 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
    DIGITAL RIFT — ÚLTIMOS TEMAS
    ALTURA Y POSICIÓN DEL CONTENIDO
    ========================================================= */
-
 #rift-recent {
     align-self: stretch !important;
     height: 100% !important;
@@ -15859,12 +15858,10 @@ body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblem
     justify-content: flex-end;
 }
 
-
 /* =========================================================
    DIGITAL RIFT — TABLÓN
    SKIN CLARA · PALETA GRISÁCEA
    ========================================================= */
-
 body.light-mode #rift-board {
     --rift-border: #c2ccd4;
     --rift-panel: #e3e6e9;
@@ -15880,11 +15877,8 @@ body.light-mode #rift-board {
 /* ---------------------------------------------------------
    SITUACIÓN ACTUAL
    --------------------------------------------------------- */
-
 body.light-mode #rift-current-content {
-    background:
-        linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, transparent), transparent 55%, color-mix(in srgb, var(--emblema1) 3%, transparent)),
-        linear-gradient(145deg, #edf0f2, #dfe4e7) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, transparent), transparent 55%, color-mix(in srgb, var(--emblema1) 3%, transparent)), linear-gradient(145deg, #edf0f2, #dfe4e7) !important;
     border-color: #c5cfd7 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 .25rem .8rem rgba(56,69,81,.08) !important;
 }
@@ -15893,7 +15887,6 @@ body.light-mode #rift-current-content {
    MARCO DE ÚLTIMOS TEMAS
    No modifica la altura ni el posicionamiento del JavaScript.
    --------------------------------------------------------- */
-
 body.light-mode #rift-recent {
     background: linear-gradient(145deg, #e9ecef, #d9dee2) !important;
     border: 1px solid #bdc8d0 !important;
@@ -15901,7 +15894,6 @@ body.light-mode #rift-recent {
 }
 
 /* TARJETAS DE LOS TEMAS */
-
 body.light-mode #rift-recent-content .rift-recent-item {
     background: linear-gradient(135deg, #edf0f2, #dfe4e7) !important;
     border: 1px solid #c5cfd7 !important;
@@ -15917,10 +15909,8 @@ body.light-mode #rift-recent-content .rift-recent-item:hover {
 }
 
 /* ---------------------------------------------------------
-   MARCOS DE LAS IMÁGENES DEL STAFF
-   Se mantienen las imágenes originales.
+   MARCOS DE LAS IMÁGENES DEL STAFF   Se mantienen las imágenes originales.
    --------------------------------------------------------- */
-
 body.light-mode #rift-staff-grid > a {
     background: linear-gradient(135deg, #edf0f2, #cbd2d8) !important;
     border-color: #b9c5ce !important;
@@ -15931,11 +15921,8 @@ body.light-mode #rift-staff-grid > a img {filter: saturate(.92) brightness(.98);
 /* ---------------------------------------------------------
    EVENTOS ESPECIALES
    --------------------------------------------------------- */
-
 body.light-mode .rift-info-featured {
-    background:
-        radial-gradient(circle at 50% 40%, rgba(255,255,255,.45), transparent 50%),
-        linear-gradient(145deg, #e9ecef, #d5dade) !important;
+    background: radial-gradient(circle at 50% 40%, rgba(255,255,255,.45), transparent 50%), linear-gradient(145deg, #e9ecef, #d5dade) !important;
     border-color: #c2ccd4 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 .2rem .7rem rgba(56,69,81,.08);
 }
@@ -15965,8 +15952,7 @@ body.light-mode .rift-news-title {
     box-shadow: inset 0 1px 0 rgba(255,255,255,.8) !important;
 }
 
-body.light-mode .rift-news-name,
-body.light-mode .rift-news-text {
+body.light-mode .rift-news-name, body.light-mode .rift-news-text {
     color: #4d5b65 !important;
     text-shadow: none !important;
 }
@@ -15981,11 +15967,8 @@ body.light-mode .rift-news-arrow {
 /* ---------------------------------------------------------
    TARJETAS INFORMATIVAS DEL MARQUEE
    --------------------------------------------------------- */
-
 body.light-mode .rift-news-prototype .rift-news-plate {
-    background:
-        repeating-linear-gradient(-45deg, rgba(92,108,122,.045) 0, rgba(92,108,122,.045) 1px, transparent 1px, transparent 9px),
-        linear-gradient(145deg, #e9edf0, #d7dde1) !important;
+    background: repeating-linear-gradient(-45deg, rgba(92,108,122,.045) 0, rgba(92,108,122,.045) 1px, transparent 1px, transparent 9px), linear-gradient(145deg, #e9edf0, #d7dde1) !important;
     border-color: #bdc9d2 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 .2rem .6rem rgba(56,69,81,.08) !important;
 }
@@ -15993,4 +15976,33 @@ body.light-mode .rift-news-prototype .rift-news-plate {
 body.light-mode .rift-news-prototype .rift-news-text {
     color: #485762 !important;
     text-shadow: none !important;
+}
+
+/* =========================================================
+   DIGITAL RIFT — SKIN CLARA
+   TARJETAS CENTRALES · SOMBRA GRISÁCEA
+   ========================================================= */
+body.light-mode .rift-info-image img {filter: brightness(.88) saturate(.88) contrast(.96) !important;}/* IMÁGENES: recuperar luminosidad y color */
+/* SOMBRA SUPERPUESTA: gris tecnológico */
+body.light-mode .rift-info-image .rift-info-overlay {
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(112, 121, 130, .06) 15%,
+        rgba(76, 86, 96, .40) 55%,
+        rgba(48, 57, 66, .82) 100%
+    ) !important;
+    border: 0 !important;
+}
+
+/* TÍTULOS: conservar la legibilidad */
+body.light-mode .rift-info-overlay strong {
+    color: #fff !important;
+    text-shadow: 0 1px 4px rgba(25, 32, 38, .65) !important;
+}
+
+/* SUBTÍTULOS: mantener el acento morado */
+body.light-mode .rift-info-overlay span {
+    color: var(--rift-a2) !important;
+    text-shadow: 0 1px 3px rgba(25, 32, 38, .65) !important;
 }
