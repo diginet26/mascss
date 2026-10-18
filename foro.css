@@ -18117,3 +18117,30 @@ body:has(.forumbg-table table.table1) .forumbg-table table.table1 td p.center {
     color: var(--theme-text-muted);
     line-height: 1.7;
 }
+
+/* =========================================================
+   DIGITAL RIFT — FICHA DE GRUPO
+   CABECERA UNIFICADA DE LA TABLA
+   ========================================================= */
+
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 thead th {
+    background: var(--theme-panel-deep) !important;
+    border: 0 !important;
+    border-bottom: 2px solid var(--emblema2) !important;
+    box-shadow: none !important;
+}
+
+/* Eliminar divisiones verticales entre títulos */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 thead th + th {
+    border-left: 0 !important;
+}
+
+/* Fondo uniforme para toda la cabecera */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 thead {
+    background: var(--theme-panel-deep) !important;
+}
+
+/* Evitar espacios entre las celdas de los encabezados */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 {
+    border-spacing: .2rem 0 !important;
+}
