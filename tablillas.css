@@ -643,6 +643,8 @@
     border-left:1px solid var(--emblema2);
     color: var(--colorfondod);
     font-size:0.625rem;
+    overflow: auto;
+        max-height: 10rem;
 }
 
 /* ZONA DE ROL */
