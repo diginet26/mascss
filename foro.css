@@ -746,7 +746,7 @@ button#theme-toggler2:before {
 
 #dg-profile .dg-profile-content-header h2 {
     margin: 0;
-    color: var(--theme-text);
+    color: var(--profile-group-color);
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -1183,7 +1183,7 @@ button#theme-toggler2:before {
 
 #dg-profile .dg-profile-content-header h2 {
     margin: 0;
-    color: var(--theme-text);
+    color: var(--profile-group-color);
     font-size: 19px;
     font-weight: 700;
     line-height: 1.25;
@@ -1622,7 +1622,7 @@ button#theme-toggler2:before {
 
 #dg-profile .dg-profile-content-header h2 {
     margin: 0;
-    color: var(--theme-text);
+    color: var(--profile-group-color);
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -17468,6 +17468,4 @@ body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) se
 }
 
 body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox) label,
-body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) label {
-    color: #687681 !important;
-}
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) label {color: #687681 !important;}
