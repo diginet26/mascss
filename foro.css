@@ -656,14 +656,17 @@ button#theme-toggler2:before {
    ========================================================= */
 #dg-profile .dg-profile-header {
     --profile-header-image: none;
+    --profile-avatar-size: clamp(150px, 19vw, 250px);
     position: relative;
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: auto 1fr;
-    align-items: center;
-    min-height: 180px;
+    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 150px;
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+    height: calc(var(--profile-avatar-size) + 2px);
+    min-height: calc(var(--profile-avatar-size) + 2px);
     margin-bottom: 18px;
-    padding: 25px 32px;
+    padding: 0 32px 0 0;
+    box-sizing: border-box;
     background: linear-gradient(110deg, var(--theme-panel-deep) 0%, var(--theme-panel) 55%, var(--theme-panel-alt) 100%);
     border: 1px solid var(--theme-border);
     border-left: 4px solid var(--profile-group-color);
@@ -779,8 +782,8 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 #dg-profile .dg-profile-header-label {
     position: absolute;
-    top: 24px;
-    left: 32px;
+    top: 18px;
+    left: calc(var(--profile-avatar-size) + 18px);
     z-index: 3;
     color: var(--profile-highlight);
     font-size: 8px;
@@ -797,20 +800,28 @@ button#theme-toggler2:before {
     position: relative;
     z-index: 3;
     grid-column: 1;
-    grid-row: 1 / span 2;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 20px;
+    grid-row: 1;
+    align-self: stretch;
+    justify-self: start;
+    display: block;
+    width: var(--profile-avatar-size);
+    height: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 #dg-profile .dg-profile-header-avatar img {
     display: block;
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border: 1px solid var(--profile-group-color);
-    box-shadow: 0 0 0 4px var(--theme-panel-deep), 0 0 25px var(--profile-glow);
+    box-shadow: none;
+    box-sizing: border-box;
 }
 
 /* ---------------------------------------------------------
@@ -820,12 +831,15 @@ button#theme-toggler2:before {
     position: relative;
     z-index: 3;
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 0;
+    height: 100%;
     text-align: center;
-    padding: 35px 20px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 #dg-profile .dg-profile-header-title h1 {
@@ -845,7 +859,7 @@ button#theme-toggler2:before {
     position: relative;
     z-index: 3;
     grid-column: 3;
-    grid-row: 1 / span 2;
+    grid-row: 1;
     justify-self: end;
     display: flex;
     align-items: center;
@@ -889,13 +903,16 @@ button#theme-toggler2:before {
    --------------------------------------------------------- */
 @media (max-width:650px) {
     #dg-profile .dg-profile-header {
-    grid-template-columns:95px 1fr 95px;
-    min-height:110px;
-    padding:22px;
+    --profile-avatar-size: clamp(112px, 23vw, 150px);
+    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 90px;
+    grid-template-rows: minmax(0, 1fr);
+    height: calc(var(--profile-avatar-size) + 2px);
+    min-height: calc(var(--profile-avatar-size) + 2px);
+    padding: 0 16px 0 0;
 }
     #dg-profile .dg-profile-header-label {
-    top:18px;
-    left:20px;
+    top:14px;
+    left:calc(var(--profile-avatar-size) + 14px);
     font-size:7px;
     letter-spacing:2px;
 }
@@ -903,20 +920,28 @@ button#theme-toggler2:before {
     min-height:66px;
 }
     #dg-profile .dg-profile-header-avatar {
-    margin-top:15px;
+    width:var(--profile-avatar-size);
+    height:100%;
+    margin:0;
 }
     #dg-profile .dg-profile-header-avatar img {
-    width:75px;
-    height:75px;
+    width:100%;
+    height:100%;
 }
     #dg-profile .dg-profile-header-title {
-    padding-top:25px;
+    grid-row:1;
+    padding:0 8px;
 }
-    #dg-profile .dg-profile-title h1 {
-    font-size:23px;
+    #dg-profile .dg-profile-header-title h1 {
+    font-size:clamp(16px, 4.2vw, 25px);
+    overflow-wrap:anywhere;
 }
     #dg-profile .dg-profile-status {
+    grid-row:1;
+    align-self:center;
+    justify-self:end;
     padding:6px 8px;
+    margin-top:0;
     font-size:6px;
 }
 }
@@ -1408,14 +1433,14 @@ button#theme-toggler2:before {
     margin-top: 20px;
 }
     #dg-profile .dg-profile-header {
-    padding: 25px 22px;
+    padding: 0 16px 0 0;
 }
     #dg-profile .dg-profile-header-main {
     display: block;
 }
     #dg-profile .dg-profile-status {
     display: inline-flex;
-    margin-top: 15px;
+    margin-top: 0;
 }
     #dg-profile .dg-profile-title h1 {
     font-size: 28px;
