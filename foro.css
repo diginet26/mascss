@@ -656,16 +656,18 @@ button#theme-toggler2:before {
    ========================================================= */
 #dg-profile .dg-profile-header {
     --profile-header-image: none;
-    --profile-avatar-size: clamp(150px, 19vw, 250px);
+    /* El avatar define la altura de la cabecera para que sea cuadrado. */
+    --profile-avatar-size: clamp(180px, 19vw, 228px);
     position: relative;
     display: grid;
-    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 150px;
-    grid-template-rows: minmax(0, 1fr);
-    align-items: stretch;
-    height: calc(var(--profile-avatar-size) + 2px);
-    min-height: calc(var(--profile-avatar-size) + 2px);
+    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 110px;
+    grid-template-rows: var(--profile-avatar-size);
+    align-items: center;
+    height: var(--profile-avatar-size) !important;
+    min-height: var(--profile-avatar-size) !important;
+    max-height: var(--profile-avatar-size) !important;
     margin-bottom: 18px;
-    padding: 0 32px 0 0;
+    padding: 0 24px 0 0;
     box-sizing: border-box;
     background: linear-gradient(110deg, var(--theme-panel-deep) 0%, var(--theme-panel) 55%, var(--theme-panel-alt) 100%);
     border: 1px solid var(--theme-border);
@@ -801,12 +803,15 @@ button#theme-toggler2:before {
     z-index: 3;
     grid-column: 1;
     grid-row: 1;
-    align-self: stretch;
+    align-self: center !important;
     justify-self: start;
     display: block;
-    width: var(--profile-avatar-size);
-    height: 100%;
-    min-width: 0;
+    width: var(--profile-avatar-size) !important;
+    height: var(--profile-avatar-size) !important;
+    min-width: var(--profile-avatar-size);
+    min-height: var(--profile-avatar-size);
+    max-width: var(--profile-avatar-size);
+    max-height: var(--profile-avatar-size);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -815,11 +820,17 @@ button#theme-toggler2:before {
 
 #dg-profile .dg-profile-header-avatar img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center;
     border: 1px solid var(--profile-group-color);
+    border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
 }
@@ -860,16 +871,27 @@ button#theme-toggler2:before {
     z-index: 3;
     grid-column: 3;
     grid-row: 1;
-    justify-self: end;
-    display: flex;
+    align-self: center !important;
+    justify-self: end !important;
+    display: inline-flex;
     align-items: center;
-    padding: 7px 11px;
+    justify-content: center;
+    width: max-content !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0;
+    padding: 6px 12px !important;
+    box-sizing: border-box;
     background: var(--theme-panel-deep);
-    border: 1px solid var(--theme-border);
+    border: 1px solid var(--profile-group-color);
+    border-radius: 0;
+    clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%);
     color: var(--theme-text-muted);
     font-size: 7px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
+    line-height: 1;
     white-space: nowrap;
 }
 
@@ -904,11 +926,12 @@ button#theme-toggler2:before {
 @media (max-width:650px) {
     #dg-profile .dg-profile-header {
     --profile-avatar-size: clamp(112px, 23vw, 150px);
-    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 90px;
-    grid-template-rows: minmax(0, 1fr);
-    height: calc(var(--profile-avatar-size) + 2px);
-    min-height: calc(var(--profile-avatar-size) + 2px);
-    padding: 0 16px 0 0;
+    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 76px;
+    grid-template-rows: var(--profile-avatar-size);
+    height: var(--profile-avatar-size) !important;
+    min-height: var(--profile-avatar-size) !important;
+    max-height: var(--profile-avatar-size) !important;
+    padding: 0 10px 0 0;
 }
     #dg-profile .dg-profile-header-label {
     top:14px;
@@ -920,13 +943,17 @@ button#theme-toggler2:before {
     min-height:66px;
 }
     #dg-profile .dg-profile-header-avatar {
-    width:var(--profile-avatar-size);
-    height:100%;
+    width:var(--profile-avatar-size) !important;
+    height:var(--profile-avatar-size) !important;
+    min-width:var(--profile-avatar-size);
+    min-height:var(--profile-avatar-size);
+    max-width:var(--profile-avatar-size);
+    max-height:var(--profile-avatar-size);
     margin:0;
 }
     #dg-profile .dg-profile-header-avatar img {
-    width:100%;
-    height:100%;
+    width:100% !important;
+    height:100% !important;
 }
     #dg-profile .dg-profile-header-title {
     grid-row:1;
@@ -938,11 +965,15 @@ button#theme-toggler2:before {
 }
     #dg-profile .dg-profile-status {
     grid-row:1;
-    align-self:center;
-    justify-self:end;
-    padding:6px 8px;
-    margin-top:0;
+    align-self:center !important;
+    justify-self:end !important;
+    width:max-content !important;
+    height:auto !important;
+    min-height:0 !important;
+    padding:5px 9px !important;
+    margin:0;
     font-size:6px;
+    letter-spacing:.8px;
 }
 }
 
