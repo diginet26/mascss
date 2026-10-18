@@ -1537,11 +1537,16 @@ button#theme-toggler2:before {
    BOTONES DE EDICIÓN — ESTILO DISCRETO
    --------------------------------------------------------- */
 #dg-profile .dg-profile-field-actions {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-end;
     gap: .35rem;
-    margin-top: .45rem;
+    margin: 0;
 }
 
 #dg-profile .dg-profile-field-actions button,
@@ -1612,15 +1617,26 @@ button#theme-toggler2:before {
    PANEL DE CONTENIDO
    --------------------------------------------------------- */
 #dg-profile .dg-profile-content-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 0;
     margin-bottom: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid var(--theme-border);
 }
 #dg-profile .dg-profile-content-header .dg-profile-kicker {
+    grid-column: 1;
+    grid-row: 1;
     margin-bottom: 7px;
 }
 
 #dg-profile .dg-profile-content-header h2 {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
     margin: 0;
     color: var(--profile-group-color);
     font-size: 20px;
@@ -17468,4 +17484,6 @@ body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) se
 }
 
 body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox) label,
-body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) label {color: #687681 !important;}
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) label {
+    color: #687681 !important;
+}
