@@ -15318,15 +15318,165 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
 
 /* =========================================================
    DIGITAL RIFT — POST PREVIEW + TOPIC REVIEW
-   COMPONENTES COMPARTIDOS
+   PREVISUALIZACIÓN: ENVOLTURA + MENSAJE INTERIOR
    ========================================================= */
 
-/* PANELES PRINCIPALES */
+/* La cabecera exterior de Foroactivo contiene el rótulo PREVISUALIZACIÓN.
+   Se mantiene visible, pero sin el panel gris predeterminado. */
+#main-content .panel:has(#preview) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#main-content .panel:has(#preview) > .inner,
+#preview > .inner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+}
+
+#main-content .panel:has(#preview) > .inner > .h3,
+#main-content .panel:has(#preview) > .inner > h3 {
+    display: block !important;
+    margin: 0 auto .6rem !important;
+    padding: .45rem .8rem !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: var(--emblema2) !important;
+    font: 700 .7rem/1.5 "Oxanium", sans-serif !important;
+    letter-spacing: .12rem !important;
+    text-align: center !important;
+    text-transform: uppercase;
+}
+
+/* Marco del mensaje: cubre ambas estructuras que puede generar Foroactivo:
+   #preview como mensaje, o #preview como envoltura de .post.row2. */
 #preview.post.row2,
+#preview .post.row2 {
+    display: block !important;
+    width: min(55rem, calc(100% - 1rem)) !important;
+    max-width: 100% !important;
+    margin: .6rem auto 1.25rem !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 6%, var(--theme-panel-deep)), var(--theme-panel-deep) 68%, color-mix(in srgb, var(--emblema1) 4%, var(--theme-panel-deep))) !important;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 55%, var(--theme-border)) !important;
+    border-radius: .3rem !important;
+    color: var(--text-color) !important;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.18), inset 0 1px 0 color-mix(in srgb, var(--emblema1) 12%, transparent) !important;
+    overflow: hidden;
+}
+
+#preview .post.row2 > .inner,
+#preview.post.row2 > .inner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+}
+
+#preview .corners-top,
+#preview .corners-bottom,
+#preview .post.row2 .corners-top,
+#preview .post.row2 .corners-bottom {
+    display: none !important;
+}
+
+#preview .postbody,
+#preview.post.row2 .postbody {
+    float: none !important;
+    width: 100% !important;
+    min-width: 0;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+    color: var(--text-color) !important;
+}
+
+/* Asunto del mensaje */
+#preview .postbody > .h3 {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    margin: 0 !important;
+    padding: .8rem 1rem !important;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
+    border: 0 !important;
+    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 50%, var(--theme-border)) !important;
+    color: var(--emblema2) !important;
+    font: 700 .75rem/1.5 "Oxanium", sans-serif !important;
+    letter-spacing: .08rem !important;
+    text-align: center !important;
+    text-transform: uppercase;
+}
+
+#preview .postbody > .h3::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 .4rem;
+    width: .4rem;
+    height: .4rem;
+    background: var(--emblema2);
+    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 50%, transparent);
+}
+
+/* Autor, destinatario y fecha */
+#preview .postbody > .author {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin: 0 !important;
+    padding: .55rem 1rem !important;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--emblema2) 5%, var(--theme-panel)) !important;
+    border-bottom: .05rem solid color-mix(in srgb, var(--emblema2) 22%, var(--theme-border)) !important;
+    color: var(--theme-text-muted) !important;
+    font: 500 .58rem/1.7 "Oxanium", sans-serif !important;
+    letter-spacing: .045rem;
+    text-align: left !important;
+}
+
+#preview .postbody > .author a {
+    color: var(--emblema2) !important;
+}
+
+/* Contenido del mensaje */
+#preview .postbody > .content {
+    display: block !important;
+    min-width: 0;
+    min-height: 10rem !important;
+    margin: 0 !important;
+    padding: 1.25rem !important;
+    box-sizing: border-box;
+    background-color: var(--theme-panel-deep) !important;
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px) !important;
+    background-size: 1.5rem 1.5rem !important;
+    color: var(--text-color) !important;
+    font: 400 .85rem/1.8 "IBM Plex Mono", monospace !important;
+    text-align: left !important;
+    overflow-wrap: anywhere;
+}
+
+/* Revisión de temas: se conservan los estilos propios ya existentes */
 .dr-topic-review-post {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
+    margin: .65rem 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
     background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, var(--theme-panel-deep)), var(--theme-panel-deep) 65%) !important;
@@ -15337,17 +15487,6 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     overflow: hidden;
 }
 
-/* Espaciado independiente */
-#preview.post.row2 {
-    margin: 1.25rem 0 !important;
-}
-
-.dr-topic-review-post {
-    margin: .65rem 0 !important;
-}
-
-/* CONTENEDORES INTERIORES */
-#preview > .inner,
 .dr-topic-review-post > .inner {
     width: 100%;
     margin: 0 !important;
@@ -15356,219 +15495,176 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]::place
     background: transparent !important;
 }
 
-/* ELIMINAR ESQUINAS DECORATIVAS ANTIGUAS */
-#preview .corners-top,
-#preview .corners-bottom,
 .dr-topic-review-post .corners-top,
-.dr-topic-review-post .corners-bottom {
-    display: none !important;
-}
+.dr-topic-review-post .corners-bottom {display:none !important;}
 
-/* CUERPOS DE LAS PUBLICACIONES */
-#preview .postbody,
 .dr-topic-review-post .postbody {
-    float: none !important;
-    width: 100% !important;
-    min-width: 0;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box;
-    background: transparent !important;
-    color: var(--text-color) !important;
+    float:none !important;
+    width:100% !important;
+    min-width:0;
+    margin:0 !important;
+    padding:0 !important;
+    box-sizing:border-box;
+    background:transparent !important;
+    color:var(--text-color) !important;
 }
 
-/* =========================================================
-   CABECERAS
-   ========================================================= */
-
-/* Cabecera interna de previsualización */
-#preview .postbody > .h3 {
-    display: flex !important;
-    align-items: center;
-    gap: .55rem;
-    margin: 0 !important;
-    padding: .8rem 1rem !important;
-    box-sizing: border-box;
-    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
-    border: 0 !important;
-    border-bottom: .06rem solid color-mix(in srgb, var(--emblema2) 50%, var(--theme-border)) !important;
-    color: var(--emblema2) !important;
-    font: 700 .75rem/1.4 "Oxanium", sans-serif !important;
-    letter-spacing: .08rem !important;
-    text-transform: uppercase;
-}
-
-/* Título exterior de revisión del tema */
 .dr-topic-review-title {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: .55rem;
-    width: fit-content;
-    max-width: 100%;
-    margin: 1rem auto .6rem !important;
-    padding: .5rem .85rem !important;
-    box-sizing: border-box;
-    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 45%, var(--theme-border)) !important;
-    border-radius: .25rem .25rem 0 0 !important;
-    color: var(--emblema2) !important;
-    font: 700 .7rem/1.4 "Oxanium", sans-serif !important;
-    letter-spacing: .1rem !important;
-    text-transform: uppercase;
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    gap:.55rem;
+    width:fit-content;
+    max-width:100%;
+    margin:1rem auto .6rem !important;
+    padding:.5rem .85rem !important;
+    box-sizing:border-box;
+    background:linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 12%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
+    border:.06rem solid color-mix(in srgb, var(--emblema2) 45%, var(--theme-border)) !important;
+    border-radius:.25rem .25rem 0 0 !important;
+    color:var(--emblema2) !important;
+    font:700 .7rem/1.4 "Oxanium", sans-serif !important;
+    letter-spacing:.1rem !important;
+    text-transform:uppercase;
 }
 
-/* Indicador digital compartido */
-#preview .postbody > .h3::before,
 .dr-topic-review-title::before {
-    content: "";
-    display: inline-block;
-    flex: 0 0 .4rem;
-    width: .4rem;
-    height: .4rem;
-    background: var(--emblema2);
-    box-shadow: 0 0 .5rem color-mix(in srgb, var(--emblema2) 50%, transparent);
+    content:"";
+    display:inline-block;
+    flex:0 0 .4rem;
+    width:.4rem;
+    height:.4rem;
+    background:var(--emblema2);
+    box-shadow:0 0 .5rem color-mix(in srgb, var(--emblema2) 50%, transparent);
 }
 
-/* Asunto de cada publicación revisada */
 .dr-topic-review-post .postbody > h3 {
-    margin: 0 !important;
-    padding: .7rem 1rem !important;
-    box-sizing: border-box;
-    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
-    border-bottom: .05rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
-    color: var(--emblema2) !important;
-    font: 700 .75rem/1.5 "Oxanium", sans-serif !important;
-    letter-spacing: .025rem;
+    margin:0 !important;
+    padding:.7rem 1rem !important;
+    box-sizing:border-box;
+    background:linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel)), var(--theme-panel-deep) 75%) !important;
+    border-bottom:.05rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
+    color:var(--emblema2) !important;
+    font:700 .75rem/1.5 "Oxanium", sans-serif !important;
+    letter-spacing:.025rem;
 }
 
-/* Autor y fecha */
 .dr-topic-review-post .postbody > .author {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .35rem;
-    margin: 0 !important;
-    padding: .45rem 1rem !important;
-    box-sizing: border-box;
-    background: color-mix(in srgb, var(--emblema2) 4%, var(--theme-panel-deep)) !important;
-    border-bottom: .05rem solid color-mix(in srgb, var(--emblema2) 18%, var(--theme-border)) !important;
-    color: var(--text-color) !important;
-    font: 500 .55rem/1.6 "Oxanium", sans-serif !important;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:.35rem;
+    margin:0 !important;
+    padding:.45rem 1rem !important;
+    box-sizing:border-box;
+    background:color-mix(in srgb, var(--emblema2) 4%, var(--theme-panel-deep)) !important;
+    border-bottom:.05rem solid color-mix(in srgb, var(--emblema2) 18%, var(--theme-border)) !important;
+    color:var(--text-color) !important;
+    font:500 .55rem/1.6 "Oxanium", sans-serif !important;
 }
 
-/* =========================================================
-   ÁREAS DE MENSAJE COMPARTIDAS
-   ========================================================= */
-
-#preview .postbody > .content,
 .dr-topic-review-post .postbody > .content,
 .dr-topic-review-hidden > .inner > p {
-    display: block !important;
-    min-width: 0;
-    margin: 0 !important;
-    padding: 1.25rem !important;
-    box-sizing: border-box;
-    background-color: var(--theme-panel-deep) !important;
-    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px) !important;
-    background-size: 1.5rem 1.5rem !important;
-    color: var(--text-color) !important;
-    font: 400 .85rem/1.8 "IBM Plex Mono", monospace !important;
-    text-align: left;
-    overflow-wrap: anywhere;
+    display:block !important;
+    min-width:0;
+    margin:0 !important;
+    padding:1.25rem !important;
+    box-sizing:border-box;
+    background-color:var(--theme-panel-deep) !important;
+    background-image:linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 3%, transparent) 1px, transparent 1px) !important;
+    background-size:1.5rem 1.5rem !important;
+    color:var(--text-color) !important;
+    font:400 .85rem/1.8 "IBM Plex Mono", monospace !important;
+    text-align:left;
+    overflow-wrap:anywhere;
 }
 
-/* Altura mínima solo para la previsualización */
-#preview .postbody > .content {
-    min-height: 10rem;
-}
-
-/* Mensajes del historial: altura natural */
 .dr-topic-review-post .postbody > .content,
-.dr-topic-review-hidden > .inner > p {
-    min-height: 0;
-}
-
-/* =========================================================
-   SEPARADOR DE PREVISUALIZACIÓN
-   ========================================================= */
+.dr-topic-review-hidden > .inner > p {min-height:0;}
 
 #preview + hr {
-    width: 100%;
-    max-width: 100%;
-    margin: 1.25rem 0 !important;
-    border: 0 !important;
-    border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
-    box-sizing: border-box;
+    width:100%;
+    max-width:100%;
+    margin:1.25rem 0 !important;
+    border:0 !important;
+    border-top:.06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border)) !important;
+    box-sizing:border-box;
 }
 
-/* =========================================================
-   SKIN CLARA — COMPONENTES COMPARTIDOS
-   ========================================================= */
+/* SKIN CLARA — PREVISUALIZACIÓN Y REVISIÓN */
+body.light-mode #main-content .panel:has(#preview) > .inner > .h3,
+body.light-mode #main-content .panel:has(#preview) > .inner > h3 {
+    color:var(--emblema2) !important;
+}
 
 body.light-mode #preview.post.row2,
-body.light-mode .dr-topic-review-post {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #e4e8eb), #e4e8eb 65%) !important;
-    border-color: color-mix(in srgb, var(--emblema2) 38%, #c5cfd7) !important;
-    color: #394752 !important;
-    box-shadow: 0 .5rem 1.5rem rgba(56,69,81,.10), inset 0 1px 0 rgba(255,255,255,.7) !important;
+body.light-mode #preview .post.row2 {
+    background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #f7f8f9), #e4e8eb 80%, color-mix(in srgb, var(--emblema1) 3%, #e4e8eb)) !important;
+    border-color:color-mix(in srgb, var(--emblema2) 38%, #c5cfd7) !important;
+    color:#394752 !important;
+    box-shadow:0 .5rem 1.5rem rgba(56,69,81,.10), inset 0 1px 0 rgba(255,255,255,.7) !important;
 }
 
 body.light-mode #preview .postbody,
-body.light-mode .dr-topic-review-post .postbody {
-    background: transparent !important;
-    color: #394752 !important;
+body.light-mode #preview .postbody > .content {
+    color:#394752 !important;
 }
 
-body.light-mode #preview .postbody > .h3,
-body.light-mode .dr-topic-review-title {
-    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 6%, #e9ecef), #e1e6e9 75%) !important;
-    border-color: color-mix(in srgb, var(--emblema2) 35%, #c5cfd7) !important;
-    color: var(--emblema2) !important;
+body.light-mode #preview .postbody > .h3 {
+    background:linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 6%, #e9ecef), #e1e6e9 75%) !important;
+    border-bottom-color:color-mix(in srgb, var(--emblema2) 35%, #c5cfd7) !important;
+    color:var(--emblema2) !important;
 }
 
-body.light-mode .dr-topic-review-post .postbody > h3 {
-    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 5%, #e9ecef), #e1e6e9 75%) !important;
-    border-bottom-color: color-mix(in srgb, var(--emblema2) 30%, #c5cfd7) !important;
-    color: var(--emblema2) !important;
+body.light-mode #preview .postbody > .author {
+    background:color-mix(in srgb, var(--emblema2) 3%, #e9ecef) !important;
+    border-bottom-color:color-mix(in srgb, var(--emblema2) 18%, #c5cfd7) !important;
+    color:#687681 !important;
 }
 
-body.light-mode .dr-topic-review-post .postbody > .author {
-    background: color-mix(in srgb, var(--emblema2) 3%, #e9ecef) !important;
-    border-bottom-color: color-mix(in srgb, var(--emblema2) 18%, #c5cfd7) !important;
-    color: #687681 !important;
-}
+body.light-mode #preview .postbody > .author a {color:var(--emblema1) !important;}
 
 body.light-mode #preview .postbody > .content,
 body.light-mode .dr-topic-review-post .postbody > .content,
 body.light-mode .dr-topic-review-hidden > .inner > p {
-    background-color: #f3f5f6 !important;
-    background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;
-    color: #394752 !important;
+    background-color:#f3f5f6 !important;
+    background-image:linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;
+    color:#394752 !important;
 }
 
-body.light-mode #preview + hr {border-top-color: color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;}
+body.light-mode .dr-topic-review-post {
+    background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 3%, #e4e8eb), #e4e8eb 65%) !important;
+    border-color:color-mix(in srgb, var(--emblema2) 38%, #c5cfd7) !important;
+    color:#394752 !important;
+    box-shadow:0 .5rem 1.5rem rgba(56,69,81,.10), inset 0 1px 0 rgba(255,255,255,.7) !important;
+}
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+body.light-mode .dr-topic-review-post .postbody > h3 {
+    background:linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 5%, #e9ecef), #e1e6e9 75%) !important;
+    border-bottom-color:color-mix(in srgb, var(--emblema2) 30%, #c5cfd7) !important;
+    color:var(--emblema2) !important;
+}
+
+body.light-mode .dr-topic-review-post .postbody > .author {
+    background:color-mix(in srgb, var(--emblema2) 3%, #e9ecef) !important;
+    border-bottom-color:color-mix(in srgb, var(--emblema2) 18%, #c5cfd7) !important;
+    color:#687681 !important;
+}
+
+body.light-mode #preview + hr {border-top-color:color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;}
 
 @media (max-width: 600px) {
-    #preview.post.row2 {
-        width: 100% !important;
-        margin: 1rem 0 !important;
+    #preview.post.row2,
+    #preview .post.row2 {
+        width:calc(100% - .5rem) !important;
+        margin:.6rem auto 1rem !important;
     }
 
     #preview .postbody > .content,
     .dr-topic-review-post .postbody > .content,
-    .dr-topic-review-hidden > .inner > p {
-        padding: .85rem !important;
-    }
+    .dr-topic-review-hidden > .inner > p {padding:.85rem !important;}
 
-    .dr-topic-review-title {
-        max-width: 100%;
-        text-align: center;
-    }
+    .dr-topic-review-title {max-width:100%; text-align:center;}
 }
 
 /* =========================================================
@@ -17308,6 +17404,4 @@ body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) se
 }
 
 body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox) label,
-body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) label {
-    color: #687681 !important;
-}
+body.light-mode #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > div:has(select[name="selected_id"]) label {color: #687681 !important;}
