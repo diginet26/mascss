@@ -821,7 +821,7 @@ button#theme-toggler2:before {
 #dg-profile .dg-profile-header-avatar img {
     display: block;
     width: 100% !important;
-    height: 100% !important;
+    height: 99% !important;
     min-width: 0 !important;
     min-height: 0 !important;
     max-width: none !important;
