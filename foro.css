@@ -17971,3 +17971,149 @@ body:has(.forumbg-table table.table1) #main-content select {
         min-width: 36rem;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — FICHA DE GRUPO
+   TABLA DE MIEMBROS · REFINAMIENTO VISUAL
+   ========================================================= */
+
+/* CONTENEDOR DE LA TABLA */
+body:has(.forumbg-table table.table1) .forumbg-table {
+    padding: .85rem;
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--emblema2) 5%, transparent),
+            transparent 45%,
+            color-mix(in srgb, var(--emblema1) 5%, transparent)
+        ),
+        var(--theme-panel);
+    border: 1px solid var(--theme-border);
+    border-radius: .45rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+/* ESPACIADO ENTRE CELDAS */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 {
+    border-collapse: separate;
+    border-spacing: .2rem;
+}
+
+/* CABECERA DE COLUMNAS */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 thead th {
+    padding: .9rem .6rem;
+    background: var(--theme-panel-deep);
+    border: 1px solid var(--theme-border);
+    border-bottom: 2px solid var(--emblema2);
+    color: var(--emblema2);
+    font-family: "Oxanium", sans-serif;
+    font-size: .7rem;
+    letter-spacing: .045rem;
+    text-align: center;
+    transition: background .2s ease, color .2s ease;
+}
+
+/* SEPARACIÓN DE LAS COLUMNAS */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 thead th + th {
+    border-left-color: color-mix(
+        in srgb, var(--emblema2) 25%, var(--theme-border)
+    );
+}
+
+/* FILAS DE USUARIOS */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 tbody tr.row1 td,
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 tbody tr.row2 td {
+    padding: 1rem .65rem;
+    background: var(--theme-panel-alt);
+    border: 1px solid color-mix(
+        in srgb, var(--theme-border) 75%, transparent
+    );
+    color: var(--theme-text);
+    text-align: center;
+    vertical-align: middle;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+/* ALTERNANCIA SUTIL ENTRE FILAS */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 tbody tr.row2 td {
+    background: color-mix(
+        in srgb, var(--theme-panel-alt) 75%, var(--theme-panel)
+    );
+}
+
+/* HOVER DE FILA */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 tbody tr.row1:hover td,
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 tbody tr.row2:hover td {
+    background: color-mix(
+        in srgb, var(--emblema2) 7%, var(--theme-panel-alt)
+    );
+    border-color: color-mix(
+        in srgb, var(--emblema2) 45%, var(--theme-border)
+    );
+}
+
+/* FILAS DE TÍTULO: MODERADOR Y MIEMBROS */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 tbody tr.row3 td {
+    padding: .75rem .8rem;
+    background:
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep)),
+            var(--theme-panel-deep)
+        );
+    border: 1px solid var(--theme-border);
+    border-left: 3px solid var(--emblema2);
+    color: var(--emblema2);
+    font-family: "Oxanium", sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .07rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* NOMBRES DE USUARIO */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 td a {
+    color: var(--emblema2);
+    font-family: "Oxanium", sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s ease, text-shadow .2s ease;
+}
+
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 td a:hover {
+    color: var(--emblema1);
+    text-shadow: 0 0 .6rem color-mix(
+        in srgb, var(--emblema1) 35%, transparent
+    );
+}
+
+/* ICONOS DE CONTACTO */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 td img {
+    vertical-align: middle;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 td a:hover img {
+    filter: drop-shadow(0 0 .3rem var(--emblema2));
+    transform: translateY(-1px);
+}
+
+/* ESTADÍSTICAS */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 td.posts {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .75rem;
+}
+
+/* CASILLAS DE ADMINISTRACIÓN */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 input[type="checkbox"] {
+    accent-color: var(--emblema2);
+}
+
+/* MENSAJES DE TABLA VACÍA O GRUPO OCULTO */
+body:has(.forumbg-table table.table1) .forumbg-table table.table1 td p.center {
+    margin: .5rem 0;
+    color: var(--theme-text-muted);
+    line-height: 1.7;
+}
