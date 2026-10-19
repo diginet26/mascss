@@ -428,7 +428,7 @@ body.dark-mode .dg-submit:active {
     display:block;
     max-width:100%;
     color:var(--dg-group);
-    font-size:.8rem;
+    font-size:1rem;
     font-weight:800;
     line-height:1.2;
     text-decoration:none;
@@ -439,6 +439,10 @@ body.dark-mode .dg-submit:active {
 .dg-tamer-name a:hover {
     color:var(--dg-group);
     filter:brightness(1.15);
+}
+.dg-tamer-header-name a {
+    overflow-wrap:anywhere;
+    word-break:normal;
 }
 .dg-data {
     display:flex;
