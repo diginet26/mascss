@@ -19165,3 +19165,160 @@ body:has(#cp-main) #cp-main input[type="button"]:hover {
         width: min(260px, 100%) !important;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — AMIGOS E IGNORADOS
+   Alineación y estilo de controles
+   ========================================================= */
+
+/* FILA DE AÑADIR AMIGO */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) {
+    display: grid !important;
+    grid-template-columns: 165px minmax(0, 1fr) !important;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 10px;
+    margin: 12px 0 18px !important;
+    padding: 0 !important;
+}
+
+/* ETIQUETA */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dt {
+    float: none !important;
+    width: auto !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* ÁREA DE CONTROLES */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    float: none !important;
+    width: auto !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* ELIMINAR SALTOS DE LÍNEA VISUALES ENTRE CONTROLES */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd br {
+    display: none !important;
+}
+
+/* CAJITA DE TEXTO */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) input[type="text"] {
+    width: min(16rem, 100%) !important;
+    min-width: 0;
+    min-height: 32px;
+    margin: 0 !important;
+    padding: 7px 10px !important;
+    box-sizing: border-box !important;
+
+    background: var(--theme-panel-deep) !important;
+    border: 1px solid var(--theme-border) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 11px !important;
+    outline: none !important;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+/* FOCO DE LA CAJITA */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) input[type="text"]:focus {
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 8px
+        color-mix(in srgb, var(--emblema2) 20%, transparent);
+}
+
+/* BOTONES Y ENLACES DE ESTA FILA */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd a,
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd input[type="submit"],
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd input[type="button"],
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    margin: 0 !important;
+    padding: 7px 12px !important;
+    box-sizing: border-box !important;
+
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    ) !important;
+
+    border: 1px solid var(--emblema2) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: background .2s ease, border-color .2s ease,
+        color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+/* HOVER */
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd a:hover,
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd input[type="submit"]:hover,
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd input[type="button"]:hover,
+body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+dl:has(input[type="text"]) dd button:hover {
+    background: color-mix(
+        in srgb, var(--emblema2) 18%, var(--theme-panel-deep)
+    ) !important;
+    border-color: var(--emblema1) !important;
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 9px
+        color-mix(in srgb, var(--emblema2) 18%, transparent);
+    transform: translateY(-1px);
+}
+
+/* MÓVIL */
+@media screen and (max-width: 650px) {
+    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+    dl:has(input[type="text"]) {
+        grid-template-columns: minmax(0, 1fr) !important;
+        row-gap: 8px;
+    }
+
+    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+    dl:has(input[type="text"]) dd {
+        gap: 6px;
+    }
+
+    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+    dl:has(input[type="text"]) input[type="text"] {
+        width: min(16rem, 100%) !important;
+    }
+}
