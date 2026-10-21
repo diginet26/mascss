@@ -18462,3 +18462,66 @@ body:has(#cp-main form#ucp) #tabs li > a:focus-visible {
         letter-spacing: .6px;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — EDITOR DE PERFIL
+   Alinear campos de Información de Registro
+   Solo diseño visual
+   ========================================================= */
+
+body:has(#cp-main form#ucp)
+#cp-main form#ucp > h1.page-title + .panel fieldset > dl {
+    display: grid !important;
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr) !important;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 5px;
+    margin: 0 0 24px !important;
+    padding: 0 !important;
+}
+
+/* Etiquetas */
+body:has(#cp-main form#ucp)
+#cp-main form#ucp > h1.page-title + .panel fieldset > dl > dt {
+    float: none !important;
+    width: auto !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* Campos y enlaces: todos comienzan en la misma posición */
+body:has(#cp-main form#ucp)
+#cp-main form#ucp > h1.page-title + .panel fieldset > dl > dd {
+    float: none !important;
+    width: auto !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* Cajas de texto uniformes */
+body:has(#cp-main form#ucp)
+#cp-main form#ucp > h1.page-title + .panel fieldset > dl > dd input[type="text"] {
+    width: 260px !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media screen and (max-width: 650px) {
+    body:has(#cp-main form#ucp)
+    #cp-main form#ucp > h1.page-title + .panel fieldset > dl {
+        grid-template-columns: minmax(0, 1fr) !important;
+        row-gap: 8px;
+        margin-bottom: 22px !important;
+    }
+
+    body:has(#cp-main form#ucp)
+    #cp-main form#ucp > h1.page-title + .panel fieldset > dl > dd input[type="text"] {
+        width: 260px !important;
+        max-width: 100% !important;
+    }
+}
