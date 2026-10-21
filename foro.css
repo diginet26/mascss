@@ -18564,3 +18564,115 @@ body:has(#cp-main form#ucp)
 #cp-main form#ucp > h1.page-title + .panel fieldset {
     background: transparent !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — EDITOR DE PERFIL
+   BOTONES FINALES Y EXPORTACIÓN DE DATOS
+   ========================================================= */
+
+/* ESTILO BASE */
+body:has(#cp-main form#ucp) #cp-main form#ucp a.button1,
+body:has(#cp-main form#ucp) #cp-main form#ucp .submit-buttons input.button1,
+body:has(#cp-main form#ucp) #cp-main form#ucp .submit-buttons input.button2 {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    margin: 3px;
+    padding: 8px 14px !important;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    ) !important;
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--emblema2) 65%,
+        var(--theme-border)
+    ) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .8px;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+
+    box-shadow: inset 0 1px 0
+        color-mix(in srgb, var(--emblema2) 12%, transparent);
+
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+/* EXPORTAR TUS DATOS */
+body:has(#cp-main form#ucp) #cp-main form#ucp a.button1 {
+    padding: 7px 12px !important;
+    font-size: 9px !important;
+}
+
+/* BOTÓN PRINCIPAL: REGISTRAR */
+body:has(#cp-main form#ucp)
+#cp-main form#ucp .submit-buttons input.button1 {
+    border-color: var(--emblema2) !important;
+}
+
+/* BOTÓN SECUNDARIO: REINICIAR */
+body:has(#cp-main form#ucp)
+#cp-main form#ucp .submit-buttons input.button2 {
+    border-color: color-mix(
+        in srgb,
+        var(--emblema1) 65%,
+        var(--theme-border)
+    ) !important;
+}
+
+/* INTERACCIÓN */
+body:has(#cp-main form#ucp) #cp-main form#ucp a.button1:hover,
+body:has(#cp-main form#ucp) #cp-main form#ucp .submit-buttons input.button1:hover,
+body:has(#cp-main form#ucp) #cp-main form#ucp .submit-buttons input.button2:hover {
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 23%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 15%, var(--theme-panel-deep))
+    ) !important;
+
+    border-color: var(--emblema1) !important;
+    color: var(--theme-text) !important;
+
+    box-shadow: 0 0 12px
+        color-mix(in srgb, var(--emblema2) 20%, transparent);
+
+    transform: translateY(-1px);
+}
+
+/* PULSACIÓN */
+body:has(#cp-main form#ucp) #cp-main form#ucp a.button1:active,
+body:has(#cp-main form#ucp) #cp-main form#ucp .submit-buttons input:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ALINEACIÓN DE REGISTRAR Y REINICIAR */
+body:has(#cp-main form#ucp)
+#cp-main form#ucp .submit-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 18px 0 22px !important;
+    padding: 0 !important;
+}
