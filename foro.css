@@ -18676,3 +18676,66 @@ body:has(#cp-main form#ucp)
     margin: 18px 0 22px !important;
     padding: 0 !important;
 }
+
+/* =========================================================
+   DIGITAL RIFT — EDITOR DE PERFIL
+   PESTAÑA FIRMA
+   ========================================================= */
+
+/* PANEL QUE CONTIENE EL EDITOR */
+body:has(#cp-main .sceditor-container)
+#cp-main .panel:has(.sceditor-container) {
+    position: relative;
+    box-sizing: border-box !important;
+    padding: 12px !important;
+
+    background: linear-gradient(
+        115deg,
+        color-mix(
+            in srgb,
+            var(--theme-panel-alt) 90%,
+            var(--emblema2) 10%
+        ),
+        color-mix(
+            in srgb,
+            var(--theme-panel-deep) 94%,
+            var(--emblema1) 6%
+        )
+    ) !important;
+
+    border: 1px solid var(--theme-border) !important;
+    border-left: 3px solid var(--emblema2) !important;
+    border-radius: 3px !important;
+
+    box-shadow:
+        inset 0 1px 0
+            color-mix(in srgb, var(--emblema2) 12%, transparent),
+        0 10px 28px rgba(0, 0, 0, .12);
+}
+
+/* EL INTERIOR DEBE HEREDAR EL FONDO DEL PANEL */
+body:has(#cp-main .sceditor-container)
+#cp-main .panel:has(.sceditor-container) > .inner {
+    background: transparent !important;
+    border: 0 !important;
+}
+
+/* SEPARACIÓN DEL EDITOR RESPECTO AL BORDE */
+body:has(#cp-main .sceditor-container)
+#cp-main .sceditor-container {
+    margin: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* BOTONES INFERIORES */
+body:has(#cp-main .sceditor-container)
+#cp-main form#ucp fieldset.submit-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 18px 0 22px !important;
+    padding: 0 !important;
+}
