@@ -18525,3 +18525,42 @@ body:has(#cp-main form#ucp)
         max-width: 100% !important;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — EDITOR DE PERFIL
+   Fondo de Información de Registro
+   ========================================================= */
+
+body:has(#cp-main form#ucp)
+#cp-main form#ucp > h1.page-title + .panel {
+    background: linear-gradient(
+        115deg,
+        color-mix(
+            in srgb,
+            var(--theme-panel-alt) 90%,
+            var(--emblema2) 10%
+        ),
+        color-mix(
+            in srgb,
+            var(--theme-panel-deep) 94%,
+            var(--emblema1) 6%
+        )
+    ) !important;
+
+    border: 1px solid var(--theme-border) !important;
+    border-left: 3px solid var(--emblema2) !important;
+    border-radius: 3px;
+
+    box-shadow:
+        inset 0 1px 0
+            color-mix(in srgb, var(--emblema2) 12%, transparent),
+        0 10px 28px rgba(0, 0, 0, .12);
+}
+
+/* Mantener transparentes los contenedores interiores */
+body:has(#cp-main form#ucp)
+#cp-main form#ucp > h1.page-title + .panel > .inner,
+body:has(#cp-main form#ucp)
+#cp-main form#ucp > h1.page-title + .panel fieldset {
+    background: transparent !important;
+}
