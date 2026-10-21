@@ -18884,3 +18884,151 @@ body:has(#cp-main) #cp-main .submit-buttons input.button2:hover {
         letter-spacing: .6px;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — EDITOR DE PERFIL
+   PESTAÑA AVATAR — BOTONES DE SELECCIÓN
+   ========================================================= */
+
+/* SELECTOR DE ARCHIVO */
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[type="file"][name="avatar"] {
+    display: block;
+    width: min(100%, 46rem) !important;
+    max-width: 100% !important;
+    min-width: 0;
+    padding: .35rem !important;
+    box-sizing: border-box;
+
+    background: var(--theme-panel-deep) !important;
+    border: 1px solid var(--theme-border) !important;
+    border-radius: .2rem !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: .7rem !important;
+}
+
+/* BOTÓN INTERNO «SELECCIONAR ARCHIVO» */
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[type="file"][name="avatar"]::file-selector-button {
+    margin-right: .65rem;
+    padding: .55rem .85rem;
+
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    );
+
+    border: 1px solid var(--emblema2);
+    border-radius: .2rem;
+
+    color: var(--theme-text);
+    font-family: "Oxanium", sans-serif;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease,
+        color .2s ease, box-shadow .2s ease;
+}
+
+/* COMPATIBILIDAD CON WEBKIT */
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[type="file"][name="avatar"]::-webkit-file-upload-button {
+    margin-right: .65rem;
+    padding: .55rem .85rem;
+
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    );
+
+    border: 1px solid var(--emblema2);
+    border-radius: .2rem;
+
+    color: var(--theme-text);
+    font-family: "Oxanium", sans-serif;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+/* HOVER DEL SELECTOR */
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[type="file"][name="avatar"]:hover {
+    border-color: var(--emblema2) !important;
+}
+
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[type="file"][name="avatar"]::file-selector-button:hover {
+    background: color-mix(
+        in srgb, var(--emblema2) 20%, var(--theme-panel-deep)
+    );
+    border-color: var(--emblema1);
+    color: var(--emblema2);
+    box-shadow: 0 0 .5rem
+        color-mix(in srgb, var(--emblema2) 18%, transparent);
+}
+
+/* BOTÓN «MOSTRAR LA GALERÍA» */
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[name="avatargallery"] {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    margin: 3px 0 !important;
+    padding: 8px 14px !important;
+    box-sizing: border-box;
+
+    appearance: none !important;
+
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    ) !important;
+
+    border: 1px solid var(--emblema2) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .6px;
+    line-height: 1.3;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease,
+        box-shadow .2s ease, color .2s ease, transform .2s ease;
+}
+
+/* HOVER DE LA GALERÍA */
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[name="avatargallery"]:hover {
+    background: color-mix(
+        in srgb, var(--emblema2) 18%, var(--theme-panel-deep)
+    ) !important;
+    border-color: var(--emblema1) !important;
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 .6rem
+        color-mix(in srgb, var(--emblema2) 18%, transparent);
+    transform: translateY(-1px);
+}
+
+/* FOCO DE TECLADO */
+body:has(#cp-main form#ucp input[name="avatargallery"])
+#cp-main form#ucp input[name="avatargallery"]:focus-visible {
+    outline: 2px solid var(--emblema2);
+    outline-offset: 3px;
+}
