@@ -19032,3 +19032,136 @@ body:has(#cp-main form#ucp input[name="avatargallery"])
     outline: 2px solid var(--emblema2);
     outline-offset: 3px;
 }
+
+/* =========================================================
+   DIGITAL RIFT — EDITOR DE PERFIL
+   AMIGOS — ALINEACIÓN Y CONTROLES
+   ========================================================= */
+
+/* ALINEAR ETIQUETAS Y CONTROLES */
+body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) {
+    display: grid !important;
+    grid-template-columns: minmax(120px, 150px) minmax(0, 1fr);
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 10px;
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+}
+
+body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) > dt {
+    float: none !important;
+    width: auto !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) > dd {
+    float: none !important;
+    width: auto !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* CAJAS DE TEXTO */
+body:has(#cp-main) #cp-main input[type="text"],
+body:has(#cp-main) #cp-main input[type="search"] {
+    min-height: 30px;
+    padding: 6px 10px !important;
+    box-sizing: border-box !important;
+
+    background: var(--theme-panel-deep) !important;
+    border: 1px solid var(--theme-border) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 11px !important;
+
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+/* ANCHO DEL CAMPO PARA AÑADIR AMIGOS */
+body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) dd input[type="text"] {
+    width: min(260px, 100%) !important;
+    max-width: 100% !important;
+}
+
+/* FOCO DE LOS CAMPOS */
+body:has(#cp-main) #cp-main input[type="text"]:focus,
+body:has(#cp-main) #cp-main input[type="search"]:focus {
+    border-color: var(--emblema2) !important;
+    box-shadow: 0 0 8px
+        color-mix(in srgb, var(--emblema2) 20%, transparent);
+}
+
+/* BOTONES Y ENLACES DE ACCIÓN */
+body:has(#cp-main) #cp-main a.button1,
+body:has(#cp-main) #cp-main a.button2,
+body:has(#cp-main) #cp-main input[type="submit"],
+body:has(#cp-main) #cp-main input[type="button"] {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    margin: 3px 4px 3px 0 !important;
+    padding: 7px 12px !important;
+    box-sizing: border-box;
+
+    appearance: none !important;
+
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    ) !important;
+
+    border: 1px solid var(--emblema2) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease,
+        color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+/* HOVER */
+body:has(#cp-main) #cp-main a.button1:hover,
+body:has(#cp-main) #cp-main a.button2:hover,
+body:has(#cp-main) #cp-main input[type="submit"]:hover,
+body:has(#cp-main) #cp-main input[type="button"]:hover {
+    background: color-mix(
+        in srgb, var(--emblema2) 18%, var(--theme-panel-deep)
+    ) !important;
+    border-color: var(--emblema1) !important;
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 9px
+        color-mix(in srgb, var(--emblema2) 18%, transparent);
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 650px) {
+    body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 8px;
+    }
+
+    body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) dd input[type="text"] {
+        width: min(260px, 100%) !important;
+    }
+}
