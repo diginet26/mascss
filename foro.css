@@ -19750,3 +19750,175 @@ body:has(#cp-main .cp_notifs)
         color-mix(in srgb, var(--emblema2) 18%, transparent);
     transform: translateY(-1px);
 }
+
+/* =========================================================
+   DIGITAL RIFT — EDITOR DE PERFIL
+   TEMAS SUPERVISADOS
+   ========================================================= */
+
+/* PANEL QUE CONTIENE LA TABLA */
+body:has(#cp-main) #cp-main .panel:has(table) {
+    background: linear-gradient(
+        115deg,
+        color-mix(
+            in srgb,
+            var(--theme-panel-alt) 90%,
+            var(--emblema2) 10%
+        ),
+        color-mix(
+            in srgb,
+            var(--theme-panel-deep) 94%,
+            var(--emblema1) 6%
+        )
+    ) !important;
+
+    border: 1px solid var(--theme-border) !important;
+    border-left: 3px solid var(--emblema2) !important;
+    border-radius: 3px !important;
+
+    box-shadow:
+        inset 0 1px 0
+            color-mix(in srgb, var(--emblema2) 12%, transparent),
+        0 10px 28px rgba(0, 0, 0, .12) !important;
+
+    box-sizing: border-box;
+}
+
+/* INTERIORES TRANSPARENTES */
+body:has(#cp-main) #cp-main .panel:has(table) > .inner,
+body:has(#cp-main) #cp-main .panel:has(table) fieldset {
+    background: transparent !important;
+}
+
+/* TABLA NATIVA */
+body:has(#cp-main) #cp-main table {
+    width: 100%;
+    border-collapse: collapse !important;
+    background: transparent !important;
+    color: var(--theme-text) !important;
+}
+
+/* CABECERAS DE LAS COLUMNAS */
+body:has(#cp-main) #cp-main table thead th {
+    padding: 11px 9px !important;
+
+    background: color-mix(
+        in srgb,
+        var(--emblema2) 7%,
+        var(--theme-panel-deep)
+    ) !important;
+
+    border-bottom: 1px solid var(--emblema2) !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* CELDAS Y SEPARADORES */
+body:has(#cp-main) #cp-main table tbody td {
+    padding: 9px 8px !important;
+
+    background: transparent !important;
+    border-bottom: 1px solid
+        color-mix(in srgb, var(--theme-border) 65%, transparent) !important;
+
+    color: var(--theme-text) !important;
+    font-size: 11px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+/* HOVER DE LAS FILAS */
+body:has(#cp-main) #cp-main table tbody tr:hover td {
+    background: color-mix(
+        in srgb,
+        var(--emblema2) 5%,
+        transparent
+    ) !important;
+}
+
+/* ENLACES A LOS TEMAS Y FOROS */
+body:has(#cp-main) #cp-main table td a {
+    color: var(--theme-text) !important;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+body:has(#cp-main) #cp-main table td a:hover {
+    color: var(--emblema2) !important;
+}
+
+/* CASILLAS DE SELECCIÓN */
+body:has(#cp-main) #cp-main table input[type="checkbox"] {
+    accent-color: var(--emblema2);
+    cursor: pointer;
+}
+
+/* BOTONES DE ACCIÓN */
+body:has(#cp-main) #cp-main .submit-buttons input.button1,
+body:has(#cp-main) #cp-main .submit-buttons input.button2 {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    margin: 3px !important;
+    padding: 8px 14px !important;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    ) !important;
+
+    border: 1px solid var(--emblema2) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+/* HOVER DE LOS BOTONES */
+body:has(#cp-main) #cp-main .submit-buttons input.button1:hover,
+body:has(#cp-main) #cp-main .submit-buttons input.button2:hover {
+    background: color-mix(
+        in srgb, var(--emblema2) 18%, var(--theme-panel-deep)
+    ) !important;
+
+    border-color: var(--emblema1) !important;
+    color: var(--emblema2) !important;
+
+    box-shadow: 0 0 10px
+        color-mix(in srgb, var(--emblema2) 18%, transparent);
+
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE: EVITAR QUE LAS COLUMNAS SE APLASTEN */
+@media screen and (max-width: 700px) {
+    body:has(#cp-main) #cp-main .panel:has(table) {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    body:has(#cp-main) #cp-main table {
+        min-width: 650px;
+    }
+}
