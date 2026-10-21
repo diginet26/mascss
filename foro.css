@@ -19584,3 +19584,169 @@ body:has(#cp-main form[name="notif_opts"])
     box-shadow: 0 0 10px
         color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
+
+/* =========================================================
+   DIGITAL RIFT — NOTIFICACIONES
+   LISTADO INFERIOR DE NOTIFICACIONES
+   ========================================================= */
+
+/* PANEL PRINCIPAL DEL LISTADO */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .panel {
+    background-color: var(--theme-panel-deep) !important;
+    background-image: linear-gradient(
+        115deg,
+        color-mix(
+            in srgb,
+            var(--theme-panel-alt) 90%,
+            var(--emblema2) 10%
+        ),
+        color-mix(
+            in srgb,
+            var(--theme-panel-deep) 94%,
+            var(--emblema1) 6%
+        )
+    ) !important;
+
+    border: 1px solid var(--theme-border) !important;
+    border-left: 3px solid var(--emblema2) !important;
+    border-radius: 3px !important;
+
+    box-shadow:
+        inset 0 1px 0
+            color-mix(in srgb, var(--emblema2) 12%, transparent),
+        0 10px 28px rgba(0, 0, 0, .12) !important;
+
+    box-sizing: border-box !important;
+}
+
+/* CONTENEDORES TRANSPARENTES */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .panel > .inner,
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] fieldset {
+    background: transparent !important;
+}
+
+/* TABLA DE NOTIFICACIONES */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] table.table1 {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: transparent !important;
+    color: var(--theme-text) !important;
+}
+
+/* CABECERA */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] table.table1 thead th {
+    padding: 10px 12px !important;
+    background: color-mix(
+        in srgb,
+        var(--emblema2) 7%,
+        var(--theme-panel-deep)
+    ) !important;
+    border-bottom: 1px solid var(--theme-border) !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+/* FILAS Y CELDAS */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] table.table1 tbody tr,
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] table.table1 tbody td {
+    background: transparent !important;
+    color: var(--theme-text) !important;
+}
+
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] table.table1 tbody td {
+    padding: 7px 12px !important;
+    border-bottom: 1px solid
+        color-mix(in srgb, var(--theme-border) 65%, transparent) !important;
+    vertical-align: middle;
+}
+
+/* RESALTADO SUAVE AL PASAR POR UNA NOTIFICACIÓN */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] table.table1 tbody tr:hover td {
+    background: color-mix(
+        in srgb, var(--emblema2) 5%, transparent
+    ) !important;
+}
+
+/* CASILLAS PARA SELECCIONAR NOTIFICACIONES */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] input[type="checkbox"] {
+    accent-color: var(--emblema2);
+    cursor: pointer;
+}
+
+/* ENLACES «MARCAR TODOS / DESMARCAR TODOS» */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .right-box a {
+    color: var(--emblema2) !important;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .right-box a:hover {
+    color: var(--emblema1) !important;
+}
+
+/* BOTONES INFERIORES: BORRAR Y BORRAR TODO */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .submit-buttons input.button1,
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .submit-buttons input.button2 {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    margin: 3px !important;
+    padding: 8px 14px !important;
+    box-sizing: border-box;
+
+    appearance: none !important;
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
+        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
+    ) !important;
+
+    border: 1px solid var(--emblema2) !important;
+    border-radius: 4px !important;
+
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: background .2s ease, border-color .2s ease,
+        box-shadow .2s ease, color .2s ease, transform .2s ease;
+}
+
+/* HOVER DE LOS BOTONES */
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .submit-buttons input.button1:hover,
+body:has(#cp-main .cp_notifs)
+#cp-main .cp_notifs form[name="notif_list"] .submit-buttons input.button2:hover {
+    background: color-mix(
+        in srgb, var(--emblema2) 18%, var(--theme-panel-deep)
+    ) !important;
+    border-color: var(--emblema1) !important;
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 10px
+        color-mix(in srgb, var(--emblema2) 18%, transparent);
+    transform: translateY(-1px);
+}
