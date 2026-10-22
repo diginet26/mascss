@@ -2512,9 +2512,7 @@ button[title="Destino"] {
 /* ---------------------------------------------------------
    SWITCHEROO
    --------------------------------------------------------- */
-#switcheroo.digimon-switch-open {
-    display: block !important;
-}
+
 /* ---------------------------------------------------------
    SWITCHEROO — TOOLTIP
    --------------------------------------------------------- */
@@ -3498,9 +3496,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     margin-bottom: 3px;
 }
 
-#rift-recent-content .rift-recent-item > a:hover {
-    color: var(--rift-a3);
-}
+
 
 #rift-recent-content .rift-recent-item {
     font-size: 11px;
@@ -3821,7 +3817,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #rift-staff-grid > a {overflow: hidden;}
 /* Pequeños indicadores en las esquinas */
 #rift-staff-grid > a {--staff-mark: var(--rift-a1);}
-#rift-staff-grid > a:nth-child(even) {--staff-mark: var(--rift-a2);}
+
 
 /* Indicador de estado */
 #rift-staff-grid > a::after {
@@ -6092,12 +6088,8 @@ blockquote blockquote {
     color: var(--text-color);
     font: 10px/1.8 "Poppins", sans-serif;
 }
-.digimon-user-list a {
-    color: var(--linkc1);
-}
-.digimon-user-list a:hover {
-    color: var(--linkc2);
-}
+
+
 
 /* =========================================================
    USUARIO MÁS RECIENTE Y RÉCORD
@@ -7322,10 +7314,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* ---------------------------------------------------------
    ENLACES
    --------------------------------------------------------- */
-.digimon-forum-card:has(.rasymforum) .rforlinks {
-    position: relative;
-    z-index: 7;
-}
+
 
 /* ---------------------------------------------------------
    LOS DOS FOROS DE LA DERECHA
@@ -7358,9 +7347,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     height: 100%;
 }
 
-.digimon-forum-card:has(.rasymforum):hover {
-    transform: none;
-}
+
 /*EVITAR QUE EL HOVER DE LA TARJETA DEFORME   LA COMPOSICIÓN*/
 /* ---------------------------------------------------------
    RESPONSIVE
@@ -7439,10 +7426,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 
 /* El contenedor del foro también debe permitir
    que la imagen sobresalga */
-.digimon-forum-card:has(.rasymforum) .rasymforum {
-    position: relative;
-    overflow: visible !important;
-}
+
 
 /* ---------------------------------------------------------
    NUEVA IMAGEN SUPERPUESTA 
@@ -7469,18 +7453,12 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     z-index: 6;
 }
 
-.digimon-forum-card:has(.rasymforum) .rforlinks {
-    position: relative;
-    z-index: 7;
-}
+
 
 /* ---------------------------------------------------------
    LOS FOROS DE LA DERECHA QUEDAN DEBAJO DE LA IMAGEN
    --------------------------------------------------------- */
-.digimon-forum-card:has(.rasymforum) + .digimon-forum-card, .digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {
-    position: relative;
-    z-index: 2;
-}
+
 
 /* ---------------------------------------------------------
    RESPONSIVE
@@ -7543,10 +7521,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 }
 
 /* Los enlaces permanecen por encima de la imagen */
-.digimon-forum-card:has(.rasymforum) .rforlinks {
-    position: relative;
-    z-index: 7;
-}
+
 
 /* ---------------------------------------------------------
    LOS DOS FOROS DERECHOS
@@ -7856,14 +7831,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
    DIGITAL RIFT — INFORMACIÓN
    DISEÑO 02 — TARJETAS ANGULARES
    ========================================================= */
-#rift-info-row {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.714rem;
-    margin-top: 0.857rem;
-    width: 100%;
-    box-sizing: border-box;
-}
+
 
 /* =========================================================
    TARJETA BASE
@@ -8098,10 +8066,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* =========================================================
    HOVER — IMÁGENES
    ========================================================= */
-.rift-info-card:hover {
-    transform: translateY(-0.214rem);
-    filter:drop-shadow(0 0 0.5rem var(--rift-a1));
-}
+
 
 .rift-info-card:hover img {
     transform: scale(1.07);
@@ -8400,9 +8365,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* =========================================================
    ESTADÍSTICAS REDISEÑO — USUARIOS EN LÍNEA
    ========================================================= */
-.digimon-online-content {
-    padding: 1.429rem;
-}
+
 /* ---------------------------------------------------------
    CABECERA DE USUARIOS
    --------------------------------------------------------- */
@@ -9272,12 +9235,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* ---------------------------------------------------------
    BARRA DE DESPLAZAMIENTO
    --------------------------------------------------------- */
-#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar {
-    width: .3rem;
-}
-#digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-track {
-    background: transparent;
-}
+
+
 #digimon-statistics .digimon-stats-24h-list::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, var(--linkc1), var(--linkc2));
     border-radius: 1rem;
@@ -11325,31 +11284,12 @@ p.right.rightside, p:has(+ h1.page-title) {
 /* =========================================================
    PANEL SUPERIOR
    ========================================================= */
-.topic-actions:has(.search-box) {
-    width: 100%;
-    min-height: 4.5rem;
-    margin: 1.55rem 0 1.5rem !important;
-    padding: 1rem 34rem 1rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: .65rem;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 38%, color-mix(in srgb, var(--emblema1) 7%, transparent)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--emblema2) 2.5%, transparent) 3rem, color-mix(in srgb, var(--emblema2) 2.5%, transparent) 3.05rem), repeating-linear-gradient(0deg, transparent 0, transparent 1rem, color-mix(in srgb, var(--emblema1) 2%, transparent) 1rem, color-mix(in srgb, var(--emblema1) 2%, transparent) 1.05rem), var(--post-background);
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
-    border-radius: .5rem;
-    box-shadow: inset 0 .1rem 0 color-mix(in srgb, var(--emblema2) 45%, transparent), inset 0 0 2rem color-mix(in srgb, var(--emblema1) 5%, transparent);
-}
+
 
 /* =========================================================
    PUBLICAR NUEVO TEMA
    ========================================================= */
-.topic-actions:has(.search-box) .buttons {
-    margin: .25rem 0 0;
-    flex-shrink: 0;
-}
+
 
 .topic-actions:has(.search-box) .post-icon a {
     display: inline-flex !important;
@@ -11399,73 +11339,23 @@ p.right.rightside, p:has(+ h1.page-title) {
 /* =========================================================
    BUSCADOR
    ========================================================= */
-.topic-actions:has(.search-box) .search-box {
-    display: flex;
-    align-items: center;
-    margin: .25rem 0 0;
-}
 
-.topic-actions:has(.search-box) #forum-search {
-    display: flex;
-    align-items: center;
-}
 
-.topic-actions:has(.search-box) #forum-search fieldset {
-    display: flex;
-    align-items: center;
-    gap: .35rem;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 
-.topic-actions:has(.search-box) #search_keywords {
-    width: 11rem;
-    height: 2.2rem;
-    padding: 0 .7rem;
-    box-sizing: border-box;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 35%, transparent);
-    border-radius: .35rem;
-    outline: none;
-    background: color-mix(in srgb, var(--post-background) 90%, transparent);
-    color: var(--text-color);
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .04rem;
-    transition: .25s ease;
-}
 
-.topic-actions:has(.search-box) #search_keywords:focus {
-    border-color: var(--emblema1);
-    box-shadow: 0 0 .7rem color-mix(in srgb, var(--emblema1) 18%, transparent);
-}
 
-.topic-actions:has(.search-box) #search_keywords::placeholder {
-    color: color-mix(in srgb, var(--text-color) 45%, transparent);
-}
 
-.topic-actions:has(.search-box) .button2 {
-    min-height: 2.2rem;
-    padding: 0 .7rem;
-    border: .06rem solid var(--emblema2);
-    border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), transparent);
-    color: var(--text-color);
-    font: 700 .53rem/1 "Oxanium", monospace;
-    letter-spacing: .07rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: .25s ease;
-}
 
-.topic-actions:has(.search-box) .button2:hover {
-    border-color: var(--emblema1);
-    color: var(--emblema2);
-    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 18%, transparent);
-}
 
-.topic-actions:has(.search-box) p.nomargin.path {
-    display: none !important;
-}
+
+
+
+
+
+
+
+
+
 /*OCULTAR MIGAS DE PAN*/
 .topic-actions:has(.search-box) .pagination {
     display: none !important;
@@ -11535,76 +11425,19 @@ p.right.rightside, p:has(+ h1.page-title) {
    VIEWFORUM — ORDENAR / CAMBIAR DE FORO
    ========================================================= */
 
-.action-box {
-    width: 100%;
-    margin: 1rem 0 1.5rem;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.2rem;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 50%, color-mix(in srgb, var(--emblema1) 6%, transparent)), var(--post-background);
-    border: .06rem solid color-mix(in srgb, var(--emblema1) 20%, transparent);
-    border-radius: .5rem;
-    box-shadow: inset 0 0 1.5rem color-mix(in srgb, var(--emblema2) 4%, transparent);
-}
 
-.action-box fieldset {
-    display: flex;
-    align-items: center;
-    gap: .4rem;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 
-.action-box label {
-    color: color-mix(in srgb, var(--text-color) 65%, transparent);
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .07rem;
-    text-transform: uppercase;
-}
 
-.action-box select {
-    min-width: 8rem;
-    height: 2.15rem;
-    padding: 0 .65rem;
-    box-sizing: border-box;
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 30%, transparent);
-    border-radius: .35rem;
-    background: color-mix(in srgb, var(--post-background) 92%, transparent);
-    color: var(--text-color);
-    font: 700 .55rem/1 "Oxanium", monospace;
-    outline: none;
-}
 
-.action-box select:focus {
-    border-color: var(--emblema1);
-    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema1) 15%, transparent);
-}
 
-.action-box .button2 {
-    min-height: 2.15rem;
-    padding: 0 .7rem;
-    border: .06rem solid var(--emblema2);
-    border-radius: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 10%, transparent), transparent);
-    color: var(--text-color);
-    font: 700 .53rem/1 "Oxanium", monospace;
-    letter-spacing: .07rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: .25s ease;
-}
 
-.action-box .button2:hover {
-    border-color: var(--emblema1);
-    color: var(--emblema2);
-    box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 18%, transparent);
-}
+
+
+
+
+
+
+
 
 /* =========================================================
    VIEWFORUM — USUARIOS NAVEGANDO
@@ -11614,28 +11447,11 @@ p.right.rightside, p:has(+ h1.page-title) {
     width: 100%;
 }
 
-#info_open {
-    padding: 1rem 1.2rem;
-    margin: 1rem 0;
-    box-sizing: border-box;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 4%, transparent), color-mix(in srgb, var(--emblema1) 5%, transparent));
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
-    border-radius: .5rem;
-}
 
-#info_open .h3 {
-    margin: 0 0 .4rem;
-    color: var(--emblema2);
-    font: 700 .55rem/1 "Oxanium", monospace;
-    letter-spacing: .12rem;
-    text-transform: uppercase;
-}
 
-#info_open p {
-    margin: 0 0 .8rem;
-    color: var(--text-color);
-    font: 600 .58rem/1.5 "Roboto Mono", monospace;
-}
+
+
+
 
 #info_open p:last-child {
     margin-bottom: 0;
@@ -11667,98 +11483,25 @@ p.right.rightside, p:has(+ h1.page-title) {
    LEYENDA DIGITAL RIFT
    ========================================================= */
 
-#info_open ~ .h3 + .clearfix {
-    width: 100%;
-    margin: 1rem 0 0;
-    padding: 1rem;
-    box-sizing: border-box;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: .7rem;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 4%, transparent), transparent 48%, color-mix(in srgb, var(--emblema1) 6%, transparent)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, color-mix(in srgb, var(--emblema2) 2.5%, transparent) 3rem, color-mix(in srgb, var(--emblema2) 2.5%, transparent) 3.05rem), var(--post-background);
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
-    border-radius: .45rem;
-    box-shadow: inset 0 .08rem 0 color-mix(in srgb, var(--emblema2) 35%, transparent), inset 0 0 1.5rem color-mix(in srgb, var(--emblema1) 4%, transparent);
-}
 
-#info_open ~ .h3 + .clearfix::before {
-    content: "SYSTEM / TOPIC STATUS";
-    position: absolute;
-    top: .35rem;
-    left: .9rem;
-    color: color-mix(in srgb, var(--text-color) 40%, transparent);
-    font: 700 .42rem/1 "Roboto Mono", monospace;
-    letter-spacing: .12rem;
-    text-transform: uppercase;
-}
 
-#info_open ~ .h3 + .clearfix > ul.ul-icons {
-    width: 100%;
-    margin: 0;
-    padding: .9rem 0 0;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: .5rem;
-    list-style: none;
-}
 
-#info_open ~ .h3 + .clearfix > ul.ul-icons li {
-    flex: 1;
-    min-width: 0;
-    min-height: 2.4rem;
-    padding: .5rem .7rem;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .35rem;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, transparent), color-mix(in srgb, var(--emblema1) 5%, transparent));
-    border: .06rem solid color-mix(in srgb, var(--emblema2) 18%, transparent);
-    border-radius: .3rem;
-    color: color-mix(in srgb, var(--text-color) 72%, transparent);
-    font: 700 .5rem/1.35 "Oxanium", monospace;
-    letter-spacing: .05rem;
-    text-transform: uppercase;
-    text-align: center;
-    transition: .25s ease;
-}
 
-#info_open ~ .h3 + .clearfix > ul.ul-icons li:hover {
-    color: var(--text-color);
-    border-color: var(--emblema1);
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 10%, transparent));
-    box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema1) 12%, transparent);
-    transform: translateY(-.04rem);
-}
+
+
+
+
+
 
 #info_open ~ .h3 + .clearfix > ul.ul-icons li img {
     display: none !important;
 }
 
-#info_open ~ .h3 + .clearfix > ul.ul-icons li::before {
-    content: "";
-    width: .42rem;
-    height: .42rem;
-    flex: 0 0 .42rem;
-    border-radius: 50%;
-    background: var(--emblema2);
-    box-shadow: 0 0 .45rem color-mix(in srgb, var(--emblema2) 45%, transparent);
-}
 
-#info_open ~ .h3 + .clearfix > ul.ul-icons:nth-child(2) li::before {
-    background: var(--emblema1);
-    box-shadow: 0 0 .45rem color-mix(in srgb, var(--emblema1) 45%, transparent);
-}
 
-#info_open ~ .h3 + .clearfix > ul.ul-icons:nth-child(3) li::before {
-    border-radius: .08rem;
-    background: linear-gradient(135deg, var(--emblema2), var(--emblema1));
-    box-shadow: 0 0 .45rem color-mix(in srgb, var(--emblema2) 35%, transparent);
-}
+
+
+
 
 /* =========================================================
    IMAGEN PERSONALIZADA DEL FORO
@@ -11766,49 +11509,14 @@ p.right.rightside, p:has(+ h1.page-title) {
 .digimon-forum-card:has(.digimon-forum-custom-image) {
     overflow: visible;
 }
-.digimon-forum-custom-image {
-    position: absolute;
-    top: -3.5rem;
-    right: 1rem;
-    z-index: 10;
-    width: 9rem;
-    height: 7rem;
-    object-fit: contain;
-    pointer-events: none;
-}
-.digimon-forum-image-registros {
-    top: -6rem;
-    right: 0.5rem;
-    width: 16rem;
-    height: 8rem;
-    transform: rotate(30deg);
-}
-.digimon-forum-image-ambientación {
-    position: absolute;
-    top: -5.5rem;
-    right: 1rem;
-    z-index: 10;
-    width: 9rem;
-    height: 10rem;
-    object-fit: contain;
-    pointer-events: none;
-}
+
+
+
 
 /* =========================================================
    VIEWFORUM — FONDO DE SECCIONES
    ========================================================= */
-.forumbg.announcement, .forumbg:not(.announcement) {
-    width: 100%;
-    margin: 0 0 1.5rem;
-    padding: 1rem;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--accent1) 3%, transparent), transparent 45%, color-mix(in srgb, var(--accent2) 4%, transparent)), var(--post-background);
-    border: .06rem solid color-mix(in srgb, var(--text-color) 8%, transparent);
-    border-radius: .5rem;
-    box-shadow: inset 0 0 2rem rgba(255,255,255,.02);
-}
+
 
 /* =========================================================
    DIGITAL RIFT — SKIN CLARA
@@ -11816,19 +11524,12 @@ p.right.rightside, p:has(+ h1.page-title) {
 
    CATEGORÍA
    ========================================================= */
-body.light-mode .digimon-category {
-    background:linear-gradient(135deg, var(--theme-panel-alt), var(--theme-panel));
-    border-color: var(--theme-border);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--theme-text) 4%, transparent), 0 15px 35px color-mix(in srgb, var(--theme-text) 10%, transparent);
-}
+
 
 /* =========================================================
    CABECERA DE CATEGORÍA
    ========================================================= */
-body.light-mode .digimon-category-header {
-    background: linear-gradient(100deg, var(--theme-panel-alt), var(--theme-panel));
-    border-color: var(--theme-border);
-}
+
 
 body.light-mode .digimon-category-label {
     color: var(--theme-text-muted);
@@ -11846,35 +11547,18 @@ body.light-mode .digimon-category-line {
 /* =========================================================
    TARJETAS DE FORO
    ========================================================= */
-body.light-mode .digimon-forum-card {
-    background: linear-gradient(135deg, var(--theme-panel), var(--theme-panel-alt));
-    border: 1px solid var(--emblema2) !important;
-    box-shadow: 0 8px 25px color-mix(in srgb, var(--theme-text) 10%, transparent);
-}
 
-body.light-mode .digimon-forum-card:hover {
-    border-color: var(--linkc1);
-    box-shadow: 0 12px 35px color-mix(in srgb, var(--theme-text) 14%, transparent), 0 0 20px color-mix(in srgb, var(--linkc1) 10%, transparent);
-}
+
+
 
 /* =========================================================
    CABECERA DEL FORO
    ========================================================= */
-body.light-mode .digimon-forum-heading {
-    background: var(--theme-panel-alt);
-    border-bottom-color: var(--theme-border);
-}
 
-body.light-mode .digimon-forum-number {
-    background: var(--theme-panel);
-    border-color: var(--theme-border);
-    color: var(--emblema2);
-}
 
-body.light-mode .digimon-forum-name a.forumtitle {
-    color: var(--theme-text) !important;
-    text-shadow: none !important;
-}
+
+
+
 
 body.light-mode .digimon-forum-name a.forumtitle:hover {
     color: var(--linkc1) !important;
@@ -11890,289 +11574,132 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
 /* =========================================================
    IMAGEN DE LOS FOROS
    ========================================================= */
-body.light-mode .digimon-forum-description .rforimg {
-    opacity: .80;
-    filter: saturate(.95);
-}
+
 
 /* =========================================================
    VELO SOBRE LA IMAGEN
    ========================================================= */
-body.light-mode .digimon-forum-description .rforimg::after {
-    background:linear-gradient(180deg, color-mix(in srgb, var(--theme-panel) 5%, transparent) 0%, transparent 45%, color-mix(in srgb, var(--theme-panel) 82%, transparent) 100%);
-}
+
 
 /* =========================================================
    COLOR DIGITAL SOBRE LA IMAGEN
    Conservamos emblema1 / emblema2 intactos
    ========================================================= */
-body.light-mode .digimon-forum-description .rforimg::before {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema1) 22%, transparent), transparent 65%, color-mix(in srgb, var(--emblema2) 16%, transparent));
-    opacity: .65;
-}
+
 
 /* =========================================================
    DESCRIPCIÓN — SINGLE
    ========================================================= */
-body.light-mode .digimon-forum-card:has(.rsingleforum) .rfordesc {
-    background: linear-gradient(87deg, transparent 0%, color-mix(in srgb, var(--theme-panel) 92%, transparent) 72%);
-    color: var(--theme-text) !important;
-}
+
 
 /* =========================================================
    DESCRIPCIÓN — DOUBLE / TRIPLE
    ========================================================= */
-body.light-mode .digimon-forum-card:has(.rdoubleforum) .rfordesc, body.light-mode .digimon-forum-card:has(.rtripleforum) .rfordesc {
-    background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--theme-panel) 94%, transparent) 68%, var(--theme-panel) 100%);
-    color: var(--theme-text) !important;
-}
+
 
 /* =========================================================
    TEXTO INTERNO
    ========================================================= */
-body.light-mode .digimon-forum-description .rfordesc, body.light-mode .digimon-forum-description .rfordesc2 {
-    color: var(--theme-text) !important;
-}
+
 /* =========================================================
    ENLACES
    ========================================================= */
-body.light-mode .digimon-forum-description .rforlinks a {
-    background: var(--linkc3);
-    color: var(--theme-text) !important;
-    border-color: var(--theme-border);
-}
 
-body.light-mode .digimon-forum-description .rforlinks a:hover {
-    color: var(--theme-panel) !important;
-}
+
+
 
 /* =========================================================
    INFORMACIÓN INFERIOR
    ========================================================= */
-body.light-mode .digimon-forum-bottom {
-    background: var(--theme-border);
-    border-top-color: var(--theme-border);
-}
 
-body.light-mode .digimon-forum-stat, body.light-mode .digimon-forum-lastpost {
-    background: var(--theme-panel-alt);
-}
+
+
 
 /* =========================================================
    ESTADÍSTICAS
    ========================================================= */
-body.light-mode .digimon-forum-stat strong {
-    color: var(--theme-text) !important;
-}
-body.light-mode .digimon-forum-stat small {
-    color: var(--theme-text-muted) !important;
-}
-body.light-mode .digimon-stat-icon {
-    color: var(--emblema2);
-}
+
+
+
 
 /* =========================================================
    ÚLTIMO MENSAJE
    ========================================================= */
-body.light-mode .digimon-lastpost-label, body.light-mode .digimon-lastpost-user {
-    color: var(--theme-text-muted) !important;
-}
-body.light-mode .digimon-lastpost-info > a {
-    color: var(--theme-text) !important;
-}
-body.light-mode .digimon-lastpost-info > a:hover {
-    color: var(--linkc1) !important;
-}
-body.light-mode .digimon-forum-number {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
 
-body.light-mode .digimon-forum-number i {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
+
+
+
+
+
 
 /* =========================================================
    ESTADÍSTICAS — SKIN CLARA  SOLO COLORES
    ========================================================= */
 
-body.light-mode #digimon-statistics {
-    --stats-border: var(--theme-border);
-    --stats-muted: color-mix(in srgb, var(--theme-text) 80%, var(--theme-text-muted));
-    --stats-panel: linear-gradient(135deg, var(--theme-panel-alt), var(--theme-panel));
-    --stats-gradient: linear-gradient(120deg, var(--linkc1), var(--linkc2));
-    background: linear-gradient(135deg, var(--theme-panel-deep), var(--theme-panel));
-    border-color: var(--theme-border);
-    box-shadow: 0 15px 50px rgba(0,0,0,.12);
-}
 
-body.light-mode #digimon-statistics .digimon-stats-heading h2, body.light-mode #digimon-statistics .digimon-online-data strong,
-body.light-mode #digimon-statistics .digimon-newest-user h3, body.light-mode #digimon-statistics .digimon-record-users h3, body.light-mode #digimon-statistics .digimon-groups-header h3,
-body.light-mode #digimon-statistics .digimon-groups-list, body.light-mode #digimon-statistics .digimon-stats-24h-list,
-body.light-mode #digimon-statistics .digimon-online-title strong, body.light-mode #digimon-statistics .digimon-24h-members-data > strong,
-body.light-mode #digimon-statistics .digimon-stats-welcome-content h3 {
-    color: var(--theme-text) !important;
-}
 
-body.light-mode #digimon-statistics .digimon-stats-heading p, body.light-mode #digimon-statistics .digimon-stats-status, body.light-mode #digimon-statistics .digimon-stats-24h-heading p,
-body.light-mode #digimon-statistics .digimon-stats-online-detail .digimon-data-name, body.light-mode #digimon-statistics .digimon-counter-data small,
-body.light-mode #digimon-statistics .digimon-newest-user p, body.light-mode #digimon-statistics .digimon-record-users p,
-body.light-mode #digimon-statistics .digimon-stats-online-info, body.light-mode #digimon-statistics .digimon-stats-online-info small,
-body.light-mode #digimon-statistics .digimon-stats-welcome-content p, body.light-mode #digimon-statistics .digimon-stats-version,
-body.light-mode #digimon-statistics .digimon-online-title span, body.light-mode #digimon-statistics .digimon-24h-members-data {
-    color: var(--stats-muted) !important;
-    opacity: 1 !important;
-}
 
-body.light-mode #digimon-statistics .digimon-counter-data strong {
-    color: var(--theme-text) !important;
-}
-body.light-mode #digimon-statistics .digimon-stats-online-detail strong {
-    color: var(--linkc1) !important;
-}
-body.light-mode #digimon-statistics .digimon-stats-welcome-content h3,
-body.light-mode #digimon-statistics .digimon-stats-welcome-content p {
-    text-shadow: 0 1px 2px rgba(255,255,255,.35);
-}
 
-body.light-mode #digimon-statistics .digimon-stats-status, body.light-mode #digimon-statistics .digimon-stats-welcome, body.light-mode #digimon-statistics .digimon-stats-24h, body.light-mode #digimon-statistics .digimon-counter,
-body.light-mode #digimon-statistics .digimon-newest-user, body.light-mode #digimon-statistics .digimon-record-users, body.light-mode #digimon-statistics .digimon-groups {
-    border-color: var(--theme-border);
-}
 
-body.light-mode #digimon-statistics .digimon-stats-image::after {
-    background: linear-gradient(180deg, transparent 15%, var(--theme-panel) 100%);
-}
 
-body.light-mode #digimon-statistics .digimon-online, body.light-mode #digimon-statistics .digimon-online-content, body.light-mode #digimon-statistics .digimon-stats-24h-content {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--theme-text) 2%, transparent) 0%, transparent 18%, transparent 82%, color-mix(in srgb, var(--theme-text) 2%, transparent) 100%), linear-gradient(color-mix(in srgb, var(--theme-text) 3%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--theme-text) 3%, transparent) 1px, transparent 1px) !important;
-    background-size: 100% 100%, 2rem 2rem, 2rem 2rem !important;
-    background-position: 0 0, 0 0, 0 0 !important;
-}
 
-body.light-mode #digimon-statistics .digimon-online-data > div {
-    background: var(--theme-panel-alt);
-    border-color: var(--theme-border);
-}
 
-body.light-mode #digimon-statistics .digimon-online-data > div:hover {
-    background: var(--theme-panel);
-    border-color: var(--linkc1);
-}
 
-body.light-mode #digimon-statistics .digimon-counter-icon {
-    background: var(--theme-panel-deep);
-    color: var(--linkc1);
-}
 
-body.light-mode #digimon-statistics .digimon-bottom-icon {
-    color: var(--theme-panel);
-}
 
-body.light-mode #digimon-statistics .digimon-stats-24h-list a {
-    background: var(--theme-panel-alt);
-    border-color: var(--theme-border);
-    color: var(--theme-text);
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-    color: var(--theme-text) !important;
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--theme-border) 45%, transparent);
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a:hover {
-    background: var(--theme-panel) !important;
-    border-color: var(--linkc1) !important;
-}
 
-body.light-mode #digimon-statistics .digimon-stats-quick-links > a {
-    background: var(--theme-panel-alt) !important;
-    border-color: var(--theme-border) !important;
-}
 
-body.light-mode #digimon-statistics .digimon-stats-quick-links > a:hover {
-    background: var(--theme-panel) !important;
-}
-body.light-mode #digimon-statistics .digimon-groups-list a {
-    background: color-mix(in srgb, var(--theme-panel-alt) 85%, transparent);
-}
-body.light-mode #digimon-statistics .digimon-groups-list a:hover {
-    background: var(--theme-panel);
-}
-body.light-mode #digimon-statistics .digimon-stats-24h-members-icon .fa-users {
-    color: var(--linkc1) !important;
-}
 
-body.light-mode #digimon-statistics .digimon-stats-24h-content::before {
-    background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--theme-text) 2%, transparent) 50%, transparent 100%);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================
    AJUSTE FINAL DE LEGIBILIDAD
    ========================================================= */
 
-body.light-mode #digimon-statistics .digimon-stats-online-info * {
-    color: var(--theme-text) !important;
-    opacity: 1 !important;
-}
-body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
-    color: var(--theme-text) !important;
-    opacity: 1 !important;
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a {
-    background: var(--theme-panel-deep) !important;
-    border-color: color-mix(in srgb, var(--emblema2) 35%, var(--theme-border)) !important;
-    color: var(--theme-text) !important;
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--theme-border) 35%, transparent);
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a::before {
-    background: var(--linkc1);
-    box-shadow: 0 0 .5rem var(--linkc1);
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a:hover {
-    background: var(--theme-panel) !important;
-    border-color: var(--emblema2) !important;
-}
+
+
+
+
+
 /* =========================================================
    ESTADÍSTICAS — USUARIOS Y CONEXIONES
    ========================================================= */
 
-body.light-mode #digimon-statistics .digimon-online-total {
-    color: var(--theme-text) !important;
-    opacity: 1 !important;
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a {
-    background: var(--theme-panel-deep) !important;
-    border: 1px solid var(--emblema2) !important;
-    color: var(--theme-text) !important;
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--emblema2) 20%, transparent);
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a::before {
-    background: var(--linkc1);
-    box-shadow: 0 0 .5rem var(--linkc1);
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a:hover {
-    background: var(--theme-panel) !important;
-    border-color: var(--emblema2) !important;
-}
 
-body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
-    color: var(--theme-text) !important;
-    opacity: 1 !important;
-}
-body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
-    color: var(--linkc1) !important;
-}
+
+
+
+
+
+
 
 .forum-top-actions a:empty, .forum-top-actions span:empty, .forum-top-actions div:empty {
     display: none !important;
@@ -13246,10 +12773,7 @@ body.light-mode #digimon-statistics .digimon-stats-online-info * {
     color: var(--theme-text) !important;
     opacity: 1 !important;
 }
-body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
-    color: var(--theme-text) !important;
-    opacity: 1 !important;
-}
+
 
 body.light-mode #digimon-statistics .digimon-user-list a {
     background: var(--theme-panel-deep) !important;
@@ -13258,15 +12782,9 @@ body.light-mode #digimon-statistics .digimon-user-list a {
     box-shadow: 0 0 0 1px color-mix(in srgb, var(--theme-border) 35%, transparent);
 }
 
-body.light-mode #digimon-statistics .digimon-user-list a::before {
-    background: var(--linkc1);
-    box-shadow: 0 0 .5rem var(--linkc1);
-}
 
-body.light-mode #digimon-statistics .digimon-user-list a:hover {
-    background: var(--theme-panel) !important;
-    border-color: var(--emblema2) !important;
-}
+
+
 /* =========================================================
    ESTADÍSTICAS — USUARIOS Y CONEXIONES
    ========================================================= */
@@ -13651,18 +13169,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 .dr-topic-actions li a > * {
     display: none !important;
 }
-.dr-topic-actions li:nth-child(3) a::before {
-    content: "CITAR";
-}
-.dr-topic-actions li:nth-child(4) a::before {
-    content: "EDITAR";
-}
-.dr-topic-actions li:nth-child(5) a::before {
-    content: "BORRAR";
-}
-.dr-topic-actions li:nth-child(6) a::before {
-    content: "IP";
-}
+
+
+
+
 
 .dr-topic-actions li a::before {
     color: var(--text-color);
@@ -13670,9 +13180,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     letter-spacing: .05rem;
 }
 
-.dr-topic-actions li a:hover::before {
-    color: var(--emblema2);
-}
+
 
 .dr-topic-actions li a:hover {
     border-color: var(--dr-group-color, var(--emblema2)) !important;
