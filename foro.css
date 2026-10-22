@@ -12773,14 +12773,10 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     white-space: nowrap;
     margin-left: -15px;
 }
-.topic-actions > .pagination {
-    display: none !important;
-}
-/*elimina la primera paginacion*/
+.topic-actions > .pagination {display: none !important;}/*elimina la primera paginacion*/
 /* =========================================================
    ACCIONES DEL POST
    ========================================================= */
-
 .dr-topic-actions {
     margin: 0 !important;
     padding: 0 !important;
@@ -12806,10 +12802,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     list-style: none !important;
 }
 
-.dr-topic-actions li:nth-child(1), .dr-topic-actions li:nth-child(2), .dr-topic-actions li:nth-child(7) {
-    display: none !important;
-}
-
+.dr-topic-actions li:nth-child(1), .dr-topic-actions li:nth-child(2), .dr-topic-actions li:nth-child(7) {display: none !important;}
 .dr-topic-actions li a {
     display: inline-flex !important;
     align-items: center;
@@ -12832,18 +12825,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transition: .2s ease;
 }
 
-/* Elimina cualquier contenido nativo interno de ForoActivo */
-.dr-topic-actions li a > * {
-    display: none !important;
-}
-
-
+.dr-topic-actions li a > * {display: none !important;}/* Elimina cualquier contenido nativo interno de ForoActivo */
 .dr-topic-actions li a::before {
     color: var(--text-color);
     font: 700 .42rem/1 "Oxanium", sans-serif;
     letter-spacing: .05rem;
 }
-
 
 .dr-topic-actions li a:hover {
     border-color: var(--dr-group-color, var(--emblema2)) !important;
@@ -12851,37 +12838,21 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 20%,transparent);
 }
 
-.dr-topic-actions li a img {
-    display: none !important;
-}
-.dr-topic-actions li:nth-child(3) a::before {
-    content: "CITAR";
-}
-.dr-topic-actions li:nth-child(4) a::before {
-    content: "EDITAR";
-}
-.dr-topic-actions li:nth-child(5) a::before {
-    content: "BORRAR";
-}
-.dr-topic-actions li:nth-child(6) a::before {
-    content: "IP";
-}
-
+.dr-topic-actions li a img {display: none !important;}
+.dr-topic-actions li:nth-child(3) a::before {content: "CITAR";}
+.dr-topic-actions li:nth-child(4) a::before {content: "EDITAR";}
+.dr-topic-actions li:nth-child(5) a::before {content: "BORRAR";}
+.dr-topic-actions li:nth-child(6) a::before {content: "IP";}
 .dr-topic-actions li a::before {
     color: var(--text-color);
     font: 700 .45rem/1 "Oxanium", sans-serif;
     letter-spacing: .06rem;
 }
 
-.dr-topic-actions li a:hover::before {
-    color: var(--emblema2);
-}
-
+.dr-topic-actions li a:hover::before {color: var(--emblema2);}
 /* =========================================================
-   CUERPO DEL POST
-   PREPARADO PARA AVATAR + MENSAJE
+   CUERPO DEL POST   PREPARADO PARA AVATAR + MENSAJE
    ========================================================= */
-
 .dr-topic-post .rpostcontainer {
     width: 100% !important;
     min-width: 0;
@@ -12906,45 +12877,25 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     box-sizing: border-box;
 }
 
-/* El título y fecha antiguos ya no forman parte del diseño */
-.dr-topic-post .topic-title,
-.dr-topic-post .author {
-    display: none !important;
-}
-
-/* Banco técnico de campos */
-.dr-profile-fields {
-    display: none !important;
-}
-
+.dr-topic-post .topic-title, .dr-topic-post .author {display: none !important;}/* El título y fecha antiguos ya no forman parte del diseño */
+.dr-profile-fields {display: none !important;}/* Banco técnico de campos */
 /* =========================================================
    RESPONSIVE — CABECERA
    ========================================================= */
 
 @media (max-width: 700px) {
-
     .dr-topic-header {
     grid-template-columns: minmax(0,1fr) 7rem;
     grid-template-rows: 6rem 4rem;
 }
-
     .dr-topic-digimon {
     width: 7rem;
     height: 10rem;
     min-width: 7rem;
 }
-
-    .dr-topic-username {
-    font-size: 1.8rem;
-}
-
-    .dr-topic-stats {
-    gap: .3rem .6rem;
-}
-
-    .dr-topic-actions li a {
-    min-width: 3.1rem;
-}
+    .dr-topic-username {font-size: 1.8rem;}
+    .dr-topic-stats {gap: .3rem .6rem;}
+    .dr-topic-actions li a {min-width: 3.1rem;}
 }
 
 /* =========================================================
@@ -13007,7 +12958,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     inset: .42rem;
     z-index: 3;
     pointer-events: none;
-    /*border: .07rem solid var(--dr-group-color, var(--emblema2));*/
     box-shadow: inset 0 0 0 .05rem var(--dr-group-color, var(--emblema2)), 0 0 .45rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 15%, transparent);
 }
 
@@ -13031,7 +12981,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     object-fit: cover;
 }
 
-
 /* =========================================================
    ICONOS DEL PERSONAJE
    ========================================================= */
@@ -13045,7 +12994,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     border: .06rem solid color-mix(in srgb, var(--emblema1) 45%, transparent);
     background: var(--theme-panel-deep);
 }
-
 
 .dr-post-icon {
     position: relative;
@@ -13061,9 +13009,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transition: background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
-.dr-post-icon:last-child {
-    border-right: 0;
-}
+.dr-post-icon:last-child {border-right: 0;}
 .dr-post-icon:hover {
     color: var(--emblema2);
     background: color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep));
@@ -13083,13 +13029,9 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-decoration: none !important;
 }
 
-.dr-post-icon img {
-    display: none !important;
-}
-
+.dr-post-icon img {display: none !important;}
 /* =========================================================
-   ICONOS — NORMALIZACIÓN VISUAL
-   MP conserva el icono nativo de ForoActivo y su tooltip.
+   ICONOS — NORMALIZACIÓN VISUAL   MP conserva el icono nativo de ForoActivo y su tooltip.
    ========================================================= */
 .dr-post-link::before {
     display: block !important;
@@ -13099,13 +13041,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     line-height: 1;
 }
 
-.dr-post-link[data-profile-field="expediente"]::before {
-    content: "\f07b" !important;
-}
-.dr-post-link[data-profile-field="cronologia"]::before {
-    content: "\f017" !important;
-}
-
+.dr-post-link[data-profile-field="expediente"]::before {content: "\f07b" !important;}
+.dr-post-link[data-profile-field="cronologia"]::before {content: "\f017" !important;}
 .dr-post-profile-link::before {
     position: relative;
     z-index: 1;
@@ -13123,12 +13060,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     color: color-mix(in srgb, var(--emblema1) 72%, var(--text-color));
 }
 
-.dr-post-profile-link[data-profile-field="expediente"]::before {
-    content: "\f07b" !important;
-}
-.dr-post-profile-link[data-profile-field="cronologia"]::before {
-    content: "\f017" !important;
-}
+.dr-post-profile-link[data-profile-field="expediente"]::before {content: "\f07b" !important;}
+.dr-post-profile-link[data-profile-field="cronologia"]::before {content: "\f017" !important;}
 
 /* Enlace nativo de MP */
 .dr-post-pm > a {
@@ -13159,23 +13092,13 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-align: center;
 }
 
-.dr-post-pm > a img {
-    display: none !important;
-}
-
-
-.dr-post-profile-link[data-profile-field="baul"]::before {
-    content: "\f466" !important;
-}
-
-.dr-post-profile-link[data-profile-field="digivice"]::before {
-    content: "\f10b" !important;
-}
-
-
+.dr-post-pm > a img {display: none !important;}
+.dr-post-profile-link[data-profile-field="baul"]::before {content: "\f466" !important;}
+.dr-post-profile-link[data-profile-field="digivice"]::before {content: "\f10b" !important;}
 /* =========================================================
    MENSAJE — CUERPO A ALTURA COMPLETA
    ========================================================= */
+
 .dr-post-main {
     display: flex;
     flex-direction: column;
@@ -13183,7 +13106,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     min-width: 0;
     min-height: 0;
     width: 100%;
-    background: var(--theme-text-dark);
+    background: var(--colorfondo4);
 }
 
 .dr-post-main .postbody {
@@ -13194,7 +13117,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     margin: 0 !important;
     float: none !important;
     box-sizing: border-box;
-    background: var(--theme-text-dark) !important;
+    background: var(--colorfondo4) !important;
 }
 
 .dr-post-main .postbody .content {
