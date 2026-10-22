@@ -18808,44 +18808,19 @@ body:has(#cp-main .cp_notifs)
 }
 
 /* =========================================================
-   DIGITAL RIFT — EDITOR DE PERFIL
-   TEMAS SUPERVISADOS
+   DIGITAL RIFT — EDITOR DE PERFIL   TEMAS SUPERVISADOS
    ========================================================= */
-
 /* PANEL QUE CONTIENE LA TABLA */
 body:has(#cp-main) #cp-main .panel:has(table) {
-    background: linear-gradient(
-        115deg,
-        color-mix(
-            in srgb,
-            var(--theme-panel-alt) 90%,
-            var(--emblema2) 10%
-        ),
-        color-mix(
-            in srgb,
-            var(--theme-panel-deep) 94%,
-            var(--emblema1) 6%
-        )
-    ) !important;
-
+    background: linear-gradient(115deg, color-mix(in srgb, var(--theme-panel-alt) 90%, var(--emblema2) 10%), color-mix(in srgb, var(--theme-panel-deep) 94%, var(--emblema1) 6%)) !important;
     border: 1px solid var(--theme-border) !important;
     border-left: 3px solid var(--emblema2) !important;
     border-radius: 3px !important;
-
-    box-shadow:
-        inset 0 1px 0
-            color-mix(in srgb, var(--emblema2) 12%, transparent),
-        0 10px 28px rgba(0, 0, 0, .12) !important;
-
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--emblema2) 12%, transparent), 0 10px 28px rgba(0, 0, 0, .12) !important;
     box-sizing: border-box;
 }
 
-/* INTERIORES TRANSPARENTES */
-body:has(#cp-main) #cp-main .panel:has(table) > .inner,
-body:has(#cp-main) #cp-main .panel:has(table) fieldset {
-    background: transparent !important;
-}
-
+body:has(#cp-main) #cp-main .panel:has(table) > .inner, body:has(#cp-main) #cp-main .panel:has(table) fieldset {background: transparent !important;}/* INTERIORES TRANSPARENTES */
 /* TABLA NATIVA */
 body:has(#cp-main) #cp-main table {
     width: 100%;
@@ -18857,15 +18832,8 @@ body:has(#cp-main) #cp-main table {
 /* CABECERAS DE LAS COLUMNAS */
 body:has(#cp-main) #cp-main table thead th {
     padding: 11px 9px !important;
-
-    background: color-mix(
-        in srgb,
-        var(--emblema2) 7%,
-        var(--theme-panel-deep)
-    ) !important;
-
+    background: color-mix(in srgb, var(--emblema2) 7%, var(--theme-panel-deep)) !important;
     border-bottom: 1px solid var(--emblema2) !important;
-
     color: var(--theme-text) !important;
     font-family: "Oxanium", sans-serif !important;
     font-size: 10px !important;
@@ -18878,26 +18846,15 @@ body:has(#cp-main) #cp-main table thead th {
 /* CELDAS Y SEPARADORES */
 body:has(#cp-main) #cp-main table tbody td {
     padding: 9px 8px !important;
-
     background: transparent !important;
-    border-bottom: 1px solid
-        color-mix(in srgb, var(--theme-border) 65%, transparent) !important;
-
+    border-bottom: 1px solid color-mix(in srgb, var(--theme-border) 65%, transparent) !important;
     color: var(--theme-text) !important;
     font-size: 11px;
     line-height: 1.5;
     vertical-align: middle;
 }
 
-/* HOVER DE LAS FILAS */
-body:has(#cp-main) #cp-main table tbody tr:hover td {
-    background: color-mix(
-        in srgb,
-        var(--emblema2) 5%,
-        transparent
-    ) !important;
-}
-
+body:has(#cp-main) #cp-main table tbody tr:hover td {background: color-mix(in srgb, var(--emblema2) 5%, transparent) !important;}/* HOVER DE LAS FILAS */
 /* ENLACES A LOS TEMAS Y FOROS */
 body:has(#cp-main) #cp-main table td a {
     color: var(--theme-text) !important;
@@ -18905,10 +18862,7 @@ body:has(#cp-main) #cp-main table td a {
     transition: color .2s ease;
 }
 
-body:has(#cp-main) #cp-main table td a:hover {
-    color: var(--emblema2) !important;
-}
-
+body:has(#cp-main) #cp-main table td a:hover {color: var(--emblema2) !important;}
 /* CASILLAS DE SELECCIÓN */
 body:has(#cp-main) #cp-main table input[type="checkbox"] {
     accent-color: var(--emblema2);
@@ -18916,8 +18870,7 @@ body:has(#cp-main) #cp-main table input[type="checkbox"] {
 }
 
 /* BOTONES DE ACCIÓN */
-body:has(#cp-main) #cp-main .submit-buttons input.button1,
-body:has(#cp-main) #cp-main .submit-buttons input.button2 {
+body:has(#cp-main) #cp-main .submit-buttons input.button1, body:has(#cp-main) #cp-main .submit-buttons input.button2 {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -18925,16 +18878,9 @@ body:has(#cp-main) #cp-main .submit-buttons input.button2 {
     margin: 3px !important;
     padding: 8px 14px !important;
     box-sizing: border-box;
-
-    background: linear-gradient(
-        135deg,
-        color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)),
-        color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))
-    ) !important;
-
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 13%, var(--theme-panel-deep)), color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel-deep))) !important;
     border: 1px solid var(--emblema2) !important;
     border-radius: 4px !important;
-
     color: var(--theme-text) !important;
     font-family: "Oxanium", sans-serif !important;
     font-size: 10px !important;
@@ -18942,28 +18888,15 @@ body:has(#cp-main) #cp-main .submit-buttons input.button2 {
     letter-spacing: .8px;
     text-transform: uppercase;
     cursor: pointer;
-
-    transition:
-        background .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease,
-        color .2s ease,
-        transform .2s ease;
+    transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, color .2s ease, transform .2s ease;
 }
 
 /* HOVER DE LOS BOTONES */
-body:has(#cp-main) #cp-main .submit-buttons input.button1:hover,
-body:has(#cp-main) #cp-main .submit-buttons input.button2:hover {
-    background: color-mix(
-        in srgb, var(--emblema2) 18%, var(--theme-panel-deep)
-    ) !important;
-
+body:has(#cp-main) #cp-main .submit-buttons input.button1:hover, body:has(#cp-main) #cp-main .submit-buttons input.button2:hover {
+    background: color-mix(in srgb, var(--emblema2) 18%, var(--theme-panel-deep)) !important;
     border-color: var(--emblema1) !important;
     color: var(--emblema2) !important;
-
-    box-shadow: 0 0 10px
-        color-mix(in srgb, var(--emblema2) 18%, transparent);
-
+    box-shadow: 0 0 10px color-mix(in srgb, var(--emblema2) 18%, transparent);
     transform: translateY(-1px);
 }
 
@@ -18973,8 +18906,58 @@ body:has(#cp-main) #cp-main .submit-buttons input.button2:hover {
         max-width: 100%;
         overflow-x: auto;
     }
+    body:has(#cp-main) #cp-main table {min-width: 650px;}
+}
+/* =========================================================
+   DIGITAL RIFT — BOTONES DE CONFIRMACIÓN DEL PERFIL
+   ========================================================= */
+.dr-profile-confirm-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin: 2rem auto 1rem;
+    box-sizing: border-box;
+}
 
-    body:has(#cp-main) #cp-main table {
-        min-width: 650px;
+.dr-profile-confirm-actions .dr-profile-confirm-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 13rem;
+    min-height: 2.8rem;
+    padding: .75rem 1.25rem;
+    box-sizing: border-box;
+    background: var(--theme-panel-deep);
+    color: var(--theme-text) !important;
+    border: 1px solid var(--emblema2);
+    font-family: "Oxanium", sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.dr-profile-confirm-actions .dr-profile-confirm-button:hover {
+    background: var(--emblema2);
+    color: var(--theme-panel-deep) !important;
+    border-color: var(--emblema2);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--emblema2) 35%, transparent);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .dr-profile-confirm-actions {
+        flex-direction: column;
+        gap: .65rem;
+    }
+    .dr-profile-confirm-actions .dr-profile-confirm-button {
+        width: min(100%, 20rem);
+        min-width: 0;
     }
 }
