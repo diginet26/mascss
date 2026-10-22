@@ -2023,7 +2023,7 @@ html {font-size: var(--dr-font-size, 14px);}/*ACCESIBILIDAD — ESCALA BASE*/
     left: 0;
     z-index: 9999999;
     width: 100%;
-    margin: 0 0 14px;
+    margin: 0;
     background: var(--colorfondo);
     border: 1px solid var(--emblema2);
     border-right: none;
