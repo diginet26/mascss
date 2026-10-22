@@ -13174,20 +13174,27 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 
 
 /* =========================================================
-   MENSAJE
+   MENSAJE — CUERPO A ALTURA COMPLETA
    ========================================================= */
 .dr-post-main {
+    display: flex;
+    flex-direction: column;
     align-self: stretch;
     min-width: 0;
+    min-height: 0;
     width: 100%;
     background: var(--theme-text-dark);
 }
 
 .dr-post-main .postbody {
+    flex: 1 1 auto;
     width: 100% !important;
     min-width: 0;
+    min-height: 0 !important;
+    margin: 0 !important;
     float: none !important;
     box-sizing: border-box;
+    background: var(--theme-text-dark) !important;
 }
 
 .dr-post-main .postbody .content {
@@ -13201,57 +13208,35 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
    ========================================================= */
 
 @media (max-width: 850px) {
-
     .dr-post-container {
     grid-template-columns: 13rem minmax(0,1fr);
     gap: 1rem;
     padding: 1rem;
 }
-
-    .dr-post-sidebar {
-    width: 13rem;
-}
-
+    .dr-post-sidebar {width: 13rem;}
     .dr-post-avatar {
     width: 13rem;
     height: 21.67rem;
-}
-}
+}}
 
 @media (max-width: 650px) {
-
-    .dr-post-container {
-    grid-template-columns: 1fr;
-}
-
+    .dr-post-container {grid-template-columns: 1fr;}
     .dr-post-sidebar {
     width: min(21.43rem, 100%);
     margin: 0 auto;
 }
-
     .dr-post-avatar {
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 5;
-}
-}
-/* =========================================================
-   VIEWTOPIC — PERMITIR STICKY DEL PERFIL
-   ========================================================= */
-
-#content-container div#main {
-    overflow: unset !important;
-}
-
-.topic-actions:not(:has(.search-box)) .pagination a[href^="javascript:showhide"] {
-    display: none !important;
-}
-/*oculta mas en temas*/
+}}
+/*VIEWTOPIC — PERMITIR STICKY DEL PERFIL*/
+#content-container div#main {overflow: unset !important;}
+.topic-actions:not(:has(.search-box)) .pagination a[href^="javascript:showhide"] {display: none !important;}/*oculta mas en temas*/
 
 /* =========================================================
    ZONA DERECHA — PARTICIPANTES + PAGINACIÓN
    ========================================================= */
-
 .dr-topic-tools-right {
     margin: 0 0 0 auto;
     display: flex;
@@ -13266,7 +13251,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* =========================================================
    PARTICIPANTES
    ========================================================= */
-
 .dr-topic-tools-right .poster-list.posts-users-list {
     display: flex !important;
     align-items: center;
@@ -13291,14 +13275,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     color: color-mix(in srgb, var(--text-color) 58%, transparent);
 }
 
-.dr-topic-tools-right .pagination br {
-    display: none !important;
-}
-
-.dr-topic-tools-right .pagination .page-sep {
-    display: none !important;
-}
-
+.dr-topic-tools-right .pagination br {display: none !important;}
+.dr-topic-tools-right .pagination .page-sep {display: none !important;}
 .dr-topic-tools-right .pagination > a[href*="Pagination"] {
     display: inline-flex;
     align-items: center;
@@ -13333,8 +13311,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     background: transparent;
 }
 
-.dr-topic-tools-right .pagination > span:not(.page-sep) > a:not(.pag-img),
-.dr-topic-tools-right .pagination > span:not(.page-sep) > strong {
+.dr-topic-tools-right .pagination > span:not(.page-sep) > a:not(.pag-img), .dr-topic-tools-right .pagination > span:not(.page-sep) > strong {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -13381,10 +13358,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transition: .2s ease;
 }
 
-.dr-topic-tools-right .pagination a.pag-img img {
-    display: none !important;
-}
-
+.dr-topic-tools-right .pagination a.pag-img img {display: none !important;}
 .dr-topic-tools-right .pagination a.pag-img::before {
     display: block;
     font-size: .8rem;
@@ -13392,31 +13366,19 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     line-height: 1;
 }
 
-.dr-topic-tools-right .pagination > span:not(.page-sep) > a.pag-img:first-of-type::before {
-    content: "‹";
-}
-
-.dr-topic-tools-right .pagination > span:not(.page-sep) > a.pag-img:last-of-type::before {
-    content: "›";
-}
+.dr-topic-tools-right .pagination > span:not(.page-sep) > a.pag-img:first-of-type::before {content: "‹";}
+.dr-topic-tools-right .pagination > span:not(.page-sep) > a.pag-img:last-of-type::before {content: "›";}
 
 .dr-topic-tools-right .pagination a:hover {
     border-color: var(--emblema2);
     color: var(--emblema2) !important;
     background: color-mix(in srgb, var(--emblema2) 7%, transparent);
 }
-
-.dr-topic-tools-right .pagination > a[href*="Pagination"]:hover {
-    background: color-mix(in srgb, var(--post-background) 75%, transparent);
-}
-
-.dr-topic-tools-right .pagination a[href="#top"] {
-    display: none !important;
-}
+.dr-topic-tools-right .pagination > a[href*="Pagination"]:hover {background: color-mix(in srgb, var(--post-background) 75%, transparent);}
+.dr-topic-tools-right .pagination a[href="#top"] {display: none !important;}
 
 /* =========================================================
-   DIGITAL RIFT — LOGIN DESCONECTADO
-   Solo afecta a los formularios nativos de acceso
+   DIGITAL RIFT — LOGIN DESCONECTADO   Solo afecta a los formularios nativos de acceso
    ========================================================= */
 .user_login_form {
     display: flex !important;
