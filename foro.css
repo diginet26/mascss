@@ -2270,6 +2270,7 @@ button[title="Destino"] {
     height: 55px;
     object-fit: cover;
     display: block;
+    transform: rotate(45deg);
 }
 
 /*SEPARADOR DIGITAL*/
