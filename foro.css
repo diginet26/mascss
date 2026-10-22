@@ -4193,7 +4193,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     height: 100%;
     background-image: var(--banner-image);
     background-size: cover;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: #8c8c8c;
     background-blend-mode: multiply;
