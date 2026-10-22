@@ -2220,16 +2220,12 @@ button[title="Destino"] {
 }
 .digimon-navbar-main {
     z-index: 2;
-}
-.digimon-navbar-sub {
-    z-index: 1;
-}
-.digimon-navbar-main {
     min-height: 70px;
     padding: 0px 14px;
     gap: 12px;
 }
 .digimon-navbar-sub {
+    z-index: 1;
     min-height: 36px;
     padding: 4px 14px;
     border-top: 1px solid var(--emblema2);
@@ -3497,15 +3493,9 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 }
 
 
-
 #rift-recent-content .rift-recent-item {
     font-size: 11px;
     line-height: 1.5;
-}
-
-#rift-recent-content .rift-recent-item > a {
-    font-size: 12px;
-    font-weight: 700;
 }
 
 /* =========================================================
@@ -3811,14 +3801,6 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 }
 
 #rift-staff-grid > a:hover::before {transform: translateX(120%);}
-/* ---------------------------------------------------------
-   STAFF — IDENTIFICACIÓN DIGITAL
-   --------------------------------------------------------- */
-#rift-staff-grid > a {overflow: hidden;}
-/* Pequeños indicadores en las esquinas */
-#rift-staff-grid > a {--staff-mark: var(--rift-a1);}
-
-
 /* Indicador de estado */
 #rift-staff-grid > a::after {
     content: "";
@@ -6090,7 +6072,6 @@ blockquote blockquote {
 }
 
 
-
 /* =========================================================
    USUARIO MÁS RECIENTE Y RÉCORD
    ========================================================= */
@@ -7454,7 +7435,6 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 }
 
 
-
 /* ---------------------------------------------------------
    LOS FOROS DE LA DERECHA QUEDAN DEBAJO DE LA IMAGEN
    --------------------------------------------------------- */
@@ -7614,13 +7594,10 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     background-size: 100% auto !important;
     background-position: center top !important;
     background-repeat: no-repeat !important;
+    width: 100% !important;
 }
 .digimon-forum-card:has(.rasymforum) {
     overflow: visible;
-}
-
-.digimon-forum-card:has(.rasymforum) .rasymforum {
-    width: 100% !important;
 }
 /* ==========================================================
    DIGITAL RIFT — ESCALA DE ACCESIBILIDAD DEL TABLÓN   PRUEBA CONTROLADA
@@ -9392,12 +9369,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-}
-
-#digimon-statistics .digimon-record-users {
     height: 100% !important;
     box-sizing: border-box !important;
-    align-items: center !important;
 }
 /*GROUPS HEADER*/
 #digimon-statistics .digimon-groups-header {
@@ -11341,21 +11314,6 @@ p.right.rightside, p:has(+ h1.page-title) {
    ========================================================= */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*OCULTAR MIGAS DE PAN*/
 .topic-actions:has(.search-box) .pagination {
     display: none !important;
@@ -11426,19 +11384,6 @@ p.right.rightside, p:has(+ h1.page-title) {
    ========================================================= */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================================
    VIEWFORUM — USUARIOS NAVEGANDO
    ========================================================= */
@@ -11446,11 +11391,6 @@ p.right.rightside, p:has(+ h1.page-title) {
 .action-box + #info_open {
     width: 100%;
 }
-
-
-
-
-
 
 
 #info_open p:last-child {
@@ -11484,23 +11424,9 @@ p.right.rightside, p:has(+ h1.page-title) {
    ========================================================= */
 
 
-
-
-
-
-
-
-
-
-
 #info_open ~ .h3 + .clearfix > ul.ul-icons li img {
     display: none !important;
 }
-
-
-
-
-
 
 
 /* =========================================================
@@ -11509,8 +11435,6 @@ p.right.rightside, p:has(+ h1.page-title) {
 .digimon-forum-card:has(.digimon-forum-custom-image) {
     overflow: visible;
 }
-
-
 
 
 /* =========================================================
@@ -11549,15 +11473,9 @@ body.light-mode .digimon-category-line {
    ========================================================= */
 
 
-
-
 /* =========================================================
    CABECERA DEL FORO
    ========================================================= */
-
-
-
-
 
 
 body.light-mode .digimon-forum-name a.forumtitle:hover {
@@ -11606,13 +11524,9 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
    ========================================================= */
 
 
-
-
 /* =========================================================
    INFORMACIÓN INFERIOR
    ========================================================= */
-
-
 
 
 /* =========================================================
@@ -11620,16 +11534,9 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
    ========================================================= */
 
 
-
-
 /* =========================================================
    ÚLTIMO MENSAJE
    ========================================================= */
-
-
-
-
-
 
 
 /* =========================================================
@@ -11637,68 +11544,14 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
    ========================================================= */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================================
    AJUSTE FINAL DE LEGIBILIDAD
    ========================================================= */
 
 
-
-
-
-
-
-
-
 /* =========================================================
    ESTADÍSTICAS — USUARIOS Y CONEXIONES
    ========================================================= */
-
-
-
-
-
-
-
-
-
-
 
 
 .forum-top-actions a:empty, .forum-top-actions span:empty, .forum-top-actions div:empty {
@@ -12783,8 +12636,6 @@ body.light-mode #digimon-statistics .digimon-user-list a {
 }
 
 
-
-
 /* =========================================================
    ESTADÍSTICAS — USUARIOS Y CONEXIONES
    ========================================================= */
@@ -13171,15 +13022,11 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 
-
-
-
 .dr-topic-actions li a::before {
     color: var(--text-color);
     font: 700 .42rem/1 "Oxanium", sans-serif;
     letter-spacing: .05rem;
 }
-
 
 
 .dr-topic-actions li a:hover {
