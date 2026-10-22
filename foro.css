@@ -13176,8 +13176,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* =========================================================
    MENSAJE
    ========================================================= */
-
 .dr-post-main {
+    align-self: stretch;
     min-width: 0;
     width: 100%;
     background: var(--theme-text-dark);
