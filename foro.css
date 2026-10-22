@@ -4247,7 +4247,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
    HEADER DIGITAL RIFT
    ========================================================= */
 #rift-header {
-    width: calc(100% + 2px);
+    width: calc(100% + 14px);
     height: 520px;
     position: relative;
     overflow: hidden;
