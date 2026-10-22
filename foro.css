@@ -2264,11 +2264,15 @@ button[title="Destino"] {
     overflow: hidden;
 }
 
-/* Avatar generado por _userdata.avatar */
+/* Avatar: imagen recta que cubre todo el rombo */
 .digimon-avatar-frame img {
-    width: 55px;
-    height: 55px;
+    width: 86px;
+    height: 86px;
+    min-width: 86px;
+    max-width: none;
+    flex: 0 0 86px;
     object-fit: cover;
+    object-position: center;
     display: block;
     transform: rotate(45deg);
 }
@@ -2317,10 +2321,7 @@ button[title="Destino"] {
     border-radius: 7px;
 }
 
-.digimon-main-button i {
-    font-size: 14px;
-}
-
+.digimon-main-button i {font-size: 14px;}
 .digimon-main-button:hover {
     background: var(--emblema1);
     border-color: var(--linkc1);
@@ -2356,17 +2357,11 @@ button[title="Destino"] {
     box-shadow: 0 0 10px rgba(30,210,255,.25);
 }
 
-#digimon-search-input::placeholder {
-    color:var(--theme-text-muted);
-}
-
+#digimon-search-input::placeholder {color:var(--theme-text-muted);}
 /* ---------------------------------------------------------
    BOTONES DE ICONOS
    --------------------------------------------------------- */
-.digimon-sub-button, #digimon-scroll-toggle {
-    border-radius: 50px;
-}
-
+.digimon-sub-button, #digimon-scroll-toggle {border-radius: 50px;}
 .digimon-icon-button, .digimon-sub-button {
     border: 1px solid var(--emblema2);
     background: var(--emblema2);
@@ -2412,10 +2407,7 @@ button[title="Destino"] {
 /* ---------------------------------------------------------
    MENÚS DESPLEGABLES
    --------------------------------------------------------- */
-.digimon-dropdown-wrap {
-    position: relative;
-}
-
+.digimon-dropdown-wrap {position: relative;}
 .digimon-dropdown {
     position: absolute;
     right: 0;
@@ -2437,7 +2429,7 @@ button[title="Destino"] {
 
 .digimon-dropdown button {
     border: 1px solid var(--theme-border);
-    /*background: var(--theme-panel-deep);*/ color: var(--theme-text);
+    color: var(--theme-text);
     min-height: 28px;
     padding: 4px 8px;
     cursor:pointer;
@@ -2449,10 +2441,7 @@ button[title="Destino"] {
     background: var(--emblema1);
 }
 
-.digimon-theme-dropdown {
-    flex-direction: column;
-}
-
+.digimon-theme-dropdown {flex-direction: column;}
 .digimon-size-dropdown {
     flex-direction: row;
     min-width: auto;
@@ -2505,10 +2494,6 @@ button[title="Destino"] {
 }
 
 /* ---------------------------------------------------------
-   SWITCHEROO
-   --------------------------------------------------------- */
-
-/* ---------------------------------------------------------
    SWITCHEROO — TOOLTIP
    --------------------------------------------------------- */
 #switcheroo .switcheroo__popper {
@@ -2529,17 +2514,12 @@ button[title="Destino"] {
     z-index: 100001 !important;
 }
 
-#switcheroo .switcheroo__squircle:hover .switcheroo__popper {
-    opacity: 1 !important;
-}
-#switcheroo .switcheroo__popper-text {
-    display: block !important;
-}
+#switcheroo .switcheroo__squircle:hover .switcheroo__popper {opacity: 1 !important;}
+#switcheroo .switcheroo__popper-text {display: block !important;}
 
 /* =========================================================
    SWITCHEROO — CONTENEDOR DE CUENTAS
    ========================================================= */
-
 #switcheroo .switcheroo__squircles {
     display: flex !important;
     flex-direction: column !important;
@@ -2576,10 +2556,7 @@ button[title="Destino"] {
     line-height: 1;
 }
 
-#switcheroo .switcheroo__squircle--button:hover {
-    color: var(--theme-panel-deep);
-}
-
+#switcheroo .switcheroo__squircle--button:hover {color: var(--theme-panel-deep);}
 /* =========================================================
    SWITCHEROO - MODAL DE LOGIN
    ========================================================= */
@@ -2644,10 +2621,7 @@ button[title="Destino"] {
     box-shadow: inset 0 0 8px rgba(0, 0, 0, .35) !important;
 }
 
-.monomer-modal .switcheroo__form-input:focus {
-    box-shadow: 0 0 8px var(--emblema2), inset 0 0 8px rgba(0, 0, 0, .35) !important;
-}
-
+.monomer-modal .switcheroo__form-input:focus {box-shadow: 0 0 8px var(--emblema2), inset 0 0 8px rgba(0, 0, 0, .35) !important;}
 .monomer-modal .switcheroo__form-button {
     padding: 9px 18px !important;
     border: 1px solid var(--emblema2) !important;
@@ -2743,10 +2717,7 @@ button[title="Destino"] {
     font-weight: 300 !important;
 }
 
-#switcheroo .switcheroo__squircle--button:hover {
-    color: var(--theme-panel-deep) !important;
-}
-
+#switcheroo .switcheroo__squircle--button:hover {color: var(--theme-panel-deep) !important;}
 /* BOTÓN PERSONALIZADO — ACTUALIZAR CUENTAS */
 #switcheroo .switcheroo__button--refresh {
     color: var(--emblema2) !important;
@@ -2761,23 +2732,14 @@ button[title="Destino"] {
     transition: transform .2s ease;
 }
 
-#switcheroo .switcheroo__button--refresh:hover i {
-    transform: rotate(45deg);
-}
-
-#switcheroo .switcheroo__button--refresh.is-refreshing i {
-    animation: dr-switcheroo-refresh .8s linear infinite;
-}
-
+#switcheroo .switcheroo__button--refresh:hover i {transform: rotate(45deg);}
+#switcheroo .switcheroo__button--refresh.is-refreshing i {animation: dr-switcheroo-refresh .8s linear infinite;}
 #switcheroo .switcheroo__button--refresh:focus-visible {
     outline: 2px solid var(--emblema1) !important;
     outline-offset: 3px !important;
 }
 
-@keyframes dr-switcheroo-refresh {
-    to { transform: rotate(360deg); }
-}
-
+@keyframes dr-switcheroo-refresh {to { transform: rotate(360deg); }}
 /* =========================================================
    BOTÓN X — ELIMINAR CUENTA
    ========================================================= */
