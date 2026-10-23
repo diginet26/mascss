@@ -4322,12 +4322,8 @@ dl.codebox.spoiler .spoiler_title {
 /* =========================================================
    CAMBIAR "SPOILER:" POR "DIGITAL TRANSMISSION"
    ========================================================= */
-dl.codebox.spoiler .spoiler_title {font-size: 0;}
-dl.codebox.spoiler .spoiler_title:before {
-    content: "DIGITAL TRANSMISSION";
-    font-size: 9px;
-    letter-spacing: 1.5px;
-}
+dl.codebox.spoiler .spoiler_title {font-size:9px;}
+dl.codebox.spoiler .spoiler_title:before {content:none;}
 
 dl.codebox.spoiler .spoiler_title:after {
     content: "◈";
