@@ -3563,12 +3563,10 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     font-size: 13px;
     line-height: 1.65;
     color: var(--rift-muted);
-    padding-right: 10px;
     box-sizing: border-box;
     text-align: justify;
-    padding: 0 0 0 20rem;
+    padding: 0 1rem 0 20rem;
 }
-
 #rift-current-text p {margin:0 0 12px 0;}
 /* ---------------------------------------------------------
    SCROLLS
