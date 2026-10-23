@@ -263,8 +263,8 @@
 .dr-data div {
     padding: 0.8125rem;
     text-align: center;
-    background: #0a141e;
-    border-right: 1px solid var(--colorfondo);
+    background: var(--colorfondo);
+    border-right: 1px solid var(--colorfondo2);
 }
 
 .dr-data div:last-child {border-right: 0;}
