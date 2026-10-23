@@ -356,16 +356,21 @@ body.dark-mode .dg-submit:active {
 .dg-avatar {
     width:100%;
     height:12.6429rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     overflow:hidden;
 }
-.dg-avatar img {
+.dg-avatar > a, .dg-avatar > span, .dg-avatar > div {
+    display:block;
     width:100%;
     height:100%;
-    object-fit:cover;
+}
+.dg-avatar img {
     display:block;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    max-height:none !important;
+    object-fit:cover;
+    object-position:center;
 }
 .dg-avatar-label {
     position:absolute;
