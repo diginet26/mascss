@@ -424,6 +424,14 @@ body.dark-mode .dg-submit:active {
     flex:1;
     min-width:0;
     padding-left:1.2143rem;
+    display:flex;
+    align-items:center;
+}
+.dg-data {
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+    width:100%;
 }
 .dg-tamer-name {
     width:100%;
@@ -455,11 +463,7 @@ body.dark-mode .dg-submit:active {
     overflow-wrap:anywhere;
     word-break:normal;
 }
-.dg-data {
-    display:flex;
-    flex-direction:column;
-    gap:.5rem;
-}
+
 .dg-data-row {
     min-height:2.7143rem;
     display:flex;
