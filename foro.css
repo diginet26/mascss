@@ -430,7 +430,7 @@ body.dark-mode .dg-submit:active {
 .dg-data {
     display:flex;
     flex-direction:column;
-    gap:.5rem;
+    gap: 2rem;
     width:100%;
 }
 .dg-tamer-name {
@@ -484,24 +484,29 @@ body.dark-mode .dg-submit:active {
 }
 .dg-data-icon i {font-size:.9286rem;}
 .dg-data-row>div:last-child {
+    display:flex;
+    align-items:center;
+    gap:.45rem;
     padding:.2857rem .6429rem;
     min-width:0;
 }
 .dg-data-row span {
     display:block;
+    flex:0 0 auto;
     color:var(--dg-label);
     font-size:.5rem;
     letter-spacing:.0714rem;
 }
 .dg-data-row strong {
     display:block;
-    margin-top:.1429rem;
+    flex:0 1 auto;
+    min-width:0;
+    margin-top:0;
     max-width:11.0714rem;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
     color:var(--dg-text);
-    font-size:.6429rem;
 }
 .dg-data-group .dg-group-value {
     display:block;
