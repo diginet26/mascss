@@ -7031,6 +7031,12 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     min-height: 0 !important;
 }
 
+/* DOBLES Y TRIPLES — la descripción acompaña la altura visual */
+.digimon-forum-description .rdoubleforum .rfordesc,
+.digimon-forum-description .rtripleforum .rfordesc {
+    flex: 1 1 auto !important;
+}
+
 .digimon-lastpost-user strong {
     display: block !important;
     margin-top: 2px !important;
