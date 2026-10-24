@@ -7013,7 +7013,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
    ========================================================= */
 
 /* La zona de descripción se convierte en el contenedor que permite que el foro visual rellene todo su espacio */
-.digimon-forum-description:has(.rdoubleforum) {
+/* La zona de descripción permite que todos los tipos de foro rellenen su espacio */
+.digimon-forum-description:has(.rsingleforum), .digimon-forum-description:has(.rdoubleforum), .digimon-forum-description:has(.rtripleforum) {
     display: flex !important;
     flex-direction: column !important;
 }
