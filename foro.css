@@ -4740,258 +4740,469 @@ blockquote blockquote {
 
 .rift-news-prototype:hover .rift-news-plate {transform: translateX(100%);}
 /* =========================================================
-   DIGIMON NETWORK — INDEX BOX
-   Diseño y tamaños integrados con el selector de accesibilidad.
+   DIGIMON NETWORK   INDEX BOX — MAIN DESIGN
+   VARIABLES LOCALES   Conservan el sistema de degradados actual
    ========================================================= */
 .digimon-index {
-    --digimon-radius: 1.0714rem;
-    --digimon-radius-small: .6429rem;
-    --digimon-bg: linear-gradient(135deg, var(--colorfondo), var(--colorfondo2));
-    --digimon-panel: linear-gradient(135deg, var(--colorfondo), var(--colorfondo2));
+    --digimon-radius: 15px;
+    --digimon-radius-small: 9px;
+    --digimon-bg: linear-gradient(135deg,var(--colorfondo), var(--colorfondo2));
+    --digimon-panel: linear-gradient(135deg,var(--colorfondo), var(--colorfondo2));
     --digimon-gradient: linear-gradient(120deg, var(--emblema1), var(--emblema2));
     --digimon-gradient-reverse: linear-gradient(120deg, var(--emblema2), var(--emblema1));
-    --digimon-border: color-mix(in srgb, var(--colortextod1) 12%, transparent);
+    --digimon-border: color-mix(in srgb,var(--colortextod1) 12%, transparent);
     --digimon-muted: color-mix(in srgb, var(--colortextod1) 55%, transparent);
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1.7857rem 0 3.2143rem;
+    padding: 25px 0 45px;
     box-sizing: border-box;
     font-family: "Oxanium", sans-serif;
 }
 
+/* =========================================================
+   RESET INTERNO
+   ========================================================= */
 .digimon-index *, .digimon-index *::before, .digimon-index *::after {box-sizing: border-box;}
 .digimon-index a {text-decoration: none;}
 .digimon-index h2, .digimon-index h3, .digimon-index h4, .digimon-index p {margin: 0;}
-
-/* ENLACES SUPERIORES */
+/* =========================================================
+   ENLACES SUPERIORES
+   ========================================================= */
 .digimon-index-tools {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.4286rem;
-    margin-bottom: 1.7857rem;
-    padding: .8571rem 1.2857rem;
-    border: .0714rem solid var(--digimon-border);
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 12px 18px;
+    border: 1px solid var(--digimon-border);
     border-radius: var(--digimon-radius-small);
-    background: linear-gradient(90deg, color-mix(in srgb, var(--linkc1) 10%, transparent), transparent);
-    font: 700 .6429rem/1.2 "Oxanium", monospace;
-    letter-spacing: .0714rem;
+    background: linear-gradient(90deg, var(), transparent);
+    font: 700 0.6429rem/1.2 "Oxanium", monospace;
+    letter-spacing: 0.0714rem;
     text-transform: uppercase;
 }
 
-.digimon-tools-left {display: flex; flex-wrap: wrap; gap: .7143rem;}
+.digimon-tools-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .digimon-tools-left a, .digimon-mark-read {
     display: inline-flex;
     align-items: center;
-    gap: .5714rem;
-    padding: .6429rem .8571rem;
-    border: .0714rem solid var(--digimon-border);
-    border-radius: .4286rem;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--digimon-border);
+    border-radius: 6px;
     color: var(--text-color);
-    background: var(--digimon-panel);
-    transition: .3s ease;
+    background: var();
+    transition: 0.3s ease;
 }
+
 .digimon-tools-left a i, .digimon-mark-read i {color: var(--linkc1);}
 .digimon-tools-left a:hover, .digimon-mark-read:hover {
-    color: var(--colorfondo2);
+    color: var();
     background: var(--digimon-gradient);
     border-color: transparent;
-    transform: translateY(-.1429rem);
+    transform: translateY(-2px);
 }
 .digimon-tools-left a:hover i, .digimon-mark-read:hover i {color: inherit;}
 
-/* CATEGORÍAS */
+/*CATEGORÍAS*/
 .digimon-category {
     position: relative;
     width: 100%;
-    margin: 0 0 2.5rem;
+    margin: 0 0 35px;
     padding: 0;
-    border: .0714rem solid var(--digimon-border);
+    border: 1px solid var(--digimon-border);
     border-radius: var(--digimon-radius);
     background: var(--digimon-bg);
     overflow: hidden;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 15px 45px rgba(0, 0, 0, .12);
 }
 
-/* CABECERA DE CATEGORÍA */
+/*CABECERA DE CATEGORÍA*/
 .digimon-category-header {
-    min-height: 6.0714rem;
+    min-height: 85px;
     display: flex;
     align-items: center;
-    gap: 1.2857rem;
-    padding: 1.4286rem 1.7857rem;
+    gap: 18px;
+    padding: 20px 25px;
     position: relative;
-    background: linear-gradient(100deg, color-mix(in srgb, var(--linkc1) 8%, var(--colorfondo2)), transparent 65%);
+    background: linear-gradient(100deg, var(), transparent 65%);
 }
+
+/* Línea de brillo superior */
 .digimon-category-header::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: .2143rem;
+    height: 3px;
     background: var(--digimon-gradient);
 }
+
+/* Icono */
 .digimon-category-icon {
-    width: 3.4286rem;
-    height: 3.4286rem;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border-radius: .8571rem;
+    border-radius: 12px;
     background: var(--digimon-gradient);
-    color: var(--text-color);
+    color: var();
     font-size: 1.4286rem;
-    box-shadow: 0 0 1.4286rem color-mix(in srgb, var(--linkc1) 25%, transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--linkc1) 25%, transparent);
 }
-.digimon-category-title {flex: 1; min-width: 0;}
+
+/* Títulos */
+.digimon-category-title {
+    flex: 1;
+    min-width: 0;
+}
+
 .digimon-category-label {
     display: block;
-    margin-bottom: .3571rem;
+    margin-bottom: 5px;
     color: var(--digimon-muted);
-    font: 700 .5714rem/1.2 "Oxanium", monospace;
-    letter-spacing: .1429rem;
+    font: 700 0.5714rem/1.2 "Oxanium", monospace;
+    letter-spacing: 0.1429rem;
     text-transform: uppercase;
 }
+
 .digimon-category-title h2 {
     font: 700 1.9286rem/1.1 "Oxanium", sans-serif;
     color: var(--text-color);
     text-transform: uppercase;
-    letter-spacing: .0714rem;
+    letter-spacing: 0.0714rem;
 }
+
 .digimon-category-status {display: none;}
+/* Separador */
 .digimon-category-line {
-    width: calc(100% - 3.5714rem);
-    height: .0714rem;
+    width: calc(100% - 50px);
+    height: 1px;
     margin: 0 auto;
     background: linear-gradient(90deg, var(--linkc1), var(--linkc2), transparent);
     opacity: .65;
 }
 
-/* DISTRIBUCIÓN DE FOROS: HORIZONTAL, DOBLE Y TRIPLE */
+/* =========================================================
+   DIGIMON NETWORK   SISTEMA DE FOROS: ÚNICOS, DOBLES Y TRIPLES
+   ========================================================= */
 .digimon-forums-grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 1.5714rem;
-    padding: 1.7857rem;
+    gap: 22px;
+    padding: 25px;
     align-items: stretch;
 }
-.digimon-forums-grid > .digimon-forum-card {grid-column: span 3; min-width: 0;}
-.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) {grid-column: span 6;}
-.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) {grid-column: span 3;}
-.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {grid-column: span 2;}
-.digimon-forums-grid > .digimon-forum-card:has(.rimageforum) {grid-column: span 6;}
 
-/* TARJETA Y CONTENIDO PRINCIPAL */
+.digimon-forums-grid > .digimon-forum-card {
+    grid-column: span 3;
+    min-width: 0;
+}
+.digimon-forums-grid > .digimon-forum-card:has(.rsingleforum) {grid-column: span 6;}/*TAMAÑO PREDETERMINADO: FOROS DOBLES*/
+.digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) {grid-column: span 3;}/*FORO ÚNICO — OCUPA TODO EL ANCHO*/
+.digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {grid-column: span 2;}/*FORO DOBLE — DOS COLUMNAS*/
+.digimon-forums-grid > .digimon-forum-card:has(.rimageforum) {grid-column: span 6;}/*FORO TRIPLE — TRES COLUMNAS*/
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content {min-height: 280px;}/*FORO DE IMAGEN — ANCHO COMPLETO*/
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description {min-height: 210px;}/*FORO ÚNICO — FORMATO HORIZONTAL*/
+
+/* Imagen horizontal */
+.digimon-forum-card:has(.rsingleforum) .rforimg {
+    width: 55%;
+        mask-image: linear-gradient(90deg, black 50%, transparent 100%);
+}
+
+/* Texto hacia el lado derecho */
+.digimon-forum-card:has(.rsingleforum) .rfordesc {
+    width: 52%;
+    margin-left: 48%;
+    padding: 45px 30px 20px;
+}
+
+/*FOROS DOBLES*/
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-content {min-height: 320px;}
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description {min-height: 230px;}
+/*FOROS TRIPLES*/
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-content {min-height: 285px;}
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {min-height: 190px;}
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-name a.forumtitle {
+    display: block;
+    overflow: hidden;
+    color: var(--text-color);
+    font: 700 1.15rem/1.2 "Oxanium", sans-serif;
+    letter-spacing: .035rem;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color .3s ease;
+}
+.digimon-forum-card:has(.rtripleforum) .digimon-forum-heading {padding: 13px;}
+.digimon-forum-card:has(.rtripleforum) .rfordesc {
+    padding: 55px 15px 15px;
+    font-size: 0.7143rem;
+}
+.digimon-forum-card:has(.rtripleforum) .rforlinks {padding: 0 15px 15px;}
+.digimon-forum-card:has(.rtripleforum) .rforlinks a {
+    font-size: 0.5rem;
+    padding: 5px 7px;
+}
+.digimon-forum-card:has(.rtripleforum) h3.hierarchy {
+    width: auto !important;
+    float: none !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+/* =========================================================
+   FORO DE IMAGEN TRANSPARENTE
+   ========================================================= */
+.digimon-forum-card:has(.rimageforum) {
+    background: transparent;
+    border: 0;
+    border-radius: var(--digimon-radius);
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.digimon-forum-card:has(.rimageforum)::before {display: none;}
+.digimon-forum-card:has(.rimageforum) .digimon-forum-content {
+    min-height: 300px;
+    background: linear-gradient(90deg, var(--colorfondo4), transparent);
+    border: 1px solid var(--digimon-border);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.digimon-forum-card:has(.rimageforum) .digimon-forum-heading {
+    border-radius: var(--digimon-radius) var(--digimon-radius) 0 0;
+    overflow: hidden;
+}
+
+.digimon-forum-card:has(.rimageforum) .digimon-forum-bottom {
+    border-radius: 0 0 var(--digimon-radius) var(--digimon-radius);
+    overflow: hidden;
+}
+
+.digimon-forum-card:has(.rimageforum) .rforimg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.digimon-forum-card:has(.rimageforum) .rforimg::before {
+    background: linear-gradient(90deg, var(--emblema1), transparent 70%);
+    opacity: .35;
+    mix-blend-mode: color;
+}
+
+.digimon-forum-card:has(.rimageforum) .rforimg::after {background: linear-gradient(90deg, var(--colorfondo2), transparent 65%);}
+.digimon-forum-card:has(.rimageforum) .rfordesc {
+    width: 48%;
+    margin-left: 0;
+    padding: 55px 30px 25px;
+    font-size: 0.7857rem;
+}
+
+/* =========================================================
+   EVITAR QUE LAS IMÁGENES ROMPAN EL CONTENEDOR
+   ========================================================= */
+.digimon-forum-description .rforimg {pointer-events: none;}
+.digimon-forum-description .rfordesc {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media screen and (max-width: 1000px) {
+    .digimon-forums-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+    .digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {
+    grid-column: span 1;
+}
+    .digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) {
+    grid-column: span 1;
+}
+    .digimon-forums-grid > .digimon-forum-card:has(.rsingleforum), .digimon-forums-grid > .digimon-forum-card:has(.rimageforum) {
+    grid-column: span 2;
+}
+}
+@media screen and (max-width: 650px) {
+    .digimon-forums-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+}
+    .digimon-forums-grid > .digimon-forum-card {
+    grid-column: span 1 !important;
+}
+    .digimon-forum-card:has(.rsingleforum) .rforimg, .digimon-forum-card:has(.rimageforum) .rforimg {
+    width: 100%;
+    opacity: .5;
+}
+    .digimon-forum-card:has(.rsingleforum) .rfordesc, .digimon-forum-card:has(.rimageforum) .rfordesc {
+    width: 100%;
+    margin-left: 0;
+    padding: 70px 20px 20px;
+}
+    .digimon-forum-card:has(.rsingleforum) .rforlinks {
+    padding-left: 20px;
+}
+}
+
+/* =========================================================
+   TARJETA DEL FORO
+   ========================================================= */
 .digimon-forum-card {
     position: relative;
-    display: flex;
-    flex-direction: column;
     min-width: 0;
     overflow: hidden;
-    border: .0714rem solid var(--digimon-border);
+    border: 1px solid var(--digimon-border);
     border-radius: var(--digimon-radius);
     background: var(--digimon-panel);
     transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
 }
+
 .digimon-forum-card::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: .2143rem;
+    height: 3px;
     background: var(--digimon-gradient);
     opacity: .8;
 }
-.digimon-forum-card:nth-child(even)::before {background: var(--digimon-gradient-reverse);}
+
+.digimon-forum-card:nth-child(even)::before {
+    background: var(--digimon-gradient-reverse);
+}
 .digimon-forum-card:hover {
-    transform: translateY(-.3571rem);
+    transform: translateY(-5px);
     border-color: var(--linkc1);
     box-shadow: 0 12px 35px rgba(0, 0, 0, .25), 0 0 20px color-mix(in srgb, var(--linkc1) 10%, transparent);
 }
+
+/* =========================================================
+   CONTENIDO DE LA TARJETA
+   ========================================================= */
 .digimon-forum-content {
     position: relative;
+    min-height: 260px;
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
-    min-height: 18.5714rem;
 }
 
-/* CABECERA DEL FORO */
+/* =========================================================
+   NOMBRE DEL FORO
+   ========================================================= */
 .digimon-forum-heading {
     display: flex;
-    flex: 0 0 auto;
     align-items: center;
-    gap: .8571rem;
-    padding: 1.2143rem 1.2857rem;
-    border-bottom: .0714rem solid var(--colorfondo4);
+    gap: 12px;
+    padding: 17px 18px;
+    border-bottom: 1px solid var(--colorfondo4);
     background: var(--theme-panel);
 }
+
 .digimon-forum-number {
-    width: 2.4286rem;
-    height: 2.4286rem;
+    width: 34px;
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border-radius: .5714rem;
+    border-radius: 8px;
     background: var(--colorfondo4);
-    border: .0714rem solid var(--digimon-border);
+    border: 1px solid var(--digimon-border);
     color: var(--emblema2);
     font-size: 1rem;
 }
-.digimon-forum-name {min-width: 0; flex: 1;}
-.digimon-forum-name h1, .digimon-forum-name h2, .digimon-forum-name h3, .digimon-forum-name h4, .digimon-forum-name h5, .digimon-forum-name h6 {margin: 0;}
+
+.digimon-forum-name {
+    min-width: 0;
+    flex: 1;
+}
+
+/* Se utiliza el h3/h4 generado por Foroactivo */
+.digimon-forum-name h1, .digimon-forum-name h2, .digimon-forum-name h3, .digimon-forum-name h4,.digimon-forum-name h5, .digimon-forum-name h6 {
+    margin: 0;
+}
 .digimon-forum-name a.forumtitle {
     display: block;
     overflow: hidden;
     color: var(--text-color);
     font: 700 1.2857rem/1.2 "Oxanium", sans-serif;
-    letter-spacing: .0357rem;
+    letter-spacing: 0.0357rem;
     text-overflow: ellipsis;
     text-transform: uppercase;
     transition: color .3s ease;
 }
-.digimon-forum-name a.forumtitle:hover {color: var(--linkc1);}
-.digimon-forum-signal {display: none;}
 
-/* ZONA DE DESCRIPCIÓN: EL CONTENEDOR, NO EL TEXTO, OCUPA EL ESPACIO */
+.digimon-forum-name a.forumtitle:hover {
+    color: var(--linkc1);
+}
+
+/* Indicador */
+/*.digimon-forum-signal {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.digimon-forum-signal span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--linkc2);
+    box-shadow: 0 0 9px var(--linkc2);
+}*/
+.digimon-forum-signal {
+    display: none;
+}
+/* =========================================================
+   DESCRIPCIÓN DEL FORO
+   ========================================================= */
 .digimon-forum-description {
     position: relative;
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    min-height: 0;
+    flex: 1;
+    min-height: 170px;
     overflow: hidden;
 }
-.digimon-forum-description:empty {display: none;}
-.digimon-forum-description:has(.rsingleforum),
-.digimon-forum-description:has(.rdoubleforum),
-.digimon-forum-description:has(.rtripleforum),
-.digimon-forum-description:has(.rimageforum) {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    min-height: 0;
+/* Ocultamos el contenedor antiguo si no tiene contenido */
+.digimon-forum-description:empty {
+    display: none;
 }
-.digimon-forum-description .rsingleforum,
-.digimon-forum-description .rdoubleforum,
-.digimon-forum-description .rtripleforum,
-.digimon-forum-description .rimageforum {
+
+/* =========================================================
+   ESTRUCTURA SINGLE FORUM
+   ========================================================= */
+.digimon-forum-description .rsingleforum, .digimon-forum-description .rdoubleforum, .digimon-forum-description .rtripleforum {
     position: relative;
+    min-height: 170px;
+    width: 100%;
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
     justify-content: flex-end;
-    width: 100%;
-    min-height: 0;
     overflow: hidden;
     background: var(--colorfondot);
 }
-.digimon-forum-description .rforimg {pointer-events: none;}
+
+/* Imagen del foro */
 .digimon-forum-description .rforimg {
     position: absolute;
     inset: 0;
@@ -5004,284 +5215,359 @@ blockquote blockquote {
     filter: saturate(.9);
     transition: transform .6s ease, opacity .6s ease;
 }
-.digimon-forum-description .rforimg::after {content: ""; position: absolute; inset: 0;}
+
+/* Oscurecimiento de imagen */
+.digimon-forum-description .rforimg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  /*  background: linear-gradient(180deg, var(--colorfondo4) 0%, var(--colorfondo4) 15%, transparent 55%, var(--colorfondo4) 100%);*/
+}
+
+/* Degradado de color sobre la imagen */
 .digimon-forum-description .rforimg::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema1) 60%, transparent), transparent 65%, color-mix(in srgb, var(--emblema2) 40%, transparent));
+    background:linear-gradient(135deg, color-mix(in srgb, var(--emblema1) 60%, transparent), transparent 65%, color-mix(in srgb, var(--emblema2) 40%, transparent));
     mix-blend-mode: color;
 }
-.digimon-forum-card:hover .rforimg {transform: scale(1.06); opacity: .75;}
+.digimon-forum-card:hover .rforimg {
+    transform: scale(1.06);
+    opacity: .75;
+}
 
-/* TEXTO Y ENLACES: ALTURA NATURAL PARA EVITAR QUE EL ESPACIO VACÍO SE DESPLACE */
-.digimon-forum-description .rfordesc,
-.digimon-forum-description .rfordesc2 {
+/* =========================================================
+   DESCRIPCIÓN TEXTUAL
+   ========================================================= */
+.digimon-forum-description .rfordesc {
     position: relative;
     z-index: 2;
-    flex: 0 0 auto;
     width: 100%;
     margin: 0;
-    padding: 5.3571rem 1.4286rem 1.4286rem;
+    padding: 75px 20px 20px;
     color: var(--text-color);
-    font: .7857rem/1.7 "Poppins", sans-serif;
+    font: 0.7857rem/1.7 "Poppins", sans-serif;
     text-align: justify;
     background: linear-gradient(87deg, transparent, var(--colorfondo) 70%);
 }
-.digimon-forum-description .rfordesc2 {background: linear-gradient(270deg, transparent, var(--colorfondo) 70%);}
+
+.digimon-forum-description .rfordesc2 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 75px 20px 20px;
+    color: var(--text-color);
+    font: 0.7857rem/1.7 "Poppins", sans-serif;
+    text-align: justify;
+    background: linear-gradient(270deg, transparent, var(--colorfondo) 70%);
+}
+
+/* =========================================================
+   ENLACES DEL FORO
+   ========================================================= */
 .digimon-forum-description .rforlinks {
     position: relative;
     z-index: 3;
     display: flex;
-    flex: 0 0 auto;
     flex-wrap: wrap;
-    gap: .5rem;
-    padding: 0 1.4286rem 1.2857rem;
-    margin-top: 1.0714rem;
+    gap: 7px;
+    padding: 0 20px 18px;
+    margin-top: 15px;
 }
+
 .digimon-forum-description .rforlinks a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 1.9286rem;
-    padding: .4286rem .7143rem;
-    border: .0714rem solid var(--digimon-border);
-    border-radius: .3571rem;
+    min-height: 27px;
+    padding: 6px 10px;
+    border: 1px solid var(--digimon-border);
+    border-radius: 5px;
     color: var(--text-color);
     background: var(--linkc3);
-    font: 700 .7143rem/1.2 "Oxanium", monospace;
-    letter-spacing: .0357rem;
+    font: 700 0.7143rem/1.2 "Oxanium", monospace;
+    letter-spacing: 0.0357rem;
     text-transform: uppercase;
     transition: .3s ease;
 }
+
 .digimon-forum-description .rforlinks a:hover {
     color: var(--colorfondo2);
     border-color: transparent;
     background: var(--digimon-gradient);
-    transform: translateY(-.1429rem);
-}
-.digimon-forum-description .rforlinks a:nth-child(even):hover {background: var(--digimon-gradient-reverse);}
-
-/* TIPO HORIZONTAL */
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-content {min-height: 20rem;}
-.digimon-forum-card:has(.rsingleforum) .digimon-forum-description {min-height: 15rem;}
-.digimon-forum-card:has(.rsingleforum) .rforimg {
-    width: 55%;
-    -webkit-mask-image: linear-gradient(90deg, #000 50%, transparent 100%);
-    mask-image: linear-gradient(90deg, #000 50%, transparent 100%);
-}
-.digimon-forum-card:has(.rsingleforum) .rfordesc {width: 52%; margin-left: 48%; padding: 3.2143rem 2.1429rem 1.4286rem;}
-
-/* TIPO DOBLE */
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-content {min-height: 22.8571rem;}
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-description {min-height: 16.4286rem;}
-.digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .rdoubleforum {min-height: 16.4286rem;}
-
-/* TIPO TRIPLE */
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-content {min-height: 20.3571rem;}
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-description {min-height: 13.5714rem;}
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-name a.forumtitle {
-    display: block;
-    overflow: hidden;
-    color: var(--text-color);
-    font: 700 1.15rem/1.2 "Oxanium", sans-serif;
-    letter-spacing: .035rem;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    white-space: nowrap;
-    transition: color .3s ease;
-}
-.digimon-forum-card:has(.rtripleforum) .digimon-forum-heading {padding: .9286rem;}
-.digimon-forum-card:has(.rtripleforum) .rfordesc {padding: 3.9286rem 1.0714rem 1.0714rem; font-size: .7143rem;}
-.digimon-forum-card:has(.rtripleforum) .rforlinks {padding: 0 1.0714rem 1.0714rem;}
-.digimon-forum-card:has(.rtripleforum) .rforlinks a {font-size: .5rem; padding: .3571rem .5rem;}
-.digimon-forum-card:has(.rtripleforum) h3.hierarchy {width: auto !important; float: none !important; text-align: left !important; margin: 0 !important;}
-
-/* TIPO HORIZONTAL DE IMAGEN: EL CONTENIDO INTERNO SE RECORTA, LA ILUSTRACIÓN DECORATIVA PUEDE SOBRESALIR */
-.digimon-forum-card:has(.rimageforum) {background: transparent; border: 0; border-radius: var(--digimon-radius); overflow: visible; box-shadow: none;}
-.digimon-forum-card:has(.rimageforum)::before {display: none;}
-.digimon-forum-card:has(.rimageforum) .digimon-forum-content {
-    min-height: 21.4286rem;
-    background: linear-gradient(90deg, var(--colorfondo4), transparent);
-    border: .0714rem solid var(--digimon-border);
-    border-radius: var(--digimon-radius) var(--digimon-radius) 0 0;
-    overflow: hidden;
-}
-.digimon-forum-card:has(.rimageforum) .rforimg {width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; opacity: 1;}
-.digimon-forum-card:has(.rimageforum) .rforimg::before {
-    background: linear-gradient(90deg, var(--emblema1), transparent 70%);
-    opacity: .35;
-    mix-blend-mode: color;
-}
-.digimon-forum-card:has(.rimageforum) .rforimg::after {background: linear-gradient(90deg, var(--colorfondo2), transparent 65%);}
-.digimon-forum-card:has(.rimageforum) .rfordesc {width: 48%; margin-left: 0; padding: 3.9286rem 2.1429rem 1.7857rem; font-size: .7857rem;}
-
-/* FOROS DE ENLACES */
-.forabg .rlinkforum .rfordesc {width: auto !important; margin-top: 0 !important; margin-bottom: 0 !important;}
-.digimon-forum-card:has(.rlinkforum) {align-self: stretch !important;}
-.digimon-forum-card:has(.rlinkforum) .rlinkforum {min-height: 0 !important; height: auto !important;}
-.digimon-forum-description > .rdoubleforum.rlinkforum {flex: 1 1 auto !important; min-height: 0 !important;}
-.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rfordesc {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 1.4286rem !important;
-    flex: 0 0 auto !important;
-    box-sizing: border-box !important;
-}
-.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rforlinks {width: 100% !important; margin: 0 !important; padding: 0 !important;}
-.digimon-lastpost-user strong {display: block !important; margin-top: .1429rem !important;}
-
-/* TARJETAS CON ILUSTRACIÓN SUPERPUESTA: LOS BORDES VISIBLES SE REDONDEAN SIN RECORTAR LA ILUSTRACIÓN */
-.digimon-forum-card:has(.rimageforum) .digimon-forum-heading,
-.digimon-forum-card:has(.digimon-forum-custom-image) .digimon-forum-heading {
-    border-radius: var(--digimon-radius) var(--digimon-radius) 0 0;
-    overflow: hidden;
-}
-.digimon-forum-card:has(.rimageforum) .digimon-forum-bottom,
-.digimon-forum-card:has(.digimon-forum-custom-image) .digimon-forum-bottom {
-    border-radius: 0 0 var(--digimon-radius) var(--digimon-radius);
-    overflow: hidden;
+    transform: translateY(-2px);
 }
 
-/* BARRA INFERIOR Y ESTADÍSTICAS */
+/* Alternancia de color */
+.digimon-forum-description .rforlinks a:nth-child(even):hover {
+    background: var(--digimon-gradient-reverse);
+}
+/* =========================================================
+   INFORMACIÓN INFERIOR DE LA TARJETA
+   ========================================================= */
 .digimon-forum-bottom {
     display: flex;
-    flex: 0 0 auto;
     align-items: stretch;
-    gap: .0714rem;
-    min-height: 4.6429rem;
-    border-top: .0714rem solid var(--digimon-border);
+    gap: 1px;
+    min-height: 65px;
+    border-top: 1px solid var(--digimon-border);
     background: var(--digimon-border);
 }
+
+/* Estadísticas */
 .digimon-forum-stat {
-    width: 5.1429rem;
+    width: 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .2143rem;
+    gap: 3px;
     background: var(--theme-panel);
 }
-.digimon-stat-icon {color: var(--emblema2); font-size: .7857rem;}
-.digimon-forum-stat strong {color: var(--text-color); font: 700 .9286rem/1 "Oxanium", sans-serif;}
-.digimon-forum-stat small {color: var(--digimon-muted); font: 700 .5rem/1 "Oxanium", monospace; letter-spacing: .0357rem; text-transform: uppercase;}
+
+.digimon-stat-icon {
+    color: var(--emblema2);
+    font-size: 0.7857rem;
+}
+
+.digimon-forum-stat strong {
+    color: var(--text-color);
+    font: 700 0.9286rem/1 "Oxanium", sans-serif;
+}
+
+.digimon-forum-stat small {
+    color: var(--digimon-muted);
+    font: 700 0.5rem/1 "Oxanium", monospace;
+    letter-spacing: 0.0357rem;
+    text-transform: uppercase;
+}
+
+/* Último post */
 .digimon-forum-lastpost {
-    flex: 1 1 auto;
+    flex: 1;
     min-width: 0;
     display: flex;
     align-items: center;
-    gap: .8571rem;
-    padding: .8571rem 1.0714rem;
+    gap: 12px;
+    padding: 12px 15px;
     background: var(--theme-panel);
 }
-.digimon-lastpost-info {min-width: 0; display: flex; flex-direction: column; gap: .2857rem;}
-.digimon-lastpost-label {color: var(--digimon-muted); font: 700 .5rem/1.2 "Oxanium", monospace; letter-spacing: .0714rem;}
+
+.digimon-lastpost-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.digimon-lastpost-label {
+    color: var(--digimon-muted);
+    font: 700 0.5rem/1.2 "Oxanium", monospace;
+    letter-spacing: 0.0714rem;
+}
+
 .digimon-lastpost-info > a {
     display: block;
     overflow: hidden;
     color: var(--text-color);
-    font: 700 .7143rem/1.3 "Poppins", sans-serif;
+    font: 700 0.7143rem/1.3 "Poppins", sans-serif;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.digimon-lastpost-info > a:hover {color: var(--linkc1);}
-.digimon-lastpost-user {color: var(--digimon-muted); font: .5714rem/1.4 "Oxanium", monospace;}
-.digimon-forum-lastpost .lastpost-avatar {flex-shrink: 0;}
+
+.digimon-lastpost-info > a:hover {
+    color: var(--linkc1);
+}
+
+.digimon-lastpost-user {
+    color: var(--digimon-muted);
+    font: 0.5714rem/1.4 "Oxanium", monospace;
+}
+
+/* Avatar del último post */
+.digimon-forum-lastpost .lastpost-avatar {
+    flex-shrink: 0;
+}
+
 .digimon-forum-lastpost .lastpost-avatar img {
-    width: 2.7143rem;
-    height: 2.7143rem;
+    width: 38px;
+    height: 38px;
     display: block;
     object-fit: cover;
     border-radius: 50%;
-    border: .1429rem solid var(--linkc1);
+    border: 2px solid var(--linkc1);
 }
 
-/* OCULTAR ELEMENTOS ANTIGUOS DE FORABG */
-.digimon-index .forabg {width: 100%; margin: 0; padding: 0; background: transparent; border: 0;}
-.digimon-index .forabg > .inner {padding: 0;}
-.digimon-index .forabg > .inner > .corners-top, .digimon-index .forabg > .inner > .corners-bottom {display: none;}
-.digimon-index .forabg > .inner > ul.topiclist, .digimon-index ul.topiclist.forums {display: none;}
-.digimon-index .row {margin: 0; padding: 0; border: 0; background: transparent;}
+/* =========================================================
+   OCULTAR ELEMENTOS ANTIGUOS DE FORABG
+   ========================================================= */
+.digimon-index .forabg {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
 
-/* PIE DEL ÍNDICE */
+.digimon-index .forabg > .inner {
+    padding: 0;
+}
+.digimon-index .forabg > .inner > .corners-top, .digimon-index .forabg > .inner > .corners-bottom {
+    display: none;
+}
+.digimon-index .forabg > .inner > ul.topiclist {
+    display: none;
+}
+.digimon-index ul.topiclist.forums {
+    display: none;
+}
+
+/* Evita que el diseño antiguo interfiera */
+.digimon-index .row {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+/* =========================================================
+   PIE DE INDEX
+   ========================================================= */
 .digimon-index-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.4286rem;
-    padding: 1.0714rem 1.4286rem;
-    border: .0714rem solid var(--digimon-border);
+    gap: 20px;
+    padding: 15px 20px;
+    border: 1px solid var(--digimon-border);
     border-radius: var(--digimon-radius-small);
     background: var(--digimon-bg);
 }
-.digimon-footer-links {display: flex; flex-wrap: wrap; gap: .8571rem;}
+
+.digimon-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 .digimon-footer-links a, .digimon-delete-cookies {
     display: inline-flex;
     align-items: center;
-    gap: .5rem;
+    gap: 7px;
     color: var(--digimon-muted);
-    font: 700 .5714rem/1.3 "Oxanium", monospace;
-    letter-spacing: .0357rem;
+    font: 700 0.5714rem/1.3 "Oxanium", monospace;
+    letter-spacing: 0.0357rem;
     text-transform: uppercase;
     transition: .3s ease;
 }
-.digimon-footer-links a i, .digimon-delete-cookies i {color: var(--linkc1);}
-.digimon-footer-links a:hover, .digimon-delete-cookies:hover {color: var(--linkc1);}
 
-/* RESPONSIVE */
-@media screen and (max-width: 1000px) {
-    .digimon-forums-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
-    .digimon-forums-grid > .digimon-forum-card:has(.rtripleforum), .digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) {grid-column: span 1;}
-    .digimon-forums-grid > .digimon-forum-card:has(.rsingleforum), .digimon-forums-grid > .digimon-forum-card:has(.rimageforum) {grid-column: span 2;}
+.digimon-footer-links a i, .digimon-delete-cookies i {
+    color: var(--linkc1);
 }
-@media screen and (max-width: 700px) {
-    .digimon-index {padding: 1.0714rem 0 2.1429rem;}
-    .digimon-index-tools {flex-direction: column; align-items: stretch;}
-    .digimon-tools-left {display: grid; grid-template-columns: repeat(2, 1fr);}
-    .digimon-mark-read {justify-content: center;}
-    .digimon-category-header {padding: 1.2143rem;}
-    .digimon-category-title h2 {font-size: 1.5rem;}
-    .digimon-category-status {display: none;}
-    .digimon-forums-grid {padding: 1.0714rem; gap: 1.0714rem;}
-    .digimon-forum-name a.forumtitle {font-size: 1.0714rem;}
-    .digimon-forum-bottom {flex-wrap: wrap;}
-    .digimon-forum-stat {width: 50%; min-height: 3.5714rem;}
-    .digimon-forum-lastpost {width: 100%; flex-basis: 100%;}
-    .digimon-index-footer {flex-direction: column; align-items: stretch;}
-    .digimon-footer-links, .digimon-delete-cookies {justify-content: center;}
+.digimon-footer-links a:hover, .digimon-delete-cookies:hover {
+    color: var(--linkc1);
 }
-@media screen and (max-width: 650px) {
-    .digimon-forums-grid {grid-template-columns: 1fr; padding: 1.0714rem;}
-    .digimon-forums-grid > .digimon-forum-card {grid-column: span 1 !important;}
-    .digimon-forum-card:has(.rsingleforum) .rforimg, .digimon-forum-card:has(.rimageforum) .rforimg {width: 100%; opacity: .5;}
-    .digimon-forum-card:has(.rsingleforum) .rfordesc, .digimon-forum-card:has(.rimageforum) .rfordesc {width: 100%; margin-left: 0; padding: 5rem 1.4286rem 1.4286rem;}
-    .digimon-forum-card:has(.rsingleforum) .rforlinks {padding-left: 1.4286rem;}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media screen and (max-width: 700px) {.digimon-index {
+    padding: 15px 0 30px;
+}
+    .digimon-index-tools {
+    flex-direction: column;
+    align-items: stretch;
+}
+    .digimon-tools-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+    .digimon-mark-read {
+    justify-content: center;
+}
+    .digimon-category-header {
+    padding: 17px;
+}
+    .digimon-category-title h2 {
+    font-size: 1.5rem;
+}
+    .digimon-category-status {
+    display: none;
+}
+    .digimon-forums-grid {
+    padding: 15px;
+    gap: 15px;
+}
+    .digimon-forum-name a.forumtitle {
+    font-size: 1.0714rem;
+}
+    .digimon-forum-bottom {
+    flex-wrap: wrap;
+}
+    .digimon-forum-stat {
+    width: 50%;
+    min-height: 50px;
+}
+    .digimon-forum-lastpost {
+    width: 100%;
+    flex-basis: 100%;
+}
+    .digimon-index-footer {
+    flex-direction: column;
+    align-items: stretch;
+}
+    .digimon-footer-links {
+    justify-content: center;
+}
+    .digimon-delete-cookies {
+    justify-content: center;
+}
 }
 @media screen and (max-width: 450px) {
-    .digimon-category-icon {width: 2.7143rem; height: 2.7143rem; font-size: 1.1429rem;}
-    .digimon-category-title h2 {font-size: 1.2857rem;}
-    .digimon-category-label {font-size: .5rem; letter-spacing: .0714rem;}
-    .digimon-forum-heading {padding: .9286rem;}
-    .digimon-forum-description .rfordesc {padding: 4.6429rem 1.0714rem 1.0714rem; font-size: .7143rem;}
-    .digimon-forum-description .rforlinks {padding: 0 1.0714rem 1.0714rem;}
+    .digimon-category-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1429rem;
 }
-
-/* ETIQUETAS DIGITALES DE LAS DESCRIPCIONES */
+    .digimon-category-title h2 {
+    font-size: 1.2857rem;
+}
+    .digimon-category-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.0714rem;
+}
+    .digimon-forum-heading {
+    padding: 13px;
+}
+    .digimon-forum-description .rfordesc {
+    padding: 65px 15px 15px;
+    font-size: 0.7143rem;
+}
+    .digimon-forum-description .rforlinks {
+    padding: 0 15px 15px;
+}
+}
+/* =========================================================
+   ETIQUETAS DIGITALES DE LAS DESCRIPCIONES
+   ========================================================= */
 .digimon-description-label {
     position: relative;
     display: inline-block;
-    margin-bottom: .7143rem;
-    padding: .3571rem .5714rem;
-    border-left: .2143rem solid var(--linkc1);
+    margin-bottom: 10px;
+    padding: 5px 8px;
+    border-left: 3px solid var(--linkc1);
     color: var(--linkc1);
-    font: 700 .5714rem/1.2 "Oxanium", monospace;
-    letter-spacing: .0714rem;
+    font: 700 0.5714rem/1.2 "Oxanium", monospace;
+    letter-spacing: 0.0714rem;
     text-transform: uppercase;
 }
-.rdoubleforum .digimon-description-label {border-left-color: var(--linkc2); color: var(--linkc2);}
+
+.rdoubleforum .digimon-description-label {
+    border-left-color: var(--linkc2);
+    color: var(--linkc2);
+}
 
 /* =========================================================
    DIGIMON NETWORK   STATISTICS SYSTEM   CONTENEDOR PRINCIPAL
@@ -6627,69 +6913,325 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 }
 
 /* =========================================================
-   DIGITAL RIFT — VARIANTE ASIMÉTRICA
-   Una tarjeta principal a la izquierda y dos tarjetas a la derecha.
-   La imagen de Ambientación conserva una sola regla de posicionamiento.
+   DIGITAL RIFT — AJUSTE DEFINITIVO DE TARJETAS
    ========================================================= */
+
+/* Tarjeta */
+.digimon-forum-card {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.digimon-forum-card .digimon-forum-content {
+    flex: 1 1 auto !important;
+}
+/* El contenido ocupa el espacio disponible */
+
+/* =========================================================
+   RLINKFORUM — FOROS BASADOS EN ENLACES
+   ========================================================= */
+.forabg .rlinkforum .rfordesc {
+    width: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) {
+    align-self: stretch !important;
+}
+.digimon-forum-card:has(.rlinkforum) .rlinkforum {
+    min-height: 170px !important;
+    height: auto !important;
+}
+.digimon-forum-card:has(.rlinkforum) .rlinkforum .rfordesc {
+    flex: 1;
+}
+/* =========================================================
+   SINGLE / DOUBLE / TRIPLE
+   ELIMINAR ALTURA Y ESPACIO RESERVADO
+   ========================================================= */
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-content, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-content, .digimon-forum-card:has(.rtripleforum) .digimon-forum-content {
+    min-height: 0 !important;
+}
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-description, .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.digimon-forum-description .rsingleforum, .digimon-forum-description .rdoubleforum, .digimon-forum-description .rtripleforum {
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.digimon-forum-content > br, .digimon-forum-description br {display: none !important;}/*ELIMINAR SALTOS AUTOMÁTICOS*/
+/* =========================================================
+   IGUALAR LA ZONA VISUAL
+   ========================================================= */
+.digimon-forum-card:has(.rsingleforum) .digimon-forum-description, .digimon-forum-card:has(.rdoubleforum) .digimon-forum-description, .digimon-forum-card:has(.rtripleforum) .digimon-forum-description {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+}
+
+/* =========================================================
+   CONTENIDO INTERNO
+   ========================================================= */
+.digimon-forum-card:has(.rsingleforum) .rsingleforum, .digimon-forum-card:has(.rdoubleforum) .rdoubleforum, .digimon-forum-card:has(.rtripleforum) .rtripleforum {
+    min-height: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-bottom {flex-shrink: 0 !important;}/*ESTADÍSTICAS*/
+.digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .rdoubleforum {min-height: 230px !important;}/*RDOUBLE NORMAL*/
+/* =========================================================
+   RLINKFORUM — ALTURA FINAL
+   ========================================================= */
+.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rfordesc {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    flex: 1 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+.digimon-forum-card:has(.rlinkforum) .rdoubleforum.rlinkforum .rforlinks {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* =========================================================
+   AJUSTE FINAL — TIENDA + NORMAS & SISTEMAS
+   ========================================================= */
+/* La zona de descripción se convierte en el contenedor que permite que el foro visual rellene todo su espacio */
+/* La zona de descripción permite que todos los tipos de foro rellenen su espacio */
+.digimon-forum-description:has(.rsingleforum), .digimon-forum-description:has(.rdoubleforum), .digimon-forum-description:has(.rtripleforum) {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* TIENDA — el doble normal rellena toda la zona visual */
+.digimon-forum-description > .rdoubleforum:not(.rlinkforum) {
+    flex: 1 1 auto !important;
+    min-height: 230px !important;
+}
+
+/* NORMAS & SISTEMAS — el rlink rellena toda la zona visual */
+.digimon-forum-description > .rdoubleforum.rlinkforum {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+}
+
+.digimon-lastpost-user strong {
+    display: block !important;
+    margin-top: 2px !important;
+}
+/* =========================================================
+   DIGITAL RIFT — VARIANTE ASIMÉTRICA   1 FORO IZQUIERDA + 2 FOROS DERECHA
+   ========================================================= */
+/* ---------------------------------------------------------
+   CONTENEDOR DE LA COMPOSICIÓN
+   --------------------------------------------------------- */
 .digimon-forums-grid:has(.rasymforum) {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-auto-rows: minmax(0, auto);
-    gap: 1.2857rem;
+    gap: 18px;
     align-items: stretch;
     position: relative;
     overflow: visible;
 }
-.digimon-forum-card:has(.rasymforum) {
-    position: relative;
-    z-index: 5;
-    overflow: visible !important;
-}
+
+/* ---------------------------------------------------------
+   CONTENIDO DEL FORO PRINCIPAL
+   --------------------------------------------------------- */
+
 .digimon-forum-card:has(.rasymforum) .digimon-forum-content {
-    position: relative;
     height: 100%;
-    min-height: 37.1429rem !important;
+    min-height: 520px !important;
+    position: relative;
     overflow: visible !important;
 }
+
+/* ---------------------------------------------------------
+   ZONA INTERNA DEL FORO PRINCIPAL
+   --------------------------------------------------------- */
 .digimon-forum-card:has(.rasymforum) .rasymforum {
     position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 100% !important;
-    height: 100%;
-    min-height: 37.1429rem;
     overflow: visible !important;
     background: var(--colorfondo4);
-    background-size: 100% auto !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
 }
+
+/* ---------------------------------------------------------
+   IMAGEN SUPERPUESTA
+   --------------------------------------------------------- */
 .digimon-forum-card:has(.rasymforum) .rforimg {
     position: absolute;
-    top: -2.5rem;
-    left: 18%;
+    top: 0;
+    left: 25%;
     width: 150%;
     height: 100%;
     background-size: contain;
-    background-position: center top;
+    background-position: center right;
     background-repeat: no-repeat;
     opacity: 1;
     z-index: 5;
     pointer-events: none;
     transition: transform .6s ease, opacity .6s ease;
 }
-.digimon-forum-card:has(.rasymforum) .rforimg::before,
-.digimon-forum-card:has(.rasymforum) .rforimg::after {opacity: 0;}
+
+/* Quitamos los degradados originales de la imagen   para comprobar primero la superposición pura */
+.digimon-forum-card:has(.rasymforum) .rforimg::before, .digimon-forum-card:has(.rasymforum) .rforimg::after {
+    opacity: 0;
+}
+
+/* ---------------------------------------------------------
+   TEXTO DEL FORO PRINCIPAL
+   --------------------------------------------------------- */
 .digimon-forum-card:has(.rasymforum) .rfordesc {
     position: relative;
     z-index: 6;
     width: 100%;
     margin: 0;
-    padding: 21.4286rem 1.4286rem 1.4286rem;
+    padding: 260px 20px 20px;
     box-sizing: border-box;
     background: linear-gradient(180deg, transparent 0%, var(--colorfondo4) 65%);
 }
-.digimon-forum-card:has(.rasymforum) .rforlinks {position: relative; z-index: 7;}
+
+/* ---------------------------------------------------------
+   ENLACES
+   --------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------
+   LOS DOS FOROS DE LA DERECHA
+   --------------------------------------------------------- */
+/* Primer foro de la derecha */
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card {
+    grid-column: 3 / span 4 !important;
+    grid-row: 1 !important;
+    min-width: 0;
+    min-height: 251px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Segundo foro de la derecha */
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {
+    grid-column: 3 / span 4 !important;
+    grid-row: 2 !important;
+    min-width: 0;
+    min-height: 251px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------------------------------------------------------
+   ALTURA DE LOS FOROS DERECHOS
+   --------------------------------------------------------- */
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card .digimon-forum-content, .digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card .digimon-forum-content {
+    min-height: 251px !important;
+    height: 100%;
+}
+
+
+/*EVITAR QUE EL HOVER DE LA TARJETA DEFORME   LA COMPOSICIÓN*/
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+@media screen and (max-width: 1000px) {
+
+    .digimon-forums-grid:has(.rasymforum) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+    .digimon-forum-card:has(.rasymforum) {
+    grid-column: 1 / span 2 !important;
+    grid-row: 1 !important;
+    min-height: 420px;
+}
+
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card {
+    grid-column: 1 / span 2 !important;
+    grid-row: 2 !important;
+}
+
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card
+    + .digimon-forum-card {
+    grid-column: 1 / span 2 !important;
+    grid-row: 3 !important;
+}
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .digimon-forums-grid:has(.rasymforum) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+    .digimon-forum-card:has(.rasymforum),
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card,
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card
+    + .digimon-forum-card {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-height: 300px;
+}
+
+    .digimon-forum-card:has(.rasymforum) {
+    min-height: 380px;
+}
+
+    .digimon-forum-card:has(.rasymforum) .rasymforum {
+    min-height: 380px;
+}
+
+    .digimon-forum-card:has(.rasymforum) .rforimg {
+    left: 0;
+    width: 100%;
+    opacity: .55;
+}
+
+}
+/* =========================================================
+   RASYMFORUM — IMAGEN DECORATIVA SUPERPUESTA
+   ========================================================= */
+
+/* Permitimos que la composición pueda dejar salir
+   la imagen fuera de la tarjeta izquierda */
+.digimon-forum-card:has(.rasymforum) {
+    overflow: visible !important;
+    position: relative;
+    z-index: 4;
+}
+
+/* El contenedor del foro también debe permitir
+   que la imagen sobresalga */
+
+
+/* ---------------------------------------------------------
+   NUEVA IMAGEN SUPERPUESTA 
+   --------------------------------------------------------- */
 .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
     position: absolute;
     top: -54%;
@@ -6703,45 +7245,180 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     pointer-events: none;
     opacity: 1;
 }
-.digimon-forum-card:has(.rasymforum):hover {transform: none;}
-.digimon-forum-card:has(.rasymforum) + .digimon-forum-card,
-.digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {
+
+/* ---------------------------------------------------------
+   LOS CONTENIDOS DEL FORO QUEDAN DEBAJO DE LA IMAGEN
+   --------------------------------------------------------- */
+.digimon-forum-card:has(.rasymforum) .rfordesc {
     position: relative;
-    min-width: 0;
-    min-height: 17.9286rem;
-    z-index: 2;
-}
-.digimon-forum-card:has(.rasymforum) + .digimon-forum-card {grid-column: 3 / span 4 !important; grid-row: 1 !important;}
-.digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {grid-column: 3 / span 4 !important; grid-row: 2 !important;}
-.digimon-forum-card:has(.rasymforum) + .digimon-forum-card .digimon-forum-content,
-.digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card .digimon-forum-content {
-    position: relative;
-    min-height: 17.9286rem !important;
-    height: 100%;
-    z-index: 2;
-}
-@media screen and (max-width: 1000px) {
-    .digimon-forums-grid:has(.rasymforum) {grid-template-columns: repeat(2, minmax(0, 1fr));}
-    .digimon-forum-card:has(.rasymforum) {grid-column: 1 / span 2 !important; grid-row: 1 !important; min-height: 30rem;}
-    .digimon-forum-card:has(.rasymforum) + .digimon-forum-card {grid-column: 1 / span 2 !important; grid-row: 2 !important;}
-    .digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {grid-column: 1 / span 2 !important; grid-row: 3 !important;}
-    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {left: 45%; width: 80%; height: 100%; opacity: .8;}
-}
-@media screen and (max-width: 650px) {
-    .digimon-forums-grid:has(.rasymforum) {grid-template-columns: 1fr; gap: 1.0714rem;}
-    .digimon-forum-card:has(.rasymforum),
-    .digimon-forum-card:has(.rasymforum) + .digimon-forum-card,
-    .digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {
-        grid-column: 1 !important;
-        grid-row: auto !important;
-        min-height: 21.4286rem;
-    }
-    .digimon-forum-card:has(.rasymforum) {min-height: 27.1429rem; overflow: hidden !important;}
-    .digimon-forum-card:has(.rasymforum) .rasymforum {min-height: 27.1429rem;}
-    .digimon-forum-card:has(.rasymforum) .rforimg {left: 0; width: 100%; opacity: .55;}
-    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {left: 20%; top: 5%; width: 80%; height: 90%; opacity: .35;}
+    z-index: 6;
 }
 
+
+/* ---------------------------------------------------------
+   LOS FOROS DE LA DERECHA QUEDAN DEBAJO DE LA IMAGEN
+   --------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+@media screen and (max-width: 1000px) {
+    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+    left: 45%;
+    width: 80%;
+    height: 100%;
+    opacity: .8;
+}
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .digimon-forum-card:has(.rasymforum) {
+    overflow: hidden !important;
+}
+
+    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+    left: 20%;
+    top: 5%;
+    width: 80%;
+    height: 90%;
+    opacity: .35;
+}
+
+}
+/* =========================================================
+   RASYMFORUM — LIBERAR IMAGEN SUPERPUESTA
+   ========================================================= */
+.digimon-forum-card:has(.rasymforum) .digimon-forum-description {
+    overflow: visible !important;
+}
+
+/* =========================================================
+   RASYMFORUM — COMPOSICIÓN CON IMAGEN SUPERPUESTA
+   ========================================================= */
+/* La tarjeta izquierda puede dejar salir la imagen */
+.digimon-forum-card:has(.rasymforum) {
+    position: relative;
+    overflow: visible !important;
+    z-index: 5;
+}
+
+/* El contenido interno también */
+.digimon-forum-card:has(.rasymforum) .rasymforum {
+    position: relative;
+    overflow: visible !important;
+}
+
+/* ---------------------------------------------------------
+   EL CONTENIDO DE LA TARJETA IZQUIERDA   SE ADAPTA AL ESPACIO DE LA IMAGEN
+   --------------------------------------------------------- */
+.digimon-forum-card:has(.rasymforum) .rfordesc {
+    position: relative;
+    z-index: 6;
+    padding-top: 255px;
+}
+
+/* Los enlaces permanecen por encima de la imagen */
+
+
+/* ---------------------------------------------------------
+   LOS DOS FOROS DERECHOS
+   --------------------------------------------------------- */
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card, .digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------------------------------------------------------
+   SUS CONTENIDOS NO SE ALTERAN:   SOLO DEJAMOS QUE CULUMON PUEDA PASAR POR ENCIMA
+   --------------------------------------------------------- */
+.digimon-forum-card:has(.rasymforum) + .digimon-forum-card .digimon-forum-content, .digimon-forum-card:has(.rasymforum) + .digimon-forum-card + .digimon-forum-card .digimon-forum-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------------------------------------------------------
+   LA TARJETA IZQUIERDA NO SE DESPLAZA AL HACER HOVER
+   --------------------------------------------------------- */
+.digimon-forum-card:has(.rasymforum):hover {
+    transform: none;
+}
+/* =========================================================
+   RASYMFORUM — RECOLOCACIÓN DE LOS ELEMENTOS INFERIORES
+   ========================================================= */
+
+/* IMAGEN DE FONDO DEL FORO IZQUIERDO */
+.digimon-forum-card:has(.rasymforum) .rforimg {
+    top: 35%;
+    left: 25%;
+    width: 150%;
+    height: 65%;
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+/* TEXTO — LO BAJAMOS A LA ZONA INFERIOR */
+.digimon-forum-card:has(.rasymforum) .rfordesc {
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    margin: 0;
+    padding: 300px 20px 20px;
+    box-sizing: border-box;
+}
+
+/* ENLACES */
+.digimon-forum-card:has(.rasymforum) .rforlinks {
+    position: relative;
+    z-index: 7;
+}
+/* =========================================================
+   RASYMFORUM — AJUSTE DE LA IMAGEN DE AMBIENTACIÓN
+   ========================================================= */
+.digimon-forum-card:has(.rasymforum) .rforimg {
+    top: 25%;
+    left: 18%;
+    width: 120%;
+    height: 48%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+/* =========================================================
+   AMBIENTACIÓN — RECOLOCACIÓN DE LA IMAGEN
+   ========================================================= */
+.digimon-forum-card:has(.rasymforum) .rforimg {
+    position: absolute !important;
+    /* SUBIR / BAJAR LA IMAGEN */ top: -35px !important;
+    /* MOVERLA HORIZONTALMENTE */ left: 18% !important;
+    /* TAMAÑO */ width: 150% !important;
+    height: 100% !important;
+    background-size: contain !important;
+    /* Punto de anclaje de la imagen */ background-position: center top !important;
+    background-repeat: no-repeat !important;
+    opacity: 1 !important;
+    z-index: 5 !important;
+    pointer-events: none !important;
+}
+/* =========================================================
+   DIGITAL RIFT — IMAGEN DE AMBIENTACIÓN
+   ========================================================= */
+
+.digimon-forum-card:has(.rasymforum) .rasymforum {
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+}
+.digimon-forum-card:has(.rasymforum) {
+    overflow: visible;
+}
 /* ==========================================================
    DIGITAL RIFT — ESCALA DE ACCESIBILIDAD DEL TABLÓN   PRUEBA CONTROLADA
    ========================================================== */
@@ -10571,6 +11248,12 @@ p.right.rightside, p:has(+ h1.page-title) {
 }
 
 
+/* =========================================================
+   IMAGEN PERSONALIZADA DEL FORO
+   ========================================================= */
+.digimon-forum-card:has(.digimon-forum-custom-image) {
+    overflow: visible;
+}
 
 
 /* =========================================================
@@ -11214,7 +11897,7 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
 /* =========================================================
    IMAGEN PERSONALIZADA DEL FORO
    ========================================================= */
-.digimon-forum-card:has(.digimon-forum-custom-image) {overflow: visible; border-radius: var(--digimon-radius);}
+.digimon-forum-card:has(.digimon-forum-custom-image) {overflow: visible;}
 .digimon-forum-custom-image {
     position: absolute;
     top: -3.5rem;
@@ -11289,16 +11972,6 @@ body.light-mode .digimon-forum-card {
     background: linear-gradient(135deg, var(--theme-panel), var(--theme-panel-alt));
     border: 1px solid var(--emblema2) !important;
     box-shadow: 0 8px 25px color-mix(in srgb, var(--theme-text) 10%, transparent);
-}
-
-body.light-mode .digimon-forum-card:has(.rimageforum) {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-}
-body.light-mode .digimon-forum-card:has(.rimageforum) .digimon-forum-content {
-    background: linear-gradient(90deg, var(--theme-panel-alt), transparent);
-    border-color: var(--theme-border);
 }
 
 body.light-mode .digimon-forum-card:hover {
