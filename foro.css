@@ -4967,7 +4967,8 @@ blockquote blockquote {
 .digimon-forum-card:has(.rimageforum) {
     background: transparent;
     border: 0;
-    overflow: visible;
+    border-radius: var(--digimon-radius);
+    overflow: hidden;
     box-shadow: none;
 }
 
