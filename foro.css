@@ -6955,10 +6955,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     padding-bottom: 0 !important;
 }
 
-.digimon-forum-content > br, .digimon-forum-description br {
-    display: none !important;
-}
-/*ELIMINAR SALTOS AUTOMÁTICOS*/
+.digimon-forum-content > br, .digimon-forum-description br {display: none !important;}/*ELIMINAR SALTOS AUTOMÁTICOS*/
 /* =========================================================
    IGUALAR LA ZONA VISUAL
    ========================================================= */
@@ -6975,15 +6972,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     flex: 1 1 auto !important;
 }
 
-.digimon-forum-card:has(.rdoubleforum) .digimon-forum-bottom {
-    flex-shrink: 0 !important;
-}
-/*ESTADÍSTICAS*/
-.digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .rdoubleforum {
-    min-height: 230px !important;
-}
-/*RDOUBLE NORMAL*/
-
+.digimon-forum-card:has(.rdoubleforum) .digimon-forum-bottom {flex-shrink: 0 !important;}/*ESTADÍSTICAS*/
+.digimon-forum-card:has(.rdoubleforum:not(.rlinkforum)) .rdoubleforum {min-height: 230px !important;}/*RDOUBLE NORMAL*/
 /* =========================================================
    RLINKFORUM — ALTURA FINAL
    ========================================================= */
@@ -7011,7 +7001,6 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* =========================================================
    AJUSTE FINAL — TIENDA + NORMAS & SISTEMAS
    ========================================================= */
-
 /* La zona de descripción se convierte en el contenedor que permite que el foro visual rellene todo su espacio */
 /* La zona de descripción permite que todos los tipos de foro rellenen su espacio */
 .digimon-forum-description:has(.rsingleforum), .digimon-forum-description:has(.rdoubleforum), .digimon-forum-description:has(.rtripleforum) {
@@ -7030,22 +7019,15 @@ form[name="post"]:not(#quick_reply) #textarea_content {
     flex: 1 1 auto !important;
     min-height: 0 !important;
 }
-.digimon-forum-description .rdoubleforum .rforimg::after {
-/*   background: linear-gradient( 180deg, var(--colorfondo4) 0%, transparent 55%, var(--colorfondo4) 100% ) !important; */
-}
 
-.digimon-forum-description .rdoubleforum .rfordesc {
-    flex: 1 1 auto !important;
-}
+.digimon-forum-description .rdoubleforum .rfordesc, .digimon-forum-description .rtripleforum .rfordesc {flex: 1 1 auto !important;}
 .digimon-lastpost-user strong {
     display: block !important;
     margin-top: 2px !important;
 }
 /* =========================================================
-   DIGITAL RIFT — VARIANTE ASIMÉTRICA
-   1 FORO IZQUIERDA + 2 FOROS DERECHA
+   DIGITAL RIFT — VARIANTE ASIMÉTRICA   1 FORO IZQUIERDA + 2 FOROS DERECHA
    ========================================================= */
-
 /* ---------------------------------------------------------
    CONTENEDOR DE LA COMPOSICIÓN
    --------------------------------------------------------- */
