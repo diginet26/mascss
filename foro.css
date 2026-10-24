@@ -11256,9 +11256,17 @@ p.right.rightside, p:has(+ h1.page-title) {
 
 /* =========================================================
    IMAGEN PERSONALIZADA DEL FORO
+   La ilustración puede sobresalir sin perder las esquinas del contenido.
    ========================================================= */
 .digimon-forum-card:has(.digimon-forum-custom-image) {
     overflow: visible;
+}
+.digimon-forum-card:has(.digimon-forum-custom-image)::before {
+    border-radius: var(--digimon-radius) var(--digimon-radius) 0 0;
+}
+.digimon-forum-card:has(.digimon-forum-custom-image) .digimon-forum-content {
+    border-radius: calc(var(--digimon-radius) - 1px);
+    overflow: hidden;
 }
 
 
@@ -11901,9 +11909,8 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
 }
 
 /* =========================================================
-   IMAGEN PERSONALIZADA DEL FORO
+   DIMENSIONES DE LAS IMÁGENES PERSONALIZADAS DEL FORO
    ========================================================= */
-.digimon-forum-card:has(.digimon-forum-custom-image) {overflow: visible;}
 .digimon-forum-custom-image {
     position: absolute;
     top: -3.5rem;
