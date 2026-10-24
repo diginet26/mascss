@@ -1,0 +1,1409 @@
+/* ============================================================
+   DIGITAL RIFT — MAPA HÍBRIDO
+   Base: header / controles / panel de información del MAPA 1
+   Terreno / montañas / caminos inspirados en MAPA 2
+   ============================================================ */
+
+#dr-map{
+    --blue:#1677C8;
+    --cyan:#35D8FF;
+    --green:#6f8f62;
+    --green-dark:#38564e;
+    --dark:#08131b;
+    --dark2:#101c24;
+    --panel:#0c1720;
+    --line:rgba(53,216,255,.28);
+    --text:#dceaf4;
+    --muted:#7890a3;
+
+    width:calc(100vw - 2rem);
+    max-width:none;
+    height:calc(100dvh - 2rem);
+    min-height:38rem;
+    margin:1rem 0 1rem calc(50% - 50vw + 1rem);
+    box-sizing:border-box;
+    font-size:1rem;
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+    background:#071019;
+    border:1px solid rgba(53,216,255,.25);
+    box-shadow:0 0 40px rgba(0,0,0,.45);
+    overflow:hidden;
+    position:relative;
+    isolation:isolate;
+}
+
+/* ============================================================
+   CABECERA
+   ============================================================ */
+
+.dr-map-header{
+    min-height:95px;
+    padding:22px 28px;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    border-bottom:1px solid var(--line);
+    background:
+        linear-gradient(90deg,
+            rgba(22,119,200,.18),
+            transparent 45%,
+            rgba(53,216,255,.08));
+    position:relative;
+    z-index:100;
+}
+
+/* Enlace de retorno al foro, centrado en el espacio reservado del encabezado. */
+.dr-map-forum-link{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:min(24.375rem,35vw);
+    min-height:2.5rem;
+    padding:.65rem 1rem;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(53,216,255,.7);
+    background:rgba(4,13,21,.78);
+    color:#dceaf4;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:.16rem;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    box-shadow:0 0 16px rgba(53,216,255,.10),inset 0 0 14px rgba(53,216,255,.035);
+    transition:background .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease;
+}
+
+.dr-map-forum-link:hover,
+.dr-map-forum-link:focus-visible{
+    border-color:var(--cyan);
+    background:rgba(22,119,200,.22);
+    color:#fff;
+    box-shadow:0 0 18px rgba(53,216,255,.2),inset 0 0 16px rgba(53,216,255,.06);
+    outline:none;
+}
+
+.dr-map-title{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.dr-map-logo{
+    width:52px;
+    height:52px;
+    border:1px solid var(--cyan);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:var(--cyan);
+    background:rgba(53,216,255,.06);
+    box-shadow:0 0 18px rgba(53,216,255,.18);
+}
+
+.dr-map-title h1{
+    margin:0;
+    font-size:25px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:700;
+}
+
+.dr-map-title span{
+    display:block;
+    margin-top:5px;
+    color:var(--muted);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.dr-map-status{
+    font-family:monospace;
+    font-size:10px;
+    color:#6ee8ff;
+    letter-spacing:1px;
+    text-align:right;
+}
+
+.dr-map-status b{color:#fff}
+
+/* ============================================================
+   CONTROLES
+   ============================================================ */
+
+.dr-map-controls{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 18px;
+    border-bottom:1px solid rgba(53,216,255,.14);
+    background:rgba(4,10,16,.82);
+    flex-wrap:wrap;
+    position:relative;
+    z-index:100;
+}
+
+.dr-map-search{
+    flex:1 1 220px;
+    min-width:180px;
+}
+
+.dr-map-search input{
+    width:100%;
+    box-sizing:border-box;
+    padding:10px 13px;
+    border:1px solid rgba(53,216,255,.2);
+    background:#08111a;
+    color:#fff;
+    outline:none;
+    font-size:11px;
+}
+
+.dr-map-search input:focus{
+    border-color:var(--cyan);
+    box-shadow:0 0 10px rgba(53,216,255,.12);
+}
+
+.dr-filter{
+    border:1px solid rgba(53,216,255,.2);
+    background:#08111a;
+    color:#9eb5c6;
+    padding:10px 12px;
+    font-size:10px;
+    cursor:pointer;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:.2s;
+}
+
+.dr-filter:hover,
+.dr-filter.active{
+    color:#fff;
+    border-color:var(--cyan);
+    background:rgba(22,119,200,.2);
+}
+
+/* ============================================================
+   ÁREA DEL MAPA
+   ============================================================ */
+
+.dr-map-workspace{
+    height:auto;
+    flex:1 1 auto;
+    min-height:0;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(17rem,20.625rem);
+}
+
+.dr-map-area{
+    position:relative;
+    min-width:0;
+    min-height:0;
+    overflow:hidden;
+    background:
+        radial-gradient(ellipse at center,rgba(53,216,255,.08),transparent 58%),
+        linear-gradient(rgba(53,216,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(53,216,255,.035) 1px,transparent 1px),
+        #071019;
+    background-size:auto,40px 40px,40px 40px;
+    cursor:grab;
+}
+
+.dr-map-area.dragging{cursor:grabbing}
+
+.dr-map-canvas{
+    position:absolute;
+    width:1500px;
+    height:900px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) scale(1);
+    transform-origin:center;
+    transition:transform .08s linear;
+}
+
+/* ============================================================
+   AGUA / ATMÓSFERA DIGITAL
+   ============================================================ */
+
+.dr-water-grid{
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 50%,rgba(53,216,255,.08),transparent 45%);
+    pointer-events:none;
+}
+
+/* ============================================================
+   TERRENO — SISTEMA DR.LAND v2
+   Las masas de tierra tienen costa irregular, capas interiores,
+   textura digital y líneas topográficas.
+
+   Para crear una zona nueva:
+   <div class="dr-land dr-land-custom"
+        style="left:...;top:...;width:...;height:..."></div>
+
+   Puedes combinar:
+   dr-land-main
+   dr-land-north
+   dr-land-island
+   dr-land-island small
+   ============================================================ */
+
+.dr-land{
+    position:absolute;
+    z-index:1;
+    overflow:visible;
+    border:2px solid rgba(18,48,48,.92);
+    box-shadow:
+        0 10px 22px rgba(0,0,0,.30),
+        0 0 0 5px rgba(23,65,67,.08),
+        inset 0 0 55px rgba(10,33,29,.18);
+    background:
+        radial-gradient(ellipse at 28% 25%,rgba(164,185,119,.42),transparent 23%),
+        radial-gradient(ellipse at 73% 68%,rgba(47,82,63,.40),transparent 34%),
+        radial-gradient(ellipse at 48% 48%,rgba(115,145,88,.34),transparent 48%),
+        linear-gradient(145deg,#819c69 0%,#698657 42%,#506f50 72%,#3e5b49 100%);
+    clip-path:polygon(
+        5% 18%, 12% 10%, 23% 12%, 31% 5%, 43% 10%, 53% 7%,
+        62% 13%, 74% 9%, 86% 17%, 94% 28%, 91% 39%, 97% 49%,
+        91% 59%, 94% 70%, 85% 79%, 77% 91%, 65% 87%, 54% 95%,
+        43% 89%, 31% 94%, 21% 86%, 11% 88%, 13% 77%, 5% 68%,
+        9% 57%, 3% 46%, 9% 35%
+    );
+}
+
+.dr-land::before{
+    content:"";
+    position:absolute;
+    inset:9px;
+    opacity:.55;
+    pointer-events:none;
+    background:
+        repeating-radial-gradient(
+            ellipse at 50% 50%,
+            transparent 0 30px,
+            rgba(23,62,56,.18) 31px 33px,
+            transparent 34px 61px
+        );
+    clip-path:inherit;
+}
+
+.dr-land::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.26;
+    background:
+        linear-gradient(115deg,transparent 0 20%,rgba(216,231,176,.10) 21% 22%,transparent 23% 100%),
+        linear-gradient(25deg,transparent 0 47%,rgba(13,48,48,.13) 48% 49%,transparent 50% 100%),
+        repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 13px);
+    mix-blend-mode:screen;
+}
+
+/* ============================================================
+   SILUETA BASE — ARCHIPIÉLAGO DE DIGITAL RIFT
+   Una masa principal alargada, irregular y con un estrechamiento
+   central. Las ubicaciones y fronteras permanecen en sus
+   coordenadas actuales por ahora.
+   ============================================================ */
+
+.dr-land-north,
+.dr-land-island,
+.dr-land-island.small{
+    display:none;
+}
+
+.dr-land-main{
+    /* Silueta reconstruida siguiendo la referencia: costa norte ancha,
+       cuello central, gran masa occidental intermedia y extremo sureste. */
+    left:350px;
+    top:-95px;
+    width:800px;
+    height:1510px;
+    transform:rotate(-7deg);
+    background:
+        radial-gradient(ellipse at 58% 13%,rgba(183,199,143,.42),transparent 19%),
+        radial-gradient(ellipse at 34% 56%,rgba(126,157,94,.42),transparent 24%),
+        radial-gradient(ellipse at 72% 78%,rgba(177,169,113,.22),transparent 20%),
+        radial-gradient(ellipse at 63% 47%,rgba(49,86,61,.28),transparent 32%),
+        linear-gradient(145deg,#91a875 0%,#799763 26%,#6b8959 48%,#5b7a51 69%,#48684c 100%);
+    clip-path:polygon(
+        62.5% 0%, 68.8% 1.0%, 73.8% 2.1%, 78.8% .9%, 84.4% 2.3%,
+        87.5% 4.0%, 91.3% 4.6%, 94.4% 6.6%, 96.9% 9.3%, 98.1% 12.0%,
+        95.6% 14.4%, 93.8% 16.6%, 91.3% 18.5%, 89.4% 20.9%,
+        87.5% 22.8%, 85.0% 24.7%, 82.5% 26.6%, 80.6% 29.1%,
+        78.1% 31.0%, 75.0% 33.8%, 71.9% 35.8%, 68.8% 38.4%,
+        65.6% 40.4%, 62.5% 43.0%, 59.4% 45.0%, 56.9% 46.7%,
+        60.0% 48.0%, 63.1% 50.0%, 66.3% 52.5%, 68.8% 55.0%,
+        68.1% 57.6%, 65.6% 60.3%, 63.1% 63.0%, 60.6% 65.8%,
+        58.8% 68.8%, 56.3% 72.0%, 53.8% 75.2%, 51.3% 78.5%,
+        50.0% 81.1%, 50.6% 84.1%, 53.1% 87.0%, 56.3% 89.0%,
+        60.0% 91.4%, 63.1% 93.4%, 67.5% 95.0%, 71.3% 97.4%,
+        73.8% 100%, 70.0% 98.0%, 66.3% 96.0%, 63.1% 94.0%,
+        60.0% 92.7%, 56.9% 90.7%, 53.8% 88.7%, 51.3% 86.4%,
+        48.8% 84.4%, 46.3% 82.8%, 43.8% 80.8%, 41.3% 78.8%,
+        38.1% 76.8%, 35.6% 74.8%, 33.1% 72.8%, 31.3% 70.2%,
+        29.4% 67.5%, 28.1% 64.6%, 27.5% 61.6%, 28.1% 58.9%,
+        30.0% 56.3%, 32.5% 53.8%, 35.0% 51.8%, 37.5% 49.7%,
+        40.6% 48.0%, 43.8% 47.0%, 47.5% 46.5%, 51.3% 45.8%,
+        53.8% 44.3%, 51.9% 41.7%, 49.4% 39.1%, 47.5% 36.4%,
+        45.6% 33.8%, 43.8% 31.1%, 42.5% 28.5%, 42.5% 26.0%,
+        43.8% 23.4%, 45.6% 20.9%, 47.5% 18.5%, 49.4% 15.9%,
+        51.9% 13.2%, 54.4% 10.6%, 57.5% 8.0%, 60.0% 4.6%
+    );
+}
+
+.dr-land-main::before{
+    /* Líneas topográficas suaves; la máscara sigue exactamente la costa. */
+    background:
+        repeating-radial-gradient(
+            ellipse at 59% 43%,
+            transparent 0 34px,
+            rgba(23,62,56,.15) 35px 37px,
+            transparent 38px 68px
+        ),
+        radial-gradient(ellipse at 43% 28%,rgba(198,211,153,.10),transparent 24%),
+        radial-gradient(ellipse at 59% 73%,rgba(38,77,56,.14),transparent 25%);
+}
+
+/* Islotes periféricos: formas pequeñas y desiguales, no continentes redondos. */
+.dr-land-islet{
+    width:38px;
+    height:27px;
+    border-width:1px;
+    box-shadow:0 0 0 3px rgba(23,65,67,.07), inset 0 0 18px rgba(10,33,29,.15);
+    background:linear-gradient(145deg,#91a875 0%,#75935d 58%,#506f50 100%);
+    clip-path:polygon(7% 44%,18% 20%,34% 24%,43% 8%,58% 17%,72% 10%,91% 31%,97% 51%,82% 65%,74% 86%,57% 80%,43% 96%,28% 78%,12% 70%);
+}
+
+/* En esta fase solo necesitamos la silueta de la tierra; se retira el aro ovalado anterior. */
+.dr-land-waterline{
+    display:none;
+}
+
+
+/* ============================================================
+   BASE GEOGRÁFICA — TRAZADO DE REFERENCIA (v5)
+   Esta capa cambia exclusivamente la silueta verde. Los territorios,
+   rótulos, ríos, marcadores y controles conservan sus coordenadas.
+   ============================================================ */
+.dr-land-main,
+.dr-land-islet{
+    display:none !important;
+}
+
+.dr-land-archipelago{
+    position:absolute;
+    z-index:1;
+    left:130px;
+    top:-220px;
+    width:1250px;
+    height:1640px;
+    overflow:visible;
+    pointer-events:none;
+    filter:drop-shadow(0 10px 14px rgba(0,0,0,.22));
+}
+
+.dr-land-archipelago-islet{
+    fill:url(#drLandBaseGradient5);
+    stroke:#29483b;
+    stroke-width:2.2;
+    stroke-opacity:.78;
+    stroke-linejoin:round;
+}
+
+/* ============================================================
+   BIOMAS / MANCHAS DE TERRENO
+   Son decorativos: no son localizaciones.
+   ============================================================ */
+
+.dr-biome{
+    position:absolute;
+    z-index:2;
+    pointer-events:none;
+    opacity:.72;
+}
+
+.dr-biome.forest{
+    width:190px;
+    height:130px;
+    background:
+        radial-gradient(circle at 20% 30%,rgba(27,75,54,.48) 0 4%,transparent 5%),
+        radial-gradient(circle at 45% 60%,rgba(32,82,54,.42) 0 5%,transparent 6%),
+        radial-gradient(circle at 70% 30%,rgba(26,69,51,.46) 0 5%,transparent 6%),
+        radial-gradient(circle at 82% 72%,rgba(31,77,52,.42) 0 4%,transparent 5%);
+    border-radius:45% 55% 50% 40%;
+}
+
+/* Bosque de Granil: usa la misma base y el mismo hover que los bosques
+   territoriales del norte. La forma queda interactiva como las demás capas. */
+.dr-biome.forest.dr-biome-granil{display:none !important;}
+.dr-granil-forest-layer{
+    fill:rgba(48,125,83,.20);
+    stroke:rgba(17,54,55,.68);
+    stroke-width:2;
+    vector-effect:non-scaling-stroke;
+    stroke-linejoin:round;
+    pointer-events:fill;
+    cursor:pointer;
+    transition:fill .2s ease,stroke .2s ease,filter .2s ease,opacity .2s ease;
+}
+
+.dr-biome.desert{
+    width:230px;
+    height:120px;
+    background:
+        radial-gradient(ellipse at 40% 50%,rgba(177,157,91,.42),transparent 60%);
+    border-radius:50%;
+}
+
+.dr-biome.swamp{
+    width:170px;
+    height:120px;
+    background:
+        radial-gradient(ellipse,rgba(32,76,65,.46),transparent 68%);
+    border-radius:48% 52% 40% 60%;
+}
+
+/* ============================================================
+   MONTAÑAS — CORDILLERAS
+   ============================================================ */
+
+.dr-mountain{
+    position:absolute;
+    width:0;
+    height:0;
+    border-left:34px solid transparent;
+    border-right:34px solid transparent;
+    border-bottom:66px solid #354d45;
+    filter:
+        drop-shadow(4px 5px 0 rgba(28,43,40,.38))
+        drop-shadow(0 0 5px rgba(105,142,126,.10));
+    z-index:4;
+}
+
+.dr-mountain::before{
+    content:"";
+    position:absolute;
+    left:-25px;
+    top:24px;
+    width:0;
+    height:0;
+    border-left:25px solid transparent;
+    border-right:25px solid transparent;
+    border-bottom:45px solid #71836a;
+}
+
+.dr-mountain::after{
+    content:"";
+    position:absolute;
+    left:-7px;
+    top:42px;
+    width:0;
+    height:0;
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-bottom:18px solid rgba(205,216,178,.52);
+}
+
+.dr-mountain-range{
+    position:absolute;
+    z-index:4;
+    width:360px;
+    height:120px;
+    pointer-events:none;
+}
+
+.dr-mountain-range .peak{
+    position:absolute;
+    bottom:8px;
+    width:0;
+    height:0;
+    border-left:32px solid transparent;
+    border-right:32px solid transparent;
+    border-bottom:62px solid #354d45;
+    filter:drop-shadow(4px 5px 0 rgba(28,43,40,.32));
+}
+
+.dr-mountain-range .peak::after{
+    content:"";
+    position:absolute;
+    left:-20px;
+    top:25px;
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom:36px solid #71836a;
+}
+
+/* ============================================================
+   ZONAS TERRITORIALES — FRONTERAS NATURALES v4
+   Las regiones se dibujan como paths SVG. Las fronteras pueden
+   compartir exactamente los mismos puntos, permitiendo construir
+   un mapa territorial continuo sin huecos entre regiones.
+   ============================================================ */
+
+.dr-territory-map{
+    position:absolute;
+    inset:0;
+    width:1500px;
+    height:850px;
+    z-index:2;
+    overflow:visible;
+}
+
+.dr-territory{
+    cursor:pointer;
+    stroke:rgba(17,54,55,.68);
+    stroke-width:2;
+    vector-effect:non-scaling-stroke;
+    transition:fill .2s ease,stroke .2s ease,filter .2s ease,opacity .2s ease;
+}
+
+.dr-territory.t-forest{fill:rgba(48,125,83,.20)}
+.dr-territory.t-plains{fill:rgba(174,170,66,.16)}
+.dr-territory.t-mountain{fill:rgba(89,102,91,.19)}
+.dr-territory.t-desert{fill:rgba(190,145,65,.18)}
+.dr-territory.t-ruins{fill:rgba(135,95,145,.16)}
+.dr-territory.t-swamp{fill:rgba(42,121,113,.18)}
+
+.dr-territory:hover,
+.dr-territory.selected{
+    stroke:#63eaff;
+    stroke-width:3;
+    filter:drop-shadow(0 0 8px rgba(53,216,255,.25));
+}
+
+.dr-territory.selected{fill:rgba(53,216,255,.14)}
+
+.dr-territory.hidden{display:none}
+
+.dr-territory-boundary{
+    display:none !important; /* Ocultar temporalmente las líneas discontinuas interiores */
+    fill:none;
+    stroke:rgba(164,220,208,.32);
+    stroke-width:1.5;
+    stroke-dasharray:7 6;
+    vector-effect:non-scaling-stroke;
+    pointer-events:none;
+}
+
+/* Nombre geográfico discreto, en el mismo lenguaje visual que las etiquetas territoriales. */
+.dr-sierra-name{
+    fill:#d7f5f8;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-anchor:start;
+    paint-order:stroke;
+    stroke:rgba(3,13,19,.92);
+    stroke-width:3.4px;
+    stroke-linejoin:round;
+    pointer-events:none;
+    opacity:.94;
+}
+
+/* ============================================================
+   CORDILLERAS — TONO ROCOSO PERMANENTE Y HOVER INTENSIFICADO
+   El matiz marrón está siempre visible y gana intensidad al pasar
+   el cursor. Cada macizo conserva un único contorno exterior.
+   ============================================================ */
+.dr-mountain-contours .dr-mountain-zone{
+    fill: rgb(66 54 45 / 10%);
+    stroke:#684a32;
+    stroke-width:5.2;
+    stroke-opacity:.94;
+    pointer-events:fill;
+    cursor:default;
+    filter: drop-shadow(0 0 4px rgba(64, 44, 28, 1));
+    transition:fill .2s ease,stroke .2s ease,stroke-width .2s ease,filter .2s ease;
+}
+
+.dr-mountain-contours path:not(.dr-mountain-zone){pointer-events:none;}
+
+.dr-mountain-unit:hover .dr-mountain-zone{
+    fill:rgba(126,78,43,.27);
+    stroke:#53351f;
+    stroke-width:7;
+    filter:drop-shadow(0 0 9px rgba(120,72,38,.48));
+}
+
+.dr-territory-label-svg{
+    fill:#d7f5f8;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-anchor:middle;
+    paint-order:stroke;
+    stroke:rgba(3,13,19,.9);
+    stroke-width:4px;
+    stroke-linejoin:round;
+    pointer-events:none;
+}
+
+.dr-territory-code-svg{
+    fill:#68b5c5;
+    font-family:Arial,sans-serif;
+    font-size:8px;
+    letter-spacing:1.5px;
+    text-anchor:middle;
+    paint-order:stroke;
+    stroke:rgba(3,13,19,.9);
+    stroke-width:3px;
+    pointer-events:none;
+}
+
+.dr-territory-compass-note{
+    fill:rgba(142,216,224,.55);
+    font-family:Arial,sans-serif;
+    font-size:8px;
+    letter-spacing:1px;
+    pointer-events:none;
+}
+
+/* ============================================================
+   RÍOS Y LAGOS — CAPA HIDROGRÁFICA
+   SVG permite dibujar recorridos largos y editarlos con facilidad.
+   ============================================================ */
+
+.dr-hydrography{
+    position:absolute;
+    inset:0;
+    width:1500px;
+    height:850px;
+    z-index:3;
+    overflow:visible;
+    pointer-events:none;
+}
+
+.dr-river{
+    fill:none;
+    stroke:#3ecde5;
+    stroke-width:7;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    opacity:.56;
+    cursor:pointer;
+    pointer-events:stroke;
+    filter:drop-shadow(0 0 4px rgba(53,216,255,.22));
+    transition:.2s;
+}
+
+.dr-river.secondary{
+    stroke-width:4;
+    opacity:.43;
+}
+
+.dr-river:hover,
+.dr-river.selected{
+    stroke:#8cefff;
+    opacity:.92;
+    filter:drop-shadow(0 0 8px rgba(53,216,255,.55));
+}
+
+.dr-lake{
+    fill:rgba(34,158,184,.30);
+    stroke:#3ecde5;
+    stroke-width:3;
+    opacity:.72;
+    cursor:pointer;
+    pointer-events:all;
+    filter:drop-shadow(0 0 5px rgba(53,216,255,.15));
+    transition:.2s;
+}
+
+.dr-lake:hover,
+.dr-lake.selected{
+    fill:rgba(53,216,255,.48);
+    stroke:#9cefff;
+    filter:drop-shadow(0 0 9px rgba(53,216,255,.40));
+}
+
+.dr-water-label{
+    fill:#9befff;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    pointer-events:none;
+    opacity:.72;
+}
+
+.dr-hydrography.hidden{display:none}
+
+/* Se conservan los antiguos trazados, pero solo se muestra la hidrografía
+   recolocada en el desfiladero. */
+.dr-hydrography .dr-river:not(.dr-river-granil),
+.dr-hydrography .dr-lake:not(.dr-lake-granil),
+.dr-hydrography .dr-water-label{
+    display:none !important;
+}
+.dr-river.hidden,
+.dr-lake.hidden{display:none !important;}
+
+/* ============================================================
+   REGIONES
+   ============================================================ */
+
+.dr-region{
+    position:absolute;
+    border:1px dashed rgba(8,40,43,.18);
+    background:transparent;
+    pointer-events:none;
+}
+
+.dr-region-name{
+    position:absolute;
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:rgba(22,40,39,.62);
+    white-space:nowrap;
+    text-shadow:0 1px rgba(255,255,255,.25);
+}
+
+.region-forest{
+    left:315px;
+    top:175px;
+    width:330px;
+    height:250px;
+    border-radius:50%;
+}
+
+.region-plains{
+    left:610px;
+    top:225px;
+    width:310px;
+    height:240px;
+    border-radius:45%;
+}
+
+.region-mountain{
+    left:500px;
+    top:100px;
+    width:430px;
+    height:180px;
+    border-radius:50%;
+}
+
+.region-desert{
+    left:680px;
+    top:455px;
+    width:310px;
+    height:150px;
+    border-radius:50%;
+}
+
+.region-ruins{
+    left:315px;
+    top:475px;
+    width:330px;
+    height:130px;
+    border-radius:50%;
+}
+
+/* ============================================================
+   MONTAÑAS — PARTE DEL MAPA 2
+   Cada montaña es independiente y fácil de copiar.
+   ============================================================ */
+
+.dr-mountain{
+    position:absolute;
+    width:0;
+    height:0;
+    border-left:38px solid transparent;
+    border-right:38px solid transparent;
+    border-bottom:75px solid #354d45;
+    filter:drop-shadow(5px 6px 0 rgba(28,43,40,.38));
+    z-index:4;
+}
+
+.dr-mountain:after{
+    content:"";
+    position:absolute;
+    left:-25px;
+    top:22px;
+    width:0;
+    height:0;
+    border-left:25px solid transparent;
+    border-right:25px solid transparent;
+    border-bottom:48px solid #71836a;
+}
+
+/* ============================================================
+   CAMINOS
+   ============================================================ */
+
+.dr-path{
+    position:absolute;
+    height:4px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(41,60,52,.58) 0 12px,
+            transparent 12px 23px);
+    transform-origin:left center;
+    opacity:.75;
+    z-index:3;
+}
+
+/* ============================================================
+   LOCALIZACIONES
+   ============================================================ */
+
+.dr-location{
+    position:absolute;
+    width:28px;
+    height:28px;
+    margin:-14px 0 0 -14px;
+    border-radius:50%;
+    border:1px solid var(--cyan);
+    background:#07131d;
+    box-shadow:
+        0 0 0 5px rgba(53,216,255,.05),
+        0 0 18px rgba(53,216,255,.25);
+    cursor:pointer;
+    z-index:20;
+    transition:.2s;
+}
+
+.dr-location:before{
+    content:"";
+    position:absolute;
+    inset:7px;
+    border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 12px var(--cyan);
+}
+
+.dr-location:hover,
+.dr-location.selected{
+    transform:scale(1.35);
+    border-color:#fff;
+    box-shadow:
+        0 0 0 8px rgba(53,216,255,.07),
+        0 0 25px rgba(53,216,255,.55);
+}
+
+.dr-location.hidden{display:none}
+
+.dr-location.city{
+    border-radius:5px;
+}
+
+.dr-location.city:before{border-radius:2px}
+
+.dr-location.danger{border-color:#ff6078}
+.dr-location.danger:before{
+    background:#ff6078;
+    box-shadow:0 0 12px #ff6078;
+}
+
+.dr-location.ruin{border-color:#b58cff}
+.dr-location.ruin:before{
+    background:#b58cff;
+    box-shadow:0 0 12px #b58cff;
+}
+
+.dr-location.facility{border-color:#ffd75c}
+.dr-location.facility:before{
+    background:#ffd75c;
+    box-shadow:0 0 12px #ffd75c;
+}
+
+.dr-location.special{
+    border-radius:4px;
+    border-color:#d51fc7;
+}
+
+.dr-location.special:before{
+    background:#ff76ed;
+    box-shadow:0 0 12px #ff76ed;
+}
+
+/* Cascada del Rey: marcador de agua más pequeño y discreto */
+.dr-location.dr-cascade-marker{
+    width:18px;
+    height:18px;
+    margin:-9px 0 0 -9px;
+    border-width:1px;
+    box-shadow:
+        0 0 0 3px rgba(53,216,255,.045),
+        0 0 9px rgba(53,216,255,.20);
+}
+.dr-location.dr-cascade-marker:before{
+    inset:5px;
+    box-shadow:0 0 6px var(--cyan);
+}
+.dr-location.dr-cascade-marker:hover,
+.dr-location.dr-cascade-marker.selected{
+    transform:scale(1.12);
+    border-color:#d9faff;
+    box-shadow:
+        0 0 0 4px rgba(53,216,255,.07),
+        0 0 13px rgba(53,216,255,.38);
+}
+
+.dr-location-label{
+    position:absolute;
+    left:20px;
+    top:-3px;
+    white-space:nowrap;
+    padding:4px 7px;
+    background:rgba(5,13,20,.88);
+    border-left:2px solid var(--cyan);
+    font-size:9px;
+    letter-spacing:1px;
+    color:#dceaf4;
+    pointer-events:none;
+}
+
+.dr-location.city .dr-location-label{border-left-color:var(--blue)}
+.dr-location.danger .dr-location-label{border-left-color:#ff6078}
+.dr-location.ruin .dr-location-label{border-left-color:#b58cff}
+.dr-location.facility .dr-location-label{border-left-color:#ffd75c}
+.dr-location.special .dr-location-label{border-left-color:#d51fc7}
+
+/* ============================================================
+   RÓTULOS LIBRES — ETIQUETAS SIN MARCADOR
+   Para reposicionar cada uno, cambia left y top en su style inline.
+   Para renombrarlo, cambia el texto entre las etiquetas.
+   ============================================================ */
+.dr-map-placard{
+    position:absolute;
+    z-index:18;
+    display:inline-block;
+    box-sizing:border-box;
+    padding:4px 7px;
+    background:rgba(5,13,20,.88);
+    border-left:2px solid var(--cyan);
+    color:#dceaf4;
+    font-size:9px;
+    line-height:1.3;
+    letter-spacing:1px;
+    white-space:nowrap;
+    pointer-events:none;
+    user-select:none;
+}
+
+/* Nombres de islas flotando en el mar: sin caja ni marcador, estilo cartográfico. */
+.dr-island-label{
+    position:absolute;
+    z-index:12;
+    transform:translateY(-50%);
+    color:#2F3E5E;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight:500;
+    letter-spacing:3px;
+    line-height:1.2;
+    white-space:nowrap;
+    text-transform:uppercase;
+    pointer-events:none;
+    user-select:none;
+  /*-webkit-text-stroke: 0.5px #fff;*/
+}
+/* ============================================================
+   PANEL LATERAL — PARTE DEL MAPA 1
+   ============================================================ */
+
+.dr-map-info{
+    border-left:1px solid rgba(53,216,255,.18);
+    background:
+        linear-gradient(180deg,
+            rgba(16,25,35,.98),
+            rgba(8,16,24,.98));
+    padding:24px;
+    box-sizing:border-box;
+    position:relative;
+    overflow:auto;
+}
+
+.dr-info-header{
+    font-size:9px;
+    color:var(--cyan);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+/* Se oculta el encabezado técnico; el cartel de peligro vuelve a mostrarse. */
+.dr-map-info .dr-info-header,
+.dr-map-info .dr-data-row-risk{
+    display:none !important;
+}
+
+.dr-go-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--cyan);
+    text-decoration:none;
+    vertical-align:middle;
+    padding:2px 3px;
+    border:1px solid rgba(53,216,255,.22);
+    border-radius:3px;
+    transition:color .2s ease,border-color .2s ease,background .2s ease;
+}
+
+.dr-go-link svg{
+    display:block;
+    width:15px;
+    height:15px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.dr-go-link:hover,
+.dr-go-link:focus-visible{
+    color:#fff;
+    border-color:var(--cyan);
+    background:rgba(53,216,255,.10);
+    outline:none;
+}
+
+.dr-go-link.is-disabled{
+    opacity:.28;
+    cursor:not-allowed;
+    pointer-events:none;
+}
+
+.dr-info-empty{
+    height:calc(100% - 40px);
+    min-height:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#4f6677;
+}
+
+.dr-info-empty .symbol{
+    font-size:42px;
+    margin-bottom:15px;
+    opacity:.45;
+}
+
+.dr-info-empty p{
+    max-width:210px;
+    font-size:11px;
+    line-height:1.7;
+}
+
+.dr-place{display:none}
+.dr-place.active{display:block}
+
+.dr-place-type{
+    display:none !important;
+    color:var(--cyan);
+    font-family:monospace;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.dr-place h2{
+    margin:8px 0 14px;
+    font-size:25px;
+    line-height:1.1;
+}
+
+.dr-place-description{
+    color:#9db1c0;
+    font-size:11px;
+    line-height:1.8;
+    text-align: justify;
+}
+
+.dr-place-data{
+    margin-top:24px;
+    border-top:1px solid rgba(53,216,255,.12);
+}
+
+.dr-data-row{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:10px 0;
+    border-bottom:1px solid rgba(53,216,255,.08);
+    font-size:10px;
+}
+
+.dr-data-row span:first-child{
+    color:#5f788a;
+    text-transform:uppercase;
+}
+
+.dr-data-row span:last-child{
+    color:#d9eaf4;
+    text-align:right;
+}
+
+.dr-danger{
+    margin-top:20px;
+    padding:10px;
+    border:1px solid rgba(120,145,160,.32);
+    background:rgba(120,145,160,.06);
+    color:#9db1c0;
+    font-size:9px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.dr-danger.level-low{
+    border-color:rgba(76,205,125,.42);
+    background:rgba(76,205,125,.08);
+    color:#70e39a;
+}
+
+.dr-danger.level-medium{
+    border-color:rgba(255,215,92,.48);
+    background:rgba(255,215,92,.08);
+    color:#ffd75c;
+}
+
+.dr-danger.level-high{
+    border-color:rgba(255,96,120,.48);
+    background:rgba(255,96,120,.08);
+    color:#ff7186;
+}
+
+.dr-status-value{
+    font-weight:700;
+}
+
+.dr-status-value.is-available{color:#70e39a;}
+.dr-status-value.is-unavailable{color:#ff7186;}
+
+/* ============================================================
+   ZOOM
+   ============================================================ */
+
+.dr-map-zoom{
+    position:absolute;
+    right:15px;
+    bottom:15px;
+    z-index:50;
+    display:flex;
+    flex-direction:column;
+}
+
+.dr-map-zoom button{
+    width:38px;
+    height:38px;
+    border:1px solid rgba(53,216,255,.25);
+    background:rgba(6,15,23,.9);
+    color:#8edfff;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.dr-map-zoom button:hover{
+    background:rgba(22,119,200,.25);
+    color:#fff;
+}
+
+/* ============================================================
+   LEYENDA
+   ============================================================ */
+
+.dr-map-legend{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+    min-width:9.5rem;
+    padding:14px 16px;
+    box-sizing:border-box;
+    background:rgba(5,13,20,.94);
+    border:1px solid rgba(53,216,255,.28);
+    box-shadow:0 0 18px rgba(0,0,0,.24),inset 0 0 14px rgba(53,216,255,.025);
+    z-index:40;
+}
+
+.dr-map-legend-title{
+    font-size:11px;
+    line-height:1.35;
+    color:#8ba9bb;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:10px;
+}
+
+.dr-legend-item{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:12px;
+    line-height:1.35;
+    color:#c2d4df;
+    margin:7px 0;
+}
+
+/* Todos los indicadores usan una columna fija para alinear los rótulos. */
+.dr-legend-dot{
+    width:18px;
+    height:14px;
+    flex:0 0 18px;
+    display:flex;
+    align-items:center;
+    background:transparent;
+    box-shadow:none;
+    border-radius:0;
+}
+
+.dr-legend-dot::before{
+    content:"";
+    display:block;
+    width:10px;
+    height:10px;
+    flex:0 0 10px;
+    border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 7px var(--cyan);
+}
+
+.dr-legend-dot.city::before{border-radius:2px;background:var(--blue);box-shadow:0 0 7px var(--blue)}
+.dr-legend-dot.danger::before{background:#ff6078;box-shadow:0 0 7px #ff6078}
+.dr-legend-dot.ruin::before{background:#b58cff;box-shadow:0 0 7px #b58cff}
+.dr-legend-dot.facility::before{background:#ffd75c;box-shadow:0 0 7px #ffd75c}
+.dr-legend-dot.special::before{background:#d51fc7;box-shadow:0 0 7px #d51fc7}
+
+.dr-legend-line{
+    display:block;
+    width:18px;
+    height:4px;
+    flex:0 0 18px;
+    border-radius:4px;
+    box-sizing:border-box;
+}
+.dr-legend-line.forest{background:#63b879;box-shadow:0 0 7px rgba(99,184,121,.42)}
+.dr-legend-line.mountain{background:#8b5b38;box-shadow:0 0 7px rgba(139,91,56,.42)}
+.dr-legend-line.water{background:#3ecde5;box-shadow:0 0 7px rgba(53,216,255,.55)}
+
+/* ============================================================
+   RESPONSIVE — ESCALA AUTOMÁTICA SEGÚN LA PANTALLA
+   El lienzo conserva sus coordenadas internas; el motor JS ajusta
+   la escala inicial al espacio real disponible.
+   ============================================================ */
+
+#dr-map{
+    display:flex;
+    flex-direction:column;
+}
+
+.dr-map-header{flex:0 0 auto;}
+.dr-map-controls{flex:0 0 auto;}
+.dr-map-info{min-width:0;}
+
+@media(max-width:900px){
+    .dr-map-header{flex-wrap:wrap;}
+    .dr-map-forum-link{
+        position:static;
+        transform:none;
+        width:auto;
+        max-width:100%;
+        flex:1 1 100%;
+        order:3;
+    }
+
+    #dr-map{
+        height:auto;
+        min-height:calc(100dvh - 2rem);
+    }
+
+    .dr-map-workspace{
+        flex:1 0 auto;
+        grid-template-columns:minmax(0,1fr);
+        grid-template-rows:minmax(32rem,65dvh) auto;
+    }
+
+    .dr-map-area{min-height:32rem;}
+
+    .dr-map-info{
+        border-left:0;
+        border-top:1px solid rgba(53,216,255,.18);
+        min-height:18rem;
+    }
+
+    .dr-info-empty{min-height:14rem;}
+}
+
+@media(max-width:600px){
+    #dr-map{
+        width:calc(100vw - 1rem);
+        margin:0.5rem 0 0.5rem calc(50% - 50vw + 0.5rem);
+        min-height:calc(100dvh - 1rem);
+    }
+
+    .dr-map-header{
+        align-items:flex-start;
+        flex-direction:column;
+        padding:1rem;
+        gap:0.75rem;
+    }
+
+    .dr-map-forum-link{
+        position:static;
+        transform:none;
+        width:100%;
+        max-width:none;
+        min-height:2.5rem;
+        flex:0 0 auto;
+        font-size:.75rem;
+    }
+
+    .dr-map-title h1{font-size:1.25rem;}
+    .dr-map-logo{width:2.75rem;height:2.75rem;flex:0 0 auto;}
+    .dr-map-status{text-align:left;}
+
+    .dr-map-controls{padding:0.75rem;gap:0.4rem;}
+    .dr-map-search{flex:1 1 100%;min-width:0;}
+    .dr-filter{flex:1 1 auto;padding:0.6rem 0.5rem;font-size:0.625rem;}
+
+    .dr-map-workspace{grid-template-rows:minmax(26rem,58dvh) auto;}
+    .dr-map-area{min-height:26rem;}
+    .dr-map-info{padding:1.25rem;}
+    .dr-map-legend{left:0.5rem;bottom:0.5rem;padding:0.5rem 0.65rem;}
+    .dr-map-zoom{right:0.5rem;bottom:0.5rem;}
+}
+
+@media(max-height:650px) and (min-width:901px){
+    #dr-map{height:calc(100dvh - 1rem);min-height:0;margin:0.5rem 0 0.5rem calc(50% - 50vw + 1rem);}
+}
+
+
+/* ============================================================
+   MODO DE EDICIÓN — OCULTAR MONTAÑAS TEMPORALMENTE
+   Se conserva el HTML de las montañas; basta con quitar este
+   bloque para volver a mostrarlas cuando terminemos de colocar zonas.
+   ============================================================ */
+.dr-mountain,
+.dr-mountain-range{
+    display:none !important;
+}
+
+/* ============================================================
+   MODO DE EDICIÓN — OCULTAR CAMINOS TEMPORALMENTE
+   Los ríos y lagos recolocados permanecen visibles.
+   ============================================================ */
+.dr-path{
+    display:none !important;
+}
