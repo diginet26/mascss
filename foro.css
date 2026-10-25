@@ -5075,6 +5075,7 @@ blockquote blockquote {
 }
 
 .digimon-forum-card::before {
+    display: none;
     content: "";
     position: absolute;
     top: 0;
