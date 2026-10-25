@@ -19110,3 +19110,213 @@ body:has(#cp-main) #cp-main .submit-buttons input.button1:hover, body:has(#cp-ma
         min-width: 0;
     }
 }
+/* DIGITAL RIFT — PANTALLA DE MANTENIMIENTO */
+
+body.dr-maintenance-active {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #030711 !important;
+}
+
+body.dr-maintenance-active > :not(#dr-maintenance-screen) {
+    display: none !important;
+}
+
+#dr-maintenance-screen,
+#dr-maintenance-screen * {
+    box-sizing: border-box;
+}
+
+#dr-maintenance-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    display: grid;
+    place-items: center;
+    overflow: auto;
+    padding: clamp(20px, 5vw, 64px);
+    color: #eaf4ff;
+    background:
+        radial-gradient(ellipse at 12% 18%, rgba(0, 191, 255, .13), transparent 34%),
+        radial-gradient(ellipse at 88% 82%, rgba(255, 105, 20, .11), transparent 32%),
+        repeating-linear-gradient(30deg, transparent 0 44px, rgba(0, 191, 255, .035) 45px, transparent 46px),
+        linear-gradient(135deg, #03060b 0%, #091321 55%, #03070c 100%);
+    font-family: "Poppins", sans-serif;
+}
+
+#dr-maintenance-screen::before {
+    content: "";
+    position: fixed;
+    inset: 12px;
+    border: 1px solid rgba(0, 191, 255, .22);
+    pointer-events: none;
+}
+
+#dr-maintenance-screen .dr-maintenance-card {
+    position: relative;
+    width: min(760px, 100%);
+    padding: clamp(28px, 5vw, 58px);
+    border: 1px solid rgba(0, 191, 255, .48);
+    border-radius: 5px;
+    background: linear-gradient(115deg, rgba(35, 23, 19, .96), rgba(7, 19, 32, .97) 70%);
+    box-shadow: 0 0 38px rgba(0, 153, 255, .09), inset 0 0 26px rgba(0, 153, 255, .035);
+    text-align: center;
+}
+
+#dr-maintenance-screen .dr-maintenance-card::before,
+#dr-maintenance-screen .dr-maintenance-card::after {
+    content: "";
+    position: absolute;
+    width: 72px;
+    height: 2px;
+    background: #ff7627;
+    box-shadow: 0 0 12px rgba(255, 118, 39, .4);
+}
+
+#dr-maintenance-screen .dr-maintenance-card::before {
+    top: -1px;
+    left: 26px;
+}
+
+#dr-maintenance-screen .dr-maintenance-card::after {
+    right: 26px;
+    bottom: -1px;
+}
+
+#dr-maintenance-screen .dr-maintenance-emblem {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 30px;
+    border: 2px solid #00bfff;
+    background: linear-gradient(135deg, #ff842e, #d84c18);
+    box-shadow: 0 0 20px rgba(0, 191, 255, .2);
+    transform: rotate(45deg);
+}
+
+#dr-maintenance-screen .dr-maintenance-emblem span {
+    color: #fff;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    transform: rotate(-45deg);
+}
+
+#dr-maintenance-screen .dr-maintenance-kicker {
+    margin: 0 0 14px;
+    color: #00bfff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+}
+
+#dr-maintenance-screen h1 {
+    margin: 0;
+    color: #f1f5fa;
+    font-family: "Jersey 15", sans-serif;
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: 400;
+    letter-spacing: .045em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+#dr-maintenance-screen .dr-maintenance-rule {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(300px, 80%);
+    margin: 26px auto;
+}
+
+#dr-maintenance-screen .dr-maintenance-rule::before,
+#dr-maintenance-screen .dr-maintenance-rule::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00bfff);
+}
+
+#dr-maintenance-screen .dr-maintenance-rule::after {
+    background: linear-gradient(90deg, #ff7627, transparent);
+}
+
+#dr-maintenance-screen .dr-maintenance-rule span {
+    width: 6px;
+    height: 6px;
+    background: #ff7627;
+    box-shadow: 0 0 10px rgba(255, 118, 39, .6);
+    transform: rotate(45deg);
+}
+
+#dr-maintenance-screen .dr-maintenance-message {
+    margin: 0 auto 12px;
+    color: #eaf4ff;
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.8;
+}
+
+#dr-maintenance-screen .dr-maintenance-submessage {
+    max-width: 540px;
+    margin: 0 auto;
+    color: #aab9cb;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+#dr-maintenance-screen .dr-maintenance-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 34px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 191, 255, .18);
+    color: #9eb9cf;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .2em;
+}
+
+#dr-maintenance-screen .dr-maintenance-status span:first-child {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #ff7627;
+    box-shadow: 0 0 10px rgba(255, 118, 39, .7);
+}
+
+#dr-maintenance-screen .dr-maintenance-credit {
+    margin: 20px 0 0;
+    color: #71869b;
+    font-size: 10px;
+}
+
+#dr-maintenance-screen .dr-maintenance-credit a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+#dr-maintenance-screen .dr-maintenance-credit a:hover {
+    color: #ff7627;
+}
+
+@media (max-width: 600px) {
+    #dr-maintenance-screen {
+        padding: 26px;
+    }
+    #dr-maintenance-screen::before {
+        inset: 6px;
+    }
+    #dr-maintenance-screen .dr-maintenance-card {
+        padding: 34px 22px;
+    }
+    #dr-maintenance-screen .dr-maintenance-status {
+        font-size: 8px;
+        letter-spacing: .12em;
+    }
+}
