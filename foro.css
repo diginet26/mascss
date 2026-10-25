@@ -4938,7 +4938,7 @@ blockquote blockquote {
     display: block;
     overflow: hidden;
     color: var(--text-color);
-    font: 700 1.15rem/1.2 "Oxanium", sans-serif;
+    font: 700 2rem/1.2 "Oxanium", sans-serif;
     letter-spacing: .035rem;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -5144,7 +5144,7 @@ blockquote blockquote {
     display: block;
     overflow: hidden;
     color: var(--text-color);
-    font: 700 1.2857rem/1.2 "Oxanium", sans-serif;
+    font: 700 2.5rem/1.2 "Oxanium", sans-serif;
     letter-spacing: 0.0357rem;
     text-overflow: ellipsis;
     text-transform: uppercase;
