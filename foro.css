@@ -11193,6 +11193,31 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
 
 
 /* =========================================================
+   VIEWTOPIC — SKIN CLARA
+   BARRA NUEVO / RESPONDER EN GRISES
+   ========================================================= */
+body.light-mode .topic-actions:not(:has(.search-box)) {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 4%, #e4e8eb), transparent 42%, color-mix(in srgb, var(--emblema1) 4%, #e4e8eb)), repeating-linear-gradient(90deg, transparent 0, transparent 3rem, rgba(92,108,122,.03) 3rem, rgba(92,108,122,.03) 3.05rem), #e4e8eb !important;
+    border-color: color-mix(in srgb, var(--emblema2) 28%, #c5cfd7) !important;
+    box-shadow: inset 0 .1rem 0 rgba(255,255,255,.85), 0 .4rem 1rem rgba(56,69,81,.09) !important;
+}
+
+body.light-mode .topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, #edf0f2), color-mix(in srgb, var(--emblema1) 4%, #e1e6ea)) !important;
+    border-color: color-mix(in srgb, var(--emblema2) 52%, #b9c6cf) !important;
+    color: #596873 !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.8) !important;
+}
+
+body.light-mode .topic-actions:not(:has(.search-box)) .buttons > a .rtopicbutton:hover {
+    background: color-mix(in srgb, var(--emblema2) 9%, #edf0f2) !important;
+    border-color: var(--emblema1) !important;
+    color: #465762 !important;
+    box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema1) 12%, transparent) !important;
+}
+
+
+/* =========================================================
    VIEWFORUM — ORDENAR / CAMBIAR DE FORO
    ========================================================= */
 
@@ -12631,6 +12656,154 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 /* =========================================================
+   VIEWTOPIC — SKIN CLARA
+   PALETA GRISÁCEA PARA POSTS Y CONTENIDO
+   ========================================================= */
+body.light-mode .dr-topic-post {
+    background: #e4e8eb !important;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--emblema2) 12%, #c5cfd7), 0 .5rem 1.4rem rgba(56,69,81,.10) !important;
+}
+
+body.light-mode .dr-topic-header {
+    background: linear-gradient(110deg, color-mix(in srgb, var(--emblema2) 4%, #edf0f2), #dfe4e7 55%, color-mix(in srgb, var(--emblema1) 4%, #e7eaed)) !important;
+    border-bottom-color: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 30%, #b9c4cc) !important;
+}
+
+body.light-mode .dr-topic-username {
+    color: #394752 !important;
+    text-shadow: none !important;
+}
+
+body.light-mode .dr-topic-rank {
+    color: var(--dr-group-color, var(--emblema2)) !important;
+}
+
+body.light-mode .dr-topic-stat > span {
+    color: #7b8790 !important;
+}
+
+body.light-mode .dr-topic-stat > strong {
+    color: #394752 !important;
+}
+
+body.light-mode .dr-topic-digimon {
+    background: #d5dade !important;
+    border-color: var(--dr-group-color, var(--emblema2)) !important;
+    box-shadow: 0 0 0 .05rem #c1c9cf, 0 0 .8rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 12%, transparent) !important;
+}
+
+body.light-mode .dr-topic-meta {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, #e2e6e9), #dce1e5 58%, color-mix(in srgb, var(--emblema1) 4%, #e2e6e9)) !important;
+    border-top-color: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 45%, #c1cbd2) !important;
+}
+
+body.light-mode .dr-topic-date {
+    color: #687681 !important;
+}
+
+body.light-mode .dr-topic-actions li a {
+    background: linear-gradient(135deg, #f2f4f5, #e4e8eb) !important;
+    border-color: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 42%, #b9c5cd) !important;
+}
+
+body.light-mode .dr-topic-actions li a::before {
+    color: #596873 !important;
+}
+
+body.light-mode .dr-topic-actions li a:hover {
+    background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, #edf0f2) !important;
+    border-color: var(--dr-group-color, var(--emblema2)) !important;
+}
+
+body.light-mode .dr-topic-actions li a:hover::before {
+    color: #394752 !important;
+}
+
+body.light-mode .dr-post-container {
+    background: linear-gradient(135deg, #e7eaec, #dfe4e7 55%, #e9ecee) !important;
+}
+
+body.light-mode .dr-post-sidebar {
+    background: #e4e8eb !important;
+}
+
+body.light-mode .dr-post-avatar {
+    background: #d8dee2 !important;
+    box-shadow: 0 0 0 .06rem #c5cfd7 !important;
+}
+
+body.light-mode .dr-post-links {
+    background: #dce1e5 !important;
+    border-color: color-mix(in srgb, var(--emblema2) 30%, #b9c4cc) !important;
+}
+
+body.light-mode .dr-post-icon {
+    color: #596873 !important;
+    border-right-color: color-mix(in srgb, var(--emblema2) 22%, #c1cbd2) !important;
+}
+
+body.light-mode .dr-post-icon:hover {
+    color: var(--emblema2) !important;
+    background: color-mix(in srgb, var(--emblema2) 7%, #e4e8eb) !important;
+    box-shadow: inset 0 0 .6rem color-mix(in srgb, var(--emblema2) 6%, transparent) !important;
+}
+
+body.light-mode .dr-post-profile-link::before {
+    color: #596873 !important;
+}
+
+body.light-mode .dr-post-profile-link:hover::before {
+    color: var(--emblema2) !important;
+}
+
+body.light-mode .dr-post-main,
+body.light-mode .dr-post-main .postbody {
+    background: #e4e8eb !important;
+    color: #394752 !important;
+}
+
+body.light-mode .dr-post-main .postbody .content {
+    color: #394752;
+}
+
+/* La tablilla del baúl usa variables propias y hereda variables oscuras.
+   Se redefinen solo dentro de .dr-baul para respetar el diseño y usar grises claros. */
+body.light-mode .dr-baul {
+    --theme-panel-deep: #d4dade;
+    --theme-panel: #e5e8eb;
+    --theme-panel-alt: #dce1e5;
+    --theme-border: #b8c2ca;
+    --theme-text: #303b43;
+    --theme-text-muted: #65727c;
+    --db-black: #e1e5e8;
+    --db-deep: #e9edef;
+    --db-blue: #a8b3bb;
+    --db-cyan: #64727c;
+    --db-yellow: var(--emblema2);
+    --db-opposite: var(--emblema1);
+    --db-metal: #b1bbc2;
+    --db-white: #303b43;
+    --db-text: #4b5861;
+    --db-panel: #e7eaed;
+    --db-panel-alt: #dce1e5;
+    --db-border: #b8c2ca;
+    --db-surface: color-mix(in srgb, var(--db-panel) 62%, var(--db-border));
+    --db-surface-soft: color-mix(in srgb, var(--db-panel) 78%, var(--db-border));
+    --db-surface-raised: color-mix(in srgb, var(--db-panel) 88%, var(--db-border));
+    --db-surface-inset: color-mix(in srgb, #cdd3d8 72%, var(--db-border));
+    --db-surface-deep: color-mix(in srgb, #c3cbd1 82%, #aeb8c0);
+    --db-shadow: rgba(49,59,67,.10);
+    background: var(--db-black) !important;
+    color: var(--db-text) !important;
+    border-color: var(--db-border) !important;
+    box-shadow: 0 0 25px rgba(49,59,67,.10) !important;
+}
+
+body.light-mode .dr-baul .dr-baul-cover-art img {
+    filter: grayscale(100%) brightness(.76) contrast(1.04) !important;
+}
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 
@@ -13955,13 +14128,13 @@ body.light-mode form[name="post"]:not(#quick_reply) input[name="subject"]:focus 
 /* ---------------------------------------------------------
    EDITOR — CONTENEDOR
    --------------------------------------------------------- */
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container {
     background: #e4e8eb !important;
     border-color: color-mix(in srgb, var(--emblema2) 55%, #c5cfd7) !important;
     box-shadow: 0 .5rem 1.4rem rgba(56,69,81,.10), inset 0 1px 0 rgba(255,255,255,.75) !important;
 }
 
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container:focus-within {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container:focus-within {
     border-color: var(--emblema2) !important;
     box-shadow: 0 0 .65rem color-mix(in srgb, var(--emblema2) 14%, transparent), 0 .5rem 1.4rem rgba(56,69,81,.10) !important;
 }
@@ -13969,20 +14142,20 @@ body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sced
 /* ---------------------------------------------------------
    BARRA DE HERRAMIENTAS
    --------------------------------------------------------- */
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-toolbar {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar {
     background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 5%, #edf0f2), #e5e9ec 55%, color-mix(in srgb, var(--emblema1) 4%, #edf0f2)) !important;
     border-bottom-color: color-mix(in srgb, var(--emblema2) 40%, #c5cfd7) !important;
     box-shadow: inset 0 -1px 0 rgba(255,255,255,.65) !important;
 }
 
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-group {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-group {
     background: linear-gradient(135deg, #f0f3f5, #e3e8eb) !important;
     border-color: color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.7) !important;
 }
 
 /* BOTONES */
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-toolbar .sceditor-button {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button {
     background: linear-gradient(145deg, #f5f7f8, #e5e9ec) !important;
     border-color: color-mix(in srgb, var(--emblema2) 32%, #c5cfd7) !important;
     color: #596873 !important;
@@ -13990,26 +14163,26 @@ body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sced
 }
 
 /* ICONOS NATIVOS */
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-toolbar .sceditor-button > div {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button > div {
     filter: brightness(0) opacity(.68) !important;
     opacity: 1 !important;
 }
 
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-toolbar .sceditor-button:hover > div {filter: brightness(0) opacity(.9) !important;}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button:hover > div {filter: brightness(0) opacity(.9) !important;}
 
 /* ICONOS FONT AWESOME */
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {color: #596873 !important;}
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button:hover > i.dr-sceditor-fa, 
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button.active > i.dr-sceditor-fa {color: var(--emblema2) !important;}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button > i.dr-sceditor-fa {color: #596873 !important;}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button:hover > i.dr-sceditor-fa, 
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container .sceditor-toolbar .sceditor-button.active > i.dr-sceditor-fa {color: var(--emblema2) !important;}
 
 /* HOVER Y SELECCIÓN */
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-toolbar .sceditor-button:hover {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button:hover {
     background: color-mix(in srgb, var(--emblema2) 8%, #f3f5f6) !important;
     border-color: var(--emblema2) !important;
     box-shadow: 0 0 .45rem color-mix(in srgb, var(--emblema2) 12%, transparent) !important;
 }
 
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-toolbar .sceditor-button.active {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-toolbar .sceditor-button.active {
     background: color-mix(in srgb, var(--emblema2) 12%, #e8ecef) !important;
     border-color: var(--emblema2) !important;
     box-shadow: inset 0 0 .4rem color-mix(in srgb, var(--emblema2) 8%, transparent) !important;
@@ -14018,14 +14191,14 @@ body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sced
 /* ---------------------------------------------------------
    ÁREA DE ESCRITURA
    --------------------------------------------------------- */
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container iframe, body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container textarea {
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container iframe, body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {
     background-color: #f3f5f6 !important;
     color: #394752 !important;
     caret-color: var(--emblema2) !important;
 }
 
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container textarea {background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;}
-body.light-mode :is(form[name="post"]:not(#quick_reply), form#quick_reply) .sceditor-container textarea::placeholder {color: #89949d !important;}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea {background-image: linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px), linear-gradient(color-mix(in srgb, var(--emblema2) 5%, transparent) 1px, transparent 1px) !important;}
+body.light-mode form[name="post"]:not(#quick_reply) .sceditor-container textarea::placeholder {color: #89949d !important;}
 /* ---------------------------------------------------------
    MENÚS DESPLEGABLES DEL EDITOR
    --------------------------------------------------------- */
@@ -14123,28 +14296,17 @@ body.light-mode form[name="post"] .panel.row3:has(input[name="disable_html"]) fi
 /* ---------------------------------------------------------
    BOTONES DE PUBLICACIÓN
    --------------------------------------------------------- */
-body.light-mode form[name="post"] input.button2[name="preview"],
-body.light-mode form[name="post"] input.button2[name="draft"],
-body.light-mode form[name="post"] input.button1[name="post"],
-body.light-mode form#quick_reply input[type="submit"],
-body.light-mode form#quick_reply input[type="button"] {
+body.light-mode form[name="post"] input.button2[name="preview"], body.light-mode form[name="post"] input.button2[name="draft"], body.light-mode form[name="post"] input.button1[name="post"] {
     background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 7%, #edf0f2), color-mix(in srgb, var(--emblema1) 4%, #e5e9ec)) !important;
     border-color: color-mix(in srgb, var(--emblema2) 50%, #c5cfd7) !important;
     color: #596873 !important;
-    -webkit-text-fill-color: #596873 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.7) !important;
-    opacity: 1 !important;
 }
 
-body.light-mode form[name="post"] input.button2[name="preview"]:hover,
-body.light-mode form[name="post"] input.button2[name="draft"]:hover,
-body.light-mode form[name="post"] input.button1[name="post"]:hover,
-body.light-mode form#quick_reply input[type="submit"]:hover,
-body.light-mode form#quick_reply input[type="button"]:hover {
+body.light-mode form[name="post"] input.button2[name="preview"]:hover, body.light-mode form[name="post"] input.button2[name="draft"]:hover, body.light-mode form[name="post"] input.button1[name="post"]:hover {
     background: color-mix(in srgb, var(--emblema2) 9%, #edf0f2) !important;
     border-color: var(--emblema2) !important;
-    color: #394752 !important;
-    -webkit-text-fill-color: #394752 !important;
+    color: var(--emblema2) !important;
 }
 
 /* DIGITAL RIFT — SKIN CLARA   PLACEHOLDER DEL TÍTULO MÁS VISIBLE */
