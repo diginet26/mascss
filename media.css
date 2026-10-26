@@ -1,11 +1,15 @@
 /* =========================================================
-   DIGITAL RIFT — REGLAS RESPONSIVE EXTRAÍDAS
-   Fuente: foro - 2026-10-26T181140.715.css
-   Total: 55 bloques @media. Conserva el orden original para respetar la cascada.
-   Cada bloque lleva categoría y línea de origen.
+   DIGITAL RIFT — MEDIA QUERIES RESPONSIVE COMPLETAS
+   Base: foro - 2026-10-26T182146.355.css
+   55 bloques originales conservados + ajustes responsive añadidos
+   Cargar DESPUÉS de foro.css desde overall_header.
    ========================================================= */
 
-/* CATEGORÍA: Miembros: herramientas de búsqueda y fichas responsive · Origen: línea 735 · bloque #01 */
+/* =========================================================
+   MIEMBROS Y DIRECTORIO DE USUARIOS
+   ========================================================= */
+
+/* Original de foro.css: línea 735 | @screen and (max-width:850px) */
 @media screen and (max-width:850px) {
     #dg-member-tools {flex-wrap:wrap;height:auto;}
     .dg-submit {margin-left:0;}
@@ -13,7 +17,7 @@
     .dg-filter {flex:0 1 auto;}
 }
 
-/* CATEGORÍA: Miembros: tarjetas y paginación móvil · Origen: línea 741 · bloque #02 */
+/* Original de foro.css: línea 741 | @screen and (max-width:600px) */
 @media screen and (max-width:600px) {#dg-memberlist {
     grid-template-columns:1fr;
 }.dg-tamer-body {
@@ -37,7 +41,11 @@
     align-items:flex-start;
 }}
 
-/* CATEGORÍA: Perfil público: contenido responsive · Origen: línea 932 · bloque #03 */
+/* =========================================================
+   PERFIL PÚBLICO
+   ========================================================= */
+
+/* Original de foro.css: línea 932 | @(max-width: 600px) */
 @media (max-width: 600px) {
     #dg-profile .dg-profile-content-header {
     padding: 22px 20px 16px;
@@ -50,7 +58,7 @@
 }
 }
 
-/* CATEGORÍA: Perfil público: cabecera, avatar y estado móvil · Origen: línea 1088 · bloque #04 */
+/* Original de foro.css: línea 1088 | @(max-width:650px) */
 @media (max-width:650px) {
     #dg-profile .dg-profile-header {
     --profile-avatar-size: clamp(112px, 23vw, 150px);
@@ -105,7 +113,7 @@
 }
 }
 
-/* CATEGORÍA: Perfil público: distribución tablet · Origen: línea 1606 · bloque #05 */
+/* Original de foro.css: línea 1606 | @(max-width: 950px) */
 @media (max-width: 950px) {
     #dg-profile {
     width: calc(100% - 30px);
@@ -120,7 +128,7 @@
 }
 }
 
-/* CATEGORÍA: Perfil público: estructura y contenido móvil · Origen: línea 1623 · bloque #06 */
+/* Original de foro.css: línea 1623 | @(max-width: 650px) */
 @media (max-width: 650px) {
     #dg-profile {
     width: calc(100% - 20px);
@@ -187,7 +195,7 @@
 }
 }
 
-/* CATEGORÍA: Perfil público: enlaces y portada · Origen: línea 1874 · bloque #07 */
+/* Original de foro.css: línea 1874 | @(max-width: 700px) */
 @media (max-width: 700px) {
     #dg-profile .dg-profile-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -197,7 +205,7 @@
 }
 }
 
-/* CATEGORÍA: Perfil público: enlaces y pestañas en pantallas estrechas · Origen: línea 1882 · bloque #08 */
+/* Original de foro.css: línea 1882 | @(max-width: 450px) */
 @media (max-width: 450px) {
     #dg-profile .dg-profile-links {
     grid-template-columns: 1fr;
@@ -207,7 +215,11 @@
 }
 }
 
-/* CATEGORÍA: Barra de navegación: tablet · Origen: línea 3047 · bloque #09 */
+/* =========================================================
+   NAVEGACIÓN PRINCIPAL
+   ========================================================= */
+
+/* Original de foro.css: línea 3047 | @(max-width: 900px) */
 @media (max-width: 900px) {
     .digimon-main-button {
     padding: 0 8px;
@@ -224,7 +236,7 @@
 }
 }
 
-/* CATEGORÍA: Barra de navegación: móvil · Origen: línea 3066 · bloque #10 */
+/* Original de foro.css: línea 3066 | @(max-width: 650px) */
 @media (max-width: 650px) {
     .digimon-navbar-main {
     min-height: 58px;
@@ -259,10 +271,14 @@
 }
 }
 
-/* CATEGORÍA: Tablón: noticias responsive · Origen: línea 4150 · bloque #11 */
+/* =========================================================
+   TABLÓN DIGITAL RIFT
+   ========================================================= */
+
+/* Original de foro.css: línea 4150 | @(max-width: 700px) */
 @media (max-width: 700px) {.rift-news-item {flex-basis: 100%;}}
 
-/* CATEGORÍA: Tablón: distribución a menos de 900px · Origen: línea 4151 · bloque #12 */
+/* Original de foro.css: línea 4151 | @(max-width:900px) */
 @media (max-width:900px) {
     #rift-board-body {
     grid-template-columns:minmax(0,1fr) 190px;
@@ -272,7 +288,7 @@
     #rift-recent-content {height:500px;}
 }
 
-/* CATEGORÍA: Tablón: distribución móvil · Origen: línea 4159 · bloque #13 */
+/* Original de foro.css: línea 4159 | @(max-width:650px) */
 @media (max-width:650px) {
     #rift-board {margin:20px auto;}
     #rift-board-body {
@@ -294,7 +310,11 @@
     #rift-recent-content {height:300px;}
 }
 
-/* CATEGORÍA: Tablón: enlaces y cuadrícula en móviles estrechos · Origen: línea 4179 · bloque #14 */
+/* =========================================================
+   AJUSTES RESPONSIVE EXISTENTES
+   ========================================================= */
+
+/* Original de foro.css: línea 4179 | @(max-width:420px) */
 @media (max-width:420px) {
     #rift-quick-links {grid-template-columns:repeat(4,minmax(0,1fr));}
     #rift-staff-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
@@ -305,7 +325,11 @@
     flex-basis:75px;}
 }
 
-/* CATEGORÍA: Elementos generales: citas y bloques de código · Origen: línea 4588 · bloque #15 */
+/* =========================================================
+   CITAS Y BLOQUES DE CÓDIGO
+   ========================================================= */
+
+/* Original de foro.css: línea 4588 | @(max-width: 600px) */
 @media (max-width: 600px) {
     blockquote {
     padding: 42px 12px 14px 12px;
@@ -316,7 +340,11 @@
     font-size: 10px;
 }}
 
-/* CATEGORÍA: Índice: rejilla de foros en tablet · Origen: línea 5028 · bloque #16 */
+/* =========================================================
+   TARJETAS Y CATEGORÍAS DE FOROS
+   ========================================================= */
+
+/* Original de foro.css: línea 5028 | @screen and (max-width: 1000px) */
 @media screen and (max-width: 1000px) {
     .digimon-forums-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -332,7 +360,7 @@
 }
 }
 
-/* CATEGORÍA: Índice: rejilla de foros en móvil · Origen: línea 5042 · bloque #17 */
+/* Original de foro.css: línea 5042 | @screen and (max-width: 650px) */
 @media screen and (max-width: 650px) {
     .digimon-forums-grid {
     grid-template-columns: 1fr;
@@ -355,7 +383,7 @@
 }
 }
 
-/* CATEGORÍA: Índice: herramientas, categorías y tarjetas en móvil · Origen: línea 5477 · bloque #18 */
+/* Original de foro.css: línea 5477 | @screen and (max-width: 700px) */
 @media screen and (max-width: 700px) {.digimon-index {
     padding: 15px 0 30px;
 }
@@ -409,7 +437,11 @@
 }
 }
 
-/* CATEGORÍA: Índice: categorías y tarjetas en móvil estrecho · Origen: línea 5529 · bloque #19 */
+/* =========================================================
+   ÍNDICE DEL FORO
+   ========================================================= */
+
+/* Original de foro.css: línea 5529 | @screen and (max-width: 450px) */
 @media screen and (max-width: 450px) {
     .digimon-category-icon {
     width: 38px;
@@ -435,7 +467,11 @@
 }
 }
 
-/* CATEGORÍA: Estadísticas: tablet · Origen: línea 5990 · bloque #20 */
+/* =========================================================
+   ESTADÍSTICAS
+   ========================================================= */
+
+/* Original de foro.css: línea 5990 | @screen and (max-width: 900px) */
 @media screen and (max-width: 900px) {
     #digimon-statistics {
     padding: 20px;
@@ -445,7 +481,7 @@
 }
 }
 
-/* CATEGORÍA: Estadísticas: móvil · Origen: línea 5998 · bloque #21 */
+/* Original de foro.css: línea 5998 | @screen and (max-width: 600px) */
 @media screen and (max-width: 600px) {
     #digimon-statistics {
     padding: 15px;
@@ -470,12 +506,20 @@
 }
 }
 
-/* CATEGORÍA: Componente auxiliar: dados · Origen: línea 6249 · bloque #22 */
+/* =========================================================
+   DADOS
+   ========================================================= */
+
+/* Original de foro.css: línea 6249 | @(max-width: 500px) */
 @media (max-width: 500px) {.dice {
     width: calc(100% - 30px);
 }}
 
-/* CATEGORÍA: Modal de Switcheroo · Origen: línea 6887 · bloque #23 */
+/* =========================================================
+   SWITCHEROO / MULTICUENTAS
+   ========================================================= */
+
+/* Original de foro.css: línea 6887 | @(max-width: 600px) */
 @media (max-width: 600px) {
     .monomer-modal {
     width: calc(100vw - 30px) !important;
@@ -490,7 +534,11 @@
 }
 }
 
-/* CATEGORÍA: Tarjeta de foro asimétrica: tablet · Origen: línea 7163 · bloque #24 */
+/* =========================================================
+   TARJETAS Y CATEGORÍAS DE FOROS
+   ========================================================= */
+
+/* Original de foro.css: línea 7163 | @screen and (max-width: 1000px) */
 @media screen and (max-width: 1000px) {
 
     .digimon-forums-grid:has(.rasymforum) {
@@ -518,7 +566,7 @@
 
 }
 
-/* CATEGORÍA: Tarjeta de foro asimétrica: móvil · Origen: línea 7190 · bloque #25 */
+/* Original de foro.css: línea 7190 | @screen and (max-width: 650px) */
 @media screen and (max-width: 650px) {
 
     .digimon-forums-grid:has(.rasymforum) {
@@ -553,7 +601,7 @@
 
 }
 
-/* CATEGORÍA: Imagen decorativa de tarjeta asimétrica: tablet · Origen: línea 7273 · bloque #26 */
+/* Original de foro.css: línea 7273 | @screen and (max-width: 1000px) */
 @media screen and (max-width: 1000px) {
     .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
     left: 45%;
@@ -564,7 +612,7 @@
 
 }
 
-/* CATEGORÍA: Imagen decorativa de tarjeta asimétrica: móvil · Origen: línea 7283 · bloque #27 */
+/* Original de foro.css: línea 7283 | @screen and (max-width: 650px) */
 @media screen and (max-width: 650px) {
 
     .digimon-forum-card:has(.rasymforum) {
@@ -581,14 +629,22 @@
 
 }
 
-/* CATEGORÍA: Tema: barra inferior y salto de tema responsive · Origen: línea 11621 · bloque #28 */
+/* =========================================================
+   BARRAS DE ACCIONES DE TEMAS
+   ========================================================= */
+
+/* Original de foro.css: línea 11621 | @(max-width: 850px) */
 @media (max-width: 850px) {
     .dr-topic-footer-bar {flex-wrap: wrap;}
     .dr-topic-footer-bar > .dr-topic-jumpbox {margin-left: .5rem !important;}
     .dr-topic-footer-bar .dr-topic-jumpbox select {max-width: 35vw;}
 }
 
-/* CATEGORÍA: Tema: cabecera de publicación y datos responsive · Origen: línea 12913 · bloque #29 */
+/* =========================================================
+   CABECERA DE TEMAS
+   ========================================================= */
+
+/* Original de foro.css: línea 12913 | @(max-width: 700px) */
 @media (max-width: 700px) {
     .dr-topic-header {
     grid-template-columns: minmax(0,1fr) 7rem;
@@ -604,7 +660,11 @@
     .dr-topic-actions li a {min-width: 3.1rem;}
 }
 
-/* CATEGORÍA: Tema: contenedor de publicación en tablet · Origen: línea 13160 · bloque #30 */
+/* =========================================================
+   PUBLICACIONES
+   ========================================================= */
+
+/* Original de foro.css: línea 13160 | @(max-width: 850px) */
 @media (max-width: 850px) {
     .dr-post-container {
     grid-template-columns: 13rem minmax(0,1fr);
@@ -617,7 +677,7 @@
     height: 21.67rem;
 }}
 
-/* CATEGORÍA: Tema: contenedor de publicación en móvil · Origen: línea 13172 · bloque #31 */
+/* Original de foro.css: línea 13172 | @(max-width: 650px) */
 @media (max-width: 650px) {
     .dr-post-container {grid-template-columns: 1fr;}
     .dr-post-sidebar {
@@ -630,7 +690,11 @@
     aspect-ratio: 3 / 5;
 }}
 
-/* CATEGORÍA: Formulario de acceso: controles en móvil · Origen: línea 13493 · bloque #32 */
+/* =========================================================
+   FORMULARIO DE ACCESO NATIVO
+   ========================================================= */
+
+/* Original de foro.css: línea 13493 | @(max-width: 700px) */
 @media (max-width: 700px) {
     .user_login_form {
     gap: .55rem !important;
@@ -641,7 +705,7 @@
     .user_login_form input.mainoption.button1 {min-width: 5.5rem !important;}
 }
 
-/* CATEGORÍA: Formulario de acceso: disposición en pantallas estrechas · Origen: línea 13506 · bloque #33 */
+/* Original de foro.css: línea 13506 | @(max-width: 520px) */
 @media (max-width: 520px) {
     .user_login_form {
     flex-direction: column !important;
@@ -657,7 +721,11 @@
     .user_login_form input.mainoption.button1 {width: 100% !important;}
 }
 
-/* CATEGORÍA: Tema: barra inferior de acciones responsive · Origen: línea 13611 · bloque #34 */
+/* =========================================================
+   BARRAS DE ACCIONES DE TEMAS
+   ========================================================= */
+
+/* Original de foro.css: línea 13611 | @(max-width: 900px) */
 @media (max-width: 900px) {
     .topic-bottom-bar {align-items: flex-start;}
     .topic-bottom-bar > .topic-actions, .topic-bottom-bar > .action-box {
@@ -666,10 +734,18 @@
     }
 }
 
-/* CATEGORÍA: Barra de notificaciones: fecha/hora en pantalla estrecha · Origen: línea 13817 · bloque #35 */
+/* =========================================================
+   BARRA DE NOTIFICACIONES
+   ========================================================= */
+
+/* Original de foro.css: línea 13817 | @screen and (max-width: 440px) */
 @media screen and (max-width: 440px) {#fa_toolbar #fa_right #notif_list li .contentTime {white-space: normal !important;}}
 
-/* CATEGORÍA: Editor de mensajes: campos de nombre y selectores en móvil · Origen: línea 14033 · bloque #36 */
+/* =========================================================
+   EDITOR Y PREVISUALIZACIÓN
+   ========================================================= */
+
+/* Original de foro.css: línea 14033 | @(max-width: 650px) */
 @media (max-width: 650px) {
     #main-content:has(#postingbox input#username) #postingbox fieldset > dl:has(input#username),
     #main-content:has(#postingbox input#username) #postingbox fieldset > dl:has(select) {
@@ -683,7 +759,7 @@
     }
 }
 
-/* CATEGORÍA: Editor de mensajes: campos del formulario en móvil · Origen: línea 14110 · bloque #37 */
+/* Original de foro.css: línea 14110 | @(max-width: 600px) */
 @media (max-width: 600px) {
     form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 {
         max-width: 100%;
@@ -693,7 +769,7 @@
     form[name="post"]:not(#quick_reply) #postingbox select {min-width: 0;}
 }
 
-/* CATEGORÍA: Editor de mensajes: selector de dados en móvil · Origen: línea 14279 · bloque #38 */
+/* Original de foro.css: línea 14279 | @(max-width: 600px) */
 @media (max-width: 600px) {
     form[name="post"] .panel.row3:has(#list_dice) {width: 100% !important;}
     form[name="post"] #list_dice tbody td {
@@ -707,18 +783,22 @@
     }
 }
 
-/* CATEGORÍA: Editor de mensajes: opciones de HTML en móvil · Origen: línea 14528 · bloque #39 */
+/* Original de foro.css: línea 14528 | @(max-width: 600px) */
 @media (max-width: 600px) {
     form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {padding: .7rem !important;}
     form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {width: 100%;}
 }
 
-/* CATEGORÍA: Editor de mensajes: previsualización en móvil · Origen: línea 15019 · bloque #40 */
+/* Original de foro.css: línea 15019 | @(max-width: 600px) */
 @media (max-width: 600px) {
     form[name="post"] #preview.post.row2 .postbody > .content {padding: .85rem !important;}
 }
 
-/* CATEGORÍA: Publicaciones/revisión de temas: contenedor y metadatos móviles · Origen: línea 15203 · bloque #41 */
+/* =========================================================
+   AJUSTES RESPONSIVE EXISTENTES
+   ========================================================= */
+
+/* Original de foro.css: línea 15203 | @(max-width: 600px) */
 @media (max-width: 600px) {
     #main-content > .h3:has(+ .post.row2) + .post.row2 {
         width:calc(100% - .5rem) !important;
@@ -732,7 +812,11 @@
     .dr-topic-review-title {max-width:100%; text-align:center;}
 }
 
-/* CATEGORÍA: Página de acceso Digital Rift: tablet · Origen: línea 15487 · bloque #42 */
+/* =========================================================
+   PÁGINA DE ACCESO DIGITAL RIFT
+   ========================================================= */
+
+/* Original de foro.css: línea 15487 | @(max-width: 900px) */
 @media (max-width: 900px) {
     #dr-login-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -743,7 +827,7 @@
     }
 }
 
-/* CATEGORÍA: Página de acceso Digital Rift: móvil · Origen: línea 15497 · bloque #43 */
+/* Original de foro.css: línea 15497 | @(max-width: 600px) */
 @media (max-width: 600px) {
     #dr-login-grid {
         grid-template-columns: minmax(0, 1fr);
@@ -763,7 +847,11 @@
     }
 }
 
-/* CATEGORÍA: Mensajes privados: barra de herramientas en tablet · Origen: línea 16649 · bloque #44 */
+/* =========================================================
+   MENSAJES PRIVADOS
+   ========================================================= */
+
+/* Original de foro.css: línea 16649 | @(max-width: 1100px) */
 @media (max-width: 1100px) {
     #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -782,7 +870,7 @@
     }
 }
 
-/* CATEGORÍA: Mensajes privados: barra de herramientas y controles móviles · Origen: línea 16667 · bloque #45 */
+/* Original de foro.css: línea 16667 | @(max-width: 700px) */
 @media (max-width: 700px) {
     #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) {
         width: calc(100% - 1rem);
@@ -848,7 +936,11 @@
     }
 }
 
-/* CATEGORÍA: Listado de grupos: diseño móvil · Origen: línea 17089 · bloque #46 */
+/* =========================================================
+   LISTADO DE GRUPOS
+   ========================================================= */
+
+/* Original de foro.css: línea 17089 | @(max-width: 650px) */
 @media (max-width: 650px) {
     body:has(.group_list) #main-content > .page-title {
         margin: 1rem auto 1.25rem;
@@ -868,7 +960,11 @@
     }
 }
 
-/* CATEGORÍA: Tablas del foro: diseño móvil · Origen: línea 17311 · bloque #47 */
+/* =========================================================
+   TABLAS Y LISTADO DE MIEMBROS
+   ========================================================= */
+
+/* Original de foro.css: línea 17311 | @(max-width: 650px) */
 @media (max-width: 650px) {
     body:has(.forumbg-table table.table1) #main-content > h1.page-title {
         margin: 1rem auto 1.25rem;
@@ -895,7 +991,11 @@
     }
 }
 
-/* CATEGORÍA: Panel de control UCP: pestañas en móvil · Origen: línea 17654 · bloque #48 */
+/* =========================================================
+   PANEL DE CONTROL / UCP
+   ========================================================= */
+
+/* Original de foro.css: línea 17654 | @screen and (max-width: 700px) */
 @media screen and (max-width: 700px) {
     body:has(#cp-main form#ucp) #tabs {
         width: calc(100% - 20px);
@@ -923,7 +1023,7 @@
     }
 }
 
-/* CATEGORÍA: Panel de control UCP: campos de información en móvil · Origen: línea 17729 · bloque #49 */
+/* Original de foro.css: línea 17729 | @screen and (max-width: 650px) */
 @media screen and (max-width: 650px) {
     body:has(#cp-main form#ucp)
     #cp-main form#ucp > h1.page-title + .panel fieldset > dl {
@@ -939,7 +1039,7 @@
     }
 }
 
-/* CATEGORÍA: Panel de control: pestañas generales en móvil · Origen: línea 18076 · bloque #50 */
+/* Original de foro.css: línea 18076 | @screen and (max-width: 700px) */
 @media screen and (max-width: 700px) {
     body:has(#cp-main) #tabs {
         width: calc(100% - 20px);
@@ -967,7 +1067,7 @@
     }
 }
 
-/* CATEGORÍA: Panel de control: formularios con campos de texto en móvil · Origen: línea 18373 · bloque #51 */
+/* Original de foro.css: línea 18373 | @screen and (max-width: 650px) */
 @media screen and (max-width: 650px) {
     body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) {
         grid-template-columns: minmax(0, 1fr);
@@ -979,7 +1079,7 @@
     }
 }
 
-/* CATEGORÍA: Panel de control: lista de amigos/ignorados en móvil · Origen: línea 18523 · bloque #52 */
+/* Original de foro.css: línea 18523 | @screen and (max-width: 650px) */
 @media screen and (max-width: 650px) {
     body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
     dl:has(input[type="text"]) {
@@ -998,7 +1098,7 @@
     }
 }
 
-/* CATEGORÍA: Panel de control: tabla de temas supervisados en móvil · Origen: línea 19063 · bloque #53 */
+/* Original de foro.css: línea 19063 | @screen and (max-width: 700px) */
 @media screen and (max-width: 700px) {
     body:has(#cp-main) #cp-main .panel:has(table) {
         max-width: 100%;
@@ -1007,7 +1107,11 @@
     body:has(#cp-main) #cp-main table {min-width: 650px;}
 }
 
-/* CATEGORÍA: Confirmación de actualización de perfil: botones móviles · Origen: línea 19113 · bloque #54 */
+/* =========================================================
+   CONFIRMACIÓN DE PERFIL
+   ========================================================= */
+
+/* Original de foro.css: línea 19113 | @(max-width: 600px) */
 @media (max-width: 600px) {
     .dr-profile-confirm-actions {
         flex-direction: column;
@@ -1019,7 +1123,11 @@
     }
 }
 
-/* CATEGORÍA: Pantalla de mantenimiento: diseño móvil · Origen: línea 19318 · bloque #55 */
+/* =========================================================
+   PANTALLA DE MANTENIMIENTO
+   ========================================================= */
+
+/* Original de foro.css: línea 19318 | @(max-width: 600px) */
 @media (max-width: 600px) {
     #dr-maintenance-screen {
         padding: 26px;
@@ -1033,5 +1141,461 @@
     #dr-maintenance-screen .dr-maintenance-status {
         font-size: 8px;
         letter-spacing: .12em;
+    }
+}
+
+/* =========================================================
+   NUEVOS AJUSTES RESPONSIVE — AFILIADOS Y CRÉDITOS
+   No existían @media específicos para esta sección.
+   ========================================================= */
+
+/* Portátiles pequeños y tablets horizontales */
+@media screen and (max-width: 1100px) {
+    .digimon-affiliates {
+        padding: 1.5rem;
+    }
+    .digimon-affiliates-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto auto auto;
+        gap: 1.1rem;
+        align-items: start;
+    }
+    .digimon-affiliates-credits {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        min-height: 0;
+        padding: 1.5rem;
+    }
+    .digimon-affiliates-credits-text {
+        max-width: 52rem;
+        max-height: 18rem;
+    }
+    .digimon-affiliates-siblings {
+        grid-column: 1;
+        grid-row: 2;
+        transform: none;
+    }
+    .digimon-affiliates-elite {
+        grid-column: 2;
+        grid-row: 2;
+        transform: none;
+    }
+    .digimon-affiliates-directory {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+    .digimon-affiliates-character {
+        top: -2.5rem;
+        right: -1.25rem;
+        width: 9rem;
+    }
+    .digimon-affiliates-character-left {
+        top: -2.6rem;
+        left: -1rem;
+        width: 8rem;
+    }
+    .digimon-affiliates-nav {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+}
+
+/* Móviles y tablets estrechas: una sola columna */
+@media screen and (max-width: 650px) {
+    .digimon-affiliates {
+        margin-top: 1.25rem;
+        padding: 1rem;
+        border-radius: .65rem;
+    }
+    .digimon-affiliates-main {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: 1.25rem;
+    }
+    .digimon-affiliates-credits {
+        grid-column: 1;
+        grid-row: auto;
+        padding: 1.1rem;
+    }
+    .digimon-affiliates-credits-text {
+        max-width: 100%;
+        max-height: 17rem;
+        font-size: .75rem;
+        line-height: 1.55;
+    }
+    .digimon-affiliates-siblings,
+    .digimon-affiliates-elite,
+    .digimon-affiliates-directory {
+        grid-column: 1;
+        grid-row: auto;
+        min-width: 0;
+        transform: none;
+    }
+    .digimon-affiliates-siblings-list {
+        grid-template-columns: repeat(2, minmax(0, 100px));
+        gap: .75rem;
+    }
+    .digimon-affiliates-elite-list {
+        width: 100%;
+        max-width: 19rem;
+        margin: 0 auto;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: .45rem;
+    }
+    .digimon-affiliates-elite-list img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+    }
+    .digimon-affiliates-directory-list {
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+    .digimon-affiliates-directory-list img {
+        width: clamp(38px, 10vw, 50px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+    }
+    .digimon-affiliates-nav {
+        min-height: 0 !important;
+        height: auto !important;
+        margin-top: 1rem !important;
+        padding: .5rem 0 !important;
+        white-space: normal !important;
+    }
+    .digimon-affiliates-nav > ul {
+        max-width: 100%;
+        flex-wrap: wrap !important;
+        row-gap: .35rem !important;
+        white-space: normal !important;
+    }
+    .digimon-affiliates-nav > ul > li > a {
+        margin: .15rem !important;
+        padding: .6rem .7rem !important;
+        font-size: .58rem !important;
+        white-space: normal !important;
+    }
+    .digimon-affiliates-icon {
+        gap: .6rem;
+        padding: 0 2.7rem 0 1rem;
+        min-height: 3rem;
+    }
+    .digimon-affiliates-icon > i {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.55rem;
+    }
+    .digimon-affiliates-icon > h2 {
+        max-width: 100%;
+        font-size: clamp(.8rem, 3.5vw, 1.05rem);
+        letter-spacing: .04em;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .digimon-affiliates-character {
+        top: -1.8rem;
+        right: -.35rem;
+        width: 6rem;
+    }
+    .digimon-affiliates-character-left {
+        display: none;
+    }
+}
+
+/* Teléfonos estrechos */
+@media screen and (max-width: 420px) {
+    .digimon-affiliates {
+        padding: .7rem;
+    }
+    .digimon-affiliates-credits {
+        padding: .85rem;
+    }
+    .digimon-affiliates-credits-text {
+        max-height: 15rem;
+        padding-right: .35rem;
+        font-size: .7rem;
+    }
+    .digimon-affiliates-siblings-list {
+        grid-template-columns: repeat(2, minmax(0, 86px));
+        gap: .6rem;
+    }
+    .digimon-affiliates-siblings-list img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .digimon-affiliates-elite-list {
+        max-width: 17rem;
+        gap: .35rem;
+    }
+    .digimon-affiliates-directory-list {
+        gap: .4rem;
+    }
+    .digimon-affiliates-directory-list img {
+        width: 40px;
+    }
+    .digimon-affiliates-icon {
+        padding-right: 2.3rem;
+    }
+    .digimon-affiliates-icon > h2 {
+        font-size: .78rem;
+        letter-spacing: .025em;
+    }
+    .digimon-affiliates-character {
+        top: -1.35rem;
+        right: -.25rem;
+        width: 4.6rem;
+    }
+}
+
+/* =========================================================
+   NUEVOS AJUSTES RESPONSIVE — LISTADO DE TEMAS
+   Ajusta tarjetas con títulos grandes y último mensaje flotante.
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+    ul.topiclist.topics li.row dl.icon {
+        height: auto;
+        min-height: 5rem !important;
+        padding: .65rem .5rem .8rem !important;
+    }
+    ul.topiclist.topics li.row .topic-title-container {
+        padding-left: 1rem;
+        padding-right: 8.5rem;
+    }
+    ul.topiclist.topics li.row .topictitle {
+        font-size: 1.5rem !important;
+        line-height: 1.08;
+        overflow-wrap: anywhere;
+    }
+    ul.topiclist.topics span.span-tab {
+        margin-left: 1rem;
+        white-space: normal;
+        flex-wrap: wrap;
+        line-height: 1.25;
+    }
+    ul.topiclist.topics:not(.search) dd.lastpost {
+        right: .65rem;
+        width: 32%;
+        letter-spacing: .04rem;
+    }
+    ul.topiclist.topics dd.lastpost .lastpost-avatar img {
+        height: 3rem !important;
+    }
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dt,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dd.dterm {
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    ul.topiclist.topics li.row dl.icon {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: .65rem .45rem 1rem !important;
+        row-gap: .4rem;
+        overflow: hidden;
+    }
+    ul.topiclist.topics li.row .topic-title-container {
+        flex: 0 0 100%;
+        padding: 0 .45rem;
+    }
+    ul.topiclist.topics li.row .topictitle {
+        font-size: 1.22rem !important;
+        line-height: 1.12;
+        overflow-wrap: anywhere;
+    }
+    ul.topiclist.topics span.span-tab {
+        max-width: 100%;
+        margin-left: .45rem;
+        white-space: normal;
+        flex-wrap: wrap;
+        font-size: .46rem;
+        line-height: 1.3;
+        letter-spacing: .04rem;
+    }
+    ul.topiclist.topics span.span-tab strong {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+    ul.topiclist.topics:not(.search) dd.lastpost {
+        position: relative !important;
+        inset: auto !important;
+        width: 100%;
+        height: auto !important;
+        min-height: 2.2rem;
+        margin-top: .25rem;
+        padding: .25rem .45rem .5rem;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        font-size: .58rem;
+        letter-spacing: .025rem;
+    }
+    ul.topiclist.topics dd.lastpost .lastpost-avatar img {
+        max-width: 2.2rem;
+        height: 2.2rem !important;
+        padding-right: .4rem;
+    }
+    ul.topiclist.topics dd.posts,
+    ul.topiclist.topics dd.views {
+        font-size: .45rem !important;
+        letter-spacing: .03rem;
+    }
+    ul.topiclist.topics li.row strong.pagination {
+        position: static !important;
+        margin: 0 0 0 auto;
+        transform: none !important;
+        flex: 0 0 auto;
+    }
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header {
+        min-height: 3.4rem !important;
+        height: auto !important;
+    }
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon,
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dt,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dd.dterm {
+        min-height: 3.4rem !important;
+        height: 3.4rem !important;
+    }
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dt,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dd.dterm {
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+    }
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dt > b,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header > dl.icon > dd.dterm {
+        font-size: .85rem !important;
+        letter-spacing: .08rem !important;
+    }
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header::before,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header::before {
+        left: .6rem;
+        font-size: .4rem;
+        letter-spacing: .08rem;
+    }
+    .forumbg.announcement > .inner > ul.topiclist.topics:first-of-type > li.header::after,
+    .forumbg:not(.announcement) > .inner > ul.topiclist.topics:first-of-type > li.header::after {
+        right: .6rem;
+        font-size: .4rem;
+        letter-spacing: .08rem;
+    }
+}
+
+/* =========================================================
+   NUEVOS AJUSTES RESPONSIVE — BARRAS DE ACCIONES DEL FORO
+   ========================================================= */
+
+@media screen and (max-width: 850px) {
+    .topic-actions,
+    .topic-actions .buttons,
+    .topic-actions .search-box,
+    .forum-top-actions {
+        flex-wrap: wrap;
+        gap: .45rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .topic-actions .search-box {
+        flex: 1 1 14rem;
+        min-width: 0;
+    }
+    .topic-actions #forum-search,
+    .topic-actions #forum-search fieldset {
+        width: 100%;
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+    .topic-actions #search_keywords {
+        width: min(13rem, 42vw);
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topic-actions {
+        align-items: stretch;
+        gap: .5rem;
+    }
+    .topic-actions .buttons,
+    .topic-actions .search-box,
+    .forum-top-actions {
+        width: 100%;
+        min-width: 0;
+    }
+    .topic-actions .search-box,
+    .topic-actions #forum-search,
+    .topic-actions #forum-search fieldset {
+        width: 100%;
+    }
+    .topic-actions #search_keywords {
+        flex: 1 1 8rem;
+        width: auto;
+        min-width: 0;
+    }
+    .topic-actions .post-icon a,
+    .topic-actions .forum-mark-read,
+    .topic-actions .button2 {
+        max-width: 100%;
+        white-space: normal;
+    }
+}
+
+/* =========================================================
+   NUEVOS AJUSTES RESPONSIVE — ACCESOS RÁPIDOS DE ESTADÍSTICAS
+   Ocho accesos en escritorio; cuadrícula compacta en móvil.
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+    #digimon-statistics .digimon-stats-quick-links {
+        position: relative !important;
+        top: .5rem !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-width: 100%;
+        margin: .5rem 0 0 !important;
+        grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+        grid-template-rows: auto !important;
+        gap: .3rem !important;
+        box-sizing: border-box !important;
+    }
+    #digimon-statistics .digimon-stats-quick-links > a {
+        width: 100% !important;
+        height: auto !important;
+        min-width: 0 !important;
+        aspect-ratio: 1 / 1;
+    }
+    #digimon-statistics .digimon-stats-welcome,
+    #digimon-statistics .digimon-stats-online {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #digimon-statistics .digimon-stats-quick-links {
+        width: min(100%, 19rem) !important;
+        margin: .6rem auto 0 !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-template-rows: repeat(2, auto) !important;
+        gap: .4rem !important;
+    }
+    #digimon-statistics .digimon-stats-quick-links > a {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 2.2rem !important;
+        aspect-ratio: 1 / 1;
+    }
+    #digimon-statistics .digimon-stats-welcome,
+    #digimon-statistics .digimon-stats-online {
+        height: auto !important;
+        min-height: 0 !important;
     }
 }
