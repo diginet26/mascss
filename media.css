@@ -1,169 +1,1037 @@
+/* =========================================================
+   DIGITAL RIFT — REGLAS RESPONSIVE EXTRAÍDAS
+   Fuente: foro - 2026-10-26T181140.715.css
+   Total: 55 bloques @media. Conserva el orden original para respetar la cascada.
+   Cada bloque lleva categoría y línea de origen.
+   ========================================================= */
 
-:root {
-    /* ==============================
-       DIGIMON — MEMBERLIST
-       ============================== */
+/* CATEGORÍA: Miembros: herramientas de búsqueda y fichas responsive · Origen: línea 735 · bloque #01 */
+@media screen and (max-width:850px) {
+    #dg-member-tools {flex-wrap:wrap;height:auto;}
+    .dg-submit {margin-left:0;}
+    .dg-search {flex:1 1 13rem;min-width:12rem;}
+    .dg-filter {flex:0 1 auto;}
+}
 
-    --dg-blue: #1677C8;
-    --dg-blue-light: #38bdf8;
-    --dg-dark: #111820;
-    --dg-dark-2: #18232d;
-    --dg-panel: #f4f7f9;
-    --dg-border: #d6e1e8;
-    --dg-text: #26323a;
-    --dg-muted: #71808a;
-    --dg-group: #1677c8;
+/* CATEGORÍA: Miembros: tarjetas y paginación móvil · Origen: línea 741 · bloque #02 */
+@media screen and (max-width:600px) {#dg-memberlist {
+    grid-template-columns:1fr;
+}.dg-tamer-body {
+    flex-direction:column;
+}.dg-avatar-frame {
+    width:100%;
+    flex-basis:auto;
+}.dg-tamer-info {
+    padding-left:0;
+    padding-top:1.0714rem;
+}.dg-data-row strong {
+    max-width:17.8571rem;
+}.dg-tamer-footer {
+    height:auto;
+    padding:.7143rem 1.0714rem;
+    gap:.7143rem;
+    flex-wrap:wrap;
+}#dg-member-pagination {
+    flex-direction:column;
+    gap:.7143rem;
+    align-items:flex-start;
+}}
 
-    /* ==============================
-       TEMA
-       ============================== */
+/* CATEGORÍA: Perfil público: contenido responsive · Origen: línea 932 · bloque #03 */
+@media (max-width: 600px) {
+    #dg-profile .dg-profile-content-header {
+    padding: 22px 20px 16px;
+}
+    #dg-profile .dg-profile-content-header::after {
+    left: 20px;
+}
+    #dg-profile .dg-profile-content-body {
+    padding: 20px;
+}
+}
 
-    --bckg1: #222;
-    --bckg2: #1f1f1f;
-    --bckg3: #1c1c1c;
-    --bckg4: #191919;
-    --border1: 1px solid #000;
+/* CATEGORÍA: Perfil público: cabecera, avatar y estado móvil · Origen: línea 1088 · bloque #04 */
+@media (max-width:650px) {
+    #dg-profile .dg-profile-header {
+    --profile-avatar-size: clamp(112px, 23vw, 150px);
+    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 76px;
+    grid-template-rows: var(--profile-avatar-size);
+    height: var(--profile-avatar-size) !important;
+    min-height: var(--profile-avatar-size) !important;
+    max-height: var(--profile-avatar-size) !important;
+    padding: 0 10px 0 0;
+}
+    #dg-profile .dg-profile-header-label {
+    top:14px;
+    left:calc(var(--profile-avatar-size) + 14px);
+    font-size:7px;
+    letter-spacing:2px;
+}
+    #dg-profile .dg-profile-header-main {
+    min-height:66px;
+}
+    #dg-profile .dg-profile-header-avatar {
+    width:var(--profile-avatar-size) !important;
+    height:var(--profile-avatar-size) !important;
+    min-width:var(--profile-avatar-size);
+    min-height:var(--profile-avatar-size);
+    max-width:var(--profile-avatar-size);
+    max-height:var(--profile-avatar-size);
+    margin:0;
+}
+    #dg-profile .dg-profile-header-avatar img {
+    width:100% !important;
+    height:100% !important;
+}
+    #dg-profile .dg-profile-header-title {
+    grid-row:1;
+    padding:0 8px;
+}
+    #dg-profile .dg-profile-header-title h1 {
+    font-size:clamp(16px, 4.2vw, 25px);
+    overflow-wrap:anywhere;
+}
+    #dg-profile .dg-profile-status {
+    grid-row:1;
+    align-self:center !important;
+    justify-self:end !important;
+    width:max-content !important;
+    height:auto !important;
+    min-height:0 !important;
+    padding:5px 9px !important;
+    margin:0;
+    font-size:6px;
+    letter-spacing:.8px;
+}
+}
 
-    /* ==============================
-       PERFIL
-       ============================== */
+/* CATEGORÍA: Perfil público: distribución tablet · Origen: línea 1606 · bloque #05 */
+@media (max-width: 950px) {
+    #dg-profile {
+    width: calc(100% - 30px);
+}
+    #dg-profile .dg-profile-layout {
+    grid-template-columns: 1fr;
+}
+    #dg-profile .dg-profile-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+}
+}
 
-    --profile-group-color: var(--linkc1);
-    --profile-highlight: var(--accent3);
-    --profile-glow: color-mix(in srgb, var(--profile-group-color) 35%, transparent);
-    --profile-header-image: none;
+/* CATEGORÍA: Perfil público: estructura y contenido móvil · Origen: línea 1623 · bloque #06 */
+@media (max-width: 650px) {
+    #dg-profile {
+    width: calc(100% - 20px);
+    margin-top: 20px;
+}
+    #dg-profile .dg-profile-header {
+    padding: 0 16px 0 0;
+}
+    #dg-profile .dg-profile-header-main {
+    display: block;
+}
+    #dg-profile .dg-profile-status {
+    display: inline-flex;
+    margin-top: 0;
+}
+    #dg-profile .dg-profile-title h1 {
+    font-size: 28px;
+}
+    #dg-profile .dg-profile-identity {
+    display: block;
+    padding: 25px;
+    text-align: center;
+}
+    #dg-profile .dg-profile-avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 10px;
+    box-shadow:0 0 0 5px var(--theme-panel-deep), 0 0 0 6px var(--profile-group-color), 0 12px 25px rgba(0, 0, 0, .25);
+}
+    #dg-profile .dg-profile-identity-info {
+    padding: 20px 0 0;
+}
+    #dg-profile .dg-profile-identity::after {
+    display: none;
+}
+    #dg-profile-tabs #tabs ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+    #dg-profile-tabs #tabs li {
+    border-bottom: 1px solid var(--theme-border);
+}
+    #dg-profile-tabs #tabs li:nth-child(even) {
+    border-right: 0;
+}
+    #dg-profile-tabs #tabs a {
+    padding: 13px 8px;
+    text-align: center;
+}
+    #dg-profile .dg-profile-content-header {
+    padding: 20px;
+}
+    #dg-profile .dg-profile-tab-content {
+    padding: 18px;
+}
+    #dg-profile .dg-profile-fields {
+    grid-template-columns: 1fr;
+}
+    #dg-profile .dg-profile-stats {
+    grid-template-columns: 1fr;
+}
+    #dg-profile .dg-profile-sidebar {
+    display: flex;
+}
+}
 
-    /* ==============================
-       DIGIMON NAVBAR
-       ============================== */
+/* CATEGORÍA: Perfil público: enlaces y portada · Origen: línea 1874 · bloque #07 */
+@media (max-width: 700px) {
+    #dg-profile .dg-profile-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+    #dg-profile .dg-profile-cover-image {
+    height: 170px;
+}
+}
 
-    --digimon-blue-dark: #06152b;
-    --digimon-blue: #0878d1;
-    --digimon-blue-light: #20bdf2;
-    --digimon-cyan: #36e4ff;
-    --digimon-yellow: #ffd21c;
-    --digimon-white: #f4fbff;
-    --digimon-border: rgba(48, 205, 255, .55);
+/* CATEGORÍA: Perfil público: enlaces y pestañas en pantallas estrechas · Origen: línea 1882 · bloque #08 */
+@media (max-width: 450px) {
+    #dg-profile .dg-profile-links {
+    grid-template-columns: 1fr;
+}
+    #dg-profile .dg-profile-tab-content {
+    padding: 20px;
+}
+}
 
-    /* ==============================
-       ACCESIBILIDAD
-       ============================== */
+/* CATEGORÍA: Barra de navegación: tablet · Origen: línea 3047 · bloque #09 */
+@media (max-width: 900px) {
+    .digimon-main-button {
+    padding: 0 8px;
+    font-size:8px;
+}
+    .digimon-main-button span {
+    display: none;
+}
+    #digimon-search {
+    width: 170px;
+}
+    .digimon-navbar-main {
+    gap: 7px;
+}
+}
 
-    --dr-font-size: 14px;
+/* CATEGORÍA: Barra de navegación: móvil · Origen: línea 3066 · bloque #10 */
+@media (max-width: 650px) {
+    .digimon-navbar-main {
+    min-height: 58px;
+    padding: 5px 7px;
+    gap: 5px;
+}
+    .digimon-navbar-account {
+    flex-basis: 48px;
+}
+    .digimon-main-menu {
+    gap:3px;
+}
+    .digimon-main-button {
+    width:34px;
+    height: 34px;
+    padding: 0;
+}
+    .digimon-main-button i {
+    font-size:13px;
+}
+    .digimon-digital-line {
+    display: none;
+}
+    #digimon-search {
+    width: 120px;
+}
+    .digimon-navbar-sub {
+    padding: 4px 7px;
+}
+    .digimon-breadcrumb-slot {
+    max-width: calc(100% - 150px);
+}
+}
 
-    /* ==============================
-       EMBLEMAS / COLORES
-       ============================== */
+/* CATEGORÍA: Tablón: noticias responsive · Origen: línea 4150 · bloque #11 */
+@media (max-width: 700px) {.rift-news-item {flex-basis: 100%;}}
 
-    --emblema1: #298BF1;
-    --emblema2: #f16f29;
-    --linkc1: #29F16F;
-    --linkc2: #6F29F1;
-    --linkc3: #d8a839;
-    --accent3: var(--linkc3);
+/* CATEGORÍA: Tablón: distribución a menos de 900px · Origen: línea 4151 · bloque #12 */
+@media (max-width:900px) {
+    #rift-board-body {
+    grid-template-columns:minmax(0,1fr) 190px;
+    grid-template-areas: "current recent" "staff recent";
+}
+    #rift-recent {min-height:0;}
+    #rift-recent-content {height:500px;}
+}
 
-    /* ==============================
-       DIGITAL RIFT — TABLÓN
-       ============================== */
+/* CATEGORÍA: Tablón: distribución móvil · Origen: línea 4159 · bloque #13 */
+@media (max-width:650px) {
+    #rift-board {margin:20px auto;}
+    #rift-board-body {
+    grid-template-columns:1fr;
+    grid-template-areas: "current" "staff" "recent";
+}
+    #rift-current, #rift-staff, #rift-recent {width:100%;}
+    #rift-current-content {height:320px;}
+    #rift-quick-links {
+    grid-template-columns:repeat(7,minmax(0,1fr));
+    gap:4px;
+}
+    #rift-quick-links a {font-size:14px;}
+    #rift-info-row {grid-template-columns:1fr;}
+    #rift-staff-grid {grid-template-columns:repeat(4,minmax(0,1fr));}
+    #rift-social-links {flex-direction:row;}
+    #rift-social-links a {aspect-ratio:1/1;}
+    #rift-recent {min-height:0;}
+    #rift-recent-content {height:300px;}
+}
 
-    --rift-border: var(--theme-border);
-    --rift-panel: var(--theme-panel);
-    --rift-panel-alt: var(--theme-panel-alt);
-    --rift-deep: var(--theme-panel-deep);
-    --rift-text: var(--theme-text);
-    --rift-muted: var(--theme-text-muted);
-    --rift-a1: var(--linkc1);
-    --rift-a2: var(--linkc2);
-    --rift-a3: var(--accent3);
-    --staff-mark: var(--rift-a1);
+/* CATEGORÍA: Tablón: enlaces y cuadrícula en móviles estrechos · Origen: línea 4179 · bloque #14 */
+@media (max-width:420px) {
+    #rift-quick-links {grid-template-columns:repeat(4,minmax(0,1fr));}
+    #rift-staff-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+    .rift-info-box {height:100px;}
+    .rift-info-box img {
+    width:75px;
+    height:75px;
+    flex-basis:75px;}
+}
 
-    /* ==============================
-       DIGITAL RIFT — ELEMENTOS
-       ============================== */
+/* CATEGORÍA: Elementos generales: citas y bloques de código · Origen: línea 4588 · bloque #15 */
+@media (max-width: 600px) {
+    blockquote {
+    padding: 42px 12px 14px 12px;
+    font-size: 11px;
+}
+    .codebox code, .codebox pre {
+    padding: 12px;
+    font-size: 10px;
+}}
 
-    --digimon-radius: 15px;
-    --digimon-radius-small: 9px;
-    --digimon-bg: linear-gradient(135deg,var(--colorfondo),var(--colorfondo2));
-    --digimon-panel: linear-gradient(135deg,var(--colorfondo),var(--colorfondo2));
-    --digimon-gradient: linear-gradient(120deg,var(--emblema1),var(--emblema2));
-    --digimon-gradient-reverse: linear-gradient(120deg,var(--emblema2),var(--emblema1));
-    --digimon-border: color-mix(in srgb,var(--colortextod1) 12%,transparent);
-    --digimon-muted: color-mix(in srgb,var(--colortextod1) 55%,transparent);
+/* CATEGORÍA: Índice: rejilla de foros en tablet · Origen: línea 5028 · bloque #16 */
+@media screen and (max-width: 1000px) {
+    .digimon-forums-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+    .digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {
+    grid-column: span 1;
+}
+    .digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) {
+    grid-column: span 1;
+}
+    .digimon-forums-grid > .digimon-forum-card:has(.rsingleforum), .digimon-forums-grid > .digimon-forum-card:has(.rimageforum) {
+    grid-column: span 2;
+}
+}
 
-    /* ==============================
-       ESTADÍSTICAS
-       ============================== */
+/* CATEGORÍA: Índice: rejilla de foros en móvil · Origen: línea 5042 · bloque #17 */
+@media screen and (max-width: 650px) {
+    .digimon-forums-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+}
+    .digimon-forums-grid > .digimon-forum-card {
+    grid-column: span 1 !important;
+}
+    .digimon-forum-card:has(.rsingleforum) .rforimg, .digimon-forum-card:has(.rimageforum) .rforimg {
+    width: 100%;
+    opacity: .5;
+}
+    .digimon-forum-card:has(.rsingleforum) .rfordesc, .digimon-forum-card:has(.rimageforum) .rfordesc {
+    width: 100%;
+    margin-left: 0;
+    padding: 70px 20px 20px;
+}
+    .digimon-forum-card:has(.rsingleforum) .rforlinks {
+    padding-left: 20px;
+}
+}
 
-    --stats-border: color-mix(in srgb,var(--text-color) 12%,transparent);
-    --stats-muted: color-mix(in srgb,var(--text-color) 55%,transparent);
-    --stats-panel: linear-gradient(135deg,var(--colorfondo2),var(--colorfondo2));
-    --stats-gradient: linear-gradient(120deg,var(--linkc1),var(--linkc2));
-    --stats-gap: 1rem;
+/* CATEGORÍA: Índice: herramientas, categorías y tarjetas en móvil · Origen: línea 5477 · bloque #18 */
+@media screen and (max-width: 700px) {.digimon-index {
+    padding: 15px 0 30px;
+}
+    .digimon-index-tools {
+    flex-direction: column;
+    align-items: stretch;
+}
+    .digimon-tools-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+    .digimon-mark-read {
+    justify-content: center;
+}
+    .digimon-category-header {
+    padding: 17px;
+}
+    .digimon-category-title h2 {
+    font-size: 1.5rem;
+}
+    .digimon-category-status {
+    display: none;
+}
+    .digimon-forums-grid {
+    padding: 15px;
+    gap: 15px;
+}
+    .digimon-forum-name a.forumtitle {
+    font-size: 1.0714rem;
+}
+    .digimon-forum-bottom {
+    flex-wrap: wrap;
+}
+    .digimon-forum-stat {
+    width: 50%;
+    min-height: 50px;
+}
+    .digimon-forum-lastpost {
+    width: 100%;
+    flex-basis: 100%;
+}
+    .digimon-index-footer {
+    flex-direction: column;
+    align-items: stretch;
+}
+    .digimon-footer-links {
+    justify-content: center;
+}
+    .digimon-delete-cookies {
+    justify-content: center;
+}
+}
 
-    /* ==============================
-       DADOS
-       ============================== */
+/* CATEGORÍA: Índice: categorías y tarjetas en móvil estrecho · Origen: línea 5529 · bloque #19 */
+@media screen and (max-width: 450px) {
+    .digimon-category-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1429rem;
+}
+    .digimon-category-title h2 {
+    font-size: 1.2857rem;
+}
+    .digimon-category-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.0714rem;
+}
+    .digimon-forum-heading {
+    padding: 13px;
+}
+    .digimon-forum-description .rfordesc {
+    padding: 65px 15px 15px;
+    font-size: 0.7143rem;
+}
+    .digimon-forum-description .rforlinks {
+    padding: 0 15px 15px;
+}
+}
 
-    --dice-blue: #1677C8;
-    --dice-blue-dark: #0b3d68;
-    --dice-cyan: #22c1c3;
-    --dice-cyan-light: #35D8FF;
-    --dice-bg: #080f18;
-    --dice-panel: #0d1722;
-    --dice-panel2: #111f2d;
-    --dice-line: rgba(34,193,195,.22);
-    --dice-text: #dce8f2;
-    --dice-muted: #718695;
+/* CATEGORÍA: Estadísticas: tablet · Origen: línea 5990 · bloque #20 */
+@media screen and (max-width: 900px) {
+    #digimon-statistics {
+    padding: 20px;
+}
+    .digimon-stats-main {
+    grid-template-columns: 1fr;
+}
+}
 
-    /* ==============================
-       TABLILLAS — BASE DIGIMON
-       ============================== */
+/* CATEGORÍA: Estadísticas: móvil · Origen: línea 5998 · bloque #21 */
+@media screen and (max-width: 600px) {
+    #digimon-statistics {
+    padding: 15px;
+    border-radius: 10px;
+}
+    .digimon-stats-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+    .digimon-stats-status {
+    align-self: flex-start;
+}
+    .digimon-stats-heading h2 {
+    font-size: 28px;
+}
+    .digimon-online-data {
+    grid-template-columns: 1fr;
+}
+    .digimon-groups-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+}
 
-    --dg-blue-dark: #0b3d68;
-    --dg-cyan: #22c1c3;
-    --dg-gold: #f2b705;
-    --dg-bg: #080f18;
-    --dg-panel2: #111f2d;
-    --dg-line: rgba(34,193,195,.22);
+/* CATEGORÍA: Componente auxiliar: dados · Origen: línea 6249 · bloque #22 */
+@media (max-width: 500px) {.dice {
+    width: calc(100% - 30px);
+}}
 
-    /* ==============================
-       TABLILLA — MAPA
-       ============================== */
+/* CATEGORÍA: Modal de Switcheroo · Origen: línea 6887 · bloque #23 */
+@media (max-width: 600px) {
+    .monomer-modal {
+    width: calc(100vw - 30px) !important;
+    max-width: none !important;
+    border-radius: 12px !important;
+}
+    .monomer-modal::before {
+    font-size: 24px !important;
+}
+    .monomer-modal .switcheroo__form {
+    padding: 22px 20px 24px !important;
+}
+}
 
-    --map-blue: #1677C8;
-    --map-cyan: #22c1c3;
-    --map-bg: #080f18;
-    --map-panel: #0d1722;
-    --map-panel2: #111f2d;
-    --map-line: rgba(34,193,195,.22);
-    --map-text: #dce8f2;
-    --map-muted: #7f95a8;
+/* CATEGORÍA: Tarjeta de foro asimétrica: tablet · Origen: línea 7163 · bloque #24 */
+@media screen and (max-width: 1000px) {
 
-    /* ==============================
-       TABLILLA — OTROS
-       ============================== */
+    .digimon-forums-grid:has(.rasymforum) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
-    --bg: #07090e;
-    --panel: #0d1218;
-    --panel-light: #151d25;
-    --line: #26313a;
-    --line-light: #35424b;
-    --text: #d5dce0;
-    --muted: #69767e;
-    --blue: #61a9c9;
-    --cyan: #55c5cf;
-    --orange: #f3a31b;
+    .digimon-forum-card:has(.rasymforum) {
+    grid-column: 1 / span 2 !important;
+    grid-row: 1 !important;
+    min-height: 420px;
+}
 
-    /* ==============================
-       TABLILLA — EXPEDIENTE
-       ============================== */
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card {
+    grid-column: 1 / span 2 !important;
+    grid-row: 2 !important;
+}
 
-    --dr-cyan: var(--emblema2, #35d8ff);
-    --dr-blue: var(--emblema1, #1677c8);
-    --dr-bg: #070d14;
-    --dr-panel: #0c151f;
-    --dr-panel2: #101e2b;
-    --dr-text: #edf8fb;
-    --dr-muted: #8195a4;
-    --dr-border: rgba(255,255,255,.10);
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card
+    + .digimon-forum-card {
+    grid-column: 1 / span 2 !important;
+    grid-row: 3 !important;
+}
+
+}
+
+/* CATEGORÍA: Tarjeta de foro asimétrica: móvil · Origen: línea 7190 · bloque #25 */
+@media screen and (max-width: 650px) {
+
+    .digimon-forums-grid:has(.rasymforum) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+    .digimon-forum-card:has(.rasymforum),
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card,
+    .digimon-forum-card:has(.rasymforum)
+    + .digimon-forum-card
+    + .digimon-forum-card {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-height: 300px;
+}
+
+    .digimon-forum-card:has(.rasymforum) {
+    min-height: 380px;
+}
+
+    .digimon-forum-card:has(.rasymforum) .rasymforum {
+    min-height: 380px;
+}
+
+    .digimon-forum-card:has(.rasymforum) .rforimg {
+    left: 0;
+    width: 100%;
+    opacity: .55;
+}
+
+}
+
+/* CATEGORÍA: Imagen decorativa de tarjeta asimétrica: tablet · Origen: línea 7273 · bloque #26 */
+@media screen and (max-width: 1000px) {
+    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+    left: 45%;
+    width: 80%;
+    height: 100%;
+    opacity: .8;
+}
+
+}
+
+/* CATEGORÍA: Imagen decorativa de tarjeta asimétrica: móvil · Origen: línea 7283 · bloque #27 */
+@media screen and (max-width: 650px) {
+
+    .digimon-forum-card:has(.rasymforum) {
+    overflow: hidden !important;
+}
+
+    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
+    left: 20%;
+    top: 5%;
+    width: 80%;
+    height: 90%;
+    opacity: .35;
+}
+
+}
+
+/* CATEGORÍA: Tema: barra inferior y salto de tema responsive · Origen: línea 11621 · bloque #28 */
+@media (max-width: 850px) {
+    .dr-topic-footer-bar {flex-wrap: wrap;}
+    .dr-topic-footer-bar > .dr-topic-jumpbox {margin-left: .5rem !important;}
+    .dr-topic-footer-bar .dr-topic-jumpbox select {max-width: 35vw;}
+}
+
+/* CATEGORÍA: Tema: cabecera de publicación y datos responsive · Origen: línea 12913 · bloque #29 */
+@media (max-width: 700px) {
+    .dr-topic-header {
+    grid-template-columns: minmax(0,1fr) 7rem;
+    grid-template-rows: 6rem 4rem;
+}
+    .dr-topic-digimon {
+    width: 7rem;
+    height: 10rem;
+    min-width: 7rem;
+}
+    .dr-topic-username {font-size: 1.8rem;}
+    .dr-topic-stats {gap: .3rem .6rem;}
+    .dr-topic-actions li a {min-width: 3.1rem;}
+}
+
+/* CATEGORÍA: Tema: contenedor de publicación en tablet · Origen: línea 13160 · bloque #30 */
+@media (max-width: 850px) {
+    .dr-post-container {
+    grid-template-columns: 13rem minmax(0,1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+    .dr-post-sidebar {width: 13rem;}
+    .dr-post-avatar {
+    width: 13rem;
+    height: 21.67rem;
+}}
+
+/* CATEGORÍA: Tema: contenedor de publicación en móvil · Origen: línea 13172 · bloque #31 */
+@media (max-width: 650px) {
+    .dr-post-container {grid-template-columns: 1fr;}
+    .dr-post-sidebar {
+    width: min(21.43rem, 100%);
+    margin: 0 auto;
+}
+    .dr-post-avatar {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 5;
+}}
+
+/* CATEGORÍA: Formulario de acceso: controles en móvil · Origen: línea 13493 · bloque #32 */
+@media (max-width: 700px) {
+    .user_login_form {
+    gap: .55rem !important;
+    padding: .7rem !important;
+}
+    .user_login_form input.post {width: 6.5rem !important;}
+    .user_login_form label {font-size: .52rem !important;}
+    .user_login_form input.mainoption.button1 {min-width: 5.5rem !important;}
+}
+
+/* CATEGORÍA: Formulario de acceso: disposición en pantallas estrechas · Origen: línea 13506 · bloque #33 */
+@media (max-width: 520px) {
+    .user_login_form {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: .55rem !important;
+}
+    .user_login_form label {
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+    .user_login_form input.post {width: 10rem !important;}
+    .user_login_form label:nth-of-type(3) {justify-content: flex-start !important;}
+    .user_login_form input.mainoption.button1 {width: 100% !important;}
+}
+
+/* CATEGORÍA: Tema: barra inferior de acciones responsive · Origen: línea 13611 · bloque #34 */
+@media (max-width: 900px) {
+    .topic-bottom-bar {align-items: flex-start;}
+    .topic-bottom-bar > .topic-actions, .topic-bottom-bar > .action-box {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+}
+
+/* CATEGORÍA: Barra de notificaciones: fecha/hora en pantalla estrecha · Origen: línea 13817 · bloque #35 */
+@media screen and (max-width: 440px) {#fa_toolbar #fa_right #notif_list li .contentTime {white-space: normal !important;}}
+
+/* CATEGORÍA: Editor de mensajes: campos de nombre y selectores en móvil · Origen: línea 14033 · bloque #36 */
+@media (max-width: 650px) {
+    #main-content:has(#postingbox input#username) #postingbox fieldset > dl:has(input#username),
+    #main-content:has(#postingbox input#username) #postingbox fieldset > dl:has(select) {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: .4rem !important;
+        padding: .6rem .5rem !important;
+    }
+
+    #main-content:has(#postingbox input#username) #postingbox input#username {
+        width: min(100%, 20rem) !important;
+    }
+}
+
+/* CATEGORÍA: Editor de mensajes: campos del formulario en móvil · Origen: línea 14110 · bloque #37 */
+@media (max-width: 600px) {
+    form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    form[name="post"]:not(#quick_reply) #postingbox select {min-width: 0;}
+}
+
+/* CATEGORÍA: Editor de mensajes: selector de dados en móvil · Origen: línea 14279 · bloque #38 */
+@media (max-width: 600px) {
+    form[name="post"] .panel.row3:has(#list_dice) {width: 100% !important;}
+    form[name="post"] #list_dice tbody td {
+        gap: .45rem;
+        padding: .6rem !important;
+    }
+
+    form[name="post"] #list_dice select {
+        flex: 1 1 8rem;
+        min-width: 0;
+    }
+}
+
+/* CATEGORÍA: Editor de mensajes: opciones de HTML en móvil · Origen: línea 14528 · bloque #39 */
+@media (max-width: 600px) {
+    form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {padding: .7rem !important;}
+    form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {width: 100%;}
+}
+
+/* CATEGORÍA: Editor de mensajes: previsualización en móvil · Origen: línea 15019 · bloque #40 */
+@media (max-width: 600px) {
+    form[name="post"] #preview.post.row2 .postbody > .content {padding: .85rem !important;}
+}
+
+/* CATEGORÍA: Publicaciones/revisión de temas: contenedor y metadatos móviles · Origen: línea 15203 · bloque #41 */
+@media (max-width: 600px) {
+    #main-content > .h3:has(+ .post.row2) + .post.row2 {
+        width:calc(100% - .5rem) !important;
+        margin:.6rem auto 1rem !important;
+    }
+
+    #main-content > .h3:has(+ .post.row2) + .post.row2 .postbody > .content,
+    .dr-topic-review-post .postbody > .content,
+    .dr-topic-review-hidden > .inner > p {padding:.85rem !important;}
+
+    .dr-topic-review-title {max-width:100%; text-align:center;}
+}
+
+/* CATEGORÍA: Página de acceso Digital Rift: tablet · Origen: línea 15487 · bloque #42 */
+@media (max-width: 900px) {
+    #dr-login-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(58rem, calc(100% - 1.5rem));
+    }
+    #dr-login-grid .dr-login-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* CATEGORÍA: Página de acceso Digital Rift: móvil · Origen: línea 15497 · bloque #43 */
+@media (max-width: 600px) {
+    #dr-login-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: calc(100% - 1.25rem);
+        gap: .8rem;
+        margin: 1rem auto 1.5rem;
+    }
+    #dr-login-grid .dr-login-card:last-child {
+        grid-column: auto;
+    }
+    #dr-login-grid .dr-login-card-heading {
+        min-height: 0;
+        padding: .8rem .9rem;
+    }
+    #dr-login-grid .dr-login-card-body {
+        padding: .9rem;
+    }
+}
+
+/* CATEGORÍA: Mensajes privados: barra de herramientas en tablet · Origen: línea 16649 · bloque #44 */
+@media (max-width: 1100px) {
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose {
+        grid-column: 1;
+        grid-row: 2;
+        border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border));
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter {
+        grid-column: 2 / 4;
+        grid-row: 2;
+        border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border));
+    }
+}
+
+/* CATEGORÍA: Mensajes privados: barra de herramientas y controles móviles · Origen: línea 16667 · bloque #45 */
+@media (max-width: 700px) {
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) {
+        width: calc(100% - 1rem);
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li {
+        grid-row: auto;
+        min-height: 3rem;
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose,
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        min-height: 3.1rem;
+        border-right: 0;
+        border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border));
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter {
+        justify-content: flex-start;
+        white-space: normal;
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter label {
+        max-width: 100%;
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > p:has(> span.pagination) {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+        white-space: normal;
+        grid-column: 1 / -1;
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type {
+        align-items: stretch;
+        flex-wrap: wrap;
+        padding-bottom: .65rem;
+    }
+
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox),
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(div, form, p):has(select[name="selected_id"]),
+    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .jumpbox {
+        position: static !important;
+        top: auto !important;
+        width: 100%;
+        max-width: 100%;
+        margin: .45rem 0 0 !important;
+        padding: 0 !important;
+        justify-content: flex-end;
+    }
+}
+
+/* CATEGORÍA: Listado de grupos: diseño móvil · Origen: línea 17089 · bloque #46 */
+@media (max-width: 650px) {
+    body:has(.group_list) #main-content > .page-title {
+        margin: 1rem auto 1.25rem;
+        padding: 1.5rem 1rem;
+    }
+
+    body:has(.group_list) #main-content > .panel {
+        padding: .85rem;
+    }
+
+    body:has(.group_list) .group_list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    body:has(.group_list) .group_list > li {
+        padding: .85rem;
+    }
+}
+
+/* CATEGORÍA: Tablas del foro: diseño móvil · Origen: línea 17311 · bloque #47 */
+@media (max-width: 650px) {
+    body:has(.forumbg-table table.table1) #main-content > h1.page-title {
+        margin: 1rem auto 1.25rem;
+        padding: 1.5rem 1rem;
+    }
+
+    body:has(.forumbg-table table.table1) #main-content > .panel {
+        padding: .8rem;
+    }
+
+    body:has(.forumbg-table table.table1) #main-content > .panel dl {
+        grid-template-columns: minmax(0, 1fr);
+        gap: .25rem;
+        padding: .7rem .25rem;
+    }
+
+    body:has(.forumbg-table table.table1) .forumbg-table {
+        padding: .35rem;
+        overflow-x: auto;
+    }
+
+    body:has(.forumbg-table table.table1) .forumbg-table table.table1 {
+        min-width: 36rem;
+    }
+}
+
+/* CATEGORÍA: Panel de control UCP: pestañas en móvil · Origen: línea 17654 · bloque #48 */
+@media screen and (max-width: 700px) {
+    body:has(#cp-main form#ucp) #tabs {
+        width: calc(100% - 20px);
+        padding: 5px;
+    }
+
+    body:has(#cp-main form#ucp) #tabs ul {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    body:has(#cp-main form#ucp) #tabs li {
+        min-width: 0;
+    }
+
+    body:has(#cp-main form#ucp) #tabs li > a {
+        width: 100%;
+        min-width: 0;
+        min-height: 38px;
+        padding: 8px 5px !important;
+        overflow-wrap: anywhere;
+        font-size: 9px;
+        letter-spacing: .6px;
+    }
+}
+
+/* CATEGORÍA: Panel de control UCP: campos de información en móvil · Origen: línea 17729 · bloque #49 */
+@media screen and (max-width: 650px) {
+    body:has(#cp-main form#ucp)
+    #cp-main form#ucp > h1.page-title + .panel fieldset > dl {
+        grid-template-columns: minmax(0, 1fr) !important;
+        row-gap: 8px;
+        margin-bottom: 22px !important;
+    }
+
+    body:has(#cp-main form#ucp)
+    #cp-main form#ucp > h1.page-title + .panel fieldset > dl > dd input[type="text"] {
+        width: 260px !important;
+        max-width: 100% !important;
+    }
+}
+
+/* CATEGORÍA: Panel de control: pestañas generales en móvil · Origen: línea 18076 · bloque #50 */
+@media screen and (max-width: 700px) {
+    body:has(#cp-main) #tabs {
+        width: calc(100% - 20px);
+        padding: 5px;
+    }
+
+    body:has(#cp-main) #tabs ul {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    body:has(#cp-main) #tabs li {
+        min-width: 0;
+    }
+
+    body:has(#cp-main) #tabs li > a {
+        width: 100%;
+        min-width: 0;
+        min-height: 38px;
+        padding: 8px 5px !important;
+        overflow-wrap: anywhere;
+        font-size: 9px;
+        letter-spacing: .6px;
+    }
+}
+
+/* CATEGORÍA: Panel de control: formularios con campos de texto en móvil · Origen: línea 18373 · bloque #51 */
+@media screen and (max-width: 650px) {
+    body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 8px;
+    }
+
+    body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) dd input[type="text"] {
+        width: min(260px, 100%) !important;
+    }
+}
+
+/* CATEGORÍA: Panel de control: lista de amigos/ignorados en móvil · Origen: línea 18523 · bloque #52 */
+@media screen and (max-width: 650px) {
+    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+    dl:has(input[type="text"]) {
+        grid-template-columns: minmax(0, 1fr) !important;
+        row-gap: 8px;
+    }
+
+    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+    dl:has(input[type="text"]) dd {
+        gap: 6px;
+    }
+
+    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
+    dl:has(input[type="text"]) input[type="text"] {
+        width: min(16rem, 100%) !important;
+    }
+}
+
+/* CATEGORÍA: Panel de control: tabla de temas supervisados en móvil · Origen: línea 19063 · bloque #53 */
+@media screen and (max-width: 700px) {
+    body:has(#cp-main) #cp-main .panel:has(table) {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    body:has(#cp-main) #cp-main table {min-width: 650px;}
+}
+
+/* CATEGORÍA: Confirmación de actualización de perfil: botones móviles · Origen: línea 19113 · bloque #54 */
+@media (max-width: 600px) {
+    .dr-profile-confirm-actions {
+        flex-direction: column;
+        gap: .65rem;
+    }
+    .dr-profile-confirm-actions .dr-profile-confirm-button {
+        width: min(100%, 20rem);
+        min-width: 0;
+    }
+}
+
+/* CATEGORÍA: Pantalla de mantenimiento: diseño móvil · Origen: línea 19318 · bloque #55 */
+@media (max-width: 600px) {
+    #dr-maintenance-screen {
+        padding: 26px;
+    }
+    #dr-maintenance-screen::before {
+        inset: 6px;
+    }
+    #dr-maintenance-screen .dr-maintenance-card {
+        padding: 34px 22px;
+    }
+    #dr-maintenance-screen .dr-maintenance-status {
+        font-size: 8px;
+        letter-spacing: .12em;
+    }
 }
