@@ -75,8 +75,8 @@ body {overflow-x: hidden;}
     font-style: normal;
 }
 
-b {color: var(--emblema2);}/* NEGRITA */
-cursive {color: var(--emblema1);}/* CURSIVA */
+b, strong {color: var(--emblema2);}/* NEGRITA */
+em {color: var(--emblema1);}/* CURSIVA */
 u {color: var(--emblema1);}/* SUBRAYADO */
 strike, s {color: var(--emblema1);}/* TACHADO */
 ul.linklist > li:has(a[href*="search_id=newposts"]) {display: none !important;}/* Ocultar "Ver mensajes desde la última visita" */
