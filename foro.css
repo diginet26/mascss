@@ -76,7 +76,7 @@ body {overflow-x: hidden;}
 }
 
 b, strong {color: var(--emblema2);}/* NEGRITA */
-em {color: var(--emblema1);}/* CURSIVA */
+.postbody em, .postbody i:not([class]), .postbody span[style*="font-style"] {color: var(--emblema1) !important;}/* CURSIVA — BBCode DE FOROACTIVO */
 u {color: var(--emblema1);}/* SUBRAYADO */
 strike, s {color: var(--emblema1);}/* TACHADO */
 ul.linklist > li:has(a[href*="search_id=newposts"]) {display: none !important;}/* Ocultar "Ver mensajes desde la última visita" */
