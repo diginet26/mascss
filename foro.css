@@ -4044,7 +4044,7 @@ dl.codebox.spoiler .spoiler_title {
     height: 36px;
     box-sizing: border-box;
     padding: 0 45px 0 14px;
-    background: var(--colorfondo2);
+    background: var(--colorfondo);
     border: 0;
     border-bottom: 1px solid var(--emblema1);
     color: var(--colortextod1);
