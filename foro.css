@@ -732,34 +732,7 @@ body.dark-mode .dg-submit:active {
     color:var(--dg-muted);
     font-size:.6429rem;
 }
-@media screen and (max-width:850px) {
-    #dg-member-tools {flex-wrap:wrap;height:auto;}
-    .dg-submit {margin-left:0;}
-    .dg-search {flex:1 1 13rem;min-width:12rem;}
-    .dg-filter {flex:0 1 auto;}
-}
-@media screen and (max-width:600px) {#dg-memberlist {
-    grid-template-columns:1fr;
-}.dg-tamer-body {
-    flex-direction:column;
-}.dg-avatar-frame {
-    width:100%;
-    flex-basis:auto;
-}.dg-tamer-info {
-    padding-left:0;
-    padding-top:1.0714rem;
-}.dg-data-row strong {
-    max-width:17.8571rem;
-}.dg-tamer-footer {
-    height:auto;
-    padding:.7143rem 1.0714rem;
-    gap:.7143rem;
-    flex-wrap:wrap;
-}#dg-member-pagination {
-    flex-direction:column;
-    gap:.7143rem;
-    align-items:flex-start;
-}}
+
 
 /* VARIABLES DEL TEMA */
 body.light-mode {
@@ -929,17 +902,7 @@ button#theme-toggler2:before {
 }
 
 /* MÓVIL */
-@media (max-width: 600px) {
-    #dg-profile .dg-profile-content-header {
-    padding: 22px 20px 16px;
-}
-    #dg-profile .dg-profile-content-header::after {
-    left: 20px;
-}
-    #dg-profile .dg-profile-content-body {
-    padding: 20px;
-}
-}
+
 
 /* ---------------------------------------------------------
    TAMER DATABASE
@@ -1085,59 +1048,7 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    MÓVIL
    --------------------------------------------------------- */
-@media (max-width:650px) {
-    #dg-profile .dg-profile-header {
-    --profile-avatar-size: clamp(112px, 23vw, 150px);
-    grid-template-columns: var(--profile-avatar-size) minmax(0, 1fr) 76px;
-    grid-template-rows: var(--profile-avatar-size);
-    height: var(--profile-avatar-size) !important;
-    min-height: var(--profile-avatar-size) !important;
-    max-height: var(--profile-avatar-size) !important;
-    padding: 0 10px 0 0;
-}
-    #dg-profile .dg-profile-header-label {
-    top:14px;
-    left:calc(var(--profile-avatar-size) + 14px);
-    font-size:7px;
-    letter-spacing:2px;
-}
-    #dg-profile .dg-profile-header-main {
-    min-height:66px;
-}
-    #dg-profile .dg-profile-header-avatar {
-    width:var(--profile-avatar-size) !important;
-    height:var(--profile-avatar-size) !important;
-    min-width:var(--profile-avatar-size);
-    min-height:var(--profile-avatar-size);
-    max-width:var(--profile-avatar-size);
-    max-height:var(--profile-avatar-size);
-    margin:0;
-}
-    #dg-profile .dg-profile-header-avatar img {
-    width:100% !important;
-    height:100% !important;
-}
-    #dg-profile .dg-profile-header-title {
-    grid-row:1;
-    padding:0 8px;
-}
-    #dg-profile .dg-profile-header-title h1 {
-    font-size:clamp(16px, 4.2vw, 25px);
-    overflow-wrap:anywhere;
-}
-    #dg-profile .dg-profile-status {
-    grid-row:1;
-    align-self:center !important;
-    justify-self:end !important;
-    width:max-content !important;
-    height:auto !important;
-    min-height:0 !important;
-    padding:5px 9px !important;
-    margin:0;
-    font-size:6px;
-    letter-spacing:.8px;
-}
-}
+
 
 /* =========================================================
    ESTRUCTURA PRINCIPAL
@@ -1603,88 +1514,12 @@ button#theme-toggler2:before {
 /* =========================================================
    RESPONSIVE — TABLET
    ========================================================= */
-@media (max-width: 950px) {
-    #dg-profile {
-    width: calc(100% - 30px);
-}
-    #dg-profile .dg-profile-layout {
-    grid-template-columns: 1fr;
-}
-    #dg-profile .dg-profile-sidebar {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
-}
-}
+
 
 /* =========================================================
    RESPONSIVE — MÓVIL
    ========================================================= */
-@media (max-width: 650px) {
-    #dg-profile {
-    width: calc(100% - 20px);
-    margin-top: 20px;
-}
-    #dg-profile .dg-profile-header {
-    padding: 0 16px 0 0;
-}
-    #dg-profile .dg-profile-header-main {
-    display: block;
-}
-    #dg-profile .dg-profile-status {
-    display: inline-flex;
-    margin-top: 0;
-}
-    #dg-profile .dg-profile-title h1 {
-    font-size: 28px;
-}
-    #dg-profile .dg-profile-identity {
-    display: block;
-    padding: 25px;
-    text-align: center;
-}
-    #dg-profile .dg-profile-avatar {
-    width: 130px;
-    height: 130px;
-    margin: 0 auto 10px;
-    box-shadow:0 0 0 5px var(--theme-panel-deep), 0 0 0 6px var(--profile-group-color), 0 12px 25px rgba(0, 0, 0, .25);
-}
-    #dg-profile .dg-profile-identity-info {
-    padding: 20px 0 0;
-}
-    #dg-profile .dg-profile-identity::after {
-    display: none;
-}
-    #dg-profile-tabs #tabs ul {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-    #dg-profile-tabs #tabs li {
-    border-bottom: 1px solid var(--theme-border);
-}
-    #dg-profile-tabs #tabs li:nth-child(even) {
-    border-right: 0;
-}
-    #dg-profile-tabs #tabs a {
-    padding: 13px 8px;
-    text-align: center;
-}
-    #dg-profile .dg-profile-content-header {
-    padding: 20px;
-}
-    #dg-profile .dg-profile-tab-content {
-    padding: 18px;
-}
-    #dg-profile .dg-profile-fields {
-    grid-template-columns: 1fr;
-}
-    #dg-profile .dg-profile-stats {
-    grid-template-columns: 1fr;
-}
-    #dg-profile .dg-profile-sidebar {
-    display: flex;
-}
-}
+
 /* =========================================================
    PERFIL — ZONA CENTRAL
    ========================================================= */
@@ -1871,22 +1706,7 @@ button#theme-toggler2:before {
 /* ---------------------------------------------------------
    RESPONSIVE
    --------------------------------------------------------- */
-@media (max-width: 700px) {
-    #dg-profile .dg-profile-links {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-    #dg-profile .dg-profile-cover-image {
-    height: 170px;
-}
-}
-@media (max-width: 450px) {
-    #dg-profile .dg-profile-links {
-    grid-template-columns: 1fr;
-}
-    #dg-profile .dg-profile-tab-content {
-    padding: 20px;
-}
-}
+
 
 /* =========================================================
    PERFIL — USER DATA
@@ -3044,58 +2864,12 @@ body:has(.monomer-modal.monomer-open)
 /* ---------------------------------------------------------
    TABLET
    --------------------------------------------------------- */
-@media (max-width: 900px) {
-    .digimon-main-button {
-    padding: 0 8px;
-    font-size:8px;
-}
-    .digimon-main-button span {
-    display: none;
-}
-    #digimon-search {
-    width: 170px;
-}
-    .digimon-navbar-main {
-    gap: 7px;
-}
-}
+
 
 /* ---------------------------------------------------------
    MÓVIL
    --------------------------------------------------------- */
-@media (max-width: 650px) {
-    .digimon-navbar-main {
-    min-height: 58px;
-    padding: 5px 7px;
-    gap: 5px;
-}
-    .digimon-navbar-account {
-    flex-basis: 48px;
-}
-    .digimon-main-menu {
-    gap:3px;
-}
-    .digimon-main-button {
-    width:34px;
-    height: 34px;
-    padding: 0;
-}
-    .digimon-main-button i {
-    font-size:13px;
-}
-    .digimon-digital-line {
-    display: none;
-}
-    #digimon-search {
-    width: 120px;
-}
-    .digimon-navbar-sub {
-    padding: 4px 7px;
-}
-    .digimon-breadcrumb-slot {
-    max-width: calc(100% - 150px);
-}
-}
+
 
 /* =========================================================
    THEME TOGGLERS — DIGIMON NAVBAR
@@ -4147,44 +3921,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 }
 
 /*RESPONSIVE*/
-@media (max-width: 700px) {.rift-news-item {flex-basis: 100%;}}
-@media (max-width:900px) {
-    #rift-board-body {
-    grid-template-columns:minmax(0,1fr) 190px;
-    grid-template-areas: "current recent" "staff recent";
-}
-    #rift-recent {min-height:0;}
-    #rift-recent-content {height:500px;}
-}
-@media (max-width:650px) {
-    #rift-board {margin:20px auto;}
-    #rift-board-body {
-    grid-template-columns:1fr;
-    grid-template-areas: "current" "staff" "recent";
-}
-    #rift-current, #rift-staff, #rift-recent {width:100%;}
-    #rift-current-content {height:320px;}
-    #rift-quick-links {
-    grid-template-columns:repeat(7,minmax(0,1fr));
-    gap:4px;
-}
-    #rift-quick-links a {font-size:14px;}
-    #rift-info-row {grid-template-columns:1fr;}
-    #rift-staff-grid {grid-template-columns:repeat(4,minmax(0,1fr));}
-    #rift-social-links {flex-direction:row;}
-    #rift-social-links a {aspect-ratio:1/1;}
-    #rift-recent {min-height:0;}
-    #rift-recent-content {height:300px;}
-}
-@media (max-width:420px) {
-    #rift-quick-links {grid-template-columns:repeat(4,minmax(0,1fr));}
-    #rift-staff-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
-    .rift-info-box {height:100px;}
-    .rift-info-box img {
-    width:75px;
-    height:75px;
-    flex-basis:75px;}
-}
+
 
 /* =========================================================
    HEADER DIGITAL RIFT
@@ -4585,15 +4322,7 @@ blockquote blockquote {
 /* =========================================================
    MOBILE
    ========================================================= */
-@media (max-width: 600px) {
-    blockquote {
-    padding: 42px 12px 14px 12px;
-    font-size: 11px;
-}
-    .codebox code, .codebox pre {
-    padding: 12px;
-    font-size: 10px;
-}}
+
 /* =========================================================
    ÚLTIMOS TEMAS — DIGITAL RIFT
    ========================================================= */
@@ -5025,41 +4754,7 @@ blockquote blockquote {
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-@media screen and (max-width: 1000px) {
-    .digimon-forums-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-    .digimon-forums-grid > .digimon-forum-card:has(.rtripleforum) {
-    grid-column: span 1;
-}
-    .digimon-forums-grid > .digimon-forum-card:has(.rdoubleforum) {
-    grid-column: span 1;
-}
-    .digimon-forums-grid > .digimon-forum-card:has(.rsingleforum), .digimon-forums-grid > .digimon-forum-card:has(.rimageforum) {
-    grid-column: span 2;
-}
-}
-@media screen and (max-width: 650px) {
-    .digimon-forums-grid {
-    grid-template-columns: 1fr;
-    padding: 15px;
-}
-    .digimon-forums-grid > .digimon-forum-card {
-    grid-column: span 1 !important;
-}
-    .digimon-forum-card:has(.rsingleforum) .rforimg, .digimon-forum-card:has(.rimageforum) .rforimg {
-    width: 100%;
-    opacity: .5;
-}
-    .digimon-forum-card:has(.rsingleforum) .rfordesc, .digimon-forum-card:has(.rimageforum) .rfordesc {
-    width: 100%;
-    margin-left: 0;
-    padding: 70px 20px 20px;
-}
-    .digimon-forum-card:has(.rsingleforum) .rforlinks {
-    padding-left: 20px;
-}
-}
+
 
 /* =========================================================
    TARJETA DEL FORO
@@ -5474,82 +5169,8 @@ blockquote blockquote {
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-@media screen and (max-width: 700px) {.digimon-index {
-    padding: 15px 0 30px;
-}
-    .digimon-index-tools {
-    flex-direction: column;
-    align-items: stretch;
-}
-    .digimon-tools-left {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-    .digimon-mark-read {
-    justify-content: center;
-}
-    .digimon-category-header {
-    padding: 17px;
-}
-    .digimon-category-title h2 {
-    font-size: 1.5rem;
-}
-    .digimon-category-status {
-    display: none;
-}
-    .digimon-forums-grid {
-    padding: 15px;
-    gap: 15px;
-}
-    .digimon-forum-name a.forumtitle {
-    font-size: 1.0714rem;
-}
-    .digimon-forum-bottom {
-    flex-wrap: wrap;
-}
-    .digimon-forum-stat {
-    width: 50%;
-    min-height: 50px;
-}
-    .digimon-forum-lastpost {
-    width: 100%;
-    flex-basis: 100%;
-}
-    .digimon-index-footer {
-    flex-direction: column;
-    align-items: stretch;
-}
-    .digimon-footer-links {
-    justify-content: center;
-}
-    .digimon-delete-cookies {
-    justify-content: center;
-}
-}
-@media screen and (max-width: 450px) {
-    .digimon-category-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1429rem;
-}
-    .digimon-category-title h2 {
-    font-size: 1.2857rem;
-}
-    .digimon-category-label {
-    font-size: 0.5rem;
-    letter-spacing: 0.0714rem;
-}
-    .digimon-forum-heading {
-    padding: 13px;
-}
-    .digimon-forum-description .rfordesc {
-    padding: 65px 15px 15px;
-    font-size: 0.7143rem;
-}
-    .digimon-forum-description .rforlinks {
-    padding: 0 15px 15px;
-}
-}
+
+
 /* =========================================================
    ETIQUETAS DIGITALES DE LAS DESCRIPCIONES
    ========================================================= */
@@ -5987,37 +5608,7 @@ blockquote blockquote {
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-@media screen and (max-width: 900px) {
-    #digimon-statistics {
-    padding: 20px;
-}
-    .digimon-stats-main {
-    grid-template-columns: 1fr;
-}
-}
-@media screen and (max-width: 600px) {
-    #digimon-statistics {
-    padding: 15px;
-    border-radius: 10px;
-}
-    .digimon-stats-header {
-    align-items: flex-start;
-    flex-direction: column;
-}
-    .digimon-stats-status {
-    align-self: flex-start;
-}
-    .digimon-stats-heading h2 {
-    font-size: 28px;
-}
-    .digimon-online-data {
-    grid-template-columns: 1fr;
-}
-    .digimon-groups-header {
-    align-items: flex-start;
-    flex-direction: column;
-}
-}
+
 
 /* =========================================================
    DIGITAL RIFT — SISTEMA DE LANZADA DE DADOS
@@ -6246,9 +5837,7 @@ blockquote blockquote {
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-@media (max-width: 500px) {.dice {
-    width: calc(100% - 30px);
-}}
+
 
 /* =========================================================
    DIGITAL RIFT — COMPOSER SYSTEM
@@ -6884,19 +6473,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* ---------------------------------------------------------
    MÓVIL
    --------------------------------------------------------- */
-@media (max-width: 600px) {
-    .monomer-modal {
-    width: calc(100vw - 30px) !important;
-    max-width: none !important;
-    border-radius: 12px !important;
-}
-    .monomer-modal::before {
-    font-size: 24px !important;
-}
-    .monomer-modal .switcheroo__form {
-    padding: 22px 20px 24px !important;
-}
-}
+
 
 /* SUBTÍTULO — colocado dentro del contenido, justo antes del formulario */
 .monomer-modal__content::before {
@@ -7160,66 +6737,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* ---------------------------------------------------------
    RESPONSIVE
    --------------------------------------------------------- */
-@media screen and (max-width: 1000px) {
 
-    .digimon-forums-grid:has(.rasymforum) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 
-    .digimon-forum-card:has(.rasymforum) {
-    grid-column: 1 / span 2 !important;
-    grid-row: 1 !important;
-    min-height: 420px;
-}
-
-    .digimon-forum-card:has(.rasymforum)
-    + .digimon-forum-card {
-    grid-column: 1 / span 2 !important;
-    grid-row: 2 !important;
-}
-
-    .digimon-forum-card:has(.rasymforum)
-    + .digimon-forum-card
-    + .digimon-forum-card {
-    grid-column: 1 / span 2 !important;
-    grid-row: 3 !important;
-}
-
-}
-
-@media screen and (max-width: 650px) {
-
-    .digimon-forums-grid:has(.rasymforum) {
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-    .digimon-forum-card:has(.rasymforum),
-    .digimon-forum-card:has(.rasymforum)
-    + .digimon-forum-card,
-    .digimon-forum-card:has(.rasymforum)
-    + .digimon-forum-card
-    + .digimon-forum-card {
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    min-height: 300px;
-}
-
-    .digimon-forum-card:has(.rasymforum) {
-    min-height: 380px;
-}
-
-    .digimon-forum-card:has(.rasymforum) .rasymforum {
-    min-height: 380px;
-}
-
-    .digimon-forum-card:has(.rasymforum) .rforimg {
-    left: 0;
-    width: 100%;
-    opacity: .55;
-}
-
-}
 /* =========================================================
    RASYMFORUM — IMAGEN DECORATIVA SUPERPUESTA
    ========================================================= */
@@ -7270,31 +6789,8 @@ form[name="post"]:not(#quick_reply) #textarea_content {
 /* ---------------------------------------------------------
    RESPONSIVE
    --------------------------------------------------------- */
-@media screen and (max-width: 1000px) {
-    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
-    left: 45%;
-    width: 80%;
-    height: 100%;
-    opacity: .8;
-}
 
-}
 
-@media screen and (max-width: 650px) {
-
-    .digimon-forum-card:has(.rasymforum) {
-    overflow: hidden !important;
-}
-
-    .digimon-forum-card:has(.rasymforum) .rasym-overlay-img {
-    left: 20%;
-    top: 5%;
-    width: 80%;
-    height: 90%;
-    opacity: .35;
-}
-
-}
 /* =========================================================
    RASYMFORUM — LIBERAR IMAGEN SUPERPUESTA
    ========================================================= */
@@ -11618,11 +11114,6 @@ body.light-mode .digimon-forum-description .rsingleforum, body.light-mode .digim
     box-shadow: 0 0 .6rem color-mix(in srgb, var(--emblema2) 18%, transparent);
 }
 
-@media (max-width: 850px) {
-    .dr-topic-footer-bar {flex-wrap: wrap;}
-    .dr-topic-footer-bar > .dr-topic-jumpbox {margin-left: .5rem !important;}
-    .dr-topic-footer-bar .dr-topic-jumpbox select {max-width: 35vw;}
-}
 
 /* =========================================================
    BOTONES PUBLICAR / RESPONDER
@@ -12910,20 +12401,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
    RESPONSIVE — CABECERA
    ========================================================= */
 
-@media (max-width: 700px) {
-    .dr-topic-header {
-    grid-template-columns: minmax(0,1fr) 7rem;
-    grid-template-rows: 6rem 4rem;
-}
-    .dr-topic-digimon {
-    width: 7rem;
-    height: 10rem;
-    min-width: 7rem;
-}
-    .dr-topic-username {font-size: 1.8rem;}
-    .dr-topic-stats {gap: .3rem .6rem;}
-    .dr-topic-actions li a {min-width: 3.1rem;}
-}
 
 /* =========================================================
    VIEWTOPIC — FONDO DEL POST
@@ -13157,29 +12634,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 850px) {
-    .dr-post-container {
-    grid-template-columns: 13rem minmax(0,1fr);
-    gap: 1rem;
-    padding: 1rem;
-}
-    .dr-post-sidebar {width: 13rem;}
-    .dr-post-avatar {
-    width: 13rem;
-    height: 21.67rem;
-}}
 
-@media (max-width: 650px) {
-    .dr-post-container {grid-template-columns: 1fr;}
-    .dr-post-sidebar {
-    width: min(21.43rem, 100%);
-    margin: 0 auto;
-}
-    .dr-post-avatar {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 5;
-}}
 /*VIEWTOPIC — PERMITIR STICKY DEL PERFIL*/
 #content-container div#main {overflow: unset !important;}
 .topic-actions:not(:has(.search-box)) .pagination a[href^="javascript:showhide"] {display: none !important;}/*oculta mas en temas*/
@@ -13490,33 +12945,12 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 /* ---------------------------------------------------------
    RESPONSIVE — TABLET
    --------------------------------------------------------- */
-@media (max-width: 700px) {
-    .user_login_form {
-    gap: .55rem !important;
-    padding: .7rem !important;
-}
-    .user_login_form input.post {width: 6.5rem !important;}
-    .user_login_form label {font-size: .52rem !important;}
-    .user_login_form input.mainoption.button1 {min-width: 5.5rem !important;}
-}
+
 
 /* ---------------------------------------------------------
    RESPONSIVE — MÓVIL
    --------------------------------------------------------- */
-@media (max-width: 520px) {
-    .user_login_form {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: .55rem !important;
-}
-    .user_login_form label {
-    justify-content: space-between !important;
-    width: 100% !important;
-}
-    .user_login_form input.post {width: 10rem !important;}
-    .user_login_form label:nth-of-type(3) {justify-content: flex-start !important;}
-    .user_login_form input.mainoption.button1 {width: 100% !important;}
-}
+
 
 .forum-top-actions a[href^="javascript:showhide"], .topic-actions:not(:has(.search-box)) .pagination a[href^="javascript:showhide"] {display: none !important;}/* DIGITAL RIFT — OCULTAR BOTÓN MÁS */
 
@@ -13608,13 +13042,6 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     transform: translateY(-.05rem);
 }
 
-@media (max-width: 900px) {
-    .topic-bottom-bar {align-items: flex-start;}
-    .topic-bottom-bar > .topic-actions, .topic-bottom-bar > .action-box {
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — NOTIFICACIONES // PANEL Y TARJETAS
@@ -13814,7 +13241,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
 }
 
 #fa_toolbar #fa_right #notif_list li:not(.see_all) a.delete:hover::before {color: #111 !important;}
-@media screen and (max-width: 440px) {#fa_toolbar #fa_right #notif_list li .contentTime {white-space: normal !important;}}
+
 
 /* PIE — VER TODAS LAS NOTIFICACIONES */
 #fa_toolbar #fa_right #notif_list > li.see_all {
@@ -14030,18 +13457,6 @@ body.light-mode #main-content:has(#postingbox input#username) #postingbox fields
     box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 14%, transparent) !important;
 }
 
-@media (max-width: 650px) {
-    #main-content:has(#postingbox input#username) #postingbox fieldset > dl:has(input#username),
-    #main-content:has(#postingbox input#username) #postingbox fieldset > dl:has(select) {
-        grid-template-columns: minmax(0, 1fr) !important;
-        gap: .4rem !important;
-        padding: .6rem .5rem !important;
-    }
-
-    #main-content:has(#postingbox input#username) #postingbox input#username {
-        width: min(100%, 20rem) !important;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — PUBLICAR NUEVO TEMA
@@ -14107,14 +13522,7 @@ form[name="post"]:not(#quick_reply) #postingbox input[type="checkbox"] {
 form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 dl {margin-bottom: .45rem;}
 
 /* Adaptación a pantallas pequeñas */
-@media (max-width: 600px) {
-    form[name="post"]:not(#quick_reply) #postingbox fieldset.fields1 {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-    }
 
-    form[name="post"]:not(#quick_reply) #postingbox select {min-width: 0;}
-}
 
 /* =========================================================
    DIGITAL RIFT — DICE ROLL SYSTEM
@@ -14276,18 +13684,7 @@ form[name="post"] #list_dice #dice_to_del a:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-    form[name="post"] .panel.row3:has(#list_dice) {width: 100% !important;}
-    form[name="post"] #list_dice tbody td {
-        gap: .45rem;
-        padding: .6rem !important;
-    }
 
-    form[name="post"] #list_dice select {
-        flex: 1 1 8rem;
-        min-width: 0;
-    }
-}
 
 form[name="post"] #list_dice tbody td {--dice-label-color: var(--emblema2);}/* DIGITAL RIFT — ETIQUETA DE CADA LANZADA */
 form[name="post"] #list_dice tbody td {font-family: "Oxanium", sans-serif !important;}/* Texto de identificación de la tirada */
@@ -14525,10 +13922,7 @@ form[name="post"] .panel.row3:has(input[name="disable_html"]) hr.dashed {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-    form[name="post"] .panel.row3:has(input[name="disable_html"]) > .inner {padding: .7rem !important;}
-    form[name="post"] .panel.row3:has(input[name="disable_html"]) fieldset.fields1 > label:has(input[type="checkbox"]) {width: 100%;}
-}
+
 
 /* =========================================================
    DIGITAL RIFT — POSTING BODY
@@ -15016,9 +14410,6 @@ body.light-mode form[name="post"] #preview.post.row2 .postbody > .content {
     color: #394752 !important;
 }
 
-@media (max-width: 600px) {
-    form[name="post"] #preview.post.row2 .postbody > .content {padding: .85rem !important;}
-}
 
 /* Revisión de temas: se conservan los estilos propios ya existentes */
 .dr-topic-review-post {
@@ -15200,18 +14591,6 @@ body.light-mode .dr-topic-review-post .postbody > .author {
 
 body.light-mode #main-content > .h3:has(+ .post.row2) + .post.row2 + hr {border-top-color:color-mix(in srgb, var(--emblema2) 25%, #c5cfd7) !important;}
 
-@media (max-width: 600px) {
-    #main-content > .h3:has(+ .post.row2) + .post.row2 {
-        width:calc(100% - .5rem) !important;
-        margin:.6rem auto 1rem !important;
-    }
-
-    #main-content > .h3:has(+ .post.row2) + .post.row2 .postbody > .content,
-    .dr-topic-review-post .postbody > .content,
-    .dr-topic-review-hidden > .inner > p {padding:.85rem !important;}
-
-    .dr-topic-review-title {max-width:100%; text-align:center;}
-}
 
 /* =========================================================
    DIGITAL RIFT — LOGIN EN TRES COLUMNAS
@@ -15484,34 +14863,6 @@ body.light-mode #main-content > .h3:has(+ .post.row2) + .post.row2 + hr {border-
     margin-top: 0 !important;
 }
 
-@media (max-width: 900px) {
-    #dr-login-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        width: min(58rem, calc(100% - 1.5rem));
-    }
-    #dr-login-grid .dr-login-card:last-child {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 600px) {
-    #dr-login-grid {
-        grid-template-columns: minmax(0, 1fr);
-        width: calc(100% - 1.25rem);
-        gap: .8rem;
-        margin: 1rem auto 1.5rem;
-    }
-    #dr-login-grid .dr-login-card:last-child {
-        grid-column: auto;
-    }
-    #dr-login-grid .dr-login-card-heading {
-        min-height: 0;
-        padding: .8rem .9rem;
-    }
-    #dr-login-grid .dr-login-card-body {
-        padding: .9rem;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — LOGIN
@@ -16646,88 +15997,6 @@ body.light-mode .digimon-affiliates-nav > ul > li > a:hover {
     box-shadow: 0 0 .55rem color-mix(in srgb, var(--emblema2) 16%, transparent);
 }
 
-@media (max-width: 1100px) {
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose {
-        grid-column: 1;
-        grid-row: 2;
-        border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border));
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter {
-        grid-column: 2 / 4;
-        grid-row: 2;
-        border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border));
-    }
-}
-
-@media (max-width: 700px) {
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) {
-        width: calc(100% - 1rem);
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar ul#privmsgs-menu > li {
-        grid-row: auto;
-        min-height: 3rem;
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__compose,
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter {
-        grid-column: 1 / -1;
-        grid-row: auto;
-        min-height: 3.1rem;
-        border-right: 0;
-        border-top: .06rem solid color-mix(in srgb, var(--emblema2) 30%, var(--theme-border));
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter {
-        justify-content: flex-start;
-        white-space: normal;
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .dr-pm-toolbar__filter label {
-        max-width: 100%;
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > p:has(> span.pagination) {
-        position: relative;
-        left: auto;
-        bottom: auto;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        width: 100%;
-        max-width: 100%;
-        transform: none;
-        white-space: normal;
-        grid-column: 1 / -1;
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) form[name="privmsg_list"] > .topic-actions:last-of-type {
-        align-items: stretch;
-        flex-wrap: wrap;
-        padding-bottom: .65rem;
-    }
-
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(.forumjump, .forumjumpbox, #forumjumpbox, .jumpbox),
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) > :is(div, form, p):has(select[name="selected_id"]),
-    #main-content:has(form[name="privmsg_list"] ul#privmsgs-menu) .jumpbox {
-        position: static !important;
-        top: auto !important;
-        width: 100%;
-        max-width: 100%;
-        margin: .45rem 0 0 !important;
-        padding: 0 !important;
-        justify-content: flex-end;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — MENSAJES PRIVADOS
@@ -17086,24 +16355,7 @@ body:has(.group_list) #main-content input[type="submit"] {
 }
 
 /* MÓVIL */
-@media (max-width: 650px) {
-    body:has(.group_list) #main-content > .page-title {
-        margin: 1rem auto 1.25rem;
-        padding: 1.5rem 1rem;
-    }
 
-    body:has(.group_list) #main-content > .panel {
-        padding: .85rem;
-    }
-
-    body:has(.group_list) .group_list {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    body:has(.group_list) .group_list > li {
-        padding: .85rem;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — FICHA DE GRUPOS
@@ -17308,31 +16560,7 @@ body:has(.forumbg-table table.table1) #main-content select {
 }
 
 /* RESPONSIVE */
-@media (max-width: 650px) {
-    body:has(.forumbg-table table.table1) #main-content > h1.page-title {
-        margin: 1rem auto 1.25rem;
-        padding: 1.5rem 1rem;
-    }
 
-    body:has(.forumbg-table table.table1) #main-content > .panel {
-        padding: .8rem;
-    }
-
-    body:has(.forumbg-table table.table1) #main-content > .panel dl {
-        grid-template-columns: minmax(0, 1fr);
-        gap: .25rem;
-        padding: .7rem .25rem;
-    }
-
-    body:has(.forumbg-table table.table1) .forumbg-table {
-        padding: .35rem;
-        overflow-x: auto;
-    }
-
-    body:has(.forumbg-table table.table1) .forumbg-table table.table1 {
-        min-width: 36rem;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — FICHA DE GRUPO
@@ -17651,32 +16879,7 @@ body:has(#cp-main form#ucp) #tabs li > a:focus-visible {
 }
 
 /* RESPONSIVE — TABLET Y MÓVIL */
-@media screen and (max-width: 700px) {
-    body:has(#cp-main form#ucp) #tabs {
-        width: calc(100% - 20px);
-        padding: 5px;
-    }
 
-    body:has(#cp-main form#ucp) #tabs ul {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 4px;
-    }
-
-    body:has(#cp-main form#ucp) #tabs li {
-        min-width: 0;
-    }
-
-    body:has(#cp-main form#ucp) #tabs li > a {
-        width: 100%;
-        min-width: 0;
-        min-height: 38px;
-        padding: 8px 5px !important;
-        overflow-wrap: anywhere;
-        font-size: 9px;
-        letter-spacing: .6px;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — EDITOR DE PERFIL
@@ -17726,20 +16929,7 @@ body:has(#cp-main form#ucp)
 }
 
 /* Adaptación para pantallas pequeñas */
-@media screen and (max-width: 650px) {
-    body:has(#cp-main form#ucp)
-    #cp-main form#ucp > h1.page-title + .panel fieldset > dl {
-        grid-template-columns: minmax(0, 1fr) !important;
-        row-gap: 8px;
-        margin-bottom: 22px !important;
-    }
 
-    body:has(#cp-main form#ucp)
-    #cp-main form#ucp > h1.page-title + .panel fieldset > dl > dd input[type="text"] {
-        width: 260px !important;
-        max-width: 100% !important;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — EDITOR DE PERFIL
@@ -18073,32 +17263,7 @@ body:has(#cp-main) #cp-main .submit-buttons input.button2:hover {
 }
 
 /* MÓVIL */
-@media screen and (max-width: 700px) {
-    body:has(#cp-main) #tabs {
-        width: calc(100% - 20px);
-        padding: 5px;
-    }
 
-    body:has(#cp-main) #tabs ul {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 4px;
-    }
-
-    body:has(#cp-main) #tabs li {
-        min-width: 0;
-    }
-
-    body:has(#cp-main) #tabs li > a {
-        width: 100%;
-        min-width: 0;
-        min-height: 38px;
-        padding: 8px 5px !important;
-        overflow-wrap: anywhere;
-        font-size: 9px;
-        letter-spacing: .6px;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — EDITOR DE PERFIL
@@ -18370,16 +17535,7 @@ body:has(#cp-main) #cp-main input[type="button"]:hover {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 650px) {
-    body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) {
-        grid-template-columns: minmax(0, 1fr);
-        row-gap: 8px;
-    }
 
-    body:has(#cp-main) #cp-main .panel fieldset dl:has(input[type="text"]) dd input[type="text"] {
-        width: min(260px, 100%) !important;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — AMIGOS E IGNORADOS
@@ -18520,23 +17676,7 @@ dl:has(input[type="text"]) dd button:hover {
 }
 
 /* MÓVIL */
-@media screen and (max-width: 650px) {
-    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
-    dl:has(input[type="text"]) {
-        grid-template-columns: minmax(0, 1fr) !important;
-        row-gap: 8px;
-    }
 
-    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
-    dl:has(input[type="text"]) dd {
-        gap: 6px;
-    }
-
-    body:has(#tabs li.activetab a[href*="friendsfoes"]) #cp-main
-    dl:has(input[type="text"]) input[type="text"] {
-        width: min(16rem, 100%) !important;
-    }
-}
 
 /* =========================================================
    DIGITAL RIFT — AMIGOS E IGNORADOS
@@ -19060,13 +18200,7 @@ body:has(#cp-main) #cp-main .submit-buttons input.button1:hover, body:has(#cp-ma
 }
 
 /* RESPONSIVE: EVITAR QUE LAS COLUMNAS SE APLASTEN */
-@media screen and (max-width: 700px) {
-    body:has(#cp-main) #cp-main .panel:has(table) {
-        max-width: 100%;
-        overflow-x: auto;
-    }
-    body:has(#cp-main) #cp-main table {min-width: 650px;}
-}
+
 /* =========================================================
    DIGITAL RIFT — BOTONES DE CONFIRMACIÓN DEL PERFIL
    ========================================================= */
@@ -19110,16 +18244,7 @@ body:has(#cp-main) #cp-main .submit-buttons input.button1:hover, body:has(#cp-ma
     transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-    .dr-profile-confirm-actions {
-        flex-direction: column;
-        gap: .65rem;
-    }
-    .dr-profile-confirm-actions .dr-profile-confirm-button {
-        width: min(100%, 20rem);
-        min-width: 0;
-    }
-}
+
 /* DIGITAL RIFT — PANTALLA DE MANTENIMIENTO */
 
 body.dr-maintenance-active {
@@ -19315,18 +18440,4 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     color: #ff7627;
 }
 
-@media (max-width: 600px) {
-    #dr-maintenance-screen {
-        padding: 26px;
-    }
-    #dr-maintenance-screen::before {
-        inset: 6px;
-    }
-    #dr-maintenance-screen .dr-maintenance-card {
-        padding: 34px 22px;
-    }
-    #dr-maintenance-screen .dr-maintenance-status {
-        font-size: 8px;
-        letter-spacing: .12em;
-    }
-}
+
