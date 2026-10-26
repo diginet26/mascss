@@ -599,21 +599,27 @@
 .dr-tadmin .tienda-price {
     min-width: 4.6875rem;
     padding: 0.5625rem 0.375rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.3rem;
+    white-space: nowrap;
     text-align: center;
     background: var(--colorfondot);
     border: 1px solid #213746;
 }
 
 .dr-tadmin .tienda-price b {
-    display: block;
+    display: inline-block;
+    margin: 0;
     color: var(--emblema1);
     font-family: "Roboto Mono", monospace;
     font-size: 0.8125rem;
 }
 
 .dr-tadmin .tienda-price span {
-    display: block;
-    margin-top: 0.125rem;
+    display: inline-block;
+    margin: 0;
     color: var(--theme-text-muted);
     font-size: 0.375rem;
     letter-spacing: 0.0625rem;
