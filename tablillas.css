@@ -396,62 +396,296 @@
     line-height: 1.7;
 }
 
-/* ========================================================== DIGITAL RIFT — TABLILLA TIENDA ========================================================== */ 
-.dr-tadmin form { margin: 0; } 
-/* ocultar radios */ 
-.dr-tadmin input[type="radio"] { display: none; } 
-/* ========================================================== NAVEGACIÓN DE CATEGORÍAS ========================================================== */ 
-.dr-tadmin .tienda-filters { display: flex; gap: 0; margin: 1.25rem 0rem 0; border: 1px solid var(--colorfondo4); background: #var(--colorfondo); } 
-/* botón */ 
-.dr-tadmin .tienda-filters label { flex: 1; min-height: 2.625rem; padding: 0.4375rem 0.3125rem; display: flex; align-items: center; justify-content: center; gap: 0.375rem; border-right: 1px solid var(--colorfondo4); color: var(--colortextod); font-family: "Roboto Mono", monospace; font-size: 0.4375rem; letter-spacing: .0.5rem; text-transform: uppercase; cursor: pointer; transition: .2s ease; }
-.dr-tadmin .tienda-filters label:last-child { border-right: 0; } 
-.dr-tadmin .tienda-filters label:hover { color: var(--emblema2); background: rgba(34,193,195,.04); } 
-/* iconos */ 
-.dr-tadmin .tienda-filters label i { color: var(--emblema1); font-size: 0.625rem; transition: .2s ease; } 
-/* ========================================================== ESTADO ACTIVO DE CATEGORÍA ========================================================== */ 
-.dr-tadmin #tienda-all:checked ~ .tienda-filters label[for="tienda-all"], 
-.dr-tadmin #tienda-items:checked ~ .tienda-filters label[for="tienda-items"], 
-.dr-tadmin #tienda-digivices:checked ~ .tienda-filters label[for="tienda-digivices"], 
-.dr-tadmin #tienda-recovery:checked ~ .tienda-filters label[for="tienda-recovery"],
-.dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"] { color: #fff; background: linear-gradient( 90deg, rgba(22,119,200,.16), rgba(34,193,195,.08) ); box-shadow: inset 0 -0.125rem 0 var(--emblema2); }
-.dr-tadmin #tienda-all:checked ~ .tienda-filters label[for="tienda-all"] i, 
+/* ==========================================================
+   DIGITAL RIFT — TABLILLA TIENDA
+   ========================================================== */
+.dr-tadmin form {
+    margin: 0;
+}
+
+/* OCULTAR RADIOS */
+.dr-tadmin input[type="radio"] {
+    display: none;
+}
+
+/* ==========================================================
+   NAVEGACIÓN DE CATEGORÍAS
+   ========================================================== */
+.dr-tadmin .tienda-filters {
+    display: flex;
+    gap: 0;
+    margin: 1.25rem 0 0;
+    border: 1px solid var(--colorfondo4);
+    background: var(--colorfondo);
+}
+
+/* BOTONES */
+.dr-tadmin .tienda-filters label {
+    flex: 1;
+    min-height: 2.625rem;
+    padding: 0.4375rem 0.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    border-right: 1px solid var(--colorfondo4);
+    color: var(--colortextod);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.dr-tadmin .tienda-filters label:last-child {
+    border-right: 0;
+}
+
+.dr-tadmin .tienda-filters label:hover {
+    color: var(--emblema2);
+    background: rgba(34,193,195,.04);
+}
+
+/* ICONOS */
+.dr-tadmin .tienda-filters label i {
+    color: var(--emblema1);
+    font-size: 0.625rem;
+    transition: .2s ease;
+}
+
+/* ==========================================================
+   ESTADO ACTIVO DE CATEGORÍA
+   ========================================================== */
+.dr-tadmin #tienda-items:checked ~ .tienda-filters label[for="tienda-items"],
+.dr-tadmin #tienda-digivices:checked ~ .tienda-filters label[for="tienda-digivices"],
+.dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"],
+.dr-tadmin #tienda-movimientos:checked ~ .tienda-filters label[for="tienda-movimientos"],
+.dr-tadmin #tienda-all:checked ~ .tienda-filters label[for="tienda-all"] {
+    color: #fff;
+    background: linear-gradient(90deg, rgba(22,119,200,.16), rgba(34,193,195,.08));
+    box-shadow: inset 0 -0.125rem 0 var(--emblema2);
+}
+
 .dr-tadmin #tienda-items:checked ~ .tienda-filters label[for="tienda-items"] i,
-.dr-tadmin #tienda-digivices:checked ~ .tienda-filters label[for="tienda-digivices"] i, 
-.dr-tadmin #tienda-recovery:checked ~ .tienda-filters label[for="tienda-recovery"] i,
-.dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"] i { color: var(--emblema2); text-shadow: 0 0 0.5rem rgba(34,193,195,.5); } 
-/* ========================================================== CONTENEDOR DE OBJETOS ========================================================== */ 
-.dr-tadmin .tienda-items { /*margin: 1.125rem 1.5625rem 1.5625rem;*/ border: 1px solid var(--colorfondo4); background: var(--colorfondo); } 
-/* ========================================================== OBJETO ========================================================== */ 
-.dr-tadmin .tienda-item { min-height: 5.75rem; padding: 0.8125rem; display: grid; grid-template-columns: 3.625rem 1fr 5.625rem; align-items: center; gap: 0.9375rem; position: relative; border-bottom: 1px solid var(--emblema2); transition: .2s ease; } 
-.dr-tadmin .tienda-item:last-child { border-bottom: 0; } 
-.dr-tadmin .tienda-item:hover { background: rgba(40,215,232,.035); } 
-/* ========================================================== ICONO ========================================================== */ 
-.dr-tadmin .tienda-icon { width: 3.375rem; height: 3.375rem; display: flex; align-items: center; justify-content: center; position: relative; background: var(--colorfondo); border: 1px solid #24475d; color: var(--emblema2); font-size: 1.3125rem; clip-path: polygon( 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25% ); transition: .25s ease; }
-.dr-tadmin .tienda-item:hover .tienda-icon { color: #fff; border-color: var(--emblema2); background: linear-gradient( 135deg, rgba(22,119,200,.25), rgba(34,193,195,.08) ); filter: drop-shadow(0 0 0.4375rem rgba(34,193,195,.25)); }
-/* ========================================================== INFORMACIÓN DEL OBJETO ========================================================== */ 
-.dr-tadmin .tienda-info { min-width: 0; }
-.dr-tadmin .tienda-category { display: block; margin-bottom: 0.1875rem; color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 0.4375rem; letter-spacing: 0.09375rem; text-transform: uppercase; }
-.dr-tadmin .tienda-name { margin: 0 0 0.25rem; color: #fff; font-family: "Jersey 15", sans-serif; font-size: 1.4375rem; font-weight: 400; line-height: 1; letter-spacing: 0.0625rem; text-transform: uppercase; } 
-.dr-tadmin .tienda-description { margin: 0; color: #8296a5; font-size: 0.5625rem; line-height: 1.65; } 
-/* ========================================================== PRECIO ========================================================== */ 
-.dr-tadmin .tienda-price { min-width: 4.6875rem; padding: 0.5625rem 0.375rem; text-align: center; background: var(--colorfondot); border: 1px solid #213746; } 
-.dr-tadmin .tienda-price b { display: block; color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 0.8125rem; } 
-.dr-tadmin .tienda-price span { display: block; margin-top: 0.125rem; color: #526b7a; font-size: 0.375rem; letter-spacing: 0.0625rem; text-transform: uppercase; } 
-/* ========================================================== FILTROS ========================================================== */ /* TODO */
-.dr-tadmin #tienda-items:checked ~ .tienda-items .tienda-item:not(.items), 
-.dr-tadmin #tienda-digivices:checked ~ .tienda-items .tienda-item:not(.digivices), 
-.dr-tadmin #tienda-recovery:checked ~ .tienda-items .tienda-item:not(.recovery), 
-.dr-tadmin #tienda-special:checked ~ .tienda-items .tienda-item:not(.special) { display: none; } 
-/* ========================================================== PIE / INFORMACIÓN ========================================================== */
-.dr-tadmin .tienda-footer { margin: 0 1.5625rem 1.5625rem; padding: 0.9375rem 1.125rem; display: flex; align-items: center; justify-content: space-between; background: linear-gradient( 90deg, rgba(22,119,200,.13), rgba(34,193,195,.035) ); border: 1px solid rgba(34,193,195,.2); } 
-.dr-tadmin .tienda-footer-text { color: #8195a4; font-size: 0.5rem; line-height: 1.6; } 
-.dr-tadmin .tienda-footer-text b { color: #fff; } 
-.dr-tadmin .tienda-footer-code { color: var(--emblema2); font-family: "Roboto Mono", monospace; font-size: 0.4375rem; letter-spacing: 0.0625rem; text-transform: uppercase; white-space: nowrap; }
-/* ========================================================== DECORACIÓN ========================================================== */ 
-.dr-tadmin .tienda-corner { position: absolute; right: 1.125rem; top: 3rem; width: 2.125rem; height: 2.125rem; border-top: 1px solid rgba(34,193,195,.3); border-right: 1px solid rgba(34,193,195,.3); opacity: .6; } 
-.dr-tadmin .tienda-corner:after { content: ""; position: absolute; right: -0.0625rem; top: 0.875rem; width: 0.5rem; height: 0.0625rem; background: var(--emblema2); } 
-/* ========================================================== RESPONSIVE ========================================================== */
-@media (max-width: 47.5rem) { .dr-tadmin .tienda-filters, .dr-tadmin .tienda-items, .dr-tadmin .tienda-footer { margin-left: 0.9375rem; margin-right: 0.9375rem; } .dr-tadmin .tienda-item { grid-template-columns: 3.125rem 1fr; } .dr-tadmin .tienda-icon { width: 2.875rem; height: 2.875rem; } .dr-tadmin .tienda-price { grid-column: 2; justify-self: start; margin-top: 0.3125rem; } } 
+.dr-tadmin #tienda-digivices:checked ~ .tienda-filters label[for="tienda-digivices"] i,
+.dr-tadmin #tienda-special:checked ~ .tienda-filters label[for="tienda-special"] i,
+.dr-tadmin #tienda-movimientos:checked ~ .tienda-filters label[for="tienda-movimientos"] i,
+.dr-tadmin #tienda-all:checked ~ .tienda-filters label[for="tienda-all"] i {
+    color: var(--emblema2);
+    text-shadow: 0 0 0.5rem rgba(34,193,195,.5);
+}
+
+/* ==========================================================
+   CONTENEDOR DE OBJETOS
+   ========================================================== */
+.dr-tadmin .tienda-items {
+    border: 1px solid var(--colorfondo4);
+    background: var(--colorfondo);
+}
+
+/* ==========================================================
+   OBJETOS
+   ========================================================== */
+.dr-tadmin .tienda-item {
+    min-height: 5.75rem;
+    padding: 0.8125rem;
+    display: grid;
+    grid-template-columns: 3.625rem 1fr 5.625rem;
+    align-items: center;
+    gap: 0.9375rem;
+    position: relative;
+    border-bottom: 1px solid var(--emblema2);
+    transition: .2s ease;
+}
+
+.dr-tadmin .tienda-item:last-child {
+    border-bottom: 0;
+}
+
+.dr-tadmin .tienda-item:hover {
+    background: rgba(40,215,232,.035);
+}
+
+/* ==========================================================
+   ICONO DEL OBJETO
+   ========================================================== */
+.dr-tadmin .tienda-icon {
+    width: 3.375rem;
+    height: 3.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--colorfondo);
+    border: 1px solid #24475d;
+    color: var(--emblema2);
+    font-size: 1.3125rem;
+    clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%);
+    transition: .25s ease;
+}
+
+.dr-tadmin .tienda-item:hover .tienda-icon {
+    color: #fff;
+    border-color: var(--emblema2);
+    background: linear-gradient(135deg, rgba(22,119,200,.25), rgba(34,193,195,.08));
+    filter: drop-shadow(0 0 0.4375rem rgba(34,193,195,.25));
+}
+
+/* ==========================================================
+   INFORMACIÓN DEL OBJETO
+   ========================================================== */
+.dr-tadmin .tienda-info {
+    min-width: 0;
+}
+
+.dr-tadmin .tienda-category {
+    display: block;
+    margin-bottom: 0.1875rem;
+    color: var(--emblema2);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .tienda-name {
+    margin: 0 0 0.25rem;
+    color: #fff;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.4375rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .tienda-description {
+    margin: 0;
+    color: #8296a5;
+    font-size: 0.5625rem;
+    line-height: 1.65;
+}
+
+/* ==========================================================
+   PRECIO
+   ========================================================== */
+.dr-tadmin .tienda-price {
+    min-width: 4.6875rem;
+    padding: 0.5625rem 0.375rem;
+    text-align: center;
+    background: var(--colorfondot);
+    border: 1px solid #213746;
+}
+
+.dr-tadmin .tienda-price b {
+    display: block;
+    color: var(--emblema1);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.8125rem;
+}
+
+.dr-tadmin .tienda-price span {
+    display: block;
+    margin-top: 0.125rem;
+    color: #526b7a;
+    font-size: 0.375rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   FILTROS DE OBJETOS
+   ========================================================== */
+.dr-tadmin #tienda-items:checked ~ .tienda-items .tienda-item:not(.items),
+.dr-tadmin #tienda-digivices:checked ~ .tienda-items .tienda-item:not(.digivices),
+.dr-tadmin #tienda-special:checked ~ .tienda-items .tienda-item:not(.special),
+.dr-tadmin #tienda-movimientos:checked ~ .tienda-items .tienda-item:not(.movimientos) {
+    display: none;
+}
+
+/* ==========================================================
+   PIE / INFORMACIÓN
+   ========================================================== */
+.dr-tadmin .tienda-footer {
+    margin: 0 1.5625rem 1.5625rem;
+    padding: 0.9375rem 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(22,119,200,.13), rgba(34,193,195,.035));
+    border: 1px solid rgba(34,193,195,.2);
+}
+
+.dr-tadmin .tienda-footer-text {
+    color: #8195a4;
+    font-size: 0.5rem;
+    line-height: 1.6;
+}
+
+.dr-tadmin .tienda-footer-text b {
+    color: #fff;
+}
+
+.dr-tadmin .tienda-footer-code {
+    color: var(--emblema2);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   DECORACIÓN
+   ========================================================== */
+.dr-tadmin .tienda-corner {
+    position: absolute;
+    right: 1.125rem;
+    top: 3rem;
+    width: 2.125rem;
+    height: 2.125rem;
+    border-top: 1px solid rgba(34,193,195,.3);
+    border-right: 1px solid rgba(34,193,195,.3);
+    opacity: .6;
+}
+
+.dr-tadmin .tienda-corner:after {
+    content: "";
+    position: absolute;
+    right: -0.0625rem;
+    top: 0.875rem;
+    width: 0.5rem;
+    height: 0.0625rem;
+    background: var(--emblema2);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 47.5rem) {
+    .dr-tadmin .tienda-filters,
+    .dr-tadmin .tienda-items,
+    .dr-tadmin .tienda-footer {
+        margin-left: 0.9375rem;
+        margin-right: 0.9375rem;
+    }
+
+    .dr-tadmin .tienda-item {
+        grid-template-columns: 3.125rem 1fr;
+    }
+
+    .dr-tadmin .tienda-icon {
+        width: 2.875rem;
+        height: 2.875rem;
+    }
+
+    .dr-tadmin .tienda-price {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 0.3125rem;
+    }
+}
 
 /* ==========================================================
    DIGITAL RIFT — MAPA DE ZONAS
