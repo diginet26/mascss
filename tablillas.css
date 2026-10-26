@@ -597,13 +597,16 @@
    PRECIO
    ========================================================== */
 .dr-tadmin .tienda-price {
-    min-width: 4.6875rem;
+    width: 100%;
+    min-width: 0;
     padding: 0.5625rem 0.375rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: baseline;
     justify-content: center;
-    gap: 0.3rem;
-    white-space: nowrap;
+    column-gap: 0.3rem;
+    row-gap: 0.45rem;
+    box-sizing: border-box;
     text-align: center;
     background: var(--colorfondot);
     border: 1px solid #213746;
@@ -624,6 +627,16 @@
     font-size: 0.375rem;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
+}
+
+.dr-tadmin .tienda-price .tienda-add {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.35rem 0.25rem;
+    box-sizing: border-box;
 }
 
 /* ==========================================================
