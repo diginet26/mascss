@@ -26,19 +26,6 @@
 /* =========================================================
    DECORACIÓN SUPERIOR
    ========================================================= */
-/*.dr-tadmin:before {
-    content: "";
-    display: block;
-    padding: 0.4375rem 1.125rem;
-    background: #07111b;
-    border-bottom: 1px solid var(--dg-line);
-    color: var(--emblema2);
-    font-size: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 0.125rem;
-    text-transform: uppercase;
-}*/
-
 /* pequeños indicadores */
 .dr-tadmin .dr-dots {
     position: absolute;
@@ -127,11 +114,11 @@
     padding: 1.0625rem 1.25rem;
     background: var(--colorfondo);
     border-left: 2px solid var(--emblema2);
-    color: #aebdca;
+    color: var(--theme-text-muted);
     font-size: 0.6875rem;
 }
 
-.dr-tadmin .dr-intro strong {color: #fff;}
+.dr-tadmin .dr-intro strong {color: var(--theme-text);}
 
 /* =========================================================
    SECCIÓN
@@ -216,12 +203,12 @@
 .dr-event b {
     display: block;
     margin-top: 0.125rem;
-    color: #fff;
+    color: var(--theme-text);
     font-size: 0.9375rem;
 }
 
 .dr-event span {
-    color: #879aa8;
+    color: var(--theme-text-muted);
     font-size: 0.8125rem;
 }
 
@@ -314,13 +301,13 @@
     display: block;
     font-family: "Oxanium", sans-serif;
     font-size: 0.4375rem;
-    color: var(--dg-muted);
+    color: var(--theme-text-muted);
 }
 
 .dr-relation b {
     display: block;
     margin-top: 0.25rem;
-    color: #eaf7fb;
+    color: var(--theme-text);
     font-size: 0.625rem;
 }
 
