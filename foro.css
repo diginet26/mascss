@@ -4169,7 +4169,7 @@ blockquote cite {
     align-items: center;
     padding-left: 14px;
     padding-right: 50px;
-    background: var(--colorfondo2);
+    background: var(--colorfondo);
     border-bottom: 1px solid var(--emblema1);
     color: var(--colortextodl);
     font-family: "Oxanium", monospace;
