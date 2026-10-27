@@ -12249,7 +12249,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 12%, transparent);
 }
 
-.dr-topic-username a {
+.dr-topic-username a, .dr-topic-username a strong {
     color: inherit !important;
     text-decoration: none !important;
 }
