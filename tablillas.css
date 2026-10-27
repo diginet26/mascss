@@ -5019,7 +5019,7 @@ text-align: justify;
     border: none;
     border-radius: 9px;
     background: var(--colorfondo);
-    color: #354154;
+    color: var(--colortextodl);
     font-size: 13px;
     line-height: 1.65;
     overflow: hidden;
