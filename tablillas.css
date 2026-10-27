@@ -5058,6 +5058,7 @@ text-align: justify;
 .dr-status .dr-status__message {
     position: relative;
     margin: 0;
+    margin-top: 10px;
     padding: 14px 15px;
     border: 0;
     border-radius: 9px;
