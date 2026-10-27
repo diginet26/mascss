@@ -4938,3 +4938,199 @@ text-align: justify;
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================
+   DIGITAL RIFT — ESTADOS DE REGISTRO
+   Aceptado / Pendiente / Rechazado
+======================================== */
+
+.dr-status {
+    --state: #58b967;
+    --state-dark: #278848;
+    --state-soft: rgba(88,185,103,.12);
+    width: 100%;
+    max-width: 700px;
+    margin: 24px auto;
+    padding: 0;
+}
+
+.dr-status__heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.dr-status__icon {
+    display: flex;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--state);
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.12);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.dr-status__heading-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.dr-status__title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dr-status__title {
+    margin: 0;
+    color: var(--state);
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.dr-status__rule {
+    flex: 1;
+    height: 3px;
+    min-width: 15px;
+    background: linear-gradient(90deg, #dedfe3, #e9eaed);
+}
+
+.dr-status__subtitle {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 8px;
+    border: 1px solid #e3e4e8;
+    border-radius: 4px;
+    background: #fff;
+    color: #465166;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.dr-status__message {
+    position: relative;
+    padding: 14px 15px;
+    border: 1px solid #e4e5e9;
+    border-radius: 9px;
+    background: #fff;
+    color: #354154;
+    font-size: 13px;
+    line-height: 1.65;
+    overflow: hidden;
+}
+
+.dr-status__message::after {
+    content: "DR";
+    position: absolute;
+    right: 11px;
+    bottom: -17px;
+    color: var(--state);
+    font-size: 43px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+    opacity: .055;
+    pointer-events: none;
+}
+
+.dr-status__message p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.dr-status__message strong {
+    color: var(--state-dark);
+}
+
+.dr-status__message p + p {
+    margin-top: 10px;
+}
+
+.dr-status__meta {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 8px 0 0 54px;
+    color: #8a93a2;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.dr-status__meta::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--state);
+    transform: rotate(45deg);
+}
+
+/* ESTADO: ACEPTADO */
+
+.dr-status--accepted {
+    --state: #58b967;
+    --state-dark: #278848;
+    --state-soft: rgba(88,185,103,.12);
+}
+
+/* ESTADO: PENDIENTE */
+
+.dr-status--pending {
+    --state: #c4b544;
+    --state-dark: #8b7d12;
+    --state-soft: rgba(196,181,68,.12);
+}
+
+/* ESTADO: RECHAZADO */
+
+.dr-status--rejected {
+    --state: #b23a3e;
+    --state-dark: #8f262b;
+    --state-soft: rgba(178,58,62,.12);
+}
+
+/* ADAPTACIÓN PARA MÓVILES */
+
+@media (max-width: 480px) {
+    .dr-status__heading {
+        gap: 9px;
+    }
+
+    .dr-status__icon {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+        font-size: 21px;
+    }
+
+    .dr-status__title {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .dr-status__subtitle {
+        font-size: 8px;
+    }
+
+    .dr-status__message {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .dr-status__meta {
+        margin-left: 45px;
+    }
+}
