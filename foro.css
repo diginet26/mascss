@@ -4920,7 +4920,7 @@ blockquote blockquote {
     pointer-events: none;
 }
 
-/* OCEANO NET — sombra estable sobre toda la imagen */
+/* OCEANO NET — sombra ligada a la imagen, no a la altura del texto */
 .digimon-forum-description .rdoubleforum:has(.rfordesc2) .rforimg::after {
     z-index: 1;
     background: linear-gradient(270deg, transparent 0%, var(--colorfondo) 70%);
@@ -11911,9 +11911,15 @@ body.light-mode .digimon-forum-description .rforimg {
 /* =========================================================
    VELO SOBRE LA IMAGEN
    ========================================================= */
-body.light-mode .digimon-forum-description .rforimg::after {background:linear-gradient(180deg, color-mix(in srgb, var(--theme-panel) 5%, transparent) 0%, transparent 45%, color-mix(in srgb, var(--theme-panel) 82%, transparent) 100%);}
-/* OCEANO NET — sombra estable en la skin clara */
-body.light-mode .digimon-forum-description .rdoubleforum:has(.rfordesc2) .rforimg::after {background: linear-gradient(270deg, transparent 0%, color-mix(in srgb, var(--theme-panel) 92%, transparent) 70%);}
+body.light-mode .digimon-forum-description .rforimg::after {
+    background:linear-gradient(180deg, color-mix(in srgb, var(--theme-panel) 5%, transparent) 0%, transparent 45%, color-mix(in srgb, var(--theme-panel) 82%, transparent) 100%);
+}
+
+/* OCEANO NET — sombra horizontal estable en la skin clara */
+body.light-mode .digimon-forum-description .rdoubleforum:has(.rfordesc2) .rforimg::after {
+    background: linear-gradient(270deg, transparent 0%, color-mix(in srgb, var(--theme-panel) 92%, transparent) 70%);
+}
+
 /* =========================================================
    COLOR DIGITAL SOBRE LA IMAGEN
    Conservamos emblema1 / emblema2 intactos
@@ -12249,7 +12255,8 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     text-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 12%, transparent);
 }
 
-.dr-topic-username a, .dr-topic-username a strong {
+.dr-topic-username a,
+.dr-topic-username a strong {
     color: inherit !important;
     text-decoration: none !important;
 }
@@ -12666,7 +12673,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     gap: 0;
     margin-top: 2px;
     box-sizing: border-box;
-    border: .06rem solid color-mix(in srgb, var(--emblema1) 45%, transparent);
+    border: .06rem solid color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 45%, transparent);
     background: var(--theme-panel-deep);
 }
 
@@ -12678,17 +12685,17 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    color: color-mix(in srgb, var(--emblema1) 72%, var(--text-color));
+    color: var(--dr-group-color, var(--emblema2));
     text-decoration: none !important;
-    border-right: .06rem solid color-mix(in srgb, var(--emblema2) 25%, transparent);
+    border-right: .06rem solid color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 25%, transparent);
     transition: background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
 .dr-post-icon:last-child {border-right: 0;}
 .dr-post-icon:hover {
-    color: var(--emblema2);
-    background: color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel-deep));
-    box-shadow: inset 0 0 .8rem color-mix(in srgb, var(--emblema2) 8%, transparent);
+    color: var(--dr-group-color, var(--emblema2));
+    background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, var(--theme-panel-deep));
+    box-shadow: inset 0 0 .8rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 8%, transparent);
 }
 
 .dr-post-icon > a {
@@ -12732,7 +12739,7 @@ body.light-mode #digimon-statistics .digimon-24h-members-data > strong {
     font-size: 1.25rem !important;
     font-weight: 900 !important;
     line-height: 1.25rem !important;
-    color: color-mix(in srgb, var(--emblema1) 72%, var(--text-color));
+    color: var(--dr-group-color, var(--emblema2));
 }
 
 .dr-post-profile-link[data-profile-field="expediente"]::before {content: "\f07b" !important;}
@@ -12880,26 +12887,26 @@ body.light-mode .dr-post-avatar {
 
 body.light-mode .dr-post-links {
     background: #dce1e5 !important;
-    border-color: color-mix(in srgb, var(--emblema2) 30%, #b9c4cc) !important;
+    border-color: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 30%, #b9c4cc) !important;
 }
 
 body.light-mode .dr-post-icon {
-    color: #596873 !important;
-    border-right-color: color-mix(in srgb, var(--emblema2) 22%, #c1cbd2) !important;
+    color: var(--dr-group-color, var(--emblema2)) !important;
+    border-right-color: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 22%, #c1cbd2) !important;
 }
 
 body.light-mode .dr-post-icon:hover {
-    color: var(--emblema2) !important;
-    background: color-mix(in srgb, var(--emblema2) 7%, #e4e8eb) !important;
-    box-shadow: inset 0 0 .6rem color-mix(in srgb, var(--emblema2) 6%, transparent) !important;
+    color: var(--dr-group-color, var(--emblema2)) !important;
+    background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 7%, #e4e8eb) !important;
+    box-shadow: inset 0 0 .6rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 6%, transparent) !important;
 }
 
 body.light-mode .dr-post-profile-link::before {
-    color: #596873 !important;
+    color: var(--dr-group-color, var(--emblema2)) !important;
 }
 
 body.light-mode .dr-post-profile-link:hover::before {
-    color: var(--emblema2) !important;
+    color: var(--dr-group-color, var(--emblema2)) !important;
 }
 
 body.light-mode .dr-post-main,
