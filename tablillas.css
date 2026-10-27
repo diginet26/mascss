@@ -4940,10 +4940,13 @@ text-align: justify;
     }
 }
 
+
 /* ========================================
    DIGITAL RIFT — ESTADOS DE REGISTRO
    Aceptado / Pendiente / Rechazado
 ======================================== */
+
+/* ESTRUCTURA GENERAL */
 
 .dr-status {
     --state: #58b967;
@@ -4953,13 +4956,16 @@ text-align: justify;
     max-width: 700px;
     margin: 24px auto;
     padding: 0;
+    box-sizing: border-box;
 }
+
+/* ENCABEZADO */
 
 .dr-status .dr-status__heading {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
 }
 
@@ -4971,7 +4977,20 @@ text-align: justify;
     align-self: center;
     width: 42px;
     height: 42px;
-    margin: 0;
+    min-width: 42px;
+    min-height: 42px;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 4px;
+    color: #fff !important;
+    background: var(--state) !important;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.12);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px !important;
+    font-weight: bold;
+    line-height: 1 !important;
+    text-align: center;
 }
 
 .dr-status .dr-status__heading-main {
@@ -4993,23 +5012,28 @@ text-align: justify;
     padding: 0;
 }
 
+/* TÍTULO */
+
 .dr-status .dr-status__heading-main .dr-status__title-row > h2.dr-status__title {
     display: block;
     width: auto;
     height: auto;
     min-height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-    color: var(--state);
-    font-family: 'Jersey 15', sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--state) !important;
+    font-family: 'Jersey 15', sans-serif !important;
     font-size: 28px;
     font-weight: normal;
     line-height: 1;
+    text-align: left;
     text-transform: uppercase;
     white-space: nowrap;
 }
+
+/* LÍNEA SUBRAYANDO EL TÍTULO */
 
 .dr-status .dr-status__heading-main .dr-status__title-row > .dr-status__rule {
     display: block;
@@ -5023,28 +5047,45 @@ text-align: justify;
     background: linear-gradient(90deg, #dedfe3, #e9eaed);
 }
 
-.dr-status__subtitle {display: none;}
-.dr-status__message {
+/* SUBTÍTULO OCULTO */
+
+.dr-status .dr-status__subtitle {
+    display: none !important;
+}
+
+/* CAJA DEL TEXTO PRINCIPAL */
+
+.dr-status .dr-status__message {
     position: relative;
+    margin: 0;
     padding: 14px 15px;
-    border: none;
+    border: 0;
     border-radius: 9px;
-    background: var(--colorfondo);
-    color: var(--colortextodl);
+    background: var(--colorfondo, #0b0b0b);
+    color: var(--colortextodl, #eaf0fa);
     font-size: 13px;
     line-height: 1.65;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
-.dr-status__message p {
+.dr-status .dr-status__message p {
     position: relative;
     z-index: 1;
     margin: 0;
 }
 
-.dr-status__message strong {color: var(--state-dark);}
-.dr-status__message p + p {margin-top: 10px;}
-.dr-status__meta {
+.dr-status .dr-status__message strong {
+    color: var(--state-dark);
+}
+
+.dr-status .dr-status__message p + p {
+    margin-top: 10px;
+}
+
+/* PIE DE LA TABLILLA */
+
+.dr-status .dr-status__meta {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -5057,9 +5098,10 @@ text-align: justify;
     text-transform: uppercase;
 }
 
-.dr-status__meta::before {
+.dr-status .dr-status__meta::before {
     content: "";
     display: inline-block;
+    flex: 0 0 6px;
     width: 6px;
     height: 6px;
     background: var(--state);
@@ -5093,33 +5135,27 @@ text-align: justify;
 /* ADAPTACIÓN PARA MÓVILES */
 
 @media (max-width: 480px) {
-    .dr-status__heading {
+    .dr-status .dr-status__heading {
         gap: 9px;
     }
 
-    .dr-status__icon {
+    .dr-status .dr-status__icon {
         flex-basis: 36px;
         width: 36px;
         height: 36px;
-        font-size: 21px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 21px !important;
     }
 
-    .dr-status__title {
+    .dr-status .dr-status__heading-main .dr-status__title-row > h2.dr-status__title {
         font-size: 24px;
-        line-height: 36px;
+        line-height: 1;
         white-space: normal;
     }
 
-    .dr-status__subtitle {
-        font-size: 8px;
-    }
-
-    .dr-status__message {
+    .dr-status .dr-status__message {
         padding: 12px;
         font-size: 12px;
-    }
-
-    .dr-status__meta {
-        margin-left: 45px;
     }
 }
