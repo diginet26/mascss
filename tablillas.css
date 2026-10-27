@@ -4959,7 +4959,8 @@ text-align: justify;
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 12px;
+    margin: 0;
+    padding: 0;
 }
 
 .dr-status__icon {
@@ -4984,6 +4985,7 @@ text-align: justify;
     flex: 1;
     align-items: center;
     min-width: 0;
+    min-height: 0;
     margin: 0;
     padding: 0;
 }
@@ -4993,7 +4995,8 @@ text-align: justify;
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    gap: 2px;
+    min-height: 0;
+    gap: 0;
     margin: 0;
     padding: 0;
 }
