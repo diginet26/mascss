@@ -4966,12 +4966,14 @@ text-align: justify;
     flex: 1;
     align-items: center;
     min-width: 0;
+    min-height: 42px;
 }
 
 .dr-status__title-row {
     display: flex;
     align-items: center;
     width: 100%;
+    min-height: 42px;
     gap: 10px;
 }
 
@@ -4992,18 +4994,20 @@ text-align: justify;
 }
 
 .dr-status__title {
+    display: block;
     margin: 0;
     color: var(--state);
     font-family: 'Jersey 15', sans-serif;
     font-size: 28px;
     font-weight: normal;
-    line-height: 1;
+    line-height: 42px;
     text-transform: uppercase;
     white-space: nowrap;
 }
 
 .dr-status__rule {
     flex: 1;
+    align-self: center;
     height: 3px;
     min-width: 15px;
     background: linear-gradient(90deg, #dedfe3, #e9eaed);
@@ -5092,6 +5096,7 @@ text-align: justify;
 
     .dr-status__title {
         font-size: 24px;
+        line-height: 36px;
         white-space: normal;
     }
 
