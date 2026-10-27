@@ -11533,35 +11533,38 @@ body.light-mode .action-box .button2:hover {
 
 .digimon-forum-image-digivice {
     position: absolute;
-    top: -72px;
+    top: -99px;
     right: 16px;
     z-index: 10;
     width: 9rem;
-    height: 9rem;
+    height: 12rem;
     object-fit: contain;
     pointer-events: none;
 }
 
 .digimon-forum-image-isla-boot {
     position: absolute;
-    top: -64px;
+    top: 3px;
     right: 16px;
     z-index: 10;
     width: 10rem;
     height: 8rem;
     object-fit: contain;
     pointer-events: none;
+    transform: rotate(41deg);
 }
 
 .digimon-forum-image-isla-root {
     position: absolute;
-    top: -64px;
-    right: 16px;
+    top: -29px;
+    right: 38px;
     z-index: 10;
     width: 10rem;
-    height: 9rem;
+    height: 10rem;
     object-fit: contain;
     pointer-events: none;
+        transform: rotate(308deg);
+
 }
 /* =========================================================
    VIEWFORUM — FONDO DE SECCIONES
