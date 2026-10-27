@@ -75,7 +75,7 @@ body {overflow-x: hidden;}
     font-style: normal;
 }
 
-b, strong {color: var(--emblema2);}/* NEGRITA */
+.postbody b, .postbody strong {color: var(--emblema2);}/* NEGRITA — POSTS Y TABLILLAS */
 .postbody em, .postbody i:not([class]), .postbody span[style*="font-style"] {color: var(--emblema1) !important;}/* CURSIVA — BBCode DE FOROACTIVO */
 u {color: var(--emblema1);}/* SUBRAYADO */
 strike, s {color: var(--emblema1);}/* TACHADO */
