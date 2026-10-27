@@ -4917,7 +4917,13 @@ blockquote blockquote {
     content: "";
     position: absolute;
     inset: 0;
-  /*  background: linear-gradient(180deg, var(--colorfondo4) 0%, var(--colorfondo4) 15%, transparent 55%, var(--colorfondo4) 100%);*/
+    pointer-events: none;
+}
+
+/* OCEANO NET — sombra estable sobre toda la imagen */
+.digimon-forum-description .rdoubleforum:has(.rfordesc2) .rforimg::after {
+    z-index: 1;
+    background: linear-gradient(270deg, transparent 0%, var(--colorfondo) 70%);
 }
 
 /* Degradado de color sobre la imagen */
@@ -4957,7 +4963,7 @@ blockquote blockquote {
     color: var(--text-color);
     font: 0.7857rem/1.7 "Poppins", sans-serif;
     text-align: justify;
-    background: linear-gradient(270deg, transparent, var(--colorfondo) 70%);
+    background: none;
 }
 
 /* =========================================================
@@ -11905,10 +11911,9 @@ body.light-mode .digimon-forum-description .rforimg {
 /* =========================================================
    VELO SOBRE LA IMAGEN
    ========================================================= */
-body.light-mode .digimon-forum-description .rforimg::after {
-    background:linear-gradient(180deg, color-mix(in srgb, var(--theme-panel) 5%, transparent) 0%, transparent 45%, color-mix(in srgb, var(--theme-panel) 82%, transparent) 100%);
-}
-
+body.light-mode .digimon-forum-description .rforimg::after {background:linear-gradient(180deg, color-mix(in srgb, var(--theme-panel) 5%, transparent) 0%, transparent 45%, color-mix(in srgb, var(--theme-panel) 82%, transparent) 100%);}
+/* OCEANO NET — sombra estable en la skin clara */
+body.light-mode .digimon-forum-description .rdoubleforum:has(.rfordesc2) .rforimg::after {background: linear-gradient(270deg, transparent 0%, color-mix(in srgb, var(--theme-panel) 92%, transparent) 70%);}
 /* =========================================================
    COLOR DIGITAL SOBRE LA IMAGEN
    Conservamos emblema1 / emblema2 intactos
