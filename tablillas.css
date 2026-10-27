@@ -4954,12 +4954,25 @@ text-align: justify;
     margin: 24px auto;
     padding: 0;
 }
-
 .dr-status__heading {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
+}
+
+.dr-status__heading-main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-width: 0;
+}
+
+.dr-status__title-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
 }
 
 .dr-status__icon {
@@ -4976,20 +4989,6 @@ text-align: justify;
     box-shadow: inset 0 -3px 0 rgba(0,0,0,.12);
     font-size: 24px;
     font-weight: bold;
-}
-
-.dr-status__heading-main {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    min-width: 0;
-}
-
-.dr-status__title-row {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
 }
 
 .dr-status__title {
@@ -5014,27 +5013,13 @@ text-align: justify;
 .dr-status__message {
     position: relative;
     padding: 14px 15px;
-    border: 1px solid #e4e5e9;
+    border: none;
     border-radius: 9px;
     background: var(--colorfondo);
     color: #354154;
     font-size: 13px;
     line-height: 1.65;
     overflow: hidden;
-}
-
-.dr-status__message::after {
-    content: "DR";
-    position: absolute;
-    right: 11px;
-    bottom: -17px;
-    color: var(--state);
-    font-size: 43px;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: -3px;
-    opacity: .055;
-    pointer-events: none;
 }
 
 .dr-status__message p {
