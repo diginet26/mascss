@@ -11563,8 +11563,39 @@ body.light-mode .action-box .button2:hover {
     height: 10rem;
     object-fit: contain;
     pointer-events: none;
-        transform: rotate(308deg);
+    transform: rotate(308deg);
 
+}
+.digimon-forum-image-oceano-net {/*whamon*/
+    position: absolute;
+    top: -30px;
+    right: 16px;
+    z-index: 10;
+    width: 11rem;
+    height: 11rem;
+    object-fit: contain;
+    pointer-events: none;
+}
+.digimon-forum-image-area-oscura {/*devimon*/
+    position: absolute;
+    top: -45px;
+    right: 16px;
+    z-index: 10;
+    width: 11rem;
+    height: 11rem;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.digimon-forum-image-afiliaciones {/*guilmon*/
+    position: absolute;
+    top: -100px;
+    right: 16px;
+    z-index: 10;
+    width: 9rem;
+    height: 11rem;
+    object-fit: contain;
+    pointer-events: none;
 }
 /* =========================================================
    VIEWFORUM — FONDO DE SECCIONES
