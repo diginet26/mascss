@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 /* TABLILLA ADMINISTRACIÓN */
 .dr-tadmin {
     --dg-blue: #1677C8;
@@ -4990,9 +4991,10 @@ text-align: justify;
 .dr-status__title {
     margin: 0;
     color: var(--state);
-    font-size: 21px;
-    font-weight: 900;
-    line-height: 1.1;
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -5004,20 +5006,7 @@ text-align: justify;
     background: linear-gradient(90deg, #dedfe3, #e9eaed);
 }
 
-.dr-status__subtitle {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 5px 8px;
-    border: 1px solid #e3e4e8;
-    border-radius: 4px;
-    background: #fff;
-    color: #465166;
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
+.dr-status__subtitle {display: none;}
 .dr-status__message {
     position: relative;
     padding: 14px 15px;
@@ -5050,22 +5039,18 @@ text-align: justify;
     margin: 0;
 }
 
-.dr-status__message strong {
-    color: var(--state-dark);
-}
-
-.dr-status__message p + p {
-    margin-top: 10px;
-}
-
+.dr-status__message strong {color: var(--state-dark);}
+.dr-status__message p + p {margin-top: 10px;}
 .dr-status__meta {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 7px;
-    margin: 8px 0 0 54px;
+    margin: 8px 0 0;
     color: #8a93a2;
     font-size: 9px;
     letter-spacing: 1px;
+    text-align: right;
     text-transform: uppercase;
 }
 
@@ -5117,7 +5102,7 @@ text-align: justify;
     }
 
     .dr-status__title {
-        font-size: 16px;
+        font-size: 24px;
         white-space: normal;
     }
 
