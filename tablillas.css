@@ -4954,26 +4954,12 @@ text-align: justify;
     margin: 24px auto;
     padding: 0;
 }
+
 .dr-status__heading {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 12px;
-}
-
-.dr-status__heading-main {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    min-width: 0;
-}
-
-.dr-status__title-row {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 4px;
 }
 
 .dr-status__icon {
@@ -4984,6 +4970,7 @@ text-align: justify;
     align-self: center;
     width: 42px;
     height: 42px;
+    margin: 0;
     border-radius: 4px;
     color: #fff;
     background: var(--state);
@@ -4992,9 +4979,29 @@ text-align: justify;
     font-weight: bold;
 }
 
+.dr-status__heading-main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.dr-status__title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+}
+
 .dr-status__title {
     display: block;
     margin: 0;
+    padding: 0;
     color: var(--state);
     font-family: 'Jersey 15', sans-serif;
     font-size: 28px;
@@ -5009,6 +5016,9 @@ text-align: justify;
     flex: none;
     width: 100%;
     height: 3px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(90deg, #dedfe3, #e9eaed);
 }
 
