@@ -4978,9 +4978,9 @@ blockquote blockquote {
     color: var(--text-color);
     font: 0.7857rem/1.7 "Poppins", sans-serif;
     text-align: justify;
-    background: none;
+    background: linear-gradient(270deg, transparent, var(--colorfondo) 70%);
 }
-
+.digimon-forum-description .rdoubleforum:has(.rfordesc2) .rfordesc2 {background: none;}/* OCEANO NET — evitar duplicar el degradado en el texto */
 /* =========================================================
    ENLACES DEL FORO
    ========================================================= */
