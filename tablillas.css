@@ -4564,7 +4564,7 @@ text-align: justify;
     max-height: 590px;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--emblema2, #aab7bd) #102735;
+    scrollbar-color: var(--linkc3) #102735;
 }
 
 .dr-baul-entry {
