@@ -4330,7 +4330,7 @@ text-align: justify;
     gap: 4px;
     padding: 8px;
     background: var(--colorfondo);
-    border-bottom: 3px solid var(--emblema2);
+    border-bottom: 3px solid var(--emblema1);
 }
 
 .dr-baul-nav label {
@@ -4347,7 +4347,8 @@ text-align: justify;
     border-bottom: 3px solid var(--db-border);
     color: var(--theme-text-muted, var(--db-cyan));
     text-align: center;
-    font-size: 9px;
+    font-size: 17px;
+    Font-family:"Jersey15"
     font-weight: 900;
     letter-spacing: .4px;
     cursor: pointer;
@@ -4384,7 +4385,7 @@ text-align: justify;
     display: none;
     padding: 26px;
     min-height: 360px;
-    background: repeating-linear-gradient(135deg,transparent 0,transparent 16px,color-mix(in srgb,var(--theme-text) 3%,transparent) 17px,transparent 18px),linear-gradient(140deg,var(--db-surface-inset),var(--theme-panel-deep, #071722) 58%,var(--db-surface-deep));
+    background: linear-gradient(140deg,var(--colorfondo4),var(--colorfondo));
     animation: dr-baul-enter .25s ease;
 }
 
