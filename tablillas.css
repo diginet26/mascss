@@ -4385,7 +4385,7 @@ text-align: justify;
     display: none;
     padding: 26px;
     min-height: 360px;
-    background: linear-gradient(140deg,var(--colorfondo4),var(--colorfondo));
+    background: linear-gradient(140deg,var(--colorfondo5),var(--colorfondo));
     animation: dr-baul-enter .25s ease;
 }
 
