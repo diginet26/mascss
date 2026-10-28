@@ -4466,7 +4466,7 @@ text-align: justify;
     display: block;
     height: 5px;
     margin: -19px -19px 18px;
-    background: linear-gradient(90deg,var(--db-border),var(--theme-panel-alt, #52636c) 55%,var(--theme-panel, #15384e));
+    background: var(--emblema2);
 }
 
 .dr-baul-profile h2 {
