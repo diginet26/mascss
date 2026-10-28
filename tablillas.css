@@ -4493,7 +4493,7 @@ text-align: justify;
     border: 1px solid var(--db-border);
     color: var(--theme-text, #d9edf6);
     text-align: right;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: normal;
     overflow-wrap: anywhere;
 }
