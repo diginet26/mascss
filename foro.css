@@ -5633,6 +5633,7 @@ blockquote blockquote {
 
 /* =========================================================
    DIGITAL RIFT — SISTEMA DE LANZADA DE DADOS
+   Escalado con accesibilidad y diseño adaptable
    ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
 .dice {
@@ -5646,18 +5647,20 @@ blockquote blockquote {
     --dice-line: rgba(34,193,195,.22);
     --dice-text: #dce8f2;
     --dice-muted: #718695;
-    width: 430px;
-    margin: 25px auto;
+    width: 30.7143rem;
+    max-width: calc(100% - 1rem);
+    margin: 1.7857rem auto;
     padding: 0;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
     background: linear-gradient(135deg, var(--colorfondo2),var(--colorfondo2));
-    border: 1px solid var(--linkc3);
+    border: .0714rem solid var(--linkc3);
     color: var(--colortextod1);
     font-family: "Oxanium", sans-serif;
-    font-size: 11px;
+    font-size: .7857rem;
     line-height: 1.7;
-    box-shadow:0 0 30px rgba(0,0,0,.45), inset 0 0 40px rgba(22,119,200,.035);
+    box-shadow: 0 0 2.1429rem rgba(0,0,0,.45), inset 0 0 2.8571rem rgba(22,119,200,.035);
 }
 
 /* =========================================================
@@ -5666,14 +5669,14 @@ blockquote blockquote {
 .dice:before {
     content: "DIGITAL RIFT";
     display: block;
-    padding: 7px 15px;
+    padding: .5rem 1.0714rem;
     background: var(--colorfondo2);
-    border-bottom: 1px solid var(--dice-line);
+    border-bottom: .0714rem solid var(--dice-line);
     color: var(--linkc3);
     font-family: "Jersey 15", monospace;
-    font-size: 10px;
+    font-size: .7143rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: .1429rem;
     text-transform: uppercase;
 }
 
@@ -5681,63 +5684,64 @@ blockquote blockquote {
 .dice:after {
     content: "●  ●  ●";
     position: absolute;
-    top: 6px;
-    right: 15px;
+    top: .4286rem;
+    right: 1.0714rem;
     color: var(--emblema2);
     font-family: monospace;
-    font-size: 7px;
-    letter-spacing: 3px;
+    font-size: .5rem;
+    letter-spacing: .2143rem;
     opacity: .7;
 }
 
 /* título */
 .dice-header {
     display: block;
-    padding: 22px 25px 17px;
+    padding: 1.5714rem 1.7857rem 1.2143rem;
     position: relative;
     color: var(--colortextod1);
     font-family: "Jersey 15", sans-serif;
-    font-size: 30px;
+    font-size: 2.1429rem;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: .2143rem;
     line-height: 1;
     text-transform: uppercase;
     background: linear-gradient(90deg, var(--emblema2), transparent);
-    border-bottom: 1px solid var(--emblema1);
+    border-bottom: .0714rem solid var(--emblema1);
 }
 
 /* línea energética */
 .dice-header:after {
     content: "";
     position: absolute;
-    left: 25px;
-    bottom: -1px;
-    width: 115px;
-    height: 2px;
+    left: 1.7857rem;
+    bottom: -.0714rem;
+    width: 8.2143rem;
+    height: .1429rem;
     background: var(--linkc3);
-    box-shadow: 0 0 12px var(--emblema1);
+    box-shadow: 0 0 .8571rem var(--emblema1);
 }
 
 /* =========================================================
    CONTENEDOR DE CADA LANZADA
    ========================================================= */
 .dice-roll {
-    margin: 20px 20px 0;
-    padding: 24px 15px 15px;
+    margin: 1.4286rem 1.4286rem 0;
+    padding: 1.7143rem 1.0714rem 1.0714rem;
     position: relative;
+    box-sizing: border-box;
     background: var(--colorfondo1);
-    border: 1px solid var(--linkc3);
-    box-shadow: inset 0 0 20px rgba(22,119,200,.025);
+    border: .0714rem solid var(--linkc3);
+    box-shadow: inset 0 0 1.4286rem rgba(22,119,200,.025);
     transition: .2s ease;
 }
 
 .dice-roll:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 1.4286rem;
 }
 
 .dice-roll:hover {
     border-color: rgba(34,193,195,.35);
-    box-shadow: inset 0 0 20px rgba(22,119,200,.05), 0 0 15px rgba(22,119,200,.05);
+    box-shadow: inset 0 0 1.4286rem rgba(22,119,200,.05), 0 0 1.0714rem rgba(22,119,200,.05);
 }
 
 /* =========================================================
@@ -5745,18 +5749,23 @@ blockquote blockquote {
    ========================================================= */
 .dice-roll > span {
     position: absolute;
-    top: -9px;
-    left: 15px;
-    padding: 3px 9px;
+    top: -.6429rem;
+    left: 1.0714rem;
+    max-width: calc(100% - 1.5rem);
+    padding: .2143rem .6429rem;
+    box-sizing: border-box;
     background: var(--emblema1);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
-    font-size: 7px;
+    font-size: .5rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: .0714rem;
+    line-height: 1.4;
     text-transform: uppercase;
-    border: 1px solid rgba(53,216,255,.4);
-    box-shadow: 0 0 8px rgba(22,119,200,.3);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    border: .0714rem solid rgba(53,216,255,.4);
+    box-shadow: 0 0 .5714rem rgba(22,119,200,.3);
 }
 
 /* =========================================================
@@ -5766,23 +5775,26 @@ blockquote blockquote {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: .6429rem;
     margin: 0;
+    min-width: 0;
 }
 
 /* resultado individual */
 .roll-result {
     display: block;
     width: 100%;
-    padding: 9px 11px;
+    min-width: 0;
+    padding: .6429rem .7857rem;
     box-sizing: border-box;
     background: var(--colorfondo2);
-    border: 1px solid var(--colorfondo2);
+    border: .0714rem solid var(--colorfondo2);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
-    font-size: 9px;
+    font-size: .6429rem;
     line-height: 1.6;
     text-align: left;
+    overflow-wrap: anywhere;
     position: relative;
     transition: .2s ease;
 }
@@ -5793,7 +5805,7 @@ blockquote blockquote {
     position: absolute;
     left: 0;
     top: 0;
-    width: 2px;
+    width: .1429rem;
     height: 100%;
     background: var(--emblema2);
 }
@@ -5802,7 +5814,7 @@ blockquote blockquote {
 .roll-result:hover {
     background: #0d1a26;
     border-color: rgba(34,193,195,.2);
-    transform: translateX(2px);
+    transform: translateX(.1429rem);
 }
 
 /* =========================================================
@@ -5813,24 +5825,25 @@ blockquote blockquote {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 6px;
-    padding-bottom: 6px;
+    margin-bottom: .4286rem;
+    padding-bottom: .4286rem;
     color: var(--linck3) !important;
     font-family: "Oxanium", sans-serif;
-    font-size: 13px;
+    font-size: .9286rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: .0714rem;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(34,193,195,.14);
+    border-bottom: .0714rem solid rgba(34,193,195,.14);
 }
 
 /* icono */
 .roll-result > strong:before {
     content: "\f135";
-    margin-right: 8px;
+    flex: 0 0 auto;
+    margin-right: .5714rem;
     color: var(--emblema2);
     font-family: "Font Awesome 6 Pro";
-    font-size: 9px;
+    font-size: .6429rem;
 }
 
 /* =========================================================
@@ -5847,17 +5860,67 @@ blockquote blockquote {
 .dice-roll:after {
     content: "DATA // PROCESSING";
     position: absolute;
-    right: 12px;
-    bottom: 5px;
+    right: .8571rem;
+    bottom: .3571rem;
     color: rgba(127,149,168,.35);
     font-family: "Oxanium", monospace;
-    font-size: 6px;
-    letter-spacing: 1px;
+    font-size: .4286rem;
+    letter-spacing: .0714rem;
+    pointer-events: none;
 }
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE — TABLET Y MÓVIL
    ========================================================= */
+@media (max-width: 600px) {
+    .dice {
+        width: calc(100% - 1rem);
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    .dice-header {
+        padding: 1.2rem 1rem .9rem;
+        font-size: clamp(1.25rem, 7vw, 2.1429rem);
+        letter-spacing: .12rem;
+        overflow-wrap: anywhere;
+    }
+
+    .dice-header:after {
+        left: 1rem;
+        width: 6.5rem;
+    }
+
+    .dice-roll {
+        margin: 1.25rem .75rem 0;
+        padding: 1.5rem .75rem .9rem;
+    }
+
+    .dice-roll:last-child {
+        margin-bottom: 1rem;
+    }
+
+    .dice-roll > span {
+        left: .65rem;
+        max-width: calc(100% - 1.3rem);
+        font-size: .5rem;
+    }
+
+    .roll-result {
+        padding: .6rem .65rem;
+    }
+
+    .roll-result > strong {
+        flex-wrap: wrap;
+        column-gap: .2rem;
+        font-size: .9rem;
+    }
+
+    .dice-roll:after {
+        right: .5rem;
+        font-size: .36rem;
+    }
+}
 
 
 /* =========================================================
