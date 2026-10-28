@@ -1,2198 +1,2099 @@
-/* =========================================================
-       BASE DE DATOS DEL FORO
-
-       =========================================================
-
-       ESTA ES LA PARTE MÁS IMPORTANTE PARA EDITAR.
-
-       Cada Digimon tiene:
-
-       - nombre
-       - etapa
-       - atributo
-       - imagen
-       - datos
-       - vacuna
-       - virus
-
-       Dentro de cada atributo puedes colocar HASTA 4
-       Digimon diferentes.
-
-       IMPORTANTE:
-
-       El valor debe ser el ID/slug del Digimon.
-
-       Ejemplo:
-
-       datos: [
-           "angemon",
-           "unimon",
-           "leomon",
-           "kabuterimon"
-       ]
-
-       significa que desde ese Digimon, en la ruta DATOS,
-       aparecen esas cuatro posibilidades.
-
-    ========================================================= */
-
-
-    const DIGIMON_DATABASE = {
-
-
-        /* =====================================================
-           PATAMON
-        ===================================================== */
-
-        patamon: {
-
-            nombre: "Patamon",
-
-            etapa: "Rookie",
-
-            atributo: "Datos",
-
-            imagen: "",
-
-            datos: [
-                "angemon",
-                "unimon",
-                "leomon",
-                "kabuterimon"
-            ],
-
-            vacuna: [
-                "angemon",
-                "birdramon",
-                "garurumon",
-                "togemon"
-            ],
-
-            virus: [
-                "devimon",
-                "ogremon",
-                "bakemon",
-                "darktyrannomon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           ANGEMON
-        ===================================================== */
-
-        angemon: {
-
-            nombre: "Angemon",
-
-            etapa: "Champion",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [
-                "magnaangemon",
-                "garudamon",
-                "andromon",
-                "weregarurumon"
-            ],
-
-            vacuna: [
-                "magnaangemon",
-                "holyangemon",
-                "seraphimon",
-                "ophanimon"
-            ],
-
-            virus: [
-                "myotismon",
-                "skullsatamon",
-                "phantomon",
-                "ladydevimon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           UNIMON
-        ===================================================== */
-
-        unimon: {
-
-            nombre: "Unimon",
-
-            etapa: "Champion",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [
-                "garudamon",
-                "megadramon",
-                "hippogriffomon",
-                "aeroveedramon"
-            ],
-
-            vacuna: [
-                "garudamon",
-                "hippogriffomon",
-                "silphymon",
-                "gryphonmon"
-            ],
-
-            virus: [
-                "megadramon",
-                "gigadramon",
-                "airdramon",
-                "cyclomon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           LEOMON
-        ===================================================== */
-
-        leomon: {
-
-            nombre: "Leomon",
-
-            etapa: "Champion",
-
-            atributo: "Datos",
-
-            imagen: "",
-
-            datos: [
-                "saberleomon",
-                "leopardmon",
-                "weregarurumon",
-                "grapleomon"
-            ],
-
-            vacuna: [
-                "saberleomon",
-                "magnadramon",
-                "craniummon",
-                "dynasmon"
-            ],
-
-            virus: [
-                "ogremon",
-                "mamemon",
-                "metaltyranomon",
-                "piedmon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           KABUTERIMON
-        ===================================================== */
-
-        kabuterimon: {
-
-            nombre: "Kabuterimon",
-
-            etapa: "Champion",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [
-                "atlurkabuterimon",
-                "megakabuterimon",
-                "heraklekabuterimon",
-                "kuwagamon"
-            ],
-
-            vacuna: [
-                "atlurkabuterimon",
-                "rosemon",
-                "lilamon",
-                "granlocomon"
-            ],
-
-            virus: [
-                "metalkuwagamon",
-                "skullscorpionmon",
-                "piedmon",
-                "tyranomon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           BIRDRAMON
-        ===================================================== */
-
-        birdramon: {
-
-            nombre: "Birdramon",
-
-            etapa: "Champion",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [
-                "garudamon",
-                "phoenixmon",
-                "aeroveedramon",
-                "silphymon"
-            ],
-
-            vacuna: [
-                "garudamon",
-                "phoenixmon",
-                "hououmon",
-                "magnadramon"
-            ],
-
-            virus: [
-                "megadramon",
-                "gigadramon",
-                "metalgreymon",
-                "machinedramon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           OGREMON
-        ===================================================== */
-
-        ogremon: {
-
-            nombre: "Ogremon",
-
-            etapa: "Champion",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [
-                "digitamamon",
-                "mamemon",
-                "ogremon",
-                "skullmeramon"
-            ],
-
-            vacuna: [
-                "mamemon",
-                "monzaemon",
-                "etemon",
-                "superstarmon"
-            ],
-
-            virus: [
-                "skullmeramon",
-                "etemon",
-                "metaletemon",
-                "piedmon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           BAKEMON
-        ===================================================== */
-
-        bakemon: {
-
-            nombre: "Bakemon",
-
-            etapa: "Champion",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [
-                "phantomon",
-                "myotismon",
-                "wisemon",
-                "pumpkinmon"
-            ],
-
-            vacuna: [
-                "wisemon",
-                "monzaemon",
-                "antylamon",
-                "mistymon"
-            ],
-
-            virus: [
-                "phantomon",
-                "myotismon",
-                "piedmon",
-                "metalphantomon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           TOGEMON
-        ===================================================== */
-
-        togemon: {
-
-            nombre: "Togemon",
-
-            etapa: "Champion",
-
-            atributo: "Datos",
-
-            imagen: "",
-
-            datos: [
-                "lilamon",
-                "rosemon",
-                "digitamamon",
-                "sunflowmon"
-            ],
-
-            vacuna: [
-                "lilamon",
-                "rosemon",
-                "lotusmon",
-                "ophanimon"
-            ],
-
-            virus: [
-                "woodmon",
-                "cherrymon",
-                "pumpkinmon",
-                "mammon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           DEVIMON
-        ===================================================== */
-
-        devimon: {
-
-            nombre: "Devimon",
-
-            etapa: "Champion",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [
-                "myotismon",
-                "skullsatamon",
-                "phantomon",
-                "digitamamon"
-            ],
-
-            vacuna: [
-                "myotismon",
-                "piedmon",
-                "metallseadramon",
-                "blackwargraymon"
-            ],
-
-            virus: [
-                "myotismon",
-                "skullsatamon",
-                "ladydevimon",
-                "demidevimon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           DARKTYRANNOMON
-        ===================================================== */
-
-        darktyrannomon: {
-
-            nombre: "DarkTyrannomon",
-
-            etapa: "Champion",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [
-                "metaltyranomon",
-                "megadramon",
-                "gigadramon",
-                "rusttyranomon"
-            ],
-
-            vacuna: [
-                "metalgreymon",
-                "machinedramon",
-                "wargraymon",
-                "blitzgreymon"
-            ],
-
-            virus: [
-                "metaltyranomon",
-                "rusttyranomon",
-                "machinedramon",
-                "millenniummon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           MAGNAANGEMON
-        ===================================================== */
-
-        magnaangemon: {
-
-            nombre: "MagnaAngemon",
-
-            etapa: "Ultimate",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [
-                "seraphimon",
-                "ophanimon",
-                "cherubimon",
-                "holydramon"
-            ],
-
-            vacuna: [
-                "seraphimon",
-                "ophanimon",
-                "magnadramon",
-                "cherubimon"
-            ],
-
-            virus: [
-                "myotismon",
-                "piedmon",
-                "beelzemon",
-                "daemon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           MYOTISMON
-        ===================================================== */
-
-        myotismon: {
-
-            nombre: "Myotismon",
-
-            etapa: "Ultimate",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [
-                "venommyotismon",
-                "beelzemon",
-                "barbamon",
-                "darkdramon"
-            ],
-
-            vacuna: [
-                "beelzemon",
-                "belphemon",
-                "daemon",
-                "apocalymon"
-            ],
-
-            virus: [
-                "venommyotismon",
-                "beelzemon",
-                "belphemon",
-                "piedmon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           GARUDAMON
-        ===================================================== */
-
-        garudamon: {
-
-            nombre: "Garudamon",
-
-            etapa: "Ultimate",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [
-                "phoenixmon",
-                "hououmon",
-                "valkyrimon",
-                "griffomon"
-            ],
-
-            vacuna: [
-                "phoenixmon",
-                "hououmon",
-                "valkyrimon",
-                "magnadramon"
-            ],
-
-            virus: [
-                "megadramon",
-                "gigadramon",
-                "machinedramon",
-                "rusttyranomon"
-            ]
-
-        },
-
-
-        /* =====================================================
-           DEVOLUCIONES / EJEMPLOS DE MEGA
-        ===================================================== */
-
-        seraphimon: {
-
-            nombre: "Seraphimon",
-
-            etapa: "Mega",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [],
-
-            vacuna: [],
-
-            virus: []
-
-        },
-
-
-        ophanimon: {
-
-            nombre: "Ophanimon",
-
-            etapa: "Mega",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [],
-
-            vacuna: [],
-
-            virus: []
-
-        },
-
-
-        phoenixmon: {
-
-            nombre: "Phoenixmon",
-
-            etapa: "Mega",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [],
-
-            vacuna: [],
-
-            virus: []
-
-        },
-
-
-        venommyotismon: {
-
-            nombre: "VenomMyotismon",
-
-            etapa: "Mega",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [],
-
-            vacuna: [],
-
-            virus: []
-
-        },
-
-
-        beelzemon: {
-
-            nombre: "Beelzemon",
-
-            etapa: "Mega",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [],
-
-            vacuna: [],
-
-            virus: []
-
-        },
-
-
-        piedmon: {
-
-            nombre: "Piedmon",
-
-            etapa: "Mega",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [],
-
-            vacuna: [],
-
-            virus: []
-
-        },
-
-
-        metaltyranomon: {
-
-            nombre: "MetalTyrannomon",
-
-            etapa: "Ultimate",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [],
-            vacuna: [],
-            virus: []
-
-        },
-
-
-        rusttyranomon: {
-
-            nombre: "RustTyrannomon",
-
-            etapa: "Mega",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [],
-            vacuna: [],
-            virus: []
-
-        },
-
-
-        wargraymon: {
-
-            nombre: "WarGreymon",
-
-            etapa: "Mega",
-
-            atributo: "Vacuna",
-
-            imagen: "",
-
-            datos: [],
-            vacuna: [],
-            virus: []
-
-        },
-
-
-        machinedramon: {
-
-            nombre: "Machinedramon",
-
-            etapa: "Mega",
-
-            atributo: "Virus",
-
-            imagen: "",
-
-            datos: [],
-            vacuna: [],
-            virus: []
-
-        }
-
-    };
-
-
-    /* =========================================================
-       NORMALIZACIÓN DE LA BASE DE DATOS
-
-       - indigevolucion: lista independiente de posibles
-         indigevoluciones. NO depende de Datos/Vacuna/Virus.
-       - evoluciones: lista usada únicamente por Bebe I y Bebe II,
-         que no tienen atributo.
-
-       Los campos se crean automáticamente si no existen para que
-       la base de datos siga siendo fácil de editar.
-    ========================================================= */
-
-    Object.values(DIGIMON_DATABASE).forEach(digimon => {
-
-        digimon.indigevolucion =
-            Array.isArray(digimon.indigevolucion)
-                ? digimon.indigevolucion
-                : [];
-
-        digimon.evoluciones =
-            Array.isArray(digimon.evoluciones)
-                ? digimon.evoluciones
-                : [];
-
-    });
-
-
-
-    /* =========================================================
-       CONFIGURACIÓN
-    ========================================================= */
-
-    const TYPE_INFO = {
-
-        datos: {
-
-            nombre: "DATOS",
-
-            descripcion:
-                "Ruta de evolución asociada al atributo <strong>Datos</strong>."
-
-        },
-
-        vacuna: {
-
-            nombre: "VACUNA",
-
-            descripcion:
-                "Ruta de evolución asociada al atributo <strong>Vacuna</strong>."
-
-        },
-
-        virus: {
-
-            nombre: "VIRUS",
-
-            descripcion:
-                "Ruta de evolución asociada al atributo <strong>Virus</strong>."
-
-        }
-
-    };
-
-
-
-    /* =========================================================
-       ESTADO
-    ========================================================= */
-
-    let currentDigimon = "patamon";
-
-    let currentType = "datos";
-
-    let history = [];
-
-
-
-    /* =========================================================
-       ELEMENTOS HTML
-    ========================================================= */
-
-    const selectedName =
-        document.getElementById("selectedName");
-
-    const selectedImage =
-        document.getElementById("selectedImage");
-
-    const selectedPlaceholder =
-        document.getElementById("selectedPlaceholder");
-
-    const selectedMeta =
-        document.getElementById("selectedMeta");
-
-    const evolutionGrid =
-        document.getElementById("evolutionGrid");
-
-    const indievolutionGrid =
-        document.getElementById("indievolutionGrid");
-
-    const indievolutionTarget =
-        document.getElementById("indievolutionTarget");
-
-    const typeDescription =
-        document.getElementById("typeDescription");
-
-    const mainSearch =
-        document.getElementById("mainSearch");
-
-    const suggestions =
-        document.getElementById("suggestions");
-
-    const historyElement =
-        document.getElementById("history");
-
-    const searchModal =
-        document.getElementById("searchModal");
-
-    const modalSearch =
-        document.getElementById("modalSearch");
-
-    const modalResults =
-        document.getElementById("modalResults");
-
-    const toast =
-        document.getElementById("toast");
-
-
-
-    /* =========================================================
-       OBTENER DIGIMON
-    ========================================================= */
-
-    function getDigimon(slug) {
-
-        return DIGIMON_DATABASE[slug] || null;
-
-    }
-
-
-
-    /* =========================================================
-       OBTENER TODOS
-    ========================================================= */
-
-    function getAllDigimon() {
-
-        return Object.entries(DIGIMON_DATABASE)
-            .map(([slug, data]) => ({
-                slug,
-                ...data
-            }));
-
-    }
-
-
-
-    /* =========================================================
-       OBTENER INDIGIEVOLUCIONES
-
-       Busca todos los Digimon que tienen al Digimon actual
-       como posible evolución dentro de cualquiera de sus
-       rutas: Datos, Vacuna o Virus.
-    ========================================================= */
-
-    function getIndievolutions(slug) {
-
-        const digimon = getDigimon(slug);
-
-        if (!digimon) {
-            return [];
-        }
-
-        /*
-         * La indigevolución es independiente de los atributos.
-         * Si el campo está configurado, se respeta exactamente.
-         * Como compatibilidad con la base antigua, si está vacío
-         * se calcula también a partir de las rutas existentes.
-         */
-        if (digimon.indigevolucion.length) {
-
-            return digimon.indigevolucion
-                .map(getDigimon)
-                .filter(Boolean)
-                .map(previous => ({
-                    slug: Object.keys(DIGIMON_DATABASE).find(
-                        key => DIGIMON_DATABASE[key] === previous
-                    ),
-                    ...previous
+            /* =========================================================
+                   BASE DE DATOS DEL FORO
+
+                   =========================================================
+
+                   ESTA ES LA PARTE MÁS IMPORTANTE PARA EDITAR.
+
+                   Cada Digimon tiene:
+
+                   - nombre
+                   - etapa
+                   - atributo
+                   - imagen
+                   - datos
+                   - vacuna
+                   - virus
+
+                   Dentro de cada atributo puedes colocar HASTA 4
+                   Digimon diferentes.
+
+                   IMPORTANTE:
+
+                   El valor debe ser el ID/slug del Digimon.
+
+                   Ejemplo:
+
+                   datos: [
+                       "angemon",
+                       "unimon",
+                       "leomon",
+                       "kabuterimon"
+                   ]
+
+                   significa que desde ese Digimon, en la ruta DATOS,
+                   aparecen esas cuatro posibilidades.
+
+                ========================================================= */
+            const DIGIMON_DATABASE = {
+                digitama: {
+                    nombre: "DIGITAMA",
+                    etapa: "Digitama",
+                    atributo: "Sin atributo",
+                    imagen: "https://wikimon.net/images/c/c6/Digitama_ver1_vpet_dmc.gif",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["botamon", "yuramon", "yukimibotamon", "poyomon", "zuromon", "bubbmon", "pyonmon", "choromon", "tsubumon", "mokumon", "punimon", "popomon", "pitchmon", "nyokimon", "cocomon", "puwamon", "petitmon", "curimon", "jyarimon", "pururumon", "keemon", "yolkmon", "puyomon", "leafmon", "dokimon", "paomon", "relemon", "ketomon", "sunamon", "zerimon", "chicomon", "pusumon"]
+                },
+                botamon: {
+                    nombre: "BOTAMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimon.net/cimages/digimon/botamon.jpg",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["koromon", "pagumon", "wanyamon", "pinamon"]
+                },
+                yuramon: {
+                    nombre: "YURAMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimon.net/cimages/digimon/yuramon.jpg",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["koromon", "budmon", "tanemon"]
+                },
+                yukimibotamon: {
+                    nombre: "YUKIMIBOTAMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimon.net/cimages/digimon/yukimibotamon.jpg",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["nyaromon", "tunomon", "moonmon", "hiyarimon"]
+                },
+                poyomon: {
+                    nombre: "POYOMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimon.net/cimages/digimon/poyomon.jpg",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["nyaromon", "tokomon", "pukamon", "gummymon"]
+                },
+                zuromon: {
+                    nombre: "ZUROMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimon.net/cimages/digimon/zurumon.jpg",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["pagumon"]
+                },
+                bubbmon: {
+                    nombre: "BUBBMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/bubbmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["tanemon", "mochimon", "pyocomon"]
+                },
+                pyonmon: {
+                    nombre: "PYONMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pyonmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["bosamon"]
+                },
+                choromon: {
+                    nombre: "CHOROMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/choromon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["mochimon", "caprimon"]
+                },
+                tsubumon: {
+                    nombre: "TSUBUMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/tsubumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["upamon", "tokomon"]
+                },
+                mokumon: {
+                    nombre: "MOKUMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/mokumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["petimeramon", "caprimon", "sunmon", "yarmon"]
+                },
+                punimon: {
+                    nombre: "PUNIMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/punimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["petimeramon", "tunomon"]
+                },
+                popomon: {
+                    nombre: "POPOMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/popomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["wanyamon", "frimon"]
+                },
+                pitchmon: {
+                    nombre: "PITCHMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pitchmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["pukamon"]
+                },
+                nyokimon: {
+                    nombre: "NYOKIMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/nyokimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["pyocomon", "budmon"]
+                },
+                cocomon: {
+                    nombre: "COCOMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/cocomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["chocomon"]
+                },
+                puwamon: {
+                    nombre: "PUWAMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/puwamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["pinamon"]
+                },
+                petitmon: {
+                    nombre: "PETITMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/petitmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["babydmon"]
+                },
+                curimon: {
+                    nombre: "CURIMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/curimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["gurimon"]
+                },
+                jyarimon: {
+                    nombre: "JYARIMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/jyarimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["gigimon"]
+                },
+                pururumon: {
+                    nombre: "PURURUMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pururumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["poromon"]
+                },
+                keemon: {
+                    nombre: "KEEMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/keemon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["yarmon"]
+                },
+                yolkmon: {
+                    nombre: "YOLKMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/yolkmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["chicchimon"]
+                },
+                puyomon: {
+                    nombre: "PUYOMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/puyomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["puyoyomon"]
+                },
+                leafmon: {
+                    nombre: "LEAFMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/leafmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["minomon"]
+                },
+                dokimon: {
+                    nombre: "DOKIMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/dokimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["bibimon"]
+                },
+                paomon: {
+                    nombre: "PAOMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/paomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["xiaomon"]
+                },
+                relemon: {
+                    nombre: "RELEMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/relemon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["moonmon", "pokomon"]
+                },
+                ketomon: {
+                    nombre: "KETOMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/ketomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["hopmon"]
+                },
+                sunamon: {
+                    nombre: "SUNAMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/sunamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["goromon"]
+                },
+                zerimon: {
+                    nombre: "ZERIMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/zerimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["gummymon"]
+                },
+                chicomon: {
+                    nombre: "CHICOMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/chicomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["chibimon"]
+                },
+                pusumon: {
+                    nombre: "PUSUMON",
+                    etapa: "Fresh",
+                    atributo: "Sin atributo",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pusumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: ["pusurimon"]
+                },
+                koromon: {
+                    nombre: "KOROMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/koromon-icon.webp",
+                    datos: ["dracomon", "huckmon"],
+                    vacuna: ["agumon", "toyagumon", "vmon", "yukiagumon"],
+                    virus: ["betamon", "guilmon"],
+                    sinatributo: []
+                },
+                nyaromon: {
+                    nombre: "NYAROMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/nyaromon-icon.webp",
+                    datos: ["gabumon", "gottsumon", "lunamon"],
+                    vacuna: ["agumon", "bearmon", "plotmon", "terriermon"],
+                    virus: ["tinkermon"],
+                    sinatributo: []
+                },
+                plotmon: {
+                    nombre: "PLOTMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/plotmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                pagumon: {
+                    nombre: "PAGUMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pagumon-icon.webp",
+                    datos: ["lopmon"],
+                    vacuna: [],
+                    virus: ["blackagumon", "gazimon", "goburimon", "gizamon", "impmon", "picodevimon", "tukaimon"],
+                    sinatributo: []
+                },
+                tanemon: {
+                    nombre: "TANEMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/tanemon-icon.webp",
+                    datos: ["alraumon", "floramon", "lalamon", "palmon", "renamon"],
+                    vacuna: ["piyomon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                bosamon: {
+                    nombre: "BOSAMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/bosamon-icon.webp",
+                    datos: [],
+                    vacuna: ["angoramon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                mochimon: {
+                    nombre: "MOCHIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/mochimon-icon.webp",
+                    datos: ["gottsumon", "huckmon"],
+                    vacuna: ["angoramon", "solarmon", "tentomon"],
+                    virus: ["hagurumon", "kunemon", "otamamon"],
+                    sinatributo: []
+                },
+                upamon: {
+                    nombre: "UPAMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/upamon-icon.webp",
+                    datos: ["sangomon"],
+                    vacuna: ["armadimon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                tokomon: {
+                    nombre: "TOKOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/tokomon-icon.webp",
+                    datos: ["hawkmon"],
+                    vacuna: ["armadimon", "bakumon", "falcomon", "sistermonblanc"],
+                    virus: ["kunemon", "tukaimon"],
+                    sinatributo: []
+                },
+                petimeramon: {
+                    nombre: "PETI MERAMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/peti-meramon-icon.webp",
+                    datos: ["candmon"],
+                    vacuna: ["bakumon", "coronamon"],
+                    virus: ["picodevimon"],
+                    sinatributo: []
+                },
+                wanyamon: {
+                    nombre: "WANYAMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/wanyamon-icon.webp",
+                    datos: ["gaomon"],
+                    vacuna: ["bearmon", "kudamon", "plotmon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                pukamon: {
+                    nombre: "PUKAMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pukamon-icon.webp",
+                    datos: ["jellymon", "sangomon"],
+                    vacuna: ["gomamon", "penmon"],
+                    virus: ["betamon", "otamamon", "shakomon"],
+                    sinatributo: []
+                },
+                pyocomon: {
+                    nombre: "PYOCOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pyocomon-icon.webp",
+                    datos: ["elecmon", "floramon", "palmon"],
+                    vacuna: ["piyomon", "cutemon", "hyokomon"],
+                    virus: ["wormmon"],
+                    sinatributo: []
+                },
+                caprimon: {
+                    nombre: "CAPRIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/caprimon-icon.webp",
+                    datos: ["kokuwamon", "kotemon"],
+                    vacuna: ["toyagumon"],
+                    virus: ["hagurumon"],
+                    sinatributo: []
+                },
+                budmon: {
+                    nombre: "BUDMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/budmon-icon.webp",
+                    datos: ["kotemon", "lalamon"],
+                    vacuna: ["gomamon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                chocomon: {
+                    nombre: "CHOCOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/chocomon-icon.webp",
+                    datos: ["lopmon"],
+                    vacuna: [],
+                    virus: ["blacktoyagumon", "shamamon"],
+                    sinatributo: []
+                },
+                pinamon: {
+                    nombre: "PINAMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pinamon-icon.webp",
+                    datos: ["candmon"],
+                    vacuna: ["falcomon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                sunmon: {
+                    nombre: "SUNMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/sunmon-icon.webp",
+                    datos: [],
+                    vacuna: ["coronamon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                babydmon: {
+                    nombre: "BABYDMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/babydmon-icon.webp",
+                    datos: ["dracomon"],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                tunomon: {
+                    nombre: "TUNOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/tunomon-icon.webp",
+                    datos: ["elecmon", "gabumon", "gaomon", "psychemon"],
+                    vacuna: ["gumdramon", "monodramon"],
+                    virus: ["blackgabumon", "goburimon"],
+                    sinatributo: []
+                },
+                gurimon: {
+                    nombre: "GURIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gurimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: ["gammamon"],
+                    sinatributo: []
+                },
+                gigimon: {
+                    nombre: "GIGIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gigimon-icon.webp",
+                    datos: [],
+                    vacuna: ["solarmon"],
+                    virus: ["guilmon"],
+                    sinatributo: []
+                },
+                poromon: {
+                    nombre: "POROMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/poromon-icon.webp",
+                    datos: ["hawkmon"],
+                    vacuna: [],
+                    virus: ["tinkermon"],
+                    sinatributo: []
+                },
+                pusurimon: {
+                    nombre: "PUSURIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pusurimon-icon.webp",
+                    datos: ["herissmon"],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                yarmon: {
+                    nombre: "YARMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/yarmon-icon.webp",
+                    datos: ["herissmon"],
+                    vacuna: [],
+                    virus: ["impmon"],
+                    sinatributo: []
+                },
+                chicchimon: {
+                    nombre: "CHICCHIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/chicchimon-icon.webp",
+                    datos: [],
+                    vacuna: ["hyokomon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                puyoyomon: {
+                    nombre: "PUYOYOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/puyoyomon-icon.webp",
+                    datos: ["jellymon"],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                minomon: {
+                    nombre: "MINOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/minomon-icon.webp",
+                    datos: ["kokuwamon"],
+                    vacuna: ["tentomon"],
+                    virus: ["wormmon"],
+                    sinatributo: []
+                },
+                bibimon: {
+                    nombre: "BIBIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/bibimon-icon.webp",
+                    datos: [],
+                    vacuna: ["kudamon", "pulsemon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                xiaomon: {
+                    nombre: "XIAOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/xiaomon-icon.webp",
+                    datos: [],
+                    vacuna: ["labramon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                frimon: {
+                    nombre: "FRIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/frimon-icon.webp",
+                    datos: [],
+                    vacuna: ["liollmon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                moonmon: {
+                    nombre: "MOONMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/moonmon-icon.webp",
+                    datos: ["lunamon"],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                hopmon: {
+                    nombre: "HOPMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/hopmon-icon.webp",
+                    datos: [],
+                    vacuna: ["monodramon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                hiyarimon: {
+                    nombre: "HIYARIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/hiyarimon-icon.webp",
+                    datos: [],
+                    vacuna: ["penmon"],
+                    virus: ["snowgoburimon"],
+                    sinatributo: []
+                },
+                pokomon: {
+                    nombre: "POKOMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pokomon-icon.webp",
+                    datos: ["renamon"],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                goromon: {
+                    nombre: "GOROMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/goromon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: ["sunarizamon"],
+                    sinatributo: []
+                },
+                gummymon: {
+                    nombre: "GUMMYMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gummymon-icon.webp",
+                    datos: [],
+                    vacuna: ["terriermon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                chibimon: {
+                    nombre: "CHIBIMON",
+                    etapa: "Baby",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/chibimon-icon.webp",
+                    datos: [],
+                    vacuna: ["vmon"],
+                    virus: [],
+                    sinatributo: []
+                },
+                agumon: {
+                    nombre: "AGUMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/agumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                blackagumon: {
+                    nombre: "BLACKAGUMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/agumon-black-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                alraumon: {
+                    nombre: "ALRAUMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/alraumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                angoramon: {
+                    nombre: "ANGORAMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/angoramon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                armadimon: {
+                    nombre: "ARMADIMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/armadimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                bakumon: {
+                    nombre: "BAKUMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/bakumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                bearmon: {
+                    nombre: "BEARMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/bearmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                betamon: {
+                    nombre: "BETAMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/betamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                piyomon: {
+                    nombre: "PIYOMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/piyomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                blacktoyagumon: {
+                    nombre: "BLACK TOYAGUMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/black-toyagumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                candmon: {
+                    nombre: "CANDMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/candmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                coronamon: {
+                    nombre: "CORONAMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/coronamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                cutemon: {
+                    nombre: "CUTEMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/cutemon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                dracomon: {
+                    nombre: "DRACOMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/dracomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                elecmon: {
+                    nombre: "ELECMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/elecmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                falcomon: {
+                    nombre: "FALCOMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/falcomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                floramon: {
+                    nombre: "FLORAMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/floramon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gabumon: {
+                    nombre: "GABUMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gabumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                blackgabumon: {
+                    nombre: "BLACKGABUMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gabumonblack-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gammamon: {
+                    nombre: "GAMMAMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gammamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gaomon: {
+                    nombre: "GAOMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gaomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gazimon: {
+                    nombre: "GAZIMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gazimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gizamon: {
+                    nombre: "GIZAMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gizamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                goburimon: {
+                    nombre: "GOBURIMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/goburimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gomamon: {
+                    nombre: "GOMAMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gomamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gottsumon: {
+                    nombre: "GOTTSUMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gottsumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                guilmon: {
+                    nombre: "GUILMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/guilmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                gumdramon: {
+                    nombre: "GUMDRAMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/gumdramon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                hagurumon: {
+                    nombre: "HAGURUMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/hagurumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                hawkmon: {
+                    nombre: "HAWKMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/hawkmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                herissmon: {
+                    nombre: "HERISSMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/herissmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                huckmon: {
+                    nombre: "HUCKMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/huckmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                hyokomon: {
+                    nombre: "HYOKOMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/hyokomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                impmon: {
+                    nombre: "IMPMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/impmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                jellymon: {
+                    nombre: "JELLYMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/jellymon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                kokuwamon: {
+                    nombre: "KOKUWAMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/kokuwamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                kotemon: {
+                    nombre: "KOTEMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/kotemon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                kudamon: {
+                    nombre: "KUDAMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/kudamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                kunemon: {
+                    nombre: "KUNEMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/kunemon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                labramon: {
+                    nombre: "LABRAMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/labramon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                lalamon: {
+                    nombre: "LALAMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/lalamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                liollmon: {
+                    nombre: "LIOLLMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/liollmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                lopmon: {
+                    nombre: "LOPMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/lopmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                lunamon: {
+                    nombre: "LUNAMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/lunamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                monodramon: {
+                    nombre: "MONODRAMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/monodramon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                otamamon: {
+                    nombre: "OTAMAMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/otamamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                palmon: {
+                    nombre: "PALMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/palmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                patamon: {
+                    nombre: "PATAMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/patamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                penmon: {
+                    nombre: "PENMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/penmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                picodevimon: {
+                    nombre: "PICODEVIMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/picodevimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                psychemon: {
+                    nombre: "PSYCHEMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/psychemon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                pulsemon: {
+                    nombre: "PULSEMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/pulsemon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                renamon: {
+                    nombre: "RENAMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/renamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                salamon: {
+                    nombre: "SALAMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/salamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                sangomon: {
+                    nombre: "SANGOMON",
+                    etapa: "Rookie",
+                    atributo: "Datos",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/sangomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                shakomon: {
+                    nombre: "SHAKOMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/shakomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                shamamon: {
+                    nombre: "SHAMAMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/shamamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                sistermonblanc: {
+                    nombre: "SISTERMON BLANC",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/sistermon-blanc-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                snowgoburimon: {
+                    nombre: "SNOW GOBURIMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/snow-goburimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                solarmon: {
+                    nombre: "SOLARMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/solarmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                sunarizamon: {
+                    nombre: "SUNARIZAMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/sunarizamon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                tentomon: {
+                    nombre: "TENTOMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/tentomon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                terriermon: {
+                    nombre: "TERRIERMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/terriermon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                tinkermon: {
+                    nombre: "TINKERMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/tinkermon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                toyagumon: {
+                    nombre: "TOYAGUMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/toyagumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                tukaimon: {
+                    nombre: "TUKAIMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/tukaimon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                vmon: {
+                    nombre: "V-MON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/v-mon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                wormmon: {
+                    nombre: "WORMMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/wormmon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
+                yukiagumon: {
+                    nombre: "YUKIAGUMON",
+                    etapa: "Rookie",
+                    atributo: "Vacuna",
+                    imagen: "https://digimonstorytimestranger.com/images/digimons/yukiagumon-icon.webp",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                }
+            };
+            const TYPE_INFO = {
+                datos: {
+                    nombre: "DATOS",
+                    descripcion: "Ruta de evolución asociada al atributo <strong>Datos</strong>."
+                },
+                vacuna: {
+                    nombre: "VACUNA",
+                    descripcion: "Ruta de evolución asociada al atributo <strong>Vacuna</strong>."
+                },
+                virus: {
+                    nombre: "VIRUS",
+                    descripcion: "Ruta de evolución asociada al atributo <strong>Virus</strong>."
+                },
+                sinatributo: {
+                    nombre: "SIN ATRIBUTO",
+                    descripcion: "Ruta de evolución para Digimon <strong>sin atributo</strong>."
+                }
+            };
+            /* =========================================================
+               ESTADO
+            ========================================================= */
+            let currentDigimon = "digitama";
+            let currentType = "datos";
+            let history = [];
+            /* =========================================================
+               ELEMENTOS HTML
+            ========================================================= */
+            const selectedName = document.getElementById("selectedName");
+            const selectedImage = document.getElementById("selectedImage");
+            const selectedPlaceholder = document.getElementById("selectedPlaceholder");
+            const selectedMeta = document.getElementById("selectedMeta");
+            const evolutionGrid = document.getElementById("evolutionGrid");
+            const indievolutionGrid = document.getElementById("indievolutionGrid");
+            const indievolutionTarget = document.getElementById("indievolutionTarget");
+            const typeDescription = document.getElementById("typeDescription");
+            const mainSearch = document.getElementById("mainSearch");
+            const suggestions = document.getElementById("suggestions");
+            const historyElement = document.getElementById("history");
+            const searchModal = document.getElementById("searchModal");
+            const modalSearch = document.getElementById("modalSearch");
+            const modalResults = document.getElementById("modalResults");
+            const toast = document.getElementById("toast");
+            /* =========================================================
+               OBTENER DIGIMON
+            ========================================================= */
+            function getDigimon(slug) {
+                return DIGIMON_DATABASE[slug] || null;
+            }
+            /* =========================================================
+               OBTENER TODOS
+            ========================================================= */
+            function getAllDigimon() {
+                return Object.entries(DIGIMON_DATABASE)
+                    .map(([slug, data]) => ({
+                    slug,
+                    ...data
                 }));
+            }
+            /* =========================================================
+               OBTENER INDIGIEVOLUCIONES
 
-        }
+               Busca todos los Digimon que tienen al Digimon actual
+               como posible evolución dentro de cualquiera de sus
+               rutas: Datos, Vacuna, Virus o Sin atributo.
+            ========================================================= */
+            function getIndievolutions(slug) {
+                const previousDigimon = [];
+                Object.entries(DIGIMON_DATABASE).forEach(([sourceSlug, digimon]) => {
+                    const routes = [
+                        ...(digimon.datos || []),
+                        ...(digimon.vacuna || []),
+                        ...(digimon.virus || []),
+                        ...(digimon.sinatributo || []),
+                        ...(digimon.evoluciones || [])
+                    ];
+                    if (routes.includes(slug) &&
+                        sourceSlug !== slug) {
+                        previousDigimon.push({
+                            slug: sourceSlug,
+                            ...digimon
+                        });
+                    }
+                });
+                return previousDigimon;
+            }
+            /* =========================================================
+               IMAGEN
 
-        const previousDigimon = [];
-
-        Object.entries(DIGIMON_DATABASE).forEach(
-            ([sourceSlug, source]) => {
-
-                if (sourceSlug === slug) {
+               Si no existe imagen, se muestra el símbolo del
+               Digivice en lugar de una imagen rota.
+            ========================================================= */
+            function createImage(container, digimon) {
+                if (!digimon || !digimon.imagen) {
+                    container.innerHTML = `
+                            <div class="empty-icon">
+                                ◈
+                            </div>
+                        `;
                     return;
                 }
-
-                const routes = [
-                    ...(source.datos || []),
-                    ...(source.vacuna || []),
-                    ...(source.virus || []),
-                    ...(source.evoluciones || [])
-                ];
-
-                if (routes.includes(slug)) {
-                    previousDigimon.push({
-                        slug: sourceSlug,
-                        ...source
-                    });
+                container.innerHTML = `
+                        <img
+                            src="${digimon.imagen}"
+                            alt="${digimon.nombre}"
+                            loading="lazy"
+                            onerror="this.onerror=null; this.src='https://wikimon.net/Special:Redirect/file/${encodeURIComponent(digimon.nombre.replace(/ /g, '_'))}.png';"
+                        >
+                    `;
+            }
+            /* =========================================================
+               SELECCIONAR DIGIMON
+            ========================================================= */
+            function selectDigimon(slug, addToHistory = true) {
+                const digimon = getDigimon(slug);
+                if (!digimon) {
+                    showToast("Ese Digimon no existe en la base de datos.");
+                    return;
                 }
-
-            }
-        );
-
-        return previousDigimon;
-
-    }
-
-
-
-    /* =========================================================
-       IMAGEN
-
-       Si no existe imagen, se muestra el símbolo del
-       Digivice en lugar de una imagen rota.
-    ========================================================= */
-
-    function createImage(container, digimon) {
-
-        if (!digimon || !digimon.imagen) {
-
-            container.innerHTML = `
-                <div class="empty-icon">
-                    ◈
-                </div>
-            `;
-
-            return;
-
-        }
-
-
-        container.innerHTML = `
-            <img
-                src="${digimon.imagen}"
-                alt="${digimon.nombre}"
-            >
-        `;
-
-    }
-
-
-
-    /* =========================================================
-       SELECCIONAR DIGIMON
-    ========================================================= */
-
-    function selectDigimon(slug, addToHistory = true) {
-
-        const digimon =
-            getDigimon(slug);
-
-
-        if (!digimon) {
-
-            showToast(
-                "Ese Digimon no existe en la base de datos."
-            );
-
-            return;
-
-        }
-
-
-        if (addToHistory) {
-
-            if (
-                currentDigimon &&
-                currentDigimon !== slug
-            ) {
-
-                history.push(currentDigimon);
-
-            }
-
-        }
-
-
-        currentDigimon =
-            slug;
-
-
-        currentType =
-            "datos";
-
-
-        renderSelectedDigimon();
-
-        renderTypeTabs();
-
-        renderEvolutions();
-
-        renderIndievolutions();
-
-        renderHistory();
-
-        suggestions.classList.remove("active");
-
-        mainSearch.value = "";
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    }
-
-
-
-    /* =========================================================
-       RENDER DIGIMON SELECCIONADO
-    ========================================================= */
-
-    function renderSelectedDigimon() {
-
-        const digimon =
-            getDigimon(currentDigimon);
-
-
-        if (!digimon) {
-            return;
-        }
-
-
-        selectedName.textContent =
-            digimon.nombre;
-
-
-        selectedMeta.innerHTML = `
-
-            <div class="badge">
-                ETAPA: ${digimon.etapa || '—'}
-            </div>
-
-            <div class="badge">
-                ATRIBUTO: ${digimon.atributo || 'SIN ATRIBUTO'}
-            </div>
-
-            ${digimon.tipo ? `
-                <div class="badge">
-                    TIPO: ${digimon.tipo}
-                </div>
-            ` : ''}
-
-        `;
-
-
-        if (digimon.imagen) {
-
-            selectedImage.src =
-                digimon.imagen;
-
-            selectedImage.alt =
-                digimon.nombre;
-
-            selectedImage.style.display =
-                "block";
-
-            selectedPlaceholder.style.display =
-                "none";
-
-        } else {
-
-            selectedImage.style.display =
-                "none";
-
-            selectedPlaceholder.style.display =
-                "block";
-
-        }
-
-    }
-
-
-
-    /* =========================================================
-       TABS
-    ========================================================= */
-
-    function renderTypeTabs() {
-
-        const digimon = getDigimon(currentDigimon);
-        const baby = isBaby(digimon);
-
-        document
-            .querySelectorAll('.type-tab')
-            .forEach(button => {
-
-                button.style.display = baby ? 'none' : '';
-
-                button.classList.toggle(
-                    'active',
-                    !baby && button.dataset.type === currentType
-                );
-
-            });
-
-        const title = document.querySelector(
-            '.evolution-header .section-title'
-        );
-
-        if (title) {
-            title.textContent = baby
-                ? 'RUTA DE CRECIMIENTO'
-                : 'RUTAS DE DIGIEVOLUCIÓN';
-        }
-
-    }
-
-
-
-    /* =========================================================
-       CAMBIAR TIPO
-    ========================================================= */
-
-    function setType(type) {
-
-        if (!TYPE_INFO[type]) {
-            return;
-        }
-
-
-        currentType =
-            type;
-
-
-        renderTypeTabs();
-
-        renderEvolutions();
-
-    }
-
-
-
-    /* =========================================================
-       OBTENER RUTA DE EVOLUCIÓN
-    ========================================================= */
-
-    function isBaby(digimon) {
-
-        if (!digimon) {
-            return false;
-        }
-
-        const stage = String(digimon.etapa || '')
-            .toLowerCase()
-            .trim();
-
-        return stage === 'bebe i' ||
-               stage === 'bebe ii' ||
-               stage === 'baby i' ||
-               stage === 'baby ii' ||
-               stage === 'in-training i' ||
-               stage === 'in-training ii';
-
-    }
-
-
-    function getEvolutionList(digimon) {
-
-        if (isBaby(digimon)) {
-            return digimon.evoluciones || [];
-        }
-
-        return digimon[currentType] || [];
-
-    }
-
-
-
-    /* =========================================================
-       RENDER EVOLUCIONES
-    ========================================================= */
-
-    function renderEvolutions() {
-
-        const digimon = getDigimon(currentDigimon);
-
-        if (!digimon) {
-            return;
-        }
-
-        const baby = isBaby(digimon);
-        const evolutionList = getEvolutionList(digimon);
-
-        typeDescription.innerHTML = baby
-            ? 'Los Digimon Bebe I y Bebe II no tienen atributo. Su evolución utiliza una <strong>ruta de crecimiento independiente</strong>.'
-            : TYPE_INFO[currentType].descripcion;
-
-        evolutionGrid.innerHTML = '';
-
-        if (!evolutionList.length) {
-
-            const empty = document.createElement('div');
-            empty.className = 'indievolution-empty';
-            empty.innerHTML = `
-                <div class="empty-icon">◈</div>
-                <div>No hay evoluciones configuradas para ${digimon.nombre} en esta ruta.</div>
-            `;
-            evolutionGrid.appendChild(empty);
-            return;
-
-        }
-
-        evolutionList.forEach((evolutionSlug, index) => {
-
-            const evolution = getDigimon(evolutionSlug);
-
-            if (!evolution) {
-                return;
-            }
-
-            const card = document.createElement('article');
-            card.className = 'evolution-card';
-            card.dataset.slug = evolutionSlug;
-
-            card.innerHTML = `
-                <div class="evolution-number">
-                    ${baby ? 'EVOLUCIÓN' : 'EVOLUCIÓN'} ${String(index + 1).padStart(2, '0')}
-                </div>
-                <div class="evolution-image"></div>
-                <div class="evolution-name">${evolution.nombre}</div>
-                <div class="evolution-stage">${evolution.etapa || 'Sin etapa'}</div>
-            `;
-
-            createImage(
-                card.querySelector('.evolution-image'),
-                evolution
-            );
-
-            card.addEventListener('click', () => {
-                selectDigimon(evolutionSlug);
-            });
-
-            evolutionGrid.appendChild(card);
-
-        });
-
-    }
-
-
-    /* =========================================================
-       RENDER INDIGIEVOLUCIONES
-    ========================================================= */
-
-    function renderIndievolutions() {
-
-        const digimon =
-            getDigimon(currentDigimon);
-
-
-        if (!digimon) {
-            return;
-        }
-
-
-        indievolutionGrid.innerHTML = "";
-
-
-        indievolutionTarget.textContent =
-            digimon.nombre;
-
-
-        const previousList =
-            getIndievolutions(currentDigimon);
-
-
-        if (previousList.length === 0) {
-
-            const empty =
-                document.createElement("div");
-
-
-            empty.className =
-                "indievolution-empty";
-
-
-            empty.innerHTML = `
-
-                <div class="empty-icon">
-                    ◈
-                </div>
-
-                <div>
-                    No hay indigievoluciones configuradas
-                    para ${digimon.nombre}.
-                </div>
-
-            `;
-
-
-            indievolutionGrid.appendChild(
-                empty
-            );
-
-
-            return;
-
-        }
-
-
-        previousList.forEach(
-            (previous, index) => {
-
-                const card =
-                    document.createElement("article");
-
-
-                card.className =
-                    "evolution-card indievolution-card";
-
-
-                card.dataset.slug =
-                    previous.slug;
-
-
-                card.innerHTML = `
-
-                    <div class="evolution-number">
-                        INDIGIEVOLUCIÓN ${String(index + 1).padStart(2, "0")}
-                    </div>
-
-                    <div class="evolution-image">
-                    </div>
-
-                    <div class="evolution-name">
-                        ${previous.nombre}
-                    </div>
-
-                    <div class="evolution-stage">
-                        ${previous.etapa}
-                    </div>
-
-                `;
-
-
-                const imageContainer =
-                    card.querySelector(
-                        ".evolution-image"
-                    );
-
-
-                createImage(
-                    imageContainer,
-                    previous
-                );
-
-
-                card.addEventListener(
-                    "click",
-                    () => {
-
-                        selectDigimon(
-                            previous.slug
-                        );
-
+                if (addToHistory) {
+                    if (currentDigimon &&
+                        currentDigimon !== slug) {
+                        history.push(currentDigimon);
                     }
-                );
-
-
-                indievolutionGrid.appendChild(
-                    card
-                );
-
+                }
+                currentDigimon =
+                    slug;
+                currentType =
+                    "datos";
+                renderSelectedDigimon();
+                renderTypeTabs();
+                renderEvolutions();
+                renderIndievolutions();
+                renderHistory();
+                suggestions.classList.remove("active");
+                mainSearch.value = "";
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
             }
-        );
-
-    }
-
-
-
-    /* =========================================================
-       HISTORIAL
-    ========================================================= */
-
-    function renderHistory() {
-
-        historyElement.innerHTML = "";
-
-
-        const label =
-            document.createElement("span");
-
-
-        label.className =
-            "history-label";
-
-
-        label.textContent =
-            "RUTA:";
-
-
-        historyElement.appendChild(
-            label
-        );
-
-
-        history.forEach(
-            (slug, index) => {
-
-                const digimon =
-                    getDigimon(slug);
-
-
+            /* =========================================================
+               RENDER DIGIMON SELECCIONADO
+            ========================================================= */
+            function renderSelectedDigimon() {
+                const digimon = getDigimon(currentDigimon);
                 if (!digimon) {
                     return;
                 }
+                selectedName.textContent =
+                    digimon.nombre;
+                selectedMeta.innerHTML = `
 
+                        <div class="badge">
+                            ETAPA: ${digimon.etapa}
+                        </div>
 
-                if (index > 0) {
+                        <div class="badge">
+                            ATRIBUTO: ${digimon.atributo}
+                        </div>
 
-                    const arrow =
-                        document.createElement("span");
+                    `;
+                if (digimon.imagen) {
+                    selectedImage.src =
+                        digimon.imagen;
+                    selectedImage.alt =
+                        digimon.nombre;
+                    selectedImage.style.display =
+                        "block";
+                    selectedPlaceholder.style.display =
+                        "none";
+                }
+                else {
+                    selectedImage.style.display =
+                        "none";
+                    selectedPlaceholder.style.display =
+                        "block";
+                }
+            }
+            /* =========================================================
+               TABS
+            ========================================================= */
+            function renderTypeTabs() {
+                document
+                    .querySelectorAll(".type-tab")
+                    .forEach(button => {
+                    button.classList.toggle("active", button.dataset.type === currentType);
+                });
+            }
+            /* =========================================================
+               CAMBIAR TIPO
+            ========================================================= */
+            function setType(type) {
+                if (!TYPE_INFO[type]) {
+                    return;
+                }
+                currentType =
+                    type;
+                renderTypeTabs();
+                renderEvolutions();
+            }
+            /* =========================================================
+               RENDER EVOLUCIONES
+            ========================================================= */
+            function renderEvolutions() {
+                const digimon = getDigimon(currentDigimon);
+                if (!digimon) {
+                    return;
+                }
+                typeDescription.innerHTML =
+                    TYPE_INFO[currentType].descripcion;
+                const evolutionList = digimon[currentType] || [];
+                evolutionGrid.innerHTML = "";
+                /*
+                   Los Rookie mantienen siempre 4 huecos por atributo,
+                   incluso cuando todavía no tienen evoluciones configuradas.
+                   Las etapas anteriores muestran todas las rutas disponibles.
+                */
+                const evolutionSlots = digimon.etapa === "Rookie"
+                    ? 4
+                    : evolutionList.length;
+                for (let i = 0; i < evolutionSlots; i++) {
+                    const evolutionSlug = evolutionList[i];
+                    if (evolutionSlug &&
+                        getDigimon(evolutionSlug)) {
+                        const evolution = getDigimon(evolutionSlug);
+                        const card = document.createElement("article");
+                        card.className =
+                            "evolution-card";
+                        card.dataset.slug =
+                            evolutionSlug;
+                        card.innerHTML = `
 
+                                <div class="evolution-number">
+                                    EVOLUCIÓN ${String(i + 1).padStart(2, "0")}
+                                </div>
 
+                                <div class="evolution-image">
+                                </div>
+
+                                <div class="evolution-name">
+                                    ${evolution.nombre}
+                                </div>
+
+                                <div class="evolution-stage">
+                                    ${evolution.etapa}
+                                </div>
+
+                            `;
+                        const imageContainer = card.querySelector(".evolution-image");
+                        createImage(imageContainer, evolution);
+                        card.addEventListener("click", () => {
+                            selectDigimon(evolutionSlug);
+                        });
+                        evolutionGrid.appendChild(card);
+                    }
+                    else {
+                        const card = document.createElement("article");
+                        card.className =
+                            "evolution-card empty";
+                        card.innerHTML = `
+
+                                <div class="evolution-number">
+                                    EVOLUCIÓN ${String(i + 1).padStart(2, "0")}
+                                </div>
+
+                                <div class="evolution-image">
+                                    <div class="empty-icon">
+                                        +
+                                    </div>
+                                </div>
+
+                                <div class="evolution-name">
+                                    Espacio disponible
+                                </div>
+
+                                <div class="evolution-stage">
+                                    Sin evolución configurada
+                                </div>
+
+                            `;
+                        evolutionGrid.appendChild(card);
+                    }
+                }
+            }
+            /* =========================================================
+               RENDER INDIGIEVOLUCIONES
+            ========================================================= */
+            function renderIndievolutions() {
+                const digimon = getDigimon(currentDigimon);
+                if (!digimon) {
+                    return;
+                }
+                indievolutionGrid.innerHTML = "";
+                indievolutionTarget.textContent =
+                    digimon.nombre;
+                const previousList = getIndievolutions(currentDigimon);
+                if (previousList.length === 0) {
+                    const empty = document.createElement("div");
+                    empty.className =
+                        "indievolution-empty";
+                    empty.innerHTML = `
+
+                            <div class="empty-icon">
+                                ◈
+                            </div>
+
+                            <div>
+                                No hay indigievoluciones configuradas
+                                para ${digimon.nombre}.
+                            </div>
+
+                        `;
+                    indievolutionGrid.appendChild(empty);
+                    return;
+                }
+                previousList.forEach((previous, index) => {
+                    const card = document.createElement("article");
+                    card.className =
+                        "evolution-card indievolution-card";
+                    card.dataset.slug =
+                        previous.slug;
+                    card.innerHTML = `
+
+                                <div class="evolution-number">
+                                    INDIGIEVOLUCIÓN ${String(index + 1).padStart(2, "0")}
+                                </div>
+
+                                <div class="evolution-image">
+                                </div>
+
+                                <div class="evolution-name">
+                                    ${previous.nombre}
+                                </div>
+
+                                <div class="evolution-stage">
+                                    ${previous.etapa}
+                                </div>
+
+                            `;
+                    const imageContainer = card.querySelector(".evolution-image");
+                    createImage(imageContainer, previous);
+                    card.addEventListener("click", () => {
+                        selectDigimon(previous.slug);
+                    });
+                    indievolutionGrid.appendChild(card);
+                });
+            }
+            /* =========================================================
+               HISTORIAL
+            ========================================================= */
+            function renderHistory() {
+                historyElement.innerHTML = "";
+                const label = document.createElement("span");
+                label.className =
+                    "history-label";
+                label.textContent =
+                    "RUTA:";
+                historyElement.appendChild(label);
+                history.forEach((slug, index) => {
+                    const digimon = getDigimon(slug);
+                    if (!digimon) {
+                        return;
+                    }
+                    if (index > 0) {
+                        const arrow = document.createElement("span");
+                        arrow.className =
+                            "history-arrow";
+                        arrow.textContent =
+                            "›";
+                        historyElement.appendChild(arrow);
+                    }
+                    const item = document.createElement("button");
+                    item.className =
+                        "history-item";
+                    item.textContent =
+                        digimon.nombre;
+                    item.addEventListener("click", () => {
+                        const historyIndex = history.indexOf(slug);
+                        if (historyIndex >= 0) {
+                            history =
+                                history.slice(0, historyIndex);
+                        }
+                        selectDigimon(slug, false);
+                    });
+                    historyElement.appendChild(item);
+                });
+                const current = getDigimon(currentDigimon);
+                if (history.length > 0) {
+                    const arrow = document.createElement("span");
                     arrow.className =
                         "history-arrow";
-
-
                     arrow.textContent =
                         "›";
-
-
-                    historyElement.appendChild(
-                        arrow
-                    );
-
+                    historyElement.appendChild(arrow);
                 }
-
-
-                const item =
-                    document.createElement("button");
-
-
-                item.className =
+                const currentItem = document.createElement("span");
+                currentItem.className =
                     "history-item";
-
-
-                item.textContent =
-                    digimon.nombre;
-
-
-                item.addEventListener(
-                    "click",
-                    () => {
-
-                        const historyIndex =
-                            history.indexOf(slug);
-
-
-                        if (
-                            historyIndex >= 0
-                        ) {
-
-                            history =
-                                history.slice(
-                                    0,
-                                    historyIndex
-                                );
-
-                        }
-
-
-                        selectDigimon(
-                            slug,
-                            false
-                        );
-
-                    }
-                );
-
-
-                historyElement.appendChild(
-                    item
-                );
-
+                currentItem.style.borderColor =
+                    "var(--cyan)";
+                currentItem.style.color =
+                    "var(--cyan)";
+                currentItem.textContent =
+                    current
+                        ? current.nombre
+                        : "-";
+                historyElement.appendChild(currentItem);
             }
-        );
-
-
-        const current =
-            getDigimon(currentDigimon);
-
-
-        if (history.length > 0) {
-
-            const arrow =
-                document.createElement("span");
-
-
-            arrow.className =
-                "history-arrow";
-
-
-            arrow.textContent =
-                "›";
-
-
-            historyElement.appendChild(
-                arrow
-            );
-
-        }
-
-
-        const currentItem =
-            document.createElement("span");
-
-
-        currentItem.className =
-            "history-item";
-
-
-        currentItem.style.borderColor =
-            "var(--cyan)";
-
-
-        currentItem.style.color =
-            "var(--cyan)";
-
-
-        currentItem.textContent =
-            current
-                ? current.nombre
-                : "-";
-
-
-        historyElement.appendChild(
-            currentItem
-        );
-
-    }
-
-
-
-    /* =========================================================
-       SUGERENCIAS
-    ========================================================= */
-
-    function showSuggestions(query) {
-
-        const cleanQuery =
-            query
-                .trim()
-                .toLowerCase();
-
-
-        if (!cleanQuery) {
-
-            suggestions.classList.remove(
-                "active"
-            );
-
-            return;
-
-        }
-
-
-        const results =
-            getAllDigimon()
-                .filter(digimon =>
-                    digimon.nombre
-                        .toLowerCase()
-                        .includes(cleanQuery)
-                )
-                .slice(0, 6);
-
-
-        suggestions.innerHTML = "";
-
-
-        if (!results.length) {
-
-            suggestions.innerHTML = `
-
-                <div class="suggestion">
-
-                    <div>
-                        No se encontró ningún Digimon.
-                    </div>
-
-                </div>
-
-            `;
-
-            suggestions.classList.add(
-                "active"
-            );
-
-            return;
-
-        }
-
-
-        results.forEach(
-            digimon => {
-
-                const item =
-                    document.createElement("div");
-
-
-                item.className =
-                    "suggestion";
-
-
-                item.innerHTML = `
-
-                    <div class="suggestion-image">
-
-                        ${
-                            digimon.imagen
-
-                            ?
-
-                            `<img
-                                src="${digimon.imagen}"
-                                alt="${digimon.nombre}"
-                                style="width:100%;height:100%;object-fit:contain;"
-                            >`
-
-                            :
-
-                            `◈`
-                        }
-
-                    </div>
-
-                    <div>
-
-                        <div class="suggestion-name">
-                            ${digimon.nombre}
-                        </div>
-
-                        <div class="suggestion-stage">
-                            ${digimon.etapa}
-                        </div>
-
-                    </div>
-
-                `;
-
-
-                item.addEventListener(
-                    "click",
-                    () => {
-
-                        selectDigimon(
-                            digimon.slug
-                        );
-
-                    }
-                );
-
-
-                suggestions.appendChild(
-                    item
-                );
-
-            }
-        );
-
-
-        suggestions.classList.add(
-            "active"
-        );
-
-    }
-
-
-
-    /* =========================================================
-       BUSCAR DESDE INPUT PRINCIPAL
-    ========================================================= */
-
-    function performMainSearch() {
-
-        const query =
-            mainSearch.value
-                .trim()
-                .toLowerCase();
-
-
-        if (!query) {
-
-            showToast(
-                "Escribe el nombre de un Digimon."
-            );
-
-            return;
-
-        }
-
-
-        const result =
-            getAllDigimon().find(
-                digimon =>
-                    digimon.nombre
-                        .toLowerCase() === query
-            );
-
-
-        if (result) {
-
-            selectDigimon(
-                result.slug
-            );
-
-            return;
-
-        }
-
-
-        const partial =
-            getAllDigimon().find(
-                digimon =>
-                    digimon.nombre
-                        .toLowerCase()
-                        .includes(query)
-            );
-
-
-        if (partial) {
-
-            selectDigimon(
-                partial.slug
-            );
-
-            return;
-
-        }
-
-
-        showToast(
-            "No se encontró ese Digimon."
-        );
-
-    }
-
-
-
-    /* =========================================================
-       MODAL DE BÚSQUEDA
-    ========================================================= */
-
-    function openSearchModal() {
-
-        searchModal.classList.add(
-            "active"
-        );
-
-
-        modalSearch.value =
-            "";
-
-
-        renderModalResults("");
-
-
-        setTimeout(
-            () => {
-                modalSearch.focus();
-            },
-            50
-        );
-
-    }
-
-
-
-    function closeSearchModal() {
-
-        searchModal.classList.remove(
-            "active"
-        );
-
-    }
-
-
-
-    /* =========================================================
-       RESULTADOS DEL MODAL
-    ========================================================= */
-
-    function renderModalResults(query) {
-
-        const cleanQuery =
-            query
-                .trim()
-                .toLowerCase();
-
-
-        let results =
-            getAllDigimon();
-
-
-        if (cleanQuery) {
-
-            results =
-                results.filter(
-                    digimon =>
-                        digimon.nombre
-                            .toLowerCase()
-                            .includes(cleanQuery)
-                );
-
-        }
-
-
-        modalResults.innerHTML = "";
-
-
-        if (!results.length) {
-
-            modalResults.innerHTML = `
-
-                <div class="modal-result">
-
-                    <div>
-                        No se encontraron resultados.
-                    </div>
-
-                </div>
-
-            `;
-
-            return;
-
-        }
-
-
-        results.forEach(
-            digimon => {
-
-                const item =
-                    document.createElement("div");
-
-
-                item.className =
-                    "modal-result";
-
-
-                item.innerHTML = `
-
-                    <img
-                        src="${digimon.imagen || ""}"
-                        alt="${digimon.nombre}"
-                        onerror="this.style.display='none'"
-                    >
-
-                    <div class="modal-result-info">
-
-                        <div class="modal-result-name">
-                            ${digimon.nombre}
-                        </div>
-
-                        <div class="modal-result-meta">
-                            ${digimon.etapa || "—"}
-                            ·
-                            ${digimon.atributo || "Sin atributo"}
-                        </div>
-
-                    </div>
-
-                `;
-
-
-                item.addEventListener(
-                    "click",
-                    () => {
-
-                        selectDigimon(
-                            digimon.slug
-                        );
-
-                        closeSearchModal();
-
-                    }
-                );
-
-
-                modalResults.appendChild(
-                    item
-                );
-
-            }
-        );
-
-    }
-
-
-
-    /* =========================================================
-       TOAST
-    ========================================================= */
-
-    let toastTimer;
-
-
-    function showToast(message) {
-
-        toast.textContent =
-            message;
-
-
-        toast.classList.add(
-            "show"
-        );
-
-
-        clearTimeout(
-            toastTimer
-        );
-
-
-        toastTimer =
-            setTimeout(
-                () => {
-
-                    toast.classList.remove(
-                        "show"
-                    );
-
-                },
-                2500
-            );
-
-    }
-
-
-
-    /* =========================================================
-       EVENTOS
-    ========================================================= */
-
-
-    document
-        .querySelectorAll(".type-tab")
-        .forEach(button => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    setType(
-                        button.dataset.type
-                    );
-
+            /* =========================================================
+               SUGERENCIAS
+            ========================================================= */
+            function showSuggestions(query) {
+                const cleanQuery = query
+                    .trim()
+                    .toLowerCase();
+                if (!cleanQuery) {
+                    suggestions.classList.remove("active");
+                    return;
                 }
-            );
+                const results = getAllDigimon()
+                    .filter(digimon => digimon.nombre
+                    .toLowerCase()
+                    .includes(cleanQuery))
+                    .slice(0, 6);
+                suggestions.innerHTML = "";
+                if (!results.length) {
+                    suggestions.innerHTML = `
 
-        });
+                            <div class="suggestion">
 
+                                <div>
+                                    No se encontró ningún Digimon.
+                                </div>
 
+                            </div>
 
-    mainSearch.addEventListener(
-        "input",
-        () => {
+                        `;
+                    suggestions.classList.add("active");
+                    return;
+                }
+                results.forEach(digimon => {
+                    const item = document.createElement("div");
+                    item.className =
+                        "suggestion";
+                    item.innerHTML = `
 
-            showSuggestions(
-                mainSearch.value
-            );
+                                <div class="suggestion-image">
 
-        }
-    );
+                                    ${digimon.imagen
+                        ?
+                            `<img
+                                            src="${digimon.imagen}"
+                                            alt="${digimon.nombre}"
+                                            style="width:100%;height:100%;object-fit:contain;"
+                                        >`
+                        :
+                            `◈`}
 
+                                </div>
 
+                                <div>
 
-    mainSearch.addEventListener(
-        "keydown",
-        event => {
+                                    <div class="suggestion-name">
+                                        ${digimon.nombre}
+                                    </div>
 
-            if (
-                event.key === "Enter"
-            ) {
+                                    <div class="suggestion-stage">
+                                        ${digimon.etapa}
+                                    </div>
 
-                performMainSearch();
+                                </div>
 
+                            `;
+                    item.addEventListener("click", () => {
+                        selectDigimon(digimon.slug);
+                    });
+                    suggestions.appendChild(item);
+                });
+                suggestions.classList.add("active");
             }
-
-
-            if (
-                event.key === "Escape"
-            ) {
-
-                suggestions.classList.remove(
-                    "active"
-                );
-
+            /* =========================================================
+               BUSCAR DESDE INPUT PRINCIPAL
+            ========================================================= */
+            function performMainSearch() {
+                const query = mainSearch.value
+                    .trim()
+                    .toLowerCase();
+                if (!query) {
+                    showToast("Escribe el nombre de un Digimon.");
+                    return;
+                }
+                const result = getAllDigimon().find(digimon => digimon.nombre
+                    .toLowerCase() === query);
+                if (result) {
+                    selectDigimon(result.slug);
+                    return;
+                }
+                const partial = getAllDigimon().find(digimon => digimon.nombre
+                    .toLowerCase()
+                    .includes(query));
+                if (partial) {
+                    selectDigimon(partial.slug);
+                    return;
+                }
+                showToast("No se encontró ese Digimon.");
             }
-
-        }
-    );
-
-
-
-    document
-        .getElementById("mainSearchButton")
-        .addEventListener(
-            "click",
-            performMainSearch
-        );
-
-
-
-    document
-        .getElementById("openSearch")
-        .addEventListener(
-            "click",
-            openSearchModal
-        );
-
-
-
-    document
-        .getElementById("closeSearch")
-        .addEventListener(
-            "click",
-            closeSearchModal
-        );
-
-
-
-    modalSearch.addEventListener(
-        "input",
-        () => {
-
-            renderModalResults(
-                modalSearch.value
-            );
-
-        }
-    );
-
-
-
-    searchModal.addEventListener(
-        "click",
-        event => {
-
-            if (
-                event.target === searchModal
-            ) {
-
-                closeSearchModal();
-
+            /* =========================================================
+               MODAL DE BÚSQUEDA
+            ========================================================= */
+            function openSearchModal() {
+                searchModal.classList.add("active");
+                modalSearch.value =
+                    "";
+                renderModalResults("");
+                setTimeout(() => {
+                    modalSearch.focus();
+                }, 50);
             }
-
-        }
-    );
-
-
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            /*
-             * Pulsar "/" abre el buscador
-             */
-
-            if (
-                event.key === "/" &&
-                document.activeElement.tagName !== "INPUT"
-            ) {
-
-                event.preventDefault();
-
-                openSearchModal();
-
+            function closeSearchModal() {
+                searchModal.classList.remove("active");
             }
+            /* =========================================================
+               RESULTADOS DEL MODAL
+            ========================================================= */
+            function renderModalResults(query) {
+                const cleanQuery = query
+                    .trim()
+                    .toLowerCase();
+                let results = getAllDigimon();
+                if (cleanQuery) {
+                    results =
+                        results.filter(digimon => digimon.nombre
+                            .toLowerCase()
+                            .includes(cleanQuery));
+                }
+                modalResults.innerHTML = "";
+                if (!results.length) {
+                    modalResults.innerHTML = `
 
+                            <div class="modal-result">
 
-            /*
-             * ESC cierra ventanas
-             */
+                                <div>
+                                    No se encontraron resultados.
+                                </div>
 
-            if (
-                event.key === "Escape"
-            ) {
+                            </div>
 
-                closeSearchModal();
+                        `;
+                    return;
+                }
+                results.forEach(digimon => {
+                    const item = document.createElement("div");
+                    item.className =
+                        "modal-result";
+                    item.innerHTML = `
 
-                suggestions.classList.remove(
-                    "active"
-                );
+                                <img
+                                    src="${digimon.imagen || ""}"
+                                    alt="${digimon.nombre}"
+                                    onerror="this.style.display='none'"
+                                >
 
+                                <div class="modal-result-info">
+
+                                    <div class="modal-result-name">
+                                        ${digimon.nombre}
+                                    </div>
+
+                                    <div class="modal-result-meta">
+                                        ${digimon.etapa}
+                                        ·
+                                        ${digimon.atributo}
+                                    </div>
+
+                                </div>
+
+                            `;
+                    item.addEventListener("click", () => {
+                        selectDigimon(digimon.slug);
+                        closeSearchModal();
+                    });
+                    modalResults.appendChild(item);
+                });
             }
-
-        }
-    );
-
-
-
-    document.addEventListener(
-        "click",
-        event => {
-
-            if (
-                !event.target.closest(
-                    ".search-box"
-                )
-            ) {
-
-                suggestions.classList.remove(
-                    "active"
-                );
-
+            /* =========================================================
+               TOAST
+            ========================================================= */
+            let toastTimer;
+            function showToast(message) {
+                toast.textContent =
+                    message;
+                toast.classList.add("show");
+                clearTimeout(toastTimer);
+                toastTimer =
+                    setTimeout(() => {
+                        toast.classList.remove("show");
+                    }, 2500);
             }
-
-        }
-    );
-
-
-
-    /* =========================================================
-       INICIALIZACIÓN
-    ========================================================= */
-
-    selectDigimon(
-        "patamon",
-        false
-    );
+            /* =========================================================
+               EVENTOS
+            ========================================================= */
+            document
+                .querySelectorAll(".type-tab")
+                .forEach(button => {
+                button.addEventListener("click", () => {
+                    setType(button.dataset.type);
+                });
+            });
+            mainSearch.addEventListener("input", () => {
+                showSuggestions(mainSearch.value);
+            });
+            mainSearch.addEventListener("keydown", event => {
+                if (event.key === "Enter") {
+                    performMainSearch();
+                }
+                if (event.key === "Escape") {
+                    suggestions.classList.remove("active");
+                }
+            });
+            document
+                .getElementById("mainSearchButton")
+                .addEventListener("click", performMainSearch);
+            document
+                .getElementById("openSearch")
+                .addEventListener("click", openSearchModal);
+            document
+                .getElementById("closeSearch")
+                .addEventListener("click", closeSearchModal);
+            modalSearch.addEventListener("input", () => {
+                renderModalResults(modalSearch.value);
+            });
+            searchModal.addEventListener("click", event => {
+                if (event.target === searchModal) {
+                    closeSearchModal();
+                }
+            });
+            document.addEventListener("keydown", event => {
+                /** Pulsar "/" abre el buscador*/
+                if (event.key === "/" &&
+                    document.activeElement.tagName !== "INPUT") {
+                    event.preventDefault();
+                    openSearchModal();
+                }
+                /*
+                 * ESC cierra ventanas
+                 */
+                if (event.key === "Escape") {
+                    closeSearchModal();
+                    suggestions.classList.remove("active");
+                }
+            });
+            document.addEventListener("click", event => {
+                if (!event.target.closest(".search-box")) {
+                    suggestions.classList.remove("active");
+                }
+            });
+            /* =========================================================
+               INICIALIZACIÓN
+            ========================================================= */
+            selectDigimon("digitama", false);
