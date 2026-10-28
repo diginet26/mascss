@@ -4329,8 +4329,8 @@ text-align: justify;
     grid-template-columns: repeat(5,minmax(0,1fr));
     gap: 4px;
     padding: 8px;
-    background: linear-gradient(180deg,var(--db-surface-inset),var(--theme-panel-deep, #071923));
-    border-bottom: 3px solid var(--db-border);
+    background: var(--colorfondo);
+    border-bottom: 3px solid var(--emblema2);
 }
 
 .dr-baul-nav label {
