@@ -4483,7 +4483,7 @@ text-align: justify;
 .dr-baul-data span {
     color: var(--theme-text-muted, var(--db-cyan));
     font-weight: bold;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .dr-baul-data strong {
@@ -4601,7 +4601,7 @@ text-align: justify;
 .dr-baul-entry-date span {
     margin-top: 4px;
     color: var(--db-cyan);
-    font-size: 7px;
+    font-size: 10px;
     text-align: center;
 }
 
