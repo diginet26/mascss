@@ -1675,6 +1675,7 @@ text-align: justify;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.3125rem;
+    margin-top: 0.75rem;
 }
 
 .dr-tabs label {
