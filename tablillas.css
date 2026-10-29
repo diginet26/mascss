@@ -1368,6 +1368,10 @@ text-align: justify;
 .dr-page {display: none;}
 #dr-tab1:checked ~ .dr-pages .dr-page1, #dr-tab2:checked ~ .dr-pages .dr-page2, #dr-tab3:checked ~ .dr-pages .dr-page3 {display: block;}
 
+.dr-ficha .dr-page > .dr-section-title ~ .dr-section-title {
+    margin-top: 1rem;
+}
+
 /* ============================================================
    TÍTULOS
    ============================================================ */
