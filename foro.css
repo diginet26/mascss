@@ -5654,7 +5654,7 @@ blockquote blockquote {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: linear-gradient(135deg, var(--colorfondo2),var(--colorfondo2));
+    background: var(--colorfondo);
     border: .0714rem solid var(--linkc3);
     color: var(--colortextod1);
     font-family: "Oxanium", sans-serif;
@@ -5670,7 +5670,7 @@ blockquote blockquote {
     content: "DIGITAL RIFT";
     display: block;
     padding: .5rem 1.0714rem;
-    background: var(--colorfondo2);
+    background: var(--colorfondo);
     border-bottom: .0714rem solid var(--dice-line);
     color: var(--linkc3);
     font-family: "Jersey 15", monospace;
@@ -5787,8 +5787,8 @@ blockquote blockquote {
     min-width: 0;
     padding: .6429rem .7857rem;
     box-sizing: border-box;
-    background: var(--colorfondo2);
-    border: .0714rem solid var(--colorfondo2);
+    background: var(--colorfondo4);
+    border: .0714rem solid var(--colorfondo4);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
     font-size: .6429rem;
@@ -5827,13 +5827,13 @@ blockquote blockquote {
     box-sizing: border-box;
     margin-bottom: .4286rem;
     padding-bottom: .4286rem;
-    color: var(--linck3) !important;
+    color: var(--linkc3) !important;
     font-family: "Oxanium", sans-serif;
     font-size: .9286rem;
     font-weight: 700;
     letter-spacing: .0714rem;
     text-transform: uppercase;
-    border-bottom: .0714rem solid rgba(34,193,195,.14);
+    border-bottom: .0714rem solid var(--emblema1);
 }
 
 /* icono */
@@ -5858,7 +5858,7 @@ blockquote blockquote {
    DECORACIÓN DE DATOS
    ========================================================= */
 .dice-roll:after {
-    content: "DATA // PROCESSING";
+    content: "";
     position: absolute;
     right: .8571rem;
     bottom: .3571rem;
