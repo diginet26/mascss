@@ -413,7 +413,7 @@
                     imagen: "https://imgur.com/PyM6Ek8.png",
                     datos: ["alraumon", "floramon", "lalamon", "palmon", "renamon"],
                     vacuna: ["piyomon"],
-                    virus: [],
+                    virus: ["mushmon"],
                     sinatributo: []
                 },
                 bosamon: {
@@ -493,7 +493,7 @@
                     imagen: "https://imgur.com/ecqmKOR.png",
                     datos: ["elecmon", "floramon", "palmon"],
                     vacuna: ["piyomon", "cutemon", "hyokomon"],
-                    virus: ["wormmon"],
+                    virus: ["wormmon","mushmon"],
                     sinatributo: []
                 },
                 caprimon: {
@@ -1435,7 +1435,17 @@
                     vacuna: [],
                     virus: [],
                     sinatributo: []
-                }
+                },
+                mushmon: {
+                    nombre: "MUSHMON",
+                    etapa: "Rookie",
+                    atributo: "Virus",
+                    imagen: "https://imgur.com/L2yxnHV.png",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
             };
             const TYPE_INFO = {
                 datos: {
