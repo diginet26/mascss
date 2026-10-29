@@ -5654,7 +5654,7 @@ blockquote blockquote {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: var(--colorfondo);
+    background: var(--colorfondo4);
     border: .0714rem solid var(--linkc3);
     color: var(--colortextod1);
     font-family: "Oxanium", sans-serif;
@@ -5670,7 +5670,7 @@ blockquote blockquote {
     content: "DIGITAL RIFT";
     display: block;
     padding: .5rem 1.0714rem;
-    background: var(--colorfondo);
+    background: var(--colorfondo4);
     border-bottom: .0714rem solid var(--dice-line);
     color: var(--linkc3);
     font-family: "Jersey 15", monospace;
@@ -5729,7 +5729,7 @@ blockquote blockquote {
     padding: 1.7143rem 1.0714rem 1.0714rem;
     position: relative;
     box-sizing: border-box;
-    background: var(--colorfondo1);
+    background: var(--colorfondo4);
     border: .0714rem solid var(--linkc3);
     box-shadow: inset 0 0 1.4286rem rgba(22,119,200,.025);
     transition: .2s ease;
@@ -5787,8 +5787,8 @@ blockquote blockquote {
     min-width: 0;
     padding: .6429rem .7857rem;
     box-sizing: border-box;
-    background: var(--colorfondo4);
-    border: .0714rem solid var(--colorfondo4);
+    background: var(--colorfondo);
+    border: .0714rem solid var(--colorfondo);
     color: var(--colortextod1);
     font-family: "Oxanium", monospace;
     font-size: .6429rem;
