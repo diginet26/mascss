@@ -4308,8 +4308,8 @@ text-align: justify;
 .dr-baul-tags span {
     padding: 4px 9px;
     color: var(--theme-text, #e2faff);
-    background: linear-gradient(135deg,var(--db-surface-raised),var(--db-surface-soft));
-    border: 1px solid var(--db-border);
+    background: var(--emblema2);
+    border: 1px solid var(--colorfondo);
     font-size: 8px;
     font-weight: bold;
     letter-spacing: 1px;
