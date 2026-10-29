@@ -5654,7 +5654,7 @@ blockquote blockquote {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: var(--colorfondo4);
+    background: var(--colorfondo);
     border: .0714rem solid var(--linkc3);
     color: var(--colortextod1);
     font-family: "Oxanium", sans-serif;
@@ -5670,7 +5670,7 @@ blockquote blockquote {
     content: "DIGITAL RIFT";
     display: block;
     padding: .5rem 1.0714rem;
-    background: var(--colorfondo4);
+    background: var(--colorfondo);
     border-bottom: .0714rem solid var(--dice-line);
     color: var(--linkc3);
     font-family: "Jersey 15", monospace;
