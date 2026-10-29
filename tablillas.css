@@ -4307,7 +4307,7 @@ text-align: justify;
 
 .dr-baul-tags span {
     padding: 4px 9px;
-    color: var(--theme-text, #e2faff);
+    color: #000;
     background: var(--emblema2);
     border: 1px solid var(--colorfondo);
     font-size: 12px;
