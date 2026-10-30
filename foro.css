@@ -5740,7 +5740,7 @@ blockquote blockquote {
 }
 
 .dice-roll:hover {
-    border-color: rgba(34,193,195,.35);
+    border-color: var(--emblema1);
     box-shadow: inset 0 0 1.4286rem rgba(22,119,200,.05), 0 0 1.0714rem rgba(22,119,200,.05);
 }
 
@@ -5813,7 +5813,7 @@ blockquote blockquote {
 /* hover */
 .roll-result:hover {
     background: #0d1a26;
-    border-color: rgba(34,193,195,.2);
+    border-color: var(--emblema1);
     transform: translateX(.1429rem);
 }
 
