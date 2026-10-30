@@ -18856,210 +18856,70 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     color: #ff7627;
 }
 
+
 /* =========================================================
-   DIGITAL RIFT // TARJETA EMERGENTE DE MENCIONES
+   MENCIONES — BOTÓN SEGUIR
    ========================================================= */
 
-/* CONTENEDOR TOOLTIP */
-.tooltipster-base:has(.main-tooltip) {
-    width:26rem !important;
-    max-width:calc(100vw - 2rem) !important;
-}
-
-.tooltipster-base:has(.main-tooltip) .tooltipster-box {
-    width:100% !important;
-    max-width:100% !important;
-    background:transparent !important;
-    border:0 !important;
-    box-shadow:none !important;
-}
-
-.tooltipster-base:has(.main-tooltip) .tooltipster-content {
-    width:100% !important;
-    max-width:100% !important;
-    padding:0 !important;
-    box-sizing:border-box;
-    background:transparent !important;
-    color:var(--theme-text, #eee) !important;
-}
-
-/* PANEL PRINCIPAL */
-.main-tooltip {
-    width:100%;
-    min-width:0;
-    padding:.85rem;
-    box-sizing:border-box;
-    background:var(--theme-panel, #1e1e1e);
-    border:1px solid var(--theme-border, rgba(255,255,255,.12));
-    border-radius:.3rem;
-    color:var(--theme-text, #eee);
-    font-family:"Oxanium", sans-serif;
-    box-shadow:0 .7rem 1.8rem rgba(0,0,0,.3);
-}
-
-/* CONTENIDO */
-.main-tooltip .tooltip-content {
-    display:grid;
-    grid-template-columns:5.5rem minmax(0,1fr);
-    grid-auto-rows:min-content;
-    align-items:start;
-    gap:.45rem .85rem;
-    width:100%;
-    min-width:0;
-    float:none;
-}
-
-/* AVATAR */
-.main-tooltip .tooltip-content > img {
-    grid-column:1;
-    grid-row:1 / span 4;
-    width:5.5rem;
-    height:8rem;
-    max-width:none;
-    margin:0;
-    float:none;
-    object-fit:cover;
-    border:1px solid var(--theme-border, rgba(255,255,255,.12));
-    border-radius:.2rem;
-    background:var(--theme-panel-deep, #111);
-}
-
-/* NOMBRE */
-.main-tooltip .tooltip-title {
-    grid-column:2;
-    justify-self:stretch;
-    display:block;
-    width:100%;
-    max-width:100%;
-    float:none;
-    margin:0 !important;
-    text-align:left;
-    font-family:"Jersey 15", sans-serif;
-    font-size:1.5rem;
-    font-weight:700;
-    line-height:1.2;
-    overflow-wrap:anywhere;
-}
-
-/* SEGUIR */
 .main-tooltip .tooltip-content .followBtn {
     grid-column:2;
     justify-self:start;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:5.2rem;
+    min-height:2.3rem;
     margin:0;
-    padding:.35rem .75rem;
-    border:1px solid var(--emblema2);
-    border-radius:.2rem;
-    background:var(--theme-panel-deep, #111);
-    color:var(--theme-text, #eee);
-    font-family:"Oxanium", sans-serif;
-    font-size:.7rem;
+    padding:0 .9rem;
+    box-sizing:border-box;
+    appearance:none;
+    border:.06rem solid var(--emblema2);
+    border-radius:.35rem;
+    background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
+    color:var(--theme-text);
+    font:700 .58rem/1 "Oxanium", sans-serif;
+    letter-spacing:.1rem;
+    text-transform:uppercase;
+    text-shadow:none;
+    box-shadow:none;
     cursor:pointer;
-    transition:background .2s ease, border-color .2s ease, color .2s ease;
+    transition:.25s ease;
 }
 
 .main-tooltip .tooltip-content .followBtn:hover {
     border-color:var(--emblema1);
-    background:var(--theme-panel);
+    background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 20%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent));
     color:var(--emblema2);
+    box-shadow:0 0 .8rem color-mix(in srgb, var(--emblema2) 20%, transparent);
+    transform:translateY(-.05rem);
 }
 
-/* RANGO */
-.main-tooltip .tooltip-subtitle {
-    grid-column:2;
-    display:block;
-    width:100%;
-    float:none;
-    margin:0;
-    padding-left:.45rem;
-    border-left:2px solid var(--emblema1);
-    color:var(--theme-text-muted, #aaa);
-    font-size:.68rem;
-    line-height:1.4;
-}
 
-/* ESTADÍSTICAS */
-.main-tooltip .tooltip-counts {
-    grid-column:2;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:.35rem;
-    width:100%;
-    min-width:0;
-    float:none;
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    white-space:normal;
-}
+/* =========================================================
+   MENCIONES — BOTONES INFERIORES
+   ========================================================= */
 
-.main-tooltip .tooltip-counts li {
-    display:inline-flex;
-    align-items:center;
-    gap:.25rem;
-    max-width:100%;
-    margin:0;
-    padding:.35rem .5rem;
-    box-sizing:border-box;
-    border:1px solid var(--theme-border, rgba(255,255,255,.12));
-    border-radius:.2rem;
-    background:var(--theme-panel-deep, #111);
-    color:var(--theme-text-muted, #aaa);
-    font-size:.65rem;
-    white-space:normal;
-    list-style:none;
-}
-
-.main-tooltip .tooltip-counts li b {
-    color:var(--emblema2);
-}
-
-/* BARRA INFERIOR */
-.main-tooltip .tooltip-actions {
-    width:calc(100% + 1.7rem);
-    float:none;
-    margin:.85rem -.85rem -.85rem;
-    padding:.65rem .85rem;
-    box-sizing:border-box;
-    background:var(--theme-panel-deep, #111);
-    border-top:1px solid var(--theme-border, rgba(255,255,255,.12));
-}
-
-.main-tooltip .tooltip-actions ul {
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    flex-wrap:wrap;
-    gap:.4rem;
-    margin:0;
-    padding:0;
-}
-
-.main-tooltip .tooltip-actions li {
-    display:block;
-    margin:0;
-    padding:0;
-    list-style:none;
-}
-
-/* ICONOS DE ACCIÓN */
 .main-tooltip .tooltip-actions li a {
     display:flex;
     align-items:center;
     justify-content:center;
-    width:2.1rem;
-    height:2.1rem;
+    width:2.3rem;
+    height:2.3rem;
+    padding:0;
     box-sizing:border-box;
-    border:1px solid var(--theme-border, rgba(255,255,255,.12));
-    border-radius:.2rem;
-    background:var(--theme-panel);
-    transition:border-color .2s ease, background .2s ease, transform .2s ease;
+    border:.06rem solid var(--emblema2);
+    border-radius:.35rem;
+    background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 12%, transparent), color-mix(in srgb, var(--emblema1) 7%, transparent));
+    color:var(--text-color);
+    text-decoration:none;
+    transition:.25s ease;
 }
 
 .main-tooltip .tooltip-actions li a:hover {
-    border-color:var(--emblema2);
-    background:var(--theme-panel-deep, #111);
-    transform:translateY(-.1rem);
+    border-color:var(--emblema1);
+    background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 20%, transparent), color-mix(in srgb, var(--emblema1) 16%, transparent));
+    box-shadow:0 0 .8rem color-mix(in srgb, var(--emblema2) 20%, transparent);
+    transform:translateY(-.05rem);
 }
 
 .main-tooltip .tooltip-actions li img {
@@ -19067,13 +18927,13 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     width:1rem;
     height:1rem;
     max-width:100%;
+    max-height:100%;
     margin:0;
     object-fit:contain;
 }
 
-/* ACCESIBILIDAD */
 .main-tooltip .followBtn:focus-visible,
-.main-tooltip .tooltip-actions a:focus-visible {
-    outline:2px solid var(--emblema2);
-    outline-offset:2px;
+.main-tooltip .tooltip-actions li a:focus-visible {
+    outline:.06rem solid var(--emblema2);
+    outline-offset:.12rem;
 }
