@@ -2290,6 +2290,9 @@ button[title="Destino"] {
     background: var(--theme-panel);
     color: var(--theme-text);
     border-color: var(--theme-border);
+    cursor: pointer !important;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .digimon-size-dropdown button:hover {
