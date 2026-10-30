@@ -1711,7 +1711,7 @@
     background: var(--colorfondo);
     border: 0.071rem solid var(--dr-border);
     color: var(--colortextod);
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     line-height: 1.8;
     text-align: justify;
 }
