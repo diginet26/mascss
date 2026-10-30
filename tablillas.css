@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+
 /* TABLILLA ADMINISTRACIÓN */
+
 .dr-tadmin {
     --dg-blue: #1677C8;
     --dg-blue-dark: #0b3d68;
@@ -22,12 +24,15 @@
     font-size: 0.75rem;
     line-height: 1.8;
     text-align: justify;
-    box-shadow: 0 0 2.1875rem rgba(0,0,0,.45), inset 0 0 2.8125rem rgba(22,119,200,.04);}
+    box-shadow: 0 0 2.1875rem rgba(0,0,0,.45), inset 0 0 2.8125rem rgba(22,119,200,.04);
+}
 
 /* =========================================================
    DECORACIÓN SUPERIOR
    ========================================================= */
+
 /* pequeños indicadores */
+
 .dr-tadmin .dr-dots {
     position: absolute;
     top: 0.450rem;
@@ -45,12 +50,18 @@
     opacity: .65;
 }
 
-.dr-tadmin .dr-dots i:nth-child(2) {opacity: .35;}
-.dr-tadmin .dr-dots i:nth-child(3) {opacity: .15;}
+.dr-tadmin .dr-dots i:nth-child(2) {
+    opacity: .35;
+}
+
+.dr-tadmin .dr-dots i:nth-child(3) {
+    opacity: .15;
+}
 
 /* =========================================================
    HEADER
    ========================================================= */
+
 .dr-tadmin .dr-cabeza {
     position: relative;
     min-height: 10.875rem;
@@ -62,6 +73,7 @@
 }
 
 /* línea tecnológica */
+
 .dr-tadmin .dr-cabeza:after {
     content: "";
     position: absolute;
@@ -74,6 +86,7 @@
 }
 
 /* etiqueta */
+
 .dr-tadmin .dr-label {
     display: inline-block;
     padding: 0.1875rem 0.5625rem;
@@ -87,10 +100,11 @@
 }
 
 /* título */
+
 .dr-tadmin .dr-title {
     margin: 0;
     color: #fff;
-    font-family: 'Player Sans', 'Arial Narrow', sans-serif;
+    font-family: "Player Sans", "Arial Narrow", sans-serif;
     font-size: 2.375rem;
     font-weight: 900;
     line-height: 1;
@@ -98,6 +112,7 @@
 }
 
 /* subtítulo */
+
 .dr-tadmin .dr-subtitle {
     margin-top: 0.5625rem;
     color: var(--dg-muted);
@@ -105,11 +120,15 @@
     letter-spacing: 0.125rem;
     text-transform: uppercase;
 }
-.dr-tadmin .dr-subtitle b {color: var(--emblema2);}
+
+.dr-tadmin .dr-subtitle b {
+    color: var(--emblema2);
+}
 
 /* =========================================================
    INTRO
    ========================================================= */
+
 .dr-tadmin .dr-intro {
     margin: 1.375rem 1.5625rem 0.625rem;
     padding: 1.0625rem 1.25rem;
@@ -119,12 +138,17 @@
     font-size: 0.6875rem;
 }
 
-.dr-tadmin .dr-intro strong {color: var(--theme-text);}
+.dr-tadmin .dr-intro strong {
+    color: var(--theme-text);
+}
 
 /* =========================================================
    SECCIÓN
    ========================================================= */
-.dr-tadmin .dr-section {margin: 1.5625rem;}
+
+.dr-tadmin .dr-section {
+    margin: 1.5625rem;
+}
 
 .dr-section-title {
     display: flex;
@@ -156,6 +180,7 @@
 /* ==========================================================
    TEXT BLOCKS
    ========================================================== */
+
 .dr-block {
     margin-top: 1.25rem;
     padding: 1.0625rem;
@@ -163,14 +188,26 @@
     border: 1px solid var(--emblema2);
 }
 
-.dr-block p {margin: 0 0 0.75rem;}
-.dr-block p:last-child {margin-bottom: 0;}
-.dr-block b {color: var(--emblema2);}
-.dr-highlight {color: var(--dg-orange);}
+.dr-block p {
+    margin: 0 0 0.75rem;
+}
+
+.dr-block p:last-child {
+    margin-bottom: 0;
+}
+
+.dr-block b {
+    color: var(--emblema2);
+}
+
+.dr-highlight {
+    color: var(--dg-orange);
+}
 
 /* ==========================================================
    TIMELINE
    ========================================================== */
+
 .dr-timeline {
     margin-top: 1.25rem;
     border-left: 1px solid #315163;
@@ -182,7 +219,9 @@
     margin-bottom: 1.125rem;
 }
 
-.dr-event:last-child {margin-bottom: 0;}
+.dr-event:last-child {
+    margin-bottom: 0;
+}
 
 .dr-event:before {
     content: "";
@@ -196,7 +235,7 @@
 }
 
 .dr-event small {
-    font-family: "Oxanium", sans-serif;;
+    font-family: "Oxanium", sans-serif;
     font-size: 0.625rem;
     color: var(--emblema2);
 }
@@ -223,6 +262,7 @@
 /* =========================================================
    AVISO DESTACADA
    ========================================================= */
+
 .dr-tadmin .dr-aviso-title {
     margin-bottom: 0.4375rem;
     color: var(--emblema2);
@@ -241,6 +281,7 @@
 /* =========================================================
    DATOS / ESTADO DEL FORO
    ========================================================= */
+
 .dr-data {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -255,7 +296,9 @@
     border-right: 1px solid var(--colorfondo2);
 }
 
-.dr-data div:last-child {border-right: 0;}
+.dr-data div:last-child {
+    border-right: 0;
+}
 
 .dr-data b {
     display: block;
@@ -273,6 +316,7 @@
 /* ==========================================================
    RELATIONSHIPS
    ========================================================== */
+
 .dr-relations {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -312,39 +356,140 @@
     font-size: 0.625rem;
 }
 
-/* ==================TABLA REGISTROS================= BLOQUES DE LETRAS ================================ */ 
+/* ==================TABLA REGISTROS================= BLOQUES DE LETRAS ================================ */
 
-.dr-tadmin .dr-section2 { border:1px solid var(--emblema1); var(--colorfondo); position:relative; } 
-.dr-tadmin .dr-section2:before { content:""; position:absolute; top:-0.1rem; left:0; width:6.25rem; height:0.125rem; background:var(--emblema2); }
+.dr-tadmin .dr-section2 {
+    border: 1px solid var(--emblema1);
+    var(--colorfondo);
+    position: relative;
+}
 
-/* ========================================================== TÍTULO DE BLOQUE ========================================================== */ 
+.dr-tadmin .dr-section2:before {
+    content: "";
+    position: absolute;
+    top: -0.1rem;
+    left: 0;
+    width: 6.25rem;
+    height: 0.125rem;
+    background: var(--emblema2);
+}
 
-.dr-tadmin .dr-section2-title { min-height:2.6875rem; padding:0.75rem 0.9375rem; display:flex; align-items:center; justify-content:space-between; background: linear-gradient( 90deg, var(--linkc3), transparent ); border-bottom:1px solid var(--emblema1); } 
-.dr-tadmin .dr-section2-title .letters { font-family:'Jersey 15',Arial,sans-serif; font-size:1.5625rem; font-weight:700; color:var(--colortextod2); letter-spacing:0.125rem; }
-.dr-tadmin .dr-section2-title .letters span { color:var(--emblema2); } 
-.dr-tadmin .dr-section-title .number { font-family:'Oxanium',monospace; font-size:0.5rem; color:#526b7a; letter-spacing:0.0625rem; }
+/* ========================================================== TÍTULO DE BLOQUE ========================================================== */
 
-/* ========================================================== REGISTROS ========================================================== */ 
+.dr-tadmin .dr-section2-title {
+    min-height: 2.6875rem;
+    padding: 0.75rem 0.9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient( 90deg, var(--linkc3), transparent );
+    border-bottom: 1px solid var(--emblema1);
+}
 
-.dr-tadmin .dr-registro { min-height:1.875rem; padding:0.5rem 0.875rem; display:grid; grid-template-columns: 1.4fr 1.5fr 2.1875rem; align-items: center; gap:0.75rem; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
-.dr-tadmin .dr-registro2 { min-height:1.875rem; padding:0.5rem 0.875rem; display:grid; grid-template-columns:5.4fr 1fr 0rem; align-items: center; gap:0.75rem; border-bottom:1px solid rgba(24,50,70,.65); transition:.2s; } 
-.dr-tadmin .dr-registro:last-child { border-bottom:0; } 
-.dr-tadmin .dr-registro:hover { background:rgba(40,215,232,.035); }
+.dr-tadmin .dr-section2-title .letters {
+    font-family: "Jersey 15",Arial,sans-serif;
+    font-size: 1.5625rem;
+    font-weight: 700;
+    color: var(--colortextod2);
+    letter-spacing: 0.125rem;
+}
 
-/* ========================================================== NOMBRE ========================================================== */ 
+.dr-tadmin .dr-section2-title .letters span {
+    color: var(--emblema2);
+}
 
-.dr-tadmin .dr-name { font-family:'Oxanium',monospace; font-size:0.625rem; font-weight:700; color:#e3edf2; text-transform: uppercase; }
-.dr-tadmin .dr-name a { color:inherit; text-decoration:none; } .dg-registry .dg-name a:hover { color:var(--emblema2); }
+.dr-tadmin .dr-section-title .number {
+    font-family: "Oxanium",monospace;
+    font-size: 0.5rem;
+    color: #526b7a;
+    letter-spacing: 0.0625rem;
+}
 
-/* ========================================================== DATOS ========================================================== */ 
+/* ========================================================== REGISTROS ========================================================== */
 
-.dr-tadmin .dr-datos { font-size:0.5625rem; color:#718695; text-transform:uppercase; } 
-.dr-tadmin .dr-datos { color:#a9bac4; font-weight:700; }
-.dr-tadmin .dr-registronumero { width:1.6875rem; height:1.6875rem; display:flex; align-items:center; justify-content:center; border:1px solid #24475d; color:var(--blue); font-size:0.625rem; background:#081018; clip-path:polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% ); } 
-.dr-tadmin .dr-registronumero i { font-style:normal; }
+.dr-tadmin .dr-registro {
+    min-height: 1.875rem;
+    padding: 0.5rem 0.875rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1.5fr 2.1875rem;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(24,50,70,.65);
+    transition: .2s;
+}
+
+.dr-tadmin .dr-registro2 {
+    min-height: 1.875rem;
+    padding: 0.5rem 0.875rem;
+    display: grid;
+    grid-template-columns: 5.4fr 1fr 0rem;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(24,50,70,.65);
+    transition: .2s;
+}
+
+.dr-tadmin .dr-registro:last-child {
+    border-bottom: 0;
+}
+
+.dr-tadmin .dr-registro:hover {
+    background: rgba(40,215,232,.035);
+}
+
+/* ========================================================== NOMBRE ========================================================== */
+
+.dr-tadmin .dr-name {
+    font-family: "Oxanium",monospace;
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #e3edf2;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-name a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.dg-registry .dg-name a:hover {
+    color: var(--emblema2);
+}
+
+/* ========================================================== DATOS ========================================================== */
+
+.dr-tadmin .dr-datos {
+    font-size: 0.5625rem;
+    color: #718695;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-datos {
+    color: #a9bac4;
+    font-weight: 700;
+}
+
+.dr-tadmin .dr-registronumero {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #24475d;
+    color: var(--blue);
+    font-size: 0.625rem;
+    background: #081018;
+    clip-path: polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% );
+}
+
+.dr-tadmin .dr-registronumero i {
+    font-style: normal;
+}
 
 /* ========================================================= DIGIMON — TABLILLA REGLA ========================================================= */
+
 /* ========================================================= ÍNDICE ========================================================= */
+
 .dr-rule-index {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -373,24 +518,26 @@
 }
 
 /* Disposición original de tres columnas */
+
 .dr-rule-index a:nth-child(3n) {
     border-right: 0;
 }
 
-.dr-rule-index a:nth-child(n+4) {
+.dr-rule-index a:nth-child(n/**/+4) {
     border-bottom: 0;
 }
 
 /* Índices con dos columnas definidas en el HTML */
+
 .dr-rule-index[style*="repeat(2"] a:nth-child(2n) {
     border-right: 0;
 }
 
-.dr-rule-index[style*="repeat(2"] a:nth-child(2n+1) {
+.dr-rule-index[style*="repeat(2"] a:nth-child(2n/**/+1) {
     border-right: 1px solid var(--emblema2);
 }
 
-.dr-rule-index[style*="repeat(2"] a:nth-last-child(-n+2) {
+.dr-rule-index[style*="repeat(2"] a:nth-last-child(-n/**/+2) {
     border-bottom: 0;
 }
 
@@ -405,13 +552,72 @@
     margin-right: 0.375rem;
 }
 
-/* ========================================================= BLOQUE DE NORMA ========================================================= */ 
-.dr-rule { margin-bottom: 0.5rem; padding: 1.0625rem; background: rgba(13,21,30,.85); border: 1px solid #213746; transition: .25s ease; box-sizing: border-box; } .dr-rule:hover { background: rgba(17,31,45,.95); border-color: rgba(34,193,195,.25); } 
-/* ========================================================= LISTADOS ========================================================= */ 
-.dr-rule-list { margin: 0.8125rem 0 0; padding: 0; list-style: none; } 
-.dr-rule-list li { position: relative; padding-left: 1.125rem; color: var(--colortextodl); font-size: 0.75rem; line-height: 1.7; padding-right: 1.25rem;} .dr-rule-list li:last-child { margin-bottom: 0; } .dr-rule-list li:before { content: ">"; position: absolute; left: -0.9375rem; top: -0.5rem; font-size:1.375rem; color: var(--emblema2); font-family: "Jersey 15", monospace; font-weight: 700; }
-/* ========================================================= LISTADO OFICIAL ========================================================= */ 
-.dr-tadmin .dr-lista { position: relative; margin-bottom: 0.5rem; padding: 0.9375rem 1.125rem 0.9375rem 3.25rem; background: var(--colorfondo); border: 1px solid var(--emblema2); transition: .25s ease; box-sizing: border-box; } .dr-tadmin .dr-lista:hover { background: var(--colorfondo4); border-color: var(--emblema1); transform: translateX(0.1875rem); }
+/* ========================================================= BLOQUE DE NORMA ========================================================= */
+
+.dr-rule {
+    margin-bottom: 0.5rem;
+    padding: 1.0625rem;
+    background: rgba(13,21,30,.85);
+    border: 1px solid #213746;
+    transition: .25s ease;
+    box-sizing: border-box;
+}
+
+.dr-rule:hover {
+    background: rgba(17,31,45,.95);
+    border-color: rgba(34,193,195,.25);
+}
+
+/* ========================================================= LISTADOS ========================================================= */
+
+.dr-rule-list {
+    margin: 0.8125rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dr-rule-list li {
+    position: relative;
+    padding-left: 1.125rem;
+    color: var(--colortextodl);
+    font-size: 0.75rem;
+    line-height: 1.7;
+    padding-right: 1.25rem;
+}
+
+.dr-rule-list li:last-child {
+    margin-bottom: 0;
+}
+
+.dr-rule-list li:before {
+    content: ">";
+    position: absolute;
+    left: -0.9375rem;
+    top: -0.5rem;
+    font-size: 1.375rem;
+    color: var(--emblema2);
+    font-family: "Jersey 15", monospace;
+    font-weight: 700;
+}
+
+/* ========================================================= LISTADO OFICIAL ========================================================= */
+
+.dr-tadmin .dr-lista {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding: 0.9375rem 1.125rem 0.9375rem 3.25rem;
+    background: var(--colorfondo);
+    border: 1px solid var(--emblema2);
+    transition: .25s ease;
+    box-sizing: border-box;
+}
+
+.dr-tadmin .dr-lista:hover {
+    background: var(--colorfondo4);
+    border-color: var(--emblema1);
+    transform: translateX(0.1875rem);
+}
+
 .dr-tadmin .dr-lista .dr-icon {
     position: absolute;
     left: 1.0625rem;
@@ -428,9 +634,12 @@
     transform: rotate(45deg);
 }
 
-.dr-tadmin .dr-lista .dr-icon i {transform: rotate(-45deg);}
+.dr-tadmin .dr-lista .dr-icon i {
+    transform: rotate(-45deg);
+}
 
 /* NOMBRE */
+
 .dr-tadmin .dr-lista h3 {
     margin: 0.125rem 0.3125rem 0.125rem;
     color: var(--colortextodl);
@@ -440,9 +649,12 @@
     text-transform: uppercase;
 }
 
-.dr-tadmin .dr-lista h3 span {color: var(--dg-gold);}
+.dr-tadmin .dr-lista h3 span {
+    color: var(--dg-gold);
+}
 
 /* DESCRIPCIÓN */
+
 .dr-tadmin .dr-lista p {
     margin: 0;
     color: var(--colortextodl);
@@ -453,11 +665,13 @@
 /* ==========================================================
    DIGITAL RIFT — TABLILLA TIENDA
    ========================================================== */
+
 .dr-tadmin form {
     margin: 0;
 }
 
 /* OCULTAR RADIOS */
+
 .dr-tadmin input[type="radio"] {
     display: none;
 }
@@ -465,6 +679,7 @@
 /* ==========================================================
    NAVEGACIÓN DE CATEGORÍAS
    ========================================================== */
+
 .dr-tadmin .tienda-filters {
     display: flex;
     gap: 0;
@@ -474,6 +689,7 @@
 }
 
 /* BOTONES */
+
 .dr-tadmin .tienda-filters label {
     flex: 1 1 0;
     min-width: 0;
@@ -506,6 +722,7 @@
 }
 
 /* ORDEN VISUAL DE LAS CATEGORÍAS */
+
 .dr-tadmin .tienda-filters label[for="tienda-items"] {
     order: 1;
 }
@@ -527,6 +744,7 @@
 }
 
 /* ICONOS */
+
 .dr-tadmin .tienda-filters label i {
     flex-shrink: 0;
     color: var(--emblema1);
@@ -537,6 +755,7 @@
 /* ==========================================================
    ESTADO ACTIVO DE CATEGORÍA
    ========================================================== */
+
 .dr-tadmin #tienda-items:checked ~ .tienda-filters label[for="tienda-items"],
 .dr-tadmin #tienda-digivices:checked ~ .tienda-filters label[for="tienda-digivices"],
 .dr-tadmin #tienda-movimientos:checked ~ .tienda-filters label[for="tienda-movimientos"],
@@ -559,6 +778,7 @@
 /* ==========================================================
    CONTENEDOR DE OBJETOS
    ========================================================== */
+
 .dr-tadmin .tienda-items {
     border: 1px solid var(--colorfondo4);
     background: var(--colorfondo);
@@ -567,6 +787,7 @@
 /* ==========================================================
    OBJETOS
    ========================================================== */
+
 .dr-tadmin .tienda-item {
     min-height: 5.75rem;
     padding: 0.8125rem;
@@ -590,6 +811,7 @@
 /* ==========================================================
    ICONO DEL OBJETO
    ========================================================== */
+
 .dr-tadmin .tienda-icon {
     width: 3.375rem;
     height: 3.375rem;
@@ -615,6 +837,7 @@
 /* ==========================================================
    INFORMACIÓN DEL OBJETO
    ========================================================== */
+
 .dr-tadmin .tienda-info {
     min-width: 0;
 }
@@ -650,6 +873,7 @@
 /* ==========================================================
    PRECIO
    ========================================================== */
+
 .dr-tadmin .tienda-price {
     width: 100%;
     min-width: 0;
@@ -696,6 +920,7 @@
 /* ==========================================================
    FILTROS DE OBJETOS
    ========================================================== */
+
 .dr-tadmin #tienda-items:checked ~ .tienda-items .tienda-item:not(.items),
 .dr-tadmin #tienda-digivices:checked ~ .tienda-items .tienda-item:not(.digivices),
 .dr-tadmin #tienda-special:checked ~ .tienda-items .tienda-item:not(.special),
@@ -706,6 +931,7 @@
 /* ==========================================================
    PIE / INFORMACIÓN
    ========================================================== */
+
 .dr-tadmin .tienda-footer {
     margin: 0 1.5625rem 1.5625rem;
     padding: 0.9375rem 1.125rem;
@@ -738,6 +964,7 @@
 /* ==========================================================
    DECORACIÓN
    ========================================================== */
+
 .dr-tadmin .tienda-corner {
     position: absolute;
     right: 1.125rem;
@@ -762,6 +989,7 @@
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
+
 @media (max-width: 47.5rem) {
     .dr-tadmin .tienda-filters {
         flex-wrap: wrap;
@@ -797,249 +1025,272 @@
 /* ==========================================================
    DIGITAL RIFT — MAPA DE ZONAS
    ========================================================== */
+
 .dr-map {
-    --map-blue:#1677C8;
-    --map-cyan:#22c1c3;
-    --map-bg:#080f18;
-    --map-panel:#0d1722;
-    --map-panel2:#111f2d;
-    --map-line:rgba(34,193,195,.22);
-    --map-text:var(--theme-text);
-    --map-muted:var(--theme-text-muted);
-    color:var(--map-text);
-    font-family:"Oxanium",sans-serif;
-    font-size:0.6875rem;
-    line-height:1.7;
+    --map-blue: #1677C8;
+    --map-cyan: #22c1c3;
+    --map-bg: #080f18;
+    --map-panel: #0d1722;
+    --map-panel2: #111f2d;
+    --map-line: rgba(34,193,195,.22);
+    --map-text: var(--theme-text);
+    --map-muted: var(--theme-text-muted);
+    color: var(--map-text);
+    font-family: "Oxanium",sans-serif;
+    font-size: 0.6875rem;
+    line-height: 1.7;
 }
 
 /* CABECERA */
+
 .dr-map-head {
-    padding:1.125rem 1.25rem;
+    padding: 1.125rem 1.25rem;
     background: var(--colorfondo);
-    border:1px solid var(--emblema2);
+    border: 1px solid var(--emblema2);
 }
 
 .dr-map-label {
-    display:inline-block;
-    margin-bottom:0.375rem;
-    padding:0.1875rem 0.5rem;
-    border:1px solid var(--map-blue);
-    color:var(--emblema2);
-    font-size:0.4375rem;
-    font-weight:700;
-    letter-spacing:0.125rem;
-    text-transform:uppercase;
+    display: inline-block;
+    margin-bottom: 0.375rem;
+    padding: 0.1875rem 0.5rem;
+    border: 1px solid var(--map-blue);
+    color: var(--emblema2);
+    font-size: 0.4375rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
 }
 
 .dr-map-title {
     color: var(--theme-text);
-    font-family:"Jersey 15",Arial,sans-serif;
-    font-size:1.6875rem;
-    letter-spacing:0.125rem;
-    line-height:1;
+    font-family: "Jersey 15",Arial,sans-serif;
+    font-size: 1.6875rem;
+    letter-spacing: 0.125rem;
+    line-height: 1;
 }
 
 .dr-map-subtitle {
-    margin-top:0.4375rem;
-    font-size:0.5rem;
-    letter-spacing:0.09375rem;
-    text-transform:uppercase;
-    color:var(--map-text);
+    margin-top: 0.4375rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+    color: var(--map-text);
 }
 
 /* INTRODUCCIÓN */
+
 .dr-map-intro {
-    padding:0.8125rem 0.9375rem;
+    padding: 0.8125rem 0.9375rem;
     background: var(--colorfondo);
-    font-size:0.625rem;
-    color:var(--map-text);
+    font-size: 0.625rem;
+    color: var(--map-text);
 }
 
-.dr-map-intro b {color:var(--emblema2);}
+.dr-map-intro b {
+    color: var(--emblema2);
+}
 
 /* SISTEMA */
+
 .dr-map-system {
-    position:relative;
-    margin-top:0.9375rem;
+    position: relative;
+    margin-top: 0.9375rem;
 }
 
-.dr-map-system > input {display:none;}
+.dr-map-system > input {
+    display: none;
+}
 
 /* PANEL */
+
 .dr-map-content {
-    position:relative;
-    min-height:20.625rem;
+    position: relative;
+    min-height: 20.625rem;
     background: var(--colorfondot);
-    border:1px solid var(--emblema2);
+    border: 1px solid var(--emblema2);
 }
 
 /* ZONAS */
+
 .dr-map-zone {
-    display:none;
-    padding:1.125rem;
+    display: none;
+    padding: 1.125rem;
 }
 
 #dr-zone-01:checked ~ .dr-map-content .dr-map-zone:nth-child(1), #dr-zone-02:checked ~ .dr-map-content .dr-map-zone:nth-child(2), #dr-zone-03:checked ~ .dr-map-content .dr-map-zone:nth-child(3),
-#dr-zone-04:checked ~ .dr-map-content .dr-map-zone:nth-child(4), #dr-zone-05:checked ~ .dr-map-content .dr-map-zone:nth-child(5), #dr-zone-06:checked ~ .dr-map-content .dr-map-zone:nth-child(6) {display:block;}
+#dr-zone-04:checked ~ .dr-map-content .dr-map-zone:nth-child(4), #dr-zone-05:checked ~ .dr-map-content .dr-map-zone:nth-child(5), #dr-zone-06:checked ~ .dr-map-content .dr-map-zone:nth-child(6) {
+    display: block;
+}
 
 /* CABECERA DE ZONA */
+
 .dr-map-zone-head {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding-bottom:0.625rem;
-    margin-bottom:0.875rem;
-    border-bottom:1px solid var(--emblema2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.625rem;
+    margin-bottom: 0.875rem;
+    border-bottom: 1px solid var(--emblema2);
 }
 
 .dr-map-zone-head span {
-    color:var(--emblema2);
-    font-family:"Oxanium",monospace;
-    font-size:0.5rem;
-    letter-spacing:0.0625rem;
+    color: var(--emblema2);
+    font-family: "Oxanium",monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.0625rem;
 }
 
 .dr-map-zone-head b {
     color: var(--theme-text);
-    font-family:"Jersey 15",Arial,sans-serif;
-    font-size:1.25rem;
-    letter-spacing:0.0625rem;
+    font-family: "Jersey 15",Arial,sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.0625rem;
 }
 
 /* CUERPO */
+
 .dr-map-zone-body {
-    display:grid;
-    grid-template-columns:11.25rem 1fr;
-    gap:0.9375rem;
+    display: grid;
+    grid-template-columns: 11.25rem 1fr;
+    gap: 0.9375rem;
 }
 
 /* IMAGEN */
+
 .dr-map-image {
-    max-height:14.625rem;
-    background:#071018;
-    border:1px solid var(--colorfondo);
-    overflow:hidden;
+    max-height: 14.625rem;
+    background: #071018;
+    border: 1px solid var(--colorfondo);
+    overflow: hidden;
 }
 
 .dr-map-image img {
-    width:100%;
-    height:100%;
-    min-height:10.625rem;
-    display:block;
-    object-fit:cover;
-    opacity:.82;
-    transition:.3s;
+    width: 100%;
+    height: 100%;
+    min-height: 10.625rem;
+    display: block;
+    object-fit: cover;
+    opacity: .82;
+    transition: .3s;
 }
 
-.dr-map-image:hover img {opacity:1;}
+.dr-map-image:hover img {
+    opacity: 1;
+}
 
 /* INFORMACIÓN */
+
 .dr-map-info {
-    display:flex;
-    flex-direction:column;
-    gap:0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 /* DATOS */
+
 .dr-map-data {
-    padding:0.5rem 0.625rem;
+    padding: 0.5rem 0.625rem;
     background: var(--colorfondo);
-    border:1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.05);
 }
 
 .dr-map-data span {
-    display:block;
-    color:var(--map-muted);
-    font-family:"Oxanium",monospace;
-    font-size:0.4375rem;
-    letter-spacing:0.0625rem;
+    display: block;
+    color: var(--map-muted);
+    font-family: "Oxanium",monospace;
+    font-size: 0.4375rem;
+    letter-spacing: 0.0625rem;
 }
 
 .dr-map-data b {
-    display:block;
-    margin-top:0.125rem;
+    display: block;
+    margin-top: 0.125rem;
     color: var(--theme-text);
-    font-size:0.5625rem;
-    text-transform:uppercase;
+    font-size: 0.5625rem;
+    text-transform: uppercase;
 }
 
 /* DESCRIPCIÓN */
+
 .dr-map-description {
-    flex:1;
-    padding:0.6875rem;
+    flex: 1;
+    padding: 0.6875rem;
     background: var(--colorfondo);
-    border-left:1px solid var(--emblema2);
+    border-left: 1px solid var(--emblema2);
     color: var(--theme-text-muted);
-    font-size:0.625rem;
+    font-size: 0.625rem;
     overflow: auto;
-        max-height: 10rem;
+    max-height: 10rem;
 }
 
 /* ZONA DE ROL */
+
 .dr-map-role {
-    margin-top:0.875rem;
-    padding:0.625rem 0.75rem;
+    margin-top: 0.875rem;
+    padding: 0.625rem 0.75rem;
     background: linear-gradient(90deg, var(--colorfondo), transparent);
-    border:1px solid var(--emblema2);
+    border: 1px solid var(--emblema2);
 }
 
 .dr-map-role span {
-    display:block;
-    color:var(--emblema2);
-    font-size:0.4375rem;
-    font-weight:700;
-    letter-spacing:0.09375rem;
-    text-transform:uppercase;
+    display: block;
+    color: var(--emblema2);
+    font-size: 0.4375rem;
+    font-weight: 700;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
 }
 
 .dr-map-role b {
     color: var(--theme-text-muted);
-    font-size:0.5625rem;
+    font-size: 0.5625rem;
 }
 
 /* ==========================================================
    SELECTORES
    ========================================================== */
+
 .dr-map-tabs {
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    margin-top:0.5rem;
-    gap:0.3125rem;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 0.5rem;
+    gap: 0.3125rem;
 }
 
 .dr-map-tabs label {
-    position:relative;
-    padding:0.5625rem 0.3125rem;
+    position: relative;
+    padding: 0.5625rem 0.3125rem;
     background: var(--colorfondo);
-    border:1px solid var(--colortextod);
-    cursor:pointer;
-    text-align:center;
-    transition:.2s;
+    border: 1px solid var(--colortextod);
+    cursor: pointer;
+    text-align: center;
+    transition: .2s;
 }
 
 .dr-map-tabs label:hover {
     background: var(--emblema2);
-    border-color:var(--colorfondo);
+    border-color: var(--colorfondo);
 }
 
 .dr-map-tabs small {
-    display:block;
+    display: block;
     color: var(--theme-text-muted);
-    font-family:"Oxanium",monospace;
-    font-size:0.4375rem;
+    font-family: "Oxanium",monospace;
+    font-size: 0.4375rem;
 }
 
 .dr-map-tabs b {
-    display:block;
-    margin-top:0.125rem;
+    display: block;
+    margin-top: 0.125rem;
     color: var(--theme-text);
-    font-size:0.5rem;
-    letter-spacing:.0.3125rem;
+    font-size: 0.5rem;
+    letter-spacing: .0/**/.3125rem;
 }
 
 /* =========================================================
    IMAGEN ESTÁTICA 
    ========================================================= */
+
 .dr-map-image2 {
     content: "";
     display: block;
@@ -1054,29 +1305,40 @@
 }
 
 /* ESTADO ACTIVO */
+
 #dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"], #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"], #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"],
-#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"], #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"], #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {background:rgba(22,119,200,.15); border-color:var(--emblema2);}
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"], #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"], #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] {
+    background: rgba(22,119,200,.15);
+    border-color: var(--emblema2);
+}
 
 #dr-zone-01:checked ~ .dr-map-tabs label[for="dr-zone-01"] b, #dr-zone-02:checked ~ .dr-map-tabs label[for="dr-zone-02"] b, #dr-zone-03:checked ~ .dr-map-tabs label[for="dr-zone-03"] b,
-#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b, #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b, #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {color:var(--emblema2);}
+#dr-zone-04:checked ~ .dr-map-tabs label[for="dr-zone-04"] b, #dr-zone-05:checked ~ .dr-map-tabs label[for="dr-zone-05"] b, #dr-zone-06:checked ~ .dr-map-tabs label[for="dr-zone-06"] b {
+    color: var(--emblema2);
+}
 
 /* RESPONSIVE */
-@media(max-width:37.5rem) {
+
+@media (max-width:37.5rem) {
     .dr-map {
-        margin:0.9375rem 0.625rem;
+        margin: 0.9375rem 0.625rem;
     }
+
     .dr-map-zone-body {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
+
     .dr-map-image {
-        min-height:9.375rem;
+        min-height: 9.375rem;
     }
+
     .dr-map-tabs {
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
 /* TABLILLA DIGIMON */
+
 .digimon-status {
     --bg: #07090e;
     --panel: #0d1218;
@@ -1103,6 +1365,7 @@
 /* ==========================================================
    CONTENIDO
 ========================================================== */
+
 .digimon-content {
     width: 100%;
     box-sizing: border-box;
@@ -1111,6 +1374,7 @@
 /* ==========================================================
    CABECERA
 ========================================================== */
+
 .digimon-top {
     height: 4.75rem;
     display: flex;
@@ -1122,6 +1386,7 @@
 /* ==========================================================
    RETRATO
 ========================================================== */
+
 .digimon-portrait {
     width: 5.125rem;
     height: 4.75rem;
@@ -1152,7 +1417,11 @@
 /* ==========================================================
    NOMBRE
 ========================================================== */
-.digimon-title {flex: 1;}
+
+.digimon-title {
+    flex: 1;
+}
+
 .digimon-name {
     color: var(--emblema2);
     font-size: 1.375rem;
@@ -1176,6 +1445,7 @@
 /* ==========================================================
    NIVEL
 ========================================================== */
+
 .digimon-level {
     width: 4.375rem;
     padding-right: 0.3125rem;
@@ -1205,6 +1475,7 @@
 /* ==========================================================
    STATS
 ========================================================== */
+
 .main-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1215,7 +1486,10 @@
 /* ==========================================================
    HP / SP / EXP
 ========================================================== */
-.big-stat {margin-bottom: 0.5rem;}
+
+.big-stat {
+    margin-bottom: 0.5rem;
+}
 
 .stat-line {
     display: flex;
@@ -1242,6 +1516,7 @@
 /* ==========================================================
    BARRAS
 ========================================================== */
+
 .progress {
     height: 0.3125rem;
     margin-top: 0.25rem;
@@ -1256,11 +1531,14 @@
     background: var(--orange);
 }
 
-.progress.sp b {background: var(--blue);}
+.progress.sp b {
+    background: var(--blue);
+}
 
 /* ==========================================================
    STATS DE COMBATE
 ========================================================== */
+
 .combat-stat {
     height: 1.1875rem;
     display: flex;
@@ -1291,6 +1569,7 @@
 /* ==========================================================
    HABILIDADES
 ========================================================== */
+
 .ability-section {
     margin-top: 0.5rem;
     border-bottom: 1px solid var(--line);
@@ -1316,7 +1595,9 @@
     box-sizing: border-box;
 }
 
-.ability:hover {background: #101920;}
+.ability:hover {
+    background: #101920;
+}
 
 .ability-icon {
     color: var(--emblema1);
@@ -1329,27 +1610,41 @@
     font-weight: normal;
 }
 
-.ability.empty {opacity: .42;}
+.ability.empty {
+    opacity: .42;
+}
 
 /* ==========================================================
    EQUIPMENT
 ========================================================== */
-.equipment {margin-top: 0.5rem;}
+
+.equipment {
+    margin-top: 0.5rem;
+}
 
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
+
 @media (max-width:37.5rem) {
     .digimon-status {
         width: 100%;
         padding: 0.625rem;
     }
+
     .digi-top {
         height: auto;
         min-height: 4.75rem;
     }
-    .digi-name {font-size: 1.0625rem;}
-    .digi-description {font-size: 0.4375rem;}
+
+    .digi-name {
+        font-size: 1.0625rem;
+    }
+
+    .digi-description {
+        font-size: 0.4375rem;
+    }
+
     .main-stats {
         grid-template-columns: 1fr;
         gap: 0.625rem;
@@ -1359,6 +1654,7 @@
 /* ============================================================
    DIGITAL RIFT — EXPEDIENTE
    ============================================================ */
+
 .dr-ficha {
     --dr-cyan: var(--emblema2, #35d8ff);
     --dr-blue: var(--emblema1, #1677c8);
@@ -1376,13 +1672,17 @@
     background: var(--colorfondot);
     border: 1px solid var(--colorfondo);
     color: var(--colortextodl);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 0.75rem;
     position: relative;
     overflow: hidden;
 }
 
-.dr-ficha > input[type="radio"] {display: none;}/*OCULTAR RADIO*/
+.dr-ficha > input[type="radio"] {
+    display: none;
+}
+
+/*OCULTAR RADIO*/
 
 /* ============================================================
    NOMBRE
@@ -1401,6 +1701,7 @@
 } */
 
 /* TEXTO — TABLILLA DE FICHA */
+
 .dr-ficha .dr-text {
     min-height: 0;
     box-sizing: border-box;
@@ -1415,19 +1716,40 @@
     text-align: justify;
 }
 
-.dr-ficha .dr-text p {margin: 0 0 0.857rem;}
-.dr-ficha .dr-text p:last-child {margin-bottom: 0;}
+.dr-ficha .dr-text p {
+    margin: 0 0 0.857rem;
+}
+
+.dr-ficha .dr-text p:last-child {
+    margin-bottom: 0;
+}
 
 /* ALTURAS INDIVIDUALES DE LOS BLOQUES */
-.dr-ficha .dr-page1 .dr-digimon > .dr-text {height: 18.625rem;}
-.dr-ficha .dr-page2 > .dr-text {height: auto; overflow: visible;}
-.dr-ficha .dr-page3 > .dr-text {height: 11.5rem;}
+
+.dr-ficha .dr-page1 .dr-digimon > .dr-text {
+    height: 18.625rem;
+}
+
+.dr-ficha .dr-page2 > .dr-text {
+    height: auto;
+    overflow: visible;
+}
+
+.dr-ficha .dr-page3 > .dr-text {
+    height: 11.5rem;
+}
 
 /* ============================================================
    PÁGINAS
    ============================================================ */
-.dr-page {display: none;}
-#dr-tab1:checked ~ .dr-pages .dr-page1, #dr-tab2:checked ~ .dr-pages .dr-page2, #dr-tab3:checked ~ .dr-pages .dr-page3 {display: block;}
+
+.dr-page {
+    display: none;
+}
+
+#dr-tab1:checked ~ .dr-pages .dr-page1, #dr-tab2:checked ~ .dr-pages .dr-page2, #dr-tab3:checked ~ .dr-pages .dr-page3 {
+    display: block;
+}
 
 .dr-ficha .dr-page > .dr-section-title ~ .dr-section-title {
     margin-top: 1rem;
@@ -1436,19 +1758,22 @@
 /* ============================================================
    TÍTULOS
    ============================================================ */
+
 .dr-page h2 {
     margin: 1.5625rem 0 0.8125rem;
     padding-left: 0.9375rem;
     position: relative;
     color: var(--dr-cyan);
-    font-family: 'Jersey 15', sans-serif;
+    font-family: "Jersey 15", sans-serif;
     font-size: 1.5625rem;
     font-weight: 400;
     letter-spacing: 0.125rem;
     line-height: 1;
 }
 
-.dr-page h2:first-child {margin-top: 0;}
+.dr-page h2:first-child {
+    margin-top: 0;
+}
 
 .dr-page h2:before {
     content: "";
@@ -1508,6 +1833,7 @@
 /* ============================================================
    TEXTO
    ============================================================ */
+
 .--colortextodl {
     padding: 1.0625rem;
     box-sizing: border-box;
@@ -1519,12 +1845,18 @@
     text-align: justify;
 }
 
-.--colortextodl p {margin: 0 0 0.75rem;}
-.--colortextodl p:last-child {margin-bottom: 0;}
+.--colortextodl p {
+    margin: 0 0 0.75rem;
+}
+
+.--colortextodl p:last-child {
+    margin-bottom: 0;
+}
 
 /* ============================================================
    BLOQUES DE INFORMACIÓN
    ============================================================ */
+
 .dr-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1552,7 +1884,7 @@
     display: block;
     margin-bottom: 0.5625rem;
     color: var(--dr-cyan);
-    font-family: 'Jersey 15', sans-serif;
+    font-family: "Jersey 15", sans-serif;
     font-size: 1.1875rem;
     font-weight: 400;
     letter-spacing: 0.0625rem;
@@ -1569,6 +1901,7 @@
 /* ============================================================
    DIGIMON
    ============================================================ */
+
 .dr-digimon {
     display: grid;
     grid-template-columns: 13.75rem 1fr;
@@ -1576,6 +1909,7 @@
 }
 
 /* TARJETA DEL DIGIMON */
+
 .dr-digimon-card {
     min-height: 18.625rem;
     padding: 0.75rem;
@@ -1613,7 +1947,7 @@
 
 .dr-digimon-card strong {
     color: #fff;
-    font-family: 'Jersey 15', sans-serif;
+    font-family: "Jersey 15", sans-serif;
     font-size: 1.6875rem;
     font-weight: 400;
     letter-spacing: 0.0625rem;
@@ -1622,7 +1956,7 @@
 .dr-digimon-card small {
     margin-top: 0.1875rem;
     color: var(--dr-cyan);
-    font-family: 'Oxanium', sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 0.4375rem;
     font-weight: 700;
     letter-spacing: 0.125rem;
@@ -1630,7 +1964,10 @@
 }
 
 /* CONTENIDO DIGIMON */
-.dr-digimon-content {min-width: 0;}
+
+.dr-digimon-content {
+    min-width: 0;
+}
 
 /* .dr-data-small {
     grid-template-columns: repeat(2, 1fr);
@@ -1638,10 +1975,11 @@
 }
 
 .dr-data-small span {min-height: 3.4375rem;} */
+
 .dr-digimon-content h3 {
     margin: 0.8125rem 0 0.4375rem;
     color: var(--dr-cyan);
-    font-family: 'Jersey 15', sans-serif;
+    font-family: "Jersey 15", sans-serif;
     font-size: 1.1875rem;
     font-weight: 400;
     letter-spacing: 0.0625rem;
@@ -1650,6 +1988,7 @@
 /* ============================================================
    ESTADÍSTICAS
    ============================================================ */
+
 .dr-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1668,7 +2007,7 @@
 
 .dr-stats b {
     color: var(--dr-muted);
-    font-family: 'Oxanium', sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 0.5rem;
     letter-spacing: 0.0625rem;
 }
@@ -1676,11 +2015,14 @@
 .dr-stats i {
     margin-top: 0.3125rem;
     color: var(--dr-cyan);
-    font-family: 'Jersey 15', sans-serif;
+    font-family: "Jersey 15", sans-serif;
     font-size: 1.4375rem;
     font-style: normal;
 }
-.dr-stats2 {padding: 0rem 0rem 0.375rem;}
+
+.dr-stats2 {
+    padding: 0rem 0rem 0.375rem;
+}
 
 .dr-stats2 span {
     padding: 0.8125rem 0.4375rem;
@@ -1694,7 +2036,7 @@
 
 .dr-stats2 b {
     color: var(--dr-muted);
-    font-family: 'Oxanium', sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 0.5rem;
     letter-spacing: 0.0625rem;
 }
@@ -1702,12 +2044,14 @@
 .dr-stats2 i {
     margin-top: 0.3125rem;
     color: var(--dr-cyan);
-    font-family: 'Jersey 15', sans-serif;
+    font-family: "Jersey 15", sans-serif;
     font-size: 1.4375rem;
     font-style: normal;
 }
 
-.dr-stats3 {padding: 0.375rem 0rem 0rem;}
+.dr-stats3 {
+    padding: 0.375rem 0rem 0rem;
+}
 
 .dr-stats3 span {
     padding: 1.375rem 0.4375rem;
@@ -1721,7 +2065,7 @@
 
 .dr-stats3 b {
     color: var(--dr-muted);
-    font-family: 'Oxanium', sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 0.5rem;
     letter-spacing: 0.0625rem;
 }
@@ -1729,13 +2073,15 @@
 .dr-stats3 i {
     margin-top: 0.3125rem;
     color: var(--dr-cyan);
-    font-family: 'Jersey 15', sans-serif;
+    font-family: "Jersey 15", sans-serif;
     font-size: 1.4375rem;
     font-style: normal;
 }
+
 /* ============================================================
    PESTAÑAS
    ============================================================ */
+
 .dr-tabs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1748,7 +2094,7 @@
     background: var(--colorfondo);
     border: 1px solid var(--dr-border);
     color: var(--dr-muted);
-    font-family: 'Oxanium', sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 0.5625rem;
     font-weight: 700;
     letter-spacing: 0.0625rem;
@@ -1770,39 +2116,69 @@
 }
 
 /* PESTAÑA ACTIVA */
+
 #dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"], #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"], #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] {
     color: var(--dr-cyan);
     background: linear-gradient(135deg, rgba(22,119,200,.25),rgba(53,216,255,.08));
     border-color: var(--dr-cyan);
 }
 
-#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"] small, #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"] small, #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] small {color: var(--dr-cyan);}
+#dr-tab1:checked ~ .dr-tabs label[for="dr-tab1"] small, #dr-tab2:checked ~ .dr-tabs label[for="dr-tab2"] small, #dr-tab3:checked ~ .dr-tabs label[for="dr-tab3"] small {
+    color: var(--dr-cyan);
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+
 @media (max-width: 40.625rem) {
     .dr-ficha {
         width: 96%;
         padding: 0.75rem;
     }
-    .dr-data {grid-template-columns: repeat(2, 1fr);}
-    .dr-info {grid-template-columns: 1fr;}
-    .dr-digimon {grid-template-columns: 1fr;}
+
+    .dr-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dr-info {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-digimon {
+        grid-template-columns: 1fr;
+    }
+
     .dr-digimon-card {
         height: 18.75rem;
         min-height: 1.75rem;
     }
-    .dr-stats {grid-template-columns: repeat(5, 1fr);}
+
+    .dr-stats {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 @media (max-width: 28.125rem) {
-    .dr-head {height: 8.75rem;}
-    .dr-data {grid-template-columns: 1fr;}
-    .dr-stats {grid-template-columns: repeat(3, 1fr);}
-    .dr-tabs label {font-size: 0.5rem;}
+    .dr-head {
+        height: 8.75rem;
+    }
+
+    .dr-data {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dr-tabs label {
+        font-size: 0.5rem;
+    }
 }
 
 /* MAPA */
+
 .dr-map-interest-title {
     position: relative;
     z-index: 1;
@@ -1944,15 +2320,56 @@
     letter-spacing: .08em;
 }
 
-@media (max-width: 40rem) .dr-map-interests { grid-template-columns: 1fr; } .dr-map-interest-image { height: 10rem; } .dr-map-interest-title:after { display: none; } } 
+@media (max-width: 40rem) .dr-map-interests {
+    grid-template-columns: 1fr;
+}
+
+.dr-map-interest-image {
+    height: 10rem;
+}
+
+.dr-map-interest-title:after {
+    display: none;
+}
+
+} 
 
 
 /* CABECERA TABLILLAS*/
 
-.dr-tadmin .dr-cabecera { height: 1.875rem; padding: 0 1.125rem; display: flex; align-items: center; justify-content: space-between; background: #07111b; border-bottom: 1px solid var(--emblema2); color: var(--emblema1); font-family: "Roboto Mono", monospace; font-size: 0.5rem; letter-spacing: 0.09375rem; text-transform: uppercase; } 
-.dr-tadmin .dr-cabecera strong { color: var(--emblema2); }
-.dr-tadmin .battle-status { display: flex; align-items: center; gap: 0.4375rem; }
-.dr-tadmin .battle-status i { width: 0.3125rem; height: 0.3125rem; display: block; background: var(--battle-red); border-radius: 50%; box-shadow: 0 0 0.5rem rgba(217,75,91,.7); }
+.dr-tadmin .dr-cabecera {
+    height: 1.875rem;
+    padding: 0 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #07111b;
+    border-bottom: 1px solid var(--emblema2);
+    color: var(--emblema1);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-cabecera strong {
+    color: var(--emblema2);
+}
+
+.dr-tadmin .battle-status {
+    display: flex;
+    align-items: center;
+    gap: 0.4375rem;
+}
+
+.dr-tadmin .battle-status i {
+    width: 0.3125rem;
+    height: 0.3125rem;
+    display: block;
+    background: var(--battle-red);
+    border-radius: 50%;
+    box-shadow: 0 0 0.5rem rgba(217,75,91,.7);
+}
 
 .dr-system-bar {
     width: 100%;
@@ -1974,7 +2391,6 @@
     color: #4ba8d0;
 }
 
-
 /* ============================================================
    GRID
    ============================================================ */
@@ -1985,7 +2401,6 @@
     gap: .75rem;
 }
 
-
 /* ============================================================
    TARJETA
    ============================================================ */
@@ -1993,34 +2408,23 @@
 .dr-canon-card {
     position: relative;
     min-width: 0;
-
     overflow: hidden;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
             145deg,
             #0e1b27,
             #08121b
         );
-
     border: 1px solid rgba(53,216,255,.13);
-
-    transition:
-        transform .25s ease,
+    transition: transform .25s ease,
         border-color .25s ease,
         box-shadow .25s ease;
 }
 
-
 .dr-canon-card:hover {
     transform: translateY(-.15rem);
-
     border-color: var(--emblema2);
-
-    box-shadow:
-        0 0 .8rem rgba(53,216,255,.08);
+    box-shadow: 0 0 .8rem rgba(53,216,255,.08);
 }
-
 
 /* ============================================================
    IMAGEN
@@ -2028,73 +2432,51 @@
 
 .dr-canon-image {
     position: relative;
-
     height: 14rem;
-
     overflow: hidden;
-
     background: #050b11;
 }
 
-
 .dr-canon-image img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     filter: saturate(.8);
-
-    transition:
-        transform .45s ease,
+    transition: transform .45s ease,
         filter .45s ease;
 }
-
 
 .dr-canon-card:hover .dr-canon-image img {
     transform: scale(1.045);
     filter: saturate(1.1);
 }
 
-
 .dr-canon-image:after {
     content: "";
-
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
             180deg,
             transparent 45%,
             rgba(3,10,16,.25) 65%,
             rgba(3,10,16,.95) 100%
         );
-
     pointer-events: none;
 }
-
 
 /* efecto digital */
 
 .dr-canon-image-scan {
     position: absolute;
     z-index: 2;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 2px;
-
     background: var(--emblema2);
-
     opacity: .35;
-
     box-shadow: 0 0 .5rem var(--emblema2);
-
     animation: drCanonScan 4s linear infinite;
 }
 
@@ -2118,7 +2500,6 @@
     }
 }
 
-
 /* ============================================================
    ESTADO DE LA TARJETA
    ============================================================ */
@@ -2126,23 +2507,16 @@
 .dr-canon-status-label {
     position: absolute;
     z-index: 3;
-
     top: .65rem;
     right: .65rem;
-
     padding: .3rem .45rem;
-
     background: rgba(3,10,16,.8);
-
     border: 1px solid currentColor;
-
     font-family: "Roboto Mono", monospace;
     font-size: .42rem;
     font-weight: 700;
-
     letter-spacing: .06rem;
 }
-
 
 .dr-canon-card.available .dr-canon-status-label {
     color: #4ee38b;
@@ -2156,17 +2530,14 @@
     color: #d94b5b;
 }
 
-
 /* ============================================================
    INFORMACIÓN
    ============================================================ */
 
 .dr-canon-info {
     position: relative;
-
     padding: .8rem;
 }
-
 
 /* ============================================================
    NOMBRE
@@ -2174,39 +2545,27 @@
 
 .dr-canon-name {
     margin-bottom: .7rem;
-
     padding-bottom: .5rem;
-
     border-bottom: 1px solid rgba(255,255,255,.07);
 }
 
-
 .dr-canon-name span {
     display: block;
-
     color: #fff;
-
     font-family: "Jersey 15", sans-serif;
     font-size: 1.5rem;
     line-height: .95;
-
     text-transform: uppercase;
 }
 
-
 .dr-canon-name small {
     display: block;
-
     margin-top: .25rem;
-
     color: var(--emblema2);
-
     font-family: "Roboto Mono", monospace;
     font-size: .43rem;
-
     letter-spacing: .08rem;
 }
-
 
 /* ============================================================
    DATOS
@@ -2216,40 +2575,27 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: .35rem;
-
     margin-bottom: .7rem;
 }
 
-
 .dr-canon-data span {
     min-width: 0;
-
     padding: .4rem;
-
     background: rgba(255,255,255,.025);
-
     border-left: 2px solid var(--emblema1);
-
     color: #8a9ca9;
-
     font-family: "Roboto Mono", monospace;
     font-size: .43rem;
-
     line-height: 1.35;
 }
 
-
 .dr-canon-data b {
     display: block;
-
     margin-bottom: .15rem;
-
     color: var(--emblema2);
-
     font-size: .38rem;
     letter-spacing: .05rem;
 }
-
 
 /* ============================================================
    DESCRIPCIÓN
@@ -2257,31 +2603,22 @@
 
 .dr-canon-description {
     min-height: 4.3rem;
-
     padding: .55rem;
-
     background: rgba(0,0,0,.12);
-
     border-top: 1px solid rgba(255,255,255,.04);
     border-bottom: 1px solid rgba(255,255,255,.04);
-
     color: #7d909e;
-
     font-family: "Oxanium", sans-serif;
     font-size: .56rem;
-
     line-height: 1.55;
     text-align: justify;
 }
-
-
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
 
 @media (max-width: 40.625rem) {
-
     .dr-canon {
         width: 96%;
     }
@@ -2297,7 +2634,6 @@
     .dr-canon-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
 /* ESTADO */
@@ -2305,16 +2641,11 @@
 .dr-canon-status-label {
     position: absolute;
     z-index: 3;
-
     top: .65rem;
     right: .65rem;
-
     padding: .3rem .45rem;
-
     background: rgba(3,10,16,.8);
-
     border: 1px solid currentColor;
-
     font-family: "Roboto Mono", monospace;
     font-size: .42rem;
     font-weight: 700;
@@ -2333,9 +2664,7 @@
     color: #d94b5b;
 }
 
-
 @media (max-width: 28.125rem) {
-
     .dr-canon-intro {
         margin-left: .75rem;
         margin-right: .75rem;
@@ -2361,9 +2690,7 @@
     .dr-canon-image {
         height: 16rem;
     }
-
 }
-
 
 /* ==========================================================
    DIGITAL RIFT — POST / TABLILLA DE ROL
@@ -2373,33 +2700,26 @@
     --dr-blue: var(--emblema1, #1677C8);
     --dr-cyan: var(--emblema2, #22c1c3);
     --dr-line: rgba(34,193,195,.22);
-
     width: 42.5rem;
     max-width: calc(100% - 1.875rem);
     margin: 2.1875rem auto;
     position: relative;
     overflow: hidden;
-
     background: linear-gradient(
         135deg,
         rgba(8,15,24,.98),
         rgba(10,20,30,.96)
     );
-
     border: 0.0625rem solid var(--dr-line);
     color: var(--colortextodl);
     font-family: "Oxanium", sans-serif;
     font-size: 0.75rem;
     line-height: 1.8;
     text-align: left;
-
-    box-shadow:
-        0 0 2.1875rem rgba(0,0,0,.45),
+    box-shadow: 0 0 2.1875rem rgba(0,0,0,.45),
         inset 0 0 2.5rem rgba(22,119,200,.035);
-
     box-sizing: border-box;
 }
-
 
 /* ==========================================================
    DECORACIÓN GENERAL
@@ -2410,7 +2730,6 @@
 #dr-post *::after {
     box-sizing: border-box;
 }
-
 
 /* línea superior */
 
@@ -2426,7 +2745,6 @@
     z-index: 5;
 }
 
-
 /* línea lateral */
 
 #dr-post::after {
@@ -2436,18 +2754,15 @@
     top: 7.5rem;
     width: 0.125rem;
     height: 8.125rem;
-
     background: linear-gradient(
         to bottom,
         transparent,
         var(--dr-blue),
         transparent
     );
-
     opacity: .65;
     z-index: 5;
 }
-
 
 /* ==========================================================
    CABECERA
@@ -2457,13 +2772,10 @@
     position: relative;
     min-height: 11.875rem;
     padding: 1.75rem 2.125rem 1.5625rem;
-
     background: var(--colorfondot);
-
     border-bottom: 0.0625rem solid var(--emblema1);
     overflow: hidden;
 }
-
 
 /* rejilla tecnológica */
 
@@ -2471,9 +2783,7 @@
     content: "";
     position: absolute;
     inset: 0;
-
-    background-image:
-        linear-gradient(
+    background-image: linear-gradient(
             90deg,
             transparent 49%,
             rgba(34,193,195,.035) 50%,
@@ -2485,12 +2795,10 @@
             rgba(34,193,195,.025) 50%,
             transparent 51%
         );
-
     background-size: 2.375rem 2.375rem;
     opacity: .35;
     pointer-events: none;
 }
-
 
 /* ==========================================================
    ICONO SUPERIOR DERECHO
@@ -2500,20 +2808,15 @@
     position: absolute;
     top: 1.5625rem;
     right: 1.75rem;
-
     width: 1.875rem;
     height: 1.875rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border: 0.0625rem solid rgba(34,193,195,.35);
     color: var(--emblema2);
     background: rgba(8,15,24,.7);
-
     transform: rotate(45deg);
-
     box-shadow: 0 0 0.75rem rgba(34,193,195,.08);
 }
 
@@ -2521,7 +2824,6 @@
     transform: rotate(-45deg);
     font-size: 0.6875rem;
 }
-
 
 /* ==========================================================
    TÍTULO
@@ -2531,7 +2833,6 @@
     position: relative;
     max-width: 31.875rem;
     margin: 0;
-
     color: #fff;
     font-family: "Jersey 15";
     font-size: 3rem;
@@ -2541,7 +2842,6 @@
     text-transform: uppercase;
 }
 
-
 /* degradado del título */
 
 #dr-post .dr-post-title span {
@@ -2550,12 +2850,10 @@
         var(--emblema2),
         var(--emblema1)
     );
-
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 
 /* ==========================================================
    BOTONES / TAGS
@@ -2572,20 +2870,16 @@
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
-
     padding: 0.1875rem 0.625rem;
-
     color: var(--emblema2);
     background: var(--colorfondo);
     border: 0.0625rem solid var(--emblema2);
-
     font-family: "Roboto Mono", monospace;
     font-size: 0.4375rem;
     font-weight: 700;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
     text-decoration: none;
-
     transition: .2s ease;
 }
 
@@ -2601,17 +2895,14 @@
     box-shadow: 0 0 0.625rem rgba(34,193,195,.10);
 }
 
-
 /* ==========================================================
    CUERPO
    ========================================================== */
 
 #dr-post .dr-post-body {
     padding: 1.875rem 2.875rem 2.1875rem;
-
     background: var(--colorfondot);
 }
-
 
 /* ==========================================================
    ÉNFASIS
@@ -2657,13 +2948,11 @@
     opacity: .18;
 }
 
-
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
 
 @media (max-width: 43.75rem) {
-
     #dr-post {
         width: calc(100% - 1.25rem);
         margin: 1.25rem auto;
@@ -2684,9 +2973,7 @@
     }
 }
 
-
 @media (max-width: 30rem) {
-
     #dr-post .dr-post-title {
         font-size: 1.5rem;
         letter-spacing: 0.0625rem;
@@ -2721,24 +3008,19 @@
     --battle-line: rgba(34,193,195,.22);
     --battle-text: #dce8f2;
     --battle-muted: #7f95a8;
-
     width: 45rem;
     margin: 1.875rem auto;
     position: relative;
     overflow: hidden;
-
     background: var(--colorfondot);
     border: 0.0625rem solid var(--colorfondo);
     color: var(--battle-text);
     font-family: "Oxanium", sans-serif;
     font-size: 0.75rem;
     line-height: 1.7;
-
-    box-shadow:
-        0 0 2.1875rem rgba(0,0,0,.45),
+    box-shadow: 0 0 2.1875rem rgba(0,0,0,.45),
         inset 0 0 2.8125rem rgba(22,119,200,.04);
 }
-
 
 /* ==========================================================
    BARRA SUPERIOR
@@ -2747,14 +3029,11 @@
 .dr-battle .battle-top {
     height: 1.875rem;
     padding: 0 1.125rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: var(--colorfondot);
     border-bottom: 0.0625rem solid var(--emblema2);
-
     font-family: "Roboto Mono", monospace;
     font-size: 0.5rem;
     letter-spacing: 0.09375rem;
@@ -2774,15 +3053,11 @@
 .dr-battle .battle-status i {
     width: 0.3125rem;
     height: 0.3125rem;
-
     display: block;
-
     background: var(--emblema2);
     border-radius: 50%;
-
     box-shadow: 0 0 0.5rem rgba(217,75,91,.7);
 }
-
 
 /* ==========================================================
    CABECERA DEL PERSONAJE
@@ -2791,17 +3066,13 @@
 .dr-battle .battle-header {
     min-height: 9.375rem;
     padding: 1.5625rem;
-
     position: relative;
     display: flex;
     align-items: center;
     gap: 1.25rem;
-
     background: var(--colorfondot);
-
     border-bottom: 0.0625rem solid var(--emblema2);
 }
-
 
 /* línea decorativa */
 
@@ -2810,15 +3081,11 @@
     position: absolute;
     bottom: -0.1rem;
     left: 1.5625rem;
-
     width: 10.9375rem;
     height: 0.125rem;
-
     background: var(--emblema1);
-
     box-shadow: 0 0 0.75rem rgba(34,193,195,.55);
 }
-
 
 /* ==========================================================
    RETRATO
@@ -2827,14 +3094,11 @@
 .dr-battle .battle-avatar {
     width: 6.5625rem;
     height: 6.5625rem;
-
     flex-shrink: 0;
     position: relative;
     padding: 0.25rem;
-
     background: #07111b;
     border: 0.0625rem solid var(--emblema2);
-
     clip-path: polygon(
         15% 0,
         85% 0,
@@ -2851,7 +3115,6 @@
     content: "";
     position: absolute;
     inset: 0.3125rem;
-
     border: 0.0625rem solid rgba(34,193,195,.3);
     pointer-events: none;
 }
@@ -2859,11 +3122,8 @@
 .dr-battle .battle-avatar img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
     clip-path: polygon(
         15% 0,
         85% 0,
@@ -2874,10 +3134,8 @@
         0 85%,
         0 15%
     );
-
     filter: saturate(.8) contrast(1.1);
 }
-
 
 /* ==========================================================
    INFORMACIÓN
@@ -2890,13 +3148,10 @@
 
 .dr-battle .battle-label {
     display: inline-block;
-
     margin-bottom: 0.5rem;
     padding: 0.1875rem 0.5rem;
-
     border: 0.0625rem solid var(--battle-blue);
     color: var(--emblema2);
-
     font-family: "Roboto Mono", monospace;
     font-size: 0.4375rem;
     letter-spacing: 0.09375rem;
@@ -2905,7 +3160,6 @@
 
 .dr-battle .battle-name {
     margin: 0;
-
     color: #fff;
     font-family: "Jersey 15", sans-serif;
     font-size: 2.375rem;
@@ -2926,7 +3180,6 @@
     color: var(--emblema1);
 }
 
-
 /* ==========================================================
    ICONO DE COMBATE
    ========================================================== */
@@ -2935,14 +3188,11 @@
     position: absolute;
     right: 1.75rem;
     bottom: 0.9375rem;
-
     color: var(--emblema2);
     font-size: 2.1875rem;
     opacity: .12;
-
     transform: rotate(-15deg);
 }
-
 
 /* ==========================================================
    SEPARADOR
@@ -2950,11 +3200,9 @@
 
 .dr-battle .battle-separator {
     margin: 0 1.5625rem;
-
     border: 0;
     border-top: 0.0625rem solid rgba(34,193,195,.14);
 }
-
 
 /* ==========================================================
    ESTADÍSTICAS
@@ -2963,17 +3211,13 @@
 .dr-battle .battle-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     margin: 1.25rem 1.5625rem 0.9375rem;
-
     border: 0.0625rem solid var(--emblema2);
 }
 
 .dr-battle .battle-stat {
     padding: 0.6875rem 0.3125rem;
-
     text-align: center;
-
     background: var(--colorfondo);
     border-right: 0.0625rem solid var(--emblema2);
 }
@@ -2984,7 +3228,6 @@
 
 .dr-battle .battle-stat b {
     display: block;
-
     color: #fff;
     font-family: "Roboto Mono", monospace;
     font-size: 1.0625rem;
@@ -2993,9 +3236,7 @@
 
 .dr-battle .battle-stat i {
     display: block;
-
     margin-top: 0.3125rem;
-
     color: var(--battle-muted);
     font-style: normal;
     font-size: 0.4375rem;
@@ -3015,53 +3256,40 @@
     color: var(--emblema2);
 }
 
-
 /* ==========================================================
    BARRAS DE ESTADO
    ========================================================== */
 
-.dr-battle .battle-bars {
-  
-}
-
+.dr-battle .battle-bars {}
 
 /* barra */
 
 .dr-battle .battle-bar {
     margin-bottom: 0.75rem;
-
     position: relative;
     height: 1.3125rem;
-
     background: #071019;
     border: 0.0625rem solid #203b4c;
     overflow: hidden;
     margin: 1.125rem 1.5625rem 1.25rem;
 }
 
-
 /* relleno */
 
 .dr-battle .battle-bar b {
     display: block;
-
     width: calc(
         (var(--actual) / var(--total)) * 100%
     );
-
     height: 100%;
-
     background: linear-gradient(
         90deg,
         var(--battle-blue-dark),
         var(--emblema2)
     );
-
     box-shadow: 0 0 0.75rem rgba(34,193,195,.25);
-
     transition: width .3s ease;
 }
-
 
 /* barra de vida */
 
@@ -3073,7 +3301,6 @@
     );
 }
 
-
 /* barra de energía */
 
 .dr-battle .battle-bar.energy b {
@@ -3084,7 +3311,6 @@
     );
 }
 
-
 /* barra de digievolución */
 
 .dr-battle .battle-bar.digi b {
@@ -3093,22 +3319,17 @@
         #735100,
         #f2b705
     );
-
     box-shadow: 0 0 0.75rem rgba(242,183,5,.2);
 }
-
 
 /* texto de barra */
 
 .dr-battle .battle-bar:after {
     content: attr(data-name);
-
     position: absolute;
     left: 0.5625rem;
     top: 50%;
-
     transform: translateY(-50%);
-
     color: #fff;
     font-family: "Roboto Mono", monospace;
     font-size: 0.4375rem;
@@ -3118,31 +3339,25 @@
     text-shadow: 0 0.0625rem 0.1875rem #000;
 }
 
-
 /* ==========================================================
    PANEL DE COMBATE
    ========================================================== */
 
 .dr-battle .battle-panel {
     margin: 1.25rem 1.5625rem 1.5625rem;
-
     border: 0.0625rem solid var(--emblema2);
     background: var(--colorfondo);
 }
-
 
 /* cabecera del panel */
 
 .dr-battle .battle-panel-title {
     min-height: 2.625rem;
     padding: 0 0.9375rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: var(--colorfondo);
-
     border-bottom: 0.0625rem solid var(--emblema2);
 }
 
@@ -3156,7 +3371,6 @@
 
 .dr-battle .battle-panel-title span i {
     margin-right: 0.5rem;
-
     color: var(--emblema2);
     font-size: 0.75rem;
 }
@@ -3167,7 +3381,6 @@
     font-size: 0.4375rem;
     letter-spacing: 0.0625rem;
 }
-
 
 /* ==========================================================
    LOG DE COMBATE
@@ -3182,7 +3395,6 @@
 
 .dr-battle .battle-log i {
     margin-right: 0.4375rem;
-
     color: var(--emblema2);
     font-size: 0.5rem;
 }
@@ -3195,7 +3407,6 @@
     border-bottom: 0.0625rem solid rgba(24,50,70,.45);
 }
 
-
 /* ==========================================================
    TÉCNICAS / ACCIONES
    ========================================================== */
@@ -3203,30 +3414,25 @@
 .dr-battle .battle-actions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 0.4375rem;
     margin: 0 1.6rem 2rem;
 }
 
 .dr-battle .battle-action {
     padding: 0.6875rem 0.8125rem;
-
     background: var(--colorfondo);
     border: 0.0625rem solid var(--emblema2);
-
     transition: .2s ease;
 }
 
 .dr-battle .battle-action:hover {
     border-color: var(--emblema2);
     background: rgba(34,193,195,.04);
-
     transform: translateX(0.125rem);
 }
 
 .dr-battle .battle-action small {
     display: block;
-
     color: var(--emblema2);
     font-family: "Roboto Mono", monospace;
     font-size: 0.4375rem;
@@ -3236,18 +3442,14 @@
 
 .dr-battle .battle-action b {
     display: block;
-
     margin-top: 0.1875rem;
-
     color: #fff;
     font-size: 0.6875rem;
 }
 
 .dr-battle .battle-action span {
     display: block;
-
     margin-top: 0.1875rem;
-
     color: #6f8493;
     font-size: 0.5rem;
 }
@@ -3257,7 +3459,6 @@
    ========================================================== */
 
 @media (max-width: 47.5rem) {
-
     .dr-battle {
         width: calc(100% - 1.875rem);
     }
@@ -3284,7 +3485,7 @@
         border-right: 0;
     }
 
-    .dr-battle .battle-stat:nth-child(-n+3) {
+    .dr-battle .battle-stat:nth-child(-n/**/+3) {
         border-bottom: 0.0625rem solid var(--emblema2);
     }
 
@@ -3302,41 +3503,32 @@
     width: 42.5rem;
     margin: 1.5625rem auto;
     padding: 1.125rem;
-
     background: var(--colorfondo);
     border: 0.0625rem solid var(--linkc3);
-
     box-shadow: 0 0.75rem 2.5rem rgba(0,0,0,.45);
-
-    font-family: 'Jersey 15', Arial, sans-serif;
+    font-family: "Jersey 15", Arial, sans-serif;
     font-size: 0.8125rem;
     line-height: 1.75;
     color: var(--text);
     text-align: left;
-
     position: relative;
 }
 
 .dg-log:before {
     content: "DIGITAL RIFT";
-
     position: absolute;
     top: -0.5rem;
     right: 1.5625rem;
-
     padding: 0.125rem 0.5625rem;
-
     background: linear-gradient(
         175deg,
         var(--colorfondo4),
        var(--colorfondo)
     );
-
     font-size: 0.75rem;
     letter-spacing: 0.125rem;
     color: var(--emblema2);
 }
-
 
 /* ==========================================================
    HEADER
@@ -3344,9 +3536,7 @@
 
 .dg-core-header {
     padding-bottom: 0.3125rem;
-
     border-bottom: 0.0625rem solid var(--emblema2);
-
     margin-bottom: 1.125rem;
 }
 
@@ -3356,21 +3546,17 @@
     letter-spacing: 0.1875rem;
     color: var(--emblema1);
     text-transform: uppercase;
-        font-family: 'Oxanium', Arial, sans-serif;
-
+    font-family: "Oxanium", Arial, sans-serif;
 }
 
 .dg-core-title {
     margin-top: 0.5rem;
-
     font-size: 3rem;
     font-weight: 700;
     line-height: 1;
-
     text-transform: uppercase;
     color: #fff;
 }
-
 
 /* ==========================================================
    TAGS
@@ -3379,38 +3565,29 @@
 .dg-core-tags {
     display: flex;
     flex-wrap: wrap;
-
     gap: 0.375rem;
     margin: 1.125rem 0;
 }
 
 .dg-core-tag {
     padding: 0.4rem 1rem;
-
     background: var(--emblema1);
     border: 0.0625rem solid #284554;
-
     font-size: 0.6rem;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
     color: var(--colortextodl);
 }
 
-
 .dr-tbasica-body {
     position: relative;
-
     padding: 1.5625rem 2.1875rem 1.5625rem;
-
     box-sizing: border-box;
-
     border: 0.0625rem solid var(--emblema1);
     border-radius: 0.5rem 0.5rem 0 0;
-
-    font-family: 'Oxanium';
+    font-family: "Oxanium";
     font-size: 0.75rem;
 }
-
 
 /* ==========================================================
    FOOTER
@@ -3419,12 +3596,9 @@
 .dg-core-footer {
     margin-top: 1.375rem;
     padding-top: 0.8125rem;
-
     border-top: 0.0625rem solid var(--emblema2);
-
     display: flex;
     justify-content: space-between;
-
     font-size: 0.4375rem;
     letter-spacing: 0.125rem;
     text-transform: uppercase;
@@ -3446,29 +3620,22 @@
     margin: 2.1875rem auto;
 }
 
-
 /* ==========================================================
    CONTENEDOR
    ========================================================== */
 
 .dr-post-character {
     position: absolute;
-
     left: 34.375rem;
     top: -3.125rem;
-
     width: 10rem;
     height: 10rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     z-index: 20;
-
     pointer-events: none;
 }
-
 
 /* ==========================================================
    ARO EXTERIOR — GIRA A LA DERECHA
@@ -3476,29 +3643,19 @@
 
 .dr-post-character::before {
     content: "";
-
     position: absolute;
-
     width: 8.75rem;
     height: 8.75rem;
-
     border-radius: 50%;
-
     border: 0.0625rem solid rgba(255,255,255,.5);
-
     border-top-color: var(--emblema2);
     border-right-color: transparent;
     border-bottom-color: rgba(255,255,255,.3);
     border-left-color: transparent;
-
     box-sizing: border-box;
-
-    box-shadow:
-        0 0 0.5rem rgba(34,193,195,.25);
-
+    box-shadow: 0 0 0.5rem rgba(34,193,195,.25);
     animation: dr-post-ring-right 12s linear infinite;
 }
-
 
 /* ==========================================================
    ARO INTERIOR — GIRA A LA IZQUIERDA
@@ -3506,31 +3663,21 @@
 
 .dr-post-character::after {
     content: "";
-
     position: absolute;
-
     width: 7.25rem;
     height: 7.25rem;
-
     border-radius: 50%;
-
     border: 0.0625rem dashed rgba(255,255,255,.3);
-
     box-sizing: border-box;
-
-    box-shadow:
-        0 0 0.625rem rgba(34,193,195,.12);
-
+    box-shadow: 0 0 0.625rem rgba(34,193,195,.12);
     animation: dr-post-ring-left 8s linear infinite;
 }
-
 
 /* ==========================================================
    ANIMACIONES DE LOS AROS
    ========================================================== */
 
 @keyframes dr-post-ring-right {
-
     from {
         transform: rotate(0deg);
     }
@@ -3538,12 +3685,9 @@
     to {
         transform: rotate(360deg);
     }
-
 }
 
-
 @keyframes dr-post-ring-left {
-
     from {
         transform: rotate(0deg);
     }
@@ -3551,9 +3695,7 @@
     to {
         transform: rotate(-360deg);
     }
-
 }
-
 
 /* ==========================================================
    CÍRCULO CENTRAL
@@ -3561,31 +3703,21 @@
 
 .dr-post-character-ring {
     position: relative;
-
     width: 5.75rem;
     height: 5.75rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     padding: 0.1875rem;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
             135deg,
             var(--emblema2),
             var(--emblema1)
         );
-
     box-sizing: border-box;
-
     z-index: 3;
-
-    box-shadow:
-        0 0 0.625rem rgba(0,0,0,.65),
+    box-shadow: 0 0 0.625rem rgba(0,0,0,.65),
         0 0 1rem color-mix(
             in srgb,
             var(--emblema2) 30%,
@@ -3593,42 +3725,28 @@
         );
 }
 
-
 /* ==========================================================
    ARO CENTRAL — GIRA AL LADO CONTRARIO
    ========================================================== */
 
 .dr-post-character-ring::before {
     content: "";
-
     position: absolute;
-
     width: 6.75rem;
     height: 6.75rem;
-
     left: 50%;
     top: 50%;
-
     transform: translate(-50%, -50%);
-
     border-radius: 50%;
-
     border: 0.0625rem solid transparent;
-
     border-top-color: var(--emblema2);
     border-bottom-color: var(--emblema1);
-
-    box-shadow:
-        0 0 0.5rem rgba(34,193,195,.25);
-
+    box-shadow: 0 0 0.5rem rgba(34,193,195,.25);
     pointer-events: none;
-
     animation: dr-post-ring-center 6s linear infinite;
 }
 
-
 @keyframes dr-post-ring-center {
-
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
@@ -3636,9 +3754,7 @@
     to {
         transform: translate(-50%, -50%) rotate(-360deg);
     }
-
 }
-
 
 /* ==========================================================
    MARCAS DIGITALES
@@ -3646,30 +3762,20 @@
 
 .dr-post-character-ring::after {
     content: "";
-
     position: absolute;
-
     left: 50%;
     bottom: -1.25rem;
-
     transform: translateX(-50%);
-
     width: 7rem;
-
     color: var(--emblema2);
-
     font-family: "Roboto Mono", monospace;
     font-size: 0.375rem;
     font-weight: 700;
-
     letter-spacing: 0.125rem;
     text-align: center;
-
     white-space: nowrap;
-
     opacity: .75;
 }
-
 
 /* ==========================================================
    IMAGEN DEL PERSONAJE
@@ -3677,29 +3783,21 @@
 
 .dr-post-character-ring img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     border-radius: 50%;
-
     object-fit: cover;
-
     border: 0.1875rem solid #080f18;
-
     box-sizing: border-box;
-
     background: #080f18;
 }
-
 
 /* ==========================================================
    NODOS DIGITALES
    ========================================================== */
 
 .dr-post-character {
-    background:
-        radial-gradient(
+    background: radial-gradient(
             circle at 50% 5%,
             var(--emblema2) 0,
             var(--emblema2) 0.125rem,
@@ -3725,7 +3823,6 @@
         );
 }
 
-
 /* ==========================================================
    AJUSTE TABLILLA
    ========================================================== */
@@ -3734,28 +3831,23 @@
     margin: 0;
 }
 
-
 /* ==========================================================
    REDUCCIÓN DE MOVIMIENTO
    ========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
-
     .dr-post-character::before,
     .dr-post-character::after,
     .dr-post-character-ring::before {
         animation: none;
     }
-
 }
-
 
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
 
 @media (max-width: 43.75rem) {
-
     .dr-post-wrap {
         width: calc(100% - 1.25rem);
     }
@@ -3763,7 +3855,6 @@
     .dr-post-character {
         left: -2rem;
         top: -2.75rem;
-
         width: 7rem;
         height: 7rem;
     }
@@ -3787,16 +3878,12 @@
         width: 5rem;
         height: 5rem;
     }
-
 }
 
-
 @media (max-width: 30rem) {
-
     .dr-post-character {
         left: -1rem;
         top: -2.25rem;
-
         width: 5.75rem;
         height: 5.75rem;
     }
@@ -3824,9 +3911,7 @@
     .dr-post-character-ring::after {
         display: none;
     }
-
 }
-
 
 /* ==========================================================
    DIGITAL RIFT — TABLÓN DE MISIONES
@@ -3848,7 +3933,9 @@
     box-sizing: border-box;
 }
 
-.dr-mission * {box-sizing: border-box;}
+.dr-mission * {
+    box-sizing: border-box;
+}
 
 /* PANEL PRINCIPAL */
 
@@ -3978,12 +4065,25 @@
     scrollbar-color: var(--emblema1) var(--colorfondo);
 }
 
-.dr-mission-description p {margin: 0 0 .625rem;}
-.dr-mission-description p:last-child {margin-bottom: 0;}
+.dr-mission-description p {
+    margin: 0 0 .625rem;
+}
 
-.dr-mission-description::-webkit-scrollbar {width: 4px;}
-.dr-mission-description::-webkit-scrollbar-track {background: var(--colorfondo);}
-.dr-mission-description::-webkit-scrollbar-thumb {background: var(--emblema1);}
+.dr-mission-description p:last-child {
+    margin-bottom: 0;
+}
+
+.dr-mission-description::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dr-mission-description::-webkit-scrollbar-track {
+    background: var(--colorfondo);
+}
+
+.dr-mission-description::-webkit-scrollbar-thumb {
+    background: var(--emblema1);
+}
 
 /* DESPLEGABLE DE NORMAS */
 
@@ -4006,8 +4106,13 @@
     transition: background .2s ease;
 }
 
-.dr-mission-rules summary::-webkit-details-marker {display: none;}
-.dr-mission-rules summary::marker {content: "";}
+.dr-mission-rules summary::-webkit-details-marker {
+    display: none;
+}
+
+.dr-mission-rules summary::marker {
+    content: "";
+}
 
 .dr-mission-rules summary:after {
     content: "";
@@ -4021,7 +4126,9 @@
 }
 
 .dr-mission-rules summary:hover:after,
-.dr-mission-rules[open] summary:after {width: 100%;}
+.dr-mission-rules[open] summary:after {
+    width: 100%;
+}
 
 .dr-mission-rules summary:hover {
     background: linear-gradient(90deg, var(--colorfondo4), transparent);
@@ -4073,8 +4180,13 @@
     white-space: nowrap;
 }
 
-.dr-mission-rules-toggle:before {content: "＋ ABRIR";}
-.dr-mission-rules[open] .dr-mission-rules-toggle:before {content: "－ CERRAR";}
+.dr-mission-rules-toggle:before {
+    content: "＋ ABRIR";
+}
+
+.dr-mission-rules[open] .dr-mission-rules-toggle:before {
+    content: "－ CERRAR";
+}
 
 /* CONTENIDO DE LAS NORMAS */
 
@@ -4085,8 +4197,15 @@
 }
 
 @keyframes dr-mission-open {
-    from {opacity: 0; transform: translateY(-4px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .dr-mission-rule {
@@ -4098,7 +4217,9 @@
     border-bottom: 1px solid var(--emblema2);
 }
 
-.dr-mission-rule:last-child {border-bottom: 0;}
+.dr-mission-rule:last-child {
+    border-bottom: 0;
+}
 
 .dr-mission-rule > span {
     display: flex;
@@ -4119,45 +4240,186 @@
     line-height: 1.7;
 }
 
-.dr-mission-rule p b {color: var(--emblema1);}
+.dr-mission-rule p b {
+    color: var(--emblema1);
+}
 
 /* RESPONSIVE */
 
 @media (max-width: 38rem) {
-    .dr-mission {padding: .625rem;}
-    .dr-mission-card {grid-template-columns: minmax(0, 1fr); gap: .75rem;}
-    .dr-mission-image, .dr-mission-image img {min-height: 0; height: 13rem;}
-    .dr-mission-content {padding: .25rem;}
-    .dr-mission-description {max-height: 10rem;}
-    .dr-mission-rules summary {gap: .5rem; padding: .625rem;}
-    .dr-mission-rules-toggle {font-size: 0;}
-    .dr-mission-rules-toggle:before {font-size: .45rem;}
-    .dr-mission-rule {grid-template-columns: 1.5rem minmax(0, 1fr); gap: .5rem;}
+    .dr-mission {
+        padding: .625rem;
+    }
+
+    .dr-mission-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: .75rem;
+    }
+
+    .dr-mission-image, .dr-mission-image img {
+        min-height: 0;
+        height: 13rem;
+    }
+
+    .dr-mission-content {
+        padding: .25rem;
+    }
+
+    .dr-mission-description {
+        max-height: 10rem;
+    }
+
+    .dr-mission-rules summary {
+        gap: .5rem;
+        padding: .625rem;
+    }
+
+    .dr-mission-rules-toggle {
+        font-size: 0;
+    }
+
+    .dr-mission-rules-toggle:before {
+        font-size: .45rem;
+    }
+
+    .dr-mission-rule {
+        grid-template-columns: 1.5rem minmax(0, 1fr);
+        gap: .5rem;
+    }
 }
 
 /* ==========================================================
    DIGITAL RIFT — CARRITO DE LA TIENDA
    ========================================================== */
-.dr-tadmin .tienda-add { margin-top:.4rem; padding:.35rem .5rem; width:100%; background:var(--colorfondo); border:1px solid var(--emblema2); color:var(--emblema2); font-family:"Roboto Mono",monospace; font-size:.5rem; text-transform:uppercase; cursor:pointer; transition:.2s ease; }
-.dr-tadmin .tienda-add:hover { background:var(--emblema2); color:#fff; }
-.dr-tadmin .tienda-cart { margin:1rem 0; padding:1rem; background:var(--colorfondo); border:1px solid var(--emblema2); }
-.dr-tadmin .tienda-cart-title { margin:0 0 .75rem; color:var(--emblema2); font-family:"Jersey 15",sans-serif; font-size:1.5rem; text-transform:uppercase; }
-.dr-tadmin .tienda-cart-empty { color:var(--colortextod); font-size:.65rem; }
-.dr-tadmin .tienda-cart-row { display:grid; grid-template-columns:minmax(0,1fr) auto auto; align-items:center; gap:.75rem; padding:.65rem 0; border-bottom:1px solid var(--colorfondo4); }
-.dr-tadmin .tienda-cart-name { color:var(--colortextodl); font-size:.7rem; overflow-wrap:anywhere; }
-.dr-tadmin .tienda-cart-qty { display:flex; align-items:center; gap:.4rem; }
-.dr-tadmin .tienda-cart-qty button, .dr-tadmin .tienda-cart-remove { padding:.25rem .45rem; background:var(--colorfondo); border:1px solid var(--emblema2); color:var(--emblema2); cursor:pointer; }
-.dr-tadmin .tienda-cart-line { color:var(--emblema1); font-family:"Roboto Mono",monospace; font-size:.65rem; white-space:nowrap; }
-.dr-tadmin .tienda-cart-total { display:flex; justify-content:space-between; gap:1rem; margin-top:.9rem; padding-top:.75rem; border-top:1px solid var(--emblema2); color:var(--colortextodl); font-size:.75rem; }
-.dr-tadmin .tienda-cart-total strong { color:var(--emblema1); font-family:"Roboto Mono",monospace; }
-.dr-tadmin .tienda-cart-submit { margin-top:.85rem; width:100%; padding:.7rem; background:var(--emblema2); border:1px solid var(--emblema2); color:#fff; font-family:"Roboto Mono",monospace; font-size:.65rem; text-transform:uppercase; cursor:pointer; }
-.dr-tadmin .tienda-cart-submit:disabled { opacity:.45; cursor:not-allowed; }
-.dr-tadmin .tienda-cart-notice { margin-top:.65rem; color:var(--colortextod); font-size:.6rem; line-height:1.6; }
-@media (max-width:30rem) {
-  .dr-tadmin .tienda-cart-row { grid-template-columns:minmax(0,1fr) auto; }
-  .dr-tadmin .tienda-cart-line { grid-column:1/-1; }
+
+.dr-tadmin .tienda-add {
+    margin-top: .4rem;
+    padding: .35rem .5rem;
+    width: 100%;
+    background: var(--colorfondo);
+    border: 1px solid var(--emblema2);
+    color: var(--emblema2);
+    font-family: "Roboto Mono",monospace;
+    font-size: .5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s ease;
 }
+
+.dr-tadmin .tienda-add:hover {
+    background: var(--emblema2);
+    color: #fff;
+}
+
+.dr-tadmin .tienda-cart {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--colorfondo);
+    border: 1px solid var(--emblema2);
+}
+
+.dr-tadmin .tienda-cart-title {
+    margin: 0 0 .75rem;
+    color: var(--emblema2);
+    font-family: "Jersey 15",sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .tienda-cart-empty {
+    color: var(--colortextod);
+    font-size: .65rem;
+}
+
+.dr-tadmin .tienda-cart-row {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto auto;
+    align-items: center;
+    gap: .75rem;
+    padding: .65rem 0;
+    border-bottom: 1px solid var(--colorfondo4);
+}
+
+.dr-tadmin .tienda-cart-name {
+    color: var(--colortextodl);
+    font-size: .7rem;
+    overflow-wrap: anywhere;
+}
+
+.dr-tadmin .tienda-cart-qty {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.dr-tadmin .tienda-cart-qty button, .dr-tadmin .tienda-cart-remove {
+    padding: .25rem .45rem;
+    background: var(--colorfondo);
+    border: 1px solid var(--emblema2);
+    color: var(--emblema2);
+    cursor: pointer;
+}
+
+.dr-tadmin .tienda-cart-line {
+    color: var(--emblema1);
+    font-family: "Roboto Mono",monospace;
+    font-size: .65rem;
+    white-space: nowrap;
+}
+
+.dr-tadmin .tienda-cart-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: .9rem;
+    padding-top: .75rem;
+    border-top: 1px solid var(--emblema2);
+    color: var(--colortextodl);
+    font-size: .75rem;
+}
+
+.dr-tadmin .tienda-cart-total strong {
+    color: var(--emblema1);
+    font-family: "Roboto Mono",monospace;
+}
+
+.dr-tadmin .tienda-cart-submit {
+    margin-top: .85rem;
+    width: 100%;
+    padding: .7rem;
+    background: var(--emblema2);
+    border: 1px solid var(--emblema2);
+    color: #fff;
+    font-family: "Roboto Mono",monospace;
+    font-size: .65rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dr-tadmin .tienda-cart-submit:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.dr-tadmin .tienda-cart-notice {
+    margin-top: .65rem;
+    color: var(--colortextod);
+    font-size: .6rem;
+    line-height: 1.6;
+}
+
+@media (max-width:30rem) {
+    .dr-tadmin .tienda-cart-row {
+        grid-template-columns: minmax(0,1fr) auto;
+    }
+
+    .dr-tadmin .tienda-cart-line {
+        grid-column: 1/-1;
+    }
+}
+
 /*=========BAUL=======================================================*/
+
 .dr-baul {
     --db-black: var(--theme-panel-deep, #07131c);
     --db-deep: var(--theme-panel, #0b2638);
@@ -4224,6 +4486,7 @@
 }
 
 /* MARCO GENERAL */
+
 .dr-baul-frame {
     padding: 8px;
     background: linear-gradient(145deg,var(--db-border),color-mix(in srgb,var(--db-border) 84%,var(--db-panel)) 48%,var(--db-border));
@@ -4235,6 +4498,7 @@
 }
 
 /* BARRA SUPERIOR */
+
 .dr-baul-top {
     min-height: 63px;
     display: flex;
@@ -4245,7 +4509,7 @@
     background: var(--colorfondo);
     border-bottom: 3px solid var(--emblema2);
     box-shadow: inset 0 -3px 0 var(--theme-panel-deep, #303d44);
-    Font-family: "Jersey 15"
+    Font-family: "Jersey 15";
 }
 
 .dr-baul-brand {
@@ -4310,6 +4574,7 @@
 }
 
 /* CABECERA DEL PERSONAJE */
+
 .dr-baul-cover {
     height: 300px;
     position: relative;
@@ -4382,6 +4647,7 @@
 }
 
 /* PESTAÑAS GEOMÉTRICAS */
+
 .dr-baul-tabs > input {
     position: absolute;
     width: 1px;
@@ -4414,7 +4680,7 @@
     color: var(--theme-text-muted, var(--db-cyan));
     text-align: center;
     font-size: 17px;
-    Font-family:"Jersey15"
+    Font-family: "Jersey15"
     font-weight: 900;
     letter-spacing: .4px;
     cursor: pointer;
@@ -4447,6 +4713,7 @@
 }
 
 /* PANELES */
+
 .dr-baul-panel {
     display: none;
     padding: 26px;
@@ -4508,6 +4775,7 @@
 }
 
 /* MAIN — PANTALLA DE ESTADO RPG */
+
 .dr-baul-main-grid {
     display: grid;
     grid-template-columns: .92fr 1.08fr;
@@ -4521,7 +4789,7 @@
     border: 2px solid var(--db-border);
     outline: 1px solid var(--theme-panel-deep, #102c3e);
     box-shadow: inset 0 1px 0 color-mix(in srgb,var(--theme-text) 5%,transparent),0 3px 9px var(--db-shadow);
-    font-size:15px;
+    font-size: 15px;
 }
 
 .dr-baul-profile {
@@ -4627,6 +4895,7 @@
 }
 
 /* DIARIO — MISIONES */
+
 .dr-baul-diary-panel {
     max-height: 590px;
     overflow-y: auto;
@@ -4683,6 +4952,7 @@
 }
 
 /* RELACIONES — TARJETAS DE PERSONAJE */
+
 .dr-baul-relationship-grid {
     display: grid;
     grid-template-columns: repeat(2,minmax(0,1fr));
@@ -4787,6 +5057,7 @@
 }
 
 /* GALERÍA — SELECCIÓN DE ARCHIVOS */
+
 .dr-baul-mosaic {
     display: grid;
     grid-template-columns: repeat(3,minmax(0,1fr));
@@ -4838,6 +5109,7 @@
 }
 
 /* EXTRAS */
+
 .dr-baul-extra-grid {
     display: grid;
     grid-template-columns: repeat(2,minmax(0,1fr));
@@ -4885,6 +5157,7 @@
 }
 
 /* RESPONSIVE */
+
 @media (max-width:650px) {
     .dr-baul-frame {
         padding: 4px;
@@ -5010,7 +5283,6 @@
     }
 }
 
-
 /* ========================================
    DIGITAL RIFT — ESTADOS DE REGISTRO
    Aceptado / Pendiente / Rechazado
@@ -5094,7 +5366,7 @@
     border: 0 !important;
     background: transparent !important;
     color: var(--state) !important;
-    font-family: 'Jersey 15', sans-serif !important;
+    font-family: "Jersey 15", sans-serif !important;
     font-size: 28px;
     font-weight: normal;
     line-height: 1;
