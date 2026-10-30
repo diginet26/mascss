@@ -1420,7 +1420,7 @@
 
 /* ALTURAS INDIVIDUALES DE LOS BLOQUES */
 .dr-ficha .dr-page1 .dr-digimon > .dr-text {height: 18.625rem;}
-.dr-ficha .dr-page2 > .dr-text {height: 7rem;}
+.dr-ficha .dr-page2 > .dr-text {height: auto; overflow: visible;}
 .dr-ficha .dr-page3 > .dr-text {height: 11.5rem;}
 
 /* ============================================================
