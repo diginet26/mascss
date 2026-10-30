@@ -5812,7 +5812,7 @@ blockquote blockquote {
 
 /* hover */
 .roll-result:hover {
-    background: #0d1a26;
+    background: var(--colorfondo2);
     border-color: var(--emblema1);
     transform: translateX(.1429rem);
 }
