@@ -1400,20 +1400,28 @@
     text-transform: uppercase;
 } */
 
-/* TEXTO */
-.dr-text {
-padding: 1.214rem;
-box-sizing: border-box;
-background: var(--colorfondo);
-border: 0.071rem solid var(--dr-border);
-color: var(--colortextod);
-font-size: 0.6rem;
-line-height: 1.8;
-text-align: justify;
+/* TEXTO — TABLILLA DE FICHA */
+.dr-ficha .dr-text {
+    min-height: 0;
+    box-sizing: border-box;
+    padding: 1.214rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--colorfondo);
+    border: 0.071rem solid var(--dr-border);
+    color: var(--colortextod);
+    font-size: 0.6rem;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-.dr-text p {margin: 0 0 0.857rem;}
-.dr-text p:last-child {margin-bottom: 0;}
+.dr-ficha .dr-text p {margin: 0 0 0.857rem;}
+.dr-ficha .dr-text p:last-child {margin-bottom: 0;}
+
+/* ALTURAS INDIVIDUALES DE LOS BLOQUES */
+.dr-ficha .dr-page1 .dr-digimon > .dr-text {height: 18.625rem;}
+.dr-ficha .dr-page2 > .dr-text {height: 7rem;}
+.dr-ficha .dr-page3 > .dr-text {height: 11.5rem;}
 
 /* ============================================================
    PÁGINAS
