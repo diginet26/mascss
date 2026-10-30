@@ -5502,3 +5502,16 @@
         font-size: 0.75rem;
     }
 }
+/*otro estilo de lista*/
+.dr-rule-list {
+    counter-reset: dr-item;
+    list-style: none;
+}
+
+.dr-rule-list li {
+    counter-increment: dr-item;
+}
+
+.dr-rule-list li::before {
+    content: counter(dr-item, upper-roman);
+}
