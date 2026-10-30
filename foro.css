@@ -18856,10 +18856,14 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     color: #ff7627;
 }
 
+
 /* =========================================================
    DIGITAL RIFT — TARJETA EMERGENTE DE MENCIONES
    ========================================================= */
-/* CONTENEDOR TOOLTIP */
+
+/* ---------------------------------------------------------
+   CONTENEDOR TOOLTIP
+   --------------------------------------------------------- */
 .tooltipster-base:has(.main-tooltip) {
     width:26rem !important;
     max-width:calc(100vw - 2rem) !important;
@@ -18881,7 +18885,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     background:transparent !important;
 }
 
-/* PANEL PRINCIPAL */
+/* ---------------------------------------------------------
+   PANEL PRINCIPAL
+   --------------------------------------------------------- */
 .main-tooltip {
     width:100%;
     min-width:0;
@@ -18896,7 +18902,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     box-shadow:0 .7rem 1.8rem rgba(0,0,0,.3);
 }
 
-/* CONTENIDO PRINCIPAL */
+/* ---------------------------------------------------------
+   CONTENIDO PRINCIPAL
+   --------------------------------------------------------- */
 .main-tooltip .tooltip-content {
     display:grid;
     grid-template-columns:5.5rem minmax(0,1fr);
@@ -18933,6 +18941,7 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     max-width:100%;
     float:none;
     margin:0;
+    text-align:left;
     font-family:"Jersey 15", sans-serif;
     font-size:1.5rem;
     font-weight:700;
@@ -18940,7 +18949,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     overflow-wrap:anywhere;
 }
 
-/* BOTÓN SEGUIR */
+/* ---------------------------------------------------------
+   BOTÓN SEGUIR
+   --------------------------------------------------------- */
 .main-tooltip .tooltip-content .followBtn {
     grid-column:2;
     justify-self:start;
@@ -18977,7 +18988,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     transform:translateY(-.05rem);
 }
 
-/* RANGO */
+/* ---------------------------------------------------------
+   RANGO
+   --------------------------------------------------------- */
 .main-tooltip .tooltip-subtitle {
     grid-column:2;
     display:block;
@@ -18991,7 +19004,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     line-height:1.4;
 }
 
-/* ESTADÍSTICAS */
+/* ---------------------------------------------------------
+   ESTADÍSTICAS
+   --------------------------------------------------------- */
 .main-tooltip .tooltip-counts {
     grid-column:2;
     display:flex;
@@ -19026,7 +19041,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     color:var(--emblema2);
 }
 
-/* BARRA INFERIOR */
+/* ---------------------------------------------------------
+   BARRA INFERIOR
+   --------------------------------------------------------- */
 .main-tooltip .tooltip-actions {
     width:calc(100% + 1.7rem);
     float:none;
@@ -19054,7 +19071,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     list-style:none;
 }
 
-/* BOTONES DE ACCESO */
+/* ---------------------------------------------------------
+   BOTONES DE ACCESO
+   --------------------------------------------------------- */
 .main-tooltip .tooltip-actions li a {
     display:flex;
     align-items:center;
@@ -19078,7 +19097,9 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     transform:translateY(-.05rem);
 }
 
-/* ICONOS ORIGINALES */
+/* ---------------------------------------------------------
+   IMÁGENES PNG ORIGINALES DE FOROACTIVO
+   --------------------------------------------------------- */
 .main-tooltip .tooltip-actions li img {
     display:block;
     width:1rem;
@@ -19092,9 +19113,114 @@ body.dr-maintenance-active > :not(#dr-maintenance-screen) {
     background:transparent;
 }
 
-/* ACCESIBILIDAD */
+/* SKIN OSCURA — ELIMINAR FONDO BLANCO */
+body.dark-mode .main-tooltip .tooltip-actions li img {
+    filter:grayscale(1) invert(1);
+    mix-blend-mode:screen;
+}
+
+/* SKIN CLARA — INTEGRAR FONDO CON EL BOTÓN */
+body.light-mode .main-tooltip .tooltip-actions li img {
+    filter:grayscale(1);
+    mix-blend-mode:multiply;
+}
+
+/* ---------------------------------------------------------
+   ACCESIBILIDAD
+   --------------------------------------------------------- */
 .main-tooltip .followBtn:focus-visible,
 .main-tooltip .tooltip-actions li a:focus-visible {
     outline:.06rem solid var(--emblema2);
     outline-offset:.12rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   DR // IMAGE ZOOM
+   ========================================================= */
+
+.dr-ampliar {
+    cursor: zoom-in;
+}
+
+.dr-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background: rgba(0,0,0,.88);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.dr-lightbox.dr-lightbox-abierto {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dr-lightbox-imagen {
+    display: block;
+    max-width: 96vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: .35rem;
+    box-shadow: 0 0 2rem rgba(0,0,0,.45);
+    cursor: default;
+}
+
+.dr-lightbox-cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--emblema1, rgba(255,255,255,.5));
+    border-radius: 50%;
+    background: var(--theme-panel, #222);
+    color: var(--emblema2, #fff);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.dr-lightbox-cerrar:hover {
+    transform: scale(1.1);
+}
+
+.dr-lightbox-cerrar:focus-visible {
+    outline: 2px solid var(--emblema2, #fff);
+    outline-offset: .2rem;
+}
+
+@media (max-width: 600px) {
+    .dr-lightbox {
+        padding: 3.5rem .5rem 1rem;
+    }
+
+    .dr-lightbox-imagen {
+        max-width: 98vw;
+        max-height: 88vh;
+    }
 }
