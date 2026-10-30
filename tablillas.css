@@ -5476,12 +5476,8 @@
 }
 
 /* ADAPTACIÓN PARA MÓVILES */
-
 @media (max-width: 480px) {
-    .dr-status .dr-status__heading {
-        gap: 9px;
-    }
-
+    .dr-status .dr-status__heading {gap: 9px;}
     .dr-status .dr-status__icon {
         flex-basis: 36px;
         width: 36px;
@@ -5503,15 +5499,6 @@
     }
 }
 /*otro estilo de lista*/
-.dr-rule-list {
-    counter-reset: dr-item;
-    list-style: none;
-}
-
-.dr-rule-list li {
-    counter-increment: dr-item;
-}
-
-.dr-rule-list li::before {
-    content: counter(dr-item, upper-roman);
-}
+.dr-rule-list > li > ol.dr-rule-list {counter-reset: dr-romano;}
+.dr-rule-list > li > ol.dr-rule-list > li {counter-increment: dr-romano;}
+.dr-rule-list > li > ol.dr-rule-list > li::before {content: counter(dr-romano, upper-roman);}
