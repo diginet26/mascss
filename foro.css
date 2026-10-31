@@ -3150,7 +3150,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #rift-board-body {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 230px 320px;
-    grid-template-areas: "current staff recent" "news news news";
+    grid-template-areas: "current staff recent" "runner runner runner" "news news news";
     gap: 12px;
     margin-top: 12px;
     align-items: stretch;
@@ -19226,5 +19226,35 @@ body.light-mode .main-tooltip .tooltip-actions li img {
     .dr-lightbox-imagen {
         max-width: 98vw;
         max-height: 88vh;
+    }
+}
+/* =========================================================
+   DIGITAL RIFT — AGUMON RUNNER
+   ========================================================= */
+#dr-agumon-runner {
+    grid-area: runner;
+    position: relative;
+    width: 100vw;
+    height: 5rem;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+#dr-agumon-runner img {
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: 4.5rem;
+    max-width: none;
+    animation: dr-agumon-cross 18s linear infinite;
+}
+@keyframes dr-agumon-cross {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100vw);
     }
 }
