@@ -386,16 +386,6 @@
                     virus: ["tinkermon"],
                     sinatributo: []
                 },
-                plotmon: {
-                    nombre: "PLOTMON",
-                    etapa: "Rookie",
-                    atributo: "Sin definir",
-                    imagen: "https://imgur.com/HzldLAO.png",
-                    datos: [],
-                    vacuna: [],
-                    virus: [],
-                    sinatributo: []
-                },
                 pagumon: {
                     nombre: "PAGUMON",
                     etapa: "Baby",
