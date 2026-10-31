@@ -3150,6 +3150,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #rift-board-body {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 230px 320px;
+    grid-template-rows: auto 3rem auto;
     grid-template-areas: "current staff recent" "runner runner runner" "news news news";
     gap: 8px;
     margin-top: 12px;
@@ -19236,6 +19237,7 @@ body.light-mode .main-tooltip .tooltip-actions li img {
     position: relative;
     width: 100vw;
     height: 3rem;
+    min-height: 0;
     margin-left: calc(50% - 50vw);
     overflow: hidden;
     display: flex;
