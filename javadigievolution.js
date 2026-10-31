@@ -1466,10 +1466,31 @@
                 }
             };
             /* =========================================================
+               FILTROS POR ETAPA
+
+               Para añadir nuevas etapas en el futuro, basta con
+               incorporar una nueva entrada a este objeto.
+            ========================================================= */
+            const STAGE_INFO = {
+                fresh: {
+                    nombre: "FRESH",
+                    etapa: "Fresh"
+                },
+                baby: {
+                    nombre: "BABY",
+                    etapa: "Baby"
+                },
+                rookie: {
+                    nombre: "ROOKIE",
+                    etapa: "Rookie"
+                }
+            };
+            /* =========================================================
                ESTADO
             ========================================================= */
             let currentDigimon = "digitama";
             let currentType = "datos";
+            let currentStage = null;
             let history = [];
             /* =========================================================
                ELEMENTOS HTML
@@ -1479,6 +1500,8 @@
             const selectedPlaceholder = document.getElementById("selectedPlaceholder");
             const selectedMeta = document.getElementById("selectedMeta");
             const evolutionGrid = document.getElementById("evolutionGrid");
+            const evolutionTitle = document.getElementById("evolutionTitle");
+            const stageTabs = document.getElementById("stageTabs");
             const indievolutionGrid = document.getElementById("indievolutionGrid");
             const indievolutionTarget = document.getElementById("indievolutionTarget");
             const typeDescription = document.getElementById("typeDescription");
@@ -1575,8 +1598,11 @@
                     slug;
                 currentType =
                     "datos";
+                currentStage =
+                    null;
                 renderSelectedDigimon();
                 renderTypeTabs();
+                renderStageTabs();
                 renderEvolutions();
                 renderIndievolutions();
                 renderHistory();
@@ -1632,7 +1658,29 @@
                 document
                     .querySelectorAll(".type-tab")
                     .forEach(button => {
-                    button.classList.toggle("active", button.dataset.type === currentType);
+                    const isActive = !currentStage && button.dataset.type === currentType;
+                    button.classList.toggle("active", isActive);
+                    button.setAttribute("aria-pressed", String(isActive));
+                });
+            }
+            /* =========================================================
+               RENDER FILTROS POR ETAPA
+            ========================================================= */
+            function renderStageTabs() {
+                stageTabs.innerHTML = "";
+                Object.entries(STAGE_INFO).forEach(([stage, info]) => {
+                    const button = document.createElement("button");
+                    const isActive = currentStage === stage;
+                    button.type = "button";
+                    button.className = "stage-tab";
+                    button.dataset.stage = stage;
+                    button.textContent = info.nombre;
+                    button.classList.toggle("active", isActive);
+                    button.setAttribute("aria-pressed", String(isActive));
+                    button.addEventListener("click", () => {
+                        setStage(stage);
+                    });
+                    stageTabs.appendChild(button);
                 });
             }
             /* =========================================================
@@ -1644,7 +1692,23 @@
                 }
                 currentType =
                     type;
+                currentStage =
+                    null;
                 renderTypeTabs();
+                renderStageTabs();
+                renderEvolutions();
+            }
+            /* =========================================================
+               CAMBIAR ETAPA
+            ========================================================= */
+            function setStage(stage) {
+                if (!STAGE_INFO[stage]) {
+                    return;
+                }
+                currentStage =
+                    stage;
+                renderTypeTabs();
+                renderStageTabs();
                 renderEvolutions();
             }
             /* =========================================================
@@ -1655,10 +1719,55 @@
                 if (!digimon) {
                     return;
                 }
+                evolutionGrid.innerHTML = "";
+                if (currentStage) {
+                    const stageInfo = STAGE_INFO[currentStage];
+                    const stageDigimon = getAllDigimon()
+                        .filter(entry => entry.etapa === stageInfo.etapa);
+                    evolutionTitle.textContent =
+                        "CATÁLOGO DE DIGIMON";
+                    typeDescription.innerHTML = `
+                        Mostrando <strong>${stageDigimon.length}</strong>
+                        Digimon registrados en la etapa <strong>${stageInfo.nombre}</strong>.
+                    `;
+                    if (stageDigimon.length === 0) {
+                        const empty = document.createElement("div");
+                        empty.className = "indievolution-empty";
+                        empty.textContent =
+                            `Todavía no hay Digimon registrados en la etapa ${stageInfo.nombre}.`;
+                        evolutionGrid.appendChild(empty);
+                        return;
+                    }
+                    stageDigimon.forEach((entry, index) => {
+                        const card = document.createElement("article");
+                        card.className = "evolution-card";
+                        card.dataset.slug = entry.slug;
+                        card.innerHTML = `
+                            <div class="evolution-number">
+                                DIGIMON ${String(index + 1).padStart(2, "0")}
+                            </div>
+                            <div class="evolution-image"></div>
+                            <div class="evolution-name">
+                                ${entry.nombre}
+                            </div>
+                            <div class="evolution-stage">
+                                ${entry.etapa}
+                            </div>
+                        `;
+                        const imageContainer = card.querySelector(".evolution-image");
+                        createImage(imageContainer, entry);
+                        card.addEventListener("click", () => {
+                            selectDigimon(entry.slug);
+                        });
+                        evolutionGrid.appendChild(card);
+                    });
+                    return;
+                }
+                evolutionTitle.textContent =
+                    "RUTAS DE DIGIEVOLUCIÓN";
                 typeDescription.innerHTML =
                     TYPE_INFO[currentType].descripcion;
                 const evolutionList = digimon[currentType] || [];
-                evolutionGrid.innerHTML = "";
                 /*
                    Los Rookie mantienen siempre 4 huecos por atributo,
                    incluso cuando todavía no tienen evoluciones configuradas.
