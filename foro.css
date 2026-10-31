@@ -3151,7 +3151,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 230px 320px;
     grid-template-areas: "current staff recent" "runner runner runner" "news news news";
-    gap: 12px;
+    gap: 8px;
     margin-top: 12px;
     align-items: stretch;
 }
@@ -19235,7 +19235,7 @@ body.light-mode .main-tooltip .tooltip-actions li img {
     grid-area: runner;
     position: relative;
     width: 100vw;
-    height: 5rem;
+    height: 3rem;
     margin-left: calc(50% - 50vw);
     overflow: hidden;
     display: flex;
@@ -19246,7 +19246,7 @@ body.light-mode .main-tooltip .tooltip-actions li img {
     position: absolute;
     left: 0;
     width: auto;
-    height: 4.5rem;
+    height: 2.8rem;
     max-width: none;
     animation: dr-agumon-cross 18s linear infinite;
 }
