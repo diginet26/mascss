@@ -386,6 +386,16 @@
                     virus: ["tinkermon"],
                     sinatributo: []
                 },
+                plotmon: {
+                    nombre: "PLOTMON",
+                    etapa: "Rookie",
+                    atributo: "Sin definir",
+                    imagen: "https://imgur.com/HzldLAO.png",
+                    datos: [],
+                    vacuna: [],
+                    virus: [],
+                    sinatributo: []
+                },
                 pagumon: {
                     nombre: "PAGUMON",
                     etapa: "Baby",
@@ -1487,6 +1497,10 @@
             ========================================================= */
             const selectedName = document.getElementById("selectedName");
             const selectedImage = document.getElementById("selectedImage");
+            const selectedImageTrigger = document.getElementById("selectedImageTrigger");
+            const selectedImageModal = document.getElementById("selectedImageModal");
+            const expandedSelectedImage = document.getElementById("expandedSelectedImage");
+            const closeSelectedImageModalButton = document.getElementById("closeSelectedImageModal");
             const selectedPlaceholder = document.getElementById("selectedPlaceholder");
             const selectedMeta = document.getElementById("selectedMeta");
             const evolutionGrid = document.getElementById("evolutionGrid");
@@ -1633,12 +1647,18 @@
                         "block";
                     selectedPlaceholder.style.display =
                         "none";
+                    selectedImageTrigger.classList.add("is-zoomable");
+                    selectedImageTrigger.setAttribute("tabindex", "0");
+                    selectedImageTrigger.setAttribute("aria-disabled", "false");
                 }
                 else {
                     selectedImage.style.display =
                         "none";
                     selectedPlaceholder.style.display =
                         "block";
+                    selectedImageTrigger.classList.remove("is-zoomable");
+                    selectedImageTrigger.setAttribute("tabindex", "-1");
+                    selectedImageTrigger.setAttribute("aria-disabled", "true");
                 }
             }
             /* =========================================================
@@ -2131,6 +2151,34 @@
                 });
             }
             /* =========================================================
+               VISOR DE IMAGEN DEL DIGIMON SELECCIONADO
+            ========================================================= */
+            function openSelectedImageModal() {
+                if (selectedImage.style.display === "none" || !selectedImage.src) {
+                    return;
+                }
+                expandedSelectedImage.src = selectedImage.src;
+                expandedSelectedImage.alt = selectedImage.alt;
+                selectedImageModal.classList.add("active");
+                selectedImageModal.setAttribute("aria-hidden", "false");
+                document.body.classList.add("image-modal-open");
+                closeSelectedImageModalButton.focus();
+            }
+
+            function closeSelectedImageModal(restoreFocus = true) {
+                if (!selectedImageModal.classList.contains("active")) {
+                    return;
+                }
+                selectedImageModal.classList.remove("active");
+                selectedImageModal.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("image-modal-open");
+                expandedSelectedImage.src = "";
+                if (restoreFocus && selectedImageTrigger.classList.contains("is-zoomable")) {
+                    selectedImageTrigger.focus();
+                }
+            }
+
+            /* =========================================================
                TOAST
             ========================================================= */
             let toastTimer;
@@ -2147,6 +2195,21 @@
             /* =========================================================
                EVENTOS
             ========================================================= */
+            selectedImageTrigger.addEventListener("click", openSelectedImageModal);
+            selectedImageTrigger.addEventListener("keydown", event => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openSelectedImageModal();
+                }
+            });
+            closeSelectedImageModalButton.addEventListener("click", () => {
+                closeSelectedImageModal();
+            });
+            selectedImageModal.addEventListener("click", event => {
+                if (event.target === selectedImageModal) {
+                    closeSelectedImageModal();
+                }
+            });
             document
                 .querySelectorAll(".type-tab")
                 .forEach(button => {
@@ -2194,6 +2257,7 @@
                  */
                 if (event.key === "Escape") {
                     closeSearchModal();
+                    closeSelectedImageModal();
                     suggestions.classList.remove("active");
                 }
             });
