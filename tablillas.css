@@ -1725,11 +1725,6 @@
 }
 
 /* ALTURAS INDIVIDUALES DE LOS BLOQUES */
-
-.dr-ficha .dr-page1 .dr-digimon > .dr-text {
-    height: 18.625rem;
-}
-
 .dr-ficha .dr-page2 > .dr-text {
     height: auto;
     overflow: visible;
@@ -1738,7 +1733,13 @@
 .dr-ficha .dr-page3 > .dr-text {
     height: 11.5rem;
 }
+.dr-ficha .dr-page1 .dr-digimon {
+    align-items: stretch;
+}
 
+.dr-ficha .dr-page1 .dr-digimon > .dr-text {
+    height: calc(13.75rem * 350 / 300);
+}
 /* ============================================================
    PÁGINAS
    ============================================================ */
@@ -1909,7 +1910,8 @@
 }
 /* TARJETA DEL DIGIMON */
 .dr-digimon-card {
-    aspect-ratio: 273.23 / 485.43;
+    width: 100%;
+    aspect-ratio: 300 / 350;
     height: auto;
     min-height: 0;
     padding: 0.75rem;
@@ -5498,12 +5500,3 @@
 .dr-rule-list > li > ol.dr-rule-list {counter-reset: dr-romano;}
 .dr-rule-list > li > ol.dr-rule-list > li {counter-increment: dr-romano;}
 .dr-rule-list > li > ol.dr-rule-list > li::before {content: counter(dr-romano, upper-roman);}
-
-/*expediente*/
-.dr-ficha .dr-page1 .dr-digimon {
-    align-items: stretch;
-}
-
-.dr-ficha .dr-page1 .dr-digimon > .dr-text {
-    height: auto;
-}
