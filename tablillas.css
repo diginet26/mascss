@@ -1904,7 +1904,7 @@
    ============================================================ */
 .dr-digimon {
     display: grid;
-    grid-template-columns: 13.75rem 1fr;
+    grid-template-columns: 300px minmax(0, 1fr);
     gap: 0.625rem;
     align-items: start;
 }
