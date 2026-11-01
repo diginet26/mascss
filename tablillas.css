@@ -5498,3 +5498,12 @@
 .dr-rule-list > li > ol.dr-rule-list {counter-reset: dr-romano;}
 .dr-rule-list > li > ol.dr-rule-list > li {counter-increment: dr-romano;}
 .dr-rule-list > li > ol.dr-rule-list > li::before {content: counter(dr-romano, upper-roman);}
+
+/*expediente*/
+.dr-ficha .dr-page1 .dr-digimon {
+    align-items: stretch;
+}
+
+.dr-ficha .dr-page1 .dr-digimon > .dr-text {
+    height: auto;
+}
