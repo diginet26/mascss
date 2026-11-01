@@ -12962,22 +12962,22 @@ body.light-mode .dr-post-links {
 }
 
 body.light-mode .dr-post-icon {
-    color: var(--dr-group-color, var(--emblema2)) !important;
+    color: var(--emblema2) !important;
     border-right-color: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 22%, #c1cbd2) !important;
 }
 
 body.light-mode .dr-post-icon:hover {
-    color: var(--dr-group-color, var(--emblema2)) !important;
+    color: var(--emblema2) !important;
     background: color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 7%, #e4e8eb) !important;
     box-shadow: inset 0 0 .6rem color-mix(in srgb, var(--dr-group-color, var(--emblema2)) 6%, transparent) !important;
 }
 
 body.light-mode .dr-post-profile-link::before {
-    color: var(--dr-group-color, var(--emblema2)) !important;
+    color: var(--emblema2) !important;
 }
 
 body.light-mode .dr-post-profile-link:hover::before {
-    color: var(--dr-group-color, var(--emblema2)) !important;
+    color: var(--emblema2) !important;
 }
 
 body.light-mode .dr-post-main,
