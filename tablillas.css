@@ -1661,7 +1661,7 @@
     --dr-bg: #070d14;
     --dr-panel: #0c151f;
     --dr-panel2: #101e2b;
-    --colortextodl: #edf8fb;
+    /*--colortextodl: #edf8fb;*/
     --dr-muted: #8195a4;
     --dr-border: rgba(255,255,255,.10);
     width: 45rem;
@@ -1676,6 +1676,7 @@
     position: relative;
     overflow: hidden;
 }
+body.light-mode .dr-ficha {--colortextodl: var(--theme-text, #394752);}
 body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 .dr-ficha > input[type="radio"] {
     display: none;
