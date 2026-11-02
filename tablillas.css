@@ -1665,43 +1665,24 @@
     --dr-muted: #8195a4;
     --dr-border: rgba(255,255,255,.10);
     width: 45rem;
-    /*max-width: 94%;*/
     margin: -1.875rem auto;
     padding: 1.125rem;
     box-sizing: border-box;
     background: var(--colorfondot);
     border: 1px solid var(--colorfondo);
-    color: var(--colortextodl);
+    /*color: var(--colortextodl);*/
     font-family: "Poppins", sans-serif;
     font-size: 0.75rem;
     position: relative;
     overflow: hidden;
 }
-
+body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 .dr-ficha > input[type="radio"] {
     display: none;
 }
 
 /*OCULTAR RADIO*/
-
-/* ============================================================
-   NOMBRE
-   ============================================================ 
-.dr-name {
-    margin: 1.125rem 0 1.5625rem;
-    padding: 0.875rem 1.0625rem;
-    border: 1px solid rgba(53,216,255,.22);
-    background:linear-gradient(100deg, rgba(22,119,200,.20), rgba(53,216,255,.05));
-    color: var(--dr-cyan);
-    font-family: 'Oxanium', sans-serif;
-    font-size: 0.625rem;
-    font-weight: 700;
-    letter-spacing: 0.125rem;
-    text-transform: uppercase;
-} */
-
 /* TEXTO — TABLILLA DE FICHA */
-
 .dr-ficha .dr-text {
     min-height: 0;
     box-sizing: border-box;
@@ -1710,36 +1691,22 @@
     overflow-y: auto;
     background: var(--colorfondo);
     border: 0.071rem solid var(--dr-border);
-    color: var(--colortextod);
+    color: var(--colortextodl);
     font-size: 0.8rem;
     line-height: 1.8;
     text-align: justify;
 }
 
-.dr-ficha .dr-text p {
-    margin: 0 0 0.857rem;
-}
-
-.dr-ficha .dr-text p:last-child {
-    margin-bottom: 0;
-}
-
+.dr-ficha .dr-text p {margin: 0 0 0.857rem;}
+.dr-ficha .dr-text p:last-child {margin-bottom: 0;}
 /* ALTURAS INDIVIDUALES DE LOS BLOQUES */
 .dr-ficha .dr-page2 > .dr-text {
     height: auto;
     overflow: visible;
 }
-
-.dr-ficha .dr-page3 > .dr-text {
-    height: 11.5rem;
-}
-.dr-ficha .dr-page1 .dr-digimon {
-    align-items: stretch;
-}
-
-.dr-ficha .dr-page1 .dr-digimon > .dr-text {
-    height: 400px;
-}
+.dr-ficha .dr-page3 > .dr-text {height: 11.5rem;}
+.dr-ficha .dr-page1 .dr-digimon {align-items: stretch;}
+.dr-ficha .dr-page1 .dr-digimon > .dr-text {height: 400px;}
 /* ============================================================
    PÁGINAS
    ============================================================ */
