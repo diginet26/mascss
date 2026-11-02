@@ -12980,14 +12980,13 @@ body.light-mode .dr-post-profile-link:hover::before {
     color: var(--emblema2) !important;
 }
 
-body.light-mode .dr-post-main,
-body.light-mode .dr-post-main .postbody {
+body.light-mode .dr-post-main, body.light-mode .dr-post-main .postbody {
     background: #e4e8eb !important;
-    color: #394752 !important;
+    color: var(--colortextodl) !important;
 }
 
 body.light-mode .dr-post-main .postbody .content {
-    color: #394752;
+    color: var(--colortextodl);
 }
 
 /* La tablilla del baúl usa variables propias y hereda variables oscuras.
