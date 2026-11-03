@@ -1,0 +1,252 @@
+/*
+ * DIGITAL RIFT — TABLILLA DE PRESENTACIÓN / AFILIACIONES
+ * Hoja autónoma para publicación externa.
+ * Base fija: paleta Valor + skin oscura de Digital Rift.
+ * Medidas convertidas a px tomando como referencia el root de 14px
+ * utilizado por el foro, para conservar las dimensiones originales.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Oxanium:wght@400;500;600;700;800&display=swap');
+
+.dr-tadmin {
+    --emblema1: #298BF1;
+    --emblema2: #f16f29;
+    --colorfondot: #080f18;
+    --colorfondo: #0d1722;
+    --colortextodl: #dce8f2;
+    --theme-text: #dce8f2;
+    --theme-text-muted: #7f95a8;
+    --dg-blue: #1677C8;
+    --dg-blue-dark: #0b3d68;
+    --dg-cyan: #22c1c3;
+    --dg-gold: #f2b705;
+    --dg-bg: #080f18;
+    --dg-panel: #0d1722;
+    --dg-panel2: #111f2d;
+    --dg-line: rgba(34,193,195,.22);
+    --dg-text: #dce8f2;
+    --dg-muted: #7f95a8;
+    width: 632px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 26.25px auto;
+    position: relative;
+    overflow: hidden;
+    background: var(--colorfondot);
+    border: 1px solid var(--colorfondo);
+    color: var(--colortextodl);
+    font-family: "Oxanium", sans-serif;
+    font-size: 10.5px;
+    line-height: 1.8;
+    text-align: justify;
+    box-shadow: 0 0 30.625px rgba(0,0,0,.45), inset 0 0 39.375px rgba(22,119,200,.04);
+}
+
+/* Barra superior */
+.dr-tadmin .dr-system-bar {
+    width: 100%;
+    min-height: 21px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 21px;
+    background: var(--colorfondo);
+    border-bottom: 1px solid var(--emblema1);
+    font-family: monospace;
+    font-size: 7.7px;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-system-title {
+    color: #4ba8d0;
+}
+
+/* Indicadores superiores */
+.dr-tadmin .dr-dots {
+    position: absolute;
+    top: 6.3px;
+    right: 17.5px;
+    display: flex;
+    gap: 4.375px;
+}
+
+.dr-tadmin .dr-dots i {
+    width: 8.75px;
+    height: 8.75px;
+    display: block;
+    background: var(--emblema2);
+    border-radius: 50%;
+    opacity: .65;
+}
+
+.dr-tadmin .dr-dots i:nth-child(2) {
+    opacity: .35;
+}
+
+.dr-tadmin .dr-dots i:nth-child(3) {
+    opacity: .15;
+}
+
+/* Cabecera */
+.dr-tadmin .dr-cabeza {
+    position: relative;
+    min-height: 152.25px;
+    padding: 56px 28px 7px;
+    background: linear-gradient(90deg, rgba(8,15,24,.98) 0%, rgba(8,15,24,.87) 48%, rgba(8,15,24,.55) 100%);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--emblema1);
+}
+
+.dr-tadmin .dr-cabeza:after {
+    content: "";
+    position: absolute;
+    left: 35px;
+    bottom: -1.4px;
+    width: 140px;
+    height: 1.75px;
+    background: var(--emblema2);
+    box-shadow: 0 0 10.5px rgba(34,193,195,.5);
+}
+
+.dr-tadmin .dr-label {
+    display: inline-block;
+    padding: 2.625px 7.875px;
+    margin-bottom: 8.75px;
+    border: 1px solid var(--emblema2);
+    color: var(--emblema2);
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-title {
+    margin: 0;
+    color: #fff;
+    font-family: "Player Sans", "Arial Narrow", sans-serif;
+    font-size: 33.25px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-subtitle {
+    margin-top: 7.875px;
+    color: var(--dg-muted);
+    font-size: 7.875px;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-subtitle b {
+    color: var(--emblema2);
+}
+
+/* Introducción */
+.dr-tadmin .dr-intro {
+    margin: 19.25px 21.875px 8.75px;
+    padding: 14.875px 17.5px;
+    background: var(--colorfondo);
+    border-left: 2px solid var(--emblema2);
+    color: var(--theme-text-muted);
+    font-size: 9.625px;
+}
+
+.dr-tadmin .dr-intro strong {
+    color: var(--theme-text);
+}
+
+/* Secciones */
+.dr-tadmin .dr-section {
+    margin: 21.875px;
+}
+
+.dr-tadmin .dr-section-title {
+    display: flex;
+    align-items: center;
+    gap: 7.875px;
+    margin-bottom: 11.375px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 21.875px;
+    letter-spacing: 1.75px;
+    color: var(--emblema2);
+    text-transform: uppercase;
+}
+
+.dr-tadmin .dr-section-title:before {
+    content: "";
+    width: 15.75px;
+    height: 15.75px;
+    border: 1px solid var(--emblema2);
+    transform: rotate(45deg);
+    opacity: .6;
+}
+
+.dr-tadmin .dr-section-title span {
+    margin-left: -18.375px;
+    position: relative;
+    left: 4.375px;
+}
+
+/* Bloques de texto */
+.dr-tadmin .dr-block {
+    margin-top: 17.5px;
+    padding: 14.875px;
+    background: var(--colorfondo);
+    border: 1px solid var(--emblema2);
+}
+
+.dr-tadmin .dr-block p {
+    margin: 0 0 10.5px;
+}
+
+.dr-tadmin .dr-block p:last-child {
+    margin-bottom: 0;
+}
+
+.dr-tadmin .dr-block b,
+.dr-tadmin b,
+.dr-tadmin strong {
+    color: var(--emblema2);
+}
+
+.dr-tadmin .dr-intro strong {
+    color: var(--theme-text);
+}
+
+/* El enlace de foro dentro del texto destacado conserva el color del texto */
+.dr-tadmin .dr-intro strong a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Imágenes de botones y recursos */
+.dr-tadmin img {
+    max-width: 100%;
+}
+
+/* Ajuste de anchura en pantallas estrechas */
+@media (max-width: 660px) {
+    .dr-tadmin {
+        width: 100%;
+        margin: 16px auto;
+    }
+
+    .dr-tadmin .dr-cabeza {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .dr-tadmin .dr-intro {
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 12px;
+    }
+
+    .dr-tadmin .dr-section {
+        margin: 16px 12px;
+    }
+}
