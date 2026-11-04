@@ -2353,10 +2353,10 @@ button[title="Destino"] {
     padding: 0 !important;
     color: var(--theme-text, #f4fbff) !important;
     font-family: 'Jersey 15', sans-serif !important;
-    font-size: 12px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
-    letter-spacing: .8px !important;
-    line-height: 1.25 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.2 !important;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -2368,10 +2368,10 @@ button[title="Destino"] {
 .digimon-breadcrumb-slot .pathname-box a {
     color: var(--theme-text, #f4fbff) !important;
     font-family: 'Jersey 15', sans-serif !important;
-    font-size: 12px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
-    letter-spacing: .8px !important;
-    line-height: 1.25 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.2 !important;
     text-decoration: none;
 }
 
