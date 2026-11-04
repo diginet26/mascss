@@ -1835,7 +1835,22 @@ button#theme-toggler2:before {
     border-radius: 999px;
     box-shadow: 0 0 10px var(--profile-glow);
 }
+#dg-profile .dg-profile-last-visit-icon {
+    display: flex;
+    align-items: center;
+    flex: 0 0 20px;
+    color: var(--profile-highlight);
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+}
 
+#dg-profile .dg-profile-last-visit-row strong {
+    max-width: none;
+    flex: 1;
+    white-space: nowrap;
+    text-align: right;
+}
 /* =========================================================
    DIGIMON NAVBAR — FASE 1
    ========================================================= */
