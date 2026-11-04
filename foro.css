@@ -2333,19 +2333,43 @@ button[title="Destino"] {
    MIGAS DE PAN
    --------------------------------------------------------- */
 .digimon-breadcrumb-slot {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
     min-width: 0;
     overflow: hidden;
     margin-left: 60px;
-    font-family: 'Jersey 15';
+    color: var(--theme-text, #f4fbff);
+    font-family: 'Jersey 15', sans-serif;
 }
 
 .digimon-breadcrumb-slot .path {
+    display: block;
+    max-width: 100%;
     margin: 0 !important;
     padding: 0 !important;
-    font-size: 10px;
+    color: var(--theme-text, #f4fbff) !important;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 1.2;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow:hidden;
+    overflow: hidden;
+}
+
+.digimon-breadcrumb-slot .path a,
+.digimon-breadcrumb-slot .path a:visited {
+    color: inherit !important;
+    font-family: inherit;
+    font-size: inherit !important;
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+.digimon-breadcrumb-slot .path a:hover {
+    color: var(--emblema1) !important;
 }
 
 /* ---------------------------------------------------------
