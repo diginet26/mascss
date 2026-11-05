@@ -2155,6 +2155,7 @@ button[title="Destino"] {
 }
 
 .digimon-main-button {
+    position: relative;
     min-height: 38px;
     padding: 0 13px;
     display: flex;
@@ -2227,6 +2228,7 @@ button[title="Destino"] {
 }
 
 .digimon-icon-button {
+    position: relative;
     width: 36px;
     height: 36px;
     font-size: 15px;
@@ -2239,6 +2241,32 @@ button[title="Destino"] {
     border-color: var(--linkc1);
     box-shadow: 0 0 10px rgba(30,210,255,.35);
 }
+
+/* CONTADORES DE AVISOS EN LA NAVBAR */
+.dr-navbar-counter {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    z-index: 5;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid var(--colorfondo);
+    border-radius: 50px;
+    background: #e34a4a;
+    color: #fff;
+    font: 700 9px/1 Arial, sans-serif;
+    letter-spacing: 0;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.dr-navbar-counter.is-visible {display: flex;}
 
 /* ---------------------------------------------------------
    CONTROLES DE LA SEGUNDA BARRA
