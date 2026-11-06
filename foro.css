@@ -2181,7 +2181,42 @@ button[title="Destino"] {
     box-shadow: 0 0 10px rgba(30,210,255,.45);
     transform:translateY(-1px);
 }
+/* =========================================================
+   CONTADORES — MENSAJES PRIVADOS Y NOTIFICACIONES
+   ========================================================= */
 
+.digimon-pm-button,
+#digimon-notifications {
+    position: relative;
+}
+
+.dr-navbar-counter {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid var(--theme-panel-deep, #111820);
+    border-radius: 50%;
+    background: #e34a4a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.dr-navbar-counter.is-visible {
+    display: flex;
+}
 /* ---------------------------------------------------------
    BUSCADOR
    --------------------------------------------------------- */
