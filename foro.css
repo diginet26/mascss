@@ -19675,25 +19675,33 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
     text-decoration: none;
 }
 
-#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) dl.postprofile dt a:hover {
-    color: var(--emblema1);
-}
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) dl.postprofile dt a:hover {color: var(--emblema1);}
+
 
 /* ---------------------------------------------------------
    BOTONES: GUARDAR Y BORRAR
    --------------------------------------------------------- */
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) fieldset.submit-buttons {
+    position: relative;
+    z-index: 2;
     display: flex !important;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: .5rem;
-    margin: .5rem 0 1rem !important;
-    padding: .75rem .9rem !important;
-    border: .06rem solid var(--theme-border);
+    float: left;
+    width: calc(100% - 11rem);
+    min-width: 0;
+    min-height: 3.4rem;
+    margin: .7rem 0 1rem !important;
+    padding: .55rem .7rem !important;
+    box-sizing: border-box;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 65%, var(--theme-border));
     border-left: .16rem solid var(--emblema2);
-    border-radius: .35rem;
-    background: linear-gradient(105deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel)), var(--theme-panel) 55%, color-mix(in srgb, var(--emblema1) 7%, var(--theme-panel)));
+    border-right: 0;
+    border-radius: .4rem 0 0 .4rem;
+    background: linear-gradient(105deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel)), var(--theme-panel) 50%, color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel)));
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--emblema1) 25%, transparent);
 }
 
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) fieldset.submit-buttons input[type="submit"] {
@@ -19725,10 +19733,9 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
 }
 
 /* ---------------------------------------------------------
-   RESPONDER — BARRAS SUPERIOR E INFERIOR
-   Aprovecha el diseño global de .topic-actions.
+   RESPONDER — BARRA SUPERIOR
    --------------------------------------------------------- */
-#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .topic-actions {
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .topic-actions:first-of-type {
     min-height: 3.4rem;
     margin: .7rem 0 1rem !important;
     padding: .55rem .7rem;
@@ -19764,6 +19771,72 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
     letter-spacing: .1rem;
     text-transform: uppercase;
 }
+
+/* ---------------------------------------------------------
+   RESPONDER — UNIÓN CON GUARDAR Y BORRAR
+   --------------------------------------------------------- */
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > fieldset.submit-buttons + .topic-actions {
+    position: relative;
+    z-index: 1;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 11rem;
+    min-width: 0;
+    min-height: 3.4rem;
+    margin: .7rem 0 1rem !important;
+    padding: .55rem .7rem;
+    box-sizing: border-box;
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 65%, var(--theme-border));
+    border-left: 0;
+    border-radius: 0 .4rem .4rem 0;
+    background: linear-gradient(105deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel)), var(--theme-panel) 50%, color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel)));
+}
+
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > fieldset.submit-buttons + .topic-actions .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 !important;
+}
+
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > fieldset.submit-buttons + .topic-actions .post-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — BARRA DE ACCIONES
+   --------------------------------------------------------- */
+@media (max-width: 760px) {
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) fieldset.submit-buttons {
+        float: none;
+        width: 100%;
+        min-height: 3.2rem;
+        margin: .7rem 0 0 !important;
+        justify-content: center;
+        border-right: .06rem solid color-mix(in srgb, var(--emblema2) 65%, var(--theme-border));
+        border-bottom: 0;
+        border-radius: .4rem .4rem 0 0;
+    }
+
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > fieldset.submit-buttons + .topic-actions {
+        float: none;
+        width: 100%;
+        min-height: 3.2rem;
+        margin: 0 0 1rem !important;
+        border-top: 0;
+        border-left: .16rem solid var(--emblema2);
+        border-radius: 0 0 .4rem .4rem;
+    }
+}
+
 
 /* ---------------------------------------------------------
    HISTORIAL DE MENSAJES PRIVADOS
