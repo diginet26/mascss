@@ -19462,18 +19462,29 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
    TÍTULO DE LA PÁGINA
    --------------------------------------------------------- */
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) h1.page-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 2.8rem;
     margin: 1.2rem 0 1.3rem !important;
-    padding: 1rem 1.4rem !important;
+    padding: .75rem 1.1rem !important;
     box-sizing: border-box;
-    border: .06rem solid var(--theme-border);
+    border: .06rem solid color-mix(in srgb, var(--emblema2) 65%, var(--theme-border));
     border-left: .2rem solid var(--emblema2);
-    background: linear-gradient(100deg, color-mix(in srgb, var(--emblema2) 9%, var(--theme-panel)), var(--theme-panel) 65%, color-mix(in srgb, var(--emblema1) 7%, var(--theme-panel)));
-    color: var(--emblema2);
-    font: 700 .8rem/1.4 "Oxanium", sans-serif;
-    letter-spacing: .12rem;
+    border-radius: .4rem;
+    background: linear-gradient(105deg, color-mix(in srgb, var(--emblema2) 10%, var(--theme-panel)), var(--theme-panel) 50%, color-mix(in srgb, var(--emblema1) 8%, var(--theme-panel)));
+    color: var(--theme-text);
+    font: 700 .68rem/1.4 "Oxanium", sans-serif;
+    letter-spacing: .09rem;
     text-align: left;
     text-transform: uppercase;
-    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--emblema1) 20%, transparent);
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--emblema1) 25%, transparent), 0 0 .8rem color-mix(in srgb, var(--emblema2) 7%, transparent);
+}
+
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) h1.page-title::before,
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) h1.page-title::after {
+    content: none !important;
+    display: none !important;
 }
 
 /* ---------------------------------------------------------
@@ -19502,7 +19513,11 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .post.row2 > .inner > .corners-bottom {
     display: none !important;
 }
-
+/* OCULTAR FECHA Y HORA SUPERIOR */
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) > p.right.rightside,
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) > p:has(+ ul#privmsgs-menu) {
+    display: none !important;
+}
 /* ---------------------------------------------------------
    CUERPO Y CONTENIDO DEL MENSAJE
    --------------------------------------------------------- */
@@ -19732,6 +19747,22 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
 
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .topic-actions .post-icon a {
     min-width: 8.5rem;
+    min-height: 2.4rem;
+    font-size: 0 !important;
+}
+
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .topic-actions .post-icon a::before {
+    content: none !important;
+    display: none !important;
+}
+
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .topic-actions .post-icon a::after {
+    content: "RESPONDER";
+    display: inline-block;
+    color: currentColor;
+    font: 700 .58rem/1 "Oxanium", sans-serif;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
 }
 
 /* ---------------------------------------------------------
