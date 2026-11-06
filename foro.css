@@ -4064,6 +4064,7 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
     -webkit-background-clip: text;
     animation: gradient 3s ease infinite;
     filter: contrast(1.2) blur(0.8px);
+    text-decoration: none;
 }
 
 .rift-header-title span {
