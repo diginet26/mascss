@@ -20005,21 +20005,21 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
 /* Tarjetas del historial */
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview .post,
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview .post {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 13rem;
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 1rem;
     margin: 0 0 1rem !important;
     padding: 0 !important;
     border: 0 !important;
     background: transparent !important;
 }
 
+/* Desenvuelve el inner para que mensaje y perfil sean columnas hermanas. */
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview .post > .inner,
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview .post > .inner {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 10rem;
-    align-items: stretch;
-    gap: .85rem;
-    padding: 0 !important;
-    background: transparent !important;
-    border: 0 !important;
+    display: contents !important;
 }
 
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview .post > .inner > .corners-top,
@@ -20031,8 +20031,12 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
 
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview .postbody,
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview .postbody {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
     min-height: 9rem;
     padding: 1.1rem !important;
+    box-sizing: border-box;
     border: .06rem solid var(--theme-border);
     border-top: .1rem solid var(--emblema1);
     background: var(--theme-panel);
@@ -20063,21 +20067,37 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
 
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview dl.postprofile,
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview dl.postprofile {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: stretch;
     float: none !important;
-    width: auto !important;
+    width: 100% !important;
+    min-width: 0;
+    max-width: none;
     margin: 0 !important;
-    padding: .75rem;
+    padding: .85rem;
+    box-sizing: border-box;
     border: .06rem solid var(--theme-border);
-    background: var(--theme-panel-deep);
+    border-top: .1rem solid var(--emblema2);
+    background: linear-gradient(160deg, var(--theme-panel), var(--theme-panel-deep));
     text-align: center;
+}
+
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview dl.postprofile dt,
+#main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview dl.postprofile dt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    margin: 0;
 }
 
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview dl.postprofile img,
 #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview dl.postprofile img {
     display: block;
     width: 100%;
-    max-width: 8rem;
-    max-height: 11rem;
+    max-width: 10rem;
+    max-height: 15rem;
     height: auto;
     margin: 0 auto;
     object-fit: cover;
@@ -20182,10 +20202,29 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
     #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) ul#privmsgs-menu li:nth-child(2) {
         border-right: 0;
     }
-    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .post.row2 > .inner,
-    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview .post > .inner,
-    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview .post > .inner {
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .post.row2 > .inner {
         grid-template-columns: minmax(0, 1fr);
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview .post,
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview .post {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        gap: .65rem;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview .postbody,
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview .postbody {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) #topicreview dl.postprofile,
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .topicreview dl.postprofile {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .8rem;
+        text-align: left;
     }
     #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) dl.postprofile {
         display: flex;
