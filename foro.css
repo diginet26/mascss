@@ -20238,3 +20238,142 @@ body.light-mode #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:
         margin-bottom: .6rem !important;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — PÁGINA DE CONFIRMACIÓN / INFORMACIONES
+   DOM: #main-content > .panel > .inner > h1.page-title + p > a
+   Estiliza este tipo de aviso sin modificar los paneles generales.
+   ========================================================= */
+#main-content > .panel:has(> .inner > h1.page-title + p > a) {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) .corners-top,
+#main-content > .panel:has(> .inner > h1.page-title + p > a) .corners-bottom {
+    display: none !important;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title {
+    margin-bottom: 1.5rem !important;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p {
+    position: relative;
+    width: min(100%, 50rem);
+    margin: 1.25rem auto 2.5rem !important;
+    padding: 1.8rem 2rem 1.9rem;
+    box-sizing: border-box;
+    border: 1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border));
+    border-left: .2rem solid var(--emblema2);
+    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 8%, var(--theme-panel)), var(--theme-panel-deep) 58%, color-mix(in srgb, var(--emblema1) 6%, var(--theme-panel)));
+    box-shadow: 0 .65rem 1.6rem rgba(0, 0, 0, .2), inset 0 1px 0 color-mix(in srgb, var(--emblema1) 12%, transparent);
+    color: var(--theme-text);
+    font-family: "Oxanium", sans-serif;
+    font-size: .82rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p::before {
+    content: "SISTEMA // NOTIFICACIÓN";
+    display: block;
+    margin-bottom: .75rem;
+    color: var(--emblema1);
+    font-family: "Oxanium", sans-serif;
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .16rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 2.65rem;
+    margin: 1rem auto 0;
+    padding: .7rem 1.1rem;
+    box-sizing: border-box;
+    border: 1px solid var(--emblema2);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 16%, transparent), color-mix(in srgb, var(--emblema1) 8%, transparent));
+    color: var(--theme-text) !important;
+    font-family: "Oxanium", sans-serif;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .08rem;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04);
+    transition: border-color .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a::before {
+    content: "\f060";
+    flex: 0 0 auto;
+    font-family: FontAwesome;
+    font-size: .72rem;
+    line-height: 1;
+}
+
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a:hover,
+#main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a:focus-visible {
+    border-color: var(--emblema1);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 23%, transparent), color-mix(in srgb, var(--emblema1) 17%, transparent));
+    color: var(--emblema2) !important;
+    box-shadow: 0 0 .8rem color-mix(in srgb, var(--emblema2) 22%, transparent);
+    transform: translateY(-1px);
+}
+
+body.light-mode #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p {
+    border-color: color-mix(in srgb, var(--emblema2) 45%, #c5cfd7);
+    background: linear-gradient(115deg, color-mix(in srgb, var(--emblema2) 5%, #f4f6f7), #e9edf0 58%, color-mix(in srgb, var(--emblema1) 5%, #f4f6f7));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .85), 0 .35rem 1rem rgba(56, 69, 81, .08);
+    color: #35434c;
+}
+
+body.light-mode #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a {
+    border-color: color-mix(in srgb, var(--emblema2) 60%, #c5cfd7);
+    background: linear-gradient(145deg, #f7f8f9, #e4e8eb);
+    color: #35434c !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .85), 0 .12rem .35rem rgba(56, 69, 81, .06);
+}
+
+body.light-mode #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a:hover,
+body.light-mode #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a:focus-visible {
+    border-color: var(--emblema1);
+    background: color-mix(in srgb, var(--emblema2) 8%, #e4e8eb);
+    color: var(--emblema2) !important;
+}
+
+@media (max-width: 760px) {
+    #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p {
+        width: calc(100% - 1rem);
+        margin: 1rem auto 2rem !important;
+        padding: 1.35rem 1rem 1.5rem;
+        font-size: .76rem;
+    }
+    #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a {
+        width: min(100%, 24rem);
+        padding: .7rem .8rem;
+        font-size: .58rem;
+    }
+}
+
