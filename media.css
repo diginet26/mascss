@@ -1,8 +1,7 @@
 /* =========================================================
-   DIGITAL RIFT — MEDIA QUERIES RESPONSIVE COMPLETAS
-   Base: foro - 2026-10-26T182146.355.css
-   55 bloques originales conservados + ajustes responsive añadidos
-   Cargar DESPUÉS de foro.css desde overall_header.
+   DIGITAL RIFT — RESPONSIVE UNIFICADO
+   Reúne las adaptaciones de foro.css y tablillas.css.
+   Cargar DESPUÉS de todos los CSS base desde overall_header.
    ========================================================= */
 
 /* =========================================================
@@ -1597,5 +1596,748 @@
     #digimon-statistics .digimon-stats-online {
         height: auto !important;
         min-height: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — REGLAS TRASLADADAS DESDE foro.css
+   Archivo fuente: foro - 2026-11-08T141944.588.css
+   ========================================================= */
+
+/* foro.css — bloque original línea 5965 | (max-width: 600px) */
+@media (max-width: 600px) {
+    .dice {
+        width: calc(100% - 1rem);
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    .dice-header {
+        padding: 1.2rem 1rem .9rem;
+        font-size: clamp(1.25rem, 7vw, 2.1429rem);
+        letter-spacing: .12rem;
+        overflow-wrap: anywhere;
+    }
+
+    .dice-header:after {
+        left: 1rem;
+        width: 6.5rem;
+    }
+
+    .dice-roll {
+        margin: 1.25rem .75rem 0;
+        padding: 1.5rem .75rem .9rem;
+    }
+
+    .dice-roll:last-child {
+        margin-bottom: 1rem;
+    }
+
+    .dice-roll > span {
+        left: .65rem;
+        max-width: calc(100% - 1.3rem);
+        font-size: .5rem;
+    }
+
+    .roll-result {
+        padding: .6rem .65rem;
+    }
+
+    .roll-result > strong {
+        flex-wrap: wrap;
+        column-gap: .2rem;
+        font-size: .9rem;
+    }
+
+    .dice-roll:after {
+        right: .5rem;
+        font-size: .36rem;
+    }
+}
+
+/* foro.css — bloque original línea 19306 | (max-width: 600px) */
+@media (max-width: 600px) {
+    .dr-lightbox {
+        padding: 3.5rem .5rem 1rem;
+    }
+
+    .dr-lightbox-imagen {
+        max-width: 98vw;
+        max-height: 88vh;
+    }
+}
+
+/* foro.css — bloque original línea 19955 | (max-width: 760px) */
+@media (max-width: 760px) {
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> fieldset.submit-buttons + .topic-actions) {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 0;
+    }
+
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> fieldset.submit-buttons + .topic-actions) > fieldset.submit-buttons {
+        grid-column: 1 / -1;
+        min-height: 3.2rem;
+        margin: .7rem 0 0 !important;
+        border-right: .06rem solid color-mix(in srgb, var(--emblema2) 65%, var(--theme-border));
+        border-bottom: 0;
+        border-radius: .4rem .4rem 0 0;
+    }
+
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> fieldset.submit-buttons + .topic-actions) > fieldset.submit-buttons + .topic-actions {
+        grid-column: 1 / -1;
+        min-height: 3.2rem;
+        margin: 0 0 1rem !important;
+        border-top: 0;
+        border-left: .16rem solid var(--emblema2);
+        border-radius: 0 0 .4rem .4rem;
+    }
+}
+
+/* foro.css — bloque original línea 20162 | (max-width: 760px) */
+@media (max-width: 760px) {
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) {
+        width: calc(100% - 1rem);
+        margin: 1rem auto 2rem;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) ul#privmsgs-menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) ul#privmsgs-menu li:nth-child(2) {
+        border-right: 0;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) form:has(> .post.row2) > .post.row2 > .inner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    /* Historial: en móvil el mensaje queda arriba y el perfil debajo. */
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) > .panel:has(> .inner > .postbody) > .inner {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        gap: .65rem;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) > .panel:has(> .inner > .postbody) > .inner > .postbody {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) > .panel:has(> .inner > .postbody) > .inner > div:has(> dl.postprofile) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) > .panel:has(> .inner > .postbody) dl.postprofile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .8rem;
+        text-align: left;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) dl.postprofile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .8rem;
+        text-align: left;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) dl.postprofile dt {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) dl.postprofile dt > img,
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) dl.postprofile dt > a:first-child > img {
+        width: 4.5rem;
+        max-width: 4.5rem;
+        max-height: 5.5rem;
+        margin: 0;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) fieldset.submit-buttons {
+        justify-content: center;
+    }
+}
+
+/* foro.css — bloque original línea 20221 | (max-width: 480px) */
+@media (max-width: 480px) {
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) ul#privmsgs-menu li {
+        min-height: 3rem;
+        padding: .35rem .2rem !important;
+        font-size: .52rem;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .postbody {
+        padding: 1rem !important;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .postbody > .h3,
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .postbody > h3 {
+        padding-right: 0;
+        font-size: .9rem;
+    }
+    #main-content:has(ul#privmsgs-menu):has(form > .post.row2):not(:has(form[name="privmsg_list"])) .postbody ul.profile-icons {
+        position: static;
+        justify-content: flex-end;
+        margin-bottom: .6rem !important;
+    }
+}
+
+/* foro.css — bloque original línea 20366 | (max-width: 760px) */
+@media (max-width: 760px) {
+    #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p {
+        width: calc(100% - 1rem);
+        margin: 1rem auto 2rem !important;
+        padding: 1.35rem 1rem 1.5rem;
+        font-size: .76rem;
+    }
+    #main-content > .panel:has(> .inner > h1.page-title + p > a) > .inner > h1.page-title + p > a {
+        width: min(100%, 24rem);
+        padding: .7rem .8rem;
+        font-size: .58rem;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — REGLAS TRASLADADAS DESDE tablillas.css
+   Archivo fuente: tablillas (10).css
+   ========================================================= */
+
+/* tablillas.css — bloque original línea 993 | (max-width: 47.5rem) */
+@media (max-width: 47.5rem) {
+    .dr-tadmin .tienda-filters {
+        flex-wrap: wrap;
+    }
+
+    .dr-tadmin .tienda-filters label {
+        flex: 1 1 9rem;
+        font-size: 0.5rem;
+    }
+
+    .dr-tadmin .tienda-items,
+    .dr-tadmin .tienda-footer {
+        margin-left: 0.9375rem;
+        margin-right: 0.9375rem;
+    }
+
+    .dr-tadmin .tienda-item {
+        grid-template-columns: 3.125rem minmax(0,1fr);
+    }
+
+    .dr-tadmin .tienda-icon {
+        width: 2.875rem;
+        height: 2.875rem;
+    }
+
+    .dr-tadmin .tienda-price {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 0.3125rem;
+    }
+}
+
+/* tablillas.css — bloque original línea 1322 | (max-width:37.5rem) */
+@media (max-width:37.5rem) {
+    .dr-map {
+        margin: 0.9375rem 0.625rem;
+    }
+
+    .dr-map-zone-body {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-map-image {
+        min-height: 9.375rem;
+    }
+
+    .dr-map-tabs {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* tablillas.css — bloque original línea 1629 | (max-width:37.5rem) */
+@media (max-width:37.5rem) {
+    .digimon-status {
+        width: 100%;
+        padding: 0.625rem;
+    }
+
+    .digi-top {
+        height: auto;
+        min-height: 4.75rem;
+    }
+
+    .digi-name {
+        font-size: 1.0625rem;
+    }
+
+    .digi-description {
+        font-size: 0.4375rem;
+    }
+
+    .main-stats {
+        grid-template-columns: 1fr;
+        gap: 0.625rem;
+    }
+}
+
+/* tablillas.css — bloque original línea 2116 | (max-width: 40.625rem) */
+@media (max-width: 40.625rem) {
+    .dr-ficha {
+        width: 96%;
+        padding: 0.75rem;
+    }
+
+    .dr-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dr-info {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-digimon {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-stats {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* tablillas.css — bloque original línea 2139 | (max-width: 28.125rem) */
+@media (max-width: 28.125rem) {
+    .dr-head {
+        height: 8.75rem;
+    }
+
+    .dr-data {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dr-tabs label {
+        font-size: 0.5rem;
+    }
+}
+
+/* tablillas.css — bloque original línea 2300 | corregido: adaptación de puntos de interés del mapa */
+@media (max-width: 40rem) {
+    .dr-map-interests {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-map-interest-image {
+        height: 10rem;
+    }
+
+    .dr-map-interest-title:after {
+        display: none;
+    }
+}
+
+/* tablillas.css — bloque original línea 2598 | (max-width: 40.625rem) */
+@media (max-width: 40.625rem) {
+    .dr-canon {
+        width: 96%;
+    }
+
+    .dr-canon-head {
+        padding: 1.4rem 1.25rem 1.25rem;
+    }
+
+    .dr-canon-title {
+        font-size: 2.1rem;
+    }
+
+    .dr-canon-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* tablillas.css — bloque original línea 2644 | (max-width: 28.125rem) */
+@media (max-width: 28.125rem) {
+    .dr-canon-intro {
+        margin-left: .75rem;
+        margin-right: .75rem;
+    }
+
+    .dr-canon-status {
+        margin-left: .75rem;
+        margin-right: .75rem;
+        justify-content: flex-start;
+    }
+
+    .dr-canon-section {
+        margin-left: .75rem;
+        margin-right: .75rem;
+    }
+
+    .dr-canon-section-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    .dr-canon-image {
+        height: 16rem;
+    }
+}
+
+/* tablillas.css — bloque original línea 2932 | (max-width: 43.75rem) */
+@media (max-width: 43.75rem) {
+    #dr-post {
+        width: calc(100% - 1.25rem);
+        margin: 1.25rem auto;
+    }
+
+    #dr-post .dr-post-header {
+        min-height: 10.9375rem;
+        padding: 1.5625rem 1.5625rem 1.375rem;
+    }
+
+    #dr-post .dr-post-title {
+        max-width: 85%;
+        font-size: 1.75rem;
+    }
+
+    #dr-post .dr-post-body {
+        padding: 1.5625rem 1.75rem 1.875rem;
+    }
+}
+
+/* tablillas.css — bloque original línea 2953 | (max-width: 30rem) */
+@media (max-width: 30rem) {
+    #dr-post .dr-post-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.0625rem;
+    }
+
+    #dr-post .dr-post-icon {
+        right: 1.125rem;
+    }
+
+    #dr-post .dr-post-body {
+        padding: 1.375rem 1.25rem 1.5625rem;
+    }
+
+    #dr-post .dr-post-body p {
+        font-size: 0.625rem;
+        line-height: 1.9;
+    }
+}
+
+/* tablillas.css — bloque original línea 3438 | (max-width: 47.5rem) */
+@media (max-width: 47.5rem) {
+    .dr-battle {
+        width: calc(100% - 1.875rem);
+    }
+
+    .dr-battle .battle-header {
+        padding: 1.375rem;
+        gap: 0.9375rem;
+    }
+
+    .dr-battle .battle-avatar {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .dr-battle .battle-name {
+        font-size: 1.875rem;
+    }
+
+    .dr-battle .battle-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dr-battle .battle-stat:nth-child(3) {
+        border-right: 0;
+    }
+
+    .dr-battle .battle-stat:nth-child(-n/**/+3) {
+        border-bottom: 0.0625rem solid var(--emblema2);
+    }
+
+    .dr-battle .battle-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* tablillas.css — bloque original línea 3815 | (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+    .dr-post-character::before,
+    .dr-post-character::after,
+    .dr-post-character-ring::before {
+        animation: none;
+    }
+}
+
+/* tablillas.css — bloque original línea 3827 | (max-width: 43.75rem) */
+@media (max-width: 43.75rem) {
+    .dr-post-wrap {
+        width: calc(100% - 1.25rem);
+    }
+
+    .dr-post-character {
+        left: -2rem;
+        top: -2.75rem;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .dr-post-character::before {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+
+    .dr-post-character::after {
+        width: 5.25rem;
+        height: 5.25rem;
+    }
+
+    .dr-post-character-ring {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+
+    .dr-post-character-ring::before {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+/* tablillas.css — bloque original línea 3860 | (max-width: 30rem) */
+@media (max-width: 30rem) {
+    .dr-post-character {
+        left: -1rem;
+        top: -2.25rem;
+        width: 5.75rem;
+        height: 5.75rem;
+    }
+
+    .dr-post-character::before {
+        width: 5.25rem;
+        height: 5.25rem;
+    }
+
+    .dr-post-character::after {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .dr-post-character-ring {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .dr-post-character-ring::before {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+
+    .dr-post-character-ring::after {
+        display: none;
+    }
+}
+
+/* tablillas.css — bloque original línea 4226 | (max-width: 38rem) */
+@media (max-width: 38rem) {
+    .dr-mission {
+        padding: .625rem;
+    }
+
+    .dr-mission-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: .75rem;
+    }
+
+    .dr-mission-image, .dr-mission-image img {
+        min-height: 0;
+        height: 13rem;
+    }
+
+    .dr-mission-content {
+        padding: .25rem;
+    }
+
+    .dr-mission-description {
+        max-height: 10rem;
+    }
+
+    .dr-mission-rules summary {
+        gap: .5rem;
+        padding: .625rem;
+    }
+
+    .dr-mission-rules-toggle {
+        font-size: 0;
+    }
+
+    .dr-mission-rules-toggle:before {
+        font-size: .45rem;
+    }
+
+    .dr-mission-rule {
+        grid-template-columns: 1.5rem minmax(0, 1fr);
+        gap: .5rem;
+    }
+}
+
+/* tablillas.css — bloque original línea 4388 | (max-width:30rem) */
+@media (max-width:30rem) {
+    .dr-tadmin .tienda-cart-row {
+        grid-template-columns: minmax(0,1fr) auto;
+    }
+
+    .dr-tadmin .tienda-cart-line {
+        grid-column: 1/-1;
+    }
+}
+
+/* tablillas.css — bloque original línea 5138 | (max-width:650px) */
+@media (max-width:650px) {
+    .dr-baul-frame {
+        padding: 4px;
+    }
+
+    .dr-baul-top {
+        padding: 10px;
+    }
+
+    .dr-baul-symbol {
+        width: auto;
+        height: auto;
+        font-size: 2.125rem;
+    }
+
+    .dr-baul-brand > div {
+        min-height: 34px;
+    }
+
+    .dr-baul-brand strong {
+        font-size: 0.6875rem;
+        letter-spacing: 1px;
+    }
+
+    .dr-baul-brand small {
+        font-size: 0.4375rem;
+        letter-spacing: .5px;
+    }
+
+    .dr-baul-status {
+        font-size: 0.4375rem;
+    }
+
+    .dr-baul-cover {
+        height: 260px;
+    }
+
+    .dr-baul-cover-content {
+        padding: 15px 15px 23px;
+    }
+
+    .dr-baul-cover h1 {
+        font-size: 1.6875rem;
+    }
+
+    .dr-baul-nav {
+        gap: 3px;
+        padding: 5px;
+    }
+
+    .dr-baul-nav label {
+        min-height: 45px;
+        padding: 6px 1px;
+        font-size: 0.4375rem;
+        letter-spacing: 0;
+    }
+
+    .dr-baul-panel {
+        padding: 13px 10px;
+    }
+
+    .dr-baul-main-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .dr-baul-profile, .dr-baul-intro {
+        padding: 14px;
+    }
+
+    .dr-baul-profile::before, .dr-baul-intro::before {
+        margin: -14px -14px 15px;
+    }
+
+    .dr-baul-relationship-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dr-baul-person {
+        height: 240px;
+    }
+
+    .dr-baul-mosaic {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-auto-rows: 115px;
+        gap: 6px;
+    }
+
+    .dr-baul-photo-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .dr-baul-photo-wide {
+        grid-column: span 2;
+    }
+
+    .dr-baul-diary-panel {
+        max-height: 520px;
+    }
+
+    .dr-baul-entry {
+        grid-template-columns: 43px minmax(0,1fr);
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .dr-baul-entry-date {
+        min-height: 48px;
+        padding: 5px 2px;
+    }
+
+    .dr-baul-entry-date strong {
+        font-size: 1.25rem;
+    }
+
+    .dr-baul-entry-date span {
+        font-size: 0.375rem;
+    }
+
+    .dr-baul-extra-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* tablillas.css — bloque original línea 5456 | (max-width: 480px) */
+@media (max-width: 480px) {
+    .dr-status .dr-status__heading {gap: 9px;}
+    .dr-status .dr-status__icon {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 1.3125rem !important;
+    }
+
+    .dr-status .dr-status__heading-main .dr-status__title-row > h2.dr-status__title {
+        font-size: 1.5rem;
+        line-height: 1;
+        white-space: normal;
+    }
+
+    .dr-status .dr-status__message {
+        padding: 12px;
+        font-size: 0.75rem;
     }
 }
