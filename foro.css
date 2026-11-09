@@ -20208,3 +20208,71 @@ body.light-mode #main-content > .panel:has(> .inner > h1.page-title + p > a) > .
 }
 
 .signature_div {padding-bottom: 50px;}/*espacio a las firmas*/
+
+/* DIGITAL RIFT — AUTOCOMPLETADO DE MENCIONES */
+.dr-mention-suggestions {
+    position: fixed;
+    z-index: 999999;
+    width: 280px;
+    max-width: calc(100vw - 16px);
+    max-height: 260px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    border: 1px solid var(--emblema1, #657b8d);
+    border-radius: 8px;
+    background: #111a22;
+    color: #edf3f7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .38);
+    font: 13px/1.35 Arial, sans-serif;
+}
+.dr-mention-suggestions[hidden] {
+    display: none;
+}
+.dr-mention-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    padding: 6px 8px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+.dr-mention-item:hover,
+.dr-mention-item.is-active {
+    background: var(--emblema2, #263e50);
+    color: #fff;
+}
+.dr-mention-avatar {
+    display: block;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    object-fit: cover;
+}
+.dr-mention-avatar-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    font-weight: 700;
+}
+.dr-mention-name {
+    overflow: hidden;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dr-mention-empty {
+    padding: 11px 9px;
+    color: #b8c5ce;
+    font-size: 12px;
+}
