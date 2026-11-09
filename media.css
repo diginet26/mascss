@@ -2341,3 +2341,390 @@
         font-size: 0.75rem;
     }
 }
+/* =========================================================
+   TABLÓN DIGITAL RIFT — RESPONSIVE
+   Adaptación basada en el CSS externo actualizado 09/11/2026.
+   ========================================================= */
+
+/* TABLETS Y PANTALLAS INTERMEDIAS */
+@media screen and (max-width: 900px) {
+    #rift-board {
+        width: 100%;
+        max-width: 100%;
+    }
+    #rift-board-body {
+        grid-template-columns: minmax(0, 1fr) 190px;
+        grid-template-areas: "current recent" "staff recent" "news news";
+        grid-template-rows: auto auto auto;
+        gap: .75rem;
+    }
+    #rift-current-content {height: 16rem;}
+    #rift-character {
+        top: -11rem;
+        left: 0;
+        width: 14rem;
+        height: 27rem;
+    }
+    #rift-current-text {
+        padding-left: 13rem;
+        font-size: .82rem;
+    }
+    #rift-recent {
+        min-height: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+    #rift-recent-content {
+        height: auto !important;
+        max-height: 31rem;
+    }
+    #rift-info-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #rift-news-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* TELÉFONOS Y TABLETS EN VERTICAL */
+@media screen and (max-width: 650px) {
+    #rift-board {
+        width: 100%;
+        max-width: 100%;
+        margin: .75rem auto 1.25rem;
+        overflow: hidden;
+    }
+    #rift-board-top {
+        height: 2rem;
+        padding: 0 .65rem;
+    }
+    #rift-board-body {
+        display: grid;
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "current" "staff" "recent" "news";
+        grid-template-rows: auto auto auto auto;
+        gap: .7rem;
+        margin: .7rem 0 0;
+        padding: 0 .65rem .7rem;
+        box-sizing: border-box;
+    }
+    #rift-current,
+    #rift-staff,
+    #rift-recent,
+    #rift-news {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        margin: 0 !important;
+        padding: .85rem;
+        box-sizing: border-box;
+    }
+    #rift-board .rift-box-title {
+        margin-bottom: .7rem;
+        padding-bottom: .55rem;
+        font-size: .9rem;
+        letter-spacing: .04rem;
+    }
+
+    /* SITUACIÓN ACTUAL */
+    #rift-current-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .65rem;
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+        padding: .75rem;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    #rift-character {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: min(100%, 9rem);
+        height: 12rem;
+        min-width: 0;
+        margin: 0 auto;
+        flex: 0 0 auto;
+        order: 0;
+        z-index: 1;
+    }
+    #rift-character img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+    }
+    #rift-current-text {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 0 .15rem;
+        overflow: visible;
+        box-sizing: border-box;
+        font-size: .78rem;
+        line-height: 1.55;
+        text-align: left;
+        order: 1;
+    }
+    #rift-current-text p {
+        margin: 0 0 .65rem;
+    }
+
+    /* ACCESOS RÁPIDOS */
+    #rift-quick-links {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: stretch;
+        justify-content: stretch;
+        gap: .45rem;
+        width: 100%;
+        margin-top: .7rem;
+        padding: .25rem 0;
+    }
+    #rift-quick-links > a {
+        width: auto;
+        min-width: 0;
+        min-height: 3.9rem;
+        height: auto;
+        padding: .5rem .2rem;
+        font-size: 1.15rem;
+    }
+    #rift-quick-links > a > i,
+    #rift-quick-links > a > svg {
+        margin-bottom: .35rem;
+        font-size: 1.2rem;
+    }
+    #rift-quick-links > a > span {
+        font-size: .48rem;
+        letter-spacing: .02rem;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-overflow: clip;
+    }
+
+    /* TARJETAS DE INFORMACIÓN */
+    #rift-info-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .55rem;
+        margin-top: .7rem;
+    }
+    .rift-info-card {
+        width: 100%;
+        min-width: 0;
+        height: 9rem;
+        box-sizing: border-box;
+    }
+    .rift-info-box {
+        height: auto;
+        min-height: 5.8rem;
+        align-items: flex-start;
+        gap: .65rem;
+        padding: .6rem;
+    }
+    .rift-info-box img {
+        width: 4.25rem;
+        height: 4.25rem;
+        flex: 0 0 4.25rem;
+    }
+    .rift-info-box > div {
+        height: auto;
+        min-width: 0;
+        overflow: visible;
+        padding-right: .15rem;
+        font-size: .68rem;
+        line-height: 1.45;
+    }
+    .rift-info-image img {
+        width: 100%;
+        height: 100%;
+    }
+    .rift-info-image .rift-info-overlay {
+        padding: 2.1rem .65rem .65rem;
+    }
+    .rift-info-overlay strong {
+        font-size: .78rem;
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+    .rift-info-overlay span {
+        font-size: .48rem;
+        letter-spacing: .04rem;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    /* STAFF */
+    #rift-staff-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        justify-items: stretch;
+        gap: .6rem;
+    }
+    #rift-staff-grid > a {
+        width: 100%;
+        height: 5.7rem;
+        min-width: 0;
+        transform: none !important;
+    }
+    #rift-staff-grid > a:hover,
+    #rift-staff-grid > a:nth-child(odd):hover,
+    #rift-staff-grid > a:nth-child(even):hover {
+        transform: none !important;
+    }
+
+    /* REDES SOCIALES */
+    #rift-social-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .45rem;
+        margin-top: .7rem;
+        padding: .5rem;
+    }
+    #rift-social-links a {
+        width: 100%;
+        min-width: 0;
+        height: 2.75rem;
+        aspect-ratio: auto;
+        font-size: .65rem;
+    }
+
+    /* ÚLTIMOS TEMAS */
+    #rift-recent {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+    #rift-recent-content {
+        display: block !important;
+        width: 100%;
+        height: auto !important;
+        max-height: 22rem;
+        min-height: 0;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        overscroll-behavior: contain;
+        box-sizing: border-box;
+        font-size: .75rem;
+    }
+    #rift-recent-content > .module,
+    #rift-recent-content > .module > .inner,
+    #rift-recent-content #comments_scroll_div,
+    #rift-recent-content .marquee {
+        height: auto !important;
+        min-height: 0;
+        max-height: none;
+        overflow: visible !important;
+        box-sizing: border-box;
+    }
+    #rift-recent-content .rift-recent-item {
+        margin-bottom: .45rem;
+        padding: .6rem .65rem !important;
+        font-size: .72rem;
+        overflow-wrap: anywhere;
+    }
+
+    /* NOTICIAS */
+    #rift-news {grid-area: news;}
+    #rift-news-viewport {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+    #rift-news-track {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr);
+        gap: .6rem;
+        width: 100% !important;
+        min-width: 0;
+        transform: none !important;
+        transition: none !important;
+    }
+    .rift-news-item {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: 8rem;
+        flex: none;
+        box-sizing: border-box;
+    }
+    .rift-news-title {
+        width: 78%;
+        max-width: calc(100% - .5rem);
+    }
+    .rift-news-name {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        font-size: .62rem;
+    }
+    .rift-news-text {
+        left: .65rem;
+        right: .65rem;
+        bottom: .55rem;
+        font-size: .52rem;
+    }
+    .rift-news-arrow {
+        min-width: 2rem;
+        flex-basis: 2rem;
+        min-height: 2rem;
+    }
+    #rift-news-counter {text-align: center;}
+}
+
+/* TELÉFONOS ESTRECHOS */
+@media screen and (max-width: 420px) {
+    #rift-board-body {
+        gap: .55rem;
+        padding-right: .45rem;
+        padding-left: .45rem;
+    }
+    #rift-current,
+    #rift-staff,
+    #rift-recent,
+    #rift-news {
+        padding: .7rem;
+    }
+    #rift-board .rift-box-title {font-size: .82rem;}
+    #rift-current-content {padding: .6rem;}
+    #rift-character {
+        width: min(100%, 8rem);
+        height: 10.5rem;
+    }
+    #rift-current-text {font-size: .74rem;}
+    #rift-quick-links {gap: .35rem;}
+    #rift-quick-links > a {
+        min-height: 3.6rem;
+        padding: .4rem .15rem;
+    }
+    #rift-quick-links > a > i,
+    #rift-quick-links > a > svg {font-size: 1.05rem;}
+    #rift-quick-links > a > span {font-size: .44rem;}
+    #rift-info-row {grid-template-columns: minmax(0, 1fr);}
+    .rift-info-card {height: 8rem;}
+    .rift-info-box img {
+        width: 3.75rem;
+        height: 3.75rem;
+        flex-basis: 3.75rem;
+    }
+    .rift-info-image .rift-info-overlay {
+        padding: 1.8rem .7rem .7rem;
+    }
+    .rift-info-overlay strong {font-size: .9rem;}
+    #rift-staff-grid {gap: .45rem;}
+    #rift-staff-grid > a {height: 5.2rem;}
+    #rift-recent-content {max-height: 19rem;}
+    .rift-news-item {
+        height: 7.5rem;
+        padding: .8rem;
+    }
+}
