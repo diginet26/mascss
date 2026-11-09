@@ -20207,4 +20207,4 @@ body.light-mode #main-content > .panel:has(> .inner > h1.page-title + p > a) > .
     color: var(--emblema2) !important;
 }
 
-.signature_div {padding-bottom: 15px;}/*espacio a las firmas*/
+.signature_div {padding-bottom: 50px;}/*espacio a las firmas*/
