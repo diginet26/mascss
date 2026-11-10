@@ -2626,27 +2626,7 @@
         overflow: visible !important;
         box-sizing: border-box;
     }
-    #rift-recent-content .js-marquee-wrapper {
-        display: block !important;
-        width: 100% !important;
-        height: auto !important;
-        transform: none !important;
-        transition: none !important;
-        animation: none !important;
-    }
-    #rift-recent-content .js-marquee-wrapper > .js-marquee {
-        position: static !important;
-        display: block !important;
-        width: 100% !important;
-        height: auto !important;
-        margin: 0 !important;
-        transform: none !important;
-        animation: none !important;
-    }
-    #rift-recent-content .js-marquee-wrapper > .js-marquee:nth-child(n+2) {
-        display: none !important;
-    }
-    #rift-recent-content .js-marquee .rift-recent-item:nth-child(n+7 of .rift-recent-item) {
+    #rift-recent-content .rift-recent-item.dr-mobile-topic-hidden {
         display: none !important;
     }
     #rift-recent-content .rift-recent-item {
