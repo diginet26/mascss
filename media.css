@@ -251,8 +251,20 @@
         box-sizing: border-box;
     }
     .digimon-navbar-account {
-        left: clamp(2px, 1vw, 6px);
-        top: 5px;
+        position: static !important;
+        left: auto;
+        top: auto;
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+        justify-self: start;
+        width: 100%;
+        height: 100%;
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
     }
     #digimon-user-avatar {
         width: clamp(2.5rem, 13vw, 3.4rem);
