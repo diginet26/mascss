@@ -1,0 +1,144 @@
+/* ==========================================================
+   DIGITAL RIFT — VERSIÓN MÓVIL NATIVA
+   Base estructural para las plantillas móviles de Foroactivo.
+   Los estilos quedan limitados a #mpage-body-modern.
+   ========================================================== */
+
+
+/* ==========================================================
+   BASE Y CONTENEDORES PRINCIPALES
+   ========================================================== */
+
+#mpage-body-modern,
+#mpage-body-modern *,
+#mpage-body-modern *::before,
+#mpage-body-modern *::after {
+    box-sizing: border-box;
+}
+
+#mpage-body-modern {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+#mpage-body-modern #mwrap {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#mpage-body-modern #header.mobile_title {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#mpage-body-modern main {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   CONTENEDORES DE LAS PLANTILLAS MÓVILES
+   Evita que cajas y tarjetas impongan un ancho mínimo.
+   ========================================================== */
+
+#mpage-body-modern .box,
+#mpage-body-modern .box-subtle,
+#mpage-body-modern .box-error,
+#mpage-body-modern .forum,
+#mpage-body-modern .posts,
+#mpage-body-modern .forum-section-wrap,
+#mpage-body-modern .forum-section,
+#mpage-body-modern .topic,
+#mpage-body-modern .post-section,
+#mpage-body-modern .topic-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+/* ==========================================================
+   MEDIOS Y CONTENIDO DINÁMICO
+   ========================================================== */
+
+#mpage-body-modern img,
+#mpage-body-modern video,
+#mpage-body-modern canvas,
+#mpage-body-modern svg,
+#mpage-body-modern iframe,
+#mpage-body-modern object,
+#mpage-body-modern embed {
+    max-width: 100%;
+}
+
+#mpage-body-modern .post-content,
+#mpage-body-modern .forum-description,
+#mpage-body-modern .forum-lastpost,
+#mpage-body-modern .description,
+#mpage-body-modern .option_voters_list,
+#mpage-body-modern .frm-info,
+#mpage-body-modern .box-error {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   FORMULARIOS Y CONTROLES
+   No se fuerza todavía el diseño ni la altura de los campos.
+   ========================================================== */
+
+#mpage-body-modern input,
+#mpage-body-modern select,
+#mpage-body-modern textarea,
+#mpage-body-modern button {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#mpage-body-modern form[name="post"],
+#mpage-body-modern form[name="form_recupmdp"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+#mpage-body-modern form[name="post"] .input-subtle,
+#mpage-body-modern form[name="form_recupmdp"] .input {
+    max-width: 100%;
+    min-width: 0;
+}
+
+
+/* ==========================================================
+   BLOQUES DE CÓDIGO Y TABLAS PUBLICADAS
+   Mantienen su contenido accesible sin ensanchar la página.
+   ========================================================== */
+
+#mpage-body-modern pre,
+#mpage-body-modern .codebox,
+#mpage-body-modern .codebox code {
+    max-width: 100%;
+}
+
+#mpage-body-modern pre,
+#mpage-body-modern .codebox {
+    overflow-x: auto;
+}
+
+#mpage-body-modern .post-content table,
+#mpage-body-modern .post-content .table {
+    max-width: 100%;
+}
