@@ -776,19 +776,18 @@
 @media (max-width: 650px) {
     .dr-post-container {grid-template-columns: 1fr;}
     .dr-post-sidebar {
-    width: min(21.43rem, 100%);
-    margin: 0 auto;
-    .dr-post-sidebar {
+        width: min(21.43rem, 100%);
+        margin: 0 auto;
         position: static !important;
         top: auto !important;
         z-index: 1 !important;
     }
-}
     .dr-post-avatar {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 5;
-}}
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 5;
+    }
+}
 
 /* =========================================================
    FORMULARIO DE ACCESO NATIVO
