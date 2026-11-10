@@ -2805,3 +2805,15 @@
         padding: .8rem;
     }
 }
+
+/* =========================================================
+   DIGITAL RIFT — ANCHO FLUIDO DEL DOCUMENTO
+   Prueba controlada para pantallas estrechas.
+   ========================================================= */
+@media screen and (max-width: 900px) {
+    html#min-width {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+}
