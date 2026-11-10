@@ -778,6 +778,11 @@
     .dr-post-sidebar {
     width: min(21.43rem, 100%);
     margin: 0 auto;
+    .dr-post-sidebar {
+        position: static !important;
+        top: auto !important;
+        z-index: 1 !important;
+    }
 }
     .dr-post-avatar {
     width: 100%;
