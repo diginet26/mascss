@@ -2609,11 +2609,10 @@
         display: block !important;
         width: 100%;
         height: auto !important;
-        max-height: 22rem;
+        max-height: none !important;
         min-height: 0;
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
-        overscroll-behavior: contain;
+        overflow: visible !important;
+        overscroll-behavior: auto;
         box-sizing: border-box;
         font-size: .75rem;
     }
@@ -2623,9 +2622,32 @@
     #rift-recent-content .marquee {
         height: auto !important;
         min-height: 0;
-        max-height: none;
+        max-height: none !important;
         overflow: visible !important;
         box-sizing: border-box;
+    }
+    #rift-recent-content .js-marquee-wrapper {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+    }
+    #rift-recent-content .js-marquee-wrapper > .js-marquee {
+        position: static !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+    #rift-recent-content .js-marquee-wrapper > .js-marquee:nth-child(n+2) {
+        display: none !important;
+    }
+    #rift-recent-content .js-marquee .rift-recent-item:nth-child(n+7 of .rift-recent-item) {
+        display: none !important;
     }
     #rift-recent-content .rift-recent-item {
         margin-bottom: .45rem;
