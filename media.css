@@ -238,17 +238,21 @@
 /* Original de foro.css: línea 3066 | @(max-width: 650px) */
 @media (max-width: 650px) {
     .digimon-navbar-main {
-        min-height: 58px;
+        display: grid;
+        grid-template-columns: clamp(2.75rem, 13vw, 3.5rem) minmax(0, 1fr) clamp(1.6rem, 8vw, 2.125rem);
+        grid-template-rows: minmax(34px, auto) 36px;
+        align-items: center;
+        column-gap: clamp(2px, .7vw, 5px);
+        row-gap: 6px;
         width: 100%;
         min-width: 0;
-        padding: 5px 5px 5px clamp(3.1rem, 15vw, 3.7rem);
-        gap: clamp(1px, .6vw, 3px);
+        min-height: 0;
+        padding: 5px 6px 8px;
         box-sizing: border-box;
     }
     .digimon-navbar-account {
         left: clamp(2px, 1vw, 6px);
         top: 5px;
-        flex-basis: clamp(2.5rem, 13vw, 3.4rem);
     }
     #digimon-user-avatar {
         width: clamp(2.5rem, 13vw, 3.4rem);
@@ -264,10 +268,20 @@
         min-width: clamp(3.6rem, 20vw, 5.4rem);
         flex-basis: clamp(3.6rem, 20vw, 5.4rem);
     }
+    .digimon-digital-line {
+        display: none;
+    }
     .digimon-main-menu {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
         min-width: 0;
-        flex: 0 1 auto;
+        margin: 0;
         gap: clamp(1px, .6vw, 3px);
+        flex: none;
     }
     .digimon-main-button {
         width: clamp(1.6rem, 8vw, 2.125rem);
@@ -280,29 +294,36 @@
     .digimon-main-button i {
         font-size: clamp(.75rem, 3.5vw, .8125rem);
     }
-    .digimon-digital-line {
-        display: none;
-    }
-    #digimon-search {
-        width: clamp(3.5rem, 18vw, 7.5rem);
-        min-width: 0;
-        flex: 0 1 clamp(3.5rem, 18vw, 7.5rem);
-        margin-left: 0;
-    }
-    #digimon-search-input {
-        min-width: 0;
-        padding: 0 clamp(2px, .8vw, 6px);
-        font-size: clamp(.5rem, 2vw, .6875rem);
-    }
     #digimon-notifications {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
         width: clamp(1.6rem, 8vw, 2.125rem);
         min-width: 0;
         height: clamp(1.6rem, 8vw, 2.125rem);
-        flex: 0 0 auto;
+        flex: none;
     }
     .digimon-icon-button {
         width: clamp(1.6rem, 8vw, 2.125rem);
         height: clamp(1.6rem, 8vw, 2.125rem);
+    }
+    #digimon-search {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #digimon-search-input {
+        width: 100%;
+        min-width: 0;
+        height: 36px;
+        padding: 0 clamp(2px, .8vw, 6px);
+        font-size: clamp(.6rem, 2vw, .6875rem);
+        box-sizing: border-box;
     }
     .digimon-navbar-sub {
         min-width: 0;
