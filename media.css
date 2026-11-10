@@ -238,36 +238,111 @@
 /* Original de foro.css: línea 3066 | @(max-width: 650px) */
 @media (max-width: 650px) {
     .digimon-navbar-main {
-    min-height: 58px;
-    padding: 5px 7px;
-    gap: 5px;
-}
+        min-height: 58px;
+        width: 100%;
+        min-width: 0;
+        padding: 5px 5px 5px clamp(3.1rem, 15vw, 3.7rem);
+        gap: clamp(1px, .6vw, 3px);
+        box-sizing: border-box;
+    }
     .digimon-navbar-account {
-    flex-basis: 48px;
-}
+        left: clamp(2px, 1vw, 6px);
+        top: 5px;
+        flex-basis: clamp(2.5rem, 13vw, 3.4rem);
+    }
+    #digimon-user-avatar {
+        width: clamp(2.5rem, 13vw, 3.4rem);
+        height: clamp(2.5rem, 13vw, 3.4rem);
+    }
+    .digimon-avatar-frame {
+        width: clamp(2.35rem, 12vw, 3.2rem);
+        height: clamp(2.35rem, 12vw, 3.2rem);
+    }
+    .digimon-avatar-frame img {
+        width: clamp(3.6rem, 20vw, 5.4rem);
+        height: clamp(3.6rem, 20vw, 5.4rem);
+        min-width: clamp(3.6rem, 20vw, 5.4rem);
+        flex-basis: clamp(3.6rem, 20vw, 5.4rem);
+    }
     .digimon-main-menu {
-    gap:3px;
-}
+        min-width: 0;
+        flex: 0 1 auto;
+        gap: clamp(1px, .6vw, 3px);
+    }
     .digimon-main-button {
-    width:34px;
-    height: 34px;
-    padding: 0;
-}
+        width: clamp(1.6rem, 8vw, 2.125rem);
+        min-width: 0;
+        min-height: 0;
+        height: clamp(1.6rem, 8vw, 2.125rem);
+        padding: 0;
+        flex: 0 0 auto;
+    }
     .digimon-main-button i {
-    font-size:13px;
-}
+        font-size: clamp(.75rem, 3.5vw, .8125rem);
+    }
     .digimon-digital-line {
-    display: none;
-}
+        display: none;
+    }
     #digimon-search {
-    width: 120px;
-}
+        width: clamp(3.5rem, 18vw, 7.5rem);
+        min-width: 0;
+        flex: 0 1 clamp(3.5rem, 18vw, 7.5rem);
+        margin-left: 0;
+    }
+    #digimon-search-input {
+        min-width: 0;
+        padding: 0 clamp(2px, .8vw, 6px);
+        font-size: clamp(.5rem, 2vw, .6875rem);
+    }
+    #digimon-notifications {
+        width: clamp(1.6rem, 8vw, 2.125rem);
+        min-width: 0;
+        height: clamp(1.6rem, 8vw, 2.125rem);
+        flex: 0 0 auto;
+    }
+    .digimon-icon-button {
+        width: clamp(1.6rem, 8vw, 2.125rem);
+        height: clamp(1.6rem, 8vw, 2.125rem);
+    }
     .digimon-navbar-sub {
-    padding: 4px 7px;
-}
+        min-width: 0;
+        padding: 4px 7px;
+    }
+    .digimon-sub-controls {
+        gap: clamp(2px, .8vw, 6px);
+    }
     .digimon-breadcrumb-slot {
-    max-width: calc(100% - 150px);
+        min-width: 0;
+        max-width: calc(100% - 150px);
+    }
 }
+
+/* =========================================================
+   CABECERA PRINCIPAL — ADAPTACIÓN FLUIDA
+   ========================================================= */
+@media screen and (max-width: 900px) {
+    #rift-header {
+        width: 100%;
+        max-width: 100%;
+        height: clamp(15rem, 70vw, 32.5rem);
+        margin-left: 0;
+    }
+    #rift-header .rift-header-content {
+        width: 100%;
+        max-width: 100%;
+        padding-right: clamp(.5rem, 2.5vw, 2.5rem);
+        box-sizing: border-box;
+    }
+    #rift-header .rift-header-title {
+        max-width: 100%;
+        font-size: clamp(2rem, 12vw, 12.5rem);
+        letter-spacing: clamp(-.4375rem, -.6vw, -.125rem);
+    }
+    #rift-header .rift-header-title span {
+        font-size: clamp(.6rem, 2.8vw, 1.5625rem);
+        margin-top: clamp(-1rem, -2.5vw, -.3rem);
+        letter-spacing: clamp(.03rem, .2vw, .0625rem);
+    }
 }
 
 /* =========================================================
