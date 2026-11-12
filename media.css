@@ -2845,12 +2845,18 @@
 
 /* =========================================================
    DIGITAL RIFT — ANCHO FLUIDO DEL DOCUMENTO
-   Prueba controlada para pantallas estrechas.
+   Prueba controlada: anchura de los contenedores exteriores.
    ========================================================= */
 @media screen and (max-width: 900px) {
-    html#min-width {
+    html#min-width,
+    body#phpbb,
+    body#phpbb > .conteneur_minwidth_IE,
+    body#phpbb .conteneur_layout_IE,
+    body#phpbb .conteneur_container_IE,
+    body#phpbb #wrap {
         width: 100% !important;
         min-width: 0 !important;
         max-width: 100% !important;
+        box-sizing: border-box;
     }
 }
