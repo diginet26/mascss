@@ -2512,7 +2512,7 @@
 }
 
 /* TELÉFONOS Y TABLETS EN VERTICAL */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px), (pointer: coarse) and (hover: none) {
     #rift-board {
         width: 100%;
         max-width: 100%;
