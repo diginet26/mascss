@@ -298,56 +298,50 @@ body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) input[
 
 /* =========================================================
    PERFIL — ENVIAR UN EMAIL
-   Formulario nativo de Foroactivo.
+   Formulario nativo abierto desde el icono de correo del perfil.
+   DOM: #main-content > form[name="post"] > .panel
    ========================================================= */
-body:has(#main-content form[action*="mode=email"]) #main-content > .panel:has(form[action*="mode=email"]) {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] {
     width:min(calc(100% - 2rem), 60rem);
     margin:1.4rem auto 2rem;
+    color:var(--theme-text, #e4eaf0);
+    font-family:"Oxanium", sans-serif;
+}
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] > .panel {
+    margin:0;
     padding:1.35rem clamp(1rem, 3vw, 1.8rem);
     box-sizing:border-box;
     border:1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border, #303945));
     border-radius:.55rem;
     background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 42%),linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px),linear-gradient(color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px),var(--theme-panel, #151b22);
     background-size:auto,1.35rem 1.35rem,1.35rem 1.35rem,auto;
-    color:var(--theme-text, #e4eaf0);
-    font-family:"Oxanium", sans-serif;
     box-shadow:0 0 1.1rem color-mix(in srgb, var(--emblema2) 10%, transparent);
 }
-body:has(#main-content form[action*="mode=email"]) #main-content > .panel:has(form[action*="mode=email"]) > .inner {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] > .panel > .inner {
     padding:0;
     background:transparent;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content > .panel:has(form[action*="mode=email"]) .corners-top,
-body:has(#main-content form[action*="mode=email"]) #main-content > .panel:has(form[action*="mode=email"]) .corners-bottom {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] > .panel .corners-top,
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] > .panel .corners-bottom {
     display:none;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] {
-    display:block;
-    width:100%;
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 {
     margin:0;
     padding:0;
     border:0;
     background:transparent;
-    color:var(--theme-text, #e4eaf0);
-    box-shadow:none;
-    font-family:"Oxanium", sans-serif;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] fieldset {
-    margin:0;
-    padding:0;
-    border:0;
-}
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] fieldset dl {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 > dl {
     display:grid;
     grid-template-columns:minmax(10rem, 13rem) minmax(0, 1fr);
     align-items:start;
     column-gap:1rem;
-    row-gap:.85rem;
+    row-gap:.35rem;
     width:100%;
-    margin:0;
+    margin:0 0 .9rem;
     padding:0;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] dt {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 > dl > dt {
     grid-column:1;
     float:none !important;
     width:auto !important;
@@ -362,7 +356,7 @@ body:has(#main-content form[action*="mode=email"]) #main-content form[action*="m
     line-height:1.45;
     text-align:left;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] dd {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 > dl > dd {
     grid-column:2;
     float:none !important;
     width:auto !important;
@@ -373,10 +367,11 @@ body:has(#main-content form[action*="mode=email"]) #main-content form[action*="m
     color:var(--theme-text, #e4eaf0);
     text-align:left;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] dd br {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 > dl > dd br {
     display:none;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] input[type="text"] {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[name="friendname"],
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[name="subject"] {
     width:min(100%, 17rem) !important;
     min-height:2.35rem;
     margin:0 !important;
@@ -390,11 +385,12 @@ body:has(#main-content form[action*="mode=email"]) #main-content form[action*="m
     font:400 .75rem/1.35 "Oxanium", sans-serif !important;
     transition:border-color .18s ease, box-shadow .18s ease;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] input[type="text"]:focus {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[name="friendname"]:focus,
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[name="subject"]:focus {
     border-color:var(--emblema2) !important;
     box-shadow:0 0 .55rem color-mix(in srgb, var(--emblema2) 20%, transparent);
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] textarea {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] textarea {
     display:block;
     width:100% !important;
     max-width:100% !important;
@@ -410,13 +406,13 @@ body:has(#main-content form[action*="mode=email"]) #main-content form[action*="m
     resize:vertical;
     transition:border-color .18s ease, box-shadow .18s ease, background .18s ease;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] textarea:focus {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] textarea:focus {
     border-color:var(--emblema2) !important;
     background:var(--theme-panel, #151b22) !important;
     box-shadow:0 0 .65rem color-mix(in srgb, var(--emblema2) 22%, transparent);
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] .italic,
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] em {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 em,
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 .italic {
     display:block;
     max-width:34rem;
     margin:.25rem 0 .55rem;
@@ -424,14 +420,14 @@ body:has(#main-content form[action*="mode=email"]) #main-content form[action*="m
     font-size:.65rem;
     line-height:1.45;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] input[type="checkbox"] {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[type="checkbox"] {
     width:1rem;
     height:1rem;
     margin:0 .45rem 0 0;
     accent-color:var(--emblema2);
     vertical-align:middle;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] dd:has(input[type="checkbox"]) label {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] label:has(input[type="checkbox"]) {
     display:inline-flex;
     align-items:center;
     gap:.35rem;
@@ -440,7 +436,7 @@ body:has(#main-content form[action*="mode=email"]) #main-content form[action*="m
     line-height:1.5;
     cursor:pointer;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] input[type="submit"] {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[type="submit"] {
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -457,30 +453,32 @@ body:has(#main-content form[action*="mode=email"]) #main-content form[action*="m
     cursor:pointer;
     transition:background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] input[type="submit"]:hover,
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] input[type="submit"]:focus-visible {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[type="submit"]:hover,
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[type="submit"]:focus-visible {
     border-color:var(--emblema1);
     background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 22%, transparent), color-mix(in srgb, var(--emblema1) 17%, transparent));
     color:var(--emblema2);
     box-shadow:0 0 .75rem color-mix(in srgb, var(--emblema2) 22%, transparent);
     transform:translateY(-1px);
 }
-body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] input[type="submit"]:active {
+body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] input[type="submit"]:active {
     transform:translateY(0);
     box-shadow:none;
 }
 @media (max-width:700px) {
-    body:has(#main-content form[action*="mode=email"]) #main-content > .panel:has(form[action*="mode=email"]) {
+    body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] {
         width:calc(100% - 1rem);
         margin:1rem auto 1.5rem;
+    }
+    body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] > .panel {
         padding:1rem .65rem;
     }
-    body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] fieldset dl {
+    body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 > dl {
         grid-template-columns:1fr;
         row-gap:.35rem;
     }
-    body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] dt,
-    body:has(#main-content form[action*="mode=email"]) #main-content form[action*="mode=email"] dd {
+    body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 > dl > dt,
+    body:has(#main-content > form[name="post"] input[name="friendname"]) #main-content > form[name="post"] fieldset.fields2 > dl > dd {
         grid-column:1;
         width:100% !important;
     }
