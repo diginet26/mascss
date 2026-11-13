@@ -215,25 +215,29 @@
 }
 
 /* =========================================================
-   NAVEGACIÓN PRINCIPAL — TAMAÑO MÓVIL COMPACTO
-   Ambas barras se reducen sin fusionar sus funciones.
+   NAVEGACIÓN PRINCIPAL — MÓVIL
+   Ancho completo y controles táctiles ampliados.
    ========================================================= */
 @media screen and (max-width: 900px), (pointer: coarse) and (hover: none) {
     #digimon-navbar {
         width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
     }
     .digimon-navbar-main {
         display: grid;
-        grid-template-columns: 2rem max-content minmax(4.5rem, 7rem) 1.35rem;
-        grid-template-rows: 2rem;
+        grid-template-columns: 2.6rem max-content minmax(6rem, 8rem) 2.1rem;
+        grid-template-rows: 3rem;
         align-items: center;
         justify-content: space-between;
         column-gap: .3rem;
         width: 100%;
         min-width: 0;
         min-height: 0 !important;
-        height: 2.2rem;
-        padding: .1rem .35rem;
+        height: 3.2rem;
+        padding: .1rem .4rem;
         box-sizing: border-box;
     }
     .digimon-navbar-account {
@@ -251,19 +255,19 @@
         z-index: 3;
     }
     #digimon-user-avatar {
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 2.45rem;
+        height: 2.45rem;
     }
     .digimon-avatar-frame {
-        width: 1.65rem;
-        height: 1.65rem;
+        width: 2.25rem;
+        height: 2.25rem;
         border-width: 1px;
     }
     .digimon-avatar-frame img {
-        width: 2.5rem;
-        height: 2.5rem;
-        min-width: 2.5rem;
-        flex-basis: 2.5rem;
+        width: 3.25rem;
+        height: 3.25rem;
+        min-width: 3.25rem;
+        flex-basis: 3.25rem;
     }
     .digimon-digital-line {
         display: none !important;
@@ -279,21 +283,21 @@
         max-width: 100%;
         margin: 0;
         padding: 0;
-        gap: .16rem;
+        gap: .22rem;
         box-sizing: border-box;
         flex: none;
     }
     .digimon-main-button {
-        width: 1.35rem;
-        min-width: 1.35rem;
-        min-height: 1.35rem;
-        height: 1.35rem;
+        width: 2.1rem;
+        min-width: 2.1rem;
+        min-height: 2.1rem;
+        height: 2.1rem;
         padding: 0;
-        flex: 0 0 1.35rem;
-        border-radius: .25rem;
+        flex: 0 0 2.1rem;
+        border-radius: .3rem;
     }
     .digimon-main-button i {
-        font-size: .68rem;
+        font-size: 1rem;
     }
     #digimon-search {
         grid-column: 3;
@@ -302,18 +306,18 @@
         align-items: center;
         width: 100%;
         min-width: 0;
-        max-width: 7rem;
-        height: 1.35rem;
+        max-width: 8rem;
+        height: 1.9rem;
         margin: 0;
         box-sizing: border-box;
     }
     #digimon-search-input {
         width: 100%;
         min-width: 0;
-        height: 1.35rem;
-        padding: 0 .35rem;
-        border-radius: .25rem;
-        font-size: .58rem;
+        height: 1.9rem;
+        padding: 0 .45rem;
+        border-radius: .3rem;
+        font-size: .72rem;
         text-align: center;
         box-sizing: border-box;
     }
@@ -321,16 +325,16 @@
         grid-column: 4;
         grid-row: 1;
         justify-self: end;
-        width: 1.35rem;
-        min-width: 1.35rem;
-        height: 1.35rem;
+        width: 2.1rem;
+        min-width: 2.1rem;
+        height: 2.1rem;
         flex: none;
-        border-radius: .25rem;
+        border-radius: .3rem;
     }
     .digimon-icon-button {
-        width: 1.35rem;
-        height: 1.35rem;
-        font-size: .75rem;
+        width: 2.1rem;
+        height: 2.1rem;
+        font-size: 1rem;
     }
     .digimon-navbar-sub {
         display: flex;
@@ -338,43 +342,28 @@
         justify-content: flex-end;
         min-width: 0;
         min-height: 0 !important;
-        height: 1.8rem;
-        padding: .1rem .35rem;
+        height: 2.6rem;
+        padding: .15rem .4rem;
         box-sizing: border-box;
     }
     .digimon-sub-controls {
         display: flex;
         align-items: center;
-        gap: .18rem;
+        gap: .22rem;
         margin-left: auto;
     }
     .digimon-sub-button {
-        width: 1.35rem;
-        min-width: 1.35rem;
-        height: 1.35rem;
-        min-height: 1.35rem;
+        width: 1.9rem;
+        min-width: 1.9rem;
+        height: 1.9rem;
+        min-height: 1.9rem;
         padding: 0;
-        font-size: .7rem;
+        font-size: .95rem;
         border-radius: 50%;
     }
     .digimon-breadcrumb-slot {
         min-width: 0;
-        max-width: calc(100% - 6.5rem);
-    }
-}
-
-/* =========================================================
-   NAVBAR — ALINEAR CON LA COLUMNA VISIBLE DEL TABLÓN
-   En el navegador móvil con viewport CSS ampliado, ambas barras
-   adoptan el ancho de la columna principal visible (986/1572).
-   ========================================================= */
-@media screen and (min-width: 901px) and (pointer: coarse) and (hover: none) {
-    #digimon-navbar {
-        width: 62.7%;
-        max-width: 100%;
-        left: 0;
-        right: auto;
-        box-sizing: border-box;
+        max-width: calc(100% - 8rem);
     }
 }
 
