@@ -364,6 +364,21 @@
 }
 
 /* =========================================================
+   NAVBAR — ALINEAR CON LA COLUMNA VISIBLE DEL TABLÓN
+   En el navegador móvil con viewport CSS ampliado, ambas barras
+   adoptan el ancho de la columna principal visible (986/1572).
+   ========================================================= */
+@media screen and (min-width: 901px) and (pointer: coarse) and (hover: none) {
+    #digimon-navbar {
+        width: 62.7%;
+        max-width: 100%;
+        left: 0;
+        right: auto;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================================
    CABECERA PRINCIPAL — ADAPTACIÓN FLUIDA
    ========================================================= */
 @media screen and (max-width: 900px) {
