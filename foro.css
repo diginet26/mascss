@@ -159,9 +159,22 @@ body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) td:las
 body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) td:last-child * {
     text-align:left !important;
 }
-body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) input[type="radio"] {
-    margin-left:0 !important;
+/* Grupo de opciones: todos los radios arrancan en el mismo eje. */
+body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) td:has(input[type="radio"]) {
+    text-align:left !important;
 }
+body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) td:has(input[type="radio"]) :is(div, p, label) {
+    display:block !important;
+    width:100% !important;
+    margin-left:0 !important;
+    text-align:left !important;
+}
+body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) td:has(input[type="radio"]) input[type="radio"] {
+    margin-left:0 !important;
+    margin-right:.45rem !important;
+    vertical-align:middle;
+}
+
 body:has(img[alt^="Denunciar un abuso"]) #main-content form:has(textarea) textarea {
     display:block;
     width:min(100%, 36rem) !important;
