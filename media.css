@@ -216,7 +216,7 @@
 
 /* =========================================================
    NAVEGACIÓN PRINCIPAL — MÓVIL
-   Ancho completo y controles táctiles ampliados.
+   Ancho completo y controles táctiles accesibles.
    ========================================================= */
 @media screen and (max-width: 900px), (pointer: coarse) and (hover: none) {
     #digimon-navbar {
@@ -228,15 +228,15 @@
     }
     .digimon-navbar-main {
         display: grid;
-        grid-template-columns: 2.6rem max-content minmax(6rem, 8rem) 2.1rem;
-        grid-template-rows: 3rem;
+        grid-template-columns: 3rem max-content minmax(5rem, 8rem) 3rem;
+        grid-template-rows: minmax(52px, 3.7rem);
         align-items: center;
         justify-content: space-between;
         column-gap: .3rem;
         width: 100%;
         min-width: 0;
         min-height: 0 !important;
-        height: 3.2rem;
+        height: max(3.9rem, 56px);
         padding: .1rem .4rem;
         box-sizing: border-box;
     }
@@ -255,19 +255,19 @@
         z-index: 3;
     }
     #digimon-user-avatar {
-        width: 2.45rem;
-        height: 2.45rem;
+        width: 2.6rem;
+        height: 2.6rem;
     }
     .digimon-avatar-frame {
-        width: 2.25rem;
-        height: 2.25rem;
+        width: 2.4rem;
+        height: 2.4rem;
         border-width: 1px;
     }
     .digimon-avatar-frame img {
-        width: 3.25rem;
-        height: 3.25rem;
-        min-width: 3.25rem;
-        flex-basis: 3.25rem;
+        width: 3.45rem;
+        height: 3.45rem;
+        min-width: 3.45rem;
+        flex-basis: 3.45rem;
     }
     .digimon-digital-line {
         display: none !important;
@@ -283,21 +283,26 @@
         max-width: 100%;
         margin: 0;
         padding: 0;
-        gap: .22rem;
+        gap: .28rem;
         box-sizing: border-box;
         flex: none;
     }
     .digimon-main-button {
-        width: 2.1rem;
-        min-width: 2.1rem;
-        min-height: 2.1rem;
-        height: 2.1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: max(3rem, 48px);
+        min-width: max(3rem, 48px);
+        min-height: max(3rem, 48px);
+        height: max(3rem, 48px);
         padding: 0;
-        flex: 0 0 2.1rem;
-        border-radius: .3rem;
+        flex: 0 0 max(3rem, 48px);
+        border-radius: .35rem;
+        box-sizing: border-box;
     }
     .digimon-main-button i {
-        font-size: 1rem;
+        font-size: max(1.25rem, 20px);
+        line-height: 1;
     }
     #digimon-search {
         grid-column: 3;
@@ -307,16 +312,16 @@
         width: 100%;
         min-width: 0;
         max-width: 8rem;
-        height: 1.9rem;
+        height: 2.4rem;
         margin: 0;
         box-sizing: border-box;
     }
     #digimon-search-input {
         width: 100%;
         min-width: 0;
-        height: 1.9rem;
+        height: 2.4rem;
         padding: 0 .45rem;
-        border-radius: .3rem;
+        border-radius: .35rem;
         font-size: .72rem;
         text-align: center;
         box-sizing: border-box;
@@ -325,16 +330,21 @@
         grid-column: 4;
         grid-row: 1;
         justify-self: end;
-        width: 2.1rem;
-        min-width: 2.1rem;
-        height: 2.1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: max(3rem, 48px);
+        min-width: max(3rem, 48px);
+        height: max(3rem, 48px);
         flex: none;
-        border-radius: .3rem;
+        border-radius: .35rem;
     }
     .digimon-icon-button {
-        width: 2.1rem;
-        height: 2.1rem;
-        font-size: 1rem;
+        width: max(3rem, 48px);
+        min-width: max(3rem, 48px);
+        height: max(3rem, 48px);
+        font-size: max(1.25rem, 20px);
+        box-sizing: border-box;
     }
     .digimon-navbar-sub {
         display: flex;
@@ -342,28 +352,39 @@
         justify-content: flex-end;
         min-width: 0;
         min-height: 0 !important;
-        height: 2.6rem;
+        height: max(3.4rem, 54px);
         padding: .15rem .4rem;
         box-sizing: border-box;
     }
     .digimon-sub-controls {
         display: flex;
         align-items: center;
-        gap: .22rem;
+        gap: .28rem;
         margin-left: auto;
     }
     .digimon-sub-button {
-        width: 1.9rem;
-        min-width: 1.9rem;
-        height: 1.9rem;
-        min-height: 1.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: max(3rem, 48px);
+        min-width: max(3rem, 48px);
+        height: max(3rem, 48px);
+        min-height: max(3rem, 48px);
         padding: 0;
-        font-size: .95rem;
+        font-size: max(1.15rem, 18px);
+        line-height: 1;
         border-radius: 50%;
+        box-sizing: border-box;
     }
     .digimon-breadcrumb-slot {
         min-width: 0;
-        max-width: calc(100% - 8rem);
+        max-width: calc(100% - 9rem);
+    }
+    .digimon-main-button:focus-visible,
+    #digimon-notifications:focus-visible,
+    .digimon-sub-button:focus-visible {
+        outline: 2px solid var(--emblema1);
+        outline-offset: 2px;
     }
 }
 
