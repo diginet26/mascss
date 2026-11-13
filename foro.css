@@ -86,36 +86,51 @@ ul.linklist > li:has(a[href*="mark=forums"]) {display: none !important;}/* Ocult
 
 /* =========================================================
    PAGINA DE DENUNCIAS — DIGITAL RIFT
-   Estilos limitados al formulario nativo de Foroactivo.
+   Estilos limitados al contenido nativo de Foroactivo.
    ========================================================= */
-/* Textos informativos externos al formulario */
-body:has(img[alt^="Denunciar un abuso"]) .panel:not(.row1):has(a[href*="condiciones-generales"]) {
-    margin:1rem auto 1.1rem;
-    padding:.75rem 1rem;
-    border-left:2px solid var(--emblema2);
-    border-radius:.25rem;
-    background:color-mix(in srgb, var(--theme-panel, #151b22) 88%, transparent);
-    box-shadow:inset 0 0 1rem color-mix(in srgb, var(--emblema2) 5%, transparent);
-}
-body:has(img[alt^="Denunciar un abuso"]) .panel:not(.row1):has(a[href*="condiciones-generales"]) p {
-    margin:.25rem 0;
-    color:var(--theme-text, #e4eaf0);
-    text-align:left;
-}
-
-body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) {
-    display:block;
+/* Los dos paneles consecutivos se unen visualmente en un único bloque. */
+body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel:has(a[href*="condiciones-generales"]),
+body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel.row1:has(form:has(textarea)) {
     width:min(100% - 2rem, 60rem);
-    margin:1.6rem auto 2.2rem;
-    padding:1.35rem clamp(1rem, 3vw, 1.8rem);
+    margin:0 auto;
+    padding:1rem clamp(1rem, 3vw, 1.8rem);
     box-sizing:border-box;
-    border:1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border, #303945));
-    border-radius:.55rem;
+    border-right:1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border, #303945));
+    border-left:1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border, #303945));
     background:linear-gradient(135deg, color-mix(in srgb, var(--emblema2) 5%, transparent), transparent 42%),linear-gradient(90deg, color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px),linear-gradient(color-mix(in srgb, var(--emblema2) 4%, transparent) 1px, transparent 1px),var(--theme-panel, #151b22);
     background-size:auto,1.35rem 1.35rem,1.35rem 1.35rem,auto;
     color:var(--theme-text, #e4eaf0);
     font-family:"Oxanium", sans-serif;
+}
+body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel:has(a[href*="condiciones-generales"]) {
+    margin-top:1rem;
+    padding-top:1rem;
+    border-top:1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border, #303945));
+    border-radius:.55rem .55rem 0 0;
+}
+body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel.row1:has(form:has(textarea)) {
+    padding-top:.65rem;
+    padding-bottom:1.35rem;
+    border-bottom:1px solid color-mix(in srgb, var(--emblema2) 38%, var(--theme-border, #303945));
+    border-radius:0 0 .55rem .55rem;
     box-shadow:0 0 1.1rem color-mix(in srgb, var(--emblema2) 10%, transparent);
+}
+body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel:has(a[href*="condiciones-generales"]) p {
+    margin:.3rem 0;
+    color:var(--theme-text, #e4eaf0);
+    text-align:left;
+}
+body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel.row1:has(form:has(textarea)) form:has(textarea) {
+    display:block;
+    width:100%;
+    margin:0;
+    padding:0;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    color:var(--theme-text, #e4eaf0);
+    box-shadow:none;
+    font-family:"Oxanium", sans-serif;
 }
 body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) table {
     width:100% !important;
@@ -181,26 +196,6 @@ body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) textarea:focus {
     background:var(--theme-panel, #151b22);
     box-shadow:0 0 .65rem color-mix(in srgb, var(--emblema2) 22%, transparent);
 }
-/* Opciones seleccionables: una columna alineada */
-body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) td:has(input[type="radio"]) {
-    text-align:left !important;
-}
-body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) td:has(input[type="radio"]) label {
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    width:100%;
-    margin:.25rem 0;
-    text-align:left !important;
-}
-body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) td:has(input[type="radio"]) input[type="radio"] {
-    flex:0 0 1rem;
-    margin:.15rem .5rem .15rem 0 !important;
-}
-body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) input[type="radio"] {
-    margin-left:0 !important;
-}
-
 body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) input[type="radio"],
 body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) input[type="checkbox"] {
     width:1rem;
@@ -238,10 +233,11 @@ body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) input[type="submit"]
     box-shadow:none;
 }
 @media (max-width:700px) {
-    body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) {
+    body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel:has(a[href*="condiciones-generales"]),
+    body:has(img[alt^="Denunciar un abuso"]) #main-content > .panel.row1:has(form:has(textarea)) {
         width:calc(100% - 1rem);
-        margin:1rem auto 1.5rem;
-        padding:1rem .65rem;
+        padding-right:.65rem;
+        padding-left:.65rem;
     }
     body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) table,
     body:has(img[alt^="Denunciar un abuso"]) form:has(textarea) tbody,
