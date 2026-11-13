@@ -389,6 +389,38 @@
 }
 
 /* =========================================================
+   TABLÓN — PERSONAJE ADAPTABLE EN DISPOSITIVOS TÁCTILES
+   Reduce el Digimon y reserva espacio para el texto.
+   ========================================================= */
+@media screen and (pointer: coarse) and (hover: none) {
+    #rift-current-content {
+        height: 16rem;
+    }
+    #rift-character {
+        position: absolute;
+        top: -11rem;
+        left: 0;
+        width: 14rem;
+        height: 27rem;
+        z-index: 20;
+    }
+    #rift-character img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+    }
+    #rift-current-text {
+        height: 100%;
+        padding: 0 1rem 0 13rem;
+        font-size: .82rem;
+        line-height: 1.55;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================================
    CABECERA PRINCIPAL — ADAPTACIÓN FLUIDA
    ========================================================= */
 @media screen and (max-width: 900px) {
