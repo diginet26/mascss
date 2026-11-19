@@ -1,0 +1,17 @@
+/* DIGITAL RIFT — RUNAS DE ADMINISTRACIÓN */
+@font-face {
+    font-family: "Digital Rift Runes";
+    src: url("Digital-Rift-Runes.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+/* Aplicar únicamente a inscripciones y misterios */
+.dr-runes {
+    font-family: "Digital Rift Runes", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+}
