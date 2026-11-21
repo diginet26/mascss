@@ -2722,17 +2722,12 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     background: var(--colorfondot);
 }
 
-#dr-post .dr-post-body strong, 
-#dr-post .dr-post-body b,{
-   color: var(--emblema2);
-}
-
 /* ==========================================================
    ÉNFASIS
    ========================================================== */
 
 #dr-post .dr-post-body strong {
-    color: var(--dg-group);
+    color: var(--emblema2);
     font-weight: 700;
 }
 
