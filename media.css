@@ -2998,14 +2998,14 @@
 
 /* =========================================================
    TABLÓN — EVENTOS ESPECIALES EN DISPOSITIVOS TÁCTILES
-   Tarjetas en dos columnas para mejorar imagen y legibilidad.
+   Mantiene las cuatro tarjetas en una sola fila, como en escritorio.
    ========================================================= */
 @media screen and (pointer: coarse) and (hover: none) {
     #rift-info-row {
         display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
         align-items: stretch;
-        gap: .7rem;
+        gap: .714rem;
         width: 100%;
         min-width: 0;
         margin-top: .8rem;
@@ -3014,8 +3014,8 @@
     #rift-info-row .rift-info-card {
         width: 100%;
         min-width: 0;
-        height: 11rem;
-        min-height: 11rem;
+        height: 9.286rem;
+        min-height: 9.286rem;
         max-width: 100%;
         box-sizing: border-box;
     }
