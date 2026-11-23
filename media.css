@@ -2721,9 +2721,12 @@
 
     /* TARJETAS DE INFORMACIÓN */
     #rift-info-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: .55rem;
-        margin-top: .7rem;
+        grid-area: info;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: .45rem;
+        width: 100%;
+        min-width: 0;
+        margin-top: 0;
     }
     .rift-info-card {
         width: 100%;
@@ -3003,6 +3006,7 @@
 @media screen and (pointer: coarse) and (hover: none) {
     #rift-info-row {
         display: grid !important;
+        grid-area: info;
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
         align-items: stretch;
         gap: .45rem;
