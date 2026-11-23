@@ -5,9 +5,42 @@
     var maxTopics = 6;
     var recentRoot = null;
     var recentObserver = null;
+    var infoRowPlaceholder = null;
 
     function isMobileWidth() {
         return window.matchMedia("(max-width: " + breakpoint + "px)").matches;
+    }
+
+    /*
+     * En móvil web, saca las tarjetas de información de #rift-current
+     * para que ocupen una fila completa de #rift-board-body.
+     * En escritorio se restauran exactamente en su posición original.
+     */
+    function syncInfoRowLayout() {
+        var infoRow = document.getElementById("rift-info-row");
+        var boardBody = document.getElementById("rift-board-body");
+        var current = document.getElementById("rift-current");
+        if (!infoRow || !boardBody || !current) return;
+
+        if (!infoRowPlaceholder && infoRow.parentNode === current) {
+            infoRowPlaceholder = document.createComment("DR info row original position");
+            current.insertBefore(infoRowPlaceholder, infoRow);
+        }
+
+        if (isMobileWidth()) {
+            if (infoRow.parentNode !== boardBody) {
+                var news = document.getElementById("rift-news");
+                boardBody.insertBefore(infoRow, news && news.parentNode === boardBody ? news : null);
+            }
+            infoRow.classList.add("dr-info-row-mobile-full");
+        } else {
+            if (infoRowPlaceholder && infoRowPlaceholder.parentNode) {
+                infoRowPlaceholder.parentNode.insertBefore(infoRow, infoRowPlaceholder.nextSibling);
+                infoRowPlaceholder.parentNode.removeChild(infoRowPlaceholder);
+                infoRowPlaceholder = null;
+            }
+            infoRow.classList.remove("dr-info-row-mobile-full");
+        }
     }
 
     function restoreAllTopics() {
@@ -48,6 +81,7 @@
     }
 
     function init() {
+        syncInfoRowLayout();
         recentRoot = document.getElementById("rift-recent-content");
         if (!recentRoot) return;
 
@@ -70,5 +104,8 @@
         init();
     }
 
-    window.addEventListener("resize", normalizeRecentTopics, { passive: true });
+    window.addEventListener("resize", function () {
+        syncInfoRowLayout();
+        normalizeRecentTopics();
+    }, { passive: true });
 })();
