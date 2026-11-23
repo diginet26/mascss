@@ -4994,21 +4994,23 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 
 
 .dr-role {
-    width: 600px;
+    width: 37.5rem;
     max-width: 100%;
-    margin: 20px auto;
-    padding: 8px;
+    margin: 1.25rem auto;
+    padding: .5rem;
     box-sizing: border-box;
     background: #071629;
-    border: 1px solid #16DCEB;
-    outline: 1px solid rgba(22,220,235,.35);
-    outline-offset: 3px;
-    box-shadow: 0 0 15px rgba(0,220,255,.25);
+    border: .0625rem solid #16DCEB;
+    outline: .0625rem solid rgba(22,220,235,.35);
+    outline-offset: .1875rem;
+    box-shadow: 0 0 .9375rem rgba(0,220,255,.25);
     font-family: 'Rajdhani', sans-serif;
 }
 
+/* CABECERA */
+
 .dr-role-header {
-    height: 260px;
+    height: 16.25rem;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -5016,7 +5018,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     align-items: flex-end;
     justify-content: center;
     overflow: hidden;
-    border: 1px solid #23E9F0;
+    border: .0625rem solid #23E9F0;
     box-sizing: border-box;
 }
 
@@ -5032,21 +5034,23 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     position: absolute;
     top: 0;
     right: 0;
-    width: 90px;
-    height: 4px;
+    width: 5.625rem;
+    height: .25rem;
     background: #20F2EE;
-    box-shadow: 0 0 12px #20F2EE;
+    box-shadow: 0 0 .75rem #20F2EE;
 }
+
+/* IDENTIFICACIÓN */
 
 .dr-role-brand {
     position: absolute;
-    top: 14px;
-    left: 16px;
+    top: .875rem;
+    left: 1rem;
     z-index: 2;
     color: #35F3F1;
     font-family: 'Orbitron', sans-serif;
-    font-size: 9px;
-    letter-spacing: 2px;
+    font-size: .5625rem;
+    letter-spacing: .125rem;
     font-weight: bold;
 }
 
@@ -5057,62 +5061,66 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 
 .dr-role-code {
     position: absolute;
-    top: 13px;
-    right: 15px;
+    top: .8125rem;
+    right: .9375rem;
     z-index: 2;
     color: #FFF;
     font-family: 'Orbitron', sans-serif;
-    font-size: 9px;
-    letter-spacing: 1px;
+    font-size: .5625rem;
+    letter-spacing: .0625rem;
 }
+
+/* PANEL DEL TÍTULO */
 
 .dr-role-titlepanel {
     position: relative;
     z-index: 1;
     width: 85%;
-    margin-bottom: 16px;
-    padding: 15px 20px;
+    margin-bottom: 1rem;
+    padding: .9375rem 1.25rem;
     box-sizing: border-box;
     background: rgba(5,22,43,.94);
-    border: 1px solid #21E7F0;
-    border-left: 4px solid #21E7F0;
+    border: .0625rem solid #21E7F0;
+    border-left: .25rem solid #21E7F0;
     clip-path: polygon(0 0, 96% 0, 100% 25%, 100% 100%, 4% 100%, 0 75%);
-    box-shadow: 0 0 15px rgba(0,220,255,.3);
+    box-shadow: 0 0 .9375rem rgba(0,220,255,.3);
 }
 
 .dr-role-heading {
     color: #FFF;
     font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #00DFFF;
+    letter-spacing: .125rem;
+    text-shadow: 0 0 .625rem #00DFFF;
 }
 
 .dr-role-subheading {
     color: #39E8ED;
-    font-size: 11px;
-    letter-spacing: 3px;
+    font-size: .6875rem;
+    letter-spacing: .1875rem;
     text-align: center;
-    padding-top: 5px;
+    padding-top: .3125rem;
     text-transform: uppercase;
 }
 
+/* CONTENIDO DEL POST */
+
 .dr-role-content {
-    margin-top: 8px;
-    padding: 25px;
+    margin-top: .5rem;
+    padding: 1.5625rem;
     box-sizing: border-box;
     background: #101E32;
-    border: 1px solid #244866;
-    border-left: 3px solid #19DCEB;
+    border: .0625rem solid #244866;
+    border-left: .1875rem solid #19DCEB;
     color: #D5E6F2;
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.5;
     text-align: justify;
-    min-height: 180px;
-    max-height: 450px;
+    min-height: 11.25rem;
+    max-height: 28.125rem;
     overflow: auto;
     scrollbar-color: #1BDDEB #101E32;
     scrollbar-width: thin;
@@ -5121,7 +5129,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 .dr-role-content br {
     display: block;
     content: "";
-    margin-bottom: 8px;
+    margin-bottom: .5rem;
 }
 
 .dr-role-content b {
@@ -5132,52 +5140,58 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     color: #9AC8E9;
 }
 
+/* FOOTER / INFORMACIÓN */
+
 .dr-role-footer {
-    margin-top: 8px;
-    padding: 12px;
+    margin-top: .5rem;
+    padding: .75rem;
     box-sizing: border-box;
     background: #0B2945;
-    border-top: 2px solid #19DCEB;
+    border-top: .125rem solid #19DCEB;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: .5rem;
 }
 
 .dr-role-data {
     background: #142F4B;
-    border: 1px solid #244D6A;
-    padding: 9px 5px;
+    border: .0625rem solid #244D6A;
+    padding: .5625rem .3125rem;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: .25rem;
     min-width: 0;
 }
 
 .dr-role-data span {
     color: #35E9EF;
     font-family: 'Orbitron', sans-serif;
-    font-size: 8px;
-    letter-spacing: 1px;
+    font-size: .5rem;
+    letter-spacing: .0625rem;
     font-weight: bold;
 }
 
 .dr-role-data strong {
     color: #FFF;
-    font-size: 11px;
+    font-size: .6875rem;
     font-weight: normal;
 }
 
+/* FIRMA */
+
 .dr-role-signature {
-    padding: 9px 5px 3px;
+    padding: .5625rem .3125rem .1875rem;
     color: #5F91AD;
     font-family: 'Orbitron', sans-serif;
-    font-size: 7px;
-    letter-spacing: 2px;
+    font-size: .4375rem;
+    letter-spacing: .125rem;
     text-align: center;
 }
 
-@media screen and (max-width: 620px) {
+/* ADAPTACIÓN MÓVIL */
+
+@media screen and (max-width: 38.75rem) {
     .dr-role {
         width: 100%;
     }
@@ -5185,12 +5199,12 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
         grid-template-columns: repeat(2, 1fr);
     }
     .dr-role-heading {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     .dr-role-titlepanel {
         width: 92%;
     }
     .dr-role-content {
-        padding: 18px;
+        padding: 1.125rem;
     }
 }
