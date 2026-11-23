@@ -2997,6 +2997,82 @@
 }
 
 /* =========================================================
+   TABLÓN — EVENTOS ESPECIALES EN DISPOSITIVOS TÁCTILES
+   Tarjetas en dos columnas para mejorar imagen y legibilidad.
+   ========================================================= */
+@media screen and (pointer: coarse) and (hover: none) {
+    #rift-info-row {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        align-items: stretch;
+        gap: .7rem;
+        width: 100%;
+        min-width: 0;
+        margin-top: .8rem;
+        box-sizing: border-box;
+    }
+    #rift-info-row .rift-info-card {
+        width: 100%;
+        min-width: 0;
+        height: 11rem;
+        min-height: 11rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    #rift-info-row .rift-info-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #rift-info-row .rift-info-image .rift-info-overlay {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem .7rem .7rem;
+        box-sizing: border-box;
+    }
+    #rift-info-row .rift-info-overlay strong {
+        font-size: .85rem;
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+    #rift-info-row .rift-info-overlay span {
+        font-size: .52rem;
+        line-height: 1.25;
+        letter-spacing: .04rem;
+        overflow-wrap: anywhere;
+    }
+    #rift-info-row .rift-info-featured {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 11rem;
+        min-height: 11rem;
+        padding: .7rem;
+        box-sizing: border-box;
+    }
+    #rift-info-row .rift-info-featured-icon {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-bottom: .25rem;
+        font-size: 2.8rem;
+    }
+    #rift-info-row .rift-info-featured > strong {
+        font-size: .85rem;
+        line-height: 1.15;
+        letter-spacing: .06rem;
+        overflow-wrap: anywhere;
+    }
+    #rift-info-row .rift-info-featured > span {
+        font-size: .52rem;
+        line-height: 1.2;
+        letter-spacing: .08rem;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* =========================================================
    DIGITAL RIFT — ANCHO FLUIDO DEL DOCUMENTO
    Prueba controlada: anchura de los contenedores exteriores.
    ========================================================= */
