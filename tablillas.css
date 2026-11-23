@@ -5040,36 +5040,6 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     box-shadow: 0 0 .75rem var(--emblema1);
 }
 
-/* IDENTIFICACIÓN */
-
-.dr-role-brand {
-    position: absolute;
-    top: .875rem;
-    left: 1rem;
-    z-index: 2;
-    color: #35F3F1;
-    font-family: 'Orbitron', sans-serif;
-    font-size: .5625rem;
-    letter-spacing: .125rem;
-    font-weight: bold;
-}
-
-.dr-role-brand span {
-    color: #FFF;
-    opacity: .7;
-}
-
-.dr-role-code {
-    position: absolute;
-    top: .8125rem;
-    right: .9375rem;
-    z-index: 2;
-    color: #FFF;
-    font-family: 'Orbitron', sans-serif;
-    font-size: .5625rem;
-    letter-spacing: .0625rem;
-}
-
 /* PANEL DEL TÍTULO */
 
 .dr-role-titlepanel {
