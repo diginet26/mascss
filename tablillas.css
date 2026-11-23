@@ -5000,11 +5000,11 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     padding: .5rem;
     box-sizing: border-box;
     background: #071629;
-    border: .0625rem solid #16DCEB;
-    outline: .0625rem solid rgba(22,220,235,.35);
+    border: .0625rem solid var(--emblema1);
+    outline: .0625rem solid var(--emblema2);
     outline-offset: .1875rem;
     box-shadow: 0 0 .9375rem rgba(0,220,255,.25);
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Oxanium', sans-serif;
 }
 
 /* CABECERA */
@@ -5018,7 +5018,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     align-items: flex-end;
     justify-content: center;
     overflow: hidden;
-    border: .0625rem solid #23E9F0;
+    border: .0625rem solid var(--emblema2);
     box-sizing: border-box;
 }
 
@@ -5036,8 +5036,8 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     right: 0;
     width: 5.625rem;
     height: .25rem;
-    background: #20F2EE;
-    box-shadow: 0 0 .75rem #20F2EE;
+    background: var(--emblema1);
+    box-shadow: 0 0 .75rem var(--emblema1);
 }
 
 /* IDENTIFICACIÓN */
@@ -5080,8 +5080,8 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     padding: .9375rem 1.25rem;
     box-sizing: border-box;
     background: rgba(5,22,43,.94);
-    border: .0625rem solid #21E7F0;
-    border-left: .25rem solid #21E7F0;
+    border: .0625rem solid var(--emblema2);
+    border-left: .25rem solid var(--emblema2);
     clip-path: polygon(0 0, 96% 0, 100% 25%, 100% 100%, 4% 100%, 0 75%);
     box-shadow: 0 0 .9375rem rgba(0,220,255,.3);
 }
@@ -5176,17 +5176,6 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     color: #FFF;
     font-size: .6875rem;
     font-weight: normal;
-}
-
-/* FIRMA */
-
-.dr-role-signature {
-    padding: .5625rem .3125rem .1875rem;
-    color: #5F91AD;
-    font-family: 'Orbitron', sans-serif;
-    font-size: .4375rem;
-    letter-spacing: .125rem;
-    text-align: center;
 }
 
 /* ADAPTACIÓN MÓVIL */
