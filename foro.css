@@ -3634,8 +3634,8 @@ button#theme-toggler:hover, button#theme-toggler2:hover {
 #rift-board-body {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 230px 320px;
-    grid-template-areas: "current staff recent" "news news news";
-    grid-template-rows: auto auto;
+    grid-template-areas: "current staff recent" "info info info" "news news news";
+    grid-template-rows: auto auto auto;
     gap: 8px;
     margin-top: 12px;
     align-items: stretch;
@@ -7907,6 +7907,7 @@ form[name="post"]:not(#quick_reply) #textarea_content {
    ========================================================= */
 
 #rift-info-row {
+    grid-area: info;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.714rem;
