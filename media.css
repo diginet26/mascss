@@ -2563,8 +2563,8 @@
     }
     #rift-board-body {
         grid-template-columns: minmax(0, 1fr) 190px;
-        grid-template-areas: "current recent" "staff recent" "news news";
-        grid-template-rows: auto auto auto;
+        grid-template-areas: "current recent" "staff recent" "info info" "news news";
+        grid-template-rows: auto auto auto auto;
         gap: .75rem;
     }
     #rift-current-content {height: 16rem;}
