@@ -2611,8 +2611,8 @@
         display: grid;
         width: 100%;
         grid-template-columns: minmax(0, 1fr);
-        grid-template-areas: "current" "staff" "recent" "news";
-        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "current" "staff" "recent" "info" "news";
+        grid-template-rows: auto auto auto auto auto;
         gap: .7rem;
         margin: .7rem 0 0;
         padding: 0 .65rem .7rem;
@@ -2920,7 +2920,7 @@
     #rift-quick-links > a > i,
     #rift-quick-links > a > svg {font-size: 1.05rem;}
     #rift-quick-links > a > span {font-size: .44rem;}
-    #rift-info-row {grid-template-columns: minmax(0, 1fr);}
+    #rift-info-row {grid-area: info; grid-template-columns: repeat(4, minmax(0, 1fr));}
     .rift-info-card {height: 8rem;}
     .rift-info-box img {
         width: 3.75rem;
@@ -3003,19 +3003,19 @@
 @media screen and (pointer: coarse) and (hover: none) {
     #rift-info-row {
         display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
         align-items: stretch;
-        gap: .7rem;
+        gap: .45rem;
         width: 100%;
         min-width: 0;
-        margin-top: .8rem;
+        margin-top: 0;
         box-sizing: border-box;
     }
     #rift-info-row .rift-info-card {
         width: 100%;
         min-width: 0;
-        height: 11rem;
-        min-height: 11rem;
+        height: 9.286rem;
+        min-height: 9.286rem;
         max-width: 100%;
         box-sizing: border-box;
     }
@@ -3047,9 +3047,9 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 11rem;
-        min-height: 11rem;
-        padding: .7rem;
+        height: 9.286rem;
+        min-height: 9.286rem;
+        padding: .55rem;
         box-sizing: border-box;
     }
     #rift-info-row .rift-info-featured-icon {
