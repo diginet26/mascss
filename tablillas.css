@@ -5098,7 +5098,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 }
 
 .dr-role-subheading {
-    color: #39E8ED;
+    color: var(--emblema2);
     font-size: .6875rem;
     letter-spacing: .1875rem;
     text-align: center;
