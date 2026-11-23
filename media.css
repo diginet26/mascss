@@ -2588,7 +2588,11 @@
         max-height: 31rem;
     }
     #rift-info-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-area: info;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 100%;
+        min-width: 0;
+        margin-top: 0;
     }
     #rift-news-track {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2722,9 +2726,12 @@
 
     /* TARJETAS DE INFORMACIÓN */
     #rift-info-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-area: info;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: .55rem;
-        margin-top: .7rem;
+        width: 100%;
+        min-width: 0;
+        margin-top: 0;
     }
     .rift-info-card {
         width: 100%;
@@ -2921,7 +2928,7 @@
     #rift-quick-links > a > i,
     #rift-quick-links > a > svg {font-size: 1.05rem;}
     #rift-quick-links > a > span {font-size: .44rem;}
-    #rift-info-row {grid-template-columns: minmax(0, 1fr);}
+    #rift-info-row {grid-template-columns: repeat(4, minmax(0, 1fr));}
     .rift-info-card {height: 8rem;}
     .rift-info-box img {
         width: 3.75rem;
@@ -3006,10 +3013,11 @@
         display: grid !important;
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
         align-items: stretch;
-        gap: .714rem;
+        gap: .45rem;
+        grid-area: info;
         width: 100%;
         min-width: 0;
-        margin-top: .8rem;
+        margin-top: 0;
         box-sizing: border-box;
     }
     #rift-info-row .rift-info-card {
