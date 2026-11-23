@@ -4989,3 +4989,208 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 .dr-rule-list > li > ol.dr-rule-list {counter-reset: dr-romano;}
 .dr-rule-list > li > ol.dr-rule-list > li {counter-increment: dr-romano;}
 .dr-rule-list > li > ol.dr-rule-list > li::before {content: counter(dr-romano, upper-roman);}
+
+/* TABLA NUEVA */
+
+
+.dr-role {
+    width: 600px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 8px;
+    box-sizing: border-box;
+    background: #071629;
+    border: 1px solid #16DCEB;
+    outline: 1px solid rgba(22,220,235,.35);
+    outline-offset: 3px;
+    box-shadow: 0 0 15px rgba(0,220,255,.25);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.dr-role-header {
+    height: 260px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #23E9F0;
+    box-sizing: border-box;
+}
+
+.dr-role-header:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3,15,35,.15), rgba(3,15,35,.2) 45%, rgba(3,15,35,.8));
+}
+
+.dr-role-header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 4px;
+    background: #20F2EE;
+    box-shadow: 0 0 12px #20F2EE;
+}
+
+.dr-role-brand {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 2;
+    color: #35F3F1;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.dr-role-brand span {
+    color: #FFF;
+    opacity: .7;
+}
+
+.dr-role-code {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    z-index: 2;
+    color: #FFF;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.dr-role-titlepanel {
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    margin-bottom: 16px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background: rgba(5,22,43,.94);
+    border: 1px solid #21E7F0;
+    border-left: 4px solid #21E7F0;
+    clip-path: polygon(0 0, 96% 0, 100% 25%, 100% 100%, 4% 100%, 0 75%);
+    box-shadow: 0 0 15px rgba(0,220,255,.3);
+}
+
+.dr-role-heading {
+    color: #FFF;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00DFFF;
+}
+
+.dr-role-subheading {
+    color: #39E8ED;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+
+.dr-role-content {
+    margin-top: 8px;
+    padding: 25px;
+    box-sizing: border-box;
+    background: #101E32;
+    border: 1px solid #244866;
+    border-left: 3px solid #19DCEB;
+    color: #D5E6F2;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    min-height: 180px;
+    max-height: 450px;
+    overflow: auto;
+    scrollbar-color: #1BDDEB #101E32;
+    scrollbar-width: thin;
+}
+
+.dr-role-content br {
+    display: block;
+    content: "";
+    margin-bottom: 8px;
+}
+
+.dr-role-content b {
+    color: #42F2EF;
+}
+
+.dr-role-content i {
+    color: #9AC8E9;
+}
+
+.dr-role-footer {
+    margin-top: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #0B2945;
+    border-top: 2px solid #19DCEB;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.dr-role-data {
+    background: #142F4B;
+    border: 1px solid #244D6A;
+    padding: 9px 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.dr-role-data span {
+    color: #35E9EF;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.dr-role-data strong {
+    color: #FFF;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.dr-role-signature {
+    padding: 9px 5px 3px;
+    color: #5F91AD;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+@media screen and (max-width: 620px) {
+    .dr-role {
+        width: 100%;
+    }
+    .dr-role-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dr-role-heading {
+        font-size: 18px;
+    }
+    .dr-role-titlepanel {
+        width: 92%;
+    }
+    .dr-role-content {
+        padding: 18px;
+    }
+}
