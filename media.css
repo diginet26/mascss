@@ -2563,8 +2563,8 @@
     }
     #rift-board-body {
         grid-template-columns: minmax(0, 1fr) 190px;
-        grid-template-areas: "current recent" "staff recent" "info info" "news news";
-        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "current recent" "staff recent" "news news";
+        grid-template-rows: auto auto auto;
         gap: .75rem;
     }
     #rift-current-content {height: 16rem;}
@@ -2588,11 +2588,7 @@
         max-height: 31rem;
     }
     #rift-info-row {
-        grid-area: info;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        width: 100%;
-        min-width: 0;
-        margin-top: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     #rift-news-track {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2615,8 +2611,8 @@
         display: grid;
         width: 100%;
         grid-template-columns: minmax(0, 1fr);
-        grid-template-areas: "current" "staff" "recent" "info" "news";
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "current" "staff" "recent" "news";
+        grid-template-rows: auto auto auto auto;
         gap: .7rem;
         margin: .7rem 0 0;
         padding: 0 .65rem .7rem;
@@ -2625,7 +2621,6 @@
     #rift-current,
     #rift-staff,
     #rift-recent,
-    #rift-info-row,
     #rift-news {
         width: 100%;
         min-width: 0;
@@ -2726,12 +2721,9 @@
 
     /* TARJETAS DE INFORMACIÓN */
     #rift-info-row {
-        grid-area: info;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: .55rem;
-        width: 100%;
-        min-width: 0;
-        margin-top: 0;
+        margin-top: .7rem;
     }
     .rift-info-card {
         width: 100%;
@@ -2928,7 +2920,7 @@
     #rift-quick-links > a > i,
     #rift-quick-links > a > svg {font-size: 1.05rem;}
     #rift-quick-links > a > span {font-size: .44rem;}
-    #rift-info-row {grid-template-columns: repeat(4, minmax(0, 1fr));}
+    #rift-info-row {grid-template-columns: minmax(0, 1fr);}
     .rift-info-card {height: 8rem;}
     .rift-info-box img {
         width: 3.75rem;
@@ -3011,20 +3003,19 @@
 @media screen and (pointer: coarse) and (hover: none) {
     #rift-info-row {
         display: grid !important;
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         align-items: stretch;
-        gap: .45rem;
-        grid-area: info;
+        gap: .7rem;
         width: 100%;
         min-width: 0;
-        margin-top: 0;
+        margin-top: .8rem;
         box-sizing: border-box;
     }
     #rift-info-row .rift-info-card {
         width: 100%;
         min-width: 0;
-        height: 9.286rem;
-        min-height: 9.286rem;
+        height: 11rem;
+        min-height: 11rem;
         max-width: 100%;
         box-sizing: border-box;
     }
