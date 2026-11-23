@@ -2941,6 +2941,62 @@
 }
 
 /* =========================================================
+   TABLÓN — ACCESOS RÁPIDOS EN DISPOSITIVOS TÁCTILES
+   Rejilla de tarjetas para evitar la fila horizontal de escritorio.
+   ========================================================= */
+@media screen and (pointer: coarse) and (hover: none) {
+    #rift-quick-links {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-auto-flow: row;
+        align-items: stretch;
+        justify-content: stretch;
+        gap: .5rem;
+        width: 100%;
+        min-width: 0;
+        margin-top: .75rem;
+        padding: .35rem 0;
+        box-sizing: border-box;
+    }
+    #rift-quick-links > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        min-height: 4.5rem;
+        height: auto;
+        padding: .55rem .2rem;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #rift-quick-links > a > i,
+    #rift-quick-links > a > svg {
+        display: block;
+        flex: 0 0 auto;
+        margin: 0 0 .35rem;
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+    #rift-quick-links > a > span {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        font-size: .56rem;
+        line-height: 1.2;
+        letter-spacing: .02rem;
+        white-space: normal;
+        overflow: visible;
+        overflow-wrap: anywhere;
+        text-overflow: clip;
+        text-align: center;
+    }
+}
+
+/* =========================================================
    DIGITAL RIFT — ANCHO FLUIDO DEL DOCUMENTO
    Prueba controlada: anchura de los contenedores exteriores.
    ========================================================= */
