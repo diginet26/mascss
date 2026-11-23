@@ -11,6 +11,11 @@
         return window.matchMedia("(max-width: " + breakpoint + "px)").matches;
     }
 
+    function shouldMoveInfoRow() {
+        return isMobileWidth() ||
+            window.matchMedia("(pointer: coarse) and (hover: none)").matches;
+    }
+
     /*
      * En móvil web, saca las tarjetas de información de #rift-current
      * para que ocupen una fila completa de #rift-board-body.
@@ -27,7 +32,7 @@
             current.insertBefore(infoRowPlaceholder, infoRow);
         }
 
-        if (isMobileWidth()) {
+        if (shouldMoveInfoRow()) {
             if (infoRow.parentNode !== boardBody) {
                 var news = document.getElementById("rift-news");
                 boardBody.insertBefore(infoRow, news && news.parentNode === boardBody ? news : null);
