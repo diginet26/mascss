@@ -4999,7 +4999,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     margin: 1.25rem auto;
     padding: .5rem;
     box-sizing: border-box;
-    background: #071629;
+    background: var(--colorfondo);
     border: .0625rem solid var(--emblema1);
     outline: .0625rem solid var(--emblema2);
     outline-offset: .1875rem;
@@ -5079,7 +5079,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     margin-bottom: 1rem;
     padding: .9375rem 1.25rem;
     box-sizing: border-box;
-    background: rgba(5,22,43,.94);
+    background: var(--colorfondo);
     border: .0625rem solid var(--emblema2);
     border-left: .25rem solid var(--emblema2);
     clip-path: polygon(0 0, 96% 0, 100% 25%, 100% 100%, 4% 100%, 0 75%);
@@ -5112,7 +5112,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     margin-top: .5rem;
     padding: 1.5625rem;
     box-sizing: border-box;
-    background: var(--colorfondo);
+    background: var(--colorfondo4);
     border: .0625rem solid #244866;
     border-left: .1875rem solid var(--emblema1);
     color: var(--colortextodl);
@@ -5142,7 +5142,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
     margin-top: .5rem;
     padding: .75rem;
     box-sizing: border-box;
-    background: #0B2945;
+    background: var(--colorfondo4);
     border-top: .125rem solid var(--emblema2);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -5150,8 +5150,8 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 }
 
 .dr-role-data {
-    background: #142F4B;
-    border: .0625rem solid #244D6A;
+    background: var(--colorfondo);
+    border: .0625rem solid var(--emblema1);
     padding: .5625rem .3125rem;
     text-align: center;
     display: flex;
@@ -5161,7 +5161,7 @@ body.dark-mode .dr-ficha {--colortextodl: #edf8fb;}
 }
 
 .dr-role-data span {
-    color: #35E9EF;
+    color: var(--emblema2);
     font-family: 'Orbitron', sans-serif;
     font-size: .5rem;
     letter-spacing: .0625rem;
